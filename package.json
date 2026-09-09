@@ -1,0 +1,14 @@
+{
+  "name": "h-heuristics-digital-reports",
+  "version": "1.0.0",
+  "private": true,
+  "description": "H Heuristics Digital Reports — web-native long-form research, published weekly.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "new": "node scripts/new-report.mjs"
+  }
+}

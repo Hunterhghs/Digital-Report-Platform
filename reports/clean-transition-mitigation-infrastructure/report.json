@@ -1,0 +1,50 @@
+{
+  "number": "2026-01",
+  "title": "The Clean Transition as Global Polycrisis Mitigation Infrastructure",
+  "subtitle": "Reducing climate, pollution, energy and geopolitical risks through deployment",
+  "strapline": "One intervention at a shared root: four coupled risk registers lowered at the scale of deployment.",
+  "dek": "The clean transition is usually argued as climate policy — a cost accepted now for a distant temperature. Read instead as risk-mitigation infrastructure, it lowers four coupled dangers at once: climate destabilisation, air-pollution mortality, energy insecurity and coercive energy geopolitics. The operative variable is not ambition but deployment.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "readingTime": 22,
+  "charts": true,
+  "topics": [
+    "Energy Transition",
+    "Systemic Risk",
+    "Infrastructure",
+    "Public Health"
+  ],
+  "keywords": [
+    "clean energy transition",
+    "mitigation infrastructure",
+    "polycrisis",
+    "systemic risk",
+    "deployment gap",
+    "air pollution mortality",
+    "energy security",
+    "critical minerals",
+    "cost of capital",
+    "COP28 tripling pledge",
+    "co-benefits",
+    "multisolving"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "shared-root", "label": "1. The Shared Root" },
+    { "id": "four-registers", "label": "2. Four Risk Registers" },
+    { "id": "multiplier", "label": "3. The Multiplier" },
+    { "id": "deployment-gap", "label": "4. The Deployment Gap" },
+    { "id": "rate", "label": "5. What Governs the Rate" },
+    { "id": "counters", "label": "6. Frictions & Limits" },
+    { "id": "agenda", "label": "7. Deployment Agenda" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "8.1M", "label": "Annual deaths from air pollution — the second-leading risk factor worldwide" },
+    { "value": "1,122 GW", "label": "Needed every year to 2030, against a record 585 GW in 2024" },
+    { "value": "4 of 4", "label": "Risk registers lowered by clean power alone" },
+    { "value": "$2.2tn", "label": "Annual clean investment — but concentrated away from the largest gains" }
+  ]
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="H Heuristics">
+  <rect width="64" height="64" fill="#1a1f2b"/>
+  <rect x="0" y="56" width="64" height="8" fill="#c8a951"/>
+  <path d="M17 13h8v16h14V13h8v34h-8V36H25v11h-8z" fill="#f0ede6"/>
+</svg>
