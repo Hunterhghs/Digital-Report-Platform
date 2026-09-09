@@ -75,6 +75,15 @@ function loadReports() {
       record.slug = e.name;
       record.dir = base;
       record.body = read(bodyPath);
+
+      // Optional per-report assets, detected rather than declared, so dropping
+      // the file in is all it takes to give a report its own look or card.
+      record.hasTheme = fs.existsSync(path.join(base, 'theme.css'));
+      record.hasOgImage = fs.existsSync(path.join(base, 'og.png'));
+
+      if (!record.abstract || !record.abstract.length) {
+        console.warn(`  ! ${e.name} has no abstract — the page will not carry one`);
+      }
       return record;
     })
     .filter(Boolean);
@@ -361,8 +370,15 @@ function buildFeeds(reports) {
     <link>${esc(url)}</link>
     <guid isPermaLink="true">${esc(url)}</guid>
     <pubDate>${new Date(`${r.published}T09:00:00Z`).toUTCString()}</pubDate>
+    <dc:creator>${esc(r.author || site.author)}</dc:creator>
     <description>${esc(r.dek)}</description>
-    ${(r.topics || []).map((t) => `<category>${esc(t)}</category>`).join('\n    ')}
+${
+  (r.abstract || []).length
+    ? `    <content:encoded><![CDATA[${(r.abstract || [])
+        .map((p) => `<p>${p}</p>`)
+        .join('')}]]></content:encoded>\n`
+    : ''
+}    ${(r.topics || []).map((t) => `<category>${esc(t)}</category>`).join('\n    ')}
   </item>`;
     })
     .join('\n');
@@ -370,7 +386,7 @@ function buildFeeds(reports) {
   write(
     'feed.xml',
     `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
   <title>${esc(site.name)} ${esc(site.property)}</title>
   <link>${esc(site.siteUrl)}/</link>
@@ -426,13 +442,17 @@ ${urls
           title: r.title,
           subtitle: r.subtitle,
           dek: r.dek,
+          abstract: r.abstract || [],
           url: `${site.siteUrl}/reports/${r.slug}/`,
           author: r.author || site.author,
+          institution: r.institution || site.publisher,
           published: r.published,
           updated: r.updated || r.published,
           topics: r.topics || [],
           keywords: r.keywords || [],
+          jel: r.jel || null,
           readingTime: r.readingTime,
+          license: site.license.url,
         })),
       },
       null,

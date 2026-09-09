@@ -1,0 +1,62 @@
+{
+  "number": "2026-02",
+  "title": "Scaling Climate Adaptation Through Development Finance and Technology Diffusion",
+  "subtitle": "Closing the resilience gap across vulnerable emerging and frontier economies",
+  "strapline": "Two gates, not one gap: capital fixes what is expensive, diffusion fixes what is cheap but absent.",
+  "dek": "The resilience gap is usually described as a shortage of money. It is better understood as two gaps wearing one name — hard adaptation blocked at a capital gate, soft adaptation blocked at a delivery gate — and neither closes while both are treated as the first.",
+  "abstract": [
+    "Adaptation is the part of climate policy with the least argument and the least delivery. The UN Environment Programme's Adaptation Gap Report 2025 puts the adaptation needs of developing countries at roughly US$310–365 billion a year by 2035, against international public adaptation finance of just US$26 billion in 2023 — lower than the US$28 billion of the year before. Needs run twelve to fourteen times ahead of flows and the two lines are diverging, even as natural hazards already cost low- and middle-income countries on the order of US$390 billion a year. This report argues that the persistence of that gap is a delivery failure rather than a knowledge or an economics failure, and that it has two distinct causes which conventional adaptation policy conflates.",
+    "The report's analytical core is a distinction between two classes of intervention that fail for opposite reasons. Hard adaptation — coastal and flood defence, drainage, water storage, climate-proofed transport and power — is capital-constrained: its costs are front-loaded and its benefits accrue over decades, so its viability turns on the price and tenor of capital, and the 400-to-800 basis-point cost-of-capital wedge facing developing-economy borrowers is decisive. Soft adaptation — multi-hazard early warning, digital climate advisory, parametric insurance, heat action plans — is diffusion-constrained: its unit costs are trivial and its returns among the highest measured in development, and it is blocked not by money but by the absence of delivery channels, payment and identity rails, last-mile agents and the institutions to operate them. Every unit of adaptation must pass both a capital gate and a delivery gate to become installed resilience; which gate binds depends on what is being adapted.",
+    "The evidence establishes that the gap is not a verdict on the economics. A 2025 World Resources Institute study of 320 real adaptation investments across twelve countries found benefits above ten dollars per dollar committed and an average internal rate of return of 27 per cent, with more than half of the benefits accruing whether or not a climate disaster occurred — which means most of the return is non-contingent and adaptation should be appraised as infrastructure rather than as insurance. Early warning returns roughly nine to one; resilience specified at the design stage adds only 3 to 5 per cent to upfront infrastructure costs. Meanwhile coverage falls away at each step from intent to capability to money: 172 of 197 countries hold a national adaptation plan, roughly half have adequate early-warning systems, and finance stands at about eight per cent of assessed need.",
+    "The implication is a sharper diagnosis rather than a larger number. Where the binding gate is capital, the work is concessional finance and guarantees priced against the cost-of-capital wedge, long-tenor lending matched to asset life, debt relief and resilient debt clauses, regional pooling for frontier economies too small to be individually bankable, and mandatory design-stage resilience standards while the emerging world's infrastructure build-out is still ahead of it. Where the binding gate is delivery, the work is digital public infrastructure treated as adaptation infrastructure, funded last-mile delivery as a named line item, completion of Early Warnings for All, and investment in the municipal and agency capacity that operates soft adaptation. Grounded in four programmes that opened both gates — Bangladesh's cyclone protection, Ahmedabad's heat action plan, India's public digital rails and Kenya's pay-as-you-go distribution model — the report's central finding is that Bangladesh cut cyclone mortality by four orders of magnitude in fifty years using concrete and volunteers, and that when both gates open the gap closes fast."
+  ],
+  "jel": "Q54, O19, F35, H54, O33 — climate and natural disasters; international linkages to development; foreign aid; infrastructure and public investment; technological change, choices and consequences",
+  "method": "This report synthesises institutional research on adaptation finance, resilient infrastructure and technology diffusion, including the UNEP Adaptation Gap Report 2025; the World Resources Institute's 2025 study of 320 implemented adaptation investments; the IFC's 2026 adaptation and resilience investment assessment; the Global Commission on Adaptation's Adapt Now; the World Bank's Lifelines and Digital Public Infrastructure work; WMO material on early warning and the Early Warnings for All initiative; the IEA World Energy Investment 2025 on the cost of capital; UNCTAD's A World of Debt; the UNFCCC Baku to Belém Roadmap; and primary reporting on programmes in Bangladesh, India and Kenya. Every quantitative claim is attributed inline to a primary or authoritative source. Figure 4 is a conceptual schematic and Table 1 records analytical judgements rather than measured effect sizes; benefit-cost measures in Figure 6 are drawn from studies using differing methods, scopes and time horizons and are not strictly comparable. Ranges are plotted as floating bars rather than collapsed to midpoints. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "readingTime": 23,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
+  "themeColor": "#1d4438",
+  "topics": [
+    "Climate Adaptation",
+    "Development Finance",
+    "Technology",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "climate adaptation",
+    "adaptation finance",
+    "resilience gap",
+    "technology diffusion",
+    "development finance",
+    "cost of capital",
+    "early warning systems",
+    "digital public infrastructure",
+    "frontier economies",
+    "parametric insurance",
+    "resilient infrastructure",
+    "adaptation gap report",
+    "benefit-cost ratio",
+    "last-mile delivery"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "the-gap", "label": "1. The Gap, Measured" },
+    { "id": "two-gates", "label": "2. Two Gates, One Gap" },
+    { "id": "capital-gate", "label": "3. The Capital Gate" },
+    { "id": "diffusion-gate", "label": "4. The Diffusion Gate" },
+    { "id": "returns", "label": "5. The Returns" },
+    { "id": "delivery", "label": "6. Evidence from Delivery" },
+    { "id": "agenda", "label": "7. An Agenda for Both Gates" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "12–14×", "label": "Assessed adaptation need runs ahead of adaptation finance — and diverging" },
+    { "value": ">10:1", "label": "Return across 320 real adaptation investments; over half non-contingent" },
+    { "value": "87% → 8%", "label": "Countries with a plan, against finance as a share of assessed need" },
+    { "value": "300,000 → 26", "label": "Bangladesh cyclone deaths, 1970 to 2020, on concrete and volunteers" }
+  ]
+}

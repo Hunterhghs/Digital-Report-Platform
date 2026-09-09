@@ -116,6 +116,7 @@ img { max-width: 100%; height: auto; }
 .sitebar a:hover { color: var(--accent-light); }
 .sitebar__brand { color: var(--text-inverse) !important; font-weight: 600; }
 .sitebar__brand span { color: var(--accent-light); }
+.sitebar a.is-current { color: var(--accent-light); }
 .sitebar__links { display: flex; gap: 1.4rem; }
 
 /* --- masthead ------------------------------------------------------------- */
@@ -360,8 +361,17 @@ section > h4 {
 
 /* --- schematic (hand-drawn SVG diagrams) ----------------------------------- */
 
-.schematic { width: 100%; height: auto; display: block; }
+/* A schematic's labels are sized for its viewBox, so letting it shrink to a
+   phone's width renders them at four or five pixels. It scrolls inside its own
+   container below the min-width instead, the same way a wide table does. */
+.schematic-wrap { overflow-x: auto; }
+.schematic { width: 100%; min-width: 620px; height: auto; display: block; }
 .schematic text { font-family: var(--sans); }
+
+@media print {
+  .schematic-wrap { overflow: visible; }
+  .schematic { min-width: 0; }
+}
 
 /* --- the coverage matrix ---------------------------------------------------- */
 
@@ -501,6 +511,84 @@ section > h4 {
   font-family: var(--sans);
 }
 
+/* --- abstract ----------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--primary);
+  padding: 1.6rem 1.7rem 1.3rem;
+}
+.abstract h2 {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.9rem;
+  padding: 0;
+  border: 0;
+}
+.abstract p {
+  font-size: 0.92rem;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin: 0 0 0.9rem;
+  max-width: 76ch;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* --- end matter ---------------------------------------------------------------- */
+
+.endmatter h2 {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+.endmatter__list { margin: 0; }
+.endmatter__list > div {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0.5rem 1.5rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.endmatter__list > div:last-child { border-bottom: 0; }
+.endmatter dt {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-top: 0.15rem;
+}
+.endmatter dd {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.endmatter .kw {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--bg-accent);
+  border: 1px solid var(--border-light);
+  padding: 0.1rem 0.45rem;
+  margin: 0 0.3rem 0.3rem 0;
+}
+.endmatter .cite-inline { font-family: var(--mono); font-size: 0.76rem; line-height: 1.65; }
+
+@media (max-width: 620px) {
+  .endmatter__list > div { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+
 /* --- references -------------------------------------------------------------- */
 
 .ref-list { list-style: none; padding: 0; margin: 0; max-width: none; }
@@ -558,6 +646,7 @@ section > h4 {
   text-transform: uppercase;
   color: rgba(240, 237, 230, 0.5);
 }
+.cite-box strong { color: var(--accent-light); }
 .cite-box {
   background: rgba(0, 0, 0, 0.22);
   border-left: 3px solid var(--accent);

@@ -42,10 +42,15 @@ That creates `reports/<slug>/` with three files. Fill in the TODOs and build.
 
 ```
 reports/<slug>/
-  report.json   the record — title, dek, date, topics, section nav, highlights
+  report.json   the record — metadata, abstract, section nav, highlights
   body.html     the article: a series of <section> elements
   charts.js     the report's data visuals
+  theme.css     optional — gives this report its own aesthetic
+  og.png        optional — social preview card
 ```
+
+`theme.css` and `og.png` are picked up by their presence alone; nothing needs
+declaring.
 
 The **directory name is the URL**, so the slug and the published address can
 never drift apart. Everything else in the directory (`charts.js`, any images or
@@ -63,12 +68,18 @@ records on every build.
 | `title` / `subtitle` | Masthead. Keep the title a title, not a sentence. |
 | `strapline` | Optional single-sentence thesis, set below the subtitle. Omit the field to hide it. |
 | `dek` | Two or three sentences. Used on cards, in the feed, and in social previews. |
+| `abstract` | **Required.** Array of paragraphs. Rendered as a visible Abstract section, and carried into the head metadata, the RSS feed and `reports.json` — this is what indexers read. The build warns if it is missing. |
+| `jel` | JEL codes with plain-language glosses. Shown in the end matter. |
+| `method` | What was synthesised, and what is schematic or illustrative rather than measured. Shown in the end matter. |
 | `published` / `updated` | `YYYY-MM-DD`, parsed as UTC. |
 | `readingTime` | Minutes. Roughly words ÷ 220. |
 | `topics` | Facets. Add new ones to `topicOrder` in `site.config.mjs` to control where they sort. |
 | `sections` | `{ id, label }` per section — drives the sticky nav and the scroll-spy. Each `id` must match a `<section id="...">` in `body.html`. |
 | `highlights` | `{ value, label }` — the figures shown under the lead story on the front page. |
 | `charts` | Set `false` for a report with no data visuals; Chart.js and `charts.js` are then not loaded. |
+| `fontsUrl` | Google Fonts URL, when the report's theme uses a different type stack. Falls back to the default when null. |
+| `themeColor` | Browser UI colour, to match the report's masthead. |
+| `pdfUrl` / `archiveUrl` | Absolute URL of a PDF edition, if one exists. `pdfUrl` also emits `citation_pdf_url` for Google Scholar. |
 
 ### body.html
 
@@ -90,10 +101,15 @@ The component vocabulary, all defined in `assets/report.css`:
 | `.callout` / `.callout--warn` | Boxed aside with a `.callout-title` |
 | `.pull-quote` + `.attribution` | Display quote |
 | `.ref-list` | References, each with a `.ref-org` label |
-| `svg.schematic` | Inline SVG diagram |
+| `svg.schematic` inside `.schematic-wrap` | Inline SVG diagram |
 
-Wide content must sit inside `.tbl-scroll` so it scrolls itself rather than the
-page.
+Wide content must sit inside `.tbl-scroll` (tables) or `.schematic-wrap`
+(diagrams) so it scrolls itself rather than the page. A schematic's labels are
+sized to its `viewBox`, so it holds a 620px minimum and pans on a phone rather
+than shrinking its type to four pixels.
+
+The Abstract and Metadata sections are generated from `report.json` — do not
+write them into `body.html`. They are added to the section nav automatically.
 
 ### charts.js
 
@@ -136,14 +152,66 @@ or printing the page, should get the number without interacting.
 
 ## Design
 
-Tokens live at the top of `assets/report.css` and are shared by every page:
-`#1a1f2b` ink-navy masthead over `#fafaf8` paper, `#8b6914` gold rules,
-Newsreader for display, Inter for text, JetBrains Mono for labels. Reports and
-library pages both load `report.css`; library pages add `platform.css`.
+`assets/report.css` is the base layer: design tokens, layout, the responsive
+rules, the component skeletons and a real print stylesheet. Its defaults are the
+house look — `#1a1f2b` ink-navy masthead over `#fafaf8` paper, `#8b6914` gold
+rules, Newsreader / Inter / JetBrains Mono. Library pages add `platform.css`.
 
-The look is deliberately print-adjacent — hairline rules, bordered cards, no
-drop shadows — and there is a real print stylesheet, so a report prints
-legibly with the navigation and progress bar suppressed.
+### Giving a report its own aesthetic
+
+Each report is meant to look like its own publication. Drop a `theme.css` into
+the report's directory and the build loads it after `report.css`; name any
+different type stack as `fontsUrl` in the record.
+
+A theme should redefine the tokens first and then override only the rules that
+assume the default surface:
+
+```css
+:root {
+  --bg: #f6f3ec;          /* also re-colours every chart: report.js reads   */
+  --primary: #1d4438;     /* the --chart-* tokens from the computed styles  */
+  --accent: #a8492a;
+  --serif: "IBM Plex Serif", Georgia, serif;
+}
+.masthead { background: var(--bg); color: var(--text); }  /* light, not dark */
+section > h2 { border-bottom: 0; border-left: 4px solid var(--accent); }
+```
+
+Because `report.js` reads the `--chart-*` tokens at runtime, redefining them is
+all it takes to redraw the report's figures in the new palette — no hex values
+belong in a `charts.js`.
+
+The two published themes are worth comparing: `2026-01` uses the default dark
+ink-navy hero; `2026-02` is a light "field atlas" — sand ground, a heavy forest
+rule instead of a dark block, terracotta section bars, ledger-style stat cards
+with the label above the value, and IBM Plex throughout.
+
+Whatever the surface, the structure stays shared: masthead, sticky section nav,
+abstract, body, end matter, footer. That is what keeps a varied series legible
+as one publication.
+
+---
+
+## Indexing
+
+Every report page is generated with a full metadata set, so nothing can ship
+unindexed:
+
+- **Open Graph and Twitter** cards; `og:image` when the report has an `og.png`.
+- **Dublin Core** (`DC.title`, `DC.creator`, `DC.subject`, `DC.rights`, …).
+- **Google Scholar** citation tags on the *technical report* profile —
+  `citation_technical_report_institution` and `_number`, not journal tags,
+  because these are numbered institutional reports. `citation_pdf_url` is
+  emitted when a `pdfUrl` is set.
+- **schema.org JSON-LD** as a `Report`, with `abstract`, `keywords`,
+  `reportNumber`, `timeRequired` and `license`.
+- A visible **Abstract** block and an **end matter** section carrying keywords,
+  JEL classification, the method note, the licence and the citation line.
+- `reports.json` (CORS-open), an RSS feed carrying `content:encoded` abstracts,
+  and a sitemap with `lastmod`.
+
+All of it comes from `report.json`. The build prints a warning for any report
+without an abstract.
 
 ---
 
@@ -179,8 +247,10 @@ match.
 
 ## Not yet done
 
-- **`og:image`.** Social previews currently carry title and description but no
-  image, because generating a PNG card needs a dependency this build does not
-  have. A static card per report, or a small Worker, would close it.
+- **`og:image` cards.** The plumbing is in place — drop an `og.png` into a
+  report's directory and it is picked up and referenced automatically — but no
+  report ships one yet, so social previews are text-only. Generating them in the
+  build would need an image dependency this project deliberately does not have;
+  exporting a card per report by hand, or a small Worker, would close it.
 - **Search.** Fine at this size; `reports.json` is the natural index when the
   series is large enough to need one.

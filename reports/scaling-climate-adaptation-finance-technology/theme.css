@@ -1,0 +1,318 @@
+/* ===========================================================================
+   Theme — Report 2026-02, "Scaling Climate Adaptation"
+
+   Aesthetic: field atlas. Where report 2026-01 opens on a dark ink-navy hero,
+   this one is light throughout — a sand ground, a heavy forest rule instead of
+   a dark block, terracotta section bars, and IBM Plex in place of Newsreader.
+   The structure is the shell's; only the surface changes.
+
+   Loaded after report.css, so it redefines the tokens first (which also
+   re-colours every chart, since report.js reads the palette from them) and
+   then overrides the handful of rules that assume a dark masthead.
+   =========================================================================== */
+
+:root {
+  --bg: #f6f3ec;
+  --bg-card: #fffdf7;
+  --bg-accent: #ebe5d6;
+  --bg-dark: #1d4438;
+  --bg-dark-2: #16342b;
+
+  --text: #221f1a;
+  --text-secondary: #4b463d;
+  --text-muted: #7a7365;
+  --text-inverse: #eef0e8;
+
+  --primary: #1d4438;
+  --primary-light: #2f6a56;
+  --accent: #a8492a;
+  --accent-light: #cf8055;
+
+  --border: #cfc6b0;
+  --border-light: #e2dbc8;
+  --rule: #bdb298;
+
+  --chart-blue: #3a6b8a;
+  --chart-blue-light: #7fa8bd;
+  --chart-gold: #b07d24;
+  --chart-red: #9b3b1f;
+  --chart-teal: #1d4438;
+  --chart-gray: #8a8373;
+  --chart-orange: #cf8055;
+  --chart-purple: #6b5b8a;
+
+  --serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "system-ui", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-width: 980px;
+}
+
+::selection { background: rgba(207, 128, 85, 0.3); }
+
+.progress__bar { background: var(--accent); }
+
+/* --- masthead: light, ruled, no dark block -------------------------------- */
+
+.masthead {
+  background: var(--bg);
+  color: var(--text);
+  border-top: 7px solid var(--primary);
+  border-bottom: 1px solid var(--rule);
+  padding: 2.6rem var(--gutter) 0;
+}
+.masthead .overline {
+  color: var(--accent);
+  font-weight: 500;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.masthead h1 {
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  max-width: 22ch;
+  font-size: clamp(2rem, 5.2vw, 2.95rem);
+}
+.masthead .subtitle {
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 62ch;
+}
+.masthead .strapline {
+  border-left: 3px solid var(--accent);
+  color: var(--text-secondary);
+  font-style: normal;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+}
+
+/* The metadata strip becomes a ledger: hairline cells, mono labels. */
+.masthead .meta-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0;
+  margin-top: 2.2rem;
+  padding-top: 0;
+  border-top: 1px solid var(--rule);
+  color: var(--text-secondary);
+}
+.masthead .meta-row div {
+  padding: 0.9rem 1rem 1rem 0;
+  border-right: 1px solid var(--border-light);
+  font-size: 0.85rem;
+}
+.masthead .meta-row div:last-child { border-right: 0; }
+.masthead .meta-row strong {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+
+/* --- sticky nav: light ---------------------------------------------------- */
+
+.sticky-nav {
+  background: rgba(246, 243, 236, 0.95);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: 0 1px 0 rgba(34, 31, 26, 0.04);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* --- section headings: left bar, no underline ----------------------------- */
+
+section > h2 {
+  border-bottom: 0;
+  border-left: 4px solid var(--accent);
+  padding: 0.1rem 0 0.1rem 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+section > .section-dek {
+  font-style: normal;
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  padding-left: 1.2rem;
+  border-left: 1px solid var(--border-light);
+  margin-bottom: 2.2rem;
+}
+section > h3 {
+  font-family: var(--sans);
+  font-size: 1.16rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: none;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-light);
+  max-width: 74ch;
+}
+section > h4 { color: var(--accent); }
+
+.section-rule { border-top: 3px double var(--rule); }
+
+/* --- abstract: banded, not boxed ------------------------------------------ */
+
+.abstract {
+  background: var(--bg-accent);
+  border: 0;
+  border-top: 2px solid var(--primary);
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 1.7rem 1.4rem;
+}
+.abstract h2 { color: var(--primary); }
+.abstract p:first-of-type { font-size: 0.98rem; color: var(--text); }
+
+/* --- statistics: ledger cards, label above value ------------------------- */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 0;
+  border-top: 3px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.2rem 1.1rem;
+}
+.stat-card .stat-value {
+  order: 2;
+  font-size: 2.05rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 0.2rem;
+}
+.stat-card .stat-label {
+  order: 1;
+  margin-top: 0;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+  line-height: 1.45;
+}
+.stat-card .stat-source { order: 3; margin-top: 0.7rem; }
+
+/* --- executive cards ------------------------------------------------------ */
+
+.exec-card {
+  background: transparent;
+  border: 0;
+  border-top: 2px solid var(--accent);
+  padding: 1rem 0 0;
+}
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-size: 1.14rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0.35rem 0 0.5rem;
+}
+
+/* --- charts: ledger cards ------------------------------------------------- */
+
+.chart-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--primary);
+  padding: 1.2rem 1.3rem;
+}
+.chart-container .chart-label {
+  color: var(--primary);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+}
+
+/* --- pull quote: centred, ruled, unfilled -------------------------------- */
+
+.pull-quote {
+  background: transparent;
+  border-left: 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 1.6rem 0;
+  margin: 2.6rem 0;
+  text-align: center;
+  font-style: normal;
+  font-size: clamp(1.15rem, 2.6vw, 1.42rem);
+  font-weight: 500;
+  color: var(--primary);
+  max-width: 42ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.9rem;
+}
+
+/* --- callouts: dotted, unfilled ------------------------------------------ */
+
+.callout {
+  background: transparent;
+  border: 1px dashed var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 1.2rem 1.4rem;
+}
+.callout .callout-title { color: var(--accent); font-weight: 500; }
+.callout--warn { border-left-color: var(--chart-red); }
+
+/* --- tables --------------------------------------------------------------- */
+
+.data-table thead { background: var(--primary); }
+.data-table tbody tr:nth-child(even) { background: rgba(189, 178, 152, 0.12); }
+.data-table tbody tr:hover { background: rgba(207, 128, 85, 0.12); }
+.table-caption { color: var(--primary); font-weight: 500; }
+
+.matrix thead th { background: var(--primary); }
+.matrix .lv0 { background: #efeade; color: var(--text-muted); }
+.matrix .lv1 { background: #e3d3bd; color: var(--text); }
+.matrix .lv2 { background: #c98a5f; }
+.matrix .lv3 { background: #a8492a; }
+
+/* --- references and end matter ------------------------------------------- */
+
+.ref-list .ref-org { color: var(--primary); }
+.endmatter h2 { color: var(--primary); }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); }
+
+/* --- footer --------------------------------------------------------------- */
+
+.report-footer { border-top: 7px solid var(--accent); }
+.footer-inner h3 { color: var(--accent-light); }
+
+/* --- print ---------------------------------------------------------------- */
+
+@media print {
+  .masthead { border-top: 4px solid #333; }
+  .masthead h1 { color: #000; }
+}

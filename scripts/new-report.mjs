@@ -58,12 +58,25 @@ fs.writeFileSync(
       subtitle: 'TODO — one line, sentence case',
       strapline: 'TODO — the thesis in a single sentence, or remove this field',
       dek: 'TODO — two or three sentences for the cards, the feed and social previews.',
+      abstract: [
+        'TODO — paragraph 1: the problem and the claim. The abstract is rendered on the page, carried in the head metadata, the RSS feed and reports.json, and is what indexers read. Four paragraphs is the house length.',
+        'TODO — paragraph 2: the analytical core.',
+        'TODO — paragraph 3: the evidence.',
+        'TODO — paragraph 4: the implication and the agenda.',
+      ],
+      jel: 'TODO — JEL codes and their plain-language glosses, or delete this field',
+      method: 'TODO — which sources were synthesised, what is schematic or illustrative rather than measured, and whether the report is analytical or predictive.',
       author: 'Hunter Hughes',
       institution: 'H Heuristics',
       published: today,
       updated: today,
       readingTime: 20,
       charts: true,
+      // Optional, for a report with its own look: add a theme.css to this
+      // directory and name the type it needs here. Delete both if reusing
+      // the default aesthetic.
+      fontsUrl: null,
+      themeColor: null,
       topics: ['TODO — see topicOrder in site.config.mjs'],
       keywords: ['TODO'],
       sections: [

@@ -58,10 +58,13 @@
       if (!sections.length) return;
 
       // The active section is the last one whose top has passed the nav.
-      var line = window.scrollY + 90;
+      // Positions come from rects rather than offsetTop, which is measured
+      // from the nearest positioned ancestor and would silently shift if any
+      // wrapper ever gained a position.
+      var line = 90;
       var current = 0;
       for (var i = 0; i < sections.length; i++) {
-        if (sections[i].offsetTop <= line) current = i;
+        if (sections[i].getBoundingClientRect().top <= line) current = i;
       }
       // At the very bottom, the final section is always the active one.
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
@@ -74,11 +77,17 @@
         if (on) {
           links[j].setAttribute('aria-current', 'true');
           // Keep the active item visible in the horizontally scrolling nav.
-          if (nav && nav.scrollWidth > nav.clientWidth) {
-            var l = links[j].offsetLeft;
-            var r = l + links[j].offsetWidth;
-            if (l < nav.scrollLeft) nav.scrollLeft = l - 16;
-            else if (r > nav.scrollLeft + nav.clientWidth) nav.scrollLeft = r - nav.clientWidth + 16;
+          // Compared as rects: the links' offsetParent is the body, not the
+          // scroll container, so offsetLeft is in the wrong coordinate space
+          // and mis-scrolls the nav by the page gutter.
+          if (nav && nav.scrollWidth > nav.clientWidth + 1) {
+            var navBox = nav.getBoundingClientRect();
+            var linkBox = links[j].getBoundingClientRect();
+            if (linkBox.left < navBox.left) {
+              nav.scrollLeft += linkBox.left - navBox.left - 16;
+            } else if (linkBox.right > navBox.right) {
+              nav.scrollLeft += linkBox.right - navBox.right + 16;
+            }
           }
         } else {
           links[j].removeAttribute('aria-current');
@@ -95,6 +104,15 @@
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
+
+    // Recompute once the page has settled. Webfonts land after first paint and
+    // move every section boundary, and browsers restore the horizontal scroll
+    // of the nav container on reload — both leave the first pass stale.
+    window.addEventListener('load', onScroll);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(onScroll).catch(function () {});
+    }
+
     update();
   }
 
