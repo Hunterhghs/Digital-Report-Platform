@@ -1,0 +1,62 @@
+{
+  "number": "2026-07",
+  "title": "A Proactive Strategy for Mitigating the Twenty-First-Century Polycrisis",
+  "subtitle": "Combining clean transition, adaptation, development and institutional resilience at global scale",
+  "strapline": "A strategy is not a list of good things. It is a claim about which instrument delivers which good — and the four elements do not share a geometry.",
+  "dek": "Every serious polycrisis strategy names the same four elements, and the list has never been the problem. The four differ in who captures their benefit and in whether anyone but the beneficiary can supply them — which determines the instrument that can deliver each, and explains why combined strategies underperform their parts.",
+  "abstract": [
+    "Strategies for managing systemic risk this century converge on the same four elements: decarbonise the energy system, adapt to the warming already committed, sustain development, and strengthen the institutions that must run all of it. The list is not contested and it is not wrong. It is also not a strategy, because a list becomes a strategy only when it says something about relationships — what reinforces what, what competes with what, and which piece of machinery is capable of delivering each item. This report argues that the four elements differ in their economic geometry in a way that determines which instrument can deliver them, and that applying a single instrument to four different geometries is why combined strategies underperform their components.",
+    "Two questions sort them. Who captures the benefit, and can the good be supplied from outside? A tonne of carbon not emitted benefits everyone and no one in particular, and the resulting free-riding makes mitigation a coordination problem. A sea wall benefits the people behind it and nobody else, so adaptation has no free-rider problem whatsoever — but the party who captures the benefit is frequently the party who cannot pay, making it a financing problem. A competent procurement function or a credible auction cannot be delivered by an external party at all, which makes institutional resilience a capability problem in which money is not the operative variable. Development straddles: national benefit with global spillovers, part financeable and part capability. Three distinct failure modes, requiring three distinct remedies.",
+    "The empirical signatures are legible. Mitigation's coordination failure shows up in prices: 80 carbon-pricing instruments now operate worldwide, spanning roughly US$11 per tonne in China's national ETS to about US$170 in Norway — a fifteen-fold spread for a chemically identical externality — while every carbon price on earth together raised about US$100 billion in 2024 against approaching US$7.4 trillion in fossil-fuel subsidies. Adaptation's is different in kind: clean-energy investment runs at roughly US$2.2 trillion a year because a solar farm sells electricity, whereas international public adaptation finance stands at US$26 billion against an assessed need of US$310–365 billion, because a sea wall has no revenue line. And capability shows up as the gap between declaring and operating: 172 of 197 countries hold a national adaptation plan, while about 60 per cent report an operating multi-hazard early-warning system.",
+    "Two implications follow. The first is that the international system's standard machinery — negotiated targets, pledge-and-review, global goals, summit cycles — is purpose-built for the coordination problem and close to inert outside it: a pledge does not create a revenue model for a sea wall, and a global goal does not staff a procurement office. Adaptation in particular should be moved out of the pledge architecture and into the financing architecture, where concessional capital, risk transfer and resilience-linked lending address its actual constraint. The second is that the four elements are complementary in output and competitive in input, drawing on the same fiscal envelope and the same finite administrative capacity; strategies routinely cite the first relationship and budget as though the second did not exist. Since capability is built by sustained doing rather than assembled in advance, the practical answer is not to sequence institutions ahead of deployment but to couple them — choosing programmes partly for the institutional muscle they build, and protecting them long enough for it to form."
+  ],
+  "jel": "Q54, H87, F53, O19, H41 — climate and natural disasters; international fiscal issues and global public goods; international institutional arrangements; international linkages to development; public goods",
+  "method": "This report synthesises institutional research on carbon pricing, energy investment, adaptation finance and disaster risk governance, including the World Bank's State and Trends of Carbon Pricing 2025; the IMF's 2025 fossil-fuel subsidy data update; the European Commission on the Carbon Border Adjustment Mechanism's definitive period; the IEA's World Energy Investment 2025; UNEP's Adaptation Gap Report 2025; UNDRR's 2025 early-warning status reporting and its Global Assessment Report 2022; Tracking SDG 7 (2025); and the 2025 Financing for Development outcome. Every quantitative claim is attributed inline. Figure 1 is a conceptual two-by-two whose placements are analytical rather than measured, and whose boundaries are explicitly soft. Figure 4 places quantities side by side that are deliberately not like-for-like — private revenue-generating investment against international public finance for non-revenue-generating assets — because the difference in category is the report's finding; the caption says so. Tables 1 and 2 record analytical judgements rather than measured elasticities. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600;700&family=Courier+Prime:wght@400;700&display=swap",
+  "themeColor": "#7a1f2b",
+  "topics": [
+    "Systemic Risk",
+    "Institutions & Governance",
+    "Development Finance",
+    "Energy Transition"
+  ],
+  "keywords": [
+    "polycrisis",
+    "global public goods",
+    "collective action",
+    "free-rider problem",
+    "carbon pricing",
+    "adaptation finance",
+    "institutional capacity",
+    "state capacity",
+    "climate governance",
+    "policy instruments",
+    "clean energy transition",
+    "development strategy",
+    "absorptive capacity",
+    "pledge and review"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "same-list", "label": "1. The Same List, Every Time" },
+    { "id": "geometries", "label": "2. Four Goods, Four Geometries" },
+    { "id": "mitigation", "label": "3. The Coordination Problem" },
+    { "id": "adaptation", "label": "4. The Category Error" },
+    { "id": "capability", "label": "5. The Un-importable Good" },
+    { "id": "interactions", "label": "6. Output and Input" },
+    { "id": "strategy", "label": "7. What Proactive Requires" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "15×", "label": "Spread in carbon prices for a chemically identical externality" },
+    { "value": "70×", "label": "Fossil subsidies against all carbon-pricing revenue combined" },
+    { "value": "$2.2tn vs $26bn", "label": "Clean-energy investment against adaptation finance — one sells a product" },
+    { "value": "87% → 62%", "label": "Countries that can declare, against those that can operate" }
+  ]
+}
