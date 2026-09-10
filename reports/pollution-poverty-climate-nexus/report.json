@@ -1,0 +1,63 @@
+{
+  "number": "2026-04",
+  "title": "Breaking the Pollution–Poverty–Climate Nexus in Emerging Economies",
+  "subtitle": "Integrated strategies for cleaner growth, public health, resilience and economic development",
+  "strapline": "Three legs, three clocks. The bundle is the same either way — what changes is which leg makes the case.",
+  "dek": "Pollution, poverty and climate cause one another in every direction, and are managed by three ministries on three timetables. Integrated strategies keep failing not because the analysis is wrong but because integrated things must still be bought by a single budget holder on a single clock. The remedy is to appraise on the fastest.",
+  "abstract": [
+    "Air pollution is the second-leading risk factor for death worldwide, killing an estimated 8.1 million people in 2021 — about one death in eight — of which some 3.7 million are linked to household air pollution from burning solid fuels indoors. That last figure is better read as a poverty statistic than a pollution one: those deaths occur because roughly 2.1 billion people cannot afford or cannot obtain a cleaner way to cook. This report treats pollution, poverty and climate not as three problems that coincide but as a nexus of mutual causation, and asks why integrated strategies to address them, which have been analytically well understood for years, so consistently fail to be implemented.",
+    "The report's analytical core is that the three legs differ less in magnitude than in the speed at which an intervention pays back and in who receives the payment. Cleaner air pays back in months, locally, to the identifiable person breathing it; escape from poverty pays back over years to a generation, to the household; avoided emissions pay back over decades, globally, to no identifiable party. Institutions are correctly organised around those time constants — health ministries on annual mortality, social ministries on poverty headcounts, environment ministries on 2050 targets — with the consequence that an intervention paying out across all three timetables is scored by whichever ministry sponsors it, on that ministry's clock alone, using only the share of the return that lands in its own column. The full return is never assembled in one place.",
+    "Both directions of the pollution–poverty link are established. Poverty produces the pollution: a household chooses the fuel whose up-front cost it can meet this week, which makes energy poverty the proximate cause of household air pollution, with Sub-Saharan Africa carrying roughly half the clean-cooking deficit and about 85 per cent of the electricity-access deficit. Pollution produces the poverty: in 2022 an estimated 2.1 billion people faced financial hardship from out-of-pocket health spending, including 1.6 billion pushed into poverty or driven deeper into it, and in low-income countries out-of-pocket payments are the single largest source of health financing at slightly more than 40 per cent. The largest financial flow in the structure runs the wrong way and is widely mis-described: of an estimated US$7.4 trillion in fossil-fuel subsidies in 2024, only US$725 billion is explicit budgetary support, while US$6.7 trillion is implicit — unpriced air pollution and climate damage, which no treasury appropriates and which is settled instead in the lungs and household budgets of the least responsible and most exposed.",
+    "The implication is a sequencing rule rather than a new instrument: appraise on the fastest clock, and bank the slowest. Justify clean cooking, household electrification, clean urban transport and waste control on health and household-income returns that land inside a political cycle, and count the climate benefit as a dividend requiring no separate appropriation. The rule needs a portfolio filter, because the overlap between the legs is large but not total — remote utility-scale renewables deliver emissions cuts with little local air-quality gain, end-of-pipe controls cut exposure while entrenching combustion, and consumption subsidies relieve household budgets while worsening the exposure that is making the household ill. Subsidy reform in particular must run in the right order, with cash compensation and the clean alternative arriving simultaneously, as in Morocco's 2013–2015 reform, rather than as a price shock imposed ahead of any substitute."
+  ],
+  "jel": "Q53, I14, I32, Q56, O13 — air pollution and environmental externalities; health and inequality; measurement and analysis of poverty; environment and development; agriculture and natural resources in development",
+  "method": "This report synthesises institutional research on air pollution, health financing, energy access and fossil-fuel pricing, including the Health Effects Institute's State of Global Air 2024; the WHO's Tracking Universal Health Coverage 2023 Global Monitoring Report and its fact sheets on household and ambient air pollution and on heat; the 2025 Lancet Countdown; Tracking SDG 7 (2025) and the accompanying ESMAP release; the IEA's assessment of universal clean-cooking access in Africa; the World Bank and African Development Bank's Mission 300; the IMF's 2025 fossil-fuel subsidy data update and its account of Morocco's 2013-2015 subsidy reform; and Lazard's Levelized Cost of Energy+ (2024). Every quantitative claim is attributed inline. Figure 1 is a conceptual schematic. Figure 2 renders the report's own analytical ordering of when a benefit first becomes measurable, not observed lags, and its caption says so; Table 1's strength ratings are likewise analytical judgements rather than measured effect sizes. Regional splits in Figure 3 apply reported regional shares to reported global totals. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap",
+  "themeColor": "#0d1014",
+  "topics": [
+    "Public Health",
+    "Emerging Markets",
+    "Energy Transition",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "air pollution",
+    "household air pollution",
+    "clean cooking",
+    "energy poverty",
+    "pollution poverty nexus",
+    "co-benefits",
+    "out-of-pocket health spending",
+    "catastrophic health expenditure",
+    "fossil fuel subsidies",
+    "implicit subsidies",
+    "emerging economies",
+    "integrated policy",
+    "time preference",
+    "subsidy reform"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "one-household", "label": "1. Three Problems, One Household" },
+    { "id": "three-clocks", "label": "2. Three Clocks" },
+    { "id": "trap", "label": "3. How the Trap Closes" },
+    { "id": "climate-leg", "label": "4. Amplifier and Free Rider" },
+    { "id": "portfolio", "label": "5. The Integrated Portfolio" },
+    { "id": "subsidy", "label": "6. The Subsidy Inversion" },
+    { "id": "evidence", "label": "7. Evidence from the Record" },
+    { "id": "agenda", "label": "8. Appraise on the Fastest Clock" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "8.1M", "label": "Deaths a year from air pollution — second-leading risk factor worldwide" },
+    { "value": "1.6bn", "label": "People pushed into or deeper into poverty by health costs in one year" },
+    { "value": "$6.7tn", "label": "Implicit fossil subsidy — harm absorbed by households, not paid by treasuries" },
+    { "value": "Months vs decades", "label": "The gap between the fastest-paying leg and the slowest" }
+  ]
+}

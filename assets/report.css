@@ -225,7 +225,9 @@ img { max-width: 100%; height: auto; }
 }
 
 .content p { margin: 0 0 1.1rem; max-width: 74ch; }
-.content > section > p,
+/* :not(.section-dek) matters: without it this rule outranks the dek's own
+   colour on specificity and the standfirst renders as body copy. */
+.content > section > p:not(.section-dek),
 .content > section > ul { color: var(--text-secondary); }
 
 section { scroll-margin-top: 64px; }
