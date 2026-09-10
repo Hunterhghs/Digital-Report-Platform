@@ -1,0 +1,404 @@
+<section id="executive-summary">
+  <h2>Executive Summary</h2>
+  <p class="section-dek">Adaptation is counted as a stock of assets. What protects people is a service that keeps working — and a service runs on a chain, whose reliability is set by its weakest coupling rather than by its total.</p>
+
+  <div class="exec-grid">
+    <div class="exec-card">
+      <div class="exec-num">FINDING 01</div>
+      <p class="exec-title">Nobody consumes a stock</p>
+      <p class="exec-body">Adaptation is measured in dollars committed, kilometres built and assets hardened. But no household needs an embankment; it needs a clinic that functions, a market that stays supplied and a road that stays open. Those are services, and services depend on chains of infrastructure that must all hold at once.</p>
+    </div>
+    <div class="exec-card">
+      <div class="exec-num">FINDING 02</div>
+      <p class="exec-title">Reliability multiplies, it does not average</p>
+      <p class="exec-body">A service depending on five links, each working 90 per cent of the time, works 59 per cent of the time. A chain of individually excellent components can be a poor service — and the marginal return on protection depends on where an investment sits in the chain, not on what it costs.</p>
+    </div>
+    <div class="exec-card">
+      <div class="exec-num">FINDING 03</div>
+      <p class="exec-title">Polycrisis is common-mode failure</p>
+      <p class="exec-body">Portfolio logic says diversify, because failures are independent. In a polycrisis they are not: one flood takes power, roads, water and telecommunications together. Spreading protection across sectors does not help when the failure mode is shared. Decoupling and independent redundancy do.</p>
+    </div>
+  </div>
+
+  <p>Two earlier reports in this series treated adaptation as a quantity problem — <a href="/reports/scaling-climate-adaptation-finance-technology/">how much to buy and how to pay for it</a>, and <a href="/reports/economics-of-prevention-polycrisis/">why buying it early beats paying for it late</a>. Both take the composition of the spending as given and argue about its size and timing. This report takes the size as given and argues about its <em>shape</em>.</p>
+
+  <p>The claim is that adaptation is badly served by the language of stocks. Protection is not a pile of assets that accumulates; it is a network of dependencies whose behaviour is governed by topology. Where an investment sits in that network determines almost everything about what it buys, and two investments of identical cost in identical assets can differ in effect by more than an order of magnitude.</p>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-value">59%</div>
+      <div class="stat-label">Availability of a service depending on five links that are each 90 per cent reliable</div>
+      <div class="stat-source">Arithmetic: 0.9⁵</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">526 Mt</div>
+      <div class="stat-label">Food lost each year for want of refrigeration — about 12 per cent of global production</div>
+      <div class="stat-source">FAO</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">31%</div>
+      <div class="stat-label">Of annual sales lost to power outages by the worst-affected firms in Sub-Saharan Africa</div>
+      <div class="stat-source">Center for Global Development; World Bank Enterprise Surveys</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">Half</div>
+      <div class="stat-label">Of all vaccines wasted globally each year, largely through breaks in temperature control</div>
+      <div class="stat-source">WHO, via UNEP</div>
+    </div>
+  </div>
+
+  <p>Those last two figures are worth pausing on, because neither is a shortage. There is no shortage of vaccine doses in a country that wastes half of them, and no shortage of food in a system that loses 526 million tonnes a year for want of cold storage. These are losses caused by a missing link, and they destroy the value of everything upstream of it — the land, the labour, the manufacturing, the distribution — at a fraction of the cost of the link itself.</p>
+
+  <div class="pull-quote">
+    A chain of individually excellent components can be a poor service. Protection is not a total; it is a product.
+    <span class="attribution">The topological claim</span>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="stocks-and-services">
+  <h2>1. Stocks, Services and the Thing That Fails</h2>
+  <p class="section-dek">Adaptation statistics measure what has been bought. Vulnerability is a property of what still works when the hazard arrives — and the two are related only loosely.</p>
+
+  <p>Every adaptation indicator in wide use is a stock measure. Finance committed. Kilometres of coastal defence. Number of assets built to a resilient standard. Countries with a national adaptation plan. Each is countable, comparable and auditable, which is why they exist, and each answers the question <em>how much protection has been purchased?</em></p>
+
+  <p>That is not the question a household asks during a flood. It asks whether the clinic is open, whether the road to it is passable, whether the pharmacy's refrigerator is cold, whether the phone network is up to call ahead, and whether there is water to drink afterwards. Each of those is a <strong>service</strong>, and the defining property of a service is that it is delivered by several pieces of infrastructure operating together.</p>
+
+  <p>The gap between the two framings is not semantic. A country can hold a large and growing stock of adaptation assets and deliver poor service reliability, because the assets are distributed across the chain in a way that leaves one link weak. Conversely a country can deliver high service reliability from a modest stock, if the stock is placed where the chain would otherwise break. Neither outcome is visible in a stock measure.</p>
+
+  <div class="callout">
+    <p class="callout-title">What "infrastructure" means here</p>
+    <p>The title's word is doing specific work. Adaptation is described as infrastructure not because it involves construction — much of the most valuable adaptation involves none — but because it has the defining property of an infrastructure system: <strong>its output is a service, and its reliability is determined by the couplings between components rather than by the components themselves</strong>. That is a design problem with a substantial engineering literature behind it, and adaptation policy has largely not drawn on it.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="product-not-sum">
+  <h2>2. Reliability Is a Product</h2>
+  <p class="section-dek">The arithmetic of serial dependence, and the allocation rule that follows from it.</p>
+
+  <p>Take a service that requires <em>n</em> distinct pieces of infrastructure to be working at once, each available with probability <em>p</em>. The service is available with probability <em>p<sup>n</sup></em>. This is elementary, and its implications are consistently ignored in adaptation planning.</p>
+
+  <div class="chart-container">
+    <p class="chart-label">Figure 1 — Service availability against the length of the chain</p>
+    <div class="chart-frame chart-frame--tall"><canvas id="chart-reliability"></canvas></div>
+    <p class="chart-caption">Arithmetic on stated assumptions, not measured availabilities: the curves are <em>p<sup>n</sup></em> for four values of per-link reliability. The purpose is to show the shape of serial dependence. It assumes links fail independently and that none can substitute for another — two assumptions relaxed in Sections 2.1 and 4.</p>
+  </div>
+
+  <p>Two results matter. The first is that <strong>"mostly protected" is not protected</strong>. A service resting on five links that are each 90 per cent reliable — a level most planners would regard as respectable — is available 59 per cent of the time. Adding links makes it worse, and long chains are the norm rather than the exception in modern service delivery.</p>
+
+  <p>The second is more useful, because it is an allocation rule. In a serial chain the derivative of system reliability with respect to any single link's reliability is largest for the <em>weakest</em> link. Strengthening a strong link changes almost nothing.</p>
+
+  <div class="chart-container">
+    <p class="chart-label">Figure 2 — The same money, spent at two different points in one chain</p>
+    <div class="chart-frame chart-frame--short"><canvas id="chart-marginal"></canvas></div>
+    <p class="chart-caption">Arithmetic on a five-link chain with reliabilities of 99, 95, 70, 98 and 96 per cent, giving a service available 61.9 per cent of the time. Raising the 70 per cent link to 95 takes the service to 84.1 per cent; raising the 99 per cent link to 99.9 takes it to 62.5 per cent. The first buys 22 points of availability, the second buys six-tenths of a point — a difference of roughly thirty-seven times for interventions of comparable ambition.</p>
+  </div>
+
+  <p>This is the report's central practical claim, and it is uncomfortable for the way adaptation is actually financed. Money moves toward projects that are large, visible, appraisable and sponsored by a capable ministry. Binding links are frequently none of those things: a pump station, a feeder road, a fuel contract, a maintenance budget, a telemetry link. They are cheap, unglamorous, and owned by whoever owns nothing else.</p>
+
+  <h3>2.1 Where the arithmetic overstates and understates</h3>
+
+  <p>The product rule rests on two assumptions, and it is worth saying plainly which way each cuts.</p>
+
+  <ul>
+    <li><strong>Strict serial dependence overstates the fragility.</strong> Real chains have partial substitutes: a generator stands in for grid power, a boat for a road, a courier for a network. Where a substitute exists the link is not truly serial and the service is more robust than <em>p<sup>n</sup></em> implies.</li>
+    <li><strong>Independence understates it, and by more.</strong> The product rule assumes links fail for unrelated reasons. Under the conditions this report is concerned with they fail together, for the same reason, at the same moment. That is the subject of Section 4, and it is the more consequential of the two corrections.</li>
+  </ul>
+</section>
+
+<hr class="section-rule">
+
+<section id="chain">
+  <h2>3. The Anatomy of a Protection Chain</h2>
+  <p class="section-dek">A worked example, and the clearest real case of a chain whose value is destroyed by one missing link.</p>
+
+  <div class="chart-container">
+    <p class="chart-label">Figure 3 — A protection chain, and where the marginal investment belongs</p>
+    <div class="schematic-wrap" tabindex="0" role="region" aria-label="A five-link protection chain for a functioning clinic">
+      <svg class="schematic" viewBox="0 0 740 300" role="img" aria-labelledby="fig3-title fig3-desc">
+        <title id="fig3-title">A five-link protection chain</title>
+        <desc id="fig3-desc">A clinic that keeps working through a flood depends on five links in series: grid power at 99 per cent reliability, road access at 95 per cent, water supply at 70 per cent, cold chain at 98 per cent and staff and telecommunications at 96 per cent. Multiplying them gives a service available 62 per cent of the time. Strengthening the 70 per cent water link raises the service to 84 per cent; strengthening the already strong power link raises it to 62.5 per cent.</desc>
+
+        <defs>
+          <marker id="ch" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7c8f"></path>
+          </marker>
+        </defs>
+
+        <text x="20" y="24" font-size="11" font-weight="700" fill="#0f3d5c" letter-spacing="1">SERVICE: A CLINIC THAT KEEPS WORKING THROUGH A FLOOD</text>
+
+        <!-- links -->
+        <rect x="20" y="44" width="118" height="58" fill="#ffffff" stroke="#0f3d5c" stroke-width="1.4"></rect>
+        <text x="79" y="68" text-anchor="middle" font-size="10.5" font-weight="600" fill="#152232">Grid power</text>
+        <text x="79" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#0f3d5c">99%</text>
+
+        <rect x="158" y="44" width="118" height="58" fill="#ffffff" stroke="#0f3d5c" stroke-width="1.4"></rect>
+        <text x="217" y="68" text-anchor="middle" font-size="10.5" font-weight="600" fill="#152232">Road access</text>
+        <text x="217" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#0f3d5c">95%</text>
+
+        <rect x="296" y="44" width="118" height="58" fill="#fff3ea" stroke="#e05c00" stroke-width="2.4"></rect>
+        <text x="355" y="68" text-anchor="middle" font-size="10.5" font-weight="600" fill="#152232">Water supply</text>
+        <text x="355" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#e05c00">70%</text>
+
+        <rect x="434" y="44" width="118" height="58" fill="#ffffff" stroke="#0f3d5c" stroke-width="1.4"></rect>
+        <text x="493" y="68" text-anchor="middle" font-size="10.5" font-weight="600" fill="#152232">Cold chain</text>
+        <text x="493" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#0f3d5c">98%</text>
+
+        <rect x="572" y="44" width="118" height="58" fill="#ffffff" stroke="#0f3d5c" stroke-width="1.4"></rect>
+        <text x="631" y="68" text-anchor="middle" font-size="10.5" font-weight="600" fill="#152232">Staff &amp; telecoms</text>
+        <text x="631" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#0f3d5c">96%</text>
+
+        <line x1="140" y1="73" x2="156" y2="73" stroke="#6b7c8f" stroke-width="1.4" marker-end="url(#ch)"></line>
+        <line x1="278" y1="73" x2="294" y2="73" stroke="#6b7c8f" stroke-width="1.4" marker-end="url(#ch)"></line>
+        <line x1="416" y1="73" x2="432" y2="73" stroke="#6b7c8f" stroke-width="1.4" marker-end="url(#ch)"></line>
+        <line x1="554" y1="73" x2="570" y2="73" stroke="#6b7c8f" stroke-width="1.4" marker-end="url(#ch)"></line>
+
+        <!-- binding link annotation -->
+        <line x1="355" y1="112" x2="355" y2="132" stroke="#e05c00" stroke-width="1.6"></line>
+        <text x="355" y="147" text-anchor="middle" font-size="10" font-weight="700" fill="#e05c00">THE BINDING LINK</text>
+
+        <line x1="20" y1="168" x2="700" y2="168" stroke="#c3d0dc" stroke-width="1"></line>
+
+        <!-- arithmetic -->
+        <text x="20" y="192" font-size="10.5" fill="#37485c">As built</text>
+        <text x="230" y="192" font-size="10.5" font-family="monospace" fill="#152232">0.99 × 0.95 × 0.70 × 0.98 × 0.96</text>
+        <text x="690" y="192" text-anchor="end" font-size="13" font-weight="700" fill="#152232">62%</text>
+
+        <text x="20" y="222" font-size="10.5" font-weight="700" fill="#e05c00">Strengthen the binding link</text>
+        <text x="230" y="222" font-size="10.5" font-family="monospace" fill="#e05c00">0.99 × 0.95 × 0.95 × 0.98 × 0.96</text>
+        <text x="690" y="222" text-anchor="end" font-size="13" font-weight="700" fill="#e05c00">84%</text>
+
+        <text x="20" y="252" font-size="10.5" fill="#6b7c8f">Strengthen the strongest link</text>
+        <text x="230" y="252" font-size="10.5" font-family="monospace" fill="#6b7c8f">0.999 × 0.95 × 0.70 × 0.98 × 0.96</text>
+        <text x="690" y="252" text-anchor="end" font-size="13" font-weight="700" fill="#6b7c8f">62.5%</text>
+
+        <text x="20" y="284" font-size="9.8" font-style="italic" fill="#6b7c8f">Reliabilities are illustrative. The pattern, not the numbers, is the argument.</text>
+      </svg>
+    </div>
+    <p class="chart-caption">Schematic. Note that the two interventions are of comparable engineering ambition — a twenty-five point improvement in a weak system, a rounding-error improvement in an excellent one — and that only one of them changes what a patient experiences.</p>
+  </div>
+
+  <h3>3.1 The cold chain: a chain missing its last link</h3>
+
+  <p>The clearest real instance of this structure is the cold chain, because it has the property that a single break destroys the value of everything upstream. A vaccine manufactured, funded, shipped and delivered is worth nothing if it spent four hours warm; a harvest grown, irrigated, harvested and transported is worth nothing if it spoiled before market.</p>
+
+  <div class="chart-container">
+    <p class="chart-label">Figure 4 — Cropland and cold storage do not match</p>
+    <div class="chart-frame"><canvas id="chart-refrigeration"></canvas></div>
+    <p class="chart-caption">Developing economies hold nearly 80 per cent of the world's harvested cropland but refrigerate only about 20 per cent of their perishable output, against roughly 60 per cent in developed economies. Source: <a href="https://www.weforum.org/stories/2022/11/sustainable-food-cold-chains-feed-developing-countries/" rel="noopener" target="_blank">World Economic Forum</a>, drawing on FAO and UNEP analysis.</p>
+  </div>
+
+  <p>The consequence is a loss that has nothing to do with scarcity. The Food and Agriculture Organization estimates that the absence of effective refrigeration accounts for the loss of around <a href="https://www.fao.org/newsroom/detail/amid-food-and-climate-crises-investing-in-sustainable-food-cold-chains-crucial/en" rel="noopener" target="_blank">526 million tonnes of food a year, about 12 per cent of global production</a>.</p>
+
+  <div class="chart-container">
+    <p class="chart-label">Figure 5 — What the broken link costs, and what closing it would recover</p>
+    <div class="chart-frame chart-frame--short"><canvas id="chart-foodloss"></canvas></div>
+    <p class="chart-caption">Closing the refrigeration gap in developing economies could save an estimated 144 million tonnes of food a year. Sources: <a href="https://www.fao.org/newsroom/detail/amid-food-and-climate-crises-investing-in-sustainable-food-cold-chains-crucial/en" rel="noopener" target="_blank">FAO</a> for the annual loss; <a href="https://www.weforum.org/stories/2022/11/sustainable-food-cold-chains-feed-developing-countries/" rel="noopener" target="_blank">World Economic Forum</a> for the recoverable share. See also the World Bank's background paper on <a href="https://documents1.worldbank.org/curated/en/768601637124616069/pdf/Cold-Chains-in-Developing-Economies-A-Techno-Socio-Economic-Structural-Development-Challenge-Background-Paper.pdf" rel="noopener" target="_blank">cold chains in developing economies</a>.</p>
+  </div>
+
+  <p>The same structure governs health. The World Health Organization estimates that <a href="https://www.unep.org/news-and-stories/story/why-optimized-cold-chains-could-save-billion-covid-vaccines" rel="noopener" target="_blank">up to half of all vaccines are wasted globally each year</a>, a large part of it through breaks in temperature control and the logistics required to keep a chain unbroken. Every dose in that half was manufactured, financed, allocated and transported successfully. The chain failed at one point and discarded all of it.</p>
+</section>
+
+<hr class="section-rule">
+
+<section id="common-mode">
+  <h2>4. Common-Mode Failure</h2>
+  <p class="section-dek">Why polycrisis is not simply more hazard, and why the strategies that work against independent shocks stop working against correlated ones.</p>
+
+  <p>Section 2 assumed links fail independently. The organising fact of a polycrisis is that they do not. One flood takes the substation, the road, the pumping station and the mast at the same moment, for the same reason. One heatwave raises electricity demand, reduces generation efficiency, degrades transport surfaces and increases hospital admissions simultaneously. This is <strong>common-mode failure</strong>, and it defeats the two strategies most commonly used to manage risk.</p>
+
+  <p>The first is <strong>diversification</strong>. In a portfolio one holds many uncorrelated assets so that no single event impairs them all. Applied to adaptation, this becomes the instinct to spread protection across sectors and regions. It works when hazards are independent and fails exactly when they are not — and the <a href="https://www.weforum.org/publications/global-risks-report-2026/" rel="noopener" target="_blank">World Economic Forum's Global Risks Report</a> has for several years described a landscape defined less by any single peril than by the connections between them. The UNDRR's <a href="https://www.undrr.org/gar2022-our-world-risk" rel="noopener" target="_blank">Global Assessment Report 2022</a> makes the institutional version of the point: risk-management systems built for discrete, sectoral hazards are structurally unsuited to systemic risk.</p>
+
+  <p>The second is <strong>redundancy that shares the failure mode</strong>. A hospital generator is genuine redundancy against a grid fault and no redundancy at all against a flood that also closes the fuel-delivery road. A backup facility on the same grid, in the same floodplain, served by the same single carrier, is a duplicate rather than an alternative. Redundancy only counts if it fails for different reasons than the thing it backs up.</p>
+
+  <div class="callout callout--warn">
+    <p class="callout-title">The design rule this implies</p>
+    <p>Against independent failures, buy more protection. Against common-mode failures, buy <strong>independence</strong> — capacity whose failure mode differs from the primary's. Solar with storage at a clinic is not merely a second power source; it is a power source that does not depend on a road remaining open. A radio network is not merely a second channel; it is a channel that does not depend on the cellular grid. The value of a backup is not its capacity but its <em>decorrelation</em>.</p>
+  </div>
+
+  <p>Coupling also operates at scales well beyond the local. A 2024 study in <em>Nature</em> finds that <a href="https://www.nature.com/articles/s41586-024-07147-z" rel="noopener" target="_blank">extreme heat propagates through global supply chains</a>, so that losses concentrated in one region are amplified elsewhere through trade. A country can hold an entirely sound domestic chain and still lose the service, because a link sits in someone else's jurisdiction.</p>
+
+  <h3>4.1 The honest trade-off</h3>
+
+  <p>Redundancy is not free, and it is worth resisting the temptation to present it as costless. Idle capacity is capacity that could have been used; independence usually means holding two systems where one would ordinarily do; and an economy that over-insures against every coupling forgoes the efficiency gains that specialisation and just-in-time operation deliver. There is a genuine frontier here.</p>
+
+  <p>The claim in this report is narrower and, we think, safe: that current allocation sits a long way inside that frontier. When a service's availability is limited by a 70 per cent link while investment continues to flow to its 99 per cent links, the problem is not that resilience has been over-bought. It is that it has been bought in the wrong place.</p>
+</section>
+
+<hr class="section-rule">
+
+<section id="shared-nodes">
+  <h2>5. The Shared Nodes</h2>
+  <p class="section-dek">Some links appear in many chains at once. Those are where a single investment raises the reliability of several services simultaneously — and where a single failure removes them all.</p>
+
+  <p>Not all links are equally connected. A few infrastructures appear in nearly every service chain a society runs, which gives them two properties at once: they are the highest-leverage place to invest, and they are the most dangerous place to have a weakness. The World Bank's <a href="https://www.worldbank.org/en/topic/climatechange/publication/lifelines-the-resilient-infrastructure-opportunity" rel="noopener" target="_blank"><em>Lifelines</em></a> analysis identifies four such systems — power, water and sanitation, transport, and telecommunications — and the label is apt: they are the arteries other things run on.</p>
+
+  <p class="table-caption">Table 1 — Which services depend on which infrastructures</p>
+  <div class="tbl-scroll">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th scope="col">Service</th>
+          <th scope="col">Power</th>
+          <th scope="col">Water &amp; sanitation</th>
+          <th scope="col">Transport</th>
+          <th scope="col">Telecoms</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Functioning health facility</th><td class="lv3">Critical</td><td class="lv3">Critical</td><td class="lv2">High</td><td class="lv2">High</td></tr>
+        <tr><th scope="row">Food supply and cold chain</th><td class="lv3">Critical</td><td class="lv1">Moderate</td><td class="lv3">Critical</td><td class="lv1">Moderate</td></tr>
+        <tr><th scope="row">Early warning reaching households</th><td class="lv2">High</td><td class="lv0">Low</td><td class="lv1">Moderate</td><td class="lv3">Critical</td></tr>
+        <tr><th scope="row">Schools staying open</th><td class="lv2">High</td><td class="lv2">High</td><td class="lv2">High</td><td class="lv1">Moderate</td></tr>
+        <tr><th scope="row">Firms continuing to produce</th><td class="lv3">Critical</td><td class="lv1">Moderate</td><td class="lv2">High</td><td class="lv2">High</td></tr>
+        <tr><th scope="row">Payments and social transfers</th><td class="lv2">High</td><td class="lv0">Low</td><td class="lv0">Low</td><td class="lv3">Critical</td></tr>
+        <tr><th scope="row">Safe drinking water at home</th><td class="lv3">Critical</td><td class="lv3">Critical</td><td class="lv1">Moderate</td><td class="lv0">Low</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="matrix-key">
+    <span><i style="background:#0f3d5c"></i> Critical</span>
+    <span><i style="background:#4e88ac"></i> High</span>
+    <span><i style="background:#c6d7e4"></i> Moderate</span>
+    <span><i style="background:#e7edf3"></i> Low</span>
+  </div>
+  <p class="table-note">Dependency ratings are analytical judgements intended to show the pattern of sharing, not measured coupling strengths. Read by column rather than by row: the column with the most critical cells is the node whose failure removes the most services at once.</p>
+
+  <p>Read that way, electricity is the most shared node in the system, and its reliability in much of the developing world is poor. Firms surveyed in the World Bank's Enterprise Surveys report substantial losses from outages alone.</p>
+
+  <div class="chart-container">
+    <p class="chart-label">Figure 6 — What an unreliable shared node costs</p>
+    <div class="chart-frame chart-frame--short"><canvas id="chart-outages"></canvas></div>
+    <p class="chart-caption">Power outages cost surveyed firms around 8 per cent of annual sales on average, rising to roughly 10 per cent in Sub-Saharan Africa and South Asia, and to as much as 31 per cent for the most affected firms. Sources: <a href="https://www.enterprisesurveys.org/en/data/exploretopics/infrastructure" rel="noopener" target="_blank">World Bank Enterprise Surveys</a>; <a href="https://www.cgdev.org/article/new-study-sub-saharan-african-countries-unreliable-power-outages-cost-companies-much-31" rel="noopener" target="_blank">Center for Global Development</a>.</p>
+  </div>
+
+  <p>And these are only the losses to firms, which are the easiest to count. The same node also determines whether the cold chain of Section 3 holds, whether a clinic can run diagnostics or refrigerate a vaccine, and whether a water utility can pump. Sustainable Energy for All's work on <a href="https://www.seforall.org/news/global-push-to-power-health-facilities-at-energizing-healthcare-2025" rel="noopener" target="_blank">powering health facilities</a> puts the scale of the health-sector gap alone at roughly 100,000 facilities in Sub-Saharan Africa.</p>
+
+  <p>This is why electrification and adaptation are not separate agendas. A reliable shared node is the single input that raises the availability of the largest number of protective services at once — which is exactly the property Section 2's allocation rule tells us to look for.</p>
+</section>
+
+<hr class="section-rule">
+
+<section id="evidence">
+  <h2>6. Chains That Held, Chains That Broke</h2>
+  <p class="section-dek">Three cases, chosen because in each the outcome turned on the topology rather than on the total.</p>
+
+  <h3>6.1 A complete chain: Bangladesh</h3>
+
+  <p>Bangladesh's cyclone-protection system is usually described as a success of investment. It is better described as a success of completeness. It consists of three links — a forecasting service, a network of raised concrete shelters, and tens of thousands of trained community volunteers who carry the warning the last mile — and the striking feature is that removing any one of them collapses the outcome entirely. Shelters without warnings are empty buildings. Warnings without shelters tell people to run nowhere. Both without volunteers do not reach the last village. The programme worked because all three links existed at once, not because any of them was individually remarkable.</p>
+
+  <h3>6.2 A common-mode failure: Pakistan, 2022</h3>
+
+  <p>The 2022 floods are the clearest recent instance of correlated failure at national scale. Roughly 33 million people were affected and damages and economic losses ran to <a href="https://www.worldbank.org/en/news/press-release/2022/10/28/pakistan-flood-damages-and-economic-losses-over-usd-30-billion-and-reconstruction-needs-estimated-at-usd16-billion" rel="noopener" target="_blank">over US$30 billion</a>. What made the event so costly was not the depth of the water at any one point but the simultaneity: transport, power, health access, water supply and livelihoods failed together, over the same geography, for the same reason. The <a href="/reports/economics-of-prevention-polycrisis/">fiscal consequences of absorbing a shock on that scale</a> are treated in an earlier report; the topological point here is that no single-sector protection programme would have preserved service delivery, because the failure was common-mode.</p>
+
+  <h3>6.3 Routing around a broken link: Rwanda</h3>
+
+  <p>The most instructive case is the one that did not repair a link at all. In 2016 Rwanda became <a href="https://aerospaceglobalnews.com/news/rwanda-zipline-drone-delivery/" rel="noopener" target="_blank">the first country with a nationwide autonomous-drone medical delivery network</a>, through the health ministry's partnership with Zipline. Rather than upgrade the road network so that blood and vaccines could reach remote facilities reliably, the programme built a parallel path with a different failure mode. The network now <a href="https://aiforcause.org/stories/zipline-drones-africa-2026" rel="noopener" target="_blank">serves around 80 per cent of the country's health facilities, passed more than two million commercial deliveries in 2025, and is credited with maternal-mortality reductions on the order of 20 per cent in its service areas</a>.</p>
+
+  <p>What makes it an adaptation programme, on this report's definition, is not the technology. It is that a service chain with a weak transport link acquired a second link that does not fail when roads do. That is decorrelated redundancy at a binding constraint — precisely the intervention Sections 2 and 4 identify as highest-value, arrived at by a health ministry solving a delivery problem.</p>
+
+  <div class="pull-quote">
+    The value of a backup is not its capacity. It is the difference between its failure mode and the failure mode of the thing it backs up.
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="agenda">
+  <h2>7. Designing for Couplings</h2>
+  <p class="section-dek">Four rules that follow from the topology, each replacing a rule that is currently in use.</p>
+
+  <p class="table-caption">Table 2 — What the coupling view changes</p>
+  <div class="tbl-scroll">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Current rule</th>
+          <th scope="col">Coupling rule</th>
+          <th scope="col">Why it matters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Maximise protected assets per dollar</th>
+          <td>Maximise service availability per dollar</td>
+          <td>Assets are an input; availability is the output people experience.</td>
+        </tr>
+        <tr>
+          <th scope="row">Spread investment across sectors</th>
+          <td>Concentrate at binding links and shared nodes</td>
+          <td>In a serial chain the weakest link governs; spreading dilutes the only spending that moves the number.</td>
+        </tr>
+        <tr>
+          <th scope="row">Add redundancy</th>
+          <td>Add <em>decorrelated</em> redundancy</td>
+          <td>A backup sharing the primary's failure mode is a duplicate, not an alternative.</td>
+        </tr>
+        <tr>
+          <th scope="row">Report finance committed</th>
+          <td>Report services sustained under stress</td>
+          <td>A stock measure cannot distinguish a well-placed portfolio from a badly-placed one of the same size.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>7.1 Map the chain before buying the asset</h3>
+  <ul>
+    <li>Require every major adaptation investment to name the service it protects and to enumerate the other links that service depends on. An investment that cannot name its chain cannot know whether it sits at the binding link.</li>
+    <li>Maintain service-level dependency maps for the handful of services that matter most under stress — health facilities, water supply, food distribution, payments, early warning — and update them as infrastructure changes.</li>
+  </ul>
+
+  <h3>7.2 Spend at the binding link</h3>
+  <ul>
+    <li>Rank candidate investments by their effect on service availability rather than by asset value or hazard exposure. The two rankings differ sharply, and the arithmetic of Section 2 says the second is the one that matters.</li>
+    <li>Protect maintenance and operating budgets for weak links explicitly. A pump station at 70 per cent availability is usually a maintenance and spare-parts problem, not a capital one, and capital budgets cannot fix it.</li>
+  </ul>
+
+  <h3>7.3 Buy redundancy at the shared nodes, and make it independent</h3>
+  <ul>
+    <li>Treat reliable electricity as adaptation infrastructure and fund it from adaptation budgets where it carries protective services — it is the most shared node in the system and the one whose failure removes the most services at once.</li>
+    <li>Specify redundancy by failure mode, not by capacity: distributed generation and storage against grid and road failure together; radio and satellite against terrestrial network failure; local storage against transport failure.</li>
+    <li>Audit existing backups for shared failure modes. A generator dependent on a road, a second site on the same grid and a single carrier for emergency communications are common and are not redundancy.</li>
+  </ul>
+
+  <h3>7.4 Measure services, not stocks</h3>
+  <ul>
+    <li>Publish service-availability targets and outturns under stress — the share of health facilities operational during a defined event, the share of the population with continuous water, the share of warnings that reached their recipients.</li>
+    <li>Report adaptation progress in those terms alongside finance committed, so that a well-placed portfolio can be distinguished from a badly-placed one of the same size.</li>
+  </ul>
+
+  <h3>7.5 Conclusion</h3>
+
+  <p>The dominant framing of adaptation is quantitative: how much is needed, how much has been delivered, how large the gap is. That framing has produced real progress in measurement and real pressure for finance, and this series has made use of it. But it contains an assumption that does not hold — that protection accumulates, so that more spending reliably yields more safety.</p>
+
+  <p>Protection does not accumulate. It multiplies, and it multiplies through the couplings between systems rather than within them. A country can raise its adaptation stock steadily while its service availability stays flat, because the additions land on links that were never binding. A country can also raise availability sharply for very little, if it finds the link that was. The difference between those two outcomes is invisible in every headline adaptation indicator currently published.</p>
+
+  <p>Under polycrisis the stakes on getting this right rise, because correlated hazards attack many links at once and reward exactly the property that stock measures ignore: independence. The practical agenda is unglamorous — map the chains, fund the weak links, decorrelate the backups, and measure what still works when the water arrives. It is also, on the arithmetic above, where the largest unclaimed gains in protection currently sit.</p>
+</section>
+
+<hr class="section-rule">
+
+<section id="references">
+  <h2>References</h2>
+  <p class="section-dek">Every quantitative claim above is attributed inline. The principal sources are collected here.</p>
+
+  <ul class="ref-list">
+    <li><span class="ref-org">World Bank / GFDRR</span><a href="https://www.worldbank.org/en/topic/climatechange/publication/lifelines-the-resilient-infrastructure-opportunity" rel="noopener" target="_blank">Lifelines: The Resilient Infrastructure Opportunity</a> — the four essential infrastructure systems and the case for resilience. See also the <a href="https://www.gfdrr.org/en/feature-story/results-resilience-lifelines-and-case-resilient-infrastructure" rel="noopener" target="_blank">GFDRR summary</a>.</li>
+    <li><span class="ref-org">FAO</span><a href="https://www.fao.org/newsroom/detail/amid-food-and-climate-crises-investing-in-sustainable-food-cold-chains-crucial/en" rel="noopener" target="_blank">Amid Food and Climate Crises, Investing in Sustainable Food Cold Chains Crucial</a> — around 526 million tonnes of food lost a year, about 12 per cent of global production.</li>
+    <li><span class="ref-org">World Economic Forum</span><a href="https://www.weforum.org/stories/2022/11/sustainable-food-cold-chains-feed-developing-countries/" rel="noopener" target="_blank">Sustainable Food Cold Chains Could Feed Developing Countries</a> — the cropland and refrigeration shares, and the 144 million tonnes recoverable.</li>
+    <li><span class="ref-org">World Bank</span><a href="https://documents1.worldbank.org/curated/en/768601637124616069/pdf/Cold-Chains-in-Developing-Economies-A-Techno-Socio-Economic-Structural-Development-Challenge-Background-Paper.pdf" rel="noopener" target="_blank">Cold Chains in Developing Economies: A Techno-Socio-Economic Structural Development Challenge</a>.</li>
+    <li><span class="ref-org">WHO, via UNEP</span><a href="https://www.unep.org/news-and-stories/story/why-optimized-cold-chains-could-save-billion-covid-vaccines" rel="noopener" target="_blank">Why Optimized Cold Chains Could Save a Billion COVID Vaccines</a> — up to half of vaccines wasted globally each year.</li>
+    <li><span class="ref-org">World Bank</span><a href="https://www.enterprisesurveys.org/en/data/exploretopics/infrastructure" rel="noopener" target="_blank">Enterprise Surveys: Infrastructure</a>; and <a href="https://www.cgdev.org/article/new-study-sub-saharan-african-countries-unreliable-power-outages-cost-companies-much-31" rel="noopener" target="_blank">Center for Global Development</a> on the cost of outages to firms.</li>
+    <li><span class="ref-org">SEforALL</span><a href="https://www.seforall.org/news/global-push-to-power-health-facilities-at-energizing-healthcare-2025" rel="noopener" target="_blank">Global Push to Power Health Facilities</a> — the scale of the health-facility electrification gap in Sub-Saharan Africa.</li>
+    <li><span class="ref-org">Nature</span><a href="https://www.nature.com/articles/s41586-024-07147-z" rel="noopener" target="_blank">Extreme heat propagates through global supply chains</a> (2024) — amplification of localised losses through trade.</li>
+    <li><span class="ref-org">UNDRR</span><a href="https://www.undrr.org/gar2022-our-world-risk" rel="noopener" target="_blank">Global Assessment Report on Disaster Risk Reduction 2022: Our World at Risk</a> — systems built for discrete hazards against systemic risk.</li>
+    <li><span class="ref-org">World Economic Forum</span><a href="https://www.weforum.org/publications/global-risks-report-2026/" rel="noopener" target="_blank">Global Risks Report 2026</a> — the interconnection of the risk landscape.</li>
+    <li><span class="ref-org">World Bank</span><a href="https://www.worldbank.org/en/news/press-release/2022/10/28/pakistan-flood-damages-and-economic-losses-over-usd-30-billion-and-reconstruction-needs-estimated-at-usd16-billion" rel="noopener" target="_blank">Pakistan: Flood Damages and Economic Losses Over US$30 Billion</a> (October 2022).</li>
+    <li><span class="ref-org">Rwanda / Zipline</span><a href="https://aerospaceglobalnews.com/news/rwanda-zipline-drone-delivery/" rel="noopener" target="_blank">The world's first nationwide autonomous-drone medical delivery network</a>; and <a href="https://aiforcause.org/stories/zipline-drones-africa-2026" rel="noopener" target="_blank">coverage of the network's scale and health outcomes</a>.</li>
+    <li><span class="ref-org">H Heuristics</span><a href="/reports/scaling-climate-adaptation-finance-technology/">Scaling Climate Adaptation Through Development Finance and Technology Diffusion</a>; and <a href="/reports/economics-of-prevention-polycrisis/">The Economics of Prevention in an Age of Polycrisis</a> — the quantity and timing arguments this report takes as given.</li>
+  </ul>
+</section>

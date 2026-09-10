@@ -1,0 +1,62 @@
+{
+  "number": "2026-06",
+  "title": "Climate Adaptation as Infrastructure for Global Polycrisis Risk Reduction",
+  "subtitle": "Protecting vulnerable economies from escalating environmental, economic and social shocks",
+  "strapline": "Protection is not a total. It is a product — and it multiplies through the couplings between systems, not within them.",
+  "dek": "Adaptation is counted as a stock of assets, but what protects people is a service that keeps working, and a service runs on a chain. Reliability multiplies rather than averages, so where an investment sits in the network matters more than what it costs — and polycrisis is the case where the links fail together.",
+  "abstract": [
+    "Every adaptation indicator in wide use is a stock measure: finance committed, kilometres built, assets hardened, plans adopted. None of them is what a household experiences during a shock. What a household needs is a service that keeps working — a clinic that is open, a road that is passable, a refrigerator that is cold, a network that carries a warning — and every one of those services is delivered by several pieces of infrastructure operating together. This report argues that adaptation is therefore badly served by the language of stocks, and should be treated as an infrastructure system in the technical sense: one whose output is a service and whose reliability is governed by the couplings between components rather than by the components themselves.",
+    "The analytical core is that reliability in a serial chain multiplies rather than averages. A service depending on five links that are each 90 per cent reliable is available 59 per cent of the time, which means a chain of individually respectable components can be a poor service, and that adding links makes matters worse. It also means the marginal return on protection is determined by position rather than by cost: in a five-link chain with reliabilities of 99, 95, 70, 98 and 96 per cent, raising the weakest link to 95 per cent takes service availability from 61.9 to 84.1 per cent, while raising the strongest to 99.9 per cent takes it to 62.5. Two interventions of comparable ambition differ in effect by roughly thirty-seven times. The cold chain is the clearest real instance of the structure, because one break destroys the value of everything upstream: the absence of effective refrigeration accounts for the loss of around 526 million tonnes of food a year, about 12 per cent of global production, and up to half of all vaccines are wasted annually, largely through breaks in temperature control.",
+    "Polycrisis enters as common-mode failure. The product rule assumes links fail for unrelated reasons; the organising fact of a polycrisis is that they do not, because one flood takes the substation, the road, the pumping station and the mast at the same moment and for the same reason. This defeats the two strategies most often used against risk. Diversification works when hazards are independent and fails precisely when they are not, so spreading protection across sectors buys little against a shared failure mode. And redundancy that shares the primary's failure mode is duplication rather than an alternative: a hospital generator is real redundancy against a grid fault and none at all against a flood that also closes the fuel-delivery road. The design rule that replaces both is to buy independence — capacity whose failure mode differs from the primary's — since the value of a backup lies in its decorrelation rather than its capacity.",
+    "The implications are an allocation rule and a measurement reform. Some links appear in nearly every chain a society runs; electricity is the most shared, and its unreliability already costs surveyed firms around 8 per cent of annual sales, rising to roughly 10 per cent in Sub-Saharan Africa and South Asia and to 31 per cent for the worst affected, while the health-facility electrification gap in Sub-Saharan Africa alone runs to roughly 100,000 facilities. Investment should concentrate at binding links and shared nodes rather than spreading across sectors; redundancy should be specified by failure mode rather than capacity; and progress should be reported as services sustained under stress rather than as finance committed, because no stock measure can distinguish a well-placed portfolio from a badly-placed one of the same size. Bangladesh's cyclone system illustrates a complete chain, Pakistan's 2022 floods a common-mode failure, and Rwanda's national drone-delivery network the highest-value intervention of all — decorrelated redundancy at a binding constraint, arrived at by a health ministry solving a delivery problem."
+  ],
+  "jel": "H54, Q54, L94, O18, D85 — infrastructure and public investment; climate and natural disasters; electric utilities; regional and transportation analysis; network formation and analysis",
+  "method": "This report synthesises institutional research on resilient infrastructure, energy access, cold chains and systemic risk, including the World Bank and GFDRR's Lifelines; FAO and UNEP analysis of food cold chains; WHO estimates of vaccine wastage via UNEP; World Bank Enterprise Survey data on the cost of outages, with the Center for Global Development's analysis; Sustainable Energy for All on health-facility electrification; a 2024 Nature study of heat propagation through global supply chains; UNDRR's Global Assessment Report on Disaster Risk Reduction 2022; the World Economic Forum's Global Risks Report 2026; and reporting on Rwanda's national drone-delivery network. Every quantitative claim is attributed inline. Figures 1 and 2 and Figure 3's arithmetic are transparent calculations on stated, illustrative link reliabilities rather than measured availabilities, and their captions say so; the underlying model assumes strict serial dependence and independent failure, both of which Sections 2.1 and 4 relax explicitly. Table 1's dependency ratings are analytical judgements showing a pattern of sharing rather than measured coupling strengths. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "readingTime": 19,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap",
+  "themeColor": "#0f3d5c",
+  "topics": [
+    "Infrastructure",
+    "Climate Adaptation",
+    "Systemic Risk",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "climate adaptation",
+    "resilient infrastructure",
+    "critical infrastructure interdependency",
+    "common-mode failure",
+    "service reliability",
+    "cold chain",
+    "energy access",
+    "polycrisis",
+    "redundancy",
+    "network topology",
+    "binding constraint",
+    "lifelines",
+    "systemic risk",
+    "vulnerable economies"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "stocks-and-services", "label": "1. Stocks and Services" },
+    { "id": "product-not-sum", "label": "2. Reliability Is a Product" },
+    { "id": "chain", "label": "3. Anatomy of a Chain" },
+    { "id": "common-mode", "label": "4. Common-Mode Failure" },
+    { "id": "shared-nodes", "label": "5. The Shared Nodes" },
+    { "id": "evidence", "label": "6. Chains Held and Broken" },
+    { "id": "agenda", "label": "7. Designing for Couplings" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "59%", "label": "Availability of a service on five links each 90% reliable" },
+    { "value": "37×", "label": "Difference between spending at the binding link and the strongest one" },
+    { "value": "526 Mt", "label": "Food lost yearly for want of refrigeration — one missing link" },
+    { "value": "31%", "label": "Of sales lost to outages by the worst-affected African firms" }
+  ]
+}
