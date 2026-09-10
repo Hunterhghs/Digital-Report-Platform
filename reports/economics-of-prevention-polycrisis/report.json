@@ -1,0 +1,63 @@
+{
+  "number": "2026-05",
+  "title": "The Economics of Prevention in an Age of Polycrisis",
+  "subtitle": "Why early investment in resilience can outperform repeated emergency response spending",
+  "strapline": "Response is a subscription. Prevention is a purchase. Most disaster budgets buy the subscription.",
+  "dek": "Prevention is appraised against doing nothing. Its real alternative is emergency response — already being paid for, repeatedly, at surge prices, on crisis financing, leaving no asset and restoring the exposure that produced the loss. The obstacles are institutional, not economic.",
+  "abstract": [
+    "The economics of disaster prevention have been settled for years. The Global Commission on Adaptation put US$1.8 trillion of investment against US$7.1 trillion in net benefits; the World Bank's Lifelines found that specifying resilience at the design stage adds only 3 to 5 per cent to an asset's upfront cost while avoiding damage and disruption worth 50 to 100 per cent of its value. This report therefore asks a narrower question than the usual one. Not what prevention is worth, but why the demonstrably more expensive option keeps winning — and its answer is that prevention is almost always appraised against doing nothing, when its actual alternative is the emergency response spending that is going to happen anyway.",
+    "Read that way, the two are not competing uses of the same money but different classes of expenditure. Prevention is a capital purchase: paid once, it produces a durable asset that lowers a liability for the whole of its life. Response is an operating expense: paid at every event, it buys consumption, leaves nothing on the balance sheet, and — because reconstruction restores the status quo ante, which is the condition that produced the loss — resets rather than reduces future exposure. Buying protection late also costs more for five separable reasons, together the response premium: surge pricing in a seller's market at the moment of maximum demand; crisis financing raised when reserves are drawn down and spreads have widened; no residual asset; recurrence; and damage already sunk before the money is spent.",
+    "Polycrisis is what changes the arithmetic. Responding event by event is a coherent strategy when shocks are rare, independent and bounded: a state holds a reserve sized to one event and rebuilds it in the quiet years. Each assumption now fails, and if the reserve is never rebuilt between events it is not a reserve but a permanent and growing line item. On transparent arithmetic — response costing one unit per event and leaving no asset, prevention costing three units once and 0.2 per event to maintain — the two models cost the same at just under four events and the prevention path is roughly forty per cent cheaper by the eighth. Polycrisis does not change the price of either option; it increases the number of events and so brings the crossover point inside the planning horizon of any government now writing a budget. Pakistan's 2022 floods show every component operating at once: over US$30 billion in damages and losses and a further US$16 billion in reconstruction needs, financed into a balance sheet already under strain, buying relief rather than protective capital.",
+    "Because the economics are not the binding constraint, the agenda is institutional. Six asymmetries give response an easier path through a government: response has an attributable moment while prevention's success is a non-event; response is typically funded from contingency reserves outside the expenditure ceiling while prevention competes inside it; response is expensed while prevention must clear an investment appraisal; the expectation of post-disaster assistance weakens the incentive to pre-fund; prevention's returns land beyond the term of office; and response has countable outputs where prevention's output is a counterfactual. The remedies follow directly and require no new money or technology — give prevention access to the same appropriation class, state the response spending each protective investment displaces, publish disaster spending as the multi-year liability it is, move international support from post-disaster appeals to pre-arranged and anticipatory finance, mandate design-stage resilience standards, and require build-back standards that raise the protected baseline rather than restoring the one that failed."
+  ],
+  "jel": "H54, Q54, H84, D61, H61 — infrastructure and public investment; climate and natural disasters; disaster aid; cost-benefit analysis; budget systems",
+  "method": "This report synthesises institutional research on disaster risk reduction, adaptation finance and sovereign debt, including the World Bank and GFDRR's Lifelines; the World Bank's October 2022 assessment of Pakistan's floods; UNDRR's Global Assessment Report on Disaster Risk Reduction 2022 and its 2025 early-warning status reporting; the Global Commission on Adaptation's Adapt Now; the World Resources Institute's 2025 study of 320 implemented adaptation investments; UNEP's Adaptation Gap Report 2025; UNCTAD's A World of Debt; the IMF's Resilience and Sustainability Trust and its Global Sovereign Debt Roundtable reporting; UNFCCC material on the Fund for responding to Loss and Damage; and the World Economic Forum's Global Risks Report 2026. Every quantitative claim is attributed inline. Figure 1 is a conceptual schematic whose bar heights illustrate a pattern rather than any programme's costs. Figure 2 is transparent arithmetic on assumptions stated in its caption, not a forecast or an estimate of a real programme. Table 1 and Table 2 set out analytical categories drawn from public-financial-management practice rather than measured effects. Figure 6 places three quantities side by side that are not fungible and are not presented as substitutes for one another. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "readingTime": 19,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap",
+  "themeColor": "#0a0a0a",
+  "topics": [
+    "Systemic Risk",
+    "Development Finance",
+    "Institutions & Governance",
+    "Infrastructure"
+  ],
+  "keywords": [
+    "disaster risk reduction",
+    "prevention",
+    "emergency response",
+    "polycrisis",
+    "resilient infrastructure",
+    "cost-benefit analysis",
+    "public financial management",
+    "contingency budgeting",
+    "anticipatory finance",
+    "pre-arranged financing",
+    "climate-resilient debt clauses",
+    "early warning systems",
+    "sovereign debt",
+    "reconstruction"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "wrong-comparison", "label": "1. The Comparison Never Made" },
+    { "id": "response-premium", "label": "2. The Response Premium" },
+    { "id": "polycrisis-breaks-it", "label": "3. Why Polycrisis Breaks It" },
+    { "id": "pakistan", "label": "4. Pakistan 2022" },
+    { "id": "what-prevention-returns", "label": "5. What Prevention Buys" },
+    { "id": "why-losing", "label": "6. Why the Worse Option Wins" },
+    { "id": "instruments", "label": "7. The Instruments Exist" },
+    { "id": "agenda", "label": "8. Making Prevention Buyable" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "3–5%", "label": "Added cost of resilience at design stage, against 50–100% of value avoided" },
+    { "value": "~4 events", "label": "Where prevention overtakes repeated response on cumulative cost" },
+    { "value": "$30bn", "label": "Pakistan's 2022 floods, plus $16bn of reconstruction needs" },
+    { "value": "119 of 193", "label": "Countries with a multi-hazard early-warning system" }
+  ]
+}

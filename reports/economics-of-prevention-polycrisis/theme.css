@@ -1,0 +1,336 @@
+/* ===========================================================================
+   Theme — Report 2026-05, "The Economics of Prevention in an Age of Polycrisis"
+
+   Aesthetic: Swiss / technical. The first report in the series set entirely
+   in a grotesque — no serif anywhere — on white, with heavy black rules, a
+   single signal red, and figures in tabular mono. The look is deliberately
+   ledger-like, because the argument is an accounting one.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #fcfcfc;
+  --bg-card: #ffffff;
+  --bg-accent: #f2f3f5;
+  --bg-dark: #0a0a0a;
+  --bg-dark-2: #000000;
+
+  --text: #0a0a0a;
+  --text-secondary: #333333;
+  --text-muted: #6b6b6b;
+  --text-inverse: #ffffff;
+
+  --primary: #0a0a0a;
+  --primary-light: #333333;
+  --accent: #e3120b;
+  --accent-light: #ff4a42;
+
+  --border: #d4d6d9;
+  --border-light: #e6e7ea;
+  --rule: #0a0a0a;
+
+  --chart-blue: #0057b8;
+  --chart-blue-light: #6fa8e8;
+  --chart-gold: #c67600;
+  --chart-red: #e3120b;
+  --chart-teal: #007a6d;
+  --chart-gray: #9aa0a6;
+  --chart-orange: #e06c00;
+  --chart-purple: #5b3fa8;
+
+  /* No serif: the display face is the same grotesque as the text, at weight. */
+  --serif: Archivo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: Barlow, -apple-system, BlinkMacSystemFont, "system-ui", sans-serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-width: 1000px;
+}
+
+body { font-size: 1.02rem; }
+::selection { background: rgba(227, 18, 11, 0.18); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--accent); }
+
+a { color: var(--accent); }
+a:hover { color: var(--text); }
+
+.progress__bar { background: var(--accent); }
+
+/* Figures are tabular throughout — this is a report about arithmetic. */
+.stat-value, .data-table .num, .endmatter .cite-inline {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- masthead: white, heavy black rule above ------------------------------ */
+
+.masthead {
+  background: var(--bg);
+  color: var(--text);
+  border-top: 8px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  padding: 2.4rem var(--gutter) 0;
+}
+.masthead .overline {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.4rem;
+}
+.masthead h1 {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  max-width: 17ch;
+  font-size: clamp(2.1rem, 6vw, 3.5rem);
+}
+.masthead .subtitle {
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 58ch;
+  font-size: clamp(1rem, 2.2vw, 1.12rem);
+}
+.masthead .strapline {
+  border-left: 0;
+  padding: 1rem 0 0;
+  margin-top: 1.4rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--text);
+  max-width: 54ch;
+}
+.masthead .meta-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 0;
+  margin-top: 2.2rem;
+  padding-top: 0;
+  border-top: 2px solid var(--text);
+  color: var(--text-secondary);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+.masthead .meta-row div { padding: 0.9rem 1rem 1.1rem 0; }
+.masthead .meta-row strong {
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.35rem;
+}
+
+/* --- sticky nav: black bar, inverted -------------------------------------- */
+
+.sticky-nav {
+  background: rgba(10, 10, 10, 0.96);
+  border-bottom: 0;
+}
+.nav-inner a {
+  color: rgba(255, 255, 255, 0.66);
+  font-family: var(--mono);
+  font-size: 0.73rem;
+  letter-spacing: 0.02em;
+}
+.nav-inner a:hover { color: #fff; }
+.nav-inner a.is-active { color: #fff; border-bottom-color: var(--accent); }
+
+/* --- section headings ------------------------------------------------------ */
+
+section > h2 {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-size: clamp(1.6rem, 3.8vw, 2.15rem);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.6rem;
+}
+section > .section-dek {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 66ch;
+}
+section > h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--text);
+  letter-spacing: -0.015em;
+  margin: 2.4rem 0 0.7rem;
+}
+section > h4 { color: var(--accent); font-family: var(--mono); font-size: 0.8rem; }
+
+.section-rule { border-top: 1px solid var(--border); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract: bordered, ledger-like -------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--text);
+  border-left: 1px solid var(--text);
+  padding: 1.5rem 1.7rem 1.3rem;
+}
+.abstract h2 { color: var(--accent); border: 0; }
+
+/* --- statistics: bordered, tabular ---------------------------------------- */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--text);
+  border-left: 1px solid var(--text);
+  border-top: 5px solid var(--accent);
+  padding: 1.1rem 1.2rem 1.1rem;
+}
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.95rem;
+  letter-spacing: -0.035em;
+  color: var(--text);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.79rem; }
+
+/* --- executive cards ------------------------------------------------------- */
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--text);
+  padding: 1.4rem;
+}
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  line-height: 1;
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.14rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0.65rem 0 0.5rem;
+}
+
+/* --- charts ---------------------------------------------------------------- */
+
+.chart-container {
+  background: var(--bg-card);
+  border: 1px solid var(--text);
+  padding: 1.2rem 1.3rem;
+}
+.chart-container .chart-label {
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote: unruled, very large -------------------------------------- */
+
+.pull-quote {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 3rem 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.35rem, 3.4vw, 2rem);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  max-width: 24ch;
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* --- callouts: black header strip ----------------------------------------- */
+
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--text);
+  border-left: 1px solid var(--text);
+  padding: 0 1.3rem 1.2rem;
+  margin: 2.2rem 0;
+}
+.callout .callout-title {
+  background: var(--text);
+  color: #fff;
+  margin: 0 -1.3rem 1.1rem;
+  padding: 0.5rem 1.3rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+}
+.callout--warn { border-color: var(--accent); }
+.callout--warn .callout-title { background: var(--accent); }
+.callout strong { color: var(--text); }
+
+/* --- tables ---------------------------------------------------------------- */
+
+.data-table thead { background: var(--text); color: #fff; }
+.data-table thead th { font-family: var(--mono); letter-spacing: 0.08em; }
+.data-table tbody tr:nth-child(even) { background: var(--bg-accent); }
+.data-table tbody tr:hover { background: rgba(227, 18, 11, 0.06); }
+.data-table tbody th { color: var(--text); }
+.table-caption { color: var(--accent); font-weight: 500; letter-spacing: 0.1em; }
+
+.matrix thead th { background: var(--text); color: #fff; }
+.matrix .lv0 { background: #f2f3f5; color: var(--text-muted); }
+.matrix .lv1 { background: #d8dade; color: var(--text); }
+.matrix .lv2 { background: #8d9298; }
+.matrix .lv3 { background: #0a0a0a; }
+
+/* --- references and end matter -------------------------------------------- */
+
+.ref-list .ref-org { color: var(--accent); }
+.endmatter h2 { color: var(--accent); border-bottom-color: var(--text); }
+.endmatter .kw {
+  background: var(--bg-accent);
+  border-color: var(--border);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+
+/* --- footer ---------------------------------------------------------------- */
+
+.report-footer { border-top: 8px solid var(--accent); }
+.footer-inner h3 { color: #fff; font-weight: 700; letter-spacing: -0.02em; }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  .masthead { border-top-width: 5px; }
+  .masthead .meta-row div { padding-right: 0.5rem; }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  .masthead { border-top: 4px solid #000; }
+  .callout .callout-title, .data-table thead, .matrix thead th { background: #333 !important; }
+}

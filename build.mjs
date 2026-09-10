@@ -14,12 +14,14 @@
 // ---------------------------------------------------------------------------
 
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import site, { isProduction } from './site.config.mjs';
 import { esc, escAttr } from './lib/inline.mjs';
 import {
+  setAssets,
   head,
   page,
   siteBar,
@@ -154,6 +156,37 @@ const libraryPage = ({ title, desc, pathname, current, body }) =>
     body: `${siteBar(current)}\n${body}\n${footer()}`,
     scripts: [],
   });
+
+// --- assets -----------------------------------------------------------------
+
+/**
+ * Copy assets/ into dist/assets/ under content-hashed names and return a map
+ * from the source path to the published one.
+ *
+ * Without this, a returning reader can hold a week-old report.css alongside
+ * today's HTML and a report's freshly-deployed theme.css — which is exactly
+ * how the abstract lost its padding while keeping its border. Hashed names
+ * make a mismatch impossible and let the files be cached indefinitely.
+ */
+function buildAssets() {
+  const from = path.join(ROOT, 'assets');
+  const map = {};
+  if (!fs.existsSync(from)) return map;
+
+  const out = path.join(DIST, 'assets');
+  fs.mkdirSync(out, { recursive: true });
+
+  for (const entry of fs.readdirSync(from, { withFileTypes: true })) {
+    if (!entry.isFile()) continue;
+    const buf = fs.readFileSync(path.join(from, entry.name));
+    const hash = crypto.createHash('sha256').update(buf).digest('hex').slice(0, 10);
+    const ext = path.extname(entry.name);
+    const hashed = `${path.basename(entry.name, ext)}.${hash}${ext}`;
+    fs.writeFileSync(path.join(out, hashed), buf);
+    map[`/assets/${entry.name}`] = `/assets/${hashed}`;
+  }
+  return map;
+}
 
 // --- pages ------------------------------------------------------------------
 
@@ -467,12 +500,17 @@ ${urls
       : 'User-agent: *\nDisallow: /\n',
   );
 
-  // Long cache on fingerprint-free static assets is safe because the build
-  // rewrites them wholesale on every deploy; HTML must always revalidate.
+  // Shared assets carry a content hash, so they can be cached indefinitely.
+  // Everything under /reports/ — the pages themselves and each report's own
+  // theme.css and charts.js — is unhashed and must revalidate, or a reader
+  // ends up pairing a stale stylesheet with fresh markup.
   write(
     '_headers',
     `/assets/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=31536000, immutable
+
+/reports/*
+  Cache-Control: public, max-age=0, must-revalidate
 
 /reports.json
   Access-Control-Allow-Origin: *
@@ -498,7 +536,7 @@ function main() {
   const reports = loadReports();
 
   copyDir(path.join(ROOT, 'public'), DIST);
-  copyDir(path.join(ROOT, 'assets'), path.join(DIST, 'assets'));
+  setAssets(buildAssets());
 
   for (const r of reports) {
     write(`reports/${r.slug}/index.html`, reportShell(r, r.body));

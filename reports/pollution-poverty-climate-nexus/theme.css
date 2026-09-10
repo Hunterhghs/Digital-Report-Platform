@@ -52,7 +52,6 @@
 /* Dark ground needs a little more air in the body copy than the light
    themes do, or long passages close up. */
 body { font-size: 1.03rem; line-height: 1.78; }
-.content p { max-width: 70ch; }
 
 a { color: var(--primary); }
 a:hover { color: var(--primary-light); }
