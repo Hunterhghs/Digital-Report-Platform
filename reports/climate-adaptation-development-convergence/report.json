@@ -1,0 +1,63 @@
+{
+  "number": "2026-03",
+  "title": "Climate Adaptation and Development Convergence Across the Global South",
+  "subtitle": "How resilience investment can protect growth while accelerating long-term economic convergence",
+  "strapline": "Convergence is a net rate. Climate change raises the destruction term, and adaptation is the only instrument that lowers it.",
+  "dek": "Poor countries only began catching up with rich ones around 2000, and the resulting convergence runs at one to two per cent of the income gap a year. Climate hazard already destroys one to two per cent of output a year in low- and middle-income countries. Adaptation, read against convergence, is not insurance but growth-retention policy.",
+  "abstract": [
+    "For most of the modern era the poorest countries fell further behind the richest: Lant Pritchett's survey of the long record found that the ratio of income in the richest countries to the poorest rose roughly sixfold between 1870 and 1985. That reversed only around the turn of the millennium, when the cross-country relationship between a country's starting income and its subsequent growth turned negative and stayed negative. Absolute convergence is therefore a young fact, and a thin one — on the order of one to two percentage points of the income gap closed each year, unevenly distributed, arriving in a decade the World Bank already expects to be the weakest for global growth since the 1960s. This report argues that climate change is the most serious threat now visible to that convergence, and that adaptation is the policy which answers it.",
+    "The report's analytical move is to read catch-up as a net rate: convergence is gross accumulation minus erosion. Development policy has spent decades on the first term — escalators, institutions, human capital, finance — while adaptation is the only instrument that operates directly on the second. Hazard erodes the growth base through four channels: capital destruction, which subtracts permanently from the accumulated stock; human-capital interruption, through lost school years, health and working hours; fiscal absorption, as reconstruction consumes the development budget; and a risk premium that prices visible exposure into the cost of capital and so operates in every year, disaster or not. Only the first three require an event to occur, which is why the drag is larger than the disaster record suggests. The four compose into a reinforcing loop — a divergence trap — in which exposure raises the price of capital, which suppresses the long-lived investment that adaptation consists of, which raises exposure again.",
+    "The drag falls asymmetrically on the economies that were converging. Hazard exposure is concentrated in the tropics; a larger share of output and employment sits in weather-exposed agriculture, which is also the sector showing no measured catch-up; and modelled estimates find the emerging economies of South and Southeast Asia facing losses two to three times the global average, with the countries least responsible for emissions facing income losses roughly 60 per cent larger than higher-income countries. Vulnerability also raises the price of the cure: the same utility-scale solar project financed at 4 to 6 per cent in Europe and North America faces a weighted average cost of capital above 15 per cent across Africa's power sector as a whole.",
+    "The implication is that adaptation belongs in the growth budget rather than the contingency budget. A 2025 study of 320 real adaptation investments found benefits above ten dollars per dollar committed, with more than half accruing whether or not a disaster occurred — an asset profile that is infrastructure, not insurance. Resilience specified at the design stage adds only 3 to 5 per cent to upfront infrastructure costs against avoided losses of 50 to 100 per cent of asset value, which makes the Global South's current build-out a closing window. On simple arithmetic, two economies accumulating identically at five per cent a year but losing 0.5 and 2.0 per cent respectively to hazard diverge by more than half in income per head over thirty years. Retention, in other words, is worth as much as acceleration and is usually cheaper — a point demonstrated by Bangladesh, which cut cyclone mortality by four orders of magnitude while poor, and by Ahmedabad, which protects a city's working population for the cost of paint and a protocol."
+  ],
+  "jel": "O47, Q54, O11, F63, H54 — empirical studies of economic growth and convergence; climate and natural disasters; macroeconomic analyses of economic development; economic development and globalization; infrastructure and public investment",
+  "method": "This report synthesises the economic convergence literature with institutional research on climate risk and adaptation, including Pritchett (1997), Rodrik on unconditional convergence in manufacturing, Kremer, Willis and You, and Patel, Sandefur and Subramanian on the resumption of absolute convergence; the World Bank's World Development Report 2024 and January 2026 Global Economic Prospects; the IMF World Economic Outlook update of January 2026; the IFC's 2026 adaptation and resilience investment assessment; the IEA Cost of Capital Observatory; the World Resources Institute's 2025 study of 320 implemented adaptation investments; the World Bank's Lifelines; the Global Commission on Adaptation's Adapt Now; UNEP's Adaptation Gap Report 2025; UNCTAD's A World of Debt; Goodman and co-authors on heat and learning; and the Adrienne Arsht-Rockefeller Foundation Resilience Center on urban heat. Every quantitative claim is attributed inline. Figure 1 renders the sign of the convergence coefficient rather than its magnitude, which is estimate-dependent and contested, and its axis carries no numeric scale for that reason. Figure 5 is a conceptual schematic. Figure 7 is arithmetic on stated assumptions, not a forecast. The comparison between the convergence rate and the hazard-loss rate is an order-of-magnitude observation between quantities that are not commensurable — one is a share of the income gap, the other a share of output — and the text says so. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap",
+  "themeColor": "#1e1b4b",
+  "topics": [
+    "Climate Adaptation",
+    "Emerging Markets",
+    "Development Finance",
+    "Infrastructure"
+  ],
+  "keywords": [
+    "economic convergence",
+    "unconditional convergence",
+    "climate adaptation",
+    "resilience investment",
+    "growth retention",
+    "cost of capital",
+    "risk premium",
+    "divergence trap",
+    "growth escalators",
+    "human capital",
+    "heat and productivity",
+    "middle-income trap",
+    "Global South",
+    "resilient infrastructure"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "convergence-interrupted", "label": "1. Convergence, Interrupted" },
+    { "id": "net-rate", "label": "2. Convergence Is a Net Rate" },
+    { "id": "erosion", "label": "3. The Four Erosion Channels" },
+    { "id": "asymmetry", "label": "4. Why the Drag Falls on the Converging" },
+    { "id": "retention", "label": "5. Adaptation as Retention Policy" },
+    { "id": "worth", "label": "6. What Retention Is Worth" },
+    { "id": "evidence", "label": "7. Evidence from the Record" },
+    { "id": "agenda", "label": "8. An Agenda for Retention" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "1–2 pp", "label": "Annual gap-closing — the entire margin convergence runs on" },
+    { "value": "1–2%", "label": "Of GDP lost each year to hazard in low- and middle-income countries" },
+    { "value": "3×", "label": "Cost of capital for African power against Europe and North America" },
+    { "value": "+54%", "label": "Income after 30 years from retention alone, on identical accumulation" }
+  ]
+}
