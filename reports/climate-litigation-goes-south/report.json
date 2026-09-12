@@ -1,0 +1,66 @@
+{
+  "number": "2026-10",
+  "title": "Climate Litigation Goes South",
+  "subtitle": "How courts in emerging economies are shaping transition and adaptation",
+  "strapline": "Why judicial action is becoming an unexpected driver of climate policy in the developing world.",
+  "dek": "Climate litigation was a northern sport: a Dutch foundation, a German grandmother, an American youth cohort. In the past decade the centre of gravity has shifted south, where courts have ordered governments to implement their own climate laws, blocked coal plants and deforestation, and written a right to a stable climate into constitutions that never mentioned it.",
+  "abstract": [
+    "Climate litigation began as a northern affair, and the numbers still flatter that origin: of the 2,666 climate cases on record by mid-2024, about 87 per cent sit in developed countries. But the marginal case — the one that changes what a government may do next year — is increasingly filed in the South, where courts are doing three things the North's courts rarely attempt. They are enforcing climate laws that legislatures passed and ministries then ignored. They are reading a right to a stable climate into constitutions written long before climate change was named. And they are deciding individual projects — a coal plant, a seismic survey, a deforestation programme, a budget line — one judgment at a time.",
+    "The pattern has a template. In 2015 a farmer in Lahore persuaded the Lahore High Court that the government's failure to implement its own National Climate Change Policy violated his fundamental rights, and the court created the institutional machinery the government had promised and never built. That move — holding the state to its own written commitments — proved portable, and it travelled: Pakistan 2015, Colombia 2018, South Africa and Kenya by 2019, Brazil 2022, India 2024. The southern docket is less inventive than the northern one and more effective for it, because it litigates on text the state has already signed.",
+    "The same decade produced a second channel, this one genuinely new. Three international benches, all moved by coalitions from the developing world, handed down advisory opinions in fifteen months: the International Tribunal for the Law of the Sea in May 2024 held that greenhouse gases are marine pollution and that states have stringent, due-diligence obligations to abate them; the Inter-American Court of Human Rights in 2025 declared a climate emergency, an autonomous right to a healthy climate, and a jus cogens prohibition on massive irreversible environmental damage; and the International Court of Justice in July 2025 found that states' climate obligations arise from the Paris Agreement, customary law and human rights alike, and that breach triggers full reparation. None is binding in the ordinary sense, and all are already being cited into domestic judgments from Brasília to New Delhi.",
+    "The honest reading of this record is that doctrine has outrun delivery. The binding constraint on climate litigation is no longer whether a court will find a right or a duty — it is whether a judgment gets implemented, and the South's enforcement deficit is where the hard cases now live. India's Supreme Court wrote a new fundamental right in one paragraph and recalled an injunction protecting an endangered bustard in the next, because the renewable transition it protects is itself the habitat's threat. This report reads the docket as it is: a machinery of last resort that is fastest precisely where the state's other institutions are weakest, and that will therefore keep being asked to do climate policy — and keep shaping it — whether or not that is what courts are for."
+  ],
+  "jel": "K32, K33, Q54, Q58, O13 — energy and environmental law; international law; climate and natural disasters; environmental economics and government policy; agriculture and natural resources in development",
+  "method": "This report synthesises the LSE Grantham Research Institute and Sabin Center's Global trends in climate change litigation: 2024 snapshot (2,666 cases, 55 countries, the developed/developing split, the 70 per cent claimant-success rate among concluded 2016–2023 cases and the country totals); the official texts of the ITLOS advisory opinion of 21 May 2024, the Inter-American Court of Human Rights Advisory Opinion OC-32/25 of 2025 and the International Court of Justice advisory opinion of 23 July 2025; the Indian Supreme Court's judgment in M.K. Ranjitsinh (2024 INSC 280); and the published record and commentary on Leghari v. Federation of Pakistan, Future Generations v. Ministry of the Environment (Colombia), PSB v. Brazil (ADPF 708), Earthlife Africa v. Minister of Environmental Affairs, Sustaining the Wild Coast v. Minister of Mineral Resources, Save Lamu v. NEMA and the Philippine Commission on Human Rights carbon-majors inquiry. Case facts and the advisory-opinion outcomes were verified by search in September 2026. The pre-2015 case count in Figure 1 is derived from the LSE–Sabin finding that about 70 per cent of the 2,666 cases were filed since 2015, and is stated as an approximation rather than an independent count. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+  "themeColor": "#1d4438",
+  "topics": [
+    "Institutions & Governance",
+    "Emerging Markets",
+    "Energy Transition",
+    "Environment & Biodiversity"
+  ],
+  "keywords": [
+    "climate litigation",
+    "climate change law",
+    "courts",
+    "Global South",
+    "advisory opinions",
+    "human rights",
+    "constitutional law",
+    "ICJ",
+    "ITLOS",
+    "IACtHR",
+    "Leghari",
+    "Ranjitsinh",
+    "justiciability",
+    "Escazú",
+    "transition risk",
+    "adaptation governance",
+    "environmental defenders"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "docket-moves-south", "label": "1. The Docket Moves South" },
+    { "id": "lahore", "label": "2. A Farmer in Lahore" },
+    { "id": "bogota", "label": "3. Twenty-Five Children and a Rights-Bearing Forest" },
+    { "id": "constitutional-turn", "label": "4. The Constitutional Turn" },
+    { "id": "coal-forests-purse", "label": "5. Coal, Forests and the Purse" },
+    { "id": "three-benches", "label": "6. Three Benches, One Wave" },
+    { "id": "limits", "label": "7. What a Court Can and Cannot Do" },
+    { "id": "next-docket", "label": "8. The Next Docket" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "2,666", "label": "Climate cases on record by mid-2024, per the LSE–Sabin snapshot" },
+    { "value": "55", "label": "Countries where at least one climate case has been filed" },
+    { "value": "3rd", "label": "Brazil's rank in the global case count, behind the United States and the United Kingdom" },
+    { "value": "2025", "label": "The year two international courts read the climate as a human-rights emergency" }
+  ]
+}
