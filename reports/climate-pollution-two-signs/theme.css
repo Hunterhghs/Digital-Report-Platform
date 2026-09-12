@@ -1,0 +1,337 @@
+/* ===========================================================================
+   Theme — Report 2026-08, "One Source, Two Signs"
+
+   Aesthetic: duotone magazine. The palette is built from exactly two
+   saturated hues in tension — a warm red-orange for warming and a deep teal
+   for cooling — because the report's subject is two effects of opposite
+   sign from one source. The masthead is a full-bleed field split between
+   them, the first colour-field masthead in the series.
+
+   Two other firsts here: body copy is set in a serif (every earlier report
+   uses a sans for text), and the pull quote is an inverted colour panel.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #faf9f7;
+  --bg-card: #ffffff;
+  --bg-accent: #eaf0f1;
+  --bg-dark: #103f4b;
+  --bg-dark-2: #0b2f38;
+
+  --text: #1a1a1a;
+  --text-secondary: #3d4145;
+  --text-muted: #6f7478;
+  --text-inverse: #f6f2ec;
+
+  --primary: #134e5e;
+  --primary-light: #1d7086;
+  --accent: #c2410c;
+  --accent-light: #e2662b;
+
+  --border: #d7d9d6;
+  --border-light: #e6e8e5;
+  --rule: #b8bcb8;
+
+  --chart-blue: #134e5e;
+  --chart-blue-light: #6fa3b2;
+  --chart-gold: #b07c14;
+  --chart-red: #c2410c;
+  --chart-teal: #17796f;
+  --chart-gray: #8a8f92;
+  --chart-orange: #e2662b;
+  --chart-purple: #5c4b7d;
+
+  --serif: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: Lora, Georgia, "Times New Roman", serif;
+  --mono: "Fira Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-width: 950px;
+
+  /* The two-sign split, reused by the masthead and the pull quote. */
+  --split: linear-gradient(100deg, #b3391a 0%, #b3391a 46%, #134e5e 46%, #134e5e 100%);
+}
+
+/* Body copy is a serif here, which needs a touch more size and leading than
+   the sans stacks the other reports use. --serif/--sans are deliberately
+   inverted above so the shared shell picks up the right face in each slot. */
+body { font-size: 1.02rem; line-height: 1.74; }
+
+::selection { background: rgba(194, 65, 12, 0.18); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--accent); }
+
+a { color: var(--accent); }
+a:hover { color: var(--primary); }
+
+.progress__bar { background: var(--accent); }
+.skip-link { background: var(--accent); }
+
+/* --- masthead: a full-bleed field, split warm and cool -------------------- */
+
+.masthead {
+  background: var(--split);
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3rem var(--gutter) 3rem;
+}
+.masthead .overline {
+  color: rgba(246, 242, 236, 0.88);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 1.3rem;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.03;
+  max-width: 19ch;
+  font-size: clamp(2.1rem, 5.6vw, 3.2rem);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+.masthead .subtitle {
+  color: rgba(246, 242, 236, 0.9);
+  font-weight: 400;
+  max-width: 58ch;
+}
+.masthead .strapline {
+  border-left: 3px solid rgba(246, 242, 236, 0.55);
+  color: rgba(246, 242, 236, 0.9);
+  font-family: var(--sans);
+  font-style: italic;
+  font-size: 1rem;
+}
+.masthead .meta-row {
+  border-top: 1px solid rgba(246, 242, 236, 0.3);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: rgba(246, 242, 236, 0.86);
+  gap: 1.1rem 2.6rem;
+}
+.masthead .meta-row strong {
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+/* --- sticky nav: part of the page, not a band ----------------------------- */
+
+.sticky-nav {
+  background: rgba(250, 249, 247, 0.96);
+  border-top: 3px solid var(--accent);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--serif);
+  font-size: 0.79rem;
+  font-weight: 600;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* --- section headings: a short heavy rule beneath ------------------------- */
+
+section > h2 {
+  font-family: var(--serif);
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  border-bottom: 0;
+  padding-bottom: 0.7rem;
+  position: relative;
+}
+section > h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 88px;
+  height: 6px;
+  background: var(--accent);
+}
+/* The tick marks body-section headings only. The generated abstract and
+   metadata blocks are also <section>s, and their mono labels collide with it. */
+.abstract h2::after,
+.endmatter h2::after { content: none; }
+
+section > .section-dek {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 0.9rem;
+  max-width: 64ch;
+}
+section > h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.16rem;
+  letter-spacing: -0.015em;
+  color: var(--primary);
+  margin: 2.4rem 0 0.7rem;
+}
+section > h4 { color: var(--accent); font-family: var(--mono); font-size: 0.8rem; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract -------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--primary);
+}
+.abstract h2 { color: var(--accent); font-family: var(--serif); font-weight: 700; }
+
+/* --- statistics: warm cap, cool numeral ----------------------------------- */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-top: 5px solid var(--accent);
+  padding: 1.15rem 1.25rem 1.1rem;
+}
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.9rem;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.79rem; }
+
+/* --- executive cards ------------------------------------------------------- */
+
+.exec-card { background: var(--bg-card); border: 1px solid var(--border); padding: 1.4rem; }
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.67rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  line-height: 1;
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.13rem;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  margin: 0.7rem 0 0.5rem;
+}
+
+/* --- charts ---------------------------------------------------------------- */
+
+.chart-container { background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem 1.35rem; }
+.chart-container .chart-label {
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote: an inverted colour panel --------------------------------- */
+
+.pull-quote {
+  background: var(--primary);
+  border: 0;
+  padding: 1.9rem 2rem;
+  margin: 3rem 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.22rem, 2.9vw, 1.62rem);
+  line-height: 1.26;
+  letter-spacing: -0.02em;
+  color: #fff;
+  max-width: none;
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: rgba(246, 242, 236, 0.78);
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+/* --- callouts: cool tint, warm bar ---------------------------------------- */
+
+.callout {
+  background: var(--bg-accent);
+  border: 0;
+  border-left: 5px solid var(--accent);
+  padding: 1.3rem 1.5rem;
+}
+.callout .callout-title { color: var(--accent); font-weight: 500; }
+.callout strong { color: var(--primary); }
+.callout--warn { border-left-color: var(--primary); }
+.callout--warn .callout-title { color: var(--primary); }
+
+/* --- tables ---------------------------------------------------------------- */
+
+.data-table thead { background: var(--primary); color: #fff; }
+.data-table thead th { font-family: var(--mono); letter-spacing: 0.05em; }
+.data-table tbody tr:nth-child(even) { background: var(--bg-accent); }
+.data-table tbody tr:hover { background: rgba(194, 65, 12, 0.07); }
+.data-table tbody th { font-family: var(--serif); font-weight: 700; }
+.table-caption { color: var(--accent); font-weight: 500; letter-spacing: 0.1em; }
+
+.matrix thead th { background: var(--primary); color: #fff; }
+.matrix tbody th { background: var(--bg-card); font-family: var(--serif); font-weight: 600; }
+/* The matrix scale runs warm-to-cool because it grades two opposite signs. */
+.matrix .lv0 { background: #ecefec; color: var(--text-muted); }
+.matrix .lv1 { background: #f0c9b4; color: var(--text); }
+.matrix .lv2 { background: #6fa3b2; }
+.matrix .lv3 { background: #134e5e; }
+
+/* --- references and end matter -------------------------------------------- */
+
+.ref-list .ref-org { color: var(--accent); }
+.endmatter h2 { color: var(--primary); font-family: var(--serif); border-bottom-color: var(--rule); }
+.endmatter .kw {
+  background: var(--bg-card);
+  border-color: var(--border);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+
+/* --- footer ---------------------------------------------------------------- */
+
+.report-footer { border-top: 6px solid var(--accent); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  /* A diagonal split reads as a smudge at phone width; stack it vertically. */
+  :root { --split: linear-gradient(170deg, #b3391a 0%, #b3391a 45%, #134e5e 45%, #134e5e 100%); }
+  .pull-quote { padding: 1.4rem 1.3rem; }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  .masthead { background: #fff !important; color: #000 !important; }
+  .masthead h1 { color: #000 !important; text-shadow: none; }
+  .masthead .overline, .masthead .subtitle, .masthead .strapline,
+  .masthead .meta-row, .masthead .meta-row strong { color: #333 !important; }
+  .pull-quote { background: #fff !important; color: #000 !important; border-left: 4px solid #666; }
+  .pull-quote .attribution { color: #555 !important; }
+}

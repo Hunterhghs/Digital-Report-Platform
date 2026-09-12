@@ -187,6 +187,11 @@ section > h2::before {
   height: 3px;
   background: var(--accent);
 }
+/* The rule marks body-section headings only. The generated abstract and
+   metadata blocks are also <section>s, and their mono labels collide with it. */
+.abstract h2::before,
+.endmatter h2::before { content: none; }
+
 section > .section-dek {
   font-style: italic;
   font-family: var(--serif);

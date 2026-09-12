@@ -1,0 +1,62 @@
+{
+  "number": "2026-08",
+  "title": "One Source, Two Signs",
+  "subtitle": "Addressing the global climate–pollution polycrisis when the two problems share a chimney but not a physics",
+  "strapline": "Health benefits flow from climate action. Climate benefits do not flow from pollution control. The co-benefit arrow points one way only.",
+  "dek": "Climate change and air pollution come out of the same combustion, which has made it natural to treat them as one problem. They differ in residence time by five orders of magnitude, in the geography of their harm, and in the sign of their effect on the planet's energy balance — and each difference changes what a combined strategy can do.",
+  "abstract": [
+    "The standard account of the climate–pollution relationship holds that the two share a root in fossil-fuel combustion, so that attacking one attacks the other. That is true about the source and it has done real good, since the immediate local health return is the strongest available argument for decarbonisation in countries indifferent to a distant temperature. This report is about the ways in which the inference fails when extended from the source to the policy. Three asymmetries separate the two problems: carbon dioxide is a stock with a residence time of centuries while fine particulate matter is a flow with a residence time of days; carbon's harm is global and non-excludable while particulate harm falls on the people who breathe the air; and, least often discussed, the two have opposite signs in the climate system, because sulphate aerosols from the same combustion scatter sunlight and brighten clouds.",
+    "The stock-and-flow asymmetry governs the penalty for delay, the reversibility of success and the metric each problem should be measured against. Delay on carbon is irreversible — the Global Carbon Budget 2025 puts the remaining 1.5°C budget at about 170 GtCO₂ against roughly 42 Gt emitted each year, some four years and exhausted before 2030 — while delay on particulates is physically recoverable, though not for the people who died in the interval. Conversely, an avoided tonne of carbon is banked permanently whereas clean air is never banked: a country that has cleaned its air can dirty it again in a single year, so air-quality gains require perpetual maintenance and climate gains do not.",
+    "The sign asymmetry is the report's centre. The IPCC's Sixth Assessment puts sulphate effective radiative forcing at about −0.9 W/m² over 1750–2019, with a range of −1.6 to −0.3, corresponding to roughly −0.5°C of offset warming: observed warming is around 1.4°C where without aerosols it would be near 2°C. Aerosol cooling peaked around 2000 and has declined since, so the unmasking is already under way. Two natural experiments make the mechanism concrete. The 2020 International Maritime Organization sulphur cap cut marine fuel sulphur from 3.5 to 0.5 per cent and shipping sulphur dioxide by roughly 80 per cent, producing a multi-model mean effective radiative forcing of 0.073 W/m² — comparable to three years of growth in carbon dioxide forcing, and appearing in no emissions inventory. China, meanwhile, cut particulate pollution by 41 per cent between 2013 and 2022 and gained about two years of life expectancy while its carbon emissions continued to rise, demonstrating that the two pollutants are separable in practice as well as in principle.",
+    "The practical consequence is a correction to the co-benefit literature and a re-ranking of interventions. Eliminating combustion cuts the carbon stock and the particulate harm together; filtering exhaust cuts the particulates and leaves the carbon entirely, removing a cooling agent and nothing else, which makes end-of-pipe control a near-term warming measure however valuable it is in health terms. The co-benefit therefore runs from climate action to health and not in reverse. The report's agenda follows: state carbon budgets conditional on an aerosol pathway, since a successful clean-air scenario implies a tighter budget rather than the same one; keep two targets and never infer progress on one from progress on the other; concentrate capital on interventions that remove combustion rather than clean it; and treat foreseeable aerosol reductions as scheduled events with radiative consequences. The report closes by rejecting explicitly the reading that aerosol cooling should be preserved — a mechanism whose operating cost is 8.1 million deaths a year, 709,000 of them children under five, is the harm itself and not an instrument, and because the aerosol is a flow while the carbon is a stock the trade fails on its own terms as well."
+  ],
+  "jel": "Q53, Q54, Q58, I18, Q48 — air pollution and environmental externalities; climate and natural disasters; environmental economics and government policy; government policy and health; energy policy",
+  "method": "This report synthesises the atmospheric-science literature on aerosol radiative forcing with institutional assessments of emissions and air quality, including the IPCC Sixth Assessment Working Group I as summarised by Carbon Brief; two 2024 multi-model studies in Atmospheric Chemistry and Physics on the radiative effect of the 2020 shipping sulphur cap; the Global Carbon Budget 2025; the Health Effects Institute's State of Global Air 2024; the University of Chicago Air Quality Life Index and Zhang et al. in PNAS on China's particulate decline; and UNEP's Emissions Gap Report 2025. Sources on aerosol forcing and the shipping sulphur cap were verified by search in September 2026. Every quantitative claim is attributed inline. Figure 1 is a conceptual schematic; it follows sulphate, the dominant cooling aerosol, and notes that black carbon warms, so aerosol accounting is more complex than the diagram implies. Table 1 records analytical judgements on the direction and completeness of each intervention's effect rather than measured magnitudes. The report states explicitly that while the direction of aerosol forcing is not in scientific dispute, its magnitude carries a wide uncertainty range which is among the largest in estimates of climate sensitivity, and it therefore makes no precise numerical claim about the additional mitigation implied. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Mono:wght@400;500&display=swap",
+  "themeColor": "#134e5e",
+  "topics": [
+    "Public Health",
+    "Energy Transition",
+    "Systemic Risk",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "air pollution",
+    "aerosol masking",
+    "sulphate aerosol",
+    "radiative forcing",
+    "climate co-benefits",
+    "carbon budget",
+    "PM2.5",
+    "IMO 2020",
+    "shipping emissions",
+    "China air quality",
+    "unmasking",
+    "stock and flow pollutants",
+    "end-of-pipe control",
+    "climate policy"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "two-signs", "label": "1. One Source, Two Signs" },
+    { "id": "stock-and-flow", "label": "2. A Stock and a Flow" },
+    { "id": "cooling-subsidy", "label": "3. The Cooling Subsidy" },
+    { "id": "imo", "label": "4. The Natural Experiment" },
+    { "id": "china", "label": "5. Clean Air Without Carbon" },
+    { "id": "ranking", "label": "6. Intervention Choice" },
+    { "id": "agenda", "label": "7. Two Targets, One Plan" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "−0.5°C", "label": "Warming currently masked by aerosols — 1.4°C observed against nearly 2°C" },
+    { "value": "170 Gt", "label": "Remaining 1.5°C budget, about four years of emissions" },
+    { "value": "+0.073 W/m²", "label": "Warming impulse from the 2020 shipping sulphur cap alone" },
+    { "value": "−41%", "label": "China's particulate fall since 2013, while its carbon emissions rose" }
+  ]
+}
