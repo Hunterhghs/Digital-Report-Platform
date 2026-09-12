@@ -1,0 +1,63 @@
+{
+  "number": "2026-09",
+  "title": "Scaling Low-Cost Adaptation Technologies Across Climate-Vulnerable Developing Economies",
+  "subtitle": "A diffusion framework for rapidly expanding resilience capabilities",
+  "strapline": "Score the technology, not the country. Most of what looks like a delivery problem is a product-design problem — and product design is the cheaper lever.",
+  "dek": "Cheap adaptation technologies with strong measured returns are distributed and then abandoned. The usual explanations blame the money or the country, but neither accounts for two technologies diffusing at wildly different rates through the same channel. Five attributes of the product explain most of the variation.",
+  "abstract": [
+    "Two explanations for the slow uptake of low-cost adaptation technologies are already in circulation. The first is cost, which is straightforwardly wrong for this class of goods: a reflective roof coating, a drought-tolerant seed, an SMS forecast and a cooking stove are cheap absolutely, cheap relative to the losses they avoid, and cheap relative to the hard infrastructure that dominates adaptation finance. The second is the delivery channel, which is much better and which an earlier report in this series argued at length. But a channel explanation locates the problem in the country, and it cannot account for the central variation: in the same countries, over the same mobile networks and through the same agent networks, pay-as-you-go solar reached millions of households while weather index insurance did not, and improved cookstoves were successfully delivered and then fell out of use. A channel cannot explain a technology that arrived and was abandoned.",
+    "This report offers a framework that scores the technology rather than the country. Five attributes do most of the work: divisibility, whether the good can be bought in increments matching an irregular income; trialability, whether it can be tried cheaply and reversed; observability, whether a non-adopter can see the benefit in an adopter; attributability, whether the adopter can tell the technology caused the benefit; and compatibility, whether it rides on existing practice or demands sustained behaviour change and maintenance. Scored across eight technologies, the resulting ranking corresponds closely to the observed adoption record. The report states plainly that this agreement is not evidence, since the framework was constructed with the outcomes known; its value is as a design checklist that can be applied to a product nobody has launched yet, and the proper test would be out of sample.",
+    "The framework's most consequential result comes from reading it by column. Adaptation goods are systematically weak on observability and attributability for a structural reason: their benefit is an avoided loss, which is a non-event. Mobile money delivers a transfer that arrives and solar delivers light tonight, but adaptation delivers a flood that did less damage than it would have — a counterfactual no household can observe and no neighbour can witness. Weather index insurance is the extreme case, since in most years nothing happens, which is the product working as designed, while basis risk means the payout may fail to arrive in precisely the year a loss occurs. The two best-documented failures bear this out. Hanna, Duflo and Greenstone tracked households in rural Odisha for up to four years after they received an improved cookstove: smoke inhalation fell initially, the effect had disappeared by the second year, and there were no changes in health outcomes or emissions, because stoves were used irregularly and not maintained. A review of twenty randomised evaluations finds farmers generally unwilling to pay market prices for index insurance.",
+    "Because attributes are properties of a product as designed and sold, they can be re-engineered, and that is cheaper and faster than the institution-building a channel-only diagnosis implies. Unbundle the cost to fix divisibility, as instalment collection did for off-grid solar, where the innovation was the payment mechanism and not the panel. Subsidise a first cycle to fix trialability. Bundle the invisible benefit with a visible one to fix observability — the stoves that achieve sustained use are sold on faster cooking and less fuel bought rather than on averted illness, which means the health benefit is the reason the programme exists and precisely the wrong thing to put in the pitch. Convert avoided loss into a payment that arrives to fix attributability. The framework then earns its keep a second time as a sorting rule: a good weak on divisibility and observability together is not a product at all, and early warning — indivisible, with a benefit that is a pure non-event, scoring 4 of 15 — should be publicly provided and measured by coverage rather than marketed for adoption."
+  ],
+  "jel": "O33, Q16, Q54, O13, D83 — technological change, diffusion processes; agricultural technology and R&D; climate and natural disasters; agriculture and natural resources in development; search, learning and information",
+  "method": "This report combines the diffusion-of-innovations tradition with the empirical adoption literature and institutional sources on energy access and early warning, including Hanna, Duflo and Greenstone's four-year randomised evaluation of improved cookstoves in the American Economic Journal: Economic Policy; J-PAL's synthesis of twenty randomised evaluations of weather index insurance and the Annual Review of Resource Economics reassessment of index insurance; the Global Center on Adaptation on digital climate advisory; VoxDev on digital agricultural extension in India; IRENA on pay-as-you-go models; World Bank Global Findex reporting on mobile money; Tracking SDG 7 (2025); and UNDRR reporting on early-warning coverage. The cookstove and index-insurance evidence was verified by search in September 2026. Every quantitative claim is attributed inline. Table 1's attribute scores and the Figure 1 totals derived from them are analytical judgements on a 0–3 scale rather than measurements, and the report states explicitly that because the framework was built with adoption outcomes already known, the correspondence between its ranking and the observed record is not evidence for the framework — it is offered as a design checklist rather than a predictive model. Figure 2 is a conceptual schematic. Figure 4 places two measures of different quantities side by side to compare persistence rather than magnitude, and says so. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "readingTime": 19,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Rubik:wght@300;400;500;600&family=Martian+Mono:wght@400;500&display=swap",
+  "themeColor": "#5b21a6",
+  "topics": [
+    "Climate Adaptation",
+    "Technology",
+    "Emerging Markets",
+    "Public Health"
+  ],
+  "keywords": [
+    "technology diffusion",
+    "adaptation technology",
+    "adoption",
+    "observability",
+    "improved cookstoves",
+    "index insurance",
+    "pay-as-you-go solar",
+    "digital climate advisory",
+    "mobile money",
+    "early warning systems",
+    "product design",
+    "last-mile delivery",
+    "clean cooking",
+    "resilience capabilities"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "not-only-money", "label": "1. Not a Money Problem" },
+    { "id": "five-attributes", "label": "2. Five Attributes" },
+    { "id": "observability", "label": "3. The Observability Penalty" },
+    { "id": "what-spread", "label": "4. What Spread" },
+    { "id": "what-didnt", "label": "5. What Did Not" },
+    { "id": "redesign", "label": "6. Re-engineering Attributes" },
+    { "id": "state", "label": "7. What Design Cannot Fix" },
+    { "id": "agenda", "label": "8. An Agenda" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "5 of 15", "label": "Weather index insurance's diffusion score — and it behaves like it" },
+    { "value": "Year 2", "label": "When a distributed cookstove's measured smoke reduction had vanished" },
+    { "value": "2.1bn", "label": "Still without clean cooking — the cheapest technology has the biggest gap" },
+    { "value": "+10–30%", "label": "Yield gains from digital advisory, a benefit the farmer can actually see" }
+  ]
+}

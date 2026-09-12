@@ -1,0 +1,335 @@
+/* ===========================================================================
+   Theme — Report 2026-09, "Scaling Low-Cost Adaptation Technologies"
+
+   Aesthetic: scorecard. The report scores technologies against five
+   attributes, so the surface is built from tiles, chips and scored rows:
+   a near-white ground, deep violet structure, a teal counter-colour, and a
+   wide technical mono carrying every label. Space Grotesk for display and
+   Rubik for text are both firsts in the series.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #fbfbfa;
+  --bg-card: #ffffff;
+  --bg-accent: #f3f0f8;
+  --bg-dark: #2e1246;
+  --bg-dark-2: #220c35;
+
+  --text: #171519;
+  --text-secondary: #3f3a45;
+  --text-muted: #6e6875;
+  --text-inverse: #f4f1f8;
+
+  --primary: #5b21a6;
+  --primary-light: #7c3aed;
+  --accent: #0e7490;
+  --accent-light: #22a0bd;
+
+  --border: #dedbe3;
+  --border-light: #ebe8f0;
+  --rule: #bdb7c7;
+
+  --chart-blue: #5b21a6;
+  --chart-blue-light: #a78bfa;
+  --chart-gold: #a16207;
+  --chart-red: #be123c;
+  --chart-teal: #0e7490;
+  --chart-gray: #8b8594;
+  --chart-orange: #c2410c;
+  --chart-purple: #7c3aed;
+
+  --serif: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: Rubik, -apple-system, BlinkMacSystemFont, "system-ui", sans-serif;
+  --mono: "Martian Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-width: 960px;
+}
+
+body { font-size: 1.02rem; line-height: 1.7; }
+
+/* Martian Mono is very wide; every label using it needs tighter tracking
+   than the other themes give theirs, or short labels wrap. */
+.masthead .overline,
+.nav-inner a,
+.chart-container .chart-label,
+.table-caption,
+.abstract h2,
+.endmatter h2,
+.callout .callout-title,
+.exec-card .exec-num,
+.ref-list .ref-org { letter-spacing: 0.02em; }
+
+::selection { background: rgba(91, 33, 166, 0.16); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--primary); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--primary); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: a catalogue entry ------------------------------------------ */
+
+.masthead {
+  background: var(--bg);
+  color: var(--text);
+  border-top: 10px solid var(--primary);
+  border-bottom: 1px solid var(--border);
+  padding: 2.4rem var(--gutter) 0;
+}
+/* The overline is a filled chip rather than a line of small caps. */
+.masthead .overline {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.42rem 0.7rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  max-width: 21ch;
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+}
+.masthead .subtitle { color: var(--text-secondary); font-weight: 400; max-width: 58ch; }
+.masthead .strapline {
+  border-left: 4px solid var(--accent);
+  color: var(--text-secondary);
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 1rem;
+}
+/* Metadata as a tile row, each cell capped by a violet rule. */
+.masthead .meta-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+  gap: 0 1px;
+  margin-top: 2.2rem;
+  padding-top: 0;
+  border-top: 0;
+  background: var(--border-light);
+  color: var(--text-secondary);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+.masthead .meta-row div {
+  background: var(--bg);
+  border-top: 3px solid var(--primary);
+  padding: 0.8rem 0.9rem 1.1rem 0;
+}
+.masthead .meta-row strong {
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 0.61rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.3rem;
+}
+
+/* --- sticky nav ------------------------------------------------------------ */
+
+.sticky-nav {
+  background: rgba(251, 251, 250, 0.96);
+  border-bottom: 2px solid var(--primary);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- section headings: a dotted rule beneath ------------------------------ */
+
+section > h2 {
+  font-family: var(--serif);
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  border-bottom: 3px dotted var(--primary);
+  padding-bottom: 0.6rem;
+}
+section > .section-dek {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 0.99rem;
+  max-width: 66ch;
+}
+section > h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.16rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 2.4rem 0 0.7rem;
+}
+section > h4 { color: var(--accent); font-family: var(--mono); font-size: 0.74rem; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract -------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--primary);
+}
+.abstract h2 { color: var(--accent); }
+
+/* --- statistics: score tiles ---------------------------------------------- */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
+  padding: 1.15rem 1.25rem 1.1rem;
+}
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.9rem;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.79rem; }
+
+/* --- executive cards ------------------------------------------------------- */
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  padding: 1.4rem;
+}
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.13rem;
+  letter-spacing: -0.025em;
+  color: var(--primary);
+  margin: 0.8rem 0 0.5rem;
+}
+
+/* --- charts ---------------------------------------------------------------- */
+
+.chart-container { background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem 1.35rem; }
+.chart-container .chart-label {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 0.62rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote: a violet tile -------------------------------------------- */
+
+.pull-quote {
+  background: var(--bg-accent);
+  border: 0;
+  border-top: 5px solid var(--primary);
+  padding: 1.7rem 1.8rem;
+  margin: 2.8rem 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2.8vw, 1.55rem);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+  max-width: 42ch;
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+/* --- callouts -------------------------------------------------------------- */
+
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  padding: 1.3rem 1.45rem;
+}
+.callout .callout-title { color: var(--accent); font-weight: 500; font-size: 0.6rem; }
+.callout strong { color: var(--primary); }
+.callout--warn { border-left-color: var(--chart-red); }
+.callout--warn .callout-title { color: var(--chart-red); }
+
+/* --- tables ---------------------------------------------------------------- */
+
+.data-table thead { background: var(--primary); color: #fff; }
+.data-table thead th { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.02em; }
+.data-table tbody tr:nth-child(even) { background: var(--bg-accent); }
+.data-table tbody tr:hover { background: rgba(14, 116, 144, 0.08); }
+.data-table tbody th { font-family: var(--serif); font-weight: 600; letter-spacing: -0.02em; }
+.table-caption { color: var(--accent); font-weight: 500; font-size: 0.62rem; }
+
+.matrix thead th { background: var(--primary); color: #fff; font-size: 0.58rem; }
+.matrix tbody th { background: var(--bg-card); font-family: var(--serif); font-weight: 600; }
+/* The scale grades a score from absent to strong. */
+.matrix .lv0 { background: #f0eef3; color: var(--text-muted); }
+.matrix .lv1 { background: #d8cfe8; color: var(--text); }
+.matrix .lv2 { background: #9169c4; }
+.matrix .lv3 { background: #5b21a6; }
+
+/* --- references and end matter -------------------------------------------- */
+
+.ref-list .ref-org { color: var(--accent); font-size: 0.6rem; }
+.endmatter h2 { color: var(--primary); border-bottom-color: var(--rule); }
+.endmatter .kw {
+  background: var(--bg-accent);
+  border-color: var(--border-light);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+}
+.endmatter dt { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.02em; }
+
+/* --- footer ---------------------------------------------------------------- */
+
+.report-footer { border-top: 6px solid var(--accent); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 700; letter-spacing: -0.03em; }
+.cite-box { border-left-color: var(--accent-light); }
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  .masthead .meta-row div { padding-right: 0.6rem; }
+  .nav-inner a { font-size: 0.62rem; }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  .masthead { border-top: 4px solid #333; }
+  .masthead .overline { background: #333 !important; }
+  .pull-quote { background: #f4f4f4 !important; border-top-color: #666; color: #000 !important; }
+}
