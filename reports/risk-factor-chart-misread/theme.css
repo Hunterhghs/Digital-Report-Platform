@@ -1,0 +1,346 @@
+/* ===========================================================================
+   Theme — Report 2026-10, "The Bars Do Not Add Up"
+
+   Aesthetic: clinical printout. A grey paper ground, near-black rules, a
+   single crimson for the mortality register, and — a first for the series —
+   a monospace carrying the display type as well as the labels, so the page
+   reads like the data sheet it is arguing about. Section headings are
+   reversed out of solid black bars, like the field headers on a form.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #eceded;
+  --bg-card: #ffffff;
+  --bg-accent: #dfe1e0;
+  --bg-dark: #16181a;
+  --bg-dark-2: #0e1011;
+
+  --text: #16181a;
+  --text-secondary: #3a3e42;
+  --text-muted: #6b7075;
+  --text-inverse: #f1f2f1;
+
+  --primary: #16181a;
+  --primary-light: #3a3e42;
+  --accent: #a4133c;
+  --accent-light: #cf3055;
+
+  --border: #cfd2d1;
+  --border-light: #dee0df;
+  --rule: #a9adac;
+
+  --chart-blue: #2b4a73;
+  --chart-blue-light: #7e9cc0;
+  --chart-gold: #9a6b0f;
+  --chart-red: #a4133c;
+  --chart-teal: #1c6e63;
+  --chart-gray: #8b9093;
+  --chart-orange: #b3541e;
+  --chart-purple: #5a3f7a;
+
+  --serif: "Azeret Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "system-ui", sans-serif;
+  --mono: "Azeret Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-width: 960px;
+}
+
+body { font-size: 1.01rem; line-height: 1.72; }
+
+/* Azeret Mono is wide; every label set in it needs tighter tracking than the
+   proportional themes give theirs, and headings need negative letter-spacing
+   to stay on a sensible number of lines. */
+.masthead .overline,
+.nav-inner a,
+.chart-container .chart-label,
+.table-caption,
+.abstract h2,
+.endmatter h2,
+.callout .callout-title,
+.exec-card .exec-num,
+.ref-list .ref-org { letter-spacing: 0; }
+
+::selection { background: rgba(164, 19, 60, 0.18); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--accent); }
+
+a { color: var(--accent); }
+a:hover { color: var(--primary); }
+
+.progress__bar { background: var(--accent); }
+.skip-link { background: var(--accent); }
+
+/* --- masthead: a record header -------------------------------------------- */
+
+.masthead {
+  background: var(--bg);
+  color: var(--text);
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding: 2.2rem var(--gutter) 0;
+}
+.masthead-inner { border-top: 1px solid var(--primary); padding-top: 1.6rem; }
+.masthead .overline {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.64rem;
+  margin-bottom: 1.2rem;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  max-width: 17ch;
+  font-size: clamp(1.75rem, 4.4vw, 2.6rem);
+}
+.masthead .subtitle {
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 58ch;
+}
+.masthead .strapline {
+  border-left: 4px solid var(--accent);
+  color: var(--text-secondary);
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 1rem;
+}
+/* Metadata as a ruled grid, like the header block of a data sheet. */
+.masthead .meta-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+  gap: 0;
+  margin-top: 2rem;
+  padding-top: 0;
+  border-top: 1px solid var(--primary);
+  border-left: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+}
+.masthead .meta-row div {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0.8rem 0.85rem;
+}
+.masthead .meta-row strong {
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+
+/* --- sticky nav ------------------------------------------------------------ */
+
+.sticky-nav {
+  background: rgba(236, 237, 237, 0.96);
+  border-bottom: 2px solid var(--primary);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* --- section headings: reversed out of a solid bar ------------------------ */
+
+section > h2 {
+  font-family: var(--serif);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  border-bottom: 0;
+  padding: 0.6rem 0.85rem 0.7rem;
+  margin-bottom: 0.9rem;
+}
+section > h2 .anchor { color: rgba(255, 255, 255, 0.55); }
+/* The generated abstract and metadata blocks use a mono label, not a bar. */
+.abstract h2,
+.endmatter h2 { background: none; color: var(--accent); padding: 0; }
+
+section > .section-dek {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  max-width: 66ch;
+}
+section > h3 {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 2.3rem 0 0.7rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+  max-width: 66ch;
+}
+section > h4 { color: var(--accent); font-family: var(--mono); font-size: 0.72rem; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract -------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--primary);
+  border-left: 1px solid var(--primary);
+}
+.abstract h2 { font-size: 0.72rem; }
+
+/* --- statistics: reading tiles -------------------------------------------- */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
+  padding: 1.1rem 1.2rem;
+}
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: -0.05em;
+  color: var(--primary);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.79rem; }
+
+/* --- executive cards ------------------------------------------------------- */
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 1px solid var(--primary);
+  padding: 1.4rem;
+}
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+}
+.exec-card .exec-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 0.7rem 0 0.5rem;
+}
+
+/* --- charts ---------------------------------------------------------------- */
+
+.chart-container { background: var(--bg-card); border: 1px solid var(--border); padding: 1.2rem 1.3rem; }
+.chart-container .chart-label {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 0.62rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--primary);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote: a reversed panel ----------------------------------------- */
+
+.pull-quote {
+  background: var(--primary);
+  border: 0;
+  padding: 1.7rem 1.8rem;
+  margin: 2.9rem 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.32;
+  letter-spacing: -0.04em;
+  color: #fff;
+  max-width: none;
+}
+.pull-quote .attribution {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: rgba(241, 242, 241, 0.7);
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+/* --- callouts -------------------------------------------------------------- */
+
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--primary);
+  border-left: 5px solid var(--accent);
+  padding: 1.3rem 1.45rem;
+}
+.callout .callout-title { color: var(--accent); font-weight: 500; font-size: 0.62rem; }
+.callout strong { color: var(--primary); }
+.callout--warn { border-left-color: var(--primary); }
+.callout--warn .callout-title { color: var(--primary); }
+
+/* --- tables: the printout's native form ----------------------------------- */
+
+.data-table { border: 1px solid var(--primary); }
+.data-table thead { background: var(--primary); color: #fff; }
+.data-table thead th { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0; }
+.data-table tbody tr:nth-child(even) { background: var(--bg-accent); }
+.data-table tbody tr:hover { background: rgba(164, 19, 60, 0.07); }
+.data-table tbody th { font-family: var(--sans); font-weight: 700; }
+.data-table .num { font-family: var(--mono); }
+.table-caption { color: var(--accent); font-weight: 500; font-size: 0.62rem; }
+
+.matrix thead th { background: var(--primary); color: #fff; font-size: 0.58rem; }
+.matrix tbody th { background: var(--bg-card); font-family: var(--sans); font-weight: 600; }
+.matrix .lv0 { background: #e4e6e5; color: var(--text-muted); }
+.matrix .lv1 { background: #e8c2cd; color: var(--text); }
+.matrix .lv2 { background: #c05070; }
+.matrix .lv3 { background: #a4133c; }
+
+/* --- references and end matter -------------------------------------------- */
+
+.ref-list .ref-org { color: var(--accent); font-size: 0.6rem; }
+.endmatter h2 { font-size: 0.72rem; border-bottom-color: var(--primary); }
+.endmatter .kw {
+  background: var(--bg-card);
+  border-color: var(--border);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+}
+.endmatter dt { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0; }
+
+/* --- footer ---------------------------------------------------------------- */
+
+.report-footer { border-top: 4px solid var(--accent); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 700; letter-spacing: -0.04em; }
+.cite-box { border-left-color: var(--accent-light); }
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  .masthead h1 { letter-spacing: -0.055em; }
+  .nav-inner a { font-size: 0.62rem; }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  section > h2 { background: none !important; color: #000 !important; padding-left: 0; border-bottom: 2px solid #000; }
+  .pull-quote { background: #f2f2f2 !important; color: #000 !important; }
+  .pull-quote .attribution { color: #555 !important; }
+}

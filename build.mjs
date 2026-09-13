@@ -90,6 +90,20 @@ function loadReports() {
     })
     .filter(Boolean);
 
+  // Report numbers are assigned by `npm run new` from what is on disk, so two
+  // sessions working in parallel can allocate the same one. Nothing caught
+  // that until a push was rejected, so the build checks it.
+  const seen = new Map();
+  for (const r of reports) {
+    if (seen.has(r.number)) {
+      throw new Error(
+        `Duplicate report number ${r.number}: reports/${seen.get(r.number)} and reports/${r.slug}. ` +
+          'Renumber the one published later.',
+      );
+    }
+    seen.set(r.number, r.slug);
+  }
+
   // Newest first; ties broken by report number so ordering is deterministic.
   reports.sort((a, b) =>
     b.published.localeCompare(a.published) || String(b.number).localeCompare(String(a.number)),
