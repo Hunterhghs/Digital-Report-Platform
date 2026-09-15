@@ -1,0 +1,103 @@
+{
+  "number": "2026-11",
+  "title": "Air Quality Improvement as a Co-Benefit of Clean Energy Transition in Megacities",
+  "subtitle": "How decarbonization saves millions of lives through pollution reduction every year",
+  "strapline": "The same fires that heat the planet fill the lungs of the world's largest cities. Put them out for the climate, and the cities collect the health dividend first — within days, locally, and every year after.",
+  "dek": "Air pollution contributed to 7.9 million deaths in 2023, and an estimated 5.13 million excess deaths a year are attributable to fossil-fuel air pollution that a transition would remove. The burden is heaviest in the thirty-three megacities, where combustion is densest and exposure closest. This report sets out the evidence that decarbonization is, in practice, the largest public-health programme available to them, and how to design it to collect that return.",
+  "abstract": [
+    "Air pollution contributed to 7.9 million deaths worldwide in 2023 according to the State of Global Air 2025, and 86 per cent of them were from noncommunicable diseases. A modelling study in The BMJ attributes 5.13 million excess deaths a year (95 per cent interval 3.63 to 6.32 million) specifically to ambient air pollution from fossil-fuel use — deaths that could potentially be avoided by phasing out fossil fuels, and 82 per cent of the maximum that could be averted by controlling all anthropogenic emissions. The burden concentrates in cities: in 2019 about 86 per cent of urban inhabitants, some 2.5 billion people across 13,160 urban centres, lived above the World Health Organization's former 10 µg/m³ guideline, with 1.8 million attributable deaths. The world now has thirty-three megacities, nineteen of them in Asia, and the most polluted major cities — Delhi at 108.3 µg/m³ in 2024, Lahore at 102.1, Dhaka at 78 — sit fifteen to twenty-two times above the current 5 µg/m³ guideline.",
+    "The report's central claim is that urban air pollution and greenhouse-gas emissions are, for the most part, the same problem measured in two units. Source-apportionment studies compiled for the WHO find that traffic contributes about 25 per cent of urban PM2.5 globally, industry including power generation 15 per cent, domestic fuel burning 20 per cent, and unspecified human sources — largely secondary particles formed from combustion gases — a further 22 per cent; natural dust and sea salt account for only 18 per cent. Deaths per unit of electricity make the same point at the level of the generating plant: about 24.6 per terawatt-hour for coal and 18.4 for oil, against 0.02 to 0.04 for solar, nuclear and wind. Replacing combustion therefore removes the carbon and the co-emitted pollutants together, and the health return does not wait for the climate return: it arrives locally, within days of the change, in the city where the fuel was burned.",
+    "The evidence on the size of that return is consistent across methods. Global modelling finds greenhouse-gas mitigation avoiding 0.5, 1.3 and 2.2 million premature deaths in 2030, 2050 and 2100, with avoided mortality worth US$50 to US$380 per tonne of carbon dioxide — above marginal abatement costs in 2030 and 2050, and ten to seventy times the marginal cost in East Asia in 2030. Accelerating reductions enough to move from a 2 °C to a 1.5 °C pathway prevents 153 million premature deaths over the century, with more than a million in many individual metropolitan areas of Asia and Africa. The health damage of PM2.5 was valued at US$8.1 trillion in 2019, 6.1 per cent of global output, and the United States Clean Air Act Amendments were estimated to deliver benefits exceeding costs more than thirty to one while preventing over 230,000 early deaths in 2020.",
+    "Four megacity cases show both the reach and the limits of the dividend. Beijing cut annual PM2.5 from 89.5 to 30.5 µg/m³ between 2013 and 2024, and China's national clean-air measures avoided an estimated 0.41 million deaths in 2017 relative to 2013, mostly through industrial standards, boiler upgrades, capacity closures and residential fuel switching. London's Ultra Low Emission Zone lowered roadside nitrogen dioxide by an estimated 54 per cent in central London against a no-scheme counterfactual, yet cut carbon dioxide by only two per cent — evidence that the co-benefit runs strongly from decarbonization to clean air but weakly in reverse. Shenzhen electrified all 16,359 of its buses by 2017, and Delhi's court-ordered conversion of its public fleet to compressed natural gas improved air quality before growth elsewhere overtook it. The report concludes with recommendations for national governments, city authorities, development finance and health agencies, the most important of which is to appraise and sequence the transition by exposure reduced rather than by tonnes of carbon alone."
+  ],
+  "jel": "Q53, I18, Q42, R41, Q58 — air pollution; government policy and regulation of health; alternative energy sources; urban transportation; environmental economics: government policy",
+  "method": "This report synthesises published estimates rather than producing new epidemiological modelling. Global burden figures are from the Health Effects Institute's State of Global Air 2025 (2023 data) and from Lelieveld et al. in The BMJ (2023) for the fossil-fuel-attributable share; urban exposure and mortality are from Southerland et al. in The Lancet Planetary Health (2022) and a causal multi-city study of ten Indian cities in the same journal (2024); megacity counts are from the UN World Urbanization Prospects 2025; city concentrations are from the IQAir 2024 World Air Quality Report, with Beijing's official series from China's State Council Information Office. Source shares are from Karagulian et al. in Atmospheric Environment (2015); deaths per unit of electricity from Our World in Data; co-benefit valuations from West et al. (Nature Climate Change, 2013) and Shindell et al. (Nature Climate Change, 2018); economic costs from the World Bank (2022) and the US EPA's second prospective study of the Clean Air Act. Case evidence is from Zhang et al. in PNAS (2019), the Greater London Authority's London-wide ULEZ One Year Report (March 2025), the World Resources Institute on Shenzhen and Resources for the Future on Delhi. All figures were verified against their sources in September 2026. Different studies use different years, exposure–response functions and monitoring networks, so their totals are not additive and are compared only where the report says so; the 6.26 million all-anthropogenic figure in Figure 2 is derived by the author from the published 5.13 million and 82 per cent. Figure 5 is a conceptual schematic. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Red+Hat+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#1f5f8b",
+  "topics": [
+    "Public Health",
+    "Energy Transition",
+    "Infrastructure",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "air quality",
+    "health co-benefits",
+    "clean energy transition",
+    "decarbonization",
+    "megacities",
+    "PM2.5",
+    "nitrogen dioxide",
+    "fossil fuels",
+    "premature mortality",
+    "urban transport electrification",
+    "low emission zones",
+    "coal phase-out",
+    "Beijing clean air action",
+    "London ULEZ",
+    "Delhi air pollution",
+    "public health policy"
+  ],
+  "sections": [
+    {
+      "id": "executive-summary",
+      "label": "Executive Summary"
+    },
+    {
+      "id": "urban-burden",
+      "label": "1. The Urban Burden"
+    },
+    {
+      "id": "one-source",
+      "label": "2. One Source, Two Problems"
+    },
+    {
+      "id": "lives-saved",
+      "label": "3. Lives Saved"
+    },
+    {
+      "id": "megacity-cases",
+      "label": "4. Megacity Cases"
+    },
+    {
+      "id": "designing-for-health",
+      "label": "5. Designing for Health"
+    },
+    {
+      "id": "recommendations",
+      "label": "6. Recommendations"
+    },
+    {
+      "id": "conclusions",
+      "label": "7. Conclusions"
+    },
+    {
+      "id": "references",
+      "label": "References"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "5.13m",
+      "label": "Excess deaths a year attributable to fossil-fuel air pollution"
+    },
+    {
+      "value": "33",
+      "label": "Megacities in 2025, nineteen of them in Asia"
+    },
+    {
+      "value": "$50–380",
+      "label": "Health value of avoided deaths per tonne of CO2 abated"
+    },
+    {
+      "value": "−66%",
+      "label": "Beijing's fall in annual PM2.5, 2013 to 2024"
+    }
+  ]
+}

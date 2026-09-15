@@ -1,0 +1,346 @@
+/* ===========================================================================
+   Theme — Report 2026-11, "Air Quality Improvement as a Co-Benefit of Clean
+   Energy Transition in Megacities"
+
+   Aesthetic: haze lifting. The masthead is a vertical gradient from smog
+   umber to clear sky, finished with an air-quality-index band that runs from
+   hazardous to good. Clear-air paper, sky-blue structure, smog-brick for
+   burden. Bricolage Grotesque displays, Work Sans reads, Red Hat Mono labels.
+   The AQI band recurs as the footer rule, so the report opens and closes on
+   the scale it is about.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #f5f8fa;
+  --bg-card: #ffffff;
+  --bg-accent: #e8f0f5;
+  --bg-dark: #1b2831;
+  --bg-dark-2: #131d24;
+
+  --text: #1c232b;
+  --text-secondary: #38434e;
+  --text-muted: #65707b;
+  --text-inverse: #f3f6f8;
+
+  --primary: #1f5f8b;
+  --primary-light: #2f75a6;
+  --accent: #a8452b;
+  --accent-light: #e0a15e;
+
+  --border: #d5dde3;
+  --border-light: #e5ebef;
+  --rule: #c2ccd4;
+
+  --chart-blue: #1f5f8b;
+  --chart-blue-light: #8dbad8;
+  --chart-gold: #c29a3a;
+  --chart-red: #a8452b;
+  --chart-teal: #28867a;
+  --chart-gray: #8b939b;
+  --chart-orange: #d07a34;
+  --chart-purple: #6b5b8f;
+
+  /* --serif is the display slot in the shell; here it carries a grotesque. */
+  --serif: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Work Sans", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Red Hat Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* The US AQI category colours, read from hazardous to good. */
+  --aqi-band: linear-gradient(90deg,
+    #7e0023 0 16.66%, #8f3f97 16.66% 33.33%, #d6301f 33.33% 50%,
+    #f07c12 50% 66.66%, #e6c019 66.66% 83.33%, #2f9e58 83.33% 100%);
+}
+
+body { font-size: 1.01rem; line-height: 1.74; }
+
+::selection { background: rgba(31, 95, 139, 0.16); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--primary); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--accent-light); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: haze lifting into clear sky -------------------------------- */
+
+.masthead {
+  position: relative;
+  background: linear-gradient(180deg, #574a3d 0%, #62594c 20%, #4d6272 55%, #1f5f8b 100%);
+  color: #ffffff;
+  border-bottom: 0;
+  padding: 3.4rem var(--gutter) 3.3rem;
+}
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 9px;
+  background: var(--aqi-band);
+}
+.masthead .overline {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: #f1d6a6;
+  margin-bottom: 1.4rem;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(2rem, 5.2vw, 3rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  max-width: 22ch;
+  color: #ffffff;
+}
+.masthead .subtitle {
+  font-family: var(--sans);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 56ch;
+}
+.masthead .strapline {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.78);
+  border-left: 3px solid #9fd0ee;
+}
+.masthead .meta-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+}
+.masthead .meta-row strong {
+  color: #bfe2f6;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.63rem;
+  letter-spacing: 0.14em;
+}
+
+/* --- sticky nav: clear air ------------------------------------------------ */
+
+.sticky-nav {
+  background: rgba(245, 248, 250, 0.95);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* --- section headings: a smog-to-sky gradient rule ------------------------ */
+
+section > h2 {
+  font-family: var(--serif);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  border-bottom: 0;
+  padding-bottom: 0.65rem;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 30%, #8dbad8 62%, var(--primary) 100%)
+    left bottom / 100% 4px no-repeat;
+}
+section > .section-dek {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 68ch;
+}
+section > h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  margin: 2.4rem 0 0.7rem;
+}
+
+/* The generated Abstract and Metadata blocks are sections too; keep them plain. */
+.abstract h2,
+.endmatter h2 { background: none; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract -------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+}
+.abstract h2 { color: var(--primary); letter-spacing: 0.14em; }
+
+/* --- executive cards ------------------------------------------------------- */
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  padding: 1.4rem 1.4rem 1.3rem;
+}
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.14rem;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+/* --- statistics ------------------------------------------------------------ */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid #8dbad8;
+  padding: 1.1rem 1.2rem;
+}
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.85rem;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.8rem; }
+.stat-card .stat-source { font-family: var(--mono); font-size: 0.64rem; }
+
+/* --- charts ---------------------------------------------------------------- */
+
+.chart-container { background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem 1.35rem; }
+.chart-container .chart-label {
+  font-family: var(--mono);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote: large type on a haze-to-sky bar -------------------------- */
+
+.pull-quote {
+  position: relative;
+  background: none;
+  border: 0;
+  padding: 0.3rem 0 0.3rem 1.8rem;
+  margin: 2.8rem 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.24;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  max-width: 44ch;
+}
+.pull-quote::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 7px;
+  background: linear-gradient(180deg, #6b5d4c 0%, #8dbad8 60%, var(--primary) 100%);
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 0.9rem;
+}
+
+/* --- callouts -------------------------------------------------------------- */
+
+.callout {
+  background: #eaf3f8;
+  border: 0;
+  border-left: 4px solid var(--primary);
+  padding: 1.3rem 1.45rem;
+}
+.callout .callout-title { font-family: var(--mono); color: var(--primary); font-weight: 600; font-size: 0.64rem; }
+.callout strong { color: var(--text); }
+.callout--warn { background: #f7ebe5; border-left-color: var(--accent); }
+.callout--warn .callout-title { color: var(--accent); }
+
+/* --- tables ---------------------------------------------------------------- */
+
+.data-table thead { background: #17496b; color: #ffffff; }
+.data-table thead th { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.06em; }
+.data-table tbody tr:nth-child(even) { background: #f1f6f9; }
+.data-table tbody th { font-family: var(--serif); font-weight: 700; color: var(--primary); letter-spacing: -0.01em; }
+.table-caption { font-family: var(--mono); color: var(--primary); font-weight: 600; font-size: 0.66rem; }
+
+/* --- references and end matter -------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--accent); font-size: 0.62rem; }
+.endmatter h2 { color: var(--primary); border-bottom: 2px solid var(--rule); }
+.endmatter .kw {
+  background: var(--bg-accent);
+  border-color: var(--border-light);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+}
+.endmatter dt { font-family: var(--mono); font-size: 0.62rem; }
+
+/* --- footer: the AQI band again ------------------------------------------- */
+
+.report-footer {
+  position: relative;
+  border-top: 0;
+  padding-top: calc(3rem + 9px);
+}
+.report-footer::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 9px;
+  background: var(--aqi-band);
+}
+.footer-inner h3 { color: #ffffff; font-family: var(--serif); font-weight: 800; letter-spacing: -0.03em; }
+.footer-inner a { color: #9fd0ee; }
+.cite-box { border-left-color: #9fd0ee; }
+.cite-box strong { color: #9fd0ee; }
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  .masthead { padding-top: 2.4rem; padding-bottom: 2.6rem; }
+  .masthead::after { height: 7px; }
+  .pull-quote { padding-left: 1.3rem; }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  .masthead { background: #fff !important; color: #000; }
+  .masthead h1, .masthead .subtitle, .masthead .strapline, .masthead .meta-row { color: #000 !important; }
+  .masthead .overline, .masthead .meta-row strong { color: #1f5f8b !important; }
+  section > h2 { background: none; border-bottom: 2px solid #1f5f8b; }
+}
