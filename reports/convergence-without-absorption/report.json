@@ -1,0 +1,63 @@
+{
+  "number": "2026-18",
+  "title": "Convergence Without Absorption",
+  "subtitle": "Can emerging economies catch up when the escalator that carried workers has narrowed?",
+  "strapline": "Manufacturing was the only escalator that raised output, productivity and employment at the same time. Its replacements raise the first two. The question is no longer whether convergence is possible, but which kind.",
+  "dek": "Half of developing economies have not narrowed the income gap since 2019. The pathways now proposed in manufacturing's place — digital services, agro-processing, green industry, minerals — are tradable and productive, and they absorb a fraction of the labour. That splits convergence into measures that used to move together.",
+  "abstract": [
+    "The question of whether emerging economies can still converge is usually asked as though convergence were one thing. It is at least three: output per capita relative to advanced economies, output per worker, and the number of people employed at rising productivity. For the four decades in which export manufacturing was the standard development pathway, those three moved together, because factory work was simultaneously more productive than what it replaced, tradable, and capable of absorbing large numbers of workers with limited formal education. Nothing that is now proposed in manufacturing's place has all four of those properties at once.",
+    "The evidence that the pathway has narrowed is established. Dani Rodrik's work on premature deindustrialization found that early industrialisers saw manufacturing employment peak at 30 to 37 per cent of the workforce at incomes of roughly US$11,000 to US$14,000 per head, while manufacturing began to shrink in Brazil at about US$5,000, in China at about US$3,000 and in India at about US$2,000. The World Bank's Global Economic Prospects for January 2026 reports that virtually half of all developing economies have failed since 2019 to narrow the income gap with advanced economies, with developing per capita income at about 12 per cent of the advanced level and per capita growth running roughly a percentage point below its 2000–2019 average.",
+    "The replacements are real and growing, and they are narrow. Digitally deliverable services now account for 56 per cent of global services exports; developing economies exported an estimated US$1.3 trillion of them and grew at 12 per cent against 9 per cent in developed economies. But the gains concentrate: in least-developed countries digitally deliverable services are only 16 to 20 per cent of services exports, about a third of the global average. Green industry, mineral processing and modern agro-processing share the same profile — tradable, productive, capital- or skill-intensive, and thin on employment relative to the factory floor they are replacing. Against that, the African Development Bank estimates that 10 to 12 million young Africans enter the labour market each year into an economy generating roughly three million formal jobs, and informal employment in Africa stood at about 85 per cent in 2024 against a world average of 58 per cent, barely changed in two decades.",
+    "The report's conclusion is that convergence is still available on output and largely unavailable on absorption, and that treating these as one objective produces policy that succeeds on the measure that is easiest to report. It proposes a two-track framing: an export track, which earns foreign exchange and builds capability through the narrow escalators and should be pursued without pretending it will employ the labour force; and an absorption track, aimed at productivity in the non-tradable sectors where most people already work — construction, retail and distribution, care, transport and food systems — where a one-off productivity gain reaches more workers than any plausible expansion of digital services exports. Both tracks depend on the same enabling layer of reliable power, connectivity and skills, which is where the polycrisis bites and where the case for investment is strongest."
+  ],
+  "jel": "O14, O11, J21, O33, F63 — industrialization and manufacturing; macroeconomic analyses of economic development; labour force and employment; technological change and diffusion; economic development and globalization",
+  "method": "This report synthesises published research and institutional data rather than producing new modelling. The premature-deindustrialization evidence is from Dani Rodrik's NBER working paper and associated publications; convergence and growth figures from the World Bank's Global Economic Prospects, January 2026; services trade data from UNCTAD's reporting on digitally deliverable services; labour-market entry estimates from the African Development Bank; and informality shares from ILO modelled estimates for 2024. All figures were verified against their sources in September 2026. Employment-absorption comparisons between sectors are directional rather than precise: employment data for tradable services are inconsistently measured across countries, and the report says where a figure is an order-of-magnitude comparison rather than a like-for-like statistic. The three-measures framing in Section 1, Table 1's escalator comparison and the two-track proposal in Section 5 are the author's analysis, assembled with the cited evidence already known, and are offered as a planning frame rather than a forecast. Figure 6 is a conceptual schematic. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Young+Serif&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fragment+Mono:ital@0;1&display=swap",
+  "themeColor": "#1d1f3a",
+  "topics": [
+    "Emerging Markets",
+    "Human Capital",
+    "Technology",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "economic convergence",
+    "premature deindustrialization",
+    "structural transformation",
+    "employment absorption",
+    "digitally deliverable services",
+    "informality",
+    "youth employment",
+    "development pathways",
+    "polycrisis",
+    "industrial policy",
+    "services exports",
+    "productivity",
+    "labour markets",
+    "Africa jobs"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "which-convergence", "label": "1. Which Convergence?" },
+    { "id": "what-the-escalator-did", "label": "2. What the Escalator Did" },
+    { "id": "replacements", "label": "3. The Replacements" },
+    { "id": "arithmetic", "label": "4. The Arithmetic" },
+    { "id": "two-track", "label": "5. Two Tracks" },
+    { "id": "polycrisis", "label": "6. What Polycrisis Changes" },
+    { "id": "recommendations", "label": "7. Recommendations" },
+    { "id": "conclusions", "label": "8. Conclusions" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "Half", "label": "Of developing economies have not narrowed the income gap since 2019" },
+    { "value": "$3,000", "label": "Income at which China's manufacturing employment began to shrink; the UK's peaked near $11–14,000" },
+    { "value": "10–12m", "label": "Young Africans entering the labour market each year, against about 3 million formal jobs" },
+    { "value": "85%", "label": "Informal share of African employment in 2024 — barely moved in two decades" }
+  ]
+}
