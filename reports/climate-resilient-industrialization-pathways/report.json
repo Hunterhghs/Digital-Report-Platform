@@ -1,0 +1,63 @@
+{
+  "number": "2026-13",
+  "title": "Climate-Resilient Industrialization Pathways",
+  "subtitle": "Sorting emerging-economy industry by the constraint that actually binds it",
+  "strapline": "Industrialization used to be judged on one number. Climate turns it into four — power price, power reliability, physical exposure and carbon compliance — and they do not bind the same industries.",
+  "dek": "Green industrial strategy tends to offer every sector the same package. But an aluminium smelter is stopped by the price of electricity, an electronics plant by a four-hour outage, and a garment factory by a heatwave or a flood. Sorting industries by their binding constraint produces a different — and cheaper — sequence of investments.",
+  "abstract": [
+    "For most of the post-war period, an emerging economy's industrialization strategy could be judged against a single number: unit cost. Climate change and the policy response to it have converted that into a portfolio of four constraints — the price of electricity, the reliability of electricity, physical exposure to heat and flood, and compliance with the carbon rules of destination markets. The central argument of this report is that these four do not bind the same industries, and that a green industrial policy offering every sector the same package therefore misallocates. The useful question for a planning ministry is not whether an industry is green, but which of the four stops it first.",
+    "The evidence for each constraint is well documented and rarely assembled in one place. On price, electricity is the largest single operating cost in primary aluminium smelting and a substantial share in ammonia, cement and steel — the industries for which clean power is simultaneously a cost strategy and, under the EU's Carbon Border Adjustment Mechanism, a market-access strategy. On reliability, World Bank firm surveys covering more than 143,000 firms in 137 countries put sales losses from outages at about US$82 billion a year, exceeding ten per cent of sales in the countries with the least reliable grids; when drought and heat cut northern Vietnam's supply in mid-2023, the World Bank estimated losses of US$1.4 billion, around 0.3 per cent of GDP, with surveyed industrial firms reporting revenue losses of ten per cent. On exposure, a national panel of Indian factories shows annual plant output falling about two per cent per degree Celsius, with worker productivity down four to nine per cent per degree on hot days, and climate control substantially mitigating the loss; the 2011 Thailand floods inundated seven industrial estates and 904 factories, causing some US$45.7 billion of economic damage and halting production in plants that were never flooded.",
+    "From these, the report builds three archetypes and a screening test. Price-bound industries — the energy-intensive processors, which are also the six sectors CBAM covers — should be sited and sequenced around the cost of clean power, which is why the 'powershoring' proposition of relocating energy-intensive plants to clean-grid economies is a genuine and rare new source of comparative advantage. Reliability-bound industries — electronics, precision assembly, pharmaceuticals, cold chains — can absorb a higher tariff but not an outage, and their pathway runs through firm capacity, storage, and instruments such as Vietnam's 2024 direct power purchase agreement decree that let manufacturers contract clean supply directly. Exposure-bound industries — labour-intensive assembly and agro-processing — are constrained by heat and flood at the site and in the logistics chain, and their pathway is cooling, siting and drainage rather than tariffs.",
+    "Three implications follow. First, the constraints are ordered differently by sector but the fixes overlap: a firm, clean grid serves the price-bound and reliability-bound alike, and industrial-zone drainage and cooling serve every tenant. Second, some fixes are rival: cooling a factory is an electrical load, so the exposure fix raises the reliability requirement — an instance of the mutual dependency examined in a companion report. Third, the sequence matters more than the total, because these are capital stocks with forty-year lives being sited now; a plant placed in a flood plain on an unreliable grid to save capital today has locked in an operating cost that no later subsidy removes. The report closes with recommendations for planning ministries, industrial-zone operators, development finance and exporters."
+  ],
+  "jel": "O14, Q54, L60, F18, O25 — industrialization and manufacturing; climate and natural disasters; industry studies: manufacturing; trade and environment; industrial policy",
+  "method": "This report synthesises published institutional and peer-reviewed evidence rather than producing new modelling. Firm-level outage costs are from World Bank Enterprise Survey analysis in Policy Research Working Paper 8899; Vietnam's 2023 shortage from World Bank estimates as reported at the time; heat effects on manufacturing output from Somanathan, Somanathan, Sudarshan and Tewari in the Journal of Political Economy (2021); working-hour losses from the ILO's Working on a Warmer Planet; the 2011 Thailand flood damages from World Bank and GFDRR assessments; CBAM's definitive phase and covered sectors from EU implementation guidance; the powershoring proposition from CAF and IDB analysis; and Vietnam's direct power purchase agreement framework from Decree 80/2024/ND-CP as reported by IEEFA and legal analyses. All figures were verified against their sources in September 2026. The three archetypes in Section 5, Table 1's constraint matrix and the screening questions derived from them are the author's analytical framework, constructed with the cited cases already known; the framework's fit to them is therefore not evidence for it, and it is offered as a planning checklist rather than a predictive model. Figure 5 is a conceptual schematic. Figures drawn from different studies use different years, methods and country samples and are not additive. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lexend:wght@300;400;500;600&family=Anonymous+Pro:wght@400;700&display=swap",
+  "themeColor": "#35618f",
+  "topics": [
+    "Emerging Markets",
+    "Energy Transition",
+    "Infrastructure",
+    "Climate Adaptation"
+  ],
+  "keywords": [
+    "industrialization",
+    "green industrial policy",
+    "climate resilience",
+    "emerging economies",
+    "electricity reliability",
+    "heat and productivity",
+    "flood risk",
+    "CBAM",
+    "carbon border adjustment",
+    "powershoring",
+    "industrial zones",
+    "manufacturing competitiveness",
+    "binding constraint",
+    "green convergence"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "four-constraints", "label": "1. Four Constraints" },
+    { "id": "power", "label": "2. Price and Reliability" },
+    { "id": "exposure", "label": "3. Heat and Flood" },
+    { "id": "compliance", "label": "4. Market Access" },
+    { "id": "archetypes", "label": "5. Three Archetypes" },
+    { "id": "pathways", "label": "6. Pathways and Sequence" },
+    { "id": "recommendations", "label": "7. Recommendations" },
+    { "id": "conclusions", "label": "8. Conclusions" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "−2%/°C", "label": "Annual output of an Indian factory per degree of warming" },
+    { "value": "$82bn", "label": "Annual sales lost to power outages across surveyed firms" },
+    { "value": "904", "label": "Factories inundated in Thailand's 2011 floods, across seven industrial estates" },
+    { "value": "6", "label": "Sectors covered by CBAM — every one of them power-price-bound" }
+  ]
+}
