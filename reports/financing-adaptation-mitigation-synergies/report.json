@@ -1,0 +1,101 @@
+{
+  "number": "2026-15",
+  "title": "Financing the Synergy",
+  "subtitle": "Why adaptation–mitigation projects split in two at the bank, and the instruments that stop it",
+  "strapline": "Mitigation sells a kilowatt-hour. Adaptation sells a disaster that did not happen. One of those can be pledged to a lender, which is why joint assets arrive at the bank and leave as two projects.",
+  "dek": "The case for investing in adaptation and mitigation together is physical and well established. The obstacle is not the argument but the cash flow: an avoided loss has no revenue line, so private capital funds about nine per cent of adaptation. This report sets out five instruments that convert avoided losses into something financeable, and how to use them without splitting the asset.",
+  "abstract": [
+    "That adaptation and mitigation belong together is now the conventional view, and a companion report in this series sets out the physical reasons why. This report takes up the question that decides whether the integration actually happens: how the combined asset is paid for. Its argument is that the synergy fails at the point of financing, for a structural reason. Mitigation assets generate a revenue stream — electricity sold, fuel displaced, credits issued — which can be pledged to a lender and project-financed. Adaptation assets generate an avoided loss, which is a non-event with no cash flow attached and nothing a creditor can take security over. The two halves of a joint investment therefore face different financiers, on different terms, and the standard institutional response is to split the project in two. The adaptation half then loses its funder.",
+    "The evidence for that asymmetry is stark. Of the roughly US$63–65 billion of tracked adaptation finance recorded for 2023, the Climate Policy Initiative attributes about US$5.7 billion — some nine per cent — to private actors, against a mitigation total that is overwhelmingly private and commercial. The insurance market tells the same story from the other side: of US$318 billion in economic losses from disasters in 2024, 57 per cent were uninsured, leaving a protection gap of US$181 billion. Losses at that scale are not being priced, hedged or transferred; they are being absorbed by households and treasuries after the fact.",
+    "Compounding risk makes the financing problem worse in exactly the countries pursuing convergence, because it raises the price of all capital rather than only the price of adaptation capital. Research for UN Environment estimated that climate vulnerability was already adding to sovereign borrowing costs to the point where one dollar in every ten of interest paid by a sample of developing countries was attributable to it — about US$40 billion of additional interest over a decade, projected to rise to between US$146 billion and US$168 billion over the following one. A country paying a vulnerability premium on its entire debt stock has a fiscal reason to invest in resilience that has nothing to do with any individual project's returns.",
+    "The report examines five instruments that convert an avoided loss into a cash flow a financier can act on: sovereign spread compression, where resilience lowers the premium on the whole stock; climate-resilient debt clauses, which turn a disaster into liquidity by deferring payments, as Barbados, Grenada and the Bahamas have done and the World Bank, IDB and EIB now offer; debt conversions, such as Barbados's November 2024 operation refinancing US$293.3 million behind US$300 million of IDB and EIB guarantees to release US$125 million for water and sewerage, and Ecuador's Galápagos swap, which repurchased US$1.6 billion of bonds at around 40 cents to save US$1.1 billion of debt service and commit US$450 million to conservation; insurance and parametric cover, which price the avoided loss directly; and cross-subsidy from the mitigation half, including the five per cent share of proceeds that the Paris Agreement crediting mechanism directs to the Adaptation Fund. The operative recommendation is to finance a joint asset once, against the revenue-bearing half, with the resilience specification written in as a covenant rather than pursued as a second project."
+  ],
+  "jel": "Q54, G32, H63, F34, O16 — climate and natural disasters; financing policy and capital structure; debt and sovereign debt management; international lending; financial markets and saving in development",
+  "method": "This report synthesises published institutional data and transaction documentation rather than producing new modelling. Adaptation finance totals and the private share are from the Climate Policy Initiative's Global Landscape of Climate Finance 2025 and its work on tracking private adaptation finance; the protection gap from Swiss Re Institute's sigma natural catastrophe research for 2024; the sovereign vulnerability premium from Buhr et al., Climate Change and the Cost of Capital in Developing Countries (Imperial College London, SOAS and UN Environment, 2018); climate-resilient debt clause adoption from the Climate Policy Initiative primer for Finance in Common and from multilateral development bank announcements; the Barbados debt-for-climate-resilience operation from IDB and EIB releases; the Ecuador Galápagos conversion from transaction reporting; the Article 6.4 share of proceeds from UNFCCC decisions; and the new collective quantified goal from the COP29 outcome. All figures were verified against their sources in September 2026. The cash-flow-shape framework in Section 1, Table 1's instrument mapping and the financing rule in Section 4 are the author's analysis, assembled with the cited transactions already known, and are offered as a structuring checklist rather than investment advice or a predictive model. Figure 5 is a conceptual schematic. Figures from different sources cover different years and definitions and are not additive. The report is analytical rather than predictive, and nothing in it is a recommendation to buy or sell any security.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Assistant:wght@300;400;500;600;700&family=Chivo+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#1d4635",
+  "topics": [
+    "Development Finance",
+    "Climate Adaptation",
+    "Emerging Markets",
+    "Systemic Risk"
+  ],
+  "keywords": [
+    "adaptation finance",
+    "climate finance",
+    "avoided losses",
+    "project finance",
+    "sovereign debt",
+    "climate resilient debt clauses",
+    "debt-for-nature swap",
+    "parametric insurance",
+    "protection gap",
+    "cost of capital",
+    "NCQG",
+    "Article 6",
+    "blended finance",
+    "economic convergence"
+  ],
+  "sections": [
+    {
+      "id": "executive-summary",
+      "label": "Executive Summary"
+    },
+    {
+      "id": "cash-flow-shape",
+      "label": "1. The Shape of the Cash Flow"
+    },
+    {
+      "id": "compounding",
+      "label": "2. The Vulnerability Premium"
+    },
+    {
+      "id": "instruments",
+      "label": "3. Five Instruments"
+    },
+    {
+      "id": "finance-once",
+      "label": "4. Finance It Once"
+    },
+    {
+      "id": "new-goal",
+      "label": "5. What the New Goal Changes"
+    },
+    {
+      "id": "recommendations",
+      "label": "6. Recommendations"
+    },
+    {
+      "id": "conclusions",
+      "label": "7. Conclusions"
+    },
+    {
+      "id": "references",
+      "label": "References"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "9%",
+      "label": "Share of tracked adaptation finance coming from private actors"
+    },
+    {
+      "value": "57%",
+      "label": "Of 2024's US$318bn in disaster losses that were uninsured"
+    },
+    {
+      "value": "1 in 10",
+      "label": "Dollars of interest paid by vulnerable developing countries attributed to climate risk"
+    },
+    {
+      "value": "$125m",
+      "label": "Released for water and sewerage by one Barbados debt conversion"
+    }
+  ]
+}
