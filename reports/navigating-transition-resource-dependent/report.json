@@ -1,0 +1,64 @@
+{
+  "number": "2026-17",
+  "title": "Navigating the Transition",
+  "subtitle": "Strategic options for resource-dependent economies under polycrisis",
+  "strapline": "The threat to a resource exporter is not that the reserves become worthless. It is that the revenue gets shorter and more volatile while the spending commitments stay long and rigid.",
+  "dek": "Forecasts of fossil demand now disagree about the direction after 2030, which makes prediction a poor basis for policy. What is not in dispute is that resource revenue is becoming shorter-dated and more variable. That is an asset–liability problem, and it has four known treatments.",
+  "abstract": [
+    "Resource-dependent economies are usually advised to diversify, on the premise that the energy transition will strand their reserves. The premise is less settled than the advice implies: the International Energy Agency's 2025 Outlook has oil demand peaking around 102 million barrels a day near 2030 in its stated-policies case, and rising to 113 million barrels a day by 2050 in its current-policies case. Forecasts that disagree about the direction of the next twenty years are a poor foundation for a national strategy. This report therefore reframes the exposure. What the transition and the wider polycrisis reliably do to a resource exporter is not to destroy the asset but to shorten its duration and widen its variance — while the state's obligations, which are wage bills, subsidies, debt service and demographics, stay long-dated and rigid.",
+    "Stated that way the problem is recognisable: an asset–liability mismatch. The asset is depleting, volatile and denominated in foreign currency; the liabilities are growing, rigid and denominated at home. Commodity dependence is widespread enough for this to be a development question rather than a Gulf one — UNCTAD classifies about 53 per cent of its member states as commodity-dependent, including more than 80 per cent of least-developed and landlocked developing countries and around 60 per cent of small island developing states.",
+    "Four treatments exist, and each addresses a different part of the mismatch. Hedging buys variance protection for a premium: Mexico's sovereign programme has spent on the order of a billion dollars a year on put options covering 200 to 300 million barrels, and paid out about US$2.4 billion in 2020. Sovereign funds with binding withdrawal rules lengthen the asset: Norway's fund passed US$2 trillion and its fiscal rule limits average spending to the fund's expected 3 per cent real return, while Timor-Leste, whose Petroleum Fund finances more than 80 per cent of the state budget, has withdrawn above its legislated sustainable income for years and faces a cliff in the early 2030s. Liability reform shortens and softens the obligations — the reason the Gulf's fiscal breakeven prices matter more than its reserves. And conversion turns the resource into a different export: Indonesia's nickel export ban lifted nickel-related exports from about US$6 billion in 2013 to nearly US$30 billion by 2022, though concentrated in stainless steel rather than battery materials and built on coal-fired processing.",
+    "The report's practical conclusion is that these are not alternatives but a sequence with a logic. Hedging is available immediately and buys time without solving anything; rules-based saving converts a windfall into a permanent income but only if the rule binds; liability reform is the precondition for both, because a state whose spending cannot fall does not have a savings problem, it has an arithmetic one; and conversion is the only option that changes what the economy sells, which makes it the slowest and the only one that matters in the end. Countries differ in which are actually open to them, and the report sets out three archetypes — large-reserve high-capacity exporters, high-dependence low-buffer exporters, and transition-mineral producers facing exactly the same disease in a new commodity."
+  ],
+  "jel": "Q32, H63, F31, O13, Q48 — exhaustible resources and economic development; debt and sovereign debt management; foreign exchange; agriculture and natural resources in development; energy policy",
+  "method": "This report synthesises published institutional data and contemporary reporting rather than producing new modelling. Demand scenarios are from the IEA's World Energy Outlook 2025 stated-policies and current-policies cases; commodity-dependence shares from UNCTAD's State of Commodity Dependence 2023; Mexico's hedging programme from press and research accounts of a programme whose terms the government has classified; Norway's fund value and fiscal rule from Norges Bank Investment Management and the Norwegian government's framework; Timor-Leste's Petroleum Fund position from World Bank, academic and civil-society analysis; Gulf fiscal breakeven estimates from IMF analysis as reported in 2025; and Indonesia's nickel export figures from trade analysis of the export ban. All figures were verified against their sources in September 2026. Fiscal breakeven prices vary substantially with what spending is included, and the report gives the range rather than a single number. The asset–liability framing in Section 2, the four treatments in Sections 3 to 6, Table 2's archetypes and the sequencing argument in Section 7 are the author's analysis, assembled with the cited cases already known, and are offered as a strategy checklist rather than a forecast. Figure 7 is a conceptual schematic. Nothing in this report is investment advice.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Outfit:wght@300;400;500;600&family=Spline+Sans+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#16324b",
+  "topics": [
+    "Energy Transition",
+    "Emerging Markets",
+    "Development Finance",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "resource dependence",
+    "petrostates",
+    "sovereign wealth funds",
+    "fiscal rules",
+    "commodity price volatility",
+    "oil hedging",
+    "fiscal breakeven",
+    "stranded assets",
+    "downstreaming",
+    "critical minerals",
+    "diversification",
+    "energy transition",
+    "polycrisis",
+    "asset liability management"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "not-obsolescence", "label": "1. Not Obsolescence" },
+    { "id": "mismatch", "label": "2. The Mismatch" },
+    { "id": "hedge", "label": "3. Hedge the Variance" },
+    { "id": "lengthen", "label": "4. Lengthen the Asset" },
+    { "id": "liabilities", "label": "5. Shorten the Liability" },
+    { "id": "convert", "label": "6. Convert the Resource" },
+    { "id": "sequence", "label": "7. Sequence and Archetypes" },
+    { "id": "recommendations", "label": "8. Recommendations" },
+    { "id": "conclusions", "label": "9. Conclusions" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "102 vs 113", "label": "Million barrels a day: two IEA scenarios, opposite directions" },
+    { "value": "53%", "label": "Of UNCTAD member states are commodity-dependent" },
+    { "value": "3%", "label": "Norway's spending rule — and Timor-Leste's legislated sustainable income" },
+    { "value": "$6bn → $30bn", "label": "Indonesia's nickel-related exports, 2013 to 2022" }
+  ]
+}

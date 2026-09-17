@@ -1,0 +1,359 @@
+/* ===========================================================================
+   Theme — Report 2026-17, "Navigating the Transition"
+
+   Aesthetic: navigation chart. The report argues that the exposure cannot be
+   forecast, only steered, so the masthead is a chart-paper field with rhumb
+   lines radiating from a point (a repeating-conic-gradient — the first
+   angular motif in the series) and section headings sit on a bearing line
+   with a brass diamond marker. Bodoni Moda gives the engraved chart-title
+   look, Outfit reads, Spline Sans Mono carries the figures.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #f5f2e9;
+  --bg-card: #fffdf8;
+  --bg-accent: #e8e6da;
+  --bg-dark: #11283c;
+  --bg-dark-2: #0b1d2c;
+
+  --text: #1c2329;
+  --text-secondary: #3a444c;
+  --text-muted: #6b7580;
+  --text-inverse: #eef3f6;
+
+  --primary: #16324b;
+  --primary-light: #2f5878;
+  --accent: #b5893c;
+  --accent-light: #d4ab63;
+
+  --border: #d8d3c4;
+  --border-light: #e7e3d7;
+  --rule: #c2bcac;
+
+  --chart-blue: #16324b;
+  --chart-blue-light: #7da0bd;
+  --chart-gold: #b5893c;
+  --chart-red: #9c4430;
+  --chart-teal: #2f6e6a;
+  --chart-gray: #8b8b82;
+  --chart-orange: #c17a3c;
+  --chart-purple: #4d4a6b;
+
+  --serif: "Bodoni Moda", Georgia, "Times New Roman", serif;
+  --sans: Outfit, -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Spline Sans Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Rhumb lines: fine rays from a point off the left edge of the masthead. */
+  --rhumb: repeating-conic-gradient(from 0deg at 12% 118%,
+    rgba(238, 243, 246, 0.16) 0deg 0.35deg, rgba(238, 243, 246, 0) 0.35deg 7.5deg);
+}
+
+body { font-size: 1.02rem; line-height: 1.75; }
+
+::selection { background: rgba(22, 50, 75, 0.16); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--accent); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--accent); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: a chart with rhumb lines ----------------------------------- */
+
+.masthead {
+  position: relative;
+  overflow: hidden;
+  background: var(--rhumb), linear-gradient(180deg, #16324b 0%, #11283c 70%, #0b1d2c 100%);
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.2rem var(--gutter) 3rem;
+}
+/* A brass bearing line closes the plate. */
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 6px;
+  background: linear-gradient(var(--accent), var(--accent)) bottom / 100% 3px no-repeat,
+    linear-gradient(rgba(212, 171, 99, 0.45), rgba(212, 171, 99, 0.45)) top / 100% 1px no-repeat;
+}
+.masthead-inner { position: relative; }
+.masthead .overline {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-light);
+  margin-bottom: 1.3rem;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.3rem, 5.8vw, 3.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  max-width: 19ch;
+  color: #ffffff;
+}
+.masthead .subtitle {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(1rem, 2.2vw, 1.18rem);
+  color: rgba(238, 243, 246, 0.84);
+  max-width: 56ch;
+}
+.masthead .strapline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.16rem);
+  color: rgba(238, 243, 246, 0.86);
+  border-left: 3px solid var(--accent);
+  max-width: 62ch;
+}
+.masthead .meta-row {
+  border-top: 1px solid rgba(238, 243, 246, 0.22);
+  color: rgba(238, 243, 246, 0.78);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+.masthead .meta-row strong {
+  color: var(--accent-light);
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+}
+
+/* --- sticky nav ------------------------------------------------------------ */
+
+.sticky-nav {
+  background: rgba(245, 242, 233, 0.96);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- section headings: a bearing line with a marker ----------------------- */
+
+section > h2 {
+  position: relative;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+  letter-spacing: -0.01em;
+  color: var(--primary);
+  border-bottom: 0;
+  padding-bottom: 0.8rem;
+  background: linear-gradient(var(--primary), var(--primary)) left 100% / 100% 1.5px no-repeat;
+}
+/* The marker sits on the line, like a waypoint. */
+section > h2::before {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -3.5px;
+  width: 8px; height: 8px;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+section > .section-dek {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 68ch;
+}
+section > h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.32rem;
+  color: var(--text);
+  margin: 2.4rem 0 0.7rem;
+}
+
+/* The generated Abstract and Metadata blocks are sections too; keep them plain. */
+.abstract h2,
+.endmatter h2 { background: none; }
+.abstract h2::before,
+.endmatter h2::before { content: none; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract -------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+}
+.abstract h2 { color: var(--primary); font-family: var(--mono); letter-spacing: 0.14em; }
+
+/* --- executive cards ------------------------------------------------------- */
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  padding: 1.35rem 1.4rem 1.25rem;
+}
+.exec-card:nth-child(2) { border-top-color: var(--accent); }
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.26rem;
+  line-height: 1.18;
+  color: var(--primary);
+}
+
+/* --- statistics ------------------------------------------------------------ */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-bottom: 3px solid var(--accent);
+  padding: 1.1rem 1.2rem;
+}
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.85rem;
+  letter-spacing: -0.01em;
+  color: var(--primary);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.79rem; }
+.stat-card .stat-source { font-family: var(--mono); font-size: 0.62rem; }
+
+/* --- charts ---------------------------------------------------------------- */
+
+.chart-container { background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem 1.35rem; }
+.chart-container .chart-label {
+  font-family: var(--mono);
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote ------------------------------------------------------------ */
+
+.pull-quote {
+  background: var(--bg-accent);
+  border: 0;
+  border-left: 6px solid var(--accent);
+  padding: 1.7rem 1.8rem 1.5rem;
+  margin: 2.9rem 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.3;
+  color: var(--primary);
+  max-width: none;
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 500;
+  margin-top: 0.9rem;
+}
+
+/* --- callouts -------------------------------------------------------------- */
+
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 1.3rem 1.45rem;
+}
+.callout .callout-title { font-family: var(--mono); color: var(--primary); font-weight: 500; font-size: 0.62rem; letter-spacing: 0.12em; }
+.callout strong { color: var(--text); }
+.callout--warn { border-left-color: var(--chart-red); }
+.callout--warn .callout-title { color: var(--chart-red); }
+
+/* --- tables ---------------------------------------------------------------- */
+
+.data-table thead { background: var(--primary); color: var(--text-inverse); }
+.data-table thead th { font-family: var(--mono); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; }
+.data-table tbody tr:nth-child(even) { background: #efece1; }
+.data-table tbody th { font-family: var(--serif); font-weight: 400; font-size: 1.04rem; color: var(--text); }
+.data-table td { font-variant-numeric: tabular-nums; }
+.table-caption { font-family: var(--mono); color: var(--primary); font-weight: 500; font-size: 0.64rem; letter-spacing: 0.08em; }
+
+/* Archetype marks in Table 2 — brass waypoints. */
+.bg {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary);
+  padding: 0.12rem 0.4rem;
+  margin-right: 0.4rem;
+}
+.bg-2 { background: var(--accent); }
+.bg-3 { background: var(--chart-teal); }
+
+/* --- references and end matter -------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--accent); font-size: 0.61rem; }
+.endmatter h2 { color: var(--primary); border-bottom: 1.5px solid var(--rule); }
+.endmatter .kw {
+  background: var(--bg-accent);
+  border-color: var(--border-light);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+}
+.endmatter dt { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.06em; }
+
+/* --- footer ---------------------------------------------------------------- */
+
+.report-footer { border-top: 6px solid var(--accent); }
+.footer-inner h3 { color: #ffffff; font-family: var(--serif); font-weight: 400; font-size: 1.5rem; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+.cite-box strong { color: var(--accent-light); }
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  .masthead { padding-top: 2.4rem; padding-bottom: 2.4rem; }
+  .pull-quote { padding: 1.4rem 1.3rem 1.2rem; }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  .masthead { background: #fff !important; color: #000; }
+  .masthead h1, .masthead .subtitle, .masthead .strapline, .masthead .meta-row { color: #000 !important; }
+  .masthead .overline, .masthead .meta-row strong { color: #16324b !important; }
+  section > h2 { background: none; border-bottom: 1.5px solid #16324b; }
+  section > h2::before { background: #b5893c; }
+  .pull-quote { background: #f2f1ec !important; }
+}
