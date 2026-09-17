@@ -1,0 +1,105 @@
+{
+  "number": "2026-14",
+  "title": "Food, Energy, Water: Disruption and Substitution",
+  "subtitle": "Nexus shocks in the Global South and what the clean transition actually changes",
+  "strapline": "The transition does not decouple food, energy and water. It moves the coupling — from imported gas and seasonal rainfall onto sunlight, aquifers and capital. The choice is which dependency to hold.",
+  "dek": "Nexus disruptions travel along whichever link is tightest: gas into fertiliser into food in 2022, drought into hydropower and into shipping lanes in 2023 and 2024. Clean technologies break those particular chains — and create new ones. This report maps four substitutions, what each buys, and what each newly requires.",
+  "abstract": [
+    "The food–energy–water nexus is usually described as a set of interdependencies to be managed. This report takes a narrower and more operational view: disruptions propagate along specific couplings, in a direction that differs case by case, and the clean transition's real effect is to substitute one coupling for another rather than to remove coupling altogether. Getting that substitution right — choosing dependencies that are local, abundant and storable over ones that are imported, seasonal or priced in a foreign currency — is the imperative the title refers to.",
+    "Two recent disruptions show the mechanism working in opposite directions. In 2022 the chain ran from energy into food: natural gas reached as much as 90 per cent of the variable cost of European ammonia production, roughly 70 per cent of that capacity was shut or curtailed at the peak, and the FAO Food Price Index hit its highest level in the series' history in March 2022 at 160.2 points, with cereals at 170.1. In 2023 and 2024 the chain ran from water outward: drought cut Gatún Lake to its lowest level since at least 1965, the Panama Canal reduced daily transits from 36–38 in mid-2023 to about 18 by February 2024, and total FY2024 transits fell 29 per cent to 9,936 vessels. Water shortages also took power systems down directly — Ecuador, which draws around 77 per cent of its electricity from hydropower, imposed outages that grew from eight to fourteen hours a day during its worst drought in six decades.",
+    "Against that background the report examines four substitutions the transition is already making in the Global South. Diesel and grid-powered irrigation gives way to solar pumping, which removes the fuel-price and grid-reliability coupling and replaces it with a groundwater coupling made more dangerous by the disappearance of the marginal cost that used to ration extraction. Gas-based ammonia gives way to green ammonia, moving fertiliser from an imported-gas dependency to a domestic electricity one: India has allocated about 724,000 tonnes a year of green ammonia across 13 fertiliser units, at discovered prices well below the global benchmark. Rainfall-dependent hydropower is complemented by solar, wind and storage, trading drought exposure for land, minerals and capital exposure. And rainfall-dependent water supply gives way to desalination, which trades rainfall risk for an electricity dependency of roughly 2.5 to 4 kilowatt-hours per cubic metre — benign only where the power is clean and firm.",
+    "The report's practical conclusion is that each new coupling carries a governance requirement that the old one discharged automatically, usually through price. Free solar pumping needs metering and water allocation because the tariff no longer rations the aquifer; green ammonia needs firm clean power because an electrolyser idle half the year does not repay its capital; desalination needs the same. Substitutions that move a dependency onto a local, abundant resource are worth making even when they are not cheaper on day one, because they convert a foreign-exchange and geopolitical exposure into a domestic engineering problem. The report closes with recommendations for agriculture, energy and water ministries, for development finance, and for the utilities and regulators who will have to make the new couplings hold."
+  ],
+  "jel": "Q25, Q18, Q42, Q54, O13 — water; agricultural policy and food; alternative energy sources; climate and natural disasters; agriculture and natural resources in development",
+  "method": "This report synthesises published institutional data and contemporary reporting rather than producing new modelling. The FAO Food Price Index series is taken directly from FAO's published monthly data file (2014–2016 = 100), which carries revisions relative to the figures announced at the time; the report uses the current published values and says so. European ammonia curtailment and the gas share of variable cost are from industry and European Commission sources for 2022; Panama Canal transit data from the Panama Canal Authority as reported by the US Energy Information Administration and analysts; Ecuador's blackout schedule and hydropower share from contemporary reporting; desalination capacity and energy intensity from recent industry and peer-reviewed summaries; India's green ammonia allocation and discovered prices from Indian government and trade sources; hunger figures from The State of Food Security and Nutrition in the World 2025. All figures were verified against their sources in September 2026. The four-substitution framework in Sections 4 and 5, Table 1 and the governance requirements in Section 6 are the author's analysis, assembled with the cited cases already known, and are offered as a planning checklist rather than a predictive model. Figure 5 is a conceptual schematic. Figures from different sources use different units and periods and are not additive. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Azeret+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#0f4c5c",
+  "topics": [
+    "Emerging Markets",
+    "Energy Transition",
+    "Systemic Risk",
+    "Infrastructure"
+  ],
+  "keywords": [
+    "food energy water nexus",
+    "fertiliser crisis",
+    "food prices",
+    "hydropower drought",
+    "Panama Canal",
+    "desalination",
+    "solar irrigation",
+    "green ammonia",
+    "groundwater governance",
+    "clean transition",
+    "Global South",
+    "supply chain disruption",
+    "energy security",
+    "water security"
+  ],
+  "sections": [
+    {
+      "id": "executive-summary",
+      "label": "Executive Summary"
+    },
+    {
+      "id": "propagation",
+      "label": "1. How Shocks Travel"
+    },
+    {
+      "id": "energy-to-food",
+      "label": "2. Energy into Food"
+    },
+    {
+      "id": "water-outward",
+      "label": "3. Water Outward"
+    },
+    {
+      "id": "substitution",
+      "label": "4. The Substitution"
+    },
+    {
+      "id": "four-substitutions",
+      "label": "5. Four Substitutions"
+    },
+    {
+      "id": "requirements",
+      "label": "6. What Each Requires"
+    },
+    {
+      "id": "recommendations",
+      "label": "7. Recommendations"
+    },
+    {
+      "id": "conclusions",
+      "label": "8. Conclusions"
+    },
+    {
+      "id": "references",
+      "label": "References"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "160.2",
+      "label": "FAO Food Price Index, March 2022 — the highest in the series"
+    },
+    {
+      "value": "~70%",
+      "label": "Of European ammonia capacity shut or curtailed at the 2022 gas peak"
+    },
+    {
+      "value": "38 → 18",
+      "label": "Panama Canal transits a day, mid-2023 to February 2024"
+    },
+    {
+      "value": "724kt",
+      "label": "Green ammonia a year allocated across 13 Indian fertiliser units"
+    }
+  ]
+}
