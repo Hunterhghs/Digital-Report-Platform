@@ -1,0 +1,348 @@
+/* ===========================================================================
+   Theme — Report 2026-16, "Convergence Through Crisis"
+
+   Aesthetic: step change. The report is about discontinuities, so the motif
+   is a staircase: the masthead is closed by a stepped rule built from two
+   offset dash layers, and the same step repeats under every section heading.
+   Plum for the forced decision, amber for the window, brick for the default
+   that wins when the window is missed. Syne — wide and geometric — sets the
+   display, Hanken Grotesk reads, Sometype Mono labels.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #faf8fa;
+  --bg-card: #ffffff;
+  --bg-accent: #f1eaf2;
+  --bg-dark: #2a1330;
+  --bg-dark-2: #1c0c21;
+
+  --text: #1b1720;
+  --text-secondary: #3c3442;
+  --text-muted: #6d6474;
+  --text-inverse: #f3ecf4;
+
+  --primary: #4a1f4d;
+  --primary-light: #6d3572;
+  --accent: #e8a33d;
+  --accent-light: #f3c179;
+
+  --border: #ded7e0;
+  --border-light: #ebe5ec;
+  --rule: #c8bfcb;
+
+  --chart-blue: #4a1f4d;
+  --chart-blue-light: #9a72a0;
+  --chart-gold: #e8a33d;
+  --chart-red: #a33b2a;
+  --chart-teal: #2f6b4f;
+  --chart-gray: #8b8490;
+  --chart-orange: #c9733a;
+  --chart-purple: #6d3572;
+
+  --serif: Syne, "Helvetica Neue", Arial, sans-serif;
+  --sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Sometype Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* A staircase: two dash layers, offset, so the eye reads a step. */
+  --step-lower: repeating-linear-gradient(90deg, var(--primary) 0 26px, transparent 26px 52px);
+  --step-upper: repeating-linear-gradient(90deg, transparent 0 26px, var(--accent) 26px 52px);
+}
+
+body { font-size: 1.02rem; line-height: 1.74; }
+
+::selection { background: rgba(74, 31, 77, 0.16); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--accent); }
+
+a { color: var(--primary); }
+a:hover { color: var(--chart-orange); }
+
+.progress__bar { background: var(--accent); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: a dark field closed by a stepped rule ---------------------- */
+
+.masthead {
+  position: relative;
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.2rem var(--gutter) 3.1rem;
+}
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 10px;
+  background: var(--step-lower) left bottom / 52px 5px repeat-x,
+    var(--step-upper) left top / 52px 5px repeat-x;
+}
+.masthead .overline {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 1.3rem;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(2.1rem, 5.6vw, 3.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+  color: #ffffff;
+}
+.masthead .subtitle {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(1rem, 2.2vw, 1.18rem);
+  color: rgba(243, 236, 244, 0.82);
+  max-width: 56ch;
+}
+.masthead .strapline {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.98rem;
+  color: rgba(243, 236, 244, 0.8);
+  border-left: 4px solid var(--accent);
+  max-width: 62ch;
+}
+.masthead .meta-row {
+  border-top: 1px solid rgba(243, 236, 244, 0.22);
+  color: rgba(243, 236, 244, 0.76);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+.masthead .meta-row strong {
+  color: var(--accent-light);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+}
+
+/* --- sticky nav ------------------------------------------------------------ */
+
+.sticky-nav {
+  background: rgba(250, 248, 250, 0.95);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- section headings: the same step ------------------------------------- */
+
+section > h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.4vw, 1.95rem);
+  letter-spacing: -0.03em;
+  color: var(--text);
+  border-bottom: 0;
+  padding-bottom: 0.75rem;
+  background: var(--step-lower) left bottom / 52px 3px repeat-x,
+    var(--step-upper) left calc(100% - 3px) / 52px 3px repeat-x;
+}
+section > .section-dek {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 68ch;
+}
+section > h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.16rem;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  margin: 2.4rem 0 0.7rem;
+}
+
+/* The generated Abstract and Metadata blocks are sections too; keep them plain. */
+.abstract h2,
+.endmatter h2 { background: none; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract -------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--primary);
+}
+.abstract h2 { color: var(--primary); font-family: var(--mono); letter-spacing: 0.14em; }
+
+/* --- executive cards ------------------------------------------------------- */
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  padding: 1.35rem 1.4rem 1.25rem;
+}
+.exec-card:nth-child(3) { border-top-color: var(--chart-red); }
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--chart-orange);
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+/* --- statistics ------------------------------------------------------------ */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-bottom: 4px solid var(--accent);
+  padding: 1.1rem 1.2rem;
+}
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.79rem; }
+.stat-card .stat-source { font-family: var(--mono); font-size: 0.62rem; }
+
+/* --- charts ---------------------------------------------------------------- */
+
+.chart-container { background: var(--bg-card); border: 1px solid var(--border); padding: 1.2rem 1.35rem; }
+.chart-container .chart-label {
+  font-family: var(--mono);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote ------------------------------------------------------------ */
+
+.pull-quote {
+  background: var(--bg-accent);
+  border: 0;
+  border-left: 8px solid var(--accent);
+  padding: 1.6rem 1.8rem 1.4rem;
+  margin: 2.9rem 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.8vw, 1.5rem);
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+  max-width: 46ch;
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--chart-orange);
+  font-weight: 600;
+  margin-top: 0.9rem;
+}
+
+/* --- callouts -------------------------------------------------------------- */
+
+.callout {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--primary);
+  padding: 1.3rem 1.45rem;
+}
+.callout .callout-title { font-family: var(--mono); color: var(--primary); font-weight: 600; font-size: 0.62rem; letter-spacing: 0.12em; }
+.callout strong { color: var(--text); }
+.callout--warn { border-left-color: var(--chart-red); }
+.callout--warn .callout-title { color: var(--chart-red); }
+
+/* --- tables ---------------------------------------------------------------- */
+
+.data-table thead { background: var(--primary); color: var(--text-inverse); }
+.data-table thead th { font-family: var(--mono); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; }
+.data-table tbody tr:nth-child(even) { background: var(--bg-accent); }
+.data-table tbody th { font-family: var(--serif); font-weight: 700; font-size: 0.95rem; letter-spacing: -0.02em; color: var(--text); }
+.table-caption { font-family: var(--mono); color: var(--primary); font-weight: 600; font-size: 0.64rem; letter-spacing: 0.08em; }
+
+/* Gate verdicts in Table 1. */
+.g {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.1rem 0.34rem;
+  margin-right: 0.3rem;
+}
+.g-y { background: #2f6b4f; }
+.g-p { background: var(--chart-orange); }
+.g-n { background: var(--chart-red); }
+
+/* --- references and end matter -------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--chart-orange); font-size: 0.61rem; }
+.endmatter h2 { color: var(--primary); border-bottom: 2px solid var(--rule); }
+.endmatter .kw {
+  background: var(--bg-accent);
+  border-color: var(--border-light);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+}
+.endmatter dt { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.06em; }
+
+/* --- footer ---------------------------------------------------------------- */
+
+.report-footer { border-top: 8px solid var(--accent); }
+.footer-inner h3 { color: #ffffff; font-family: var(--serif); font-weight: 800; letter-spacing: -0.03em; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+.cite-box strong { color: var(--accent-light); }
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 760px) {
+  .masthead { padding-top: 2.4rem; padding-bottom: 2.5rem; }
+  .pull-quote { padding-left: 1.3rem; border-left-width: 6px; }
+  .g { font-size: 0.56rem; }
+}
+
+/* --- print ----------------------------------------------------------------- */
+
+@media print {
+  .masthead { background: #fff !important; color: #000; }
+  .masthead h1, .masthead .subtitle, .masthead .strapline, .masthead .meta-row { color: #000 !important; }
+  .masthead .overline, .masthead .meta-row strong { color: #4a1f4d !important; }
+  section > h2 { background: none; border-bottom: 2px solid #4a1f4d; }
+  .pull-quote { background: #f4f2f4 !important; }
+}

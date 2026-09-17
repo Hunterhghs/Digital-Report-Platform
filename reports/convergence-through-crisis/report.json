@@ -1,0 +1,63 @@
+{
+  "number": "2026-16",
+  "title": "Convergence Through Crisis",
+  "subtitle": "Disruption opens replacement windows — what decides which technology fills them",
+  "strapline": "Leapfrogs are not chosen. They are timed. A crisis converts an optional upgrade into a forced replacement, and whatever is available, financeable and permitted that month becomes the capital stock for the next twenty years.",
+  "dek": "Pakistan imported 17 GW of solar panels in a single year. South Africa's rooftops went from under 1 GW to over 7 GW. Lebanon's solar capacity rose thirteenfold. None of these were planned transitions; all followed a crisis that made the incumbent unaffordable or unavailable. This report asks what determines whether such a window produces a leapfrog or a diesel generator.",
+  "abstract": [
+    "Emerging economies are often urged to leapfrog: to skip the fossil-intensive stage of development the way many skipped fixed-line telephony. The advice is usually framed as a choice, and it is not. Incumbent capital persists because it is sunk, because switching is optional, and because the option to defer has value. What dislodges it is a crisis that makes the incumbent unavailable or unaffordable — at which point an optional upgrade becomes a forced replacement, and the replacement is drawn from whatever is available, financeable and permitted in that particular month. The decision window is weeks; the asset lasts decades.",
+    "The evidence for this pattern is now unusually clear. Pakistan imported about 17 gigawatts of solar panels in 2024, double the previous year, becoming one of the world's largest markets in the space of a year — a response to electricity prices that had roughly doubled since 2021 rather than to any national programme. South Africa's rooftop solar capacity rose from 983 megawatts in March 2022 to about 7.3 gigawatts by 2025, through the worst years of load-shedding. Lebanon's installed solar rose thirteenfold, from roughly 100 megawatts in 2020 to about 1,300 megawatts in 2023, after the collapse of the state supply. Vietnam installed 9.7 gigawatts of rooftop solar in 2020, of which about 6 gigawatts arrived in the final month before a tariff deadline. Nigeria, after removing its petrol subsidy, went from roughly 11,000 converted compressed-gas vehicles to more than 100,000 in about a year.",
+    "The same windows also close the wrong way, and the report gives those cases equal weight. During its load-shedding peak Eskom spent 21.5 billion rand on diesel for open-cycle turbines in the 2023 financial year, rising to 23.4 billion the year after — a category that accounted for roughly 19 per cent of generation cost and 2 per cent of output. Ecuador, facing drought-driven blackouts, leased 300 megawatts of Turkish power barges for about US$250 million. Lebanon's private diesel generators survived the solar boom because most households could not also afford storage. In each case the crisis forced a replacement decision and the incumbent technology won it, because it was the option that could be delivered that month.",
+    "From these cases the report derives a three-gate test applied at the moment of forced replacement — is the clean option available, is it financeable, and is it permitted — and argues that diesel and rented thermal capacity win by default on all three. The implications are about preparation rather than persuasion: standing import and duty treatment, pre-cleared grid codes and net-metering rules, credit available at the point of purchase rather than through a programme cycle, pre-qualified installers, and procurement templates for storage and hybrid capacity that can be executed in weeks. Countries that pre-position those five things convert their next crisis into a re-equipment at a lower cost and emissions frontier; countries that do not will rent fossil capacity at emergency prices and add the bill to their debt."
+  ],
+  "jel": "O33, Q42, O13, L94, Q48 — technological change and diffusion; alternative energy sources; agriculture and natural resources in development; electric utilities; energy policy",
+  "method": "This report synthesises published data and contemporary reporting on six national episodes rather than producing new modelling. Pakistan's 2024 solar imports are from Ember's Global Electricity Review 2025 as reported at the time; South Africa's rooftop capacity from Eskom and National Treasury estimates reported between 2023 and 2025; Lebanon's installed solar from pv magazine and subsequent assessments; Vietnam's 2020 rooftop additions from PV Tech and industry reporting; Nigeria's vehicle conversions from the Presidential Initiative on Compressed Natural Gas and Nigerian press reporting; Eskom's diesel spending from Bloomberg, Moneyweb and Eskom disclosures; and Ecuador's power barge leases from regional reporting. All figures were verified against their sources in September 2026. Rooftop and distributed capacity estimates in several of these countries are inferred from utility modelling and import data rather than metered registries, and are therefore approximations; the report uses them to establish magnitude and direction, not precision. The three-gate window test in Section 4, Table 1 and the pre-positioning list in Section 5 are the author's analysis, assembled with the cited episodes already known, and are offered as a preparedness checklist rather than a predictive model. Figure 6 is a conceptual schematic. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Sometype+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#4a1f4d",
+  "topics": [
+    "Energy Transition",
+    "Emerging Markets",
+    "Technology",
+    "Infrastructure"
+  ],
+  "keywords": [
+    "leapfrogging",
+    "technology adoption",
+    "energy crisis",
+    "rooftop solar",
+    "Pakistan solar",
+    "load shedding",
+    "distributed generation",
+    "capital stock turnover",
+    "diesel lock-in",
+    "power barges",
+    "energy policy",
+    "economic convergence",
+    "crisis response",
+    "preparedness"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "why-nothing-changes", "label": "1. Why Nothing Changes" },
+    { "id": "windows", "label": "2. Five Windows" },
+    { "id": "wrong-way", "label": "3. The Wrong Way" },
+    { "id": "window-test", "label": "4. The Window Test" },
+    { "id": "pre-positioning", "label": "5. Pre-positioning" },
+    { "id": "convergence", "label": "6. Convergence" },
+    { "id": "recommendations", "label": "7. Recommendations" },
+    { "id": "conclusions", "label": "8. Conclusions" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "17 GW", "label": "Solar panels Pakistan imported in 2024, double the year before" },
+    { "value": "0.98 → 7.3 GW", "label": "South African rooftop solar through the load-shedding years" },
+    { "value": "6 GW", "label": "Of Vietnam's 2020 rooftop solar installed in the final month before a deadline" },
+    { "value": "R21.5bn", "label": "Eskom's diesel bill in FY2023 — 19% of generation cost for 2% of output" }
+  ]
+}
