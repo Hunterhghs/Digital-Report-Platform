@@ -1,0 +1,363 @@
+/* ===========================================================================
+   Theme — Report 2026-12, "Integrating Adaptation and Mitigation"
+
+   Aesthetic: two threads woven. The report's subject is two agendas that are
+   inputs to each other, so the design carries two colours everywhere — a cool
+   teal for mitigation and clean supply, a warm ochre for adaptation and
+   protection. The masthead is a dark ground with a woven diagonal weft of
+   both; section headings sit on a two-thread rule; cards alternate which
+   thread caps them. DM Serif Display sets the headings, Karla the argument,
+   Overpass Mono the labels.
+
+   Loaded after report.css: tokens first (which also re-colours every chart,
+   since report.js reads the palette from them), then the rules that assume
+   the default surface.
+   =========================================================================== */
+
+:root {
+  --bg: #fbfaf6;
+  --bg-card: #ffffff;
+  --bg-accent: #f1ece0;
+  --bg-dark: #17211f;
+  --bg-dark-2: #101816;
+
+  --text: #191c1a;
+  --text-secondary: #3a413d;
+  --text-muted: #6b716c;
+  --text-inverse: #f4f1e8;
+
+  --primary: #146b63;
+  --primary-light: #2a8b81;
+  --accent: #b9622c;
+  --accent-light: #dc9a4e;
+
+  --border: #dcd7c8;
+  --border-light: #eae5d9;
+  --rule: #c8c2b1;
+
+  --chart-blue: #146b63;
+  --chart-blue-light: #6fb3ab;
+  --chart-gold: #c39a34;
+  --chart-red: #a2402a;
+  --chart-teal: #2a8b81;
+  --chart-gray: #8b8f88;
+  --chart-orange: #b9622c;
+  --chart-purple: #5c4b76;
+
+  --serif: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --sans: Karla, -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Overpass Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* The weft: two threads at 45°, used on the masthead and the pull quote. */
+  --weave: repeating-linear-gradient(45deg,
+    rgba(20, 107, 99, 0.5) 0 7px,
+    rgba(20, 107, 99, 0) 7px 26px,
+    rgba(185, 98, 44, 0.4) 26px 33px,
+    rgba(185, 98, 44, 0) 33px 52px);
+  /* The masthead carries the same weft at lower contrast so the title leads. */
+  --weave-soft: repeating-linear-gradient(45deg,
+    rgba(20, 107, 99, 0.26) 0 7px,
+    rgba(20, 107, 99, 0) 7px 26px,
+    rgba(185, 98, 44, 0.2) 26px 33px,
+    rgba(185, 98, 44, 0) 33px 52px);
+}
+
+body { font-size: 1.02rem; line-height: 1.75; }
+
+::selection { background: rgba(20, 107, 99, 0.18); }
+:where(a, button, [tabindex]):focus-visible { outline-color: var(--primary); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--accent-light); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: dark ground, woven weft, two-thread base ------------------- */
+
+.masthead {
+  position: relative;
+  background: var(--weave-soft), var(--bg-dark);
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.3rem var(--gutter) 3.2rem;
+}
+/* The two threads, laid flat, close the masthead. */
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 8px;
+  background: linear-gradient(var(--accent), var(--accent)) top / 100% 4px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) bottom / 100% 4px no-repeat;
+}
+.masthead-inner { position: relative; }
+.masthead .overline {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-light);
+}
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 5.4vw, 3.1rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  max-width: 24ch;
+  color: #ffffff;
+}
+.masthead .subtitle {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  color: rgba(244, 241, 232, 0.82);
+  max-width: 50ch;
+}
+.masthead .strapline {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.99rem;
+  color: rgba(244, 241, 232, 0.8);
+  border-left: 3px solid var(--accent-light);
+  max-width: 62ch;
+}
+.masthead .meta-row {
+  border-top: 1px solid rgba(244, 241, 232, 0.22);
+  color: rgba(244, 241, 232, 0.76);
+  font-size: 0.79rem;
+}
+.masthead .meta-row strong {
+  color: #9fd4cb;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.13em;
+}
+
+/* --- sticky nav ------------------------------------------------------------ */
+
+.sticky-nav {
+  background: rgba(251, 250, 246, 0.95);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner a {
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+}
+.nav-inner a:hover { color: var(--primary); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- section headings: the two threads, stacked --------------------------- */
+
+section > h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3.6vw, 2rem);
+  letter-spacing: -0.01em;
+  color: var(--text);
+  border-bottom: 0;
+  padding-bottom: 0.7rem;
+  background: linear-gradient(var(--accent), var(--accent)) left calc(100% - 4px) / 100% 2px no-repeat,
+    linear-gradient(var(--primary), var(--primary)) left 100% / 100% 2px no-repeat;
+}
+section > .section-dek {
+  font-style: normal;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 68ch;
+}
+section > h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.28rem;
+  letter-spacing: -0.005em;
+  color: var(--primary);
+  margin: 2.4rem 0 0.7rem;
+}
+
+/* The generated Abstract and Metadata blocks are sections too; keep them plain. */
+.abstract h2,
+.endmatter h2 { background: none; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 3.2rem 0 3.4rem; }
+
+/* --- abstract -------------------------------------------------------------- */
+
+.abstract {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+}
+.abstract h2 { color: var(--accent); font-family: var(--mono); letter-spacing: 0.13em; }
+
+/* --- executive cards: alternating threads --------------------------------- */
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  padding: 1.4rem 1.4rem 1.3rem;
+}
+.exec-card:nth-child(even) { border-top-color: var(--accent); }
+.exec-card .exec-num {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+.exec-card .exec-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.22rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+/* --- statistics ----------------------------------------------------------- */
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 1.1rem 1.2rem;
+}
+.stat-card:nth-child(even) { border-left-color: var(--accent); }
+.stat-card .stat-value {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.stat-card .stat-label { color: var(--text-secondary); font-size: 0.8rem; }
+.stat-card .stat-source { font-family: var(--mono); font-size: 0.63rem; }
+
+/* --- charts --------------------------------------------------------------- */
+
+.chart-container { background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem 1.35rem; }
+.chart-container .chart-label {
+  font-family: var(--mono);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.chart-container .chart-caption {
+  font-style: normal;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+}
+.schematic-wrap { background: var(--bg-card); }
+
+/* --- pull quote: woven panel --------------------------------------------- */
+
+.pull-quote {
+  position: relative;
+  background: var(--weave), var(--bg-dark);
+  border: 0;
+  padding: 1.9rem 2rem 1.7rem;
+  margin: 2.9rem 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  max-width: none;
+}
+.pull-quote .attribution {
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* --- callouts ------------------------------------------------------------- */
+
+.callout {
+  background: #eef4f2;
+  border: 0;
+  border-left: 4px solid var(--primary);
+  padding: 1.3rem 1.45rem;
+}
+.callout .callout-title { font-family: var(--mono); color: var(--primary); font-weight: 600; font-size: 0.63rem; }
+.callout strong { color: var(--text); }
+.callout--warn { background: #f7efe6; border-left-color: var(--accent); }
+.callout--warn .callout-title { color: var(--accent); }
+
+/* --- tables --------------------------------------------------------------- */
+
+.data-table thead { background: var(--bg-dark); color: var(--text-inverse); }
+.data-table thead th { font-family: var(--mono); font-size: 0.61rem; letter-spacing: 0.05em; }
+.data-table tbody tr:nth-child(even) { background: #f6f3ec; }
+.data-table tbody th { font-family: var(--serif); font-weight: 400; font-size: 1.02rem; color: var(--text); }
+.table-caption { font-family: var(--mono); color: var(--primary); font-weight: 600; font-size: 0.65rem; }
+
+/* Regime chips in Table 1 — the three relations, colour-coded. */
+.rg {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.28rem 0.5rem;
+  white-space: nowrap;
+}
+.rg-joint { background: var(--primary); }
+.rg-enable { background: var(--accent); }
+.rg-rival { background: var(--chart-red); }
+
+/* --- references and end matter ------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--accent); font-size: 0.61rem; }
+.endmatter h2 { color: var(--primary); border-bottom: 2px solid var(--rule); }
+.endmatter .kw {
+  background: var(--bg-accent);
+  border-color: var(--border-light);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+}
+.endmatter dt { font-family: var(--mono); font-size: 0.61rem; }
+
+/* --- footer: the two threads again --------------------------------------- */
+
+.report-footer {
+  border-top: 0;
+  box-shadow: inset 0 4px 0 0 var(--primary), inset 0 8px 0 0 var(--accent);
+  padding-top: calc(3rem + 8px);
+}
+.footer-inner h3 { color: #ffffff; font-family: var(--serif); font-weight: 400; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--primary-light); }
+.cite-box strong { color: #9fd4cb; }
+
+/* --- responsive ----------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .masthead { padding-top: 2.4rem; padding-bottom: 2.5rem; }
+  .pull-quote { padding: 1.5rem 1.4rem 1.3rem; }
+  .rg { font-size: 0.58rem; }
+}
+
+/* --- print ---------------------------------------------------------------- */
+
+@media print {
+  .masthead { background: #fff !important; color: #000; }
+  .masthead h1, .masthead .subtitle, .masthead .strapline, .masthead .meta-row { color: #000 !important; }
+  .masthead .overline, .masthead .meta-row strong { color: #146b63 !important; }
+  .pull-quote { background: #f2f2f2 !important; color: #000 !important; }
+  .pull-quote .attribution { color: #146b63 !important; }
+  section > h2 { background: none; border-bottom: 2px solid #146b63; }
+}

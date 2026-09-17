@@ -1,0 +1,63 @@
+{
+  "number": "2026-12",
+  "title": "Integrating Adaptation and Mitigation",
+  "subtitle": "Co-benefits of the clean transition in converging economies",
+  "strapline": "Adaptation and mitigation are not two claims on one budget. They are inputs to each other: protection runs on electricity, and clean electricity only survives if it is protected.",
+  "dek": "Climate policy treats adaptation and mitigation as parallel agendas competing for finance. In economies building both capital stocks at once, they are better understood as complements in production — with a minority of cases where they genuinely compete. This report sets out where the dependencies run, where the conflicts are real, and how to appraise an asset that discharges both duties.",
+  "abstract": [
+    "Adaptation and mitigation are conventionally treated as two parallel agendas with two budget lines, and the policy question is framed as how to divide finance between them. The accounts show how that framing has resolved in practice: of the US$1.9 trillion of climate finance tracked in 2023 by the Climate Policy Initiative, US$1,780 billion went to mitigation and US$65 billion to adaptation, while dual-benefit finance — investment pursuing both objectives at once — reached only US$58 billion, about three per cent of the total. Meanwhile the UNEP Adaptation Gap Report 2025 puts developing countries' adaptation needs at US$310–365 billion a year by 2035 against international public flows of US$26 billion in 2023, a gap of twelve to fourteen times.",
+    "This report argues that the division is analytically wrong for economies building both capital stocks simultaneously, because the two agendas are inputs to each other. Adaptation runs on electricity: space cooling already consumes about a tenth of global electricity and nearly a fifth of all electricity used in buildings, and on the International Energy Agency's projections demand for it will more than triple by 2050, with China, India and Indonesia accounting for half of the world's air conditioners; close to a billion people are served by health facilities with unreliable power or none; India has installed some 900,000 standalone solar irrigation pumps under one scheme. Every one of those protective services is a load, which means adaptation delivered on a fossil grid buys protection by adding emissions, while adaptation delivered on a clean grid does not.",
+    "The dependency runs the other way with equal force: clean energy assets are climate-exposed. In 2024 Lake Kariba's live storage fell to eight per cent and Zambia — where hydropower is about 86 per cent of installed capacity — halted generation at its largest plant for the first time in history, leaving households with outages of up to twenty hours a day. Heat derates the plant that remains: at 40 °C a gas station loses roughly 13 per cent of capacity and 7 per cent of efficiency relative to 20 °C, and transmission lines lose rating in the same conditions that drive peak cooling load. Hail losses on Texas solar alone have exceeded US$600 million since 2018. Where the weighted average cost of capital for solar is already 8 to 9.4 per cent rather than the 5 to 6.5 per cent of advanced economies, unhedged physical risk is priced into the discount rate, so resilience is not an add-on to a clean-energy project but part of its financing cost.",
+    "The report organises the interaction into three regimes and offers a screening test for each. Joint assets discharge both duties in one investment — distributed solar with storage, which decarbonises and keeps power on when the grid fails; efficient cooling, which protects people and suppresses the load it creates. Enabling assets are preconditions for the other agenda rather than substitutes for it: electrified cold chains, water pumping and grid strengthening. Rival cases are real and should be named rather than assumed away: hydropower storage against irrigation water in drought, land for generation against land for food, air conditioning that protects households while raising emissions on a dirty grid, and diesel backup bought as resilience that locks in combustion. Because converging economies are building both stocks now, integration is available at construction cost rather than retrofit cost — a window that closes as the assets are completed, and that current appraisal practice, which credits one benefit at a time, is poorly designed to see."
+  ],
+  "jel": "Q54, Q42, O13, Q25, H54 — climate and natural disasters; alternative energy sources; agriculture and natural resources in development; water; infrastructure investment",
+  "method": "This report synthesises published institutional and peer-reviewed sources rather than producing new modelling. Climate finance figures are from the Climate Policy Initiative's Global Landscape of Climate Finance 2025 (2023 data) and adaptation needs and flows from the UNEP Adaptation Gap Report 2025. Cooling demand is from the IEA's The Future of Cooling; health facility electrification from WHO's Energizing Health (2023); solar irrigation pump counts from India's Ministry of New and Renewable Energy under PM-KUSUM. The Kariba drought is documented from contemporary reporting and Zambia's Energy Regulation Board sector report; thermal and transmission derating from Electric Insights and a study of heat-wave impacts on grid operation in Applied Energy; hail losses from industry loss reporting on Texas solar; cost of capital from the IEA Cost of Capital Observatory as reported in 2025; investment shares from IEA World Energy Investment 2025. All figures were verified against their sources in September 2026. The three-regime typology in Section 4 and Table 1, and the screening questions derived from it, are the author's analytical framework rather than a measured result; the framework was constructed with the cited cases already known, so its fit to them is not evidence for it, and it is offered as an appraisal checklist. Figure 4 is a conceptual schematic. Comparisons between finance figures from different trackers are not additive and the report says where definitions differ. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Overpass+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#146b63",
+  "topics": [
+    "Energy Transition",
+    "Climate Adaptation",
+    "Emerging Markets",
+    "Infrastructure"
+  ],
+  "keywords": [
+    "adaptation",
+    "mitigation",
+    "co-benefits",
+    "dual-benefit finance",
+    "clean energy transition",
+    "converging economies",
+    "cooling demand",
+    "hydropower drought",
+    "climate resilience of energy assets",
+    "distributed solar and storage",
+    "cost of capital",
+    "adaptation finance gap",
+    "maladaptation",
+    "infrastructure appraisal"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "two-budget-lines", "label": "1. Two Budget Lines" },
+    { "id": "adaptation-runs-on-power", "label": "2. Protection Runs on Power" },
+    { "id": "power-runs-on-adaptation", "label": "3. Power Runs on Protection" },
+    { "id": "three-regimes", "label": "4. Joint, Enabling, Rival" },
+    { "id": "convergence-window", "label": "5. The Build Window" },
+    { "id": "cases", "label": "6. Case Evidence" },
+    { "id": "recommendations", "label": "7. Recommendations" },
+    { "id": "conclusions", "label": "8. Conclusions" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "3%", "label": "Share of tracked climate finance counted as dual-benefit in 2023" },
+    { "value": "12–14×", "label": "Adaptation needs against current international public flows" },
+    { "value": "8%", "label": "Lake Kariba's live storage in 2024, when Zambia halted its largest plant" },
+    { "value": "−13%", "label": "Gas plant capacity at 40 °C against 20 °C — heat derates supply as cooling load peaks" }
+  ]
+}
