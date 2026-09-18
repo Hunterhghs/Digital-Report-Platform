@@ -1,0 +1,95 @@
+{
+  "number": "2026-19",
+  "title": "From Payments to Power",
+  "subtitle": "Mobile Payment Infrastructure Enabling Distributed Clean Energy Financing in Frontier Markets",
+  "strapline": "Mobile money makes small, frequent energy repayments practical. Reliable service, transparent portfolios and local-currency capital make them financeable.",
+  "dek": "Mobile payments connect households to pay-as-you-go solar, but digital collection alone does not make an energy portfolio bankable. This report examines the infrastructure, contract economics and financing structures that turn small payments into durable energy access.",
+  "abstract": [
+    "Distributed clean energy and mobile money address different parts of the access problem. Local generation reduces dependence on grid extension; digital payments allow customers to repay financed equipment in small amounts. Pay-as-you-go connects the two, leaving providers to fund assets before most customer receipts arrive.",
+    "This report examines the complete financing chain: customer access and agent liquidity, payment confirmation and settlement, device operation, portfolio measurement, and funding. It distinguishes payment failures from credit losses and compares the financing logic of solar home systems, mini-grids and productive-use equipment.",
+    "Evidence comes from GSMA, the World Bank, IFC, GOGLA and CGAP. Kenyan securitisation and Nigerian local-currency lending illustrate how established operators can connect consumer cash flows to larger pools of capital. Announced facilities are distinguished from realised returns, disbursements and verified development impact.",
+    "The analysis recommends segmenting customers by affordability, measuring repayment by cohort, protecting service continuity and matching funding to the risks being financed. An interactive, explicitly illustrative cash-flow model shows how collection, payment fees and the required return on capital affect the economics of a solar contract."
+  ],
+  "method": "Desk research reviewed on 17 September 2026, synthesising institutional statistics, industry standards and company financing announcements. Mobile money figures refer to 2025 and headline electricity-access figures to 2024; the affordability estimate comes from the 2024 Off-Grid Solar Market Trends Report. These populations and dates are not combined into a matched market-size estimate. Recommendations, market archetypes and operating designs are analytical proposals. The 18-month cash-flow model, fee example and currency example use disclosed illustrative assumptions, not market averages or company forecasts. No private portfolio data were examined and no causal effect of mobile money on electrification is estimated.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "readingTime": 23,
+  "charts": true,
+  "fontsUrl": null,
+  "themeColor": "#1d3545",
+  "topics": [
+    "Energy Transition",
+    "Development Finance",
+    "Infrastructure",
+    "Emerging Markets",
+    "Technology"
+  ],
+  "keywords": [
+    "mobile money",
+    "mobile payments",
+    "distributed renewable energy",
+    "PAYGo solar",
+    "energy access",
+    "frontier markets",
+    "local-currency finance",
+    "securitisation",
+    "consumer protection",
+    "solar home systems",
+    "mini-grids",
+    "productive use of energy"
+  ],
+  "sections": [
+    {
+      "id": "executive",
+      "label": "1. The Central Argument"
+    },
+    {
+      "id": "opportunity",
+      "label": "2. The Opportunity"
+    },
+    {
+      "id": "infrastructure",
+      "label": "3. The Infrastructure"
+    },
+    {
+      "id": "economics",
+      "label": "4. The Economics"
+    },
+    {
+      "id": "markets",
+      "label": "5. Market Pathways"
+    },
+    {
+      "id": "capital",
+      "label": "6. Financing the Scale-up"
+    },
+    {
+      "id": "guardrails",
+      "label": "7. Risks & Safeguards"
+    },
+    {
+      "id": "agenda",
+      "label": "8. The Action Agenda"
+    },
+    {
+      "id": "sources",
+      "label": "9. Sources & Method"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "$2tn+",
+      "label": "Global mobile money transaction value in 2025 — GSMA"
+    },
+    {
+      "value": "655m",
+      "label": "People without electricity worldwide in 2024 — SDG 7 custodians"
+    },
+    {
+      "value": "$156m",
+      "label": "Sun King’s Kenya securitisation announced in July 2025; includes solar and smartphones"
+    }
+  ]
+}
