@@ -1,0 +1,64 @@
+{
+  "number": "2026-20",
+  "title": "The Last Third",
+  "subtitle": "Sustainable development in the Global South: what moved, what stalled, what reversed — and why",
+  "strapline": "Since 2015, progress sorted itself predictably. What could be sold as a product moved. What had to be funded as a service stalled. What required a system to change went backwards.",
+  "dek": "With the 2030 Agenda two-thirds spent, 36 per cent of assessable SDG targets are on track or moving moderately and 15 per cent have gone into reverse. The pattern beneath those numbers is not random, and it says a good deal about where the remaining effort should go.",
+  "abstract": [
+    "The 2030 Agenda is now more than two-thirds of the way through its timetable, and the record is mixed in a specific way. The United Nations' Sustainable Development Goals Report 2026 finds that of 139 targets with trend data, 36 per cent are on track or making moderate progress, 49 per cent are advancing too slowly and 15 per cent have regressed below their 2015 baselines. The Sustainable Development Solutions Network's 2026 assessment, on a different method, projects that about 16.5 per cent of targets will be met by 2030 and that none of the seventeen goals will be. UNDP's 2025 Human Development Report recorded the smallest rise in the Human Development Index since 1990, excluding the crisis years, and a fourth successive year of widening inequality between low- and very-high-development countries.",
+    "This report argues that the variation beneath those aggregates follows a pattern. Targets that could be delivered as a product — something bought or installed once, often by a private provider at falling cost — moved fastest: internet use rose from 40 to 74 per cent of the world's population, electricity now reaches 92 per cent, renewable capacity per capita is 2.2 times its 2015 level and new HIV infections fell by 30 per cent between 2015 and 2024. Targets that depend on a service funded from public budgets every year — teachers, clinics, cash transfers — stalled: social protection reaches 52.4 per cent of the world's population but only 9.7 per cent in low-income countries, and pre-pandemic learning poverty in low- and middle-income countries was already 57 per cent, rising to 86 per cent in sub-Saharan Africa. Targets that require a system to change — food systems, ecosystems, conflict, gender norms — went backwards or did not move: the extreme poverty rate is projected at 10 per cent in 2026, only three points below 2015, around 2.3 billion people face moderate or severe food insecurity, and none of the gender equality targets is on track.",
+    "The service category explains the most and is discussed the least, because its constraint is fiscal. UNCTAD reports that developing countries paid US$995 billion in net interest on public debt in 2025 and that 3.7 billion people now live in 51 developing countries where interest payments exceed government spending on health or on education; between 2021 and 2023 African governments spent about US$70 per person on interest against US$63 on education and US$44 on health. Official development assistance fell by a record 23.1 per cent in 2025. A target that requires paying a teacher every month cannot be met by a state whose marginal revenue goes to its creditors.",
+    "Two further findings shape the agenda for the remaining years. First, the product successes are reaching their affordability frontier: in 2024, 89 million people gained electricity but the number without it fell by only 11.5 million, to 655 million, and the rural deficit in sub-Saharan Africa grew from 376 million in 2010 to 447 million — the last households are the ones a product market does not reach. Second, the 'sustainable' half of sustainable development constrains the Global South less than is often assumed: research using the safe-and-just-space framework finds that basic needs could most likely be met for everyone within planetary boundaries, while overshoot is driven chiefly by high-income consumption. For most of the Global South the binding problem is development itself, under a sustainability constraint that clean technology has made far cheaper to respect. The report closes with an agenda organised by category: protect and extend the product wins to the frontier, defend the fiscal base of services, and treat system change as a governance problem rather than a portfolio of projects."
+  ],
+  "jel": "O15, O19, H51, H52, Q01 — human resources and human development; international linkages to development; government expenditure on health; government expenditure on education; sustainable development",
+  "method": "This report synthesises published institutional assessments rather than producing new modelling. Target-level progress is from the United Nations' Sustainable Development Goals Report 2026 and its 2025 predecessor; projected attainment and regional performance from the Sustainable Development Solutions Network's Sustainable Development Report 2026 and 2025; human development trends from UNDP's Human Development Report 2025; social protection coverage from the ILO's World Social Protection Report 2024–26; learning poverty from the World Bank's 2022 update; public debt and interest figures from UNCTAD's A World of Debt 2025 and, for 2025 data, A World of Debt 2026 as reported on publication; energy access from Tracking SDG7 2026; and the safe-and-just-space evidence from O'Neill et al. (2018) and Fanning et al. (2022) in Nature Sustainability. All figures were verified against their sources in October 2026. The UN and SDSN assessments use different methods and are not combined; learning poverty's post-pandemic figure is a simulation and is labelled as one. The product–service–system classification in Section 1, Table 1 and the agenda in Section 8 are the author's analytical framework, constructed with the cited evidence already known; its fit to that evidence is therefore not proof of it, and it is offered as a lens for prioritisation rather than a predictive model. Figure 7 is a conceptual schematic. The report is analytical rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Gloock&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&family=Inconsolata:wght@400;500;600&display=swap",
+  "themeColor": "#3b2a20",
+  "topics": [
+    "Emerging Markets",
+    "Human Capital",
+    "Development Finance",
+    "Public Health"
+  ],
+  "keywords": [
+    "sustainable development",
+    "Sustainable Development Goals",
+    "Global South",
+    "2030 Agenda",
+    "SDG progress",
+    "public services",
+    "debt service",
+    "social protection",
+    "learning poverty",
+    "energy access",
+    "extreme poverty",
+    "official development assistance",
+    "planetary boundaries",
+    "human development"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "two-thirds", "label": "1. Two-Thirds Through" },
+    { "id": "products", "label": "2. What Moved" },
+    { "id": "services", "label": "3. What Stalled" },
+    { "id": "fiscal", "label": "4. Why Services Stall" },
+    { "id": "systems", "label": "5. What Reversed" },
+    { "id": "frontier", "label": "6. The Frontier" },
+    { "id": "sustainable", "label": "7. The 'Sustainable' Half" },
+    { "id": "agenda", "label": "8. An Agenda" },
+    { "id": "conclusions", "label": "9. Conclusions" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "36 / 49 / 15", "label": "Per cent of SDG targets on track, too slow, and regressed (UN, 2026)" },
+    { "value": "3.7bn", "label": "People in countries where interest exceeds health or education spending" },
+    { "value": "9.7%", "label": "Social protection coverage in low-income countries, against 52.4% worldwide" },
+    { "value": "−23.1%", "label": "The fall in official development assistance in 2025 — a record" }
+  ]
+}
