@@ -1,0 +1,279 @@
+<section id="overview">
+  <h2>Overview</h2>
+  <p class="section-dek">A polycrisis is not a long list of risks. It is several systems failing at the same time. This dashboard measures that simultaneity directly.</p>
+
+  <div class="kpi-board" role="list">
+    <div class="kpi kpi--hot" role="listitem">
+      <div class="kpi-value">6 of 6</div>
+      <div class="kpi-label">Acute stress indicators in their worst quartile in 2022 — the only such year since 2000, and six of six at every threshold tested</div>
+      <div class="kpi-source">Stress-breadth index · author's calculation</div>
+    </div>
+    <div class="kpi kpi--hot" role="listitem">
+      <div class="kpi-value">3.5</div>
+      <div class="kpi-label">Average indicators stressed per year in 2020–25, against 1.4 in the 2000s and 0.7 in the 2010s</div>
+      <div class="kpi-source">Stress-breadth index · author's calculation</div>
+    </div>
+    <div class="kpi kpi--cool" role="listitem">
+      <div class="kpi-value">r = 0.12</div>
+      <div class="kpi-label">Average year-to-year correlation between the six shock series: mostly independent systems</div>
+      <div class="kpi-source">2001–2025 · author's calculation</div>
+    </div>
+    <div class="kpi kpi--hot" role="listitem">
+      <div class="kpi-value">65</div>
+      <div class="kpi-label">State-based armed conflicts in 2025 — the most in any year since 1946</div>
+      <div class="kpi-source">UCDP/PRIO Armed Conflict Dataset v26.1</div>
+    </div>
+    <div class="kpi kpi--hot" role="listitem">
+      <div class="kpi-value">621</div>
+      <div class="kpi-label">Global economic policy uncertainty, April 2025 — the index's highest monthly reading; its first-decade average was 85</div>
+      <div class="kpi-source">Davis, Global EPU index</div>
+    </div>
+    <div class="kpi kpi--hot" role="listitem">
+      <div class="kpi-value">+1.28°C</div>
+      <div class="kpi-label">2024 global temperature anomaly, the warmest year in the record</div>
+      <div class="kpi-source">NASA GISTEMP v4 · vs 1951–1980</div>
+    </div>
+    <div class="kpi kpi--neutral" role="listitem">
+      <div class="kpi-value">50%</div>
+      <div class="kpi-label">Of experts surveyed expect a turbulent or stormy world over the next two years, up 14 points</div>
+      <div class="kpi-source">WEF Global Risks Report 2026</div>
+    </div>
+    <div class="kpi kpi--neutral" role="listitem">
+      <div class="kpi-value">+36%</div>
+      <div class="kpi-label">Brent crude, 2026 average to date against the 2025 average — provisional</div>
+      <div class="kpi-source">FRED DCOILBRENTEU · author's calculation</div>
+    </div>
+  </div>
+
+  <div class="readout">
+    <p class="readout-title">The reading</p>
+    <p>For most of the period since 2000, global stresses arrived one or two at a time: a price spike here, a financial panic there. In the 2020s they began to arrive together — five indicators at once in 2021, all six in 2022 — even though, year to year, the underlying systems rarely move in step. That combination, <strong>independent systems in simultaneous distress on a rising chronic floor</strong>, is what the word polycrisis is for.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="calendar">
+  <h2>1. The Stress Calendar</h2>
+  <p class="section-dek">Each row is a system; each column a year. Darker cells are worse relative to that system's own record since 2000. Outlined cells are counted as stressed.</p>
+
+  <div class="panel panel--hero">
+    <div class="calendar-controls">
+      <span class="ctl-label" id="th-label">Count a year as stressed when it is in an indicator's</span>
+      <div class="segmented" role="radiogroup" aria-labelledby="th-label">
+        <button type="button" role="radio" aria-checked="false" data-q="0.667">worst third</button>
+        <button type="button" role="radio" aria-checked="true" data-q="0.75" class="is-on">worst quartile</button>
+        <button type="button" role="radio" aria-checked="false" data-q="0.8">worst fifth</button>
+      </div>
+    </div>
+
+    <div class="calendar-scroll" tabindex="0" role="region" aria-label="Stress calendar, 2000 to 2026">
+      <table class="calendar" id="stress-calendar">
+        <caption class="visually-hidden">Annual stress by indicator, 2000–2026, shaded by percentile rank within 2000–2025</caption>
+      </table>
+    </div>
+
+    <div class="calendar-legend">
+      <span>Less severe</span>
+      <span class="legend-ramp" aria-hidden="true"></span>
+      <span>More severe</span>
+      <span class="legend-key legend-key--stress">Counted as stressed</span>
+      <span class="legend-key legend-key--prov">2026: partial year, provisional</span>
+    </div>
+
+    <div class="panel-head panel-head--inner">
+      <p class="panel-title">Stress breadth: acute indicators stressed in the same year</p>
+      <p class="panel-meta" id="breadth-meta">Worst quartile · six acute indicators · author's calculation</p>
+    </div>
+    <div class="chart-frame chart-frame--short"><canvas id="chart-breadth"></canvas></div>
+    <p class="panel-note">Chronic pressures (temperature, displacement) are shaded for context but not counted, because their levels trend steadily upward and would mark every recent year as stressed. 2026 includes only the four indicators with data so far this year.</p>
+  </div>
+
+  <div class="dash-grid dash-grid--three">
+    <div class="stat-tile"><p class="stat-tile-value" id="avg-00">1.4</p><p class="stat-tile-label">average breadth, 2000–2009</p></div>
+    <div class="stat-tile"><p class="stat-tile-value" id="avg-10">0.7</p><p class="stat-tile-label">average breadth, 2010–2019</p></div>
+    <div class="stat-tile stat-tile--hot"><p class="stat-tile-value" id="avg-20">3.5</p><p class="stat-tile-label">average breadth, 2020–2025</p></div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="shocks">
+  <h2>2. Six Shocks</h2>
+  <p class="section-dek">The acute indicators behind the calendar. The dashed line marks the stress threshold selected above.</p>
+
+  <div class="dash-grid dash-grid--three">
+    <div class="panel panel--mini"><p class="panel-title">Food price spikes</p><p class="panel-meta">FAO Food Price Index, % change on prior year</p><div class="chart-frame chart-frame--mini"><canvas id="mini-food"></canvas></div></div>
+    <div class="panel panel--mini"><p class="panel-title">Oil price spikes</p><p class="panel-meta">Brent crude, % change on prior year</p><div class="chart-frame chart-frame--mini"><canvas id="mini-energy"></canvas></div></div>
+    <div class="panel panel--mini"><p class="panel-title">Market volatility</p><p class="panel-meta">VIX, annual mean</p><div class="chart-frame chart-frame--mini"><canvas id="mini-finance"></canvas></div></div>
+    <div class="panel panel--mini"><p class="panel-title">Policy uncertainty</p><p class="panel-meta">Global EPU index, annual mean</p><div class="chart-frame chart-frame--mini"><canvas id="mini-policy"></canvas></div></div>
+    <div class="panel panel--mini"><p class="panel-title">Battle deaths</p><p class="panel-meta">UCDP, thousands</p><div class="chart-frame chart-frame--mini"><canvas id="mini-conflict"></canvas></div></div>
+    <div class="panel panel--mini"><p class="panel-title">Disaster events</p><p class="panel-meta">EM-DAT recorded natural disasters</p><div class="chart-frame chart-frame--mini"><canvas id="mini-disasters"></canvas></div></div>
+  </div>
+  <p class="panel-note panel-note--below">Bars above the dashed line are counted as stressed. The most recent disaster count is subject to reporting lag and is likely to be revised upward.</p>
+</section>
+
+<hr class="section-rule">
+
+<section id="independence">
+  <h2>3. Independent, Then Together</h2>
+  <p class="section-dek">If one underlying driver moved all six indicators, their simultaneous distress would be unremarkable. It doesn't: most pairs are nearly uncorrelated.</p>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Pairwise correlation of annual shock measures</p>
+        <p class="panel-meta">Pearson r, 2001–2025 · author's calculation</p>
+      </div>
+      <div class="corr-scroll"><table class="corr" id="corr-matrix"><caption class="visually-hidden">Correlation matrix of the six acute indicators</caption></table></div>
+      <p class="panel-note">Mean of the fifteen pairs: 0.12. Only food and oil (0.75) and policy uncertainty with battle deaths (0.62) are strongly linked. With 25 observations, values under about 0.4 are indistinguishable from zero.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Average breadth by decade, at three thresholds</p>
+        <p class="panel-meta">Indicators stressed per year · author's calculation</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-decades"></canvas></div>
+      <p class="panel-note">Whichever threshold is used, the 2020s show at least twice — and up to roughly seven times — the co-occurrence of either earlier decade. The result does not depend on where the line is drawn.</p>
+    </div>
+  </div>
+
+  <div class="readout">
+    <p class="readout-title">Why this matters</p>
+    <p>Risk management that treats each system separately — a food reserve here, a financial backstop there — is calibrated to a world in which shocks arrive one at a time. Low correlations mean that assumption is usually right. But buffers sized for one shock are drawn down together when several coincide, and the 2020s are the period in which that coincidence stopped being rare.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="floor">
+  <h2>4. The Rising Floor</h2>
+  <p class="section-dek">Chronic pressures do not spike; they accumulate. Each acute shock now lands on a higher baseline than the last.</p>
+
+  <div class="dash-grid">
+    <div class="panel panel--wide">
+      <div class="panel-head">
+        <p class="panel-title">State-based armed conflicts, 1946–2025</p>
+        <p class="panel-meta">Number of active conflicts per year · UCDP/PRIO v26.1</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-conflicts"></canvas></div>
+      <p class="panel-note">2025 recorded 65 state-based conflicts, the highest in the eight-decade series; 2023 and 2024 were next at 59.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Global temperature anomaly</p>
+        <p class="panel-meta">°C vs 1951–1980 · NASA GISTEMP v4</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-temp"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Populations of concern to UNHCR</p>
+        <p class="panel-meta">Millions · refugees, asylum-seekers, IDPs, others in need of protection</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-displaced"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="anatomy">
+  <h2>5. Anatomy of Systemic Risk</h2>
+  <p class="section-dek">How independent shocks become a single crisis: the mechanism the data above can see, and the parts it cannot.</p>
+
+  <div class="panel">
+    <div class="schematic-wrap" tabindex="0" role="region" aria-label="Schematic of how chronic pressures and acute shocks combine into systemic crisis">
+      <svg class="schematic" viewBox="0 0 760 300" role="img" aria-labelledby="anat-title anat-desc">
+        <title id="anat-title">From independent shocks to systemic crisis</title>
+        <desc id="anat-desc">On the left, chronic pressures — warming, displacement, debt — wear down buffers over time. In the middle, acute shocks in separate systems — food, energy, finance, policy, conflict, disasters — normally arrive independently. When they coincide on depleted buffers, transmission channels carry them across systems: prices, capital flows, migration and politics. The result on the right is a systemic crisis whose harm exceeds the sum of its parts.</desc>
+        <defs>
+          <marker id="an-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#15171c"></path>
+          </marker>
+        </defs>
+        <rect x="16" y="40" width="168" height="200" rx="4" fill="#eef0f6" stroke="#3b4a8c"></rect>
+        <text x="100" y="64" font-size="12" font-weight="700" fill="#3b4a8c" text-anchor="middle">CHRONIC PRESSURES</text>
+        <g font-size="12" fill="#15171c" text-anchor="middle">
+          <text x="100" y="98">Warming</text><text x="100" y="122">Displacement</text><text x="100" y="146">Debt service</text><text x="100" y="170">Ecosystem loss</text>
+        </g>
+        <text x="100" y="212" font-size="11" fill="#5c6270" text-anchor="middle">wear down buffers</text>
+
+        <rect x="214" y="40" width="200" height="200" rx="4" fill="#fbeee9" stroke="#b5452f"></rect>
+        <text x="314" y="64" font-size="12" font-weight="700" fill="#b5452f" text-anchor="middle">ACUTE SHOCKS</text>
+        <g font-size="12" fill="#15171c">
+          <text x="232" y="98">Food</text><text x="322" y="98">Energy</text>
+          <text x="232" y="126">Finance</text><text x="322" y="126">Policy</text>
+          <text x="232" y="154">Conflict</text><text x="322" y="154">Disasters</text>
+        </g>
+        <text x="314" y="196" font-size="11" fill="#5c6270" text-anchor="middle">usually independent (r ≈ 0.12)</text>
+        <text x="314" y="214" font-size="11" fill="#5c6270" text-anchor="middle">in the 2020s, coinciding</text>
+
+        <rect x="444" y="40" width="150" height="200" rx="4" fill="#ffffff" stroke="#15171c"></rect>
+        <text x="519" y="64" font-size="12" font-weight="700" fill="#15171c" text-anchor="middle">TRANSMISSION</text>
+        <g font-size="12" fill="#15171c" text-anchor="middle">
+          <text x="519" y="98">Prices</text><text x="519" y="122">Capital flows</text><text x="519" y="146">Migration</text><text x="519" y="170">Politics</text>
+        </g>
+        <text x="519" y="212" font-size="11" fill="#5c6270" text-anchor="middle">carry stress across systems</text>
+
+        <rect x="624" y="80" width="120" height="120" rx="4" fill="#8f1d2c"></rect>
+        <text x="684" y="128" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">SYSTEMIC</text>
+        <text x="684" y="146" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">CRISIS</text>
+        <text x="684" y="170" font-size="10.5" fill="#f3d0d4" text-anchor="middle">harm &gt; sum of parts</text>
+
+        <g stroke="#15171c" stroke-width="1.6" fill="none" marker-end="url(#an-ar)">
+          <path d="M 184 140 L 210 140"></path>
+          <path d="M 414 140 L 440 140"></path>
+          <path d="M 594 140 L 620 140"></path>
+        </g>
+        <text x="380" y="282" font-size="11" fill="#5c6270" text-anchor="middle">This dashboard measures the first two columns. Transmission is inferred, not observed.</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <p class="panel-title">Definition</p>
+      <p class="panel-body">The Cascade Institute defines a global polycrisis as one in which crises in multiple global systems become <strong>causally entangled</strong> in ways that significantly degrade humanity's prospects, producing harms greater than the crises would produce in isolation. Systemic risk is the underlying condition that makes this possible: a small problem can spread quickly through a system and into others.</p>
+    </div>
+    <div class="panel">
+      <p class="panel-title">What the dashboard can and cannot show</p>
+      <p class="panel-body">It shows <strong>co-occurrence</strong>: how many systems are under acute stress in the same year, and how far that departs from their usual independence. It does not observe <strong>entanglement</strong> — the causal channels by which one crisis worsens another. High breadth is necessary for a polycrisis, not proof of one.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="method">
+  <h2>6. Method</h2>
+  <p class="section-dek">How the stress-breadth index is built, and the choices that could change it.</p>
+
+  <p>The index counts, for each year, how many of six acute indicators fall in their own worst quartile over 2000–2025. Thresholds are computed per indicator with linear interpolation; the calendar also lets readers use the worst third or the worst fifth. Food and oil are measured as year-on-year price changes rather than levels, because both trend upward over the period. Market volatility, policy uncertainty, battle deaths and disaster events are measured as annual levels.</p>
+
+  <p>Three choices deserve scrutiny. Equal weighting treats a disaster year and a financial panic as equivalent units of stress, which they are not; the index measures breadth, not severity. Disaster counts reflect improving reporting as well as underlying change, which tends to understate the early 2000s. And the 2000–2025 window is short enough that a decade of unusual calm, such as the 2010s, lowers every threshold. The finding that the 2020s are exceptional holds at all three thresholds tested.</p>
+
+  <p>Related analysis in this series: <a href="/reports/polycrisis-resilience-dashboard/">the polycrisis resilience dashboard</a> on adaptive capacity and buffers; <a href="/reports/economics-of-prevention-polycrisis/">the economics of prevention</a>; and <a href="/reports/convergence-through-crisis/">convergence through crisis</a> on what shocks force countries to replace.</p>
+</section>
+
+<hr class="section-rule">
+
+<section id="references">
+  <h2>Sources</h2>
+  <p class="section-dek">All series were downloaded from the publishers below in October 2026.</p>
+
+  <ul class="ref-list">
+    <li><span class="ref-org">FAO</span><a href="https://www.fao.org/worldfoodsituation/foodpricesindex/en/" rel="noopener" target="_blank">FAO Food Price Index</a> — monthly, 2014–2016 = 100.</li>
+    <li><span class="ref-org">Federal Reserve Bank of St. Louis</span><a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" rel="noopener" target="_blank">Brent crude oil prices (DCOILBRENTEU)</a> and <a href="https://fred.stlouisfed.org/series/VIXCLS" rel="noopener" target="_blank">CBOE Volatility Index (VIXCLS)</a> — daily.</li>
+    <li><span class="ref-org">Davis (2016)</span><a href="https://www.policyuncertainty.com/global_monthly.html" rel="noopener" target="_blank">Global Economic Policy Uncertainty Index</a> — monthly, from 1997.</li>
+    <li><span class="ref-org">Uppsala Conflict Data Program</span><a href="https://ucdp.uu.se/downloads/" rel="noopener" target="_blank">UCDP Battle-Related Deaths and UCDP/PRIO Armed Conflict datasets, v26.1</a>.</li>
+    <li><span class="ref-org">EM-DAT via Our World in Data</span><a href="https://ourworldindata.org/grapher/number-of-natural-disaster-events" rel="noopener" target="_blank">Number of recorded natural disaster events</a>.</li>
+    <li><span class="ref-org">NASA GISS</span><a href="https://data.giss.nasa.gov/gistemp/" rel="noopener" target="_blank">GISTEMP v4</a> — global annual land–ocean anomaly, 1951–1980 base.</li>
+    <li><span class="ref-org">UNHCR</span><a href="https://www.unhcr.org/refugee-statistics/" rel="noopener" target="_blank">Refugee Data Finder</a> — populations of concern by year, via the UNHCR population API.</li>
+    <li><span class="ref-org">World Economic Forum</span><a href="https://www.weforum.org/publications/global-risks-report-2026/digest/" rel="noopener" target="_blank">Global Risks Report 2026</a> — 50 per cent expecting a turbulent or stormy two-year outlook.</li>
+    <li><span class="ref-org">Cascade Institute</span><a href="https://cascadeinstitute.org/technical-paper/what-is-a-global-polycrisis/" rel="noopener" target="_blank">What Is a Global Polycrisis?</a> (Lawrence, Janzwood and Homer-Dixon, 2022); see also <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-environ-111523-102238" rel="noopener" target="_blank">Characterizing the Global Polycrisis</a> in the Annual Review of Environment and Resources.</li>
+  </ul>
+</section>

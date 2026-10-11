@@ -1,0 +1,97 @@
+{
+  "number": "2026-22",
+  "title": "The Polycrisis Century",
+  "subtitle": "Understanding systemic risk in the twenty-first century — an interactive dashboard",
+  "strapline": "Shocks that usually move independently of one another have started to arrive together. In 2022, all six acute stress indicators tracked here sat in their worst quartile at once — the first time since at least 2000.",
+  "dek": "A data dashboard on the structure of systemic risk: how often different global systems are under acute stress at the same time, how independent those stresses normally are, and how chronic pressures have raised the floor beneath them. Built from eight open datasets and an original stress-breadth index.",
+  "abstract": [
+    "Systemic risk is usually discussed through lists of individual threats. This dashboard instead measures their simultaneity, which is the feature that distinguishes a polycrisis from a run of bad years. It tracks six acute stress indicators annually from 2000 — food price spikes (FAO Food Price Index), oil price spikes (Brent crude), financial-market volatility (VIX), global economic policy uncertainty (the Davis index), battle-related deaths (UCDP) and recorded natural disasters (EM-DAT) — together with two chronic pressures, global temperature (NASA GISTEMP) and forced displacement (UNHCR). For each acute indicator, a year is counted as stressed when it falls in that indicator's worst quartile over 2000–2025; the stress-breadth index is the number of indicators stressed in the same year.",
+    "On that measure the 2020s are different in kind. Breadth averaged 1.4 indicators a year in 2000–2009 and 0.7 in 2010–2019, but 3.5 in 2020–2025. In 2021 five of the six were simultaneously in their worst quartile, and in 2022 all six were — the only such year in the series, and one that registers as six of six under every threshold tested. The finding is robust to the threshold: using the worst third or the worst fifth instead of the worst quartile, average breadth in the 2020s remains at least twice, and up to roughly seven times, that of either earlier decade.",
+    "The clustering is not explained by a single common driver. Year-to-year, the six indicators are largely uncorrelated: the mean pairwise correlation over 2001–2025 is 0.12, and only two pairs move together strongly — food and oil price changes (0.75) and policy uncertainty with battle deaths (0.62). Systems that normally fluctuate independently have been in distress at the same time, which is precisely the condition the Cascade Institute's definition of a global polycrisis describes: crises in multiple systems becoming causally entangled so that their combined harm exceeds the sum of the parts.",
+    "Beneath the acute shocks, the chronic floor has risen. 2024 was the warmest year in the GISTEMP record at 1.28 °C above the 1951–1980 mean; UNHCR's populations of concern rose from about 19 million in 2000 to 109 million in 2025; and the number of state-based armed conflicts reached 65 in 2025, the highest since the UCDP series began in 1946. Global economic policy uncertainty reached its highest monthly reading since the index began, 621 in April 2025, against an average of 85 in its first decade. Readers can explore the stress calendar interactively, change the threshold that defines stress, and inspect each underlying series. The index is a descriptive measure of co-occurrence, not a causal model or a forecast."
+  ],
+  "jel": "F01, G01, H12, Q54, D74 — global outlook; financial crises; crisis management; climate and natural disasters; conflict and conflict resolution",
+  "method": "All series were downloaded from their publishers in October 2026 and aggregated to calendar years. Food: FAO Food Price Index, monthly, annual mean (2026 through September). Oil: Brent crude spot price (FRED series DCOILBRENTEU), daily, annual mean (2026 through early October). Price indicators are measured as year-on-year percentage changes, because their levels trend upward over the period and would otherwise mark every recent year as stressed. Market volatility: CBOE VIX (FRED VIXCLS), annual mean. Policy uncertainty: Global Economic Policy Uncertainty index (Davis 2016, current-price GDP weights), monthly, annual mean (2026 through July). Conflict: UCDP Battle-Related Deaths dataset v26.1 (best estimate, summed across conflicts) and UCDP/PRIO Armed Conflict Dataset v26.1 (count of state-based conflicts per year). Disasters: EM-DAT recorded natural disaster events as published by Our World in Data; the most recent year is subject to reporting lag. Temperature: NASA GISTEMP v4, annual land–ocean anomaly relative to 1951–1980. Displacement: UNHCR Refugee Data Finder API, sum of refugees under UNHCR mandate, asylum-seekers, IDPs of concern to UNHCR and other people in need of international protection; this differs from the broader 'forcibly displaced' total in UNHCR's Global Trends reports, which adds UNRWA-registered refugees and IDMC conflict IDP estimates. The stress-breadth index, quartile thresholds, decade averages and correlation matrix are the author's calculations; thresholds are computed over 2000–2025 with linear interpolation, and 2026 values are provisional, partial-year and shown separately. Correlations use 25 annual observations and should be read as indicative. The dashboard is descriptive rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "readingTime": 12,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#8f1d2c",
+  "topics": [
+    "Systemic Risk",
+    "Institutions & Governance",
+    "Climate Adaptation",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "polycrisis",
+    "systemic risk",
+    "compound shocks",
+    "crisis co-occurrence",
+    "stress index",
+    "dashboard",
+    "food prices",
+    "oil prices",
+    "economic policy uncertainty",
+    "armed conflict",
+    "natural disasters",
+    "climate change",
+    "forced displacement",
+    "global risks"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "calendar",
+      "label": "1. Stress Calendar"
+    },
+    {
+      "id": "shocks",
+      "label": "2. Six Shocks"
+    },
+    {
+      "id": "independence",
+      "label": "3. Independent, Then Together"
+    },
+    {
+      "id": "floor",
+      "label": "4. The Rising Floor"
+    },
+    {
+      "id": "anatomy",
+      "label": "5. Anatomy of Systemic Risk"
+    },
+    {
+      "id": "method",
+      "label": "6. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "6 of 6",
+      "label": "Acute stress indicators in their worst quartile in 2022 — unique since 2000"
+    },
+    {
+      "value": "3.5 vs 0.7",
+      "label": "Average indicators stressed per year: 2020–25 against 2010–19"
+    },
+    {
+      "value": "r = 0.12",
+      "label": "Average correlation between the six shocks — largely independent systems"
+    },
+    {
+      "value": "65",
+      "label": "State-based armed conflicts in 2025, the most since 1946"
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+/* ===========================================================================
+   Theme — Report 2026-22, "The Polycrisis Century"
+
+   Aesthetic: heat map. A light analytical dashboard — the counterpart to the
+   dark operations dashboard of 2026-21 — whose centrepiece is the stress
+   calendar. The sequential ramp used in the calendar (sand to oxblood) also
+   forms the masthead's closing strip and every "hot" accent, so the page
+   reads in the same colour scale as its data. Indigo marks chronic pressures.
+   Schibsted Grotesk for display, Atkinson Hyperlegible — designed for
+   legibility — for text and its mono for figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours.
+   =========================================================================== */
+
+:root {
+  --bg: #fbfaf7;
+  --bg-card: #ffffff;
+  --bg-accent: #f4f1ec;
+  --bg-dark: #15171c;
+  --bg-dark-2: #0e1013;
+
+  --text: #15171c;
+  --text-secondary: #3a3e47;
+  --text-muted: #5c6270;
+  --text-inverse: #f4f1ec;
+
+  --primary: #8f1d2c;
+  --primary-light: #b5452f;
+  --accent: #3b4a8c;
+  --accent-light: #8794c9;
+
+  --border: #e3ddd4;
+  --border-light: #eee9e1;
+  --rule: #d6cec2;
+
+  --chart-blue: #3b4a8c;
+  --chart-blue-light: #8794c9;
+  --chart-gold: #d6a24a;
+  --chart-red: #a6363a;
+  --chart-teal: #2f7a6d;
+  --chart-gray: #8a8f99;
+  --chart-orange: #c45f4f;
+  --chart-purple: #6b4f8f;
+
+  --serif: "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "system-ui", sans-serif;
+  --sans: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --heat-ramp: linear-gradient(90deg, #f6efe6, #f1d6c4, #e8b39b, #da8a72, #c45f4f, #a6363a, #7f1a2a);
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1rem; line-height: 1.66; }
+
+::selection { background: rgba(143, 29, 44, 0.16); }
+:where(a, button, [tabindex]):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--primary); }
+.skip-link { background: var(--primary); }
+
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* --- masthead: light, closed by the heat ramp ------------------------------ */
+
+.masthead {
+  position: relative;
+  background: var(--bg);
+  color: var(--text);
+  border-bottom: 0;
+  padding: 2.8rem var(--gutter) 2.6rem;
+}
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 8px;
+  background: var(--heat-ramp);
+}
+.masthead .overline {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.masthead .overline::before { content: "INTERACTIVE DASHBOARD · "; color: var(--accent); }
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(2.3rem, 6vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  max-width: 18ch;
+  color: var(--text);
+}
+.masthead .subtitle { color: var(--text-secondary); font-weight: 400; max-width: 64ch; }
+.masthead .strapline {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  border-left: 4px solid var(--primary);
+  max-width: 76ch;
+}
+.masthead .meta-row {
+  border-top: 1px solid var(--rule);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+}
+.masthead .meta-row strong {
+  color: var(--primary);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+}
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(251, 250, 247, 0.96); border-bottom: 1px solid var(--border); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.74rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* --- headings ------------------------------------------------------------------ */
+
+section > h2 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  letter-spacing: -0.035em;
+  color: var(--text);
+  border-bottom: 0;
+  padding-bottom: 0.6rem;
+  background: var(--heat-ramp) left 100% / 140px 4px no-repeat,
+    linear-gradient(var(--border), var(--border)) left 100% / 100% 1px no-repeat;
+}
+section > .section-dek { font-style: normal; color: var(--text-muted); font-size: 1.02rem; max-width: 86ch; }
+.content > section > p:not(.section-dek) { max-width: 86ch; }
+.abstract h2, .endmatter h2 { background: none; }
+
+.section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
+
+/* --- generated blocks ------------------------------------------------------------ */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--primary); }
+.abstract h2 { color: var(--primary); font-family: var(--mono); letter-spacing: 0.14em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.7rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.66rem; }
+
+/* --- KPI board ---------------------------------------------------------------------- */
+
+.kpi-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 1.4rem 0 1.6rem;
+}
+.kpi {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.05rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 1px 0 rgba(21, 23, 28, 0.03);
+}
+.kpi--hot { border-top: 4px solid #a6363a; }
+.kpi--cool { border-top: 4px solid var(--accent); }
+.kpi--neutral { border-top: 4px solid var(--chart-gray); }
+.kpi-value {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.kpi--hot .kpi-value { color: var(--primary); }
+.kpi--cool .kpi-value { color: var(--accent); }
+.kpi-label { font-size: 0.84rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.4rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; }
+
+/* --- readout ------------------------------------------------------------------------- */
+
+.readout {
+  background: var(--bg-accent);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem 0.4rem;
+  margin: 1.4rem 0;
+}
+.readout-title { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--primary); margin: 0 0 0.4rem !important; }
+.readout p { color: var(--text-secondary); text-align: left; max-width: 90ch; }
+.readout strong { color: var(--text); }
+
+/* --- panels ---------------------------------------------------------------------------- */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.dash-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.1rem 0.9rem;
+  min-width: 0;
+}
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.1rem 1.2rem 1rem; }
+.panel--mini { padding: 0.8rem 0.9rem 0.6rem; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-head--inner { margin-top: 1.4rem; }
+.panel-title { font-family: var(--serif); font-weight: 700; font-size: 1rem; letter-spacing: -0.015em; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); margin: 0.2rem 0 0.4rem !important; }
+.panel-note, .panel-body { font-size: 0.82rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel-body { font-size: 0.9rem; color: var(--text-secondary); }
+.panel-body strong { color: var(--text); }
+.panel-note--below { margin-top: -0.2rem !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 290px; }
+.panel .chart-frame--short { height: 240px; }
+.panel .chart-frame--mini { height: 150px; }
+
+.stat-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+.stat-tile--hot { border-color: #e8b39b; background: #fdf6f1; }
+.stat-tile-value { font-family: var(--serif); font-weight: 800; font-size: 1.7rem; letter-spacing: -0.04em; color: var(--text); margin: 0 !important; font-variant-numeric: tabular-nums; }
+.stat-tile--hot .stat-tile-value { color: var(--primary); }
+.stat-tile-label { font-size: 0.82rem; color: var(--text-muted); margin: 0.15rem 0 0 !important; text-align: left !important; }
+
+/* --- calendar controls ------------------------------------------------------------------- */
+
+.calendar-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 1rem; }
+.ctl-label { font-size: 0.86rem; color: var(--text-secondary); }
+.segmented { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; background: var(--bg); }
+.segmented button {
+  font: inherit;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  padding: 0.42rem 0.85rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--primary); color: #fff; }
+
+/* --- the stress calendar ------------------------------------------------------------------- */
+
+.calendar-scroll { overflow-x: auto; }
+.calendar { border-collapse: separate; border-spacing: 3px; width: 100%; min-width: 820px; font-family: var(--mono); font-size: 0.72rem; }
+.calendar th, .calendar td { padding: 0; text-align: center; }
+.cal-rowhead { text-align: left !important; font-family: var(--sans); font-weight: 700; font-size: 0.78rem; color: var(--text); white-space: nowrap; padding-right: 8px !important; }
+.cal-year { color: var(--text-muted); font-weight: 400; font-size: 0.66rem; padding-bottom: 2px !important; }
+.cal-year.is-prov { color: var(--primary); }
+.cal-cell { height: 26px; min-width: 22px; border-radius: 3px; }
+.cal-cell.is-hit { box-shadow: inset 0 0 0 2px #15171c; }
+.cal-cell.is-na { background: repeating-linear-gradient(45deg, #f1ede6 0 3px, #fbfaf7 3px 6px); }
+.cal-cell.is-prov { opacity: 0.72; }
+.cal-sum .cal-rowhead { color: var(--primary); }
+.cal-count { font-weight: 600; color: var(--text-secondary); height: 24px; }
+.cal-count.is-max { color: #fff; background: #7f1a2a; border-radius: 3px; }
+.cal-divider .cal-rowhead { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); padding-top: 10px !important; }
+.is-chronic .cal-rowhead { color: var(--accent); font-weight: 400; }
+
+.calendar-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 0.8rem; font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); }
+.legend-ramp { display: inline-block; width: 140px; height: 10px; border-radius: 2px; background: var(--heat-ramp); }
+.legend-key::before { content: ""; display: inline-block; width: 12px; height: 12px; vertical-align: -2px; margin-right: 6px; border-radius: 2px; }
+.legend-key--stress::before { background: #c45f4f; box-shadow: inset 0 0 0 2px #15171c; }
+.legend-key--prov::before { background: repeating-linear-gradient(45deg, #f1ede6 0 3px, #fbfaf7 3px 6px); border: 1px solid var(--rule); }
+
+/* --- correlation matrix -------------------------------------------------------------------- */
+
+.corr-scroll { overflow-x: auto; }
+.corr { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 460px; font-family: var(--mono); font-size: 0.74rem; }
+.corr th { font-family: var(--sans); font-weight: 700; font-size: 0.72rem; color: var(--text-secondary); padding: 4px; text-align: left; }
+.corr thead th { text-align: center; font-weight: 400; font-size: 0.66rem; color: var(--text-muted); }
+.corr td { text-align: center; padding: 7px 4px; border-radius: 3px; }
+.corr .is-diag { background: var(--bg-accent); color: var(--text-muted); }
+.corr .is-weak { background: #f7f5f1; color: var(--text-muted); }
+.corr .is-mid { background: #f1d6c4; color: var(--text); }
+.corr .is-strong { background: #a6363a; color: #fff; font-weight: 600; }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--primary); font-size: 0.68rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 6px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--heat-ramp); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; letter-spacing: -0.03em; }
+.footer-inner a { color: #e8b39b; }
+.cite-box { border-left-color: #c45f4f; }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dash-grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .dash-grid, .dash-grid--three { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2rem; padding-bottom: 2.2rem; }
+}
+@media (max-width: 420px) {
+  .kpi-board { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* --- print ------------------------------------------------------------------------------------ */
+
+@media print {
+  .calendar-controls { display: none; }
+  .masthead::after, .report-footer::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cal-cell, .corr td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
