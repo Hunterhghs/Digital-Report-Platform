@@ -145,7 +145,6 @@ section > h2 {
     linear-gradient(var(--border), var(--border)) left 100% / 100% 1px no-repeat;
 }
 section > .section-dek { font-style: normal; color: var(--text-muted); font-size: 1.02rem; max-width: 86ch; }
-.content > section > p:not(.section-dek) { max-width: 86ch; }
 .abstract h2, .endmatter h2 { background: none; }
 
 .section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
@@ -202,7 +201,7 @@ section > .section-dek { font-style: normal; color: var(--text-muted); font-size
   margin: 1.4rem 0;
 }
 .readout-title { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--primary); margin: 0 0 0.4rem !important; }
-.readout p { color: var(--text-secondary); text-align: left; max-width: 90ch; }
+.readout p { color: var(--text-secondary); text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .readout strong { color: var(--text); }
 
 /* --- panels ---------------------------------------------------------------------------- */

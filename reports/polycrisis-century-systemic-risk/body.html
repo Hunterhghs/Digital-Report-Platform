@@ -2,6 +2,11 @@
   <h2>Overview</h2>
   <p class="section-dek">A polycrisis is not a long list of risks. It is several systems failing at the same time. This dashboard measures that simultaneity directly.</p>
 
+  <p>The word polycrisis has moved from academic papers into the vocabulary of finance ministries, central banks and the World Economic Forum, but it is usually illustrated rather than measured: a list of the things going wrong at once, assembled after the fact. This dashboard takes the claim literally. If the twenty-first century is a polycrisis century, its defining feature should be visible in the data as <strong>simultaneity</strong> — many systems in acute distress in the same year — and that simultaneity should be unusual against the record of the same systems earlier in the century.</p>
+
+  <p>To test that, it tracks six acute indicators drawn from separate systems — food prices, oil prices, financial-market volatility, economic policy uncertainty, battle deaths and recorded natural disasters — from 2000 to the present, alongside two chronic pressures, global temperature and forced displacement, that set the baseline on which acute shocks land. Each acute indicator is judged only against its own history: a year counts as stressed for food because food prices rose unusually fast, not because food matters more than finance. The number of stressed indicators in a year is the <strong>stress-breadth index</strong> that runs through every section below.</p>
+
+
   <div class="kpi-board" role="list">
     <div class="kpi kpi--hot" role="listitem">
       <div class="kpi-value">6 of 6</div>
@@ -49,6 +54,10 @@
     <p class="readout-title">The reading</p>
     <p>For most of the period since 2000, global stresses arrived one or two at a time: a price spike here, a financial panic there. In the 2020s they began to arrive together — five indicators at once in 2021, all six in 2022 — even though, year to year, the underlying systems rarely move in step. That combination, <strong>independent systems in simultaneous distress on a rising chronic floor</strong>, is what the word polycrisis is for.</p>
   </div>
+
+  <p>Three findings carry the argument. First, breadth in the 2020s is exceptional: an average of 3.5 stressed indicators a year since 2020, against 1.4 in the 2000s and 0.7 in the 2010s. Second, it is exceptional despite, not because of, the structure of the systems involved: the six series are weakly correlated, so their joint distress is not one shock seen six ways. Third, the floor beneath them has risen — more state-based armed conflicts than in any year since 1946, the warmest years on record, and close to six times as many people of concern to UNHCR as in 2000 — so the same acute shock now lands on thinner buffers.</p>
+
+  <p>The sections that follow take each finding in turn: the calendar and the breadth index (section 1), the six indicators behind it (section 2), the test of independence (section 3), the chronic floor (section 4), and what the evidence can and cannot say about how simultaneous shocks become a single systemic crisis (section 5). The method section sets out the choices that could change the results.</p>
 </section>
 
 <hr class="section-rule">
@@ -56,6 +65,9 @@
 <section id="calendar">
   <h2>1. The Stress Calendar</h2>
   <p class="section-dek">Each row is a system; each column a year. Darker cells are worse relative to that system's own record since 2000. Outlined cells are counted as stressed.</p>
+
+  <p>Reading across a row shows one system's history; reading down a column shows one year's breadth. The shading is relative, not absolute: a dark cell for disasters means an unusually high count of recorded events by the standard of 2000–2025, not a judgement that disasters matter more than market volatility. The threshold control redraws the outlines, the breadth bars, the decade averages and the threshold lines in the next section together, so readers can check that the story does not hinge on one cut-off. The commentary below uses the default, the worst quartile.</p>
+
 
   <div class="panel panel--hero">
     <div class="calendar-controls">
@@ -94,6 +106,14 @@
     <div class="stat-tile"><p class="stat-tile-value" id="avg-10">0.7</p><p class="stat-tile-label">average breadth, 2010–2019</p></div>
     <div class="stat-tile stat-tile--hot"><p class="stat-tile-value" id="avg-20">3.5</p><p class="stat-tile-label">average breadth, 2020–2025</p></div>
   </div>
+
+  <p>The first decade of the century was busy but rarely broad. Stress came in clusters that belonged together: oil and food prices rose in tandem in 2004, and in 2008 the food price surge, the oil spike and the financial panic peaked in the same year — three indicators, all of them prices or markets. 2011 repeated the pattern, with food, oil and volatility stressed together during the second food price spike and the euro-area debt crisis. These were serious episodes, but they were concentrated in one cluster of tightly linked markets; conflict, policy uncertainty and disasters stayed below their thresholds.</p>
+
+  <p>The 2010s were the quiet decade. Five of its ten years recorded no stressed indicator at all, and the only sustained signal was battle deaths in 2014 and 2015, at the height of the wars in Syria and Iraq. That calm matters for the method as well as the history: because thresholds are set over the whole 2000–2025 record, a quiet decade lowers the bar for every other one.</p>
+
+  <p>The 2020s broke the pattern in two ways. Breadth jumped — five indicators in 2021 and all six in 2022, the only year since 2000 in which every acute system was in its worst quartile at once — and it stayed high, at three in 2023 and 2024 and two in 2025. The composition changed as well. The early-2020s peak was led by prices, as food and oil rebounded from the pandemic and then spiked again with Russia's invasion of Ukraine. The years since have been carried by slower-moving stresses: policy uncertainty, in its worst quartile every year since 2019; battle deaths, in theirs every year from 2021 to 2025; and disaster counts in 2023 and 2024. A price spike can reverse within a year; a war or a durable shift in trade policy tends not to. That shift is why breadth has stayed elevated after commodity prices eased.</p>
+
+  <p>For 2026 the reading is partial. With four of the six indicators reporting, oil and policy uncertainty are already in their worst quartiles, with Brent's year-to-date average running about 36 per cent above 2025's. The bar will be revised as conflict and disaster data for the year are published.</p>
 </section>
 
 <hr class="section-rule">
@@ -101,6 +121,9 @@
 <section id="shocks">
   <h2>2. Six Shocks</h2>
   <p class="section-dek">The acute indicators behind the calendar. The dashed line marks the stress threshold selected above.</p>
+
+  <p>Each small chart shows one indicator's stress measure for every year since 2000 against the threshold selected in the calendar. Food and oil are shown as year-on-year changes because their levels drift upward with inflation and demand; what matters for households and importers is the speed of a rise. The other four are shown as levels, because a high reading in any year is itself the stress.</p>
+
 
   <div class="dash-grid dash-grid--three">
     <div class="panel panel--mini"><p class="panel-title">Food price spikes</p><p class="panel-meta">FAO Food Price Index, % change on prior year</p><div class="chart-frame chart-frame--mini"><canvas id="mini-food"></canvas></div></div>
@@ -111,6 +134,12 @@
     <div class="panel panel--mini"><p class="panel-title">Disaster events</p><p class="panel-meta">EM-DAT recorded natural disasters</p><div class="chart-frame chart-frame--mini"><canvas id="mini-disasters"></canvas></div></div>
   </div>
   <p class="panel-note panel-note--below">Bars above the dashed line are counted as stressed. The most recent disaster count is subject to reporting lag and is likely to be revised upward.</p>
+
+  <p>The price indicators tell a story of sharp, short spikes. Food prices rose by close to 30 per cent in both 2007 and 2021, and fell almost as sharply in 2009 and 2015. Brent crude rose 69 per cent in 2021, the largest annual increase in the series, and a further 42 per cent in 2022. Because food production and transport run on energy, the two series move together more than any other pair, and their stressed spells have lasted no more than two consecutive years.</p>
+
+  <p>Market volatility behaves differently. The VIX surges in financial panics — 2008, 2009 and 2020 stand out — and otherwise sits in a narrow band, so it contributes to breadth mainly when markets themselves are the crisis. Policy uncertainty is the opposite case: rather than spiking and reverting, the global index has climbed through the whole period, from an annual average of 75 in 2000 to 395 in 2025, its highest annual reading. Because the index is built from newspaper coverage it measures perceived rather than realised uncertainty, but its persistence above the worst-quartile threshold in every year since 2019 makes it the most durable acute stress on the dashboard.</p>
+
+  <p>Battle deaths and disaster counts complete the six. UCDP recorded about 285,000 battle-related deaths in 2022, the highest in the series, driven above all by the wars in Ethiopia and Ukraine; the totals for 2023–2025, between about 139,000 and 155,000 a year, remain above any year from 2000 to 2013. Recorded disasters vary less, between roughly 325 and 450 events a year, and a count says nothing about severity, which is why the method section treats it cautiously. Even so, the four highest counts in the series all fall between 2021 and 2024.</p>
 </section>
 
 <hr class="section-rule">
@@ -118,6 +147,9 @@
 <section id="independence">
   <h2>3. Independent, Then Together</h2>
   <p class="section-dek">If one underlying driver moved all six indicators, their simultaneous distress would be unremarkable. It doesn't: most pairs are nearly uncorrelated.</p>
+
+  <p>The test is simple. If simultaneous distress in the 2020s were only one global shock showing up in six places, the indicators would move together across the whole record and their correlations would be high. The matrix shows the opposite. Of the fifteen pairs, only two are strongly related: food and oil prices (r = 0.75), linked through fuel, fertiliser and biofuel demand; and policy uncertainty with battle deaths (r = 0.62), a pairing that partly reflects their shared upward drift since the early 2010s. Most of the rest sit close to zero, and a few are mildly negative.</p>
+
 
   <div class="dash-grid">
     <div class="panel">
@@ -143,6 +175,10 @@
     <p class="readout-title">Why this matters</p>
     <p>Risk management that treats each system separately — a food reserve here, a financial backstop there — is calibrated to a world in which shocks arrive one at a time. Low correlations mean that assumption is usually right. But buffers sized for one shock are drawn down together when several coincide, and the 2020s are the period in which that coincidence stopped being rare.</p>
   </div>
+
+  <p>The decade comparison makes the same point from the other direction. At the worst third, the worst quartile and the worst fifth alike, the 2020s show more simultaneous stress than either earlier decade. Low correlation and high co-occurrence together are the signature the dashboard was built to look for: systems that normally fail separately, failing together.</p>
+
+  <p>Two readings of that combination are possible, and the data cannot fully separate them. One is coincidence: a run of independent bad draws — a pandemic, a war, a global monetary tightening, a strong El Niño — that happened to cluster. The other is entanglement: pandemic supply disruption feeding the price surge, the war feeding energy and food prices, both feeding political and policy uncertainty. Correlations over 25 years capture how the systems relate in normal times; entanglement is a claim about how links strengthen during crises, which annual data are too coarse to show. Section 5 returns to that limit.</p>
 </section>
 
 <hr class="section-rule">
@@ -150,6 +186,9 @@
 <section id="floor">
   <h2>4. The Rising Floor</h2>
   <p class="section-dek">Chronic pressures do not spike; they accumulate. Each acute shock now lands on a higher baseline than the last.</p>
+
+  <p>The acute indicators measure surprises. Underneath them, three slower series describe the conditions those surprises land on. None of them reverts to a stable average: each has a trend that acute shocks ride on, which is why the calendar shades the chronic pressures for context but does not count them.</p>
+
 
   <div class="dash-grid">
     <div class="panel panel--wide">
@@ -177,6 +216,12 @@
       <div class="chart-frame chart-frame--short"><canvas id="chart-displaced"></canvas></div>
     </div>
   </div>
+
+  <p>Armed conflict is the clearest case. The number of state-based conflicts rose through the Cold War to a peak of 53 in 1991, fell to a low of 31 in 2010, and has since climbed to 65 in 2025 — the highest in the eight decades UCDP and PRIO have recorded. More conflicts mean more simultaneous claims on humanitarian funding, more disrupted trade routes and more displaced people, whatever the price of oil in a given year.</p>
+
+  <p>Temperature and displacement follow the same shape. The global anomaly rose from 0.39 °C above the 1951–1980 average in 2000 to 1.28 °C in 2024, the warmest year on record, with 2025 the second warmest at 1.18 °C. Populations of concern to UNHCR — refugees, asylum-seekers, the internally displaced and others in need of protection — grew from about 19 million in 2000 to a peak of 113 million in 2024. The 2025 figure, 109 million, is the first fall since 2016, and it is too early to say whether it marks a turn.</p>
+
+  <p>A rising floor changes what an acute shock does. A food price spike arriving in a world with more people displaced, more countries at war and hotter extremes reaches more households that have already drawn down their savings and stocks; the same percentage rise does more harm. That is the sense in which chronic pressures wear down buffers, and the reason the anatomy below places them first.</p>
 </section>
 
 <hr class="section-rule">
@@ -184,6 +229,9 @@
 <section id="anatomy">
   <h2>5. Anatomy of Systemic Risk</h2>
   <p class="section-dek">How independent shocks become a single crisis: the mechanism the data above can see, and the parts it cannot.</p>
+
+  <p>The data above describe two things: a chronic floor that keeps rising, and acute shocks in separate systems that have recently begun to coincide. The schematic places them in sequence and adds the step the data cannot observe directly — transmission from one system to another.</p>
+
 
   <div class="panel">
     <div class="schematic-wrap" tabindex="0" role="region" aria-label="Schematic of how chronic pressures and acute shocks combine into systemic crisis">
@@ -244,6 +292,10 @@
       <p class="panel-body">It shows <strong>co-occurrence</strong>: how many systems are under acute stress in the same year, and how far that departs from their usual independence. It does not observe <strong>entanglement</strong> — the causal channels by which one crisis worsens another. High breadth is necessary for a polycrisis, not proof of one.</p>
     </div>
   </div>
+
+  <p>Read from left to right, the schematic is a sequence. Chronic pressures erode the slack in households, firms and governments — savings, fiscal space, food and fuel stocks, institutional attention. Acute shocks then arrive in separate systems, usually one or two at a time. When several coincide, the channels that ordinarily spread risk thinly — prices, capital flows, migration and political decisions — can carry stress from one system into others: an energy shock becomes a fertiliser shock and then a food shock; a food shock becomes a balance-of-payments problem for importers, and then a political one.</p>
+
+  <p>The dashboard's evidence is strongest for the first two columns, the rising floor and the unusual breadth of acute stress, and weakest for transmission, which annual data show only indirectly — through the food–oil link and through the persistence of stress after the initial price shocks faded. Measuring transmission properly would need monthly data across countries, tracing how a shock in one system changes the odds of stress in another. Until then, breadth is best read as an early-warning condition: a measure of how many buffers are being drawn on at once.</p>
 </section>
 
 <hr class="section-rule">
@@ -255,6 +307,10 @@
   <p>The index counts, for each year, how many of six acute indicators fall in their own worst quartile over 2000–2025. Thresholds are computed per indicator with linear interpolation; the calendar also lets readers use the worst third or the worst fifth. Food and oil are measured as year-on-year price changes rather than levels, because both trend upward over the period. Market volatility, policy uncertainty, battle deaths and disaster events are measured as annual levels.</p>
 
   <p>Three choices deserve scrutiny. Equal weighting treats a disaster year and a financial panic as equivalent units of stress, which they are not; the index measures breadth, not severity. Disaster counts reflect improving reporting as well as underlying change, which tends to understate the early 2000s. And the 2000–2025 window is short enough that a decade of unusual calm, such as the 2010s, lowers every threshold. The finding that the 2020s are exceptional holds at all three thresholds tested.</p>
+
+  <p>Data vintages differ by source. The conflict series use UCDP version 26.1; the disaster count comes from EM-DAT via Our World in Data and its latest year is likely to be revised upward as reports are processed; temperature is NASA's GISTEMP v4; and UNHCR figures are end-year stocks of populations of concern, a narrower total than the forcibly displaced figure in UNHCR's Global Trends reports. Annual values for food, oil, volatility and policy uncertainty are averages of monthly or daily series, and 2026 values cover only the months available at download.</p>
+
+  <p>Everything shown is computed in the browser from the annual series embedded with the page, so the calendar, the breadth chart, the decade averages and the threshold lines can be reproduced from the sources below. Correlations use the stress measures — year-on-year changes for food and oil, levels otherwise — over 2001–2025. The index is descriptive: it records how often systems have been in distress together, not how likely they are to be in future.</p>
 
   <p>Related analysis in this series: <a href="/reports/polycrisis-resilience-dashboard/">the polycrisis resilience dashboard</a> on adaptive capacity and buffers; <a href="/reports/economics-of-prevention-polycrisis/">the economics of prevention</a>; and <a href="/reports/convergence-through-crisis/">convergence through crisis</a> on what shocks force countries to replace.</p>
 </section>

@@ -246,6 +246,13 @@ img { max-width: 100%; height: auto; }
 }
 .content > section > ul, .content > section > ol { max-width: none; }
 
+/* The abstract always fills its box. Themes often cap body paragraphs at a
+   reading measure with `.content > section > p`, which also matches the
+   abstract (it is a <section> inside .content) and leaves a dead column on
+   the right of wide pages. This selector out-ranks that pattern; themes
+   should still write `section:not(.abstract)` when they set a measure. */
+.content > section.abstract > p:not(.section-dek) { max-width: none; }
+
 section { scroll-margin-top: 64px; }
 
 section > h2 {

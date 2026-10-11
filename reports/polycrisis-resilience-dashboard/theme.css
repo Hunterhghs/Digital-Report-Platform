@@ -166,7 +166,7 @@ section > .section-dek {
 }
 section > h3 { color: var(--text); font-family: var(--sans); font-weight: 600; }
 
-.content > section > p:not(.section-dek) { color: var(--text-secondary); max-width: 90ch; }
+.content > section > p:not(.section-dek) { color: var(--text-secondary); }
 
 .section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
 
@@ -267,7 +267,7 @@ section > h3 { color: var(--text); font-family: var(--sans); font-weight: 600; }
   color: var(--primary);
   margin: 0 0 0.4rem !important;
 }
-.readout p { color: var(--text-secondary); text-align: left; }
+.readout p { color: var(--text-secondary); text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .readout strong { color: #ffffff; }
 
 /* --- panel grid -------------------------------------------------------------------- */
