@@ -253,6 +253,19 @@ img { max-width: 100%; height: auto; }
    should still write `section:not(.abstract)` when they set a measure. */
 .content > section.abstract > p:not(.section-dek) { max-width: none; }
 
+/* Hybrid dashboard–report layout. A theme that sets --prose-width runs the
+   running prose (unclassed paragraphs and lists; the theme centres its dek to match) as a centred
+   column between full-width panels, so text never leaves a dead column on
+   one side. Unset, prose spans the content width as before. Classed
+   paragraphs (panel notes, captions) and boxed text keep their own widths. */
+.content > section:not(.abstract) > p:not([class]),
+.content > section > ul,
+.content > section > ol {
+  max-width: var(--prose-width, none);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 section { scroll-margin-top: 64px; }
 
 section > h2 {

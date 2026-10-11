@@ -49,6 +49,7 @@
   --heat-ramp: linear-gradient(90deg, #f6efe6, #f1d6c4, #e8b39b, #da8a72, #c45f4f, #a6363a, #7f1a2a);
 
   --max-width: 1200px;
+  --prose-width: 50rem;   /* centred prose column between full-width panels */
 }
 
 body { font-size: 1rem; line-height: 1.66; }
@@ -144,7 +145,7 @@ section > h2 {
   background: var(--heat-ramp) left 100% / 140px 4px no-repeat,
     linear-gradient(var(--border), var(--border)) left 100% / 100% 1px no-repeat;
 }
-section > .section-dek { font-style: normal; color: var(--text-muted); font-size: 1.02rem; max-width: 86ch; }
+section > .section-dek { font-style: normal; color: var(--text-muted); font-size: 1.02rem; max-width: var(--prose-width); margin-left: auto; margin-right: auto; }
 .abstract h2, .endmatter h2 { background: none; }
 
 .section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }

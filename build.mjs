@@ -83,6 +83,20 @@ function loadReports() {
       record.hasTheme = fs.existsSync(path.join(base, 'theme.css'));
       record.hasOgImage = fs.existsSync(path.join(base, 'og.png'));
 
+      // A report's theme.css and charts.js keep their plain names, so the page
+      // references them with a content-hash query. Cloudflare's browser-cache
+      // TTL overrides the must-revalidate header below and lets browsers hold
+      // these files for hours; without the query a reader can get fresh
+      // markup with yesterday's stylesheet.
+      const version = (f) => {
+        const p = path.join(base, f);
+        return fs.existsSync(p)
+          ? crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex').slice(0, 10)
+          : '';
+      };
+      record.themeVersion = version('theme.css');
+      record.chartsVersion = version('charts.js');
+
       if (!record.abstract || !record.abstract.length) {
         console.warn(`  ! ${e.name} has no abstract — the page will not carry one`);
       }
