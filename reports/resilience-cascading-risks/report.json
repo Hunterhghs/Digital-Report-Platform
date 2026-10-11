@@ -1,0 +1,62 @@
+{
+  "number": "2026-23",
+  "title": "Resilience in an Age of Polycrisis",
+  "subtitle": "A framework for navigating cascading risks — an interactive dashboard",
+  "strapline": "A cascade loses height and gains length as it travels. The 2021–23 shock rose 1,358 per cent in European gas, 69 per cent in world food prices, and then peaked in household food inflation nine months after world prices did. Resilience is a matter of acting at the right stage, on the right clock.",
+  "dek": "A hybrid dashboard and report that traces a real cascade month by month — from energy to fertilizer to grains to world food prices to domestic food inflation in 183 countries — measures what amplified it, follows the 2026 Strait of Hormuz shock along the same chain, and turns the evidence into a four-function framework for resilience.",
+  "abstract": [
+    "Cascading risk is the defining mechanism of a polycrisis: a shock in one system travels along the links between systems and arrives somewhere else, later and in a different form. This dashboard measures one such cascade directly rather than describing it. Using monthly World Bank commodity prices, the FAO Food Price Index and FAOSTAT food consumer price indices for 183 countries, it follows the 2021–23 shock along a single chain — European natural gas, fertilizer, grains, world food prices and domestic food inflation — and organises the evidence into a framework of four stages (trigger, transmission, amplification and impact), each matched to a resilience function: diversify, decouple, buffer and absorb.",
+    "The chain shows a regular shape. Measured from the 2019 average to the 2021–23 peak, European gas rose 1,358 per cent, the World Bank fertilizer index 261 per cent, the grains index 90 per cent and the FAO Food Price Index 69 per cent: amplitude fell at every link. Duration moved the other way. Gas stayed above half its peak rise for 4 months, fertilizer for 14, grains for 20 and world food prices for 21. The domestic leg came last and lasted longest: world food prices peaked in March 2022, but the median country's food inflation peaked in February 2023 at 13.3 per cent, the median country peaked nine months after the world price, and 87 per cent of countries peaked later than the world price. In December 2022, 69 per cent of countries had food inflation above 10 per cent, against about 12 per cent in 2019.",
+    "How hard the cascade hit a country depended less on how much food it imported than on what amplified the shock at home. Across 175 countries, the depreciation of the currency against the dollar between 2021 and 2023 had a Spearman rank correlation of 0.42 with the country's peak food inflation, against 0.13 for the share of food in merchandise imports; reserves cover (−0.28) and inflation before the shock (0.36) also mattered. Countries whose currency fell by more than a quarter saw a median peak of 53 per cent, against 13 per cent where it moved by less than 5 per cent. These are associations, not causal estimates, but they locate the amplifier in the financial channel rather than in trade exposure alone.",
+    "The same chain is now carrying a second shock. After the war that began on 28 February 2026 disrupted shipping through the Strait of Hormuz, urea rose 82 per cent in two months and the fertilizer index 44 per cent; both had returned to their February levels by July, while grains were 20 per cent higher in September and still rising and world food prices 8 per cent higher. Domestic food price data do not yet cover the period. On the 2021–23 clock, the domestic leg is still ahead, which means the levers that work at that stage — reserves, debt space, credible monetary policy and social protection — are the ones whose window is open now. The dashboard is descriptive: its timings are measured from one episode and are a guide to sequencing, not a forecast."
+  ],
+  "jel": "F44, Q11, Q02, E31, F31, H55 — international business cycles and transmission; agricultural markets; commodity markets; price level and inflation; exchange rates; social security and public pensions",
+  "method": "Commodity prices are monthly nominal US-dollar series from the World Bank Commodity Price Data (the Pink Sheet), updated 2 October 2026: natural gas (Europe), urea, DAP, Brent crude, US hard red winter wheat and the fertilizer and grains price indices (2010 = 100). World food prices are the FAO Food Price Index (2014–2016 = 100), monthly, as published in October 2026; FAO revises recent values. Domestic food inflation is computed by the author as the year-on-year change in the FAOSTAT Consumer Price Indices food index (2015 = 100), using only observations flagged as official (A) or from an external organisation (X) and excluding imputed values; country coverage is around 185–195 countries a month through 2024 and falls in 2025, so the monthly cross-country series stop in December 2025. Peak timing is measured within 2021–2024 for countries with at least 40 monthly observations (183 countries); peak magnitude is the maximum year-on-year rate in 2022–2023 (181 countries with sufficient data). Amplifiers are from the World Development Indicators API: official exchange rate (PA.NUS.FCRF, 2021 to 2023 change; Croatia excluded because of euro adoption in 2023), food imports as a share of merchandise imports (TM.VAL.FOOD.ZS.UN, 2021) and total reserves in months of imports (FI.RES.TOTL.MO, 2021); FAOSTAT and World Bank codes are joined through the UN M49 table. Rank correlations are Spearman's ρ with average ranks for ties and are computed in the browser. Stage amplitude is the rise from the 2019 average to the 2021–23 peak; duration is the longest run of consecutive months containing the peak in which a series stayed above half its peak rise. The 2022 and 2026 episodes are aligned on February of each year (the invasion of Ukraine on 24 February 2022; the war beginning 28 February 2026) and indexed to February = 100. Debt risk ratings are from the IMF List of LIC DSAs for PRGT-Eligible Countries as of 31 March 2026; export restrictions from IFPRI's Food and Fertilizer Export Restrictions Tracker; Black Sea Grain Initiative volumes from the UN; social protection coverage from the ILO World Social Protection Report 2024–26. All associations are descriptive; the framework's sequencing draws on one episode and is not a forecast.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "readingTime": 16,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;800&family=Instrument+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Reddit+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#0e4a55",
+  "topics": [
+    "Systemic Risk",
+    "Food Security",
+    "Emerging Markets",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "polycrisis",
+    "cascading risk",
+    "systemic risk",
+    "resilience framework",
+    "shock transmission",
+    "food price inflation",
+    "fertilizer prices",
+    "natural gas prices",
+    "exchange rate pass-through",
+    "debt distress",
+    "social protection",
+    "export restrictions",
+    "Strait of Hormuz",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "framework", "label": "1. The Framework" },
+    { "id": "clock", "label": "2. The Cascade Clock" },
+    { "id": "domestic", "label": "3. The Domestic Leg" },
+    { "id": "amplifiers", "label": "4. What Amplifies" },
+    { "id": "live", "label": "5. The 2026 Cascade" },
+    { "id": "navigate", "label": "6. Navigating" },
+    { "id": "method", "label": "7. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "1,358% → 69%", "label": "Peak rise from the 2019 average: European gas against world food prices — a cascade loses height as it travels" },
+    { "value": "9 months", "label": "Median lag from the world food-price peak to each country's own food-inflation peak, 183 countries" },
+    { "value": "53% vs 13%", "label": "Median peak food inflation where the currency fell more than 25% against where it moved less than 5%, 2021–23" },
+    { "value": "+20%", "label": "Grains index, September 2026 against February, as the Hormuz shock moves down the same chain" }
+  ]
+}
