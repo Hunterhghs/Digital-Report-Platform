@@ -1,0 +1,323 @@
+<section id="overview">
+  <h2>Overview</h2>
+  <p class="section-dek">Three readings on one screen: the pressures converging on the world system, the capacity of countries to absorb them, and the buffers that decide whether a shock becomes a crisis.</p>
+
+  <div class="kpi-board" role="list">
+    <div class="kpi kpi--pressure" role="listitem">
+      <div class="kpi-tag">Pressure</div>
+      <div class="kpi-value">+1.28°C</div>
+      <div class="kpi-label">2024 global temperature anomaly — the warmest year on record; 2025 was +1.18°C</div>
+      <div class="kpi-delta kpi-delta--worse">vs 1951–1980 mean</div>
+      <div class="kpi-source">NASA GISTEMP v4</div>
+    </div>
+    <div class="kpi kpi--pressure" role="listitem">
+      <div class="kpi-tag">Pressure</div>
+      <div class="kpi-value">117.8m</div>
+      <div class="kpi-label">People forcibly displaced at the end of 2025</div>
+      <div class="kpi-delta kpi-delta--worse">▲ from 65.3m in 2015</div>
+      <div class="kpi-source">UNHCR Global Trends</div>
+    </div>
+    <div class="kpi kpi--pressure" role="listitem">
+      <div class="kpi-tag">Pressure</div>
+      <div class="kpi-value">×2+</div>
+      <div class="kpi-label">People affected by climate-related disasters, compared with 2015</div>
+      <div class="kpi-delta kpi-delta--worse">▲ more than doubled</div>
+      <div class="kpi-source">UN SDG Report 2026</div>
+    </div>
+    <div class="kpi kpi--capacity" role="listitem">
+      <div class="kpi-tag">Capacity</div>
+      <div class="kpi-value">73</div>
+      <div class="kpi-label">Countries with above-median vulnerability and below-median readiness</div>
+      <div class="kpi-delta kpi-delta--worse">incl. 23 of 24 low-income</div>
+      <div class="kpi-source">ND-GAIN 2026, author's calculation</div>
+    </div>
+    <div class="kpi kpi--capacity" role="listitem">
+      <div class="kpi-tag">Capacity</div>
+      <div class="kpi-value">25.8 pts</div>
+      <div class="kpi-label">Gap between high- and low-income median ND-GAIN scores, 2024</div>
+      <div class="kpi-delta kpi-delta--worse">▲ from 24.0 in 1995</div>
+      <div class="kpi-source">ND-GAIN 2026, author's calculation</div>
+    </div>
+    <div class="kpi kpi--capacity" role="listitem">
+      <div class="kpi-tag">Capacity</div>
+      <div class="kpi-value">119</div>
+      <div class="kpi-label">Countries reporting a multi-hazard early warning system — 60% of all countries</div>
+      <div class="kpi-delta kpi-delta--better">▲ from 52 in 2015</div>
+      <div class="kpi-source">UNDRR &amp; WMO, 2025</div>
+    </div>
+    <div class="kpi kpi--finance" role="listitem">
+      <div class="kpi-tag">Buffer</div>
+      <div class="kpi-value">12–14×</div>
+      <div class="kpi-label">Developing countries' adaptation finance needs relative to international public flows</div>
+      <div class="kpi-delta kpi-delta--worse">$310–365bn vs $26bn</div>
+      <div class="kpi-source">UNEP Adaptation Gap 2025</div>
+    </div>
+    <div class="kpi kpi--finance" role="listitem">
+      <div class="kpi-tag">Buffer</div>
+      <div class="kpi-value">3.7bn</div>
+      <div class="kpi-label">People in countries where interest payments exceed health or education spending</div>
+      <div class="kpi-delta kpi-delta--worse">51 countries</div>
+      <div class="kpi-source">UNCTAD, A World of Debt 2026</div>
+    </div>
+  </div>
+
+  <div class="readout">
+    <p class="readout-title">The reading</p>
+    <p>Every pressure indicator on this dashboard is higher than it was in 2015. Most capacity indicators have moved little, and the gap between the countries most and least able to adapt is <strong>wider than it was in 1995</strong>. The exceptions — early warning coverage more than doubled, social protection now reaching over half the world — are both cheap, institution-led measures, which is the most practically useful pattern in the data.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="pressures">
+  <h2>1. Pressures</h2>
+  <p class="section-dek">Physical, human and perceived risk, each rising on its own track — and increasingly arriving together.</p>
+
+  <div class="dash-grid">
+    <div class="panel panel--wide">
+      <div class="panel-head">
+        <p class="panel-title">Global temperature anomaly, 1950–2025</p>
+        <p class="panel-meta">°C vs 1951–1980 mean · NASA GISTEMP v4</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-temp"></canvas></div>
+      <p class="panel-note">Annual land–ocean mean. 2024 is the warmest year in the record at +1.28°C; 2025 followed at +1.18°C. The baseline is mid-twentieth century, not pre-industrial, so these values sit below the commonly quoted figures against 1850–1900.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">People forcibly displaced</p>
+        <p class="panel-meta">Millions, end of year · UNHCR</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-displaced"></canvas></div>
+      <p class="panel-note">2025 recorded the first fall in a decade, from 122m (revised) to 117.8m — still 80 per cent above 2015.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">The ten most severe global risks, next decade</p>
+        <p class="panel-meta">WEF Global Risks Report 2026</p>
+      </div>
+      <ol class="risk-rank">
+        <li><span class="rk rk-env">Env</span>Extreme weather events</li>
+        <li><span class="rk rk-env">Env</span>Biodiversity loss and ecosystem collapse</li>
+        <li><span class="rk rk-env">Env</span>Critical change to Earth systems</li>
+        <li><span class="rk rk-tech">Tech</span>Misinformation and disinformation</li>
+        <li><span class="rk rk-tech">Tech</span>Adverse outcomes of AI technologies</li>
+        <li><span class="rk rk-env">Env</span>Natural resource shortages</li>
+        <li><span class="rk rk-soc">Soc</span>Inequality</li>
+        <li><span class="rk rk-tech">Tech</span>Cyber insecurity</li>
+        <li><span class="rk rk-soc">Soc</span>Societal polarization</li>
+        <li><span class="rk rk-env">Env</span>Pollution</li>
+      </ol>
+      <p class="panel-note">Five of ten are environmental. Over two years the order changes: geoeconomic confrontation ranks first, misinformation second and societal polarization third — the near term is geopolitical, the long term ecological.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="explorer">
+  <h2>2. Capacity Explorer</h2>
+  <p class="section-dek">Where each of 190 countries sits on vulnerability and readiness. Search for a country, filter by region, or click a point.</p>
+
+  <div class="panel panel--hero">
+    <div class="explorer-controls">
+      <label class="ctl">
+        <span class="ctl-label">Find a country</span>
+        <input id="ex-search" type="search" list="ex-countries" placeholder="Type a country name" autocomplete="off">
+        <datalist id="ex-countries"></datalist>
+      </label>
+      <label class="ctl">
+        <span class="ctl-label">Region</span>
+        <select id="ex-region"><option value="all">All regions</option></select>
+      </label>
+      <button id="ex-reset" class="ctl-btn" type="button">Reset</button>
+    </div>
+
+    <div class="explorer-body">
+      <div class="explorer-chart">
+        <div class="chart-frame chart-frame--explorer"><canvas id="chart-explorer" aria-label="Scatter plot of ND-GAIN vulnerability against readiness for 190 countries"></canvas></div>
+        <p class="panel-note">Each point is a country (ND-GAIN 2026 release, 2024 data). Dashed lines mark the global medians. Lower-right is the high-vulnerability, low-readiness quadrant. Click legend entries to show or hide income groups.</p>
+      </div>
+      <aside class="country-card" id="ex-card" aria-live="polite">
+        <p class="cc-kicker">Selected country</p>
+        <p class="cc-name" id="cc-name">None selected</p>
+        <p class="cc-meta" id="cc-meta">Search, or click a point on the chart.</p>
+        <dl class="cc-stats">
+          <div><dt>ND-GAIN score, 2024</dt><dd id="cc-gain">—</dd></div>
+          <div><dt>Change since 2015</dt><dd id="cc-change">—</dd></div>
+          <div><dt>Vulnerability</dt><dd id="cc-vul">—</dd></div>
+          <div><dt>Readiness</dt><dd id="cc-ready">—</dd></div>
+          <div><dt>Rank of 190</dt><dd id="cc-rank">—</dd></div>
+          <div><dt>Quadrant</dt><dd id="cc-quad">—</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+
+  <div class="dash-grid dash-grid--three">
+    <div class="stat-tile">
+      <p class="stat-tile-value">73</p>
+      <p class="stat-tile-label">countries in the high-vulnerability, low-readiness quadrant</p>
+    </div>
+    <div class="stat-tile">
+      <p class="stat-tile-value">23 of 24</p>
+      <p class="stat-tile-label">low-income countries are in that quadrant</p>
+    </div>
+    <div class="stat-tile">
+      <p class="stat-tile-value">38 of 46</p>
+      <p class="stat-tile-label">lower-middle-income countries are in that quadrant</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="gap">
+  <h2>3. The Capacity Gap</h2>
+  <p class="section-dek">Thirty years of ND-GAIN scores by income group. The lines rise; the distance between them does not shrink.</p>
+
+  <div class="dash-grid">
+    <div class="panel panel--wide">
+      <div class="panel-head">
+        <p class="panel-title">Median ND-GAIN score by income group, 1995–2024</p>
+        <p class="panel-meta">Score 0–100 · higher is better prepared · author's calculation from ND-GAIN 2026</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-gap-trend"></canvas></div>
+      <p class="panel-note">The difference between the high-income and low-income medians was 24.0 points in 1995, 25.2 in 2015 and 25.8 in 2024. Income groups use current World Bank classifications applied to the whole series.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Countries improving since 2015</p>
+        <p class="panel-meta">Share whose 2024 score exceeds 2015 · by income group</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-improved"></canvas></div>
+      <p class="panel-note">Lower-middle-income countries improved most often — 31 of 46. Fewer than half of low-income countries did.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">What the gap is made of</p>
+        <p class="panel-meta">ND-GAIN components</p>
+      </div>
+      <div class="gap-explainer">
+        <p><strong>Vulnerability</strong> combines exposure, sensitivity and adaptive capacity across six sectors: food, water, health, ecosystem services, human habitat and infrastructure.</p>
+        <p><strong>Readiness</strong> measures the ability to use investment for adaptation: economic, governance and social components.</p>
+        <p>The score is readiness minus vulnerability, rescaled. A country can improve by reducing exposure, by building institutions, or both — and the data show the second moving more slowly almost everywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="buffers">
+  <h2>4. Buffers &amp; Finance</h2>
+  <p class="section-dek">Capacity becomes protection only through money: adaptation finance, insurance, social protection and the fiscal room to pay for them.</p>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Adaptation finance: needs and flows</p>
+        <p class="panel-meta">US$ billions a year · developing countries · UNEP 2025</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-adapt"></canvas></div>
+      <p class="panel-note">Needs by 2035 shown as the modelled-to-plan range; flows are international public adaptation finance in 2023, down from $28bn the year before.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">The protection gap, 2024</p>
+        <p class="panel-meta">US$ billions of natural catastrophe losses · Swiss Re</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-protect"></canvas></div>
+      <p class="panel-note">Total losses $318bn, of which $181bn (57%) uninsured; the insured segment is the difference.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Social protection coverage</p>
+        <p class="panel-meta">% covered by at least one cash benefit · ILO 2024–26</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-social"></canvas></div>
+      <p class="panel-note">The buffer that keeps a household shock from becoming destitution reaches fewer than one in ten people in low-income countries.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Where African budgets went, per person</p>
+        <p class="panel-meta">US$ per capita, 2021–2023 average · UNCTAD 2025</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-interest"></canvas></div>
+      <p class="panel-note">Interest exceeded both education and health. Developing countries paid $995bn in net interest in 2025.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="gains">
+  <h2>5. Where Capacity Grew</h2>
+  <p class="section-dek">The clearest gains in the data were built deliberately, at scale, and cheaply.</p>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Countries with multi-hazard early warning systems</p>
+        <p class="panel-meta">Number of countries reporting · UNDRR &amp; WMO</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-ews"></canvas></div>
+      <p class="panel-note">From 52 in 2015 to 119 in 2025 — 60 per cent of countries. Coverage remains lowest in small island states (43%) and least-developed countries.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Global social protection coverage</p>
+        <p class="panel-meta">% of world population with at least one cash benefit · ILO</p>
+      </div>
+      <div class="chart-frame chart-frame--short"><canvas id="chart-social-trend"></canvas></div>
+      <p class="panel-note">Over half the world is now covered for the first time — but the gain is concentrated in middle-income countries.</p>
+    </div>
+  </div>
+
+  <div class="readout">
+    <p class="readout-title">Why these two moved</p>
+    <p>Early warning and social protection share three properties. Their unit cost is low relative to the losses they avoid. They are built by institutions — meteorological services, social registries, payment systems — rather than by large capital projects. And they work against <strong>every</strong> hazard rather than one, which is what matters when shocks converge. They are the closest thing in this dataset to a general-purpose resilience investment.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="reading">
+  <h2>6. Reading the Dashboard</h2>
+  <p class="section-dek">What the indicators can and cannot tell you.</p>
+
+  <p>This dashboard places indicators from different sources, years and methods side by side. It does not combine them into a composite "polycrisis resilience score", because doing so would require weighting judgements that the evidence cannot settle and would hide the variation that makes the comparison useful.</p>
+
+  <p>The central measure of adaptive capacity is the ND-GAIN Country Index, which is designed for climate adaptation rather than for every kind of shock. It is used here because it is the most complete long-run, country-level measure of the combination that matters — exposure to hazards and the institutional and economic readiness to respond — and because its readiness component captures much of what resilience to non-climate shocks also depends on. Readers should treat it as a strong proxy, not a complete measure.</p>
+
+  <p>Three cautions apply. Income groups use current World Bank classifications across the whole series, so countries that changed group are counted in their present one. The quadrant lines are global medians, a reference rather than a threshold with policy meaning. And several pressure indicators — disasters, displacement — reflect reporting coverage as well as underlying change, which tends to understate the earlier years.</p>
+
+  <p>Related analysis in this series develops the argument behind several panels: <a href="/reports/financing-adaptation-mitigation-synergies/">financing the synergy</a> on the vulnerability premium in sovereign borrowing; <a href="/reports/sustainable-development-global-south/">the last third</a> on why recurring public services stalled; and <a href="/reports/economics-of-prevention-polycrisis/">the economics of prevention</a> on why early warning outperforms response spending.</p>
+</section>
+
+<hr class="section-rule">
+
+<section id="references">
+  <h2>Sources</h2>
+  <p class="section-dek">Every figure on the dashboard is drawn from the sources below.</p>
+
+  <ul class="ref-list">
+    <li><span class="ref-org">University of Notre Dame</span><a href="https://gain.nd.edu/our-work/country-index/download-data/" rel="noopener" target="_blank">ND-GAIN Country Index, 2026 release</a> — vulnerability, readiness and GAIN scores, 1995–2024, for 192 countries; 190 with complete 2024 data are shown. Region and income classifications from the <a href="https://api.worldbank.org/v2/country?format=json&amp;per_page=400" rel="noopener" target="_blank">World Bank API</a>.</li>
+    <li><span class="ref-org">NASA GISS</span><a href="https://data.giss.nasa.gov/gistemp/" rel="noopener" target="_blank">GISTEMP v4</a> — global annual land–ocean temperature anomalies relative to 1951–1980.</li>
+    <li><span class="ref-org">UNHCR</span><a href="https://www.unrefugees.org/news/2026/6/five-takeaways-from-the-2025-unhcr-global-trends-report/" rel="noopener" target="_blank">Global Trends 2025</a> — 117.8 million forcibly displaced at end-2025, down from 122 million; <a href="https://reliefweb.int/report/world/unhcr-global-trends-forced-displacement-2015" rel="noopener" target="_blank">Global Trends 2015</a> — 65.3 million; the 2020 edition — 82.4 million.</li>
+    <li><span class="ref-org">World Economic Forum</span><a href="https://www.weforum.org/publications/global-risks-report-2026/digest/" rel="noopener" target="_blank">Global Risks Report 2026</a> — ten-year and two-year severity rankings.</li>
+    <li><span class="ref-org">United Nations</span><a href="https://www.un.org/en/desa/for-over-a-decade-the-sustainable-development-goals-have-delivered-results" rel="noopener" target="_blank">The Sustainable Development Goals Report 2026</a> — people affected by climate-related disasters more than doubled since 2015.</li>
+    <li><span class="ref-org">UNDRR and WMO</span><a href="https://wmo.int/news/media-centre/early-warning-systems-reach-new-heights-critical-gaps-jeopardize-global-progress" rel="noopener" target="_blank">Global Status of Multi-Hazard Early Warning Systems 2025</a> — 119 countries (60%); 108 in 2024 and 52 in 2015.</li>
+    <li><span class="ref-org">UNEP</span><a href="https://www.unep.org/resources/adaptation-gap-report-2025" rel="noopener" target="_blank">Adaptation Gap Report 2025</a> — needs of US$310–365bn a year by 2035 against US$26bn of international public flows in 2023.</li>
+    <li><span class="ref-org">Swiss Re Institute</span><a href="https://www.swissre.com/institute/research/sigma-research/sigma-2025-01-natural-catastrophes-trend.html" rel="noopener" target="_blank">sigma 1/2025</a> — US$318bn of 2024 catastrophe losses, 57% uninsured.</li>
+    <li><span class="ref-org">ILO</span><a href="https://webapps.ilo.org/static/english/reports/flagship/world_social_protection_report_2024-26/Chapter%2003.html" rel="noopener" target="_blank">World Social Protection Report 2024–26</a> — coverage of 52.4% globally (42.8% in 2015) and by income group.</li>
+    <li><span class="ref-org">UNCTAD</span><a href="https://unctad.org/system/files/official-document/osgttinf2025d4_en.pdf" rel="noopener" target="_blank">A World of Debt 2025</a> — African per capita interest, education and health spending; <a href="https://unctad.org/publication/world-of-debt" rel="noopener" target="_blank">A World of Debt 2026</a> — US$995bn net interest and 3.7 billion people in 51 countries, as reported by <a href="https://www.aa.com.tr/en/economy/debt-interest-exceeds-health-or-education-spending-in-51-developing-countries-un/4081295" rel="noopener" target="_blank">Anadolu Agency</a>.</li>
+  </ul>
+</section>

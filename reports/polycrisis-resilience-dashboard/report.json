@@ -1,0 +1,61 @@
+{
+  "number": "2026-21",
+  "title": "Polycrisis Resilience in the Twenty-First Century",
+  "subtitle": "A dashboard on building adaptive capacity for an era of converging global risks",
+  "strapline": "Pressures are compounding faster than capacity is accumulating. The gap in adaptive capacity between the richest and poorest countries is wider today than in 1995 — and the few clear gains show where effort pays.",
+  "dek": "An interactive dashboard tracking three things at once: the pressures converging on the world system, the adaptive capacity of 190 countries to absorb them, and the financial buffers that determine whether shocks become crises. Includes a country explorer built on the ND-GAIN 2026 index.",
+  "abstract": [
+    "This dashboard assembles published indicators into a single view of polycrisis resilience: the pressures bearing on the world system, the adaptive capacity of countries to absorb them, and the financial buffers that decide whether a shock becomes a crisis. Pressures are rising on every measure tracked. NASA's GISTEMP record puts 2024 as the warmest year in the instrumental series at 1.28 °C above the 1951–1980 mean, with 2025 at 1.18 °C; the number of people forcibly displaced rose from 65.3 million at the end of 2015 to 117.8 million at the end of 2025; the UN reports that the number of people affected by climate-related disasters has more than doubled since 2015; and the World Economic Forum's 2026 survey places five environmental risks among the ten most severe over the coming decade.",
+    "Adaptive capacity is measured here with the University of Notre Dame's ND-GAIN Country Index, 2026 release, covering 190 countries with data from 1995 to 2024. Using global medians as reference lines, 73 countries combine above-median vulnerability with below-median readiness, including 23 of the 24 low-income countries in the index. The median ND-GAIN score of high-income countries exceeded that of low-income countries by 24.0 points in 1995, 25.2 in 2015 and 25.8 in 2024: on this measure the adaptive-capacity gap has not narrowed in three decades. Change since 2015 has nevertheless been uneven within groups, with two-thirds of lower-middle-income countries improving their score against fewer than half of low-income countries.",
+    "The buffers that convert capacity into protection are thin where exposure is highest. Developing countries' adaptation finance needs, estimated by UNEP at US$310–365 billion a year by 2035, are twelve to fourteen times international public flows of US$26 billion in 2023. Of US$318 billion in natural catastrophe losses in 2024, 57 per cent were uninsured. Social protection covers 52.4 per cent of the world's population but 9.7 per cent in low-income countries, and UNCTAD reports that 3.7 billion people live in countries where interest payments exceed spending on health or education.",
+    "The dashboard also tracks where capacity has demonstrably grown. Countries reporting multi-hazard early warning systems rose from 52 in 2015 to 108 in 2024 and 119 in 2025, and global social protection coverage rose from 42.8 to 52.4 per cent. These are the clearest instances in the data of capacity built deliberately at scale, and both are low-cost, institution-led interventions rather than capital-intensive ones. The interactive explorer allows readers to locate any country on the vulnerability–readiness plane, filter by region and income group, and compare its 2024 score with 2015."
+  ],
+  "jel": "Q54, O19, H12, F63, Q56 — climate and natural disasters; international linkages to development; crisis management; economic development and globalization; environment and development",
+  "method": "This dashboard compiles published data rather than producing new modelling. Country adaptive-capacity scores, vulnerability and readiness are from the University of Notre Dame Global Adaptation Initiative's ND-GAIN Country Index, 2026 release, downloaded in full (190 countries with complete 2024 data; Liechtenstein and San Marino excluded for missing values) and joined to World Bank region and income classifications from the World Bank API. The quadrant reference lines at the global medians (vulnerability 0.450, readiness 0.385), the count of 73 high-vulnerability, low-readiness countries, the income-group medians over time and the shares of countries improving since 2015 are the author's calculations from those data. Global temperature anomalies are NASA GISTEMP v4 annual land–ocean means relative to 1951–1980, not to a pre-industrial baseline. Displacement figures are from UNHCR Global Trends reports for the years shown; risk rankings from the World Economic Forum Global Risks Report 2026; early-warning coverage from UNDRR and WMO's Global Status of Multi-Hazard Early Warning Systems reports; adaptation finance from UNEP's Adaptation Gap Report 2025; catastrophe losses from Swiss Re Institute sigma 1/2025; social protection from the ILO World Social Protection Report 2024–26; debt figures from UNCTAD's A World of Debt 2025 and, for 2025 data, A World of Debt 2026 as reported on publication; and disaster and progress statements from the UN Sustainable Development Goals Report 2026. All figures were verified against their sources in October 2026. Indicators come from different sources, years and methods and are presented side by side, not combined into a composite score. The dashboard is descriptive rather than predictive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "readingTime": 12,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#0f1419",
+  "topics": [
+    "Systemic Risk",
+    "Climate Adaptation",
+    "Institutions & Governance",
+    "Development Finance"
+  ],
+  "keywords": [
+    "polycrisis",
+    "resilience",
+    "adaptive capacity",
+    "dashboard",
+    "ND-GAIN",
+    "climate vulnerability",
+    "readiness",
+    "converging risks",
+    "global risks",
+    "forced displacement",
+    "early warning systems",
+    "adaptation finance",
+    "protection gap",
+    "social protection"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "pressures", "label": "1. Pressures" },
+    { "id": "explorer", "label": "2. Capacity Explorer" },
+    { "id": "gap", "label": "3. The Capacity Gap" },
+    { "id": "buffers", "label": "4. Buffers & Finance" },
+    { "id": "gains", "label": "5. Where Capacity Grew" },
+    { "id": "reading", "label": "6. Reading the Dashboard" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "73", "label": "Countries with above-median vulnerability and below-median readiness (ND-GAIN 2024)" },
+    { "value": "25.8 pts", "label": "Adaptive-capacity gap between high- and low-income medians — wider than in 1995" },
+    { "value": "117.8m", "label": "People forcibly displaced at the end of 2025, up from 65.3m in 2015" },
+    { "value": "52 → 119", "label": "Countries with multi-hazard early warning systems, 2015 to 2025" }
+  ]
+}
