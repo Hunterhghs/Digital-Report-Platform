@@ -51,7 +51,6 @@
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --max-width: 1240px;
-  --prose-width: 50rem;   /* centred prose column between full-width panels */
 }
 
 html { color-scheme: dark; }
@@ -163,9 +162,7 @@ section > .section-dek {
   font-style: normal;
   color: var(--text-muted);
   font-size: 0.98rem;
-  max-width: var(--prose-width);
-  margin-left: auto;
-  margin-right: auto;
+  max-width: none;
 }
 section > h3 { color: var(--text); font-family: var(--sans); font-weight: 600; }
 

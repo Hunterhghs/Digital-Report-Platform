@@ -253,18 +253,32 @@ img { max-width: 100%; height: auto; }
    should still write `section:not(.abstract)` when they set a measure. */
 .content > section.abstract > p:not(.section-dek) { max-width: none; }
 
-/* Hybrid dashboard–report layout. A theme that sets --prose-width runs the
-   running prose (unclassed paragraphs and lists; the theme centres its dek to match) as a centred
-   column between full-width panels, so text never leaves a dead column on
-   one side. Unset, prose spans the content width as before. Classed
-   paragraphs (panel notes, captions) and boxed text keep their own widths. */
-.content > section:not(.abstract) > p:not([class]),
-.content > section > ul,
-.content > section > ol {
-  max-width: var(--prose-width, none);
-  margin-left: auto;
-  margin-right: auto;
+/* Hybrid dashboard–report layout: running prose set in newspaper columns so
+   it spans the same width as the panels around it. Wrap a run of paragraphs
+   in <div class="prose-cols"> (two columns) or add .prose-cols--3 for runs
+   of three or more paragraphs. Columns collapse to two, then one, as the
+   viewport narrows. */
+.prose-cols {
+  column-count: 2;
+  column-gap: 2.75rem;
+  column-rule: 1px solid var(--border-light);
+  margin: 0 0 1.8rem;
 }
+.prose-cols--3 { column-count: 3; }
+.content .prose-cols > p {
+  color: var(--text-secondary);
+  margin: 0 0 1.1rem;
+  orphans: 3;
+  widows: 3;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.content .prose-cols > p:last-child { margin-bottom: 0; }
+* + .prose-cols { margin-top: 1.6rem; }
+@media (max-width: 1100px) { .prose-cols--3 { column-count: 2; } }
+@media (max-width: 720px) { .prose-cols, .prose-cols--3 { column-count: 1; column-rule: none; } }
 
 section { scroll-margin-top: 64px; }
 
