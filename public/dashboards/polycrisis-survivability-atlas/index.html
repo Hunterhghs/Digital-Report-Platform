@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polycrisis Survivability Atlas</title>
+  <meta name="description" content="Interactive world map of national survivability risk from compounding climate, pollution, conflict, inequality, food/water and governance stresses, 2025–2100 under four SSP scenarios.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23de6b45'/%3E%3Cpath d='M4 16h24M16 2c5 4 5 24 0 28M16 2c-5 4-5 24 0 28' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    try { const t = localStorage.getItem("psa-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <div class="title-block">
+      <h1>Polycrisis Survivability Atlas</h1>
+      <p class="sub">National risk to human survivability and wellbeing from compounding stresses — climate, pollution, conflict, inequality, food &amp; water, and adaptive capacity — projected 2025–2100.</p>
+    </div>
+    <button id="themeToggle" class="ghost-btn" type="button" aria-label="Toggle colour theme">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm0 1.5v10a5 5 0 0 1 0-10Z" fill="currentColor"/></svg>
+      <span>Theme</span>
+    </button>
+  </header>
+
+  <section class="controls" aria-label="Filters">
+    <div class="ctrl">
+      <span class="ctrl-label" id="scenLabel">Scenario</span>
+      <div class="seg" id="scenarioSeg" role="radiogroup" aria-labelledby="scenLabel"></div>
+    </div>
+    <div class="ctrl ctrl-year">
+      <label class="ctrl-label" for="yearRange">Year <output id="yearOut">2050</output></label>
+      <div class="year-row">
+        <button id="playBtn" class="icon-btn" type="button" aria-label="Play timeline">
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path id="playIcon" d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>
+        </button>
+        <input id="yearRange" type="range" min="2025" max="2100" step="5" value="2050">
+      </div>
+    </div>
+    <div class="ctrl">
+      <label class="ctrl-label" for="lensSelect">Map layer</label>
+      <select id="lensSelect"></select>
+    </div>
+    <details class="ctrl weights" id="weightsPanel">
+      <summary class="ghost-btn">Index weights</summary>
+      <div class="weights-body">
+        <div id="weightSliders"></div>
+        <label class="check"><input type="checkbox" id="amplify" checked> Polycrisis amplification <span class="muted">(co-occurring stresses compound, up to +15%)</span></label>
+        <button id="resetWeights" class="ghost-btn" type="button">Reset to equal weights</button>
+      </div>
+    </details>
+  </section>
+
+  <p class="scen-blurb" id="scenBlurb"></p>
+
+  <section class="kpis" aria-label="Headline indicators">
+    <div class="kpi"><div class="kpi-label">Global risk index <span class="muted">(population-weighted)</span></div><div class="kpi-value" id="kpiGlobal">–</div><div class="kpi-foot" id="kpiGlobalFoot"></div></div>
+    <div class="kpi"><div class="kpi-label">People in High-or-worse risk countries</div><div class="kpi-value" id="kpiPop">–</div><div class="kpi-foot" id="kpiPopFoot"></div></div>
+    <div class="kpi"><div class="kpi-label">Countries at Severe or Critical risk</div><div class="kpi-value" id="kpiCount">–</div><div class="kpi-foot" id="kpiCountFoot"></div></div>
+    <div class="kpi"><div class="kpi-label">Global warming vs 1850–1900</div><div class="kpi-value" id="kpiTemp">–</div><div class="kpi-foot" id="kpiTempFoot">IPCC AR6 median for scenario</div></div>
+  </section>
+
+  <main class="grid">
+    <section class="card map-card" aria-label="World map">
+      <div class="card-head">
+        <h2 id="mapTitle">Composite survivability risk</h2>
+        <div class="map-tools">
+          <span class="muted hint">⌘/Ctrl + scroll or pinch to zoom · drag to pan</span>
+          <button id="zoomIn" class="ghost-btn small" type="button" aria-label="Zoom in">+</button>
+          <button id="zoomOut" class="ghost-btn small" type="button" aria-label="Zoom out">−</button>
+          <button id="zoomReset" class="ghost-btn small" type="button">Reset</button>
+        </div>
+      </div>
+      <div class="map-wrap" id="mapWrap">
+        <svg id="map" role="img" aria-label="Choropleth world map of risk scores; use the table below for exact values"></svg>
+        <div class="map-status" id="mapStatus">Loading map…</div>
+      </div>
+      <div class="legend" id="legend" aria-label="Map legend"></div>
+    </section>
+
+    <aside class="card detail-card" aria-label="Country detail" aria-live="polite">
+      <div class="detail-head">
+        <div>
+          <div class="eyebrow" id="detRegion"></div>
+          <h2 id="detName">Select a country</h2>
+        </div>
+        <div class="det-score">
+          <div class="det-value" id="detValue">–</div>
+          <div class="tier-pill" id="detTier"></div>
+        </div>
+      </div>
+      <div class="det-meta" id="detMeta"></div>
+      <h3 class="mini-h">Stress dimensions <span class="muted">· tick = 2025 baseline</span></h3>
+      <div id="detBars" class="dim-bars"></div>
+      <h3 class="mini-h">Composite trajectory by scenario</h3>
+      <div class="chart-box"><svg id="detChart" class="line-chart" role="img" aria-label="Composite risk trajectory for the selected country under four scenarios"></svg></div>
+    </aside>
+
+    <section class="card global-card" aria-label="Global trajectory">
+      <div class="card-head"><h2>Global risk trajectory</h2></div>
+      <p class="card-note">Population-weighted composite index, all countries, by scenario. Pathways diverge mostly after 2050 as warming and development choices compound.</p>
+      <div class="chart-box tall"><svg id="globalChart" class="line-chart" role="img" aria-label="Global population-weighted risk index by scenario, 2025 to 2100"></svg></div>
+      <h3 class="mini-h">Population by risk tier, <span id="tierYear">2050</span></h3>
+      <div id="tierBar" class="tier-bar"></div>
+      <div id="tierBarLegend" class="tier-bar-legend"></div>
+    </section>
+
+    <section class="card table-card" aria-label="Country table">
+      <div class="card-head">
+        <h2>Country rankings</h2>
+        <div class="table-tools">
+          <input id="search" type="search" placeholder="Search country" aria-label="Search country">
+          <select id="regionSelect" aria-label="Filter by region"></select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="table">
+          <thead><tr id="theadRow"></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <section class="card method" id="method">
+    <h2>Methodology &amp; caveats</h2>
+    <div class="method-grid">
+      <div>
+        <h3>What “survivability risk” means here</h3>
+        <p>A 0–100 index of the likelihood that a country’s population faces severe, systemic threats to life, health and livelihoods this century — not a prediction of collapse. It combines six interacting stresses of the <em>polycrisis</em>: climate hazard exposure, pollution burden, conflict &amp; violence, inequality &amp; poverty, food &amp; water insecurity, and the deficit in adaptive capacity (state fragility, institutions, readiness).</p>
+        <h3>Baseline (c. 2025)</h3>
+        <p>Each dimension is a rounded, composite estimate informed by public indices: ND-GAIN (exposure &amp; readiness), INFORM Risk, WHO / AQLI ambient PM2.5, IHME Global Burden of Disease, UCDP / ACLED and the Global Peace Index, World Bank Poverty &amp; Inequality Platform, FAO SOFI / IPC food-insecurity data, WRI Aqueduct water stress, and the Fragile States Index. Population figures approximate the UN World Population Prospects 2024 (medium variant).</p>
+      </div>
+      <div>
+        <h3>Projection model</h3>
+        <ul>
+          <li><strong>Warming</strong> follows IPCC AR6 median global surface temperature for each SSP.</li>
+          <li><strong>Climate hazard</strong> saturates toward 100 with additional warming, scaled by a country sensitivity factor (tropics, drylands and low-lying coasts are more sensitive).</li>
+          <li><strong>Adaptive capacity, pollution and inequality</strong> evolve with each SSP’s socio-economic narrative; warming adds wildfire/ozone pollution and climate-driven inequality.</li>
+          <li><strong>Food &amp; water</strong> rise with warming, damped where adaptive capacity is strong.</li>
+          <li><strong>Conflict</strong> relaxes from today’s level toward a structural level driven by capacity, inequality, food stress and climate.</li>
+          <li><strong>Composite</strong> = weighted mean of the six dimensions, amplified up to 15% when several stresses are simultaneously ≥ 60 (compounding risk).</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Read with care</h3>
+        <p>This is an exploratory scenario tool with deliberately simple, transparent dynamics. Scores are indicative and rounded; they are not official statistics or forecasts. Small states, sub-national hot spots, tipping points, migration, pandemics, technological change and policy surprises are not modelled. Use the weights to test how sensitive rankings are to what you value, and consult the source datasets for decisions.</p>
+        <p class="muted">Map: Natural Earth via world-atlas (1:110m). Borders are shown for reference and imply no position on disputed territory.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">Polycrisis Survivability Atlas · scenario explorer · data are indicative estimates</footer>
+
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
