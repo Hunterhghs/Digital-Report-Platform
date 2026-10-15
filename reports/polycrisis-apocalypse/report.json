@@ -1,0 +1,61 @@
+{
+  "number": "2026-24",
+  "title": "The Polycrisis Apocalypse",
+  "subtitle": "How a global polycrisis could spiral into civilisational collapse lasting centuries — and what keeps repair ahead of stress",
+  "strapline": "Not a single catastrophe but a race: crises add stress, civilisation's capacity repairs it, and stress erodes the capacity that does the repairing. When the race is lost, history suggests the regression that follows is measured in centuries.",
+  "dek": "A hybrid dashboard and report that defines the Polycrisis Apocalypse — a term coined by H Heuristics for a polycrisis that outruns humanity's capacity to manage it and ends in a prolonged civilisational regression — and tests it against the historical record, an interactive model of the stress–repair race and a ledger of today's ten crisis domains.",
+  "abstract": [
+    "This report defines and examines the Polycrisis Apocalypse, a term coined by H Heuristics for a scenario in which multiple interconnected global crises intensify and reinforce one another beyond humanity's capacity to manage them, triggering cascading systemic failures that end in the collapse of industrial civilisation and a prolonged period of societal regression lasting centuries or millennia. Unlike a conventional apocalypse, it has no single cause or moment. It is a process, and the report argues that its decisive variable is the balance between two rates: the rate at which interacting crises add stress, and the rate at which a civilisation's institutions, infrastructure and finance repair it.",
+    "The historical record shows that such regressions are common and slow. In the Mycenaean world, writing disappeared with the palaces around 1200 BCE and did not return for roughly four and a half centuries; Roman-era lead pollution recorded in Greenland ice fell with the Antonine Plague of 165 CE and did not regain its level for more than 500 years; Egypt's First Intermediate Period lasted about 125 years. Survival analysis of premodern states finds that their risk of termination rises over the first two centuries of their existence, and one survey of past civilisations puts their average lifespan at about 336 years. Collapse, in this record, is a loss of complexity rather than of people, and recovery is measured in generations.",
+    "An interactive model makes the mechanism explicit. Crises arrive at random and add stress; capacity repairs stress but saturates when stress is high; stress erodes capacity; and amplification between crises depends on how interconnected the system is. The model has a sharp threshold. At its default settings, 91 per cent of 300 simulated runs collapse within 1,000 years and the median dark age lasts 471 years, but raising repair capacity by a sixth cuts that share to 27 per cent, loosening coupling cuts it to 10 per cent, and a combination of levers removes it entirely. Faster rebuilding, through preserved knowledge and institutions, does not prevent collapse but reduces the share of time spent collapsed from 51 to 19 per cent. The model is illustrative, not a forecast.",
+    "Today's ledger shows stress rising on most of the ten crisis domains in the definition — seven of nine planetary boundaries breached in 2025 against three in 2009, 65 state-based armed conflicts in 2025, 673 million people hungry in 2024 — while several measures of repair capacity weaken: official development assistance fell 23.1 per cent in real terms in 2025, the largest drop on record, and global human development gained 2.75 thousandths a year in 2019–2023 against 5.6 in the 2000s. Modern societies still recover fast, as the return of life expectancy after the pandemic shows. The report concludes that the Polycrisis Apocalypse is avoidable precisely because it is a race: the levers that keep repair ahead of stress — reducing shocks at source, loosening the couplings between systems, sustaining the capacity to repair, and preserving the means to rebuild — are known, and the model shows they compound."
+  ],
+  "jel": "N00, Q54, Q56, O10, H87, D74 — economic history; climate and natural disasters; environment and development; economic development; international public goods; conflict",
+  "method": "The definition is the author's. Historical durations are approximate and drawn from the sources listed: the Mycenaean palace collapse and the end of Linear B (c. 1200 BCE) and the adoption of the Greek alphabet (c. 750 BCE); Egypt's First Intermediate Period (c. 2181–2055 BCE); the decline of the Harappan cities (c. 1900–1700 BCE) and the second urbanisation of the Ganges plain (c. 6th century BCE), which is a regional shift rather than a like-for-like recovery; and Roman-era lead emissions in Greenland ice (McConnell et al. 2018, PNAS), which did not return to Pax Romana levels for more than 500 years after 165 CE. The stress–repair model is the author's illustrative construction, run annually in the browser with a seeded random number generator: each year a crisis arrives with probability equal to the chosen frequency per decade divided by ten, with an exponentially distributed size scaled by 0.3 + 0.7 × capacity; stress changes by the crisis plus coupling × capacity × stress, minus repair × capacity × stress / (1 + stress / 0.5), minus 0.03 × stress; capacity changes by 0.2 × capacity × (1 − capacity) × capacity / (capacity + a) minus 0.06 × stress × capacity, with a floor of 0.02, where a falls as the rebuild setting rises (1, 0.5, 0.3, 0.15, 0.05). A run is counted as collapsed when capacity falls below 0.25 and as recovered when it next exceeds 0.75. Monte Carlo statistics use 300 runs with seeds 1000–1299 over 1,000 years; the heatmap uses 100 runs per cell over 300 years. Model outputs are illustrative and depend on assumed parameters; they are not probabilities of real-world collapse. Present-day indicators are from the Planetary Health Check 2025 and earlier planetary boundaries assessments, UCDP/PRIO Armed Conflict Dataset v26.1, NASA GISTEMP v4, the UNDP Human Development Report 2025 data (HDI, life expectancy and material footprint per capita, 1990–2023), FAO SOFI 2025, the WHO/UNICEF JMP 2025, UN World Population Prospects 2024, the CDRI Global Infrastructure Resilience report 2023, WHO excess-mortality estimates, the IMF LIC DSA list (31 March 2026), OECD preliminary ODA data for 2025, OCHA, and the Bulletin of the Atomic Scientists.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cutive+Mono&display=swap",
+  "themeColor": "#1c1712",
+  "topics": [
+    "Systemic Risk",
+    "Institutions & Governance",
+    "Environment & Biodiversity"
+  ],
+  "keywords": [
+    "Polycrisis Apocalypse",
+    "polycrisis",
+    "civilisational collapse",
+    "societal collapse",
+    "systemic risk",
+    "global catastrophic risk",
+    "dark ages",
+    "resilience",
+    "complexity",
+    "planetary boundaries",
+    "tipping points",
+    "critical slowing down",
+    "simulation",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "definition", "label": "1. Definition" },
+    { "id": "history", "label": "2. The Historical Record" },
+    { "id": "model", "label": "3. The Spiral Model" },
+    { "id": "ledger", "label": "4. The Present Ledger" },
+    { "id": "warnings", "label": "5. Early Warnings" },
+    { "id": "offramps", "label": "6. Off-Ramps" },
+    { "id": "method", "label": "7. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "7 of 9", "label": "Planetary boundaries breached in 2025, against 3 in the first assessment in 2009" },
+    { "value": "500+ yrs", "label": "Before Roman-era lead pollution in Greenland ice returned to its 2nd-century level" },
+    { "value": "91% → 27%", "label": "Model runs collapsing within 1,000 years when repair capacity rises by a sixth (illustrative)" },
+    { "value": "−23.1%", "label": "Official development assistance in 2025, the largest annual fall on record" }
+  ]
+}
