@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 21st Century Dashboard — H Heuristics</title>
+  <meta name="description" content="H Heuristics' systems dashboard for the 21st century: diffusion of innovations, economic convergence, demographic shifts, the polycrisis, human exposure, the clean transition, AI and frontier innovation.">
+  <meta property="og:title" content="The 21st Century Dashboard — H Heuristics">
+  <meta property="og:description" content="Nine systems, one coupled century. Data · Clarity · Judgment.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F7F3EB">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Apply persisted theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem('hh-theme');
+        if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="#overview" aria-label="H Heuristics — 21st Century Dashboard">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span class="brand-text">
+          <span class="brand-name">H Heuristics</span>
+          <span class="brand-eyebrow">The 21st Century Dashboard</span>
+        </span>
+      </a>
+      <div class="masthead-tools">
+        <span class="meta-pill" id="meta-pill"></span>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <span id="theme-label">Dark</span>
+        </button>
+        <button class="icon-btn" id="print-btn" type="button" aria-label="Print this view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Print</span>
+        </button>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Dashboard sections"></nav>
+  </header>
+
+  <main id="main"></main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><span class="footer-brand">H Heuristics</span><span class="footer-tag">Data · Clarity · Judgment</span></div>
+      <div id="footer-meta"></div>
+      <div>Figures compiled from public sources cited on each panel. Values marked ≈ are approximate. Analytical instrument, not a primary data source.</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
