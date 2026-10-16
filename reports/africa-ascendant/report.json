@@ -1,0 +1,62 @@
+{
+  "number": "2026-25",
+  "title": "Africa Ascendant",
+  "subtitle": "Five centuries of African demography, the global diaspora and the spread of mixed ancestry, 1500–2500",
+  "strapline": "Africa held about one person in eight in 1600, fell to one in twelve by 1920, and regained its old share around 2000. The UN projects 37.5 per cent of humanity by 2100; over the following centuries, through migration and intermarriage, African ancestry could become the most widely shared heritage on Earth. Prevalence, not proportion, is the point.",
+  "dek": "A hybrid dashboard and report on Africa's population over a thousand years — the historical arc from 1500, the UN century to 2100, transparent scenarios to 2500 — and on the diaspora and mixed ancestry that carry African heritage far beyond the continent, with interactive models of long-run fertility and of how ancestry spreads.",
+  "abstract": [
+    "Africa's demographic weight has followed a thousand-year U-curve. Historical reconstructions put the continent at about 13 per cent of humanity in 1600 and 1700; its population then stagnated through the era of the Atlantic slave trade, from 79 million in 1750 to 81 million in 1800, and its share fell to 8 per cent by 1920. It regained its seventeenth-century share around 2000, at 0.83 billion or 13.5 per cent, and reached 1.52 billion or 18.6 per cent in 2024. The UN's World Population Prospects 2024 medium variant projects 3.81 billion by 2100, 37.5 per cent of a world of 10.2 billion, with Africa accounting for 47 per cent of the world's children under 15.",
+    "Beyond 2100 there are no official projections. This report extends the UN series with a transparent scenario engine in which each region's growth converges on the rate implied by its long-run fertility. Over four centuries the outcome is dominated by that single assumption: holding the rest of the world at replacement, Africa reaches 2.5 billion in 2500 if its fertility settles at 2.0 children per woman, 4.6 billion at 2.1 and 8.0 billion at 2.2. The H Heuristics Africa Ascendant scenario, in which Africa reaches about 5.6 billion or 52 per cent of humanity by 2500, corresponds to long-run fertility of about 2.14 in Africa against 2.10 elsewhere — Africa marginally above replacement for four centuries.",
+    "African heritage outside the continent is carried in three layers. The first is the historical diaspora created by the Atlantic slave trade, in which some 10 million people survived the crossing to the Americas; about 200 million people in the Americas now identify as being of African descent. The second is contemporary migration: UN DESA counts 20.7 million African-born people living outside Africa in 2024, triple the 1990 figure but still only 1.4 per cent of Africa's population, rising to between 56 and 114 million by 2100 under mobility envelopes of 1.47 to 3 per cent. The third is mixed ancestry, which spreads through intermarriage far faster than migration: genetic studies find African ancestry among millions who do not identify as being of African descent.",
+    "Ancestry prevalence and ancestry proportion behave differently. An interactive model shows that when a group making up 10 per cent of a population mixes moderately with the rest, the share of people with any of its ancestry rises to 43 per cent within ten generations and 67 per cent within fifteen, while the average ancestry share stays at 10 per cent. Applied to the world, the share of humanity with any recent African ancestry — Africa's population plus people elsewhere with at least one African ancestor — reaches between 44 and 54 per cent by 2100 across plausible mixing speeds, bracketing the Africa Ascendant figure of about 48 per cent, and between 75 and 100 per cent by 2500, against the scenario's 77 per cent. These ancestry figures are illustrative scenarios, not census counts; no global dataset measures them."
+  ],
+  "jel": "J11, J10, F22, J15, N30, O55 — demographic trends and forecasts; demographic economics; international migration; minorities and race; economic history of labour and population; Africa",
+  "method": "Population, fertility, age structure and median age for 1950–2100 are from the UN World Population Prospects 2024 (medium variant for projections), via Our World in Data; Africa is the UN region. Historical populations for 1500–1940 are from the HYDE reconstruction as published by Our World in Data and are highly uncertain for Africa before the twentieth century. Migrant stocks are from UN DESA International Migrant Stock 2024 (origin Africa, by destination region, 1990–2024). Post-2100 populations are scenarios: each region's annual growth converges exponentially (time constant 50 years) from its 2099–2100 UN rate to the stable-population rate ln(TFR / 2.1) / 29, where TFR is the chosen long-run fertility, 2.1 is taken as replacement and 29 years as the generation length. The defaults (Africa 2.136, rest of the world 2.098) are calibrated to the H Heuristics Africa Ascendant scenario's 2500 anchors of 5.6 billion and 5.135 billion. People outside Africa with any recent African ancestry are modelled from an assumed 2025 base (central 440 million, the dashboard's anchor) that grows with the outside-Africa population, spreads through mixed unions at m / 30 × a × (1 − a / N) a year, where m is mixing intensity per 30-year generation (1 = random mating) and N the outside-Africa population, and is topped up by new African-born arrivals equal to the chosen mobility ratio times Africa's population divided by an average stay of 30 years. The prevalence-versus-proportion illustration tracks the full distribution of ancestry fractions (bins of 1/256) over generations, with a share m of children born to randomly paired parents and the rest to like-with-like pairs. Everyone living in Africa is counted as having African ancestry. 'African ancestry' throughout means recent ancestry from people of the continent in historical times; all humans share deeper African ancestry from the dispersal out of Africa tens of thousands of years ago. All post-2100 and all ancestry figures are illustrative scenarios, not forecasts or census counts.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Albert+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Victor+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#1b1f3d",
+  "topics": [
+    "Emerging Markets",
+    "Human Capital",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "Africa",
+    "population projections",
+    "demography",
+    "World Population Prospects 2024",
+    "fertility",
+    "African diaspora",
+    "international migration",
+    "mixed ancestry",
+    "genealogy",
+    "admixture",
+    "long-run scenarios",
+    "youth bulge",
+    "Africa Ascendant",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "arc", "label": "1. A Thousand-Year Arc" },
+    { "id": "century", "label": "2. The UN Century" },
+    { "id": "beyond", "label": "3. Beyond 2100" },
+    { "id": "diaspora", "label": "4. The Diaspora" },
+    { "id": "prevalence", "label": "5. Prevalence, Not Proportion" },
+    { "id": "worldwide", "label": "6. African Ancestry Worldwide" },
+    { "id": "meaning", "label": "7. What It Means" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "13% → 8% → 37.5%", "label": "Africa's share of humanity in 1700, 1920 and (UN projection) 2100" },
+    { "value": "20.7 m", "label": "African-born people living outside Africa in 2024 — 1.4 per cent of Africa's population" },
+    { "value": "43% vs 10%", "label": "Share with any of a group's ancestry after ten generations of moderate mixing, against its unchanged average share" },
+    { "value": "44–54%", "label": "Humanity with any recent African ancestry by 2100 across mixing scenarios (illustrative)" }
+  ]
+}
