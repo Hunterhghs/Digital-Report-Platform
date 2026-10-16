@@ -1,0 +1,60 @@
+{
+  "number": "2026-26",
+  "title": "The Polycrisis Bill",
+  "subtitle": "What interacting crises are costing the world this century — an interactive ledger, 2025–2100",
+  "strapline": "Every 1 per cent of world output lost each year this century adds up to about $260 trillion. Depending on what is counted, the polycrisis already costs between 1 and 23.5 per cent of output a year; on plausible paths the century's bill runs from hundreds of trillions to several quadrillion dollars — and prevention costs a fraction of it.",
+  "dek": "A hybrid dashboard and report that puts a price on the polycrisis: an interactive ledger of today's measured losses across disasters, heat, pollution, violence and climate liabilities; the evidence on how those losses grow; a century calculator for 2025–2100 with growth and discounting; and the economics of prevention.",
+  "abstract": [
+    "This report estimates what the polycrisis — interacting crises in climate, pollution, health, conflict and ecosystems — is costing the world economy, and what it could cost by 2100. It begins with a ledger of published annual estimates: direct disaster losses of about $0.3 trillion (an average of $368 billion in 2024 and $224 billion in 2025), heat-related labour losses of $1.09 trillion (2024), air-pollution health damage of $8.1 trillion (2019), the non-military economic impact of violence, about 6.4 per cent of world output (2024), world military spending of $2.72 trillion (2024), and $8.0 trillion of future climate damage locked in each year by current emissions at the US EPA's social cost of carbon. These figures measure different things — lost output, welfare including lives, defensive spending, future liabilities — so they cannot simply be summed. Depending on which accounts are included, the annual cost ranges from about 1.2 per cent of 2025 world output ($1.4 trillion, market losses only) to 8 per cent with health, 14 per cent with violence and 23.5 per cent with security spending and accrued climate liabilities.",
+    "The losses are projected to grow. Swiss Re's stress test puts climate-related losses at 11 to 18 per cent of world output by 2050 in higher-warming scenarios; the World Bank projects antimicrobial resistance costing 1.1 to 3.8 per cent of output by 2050 and the collapse of selected ecosystem services $2.7 trillion a year by 2030. Some widely cited projections, including the 2024 NGFS damage estimates, rest on a study that has since been retracted, and are flagged accordingly.",
+    "A century calculator turns these shares into a bill. At 2.5 per cent real growth, world output between 2025 and 2100 totals about $26 quadrillion in 2025 dollars, so every percentage point of output lost each year costs about $262 trillion over the century. A central path in which losses rise from 4 to 10 per cent of output gives about $2.1 quadrillion undiscounted — $205 trillion in 2025–2049, $529 trillion in 2050–2074 and $1.33 quadrillion in 2075–2100 — or $781 trillion in present value at a 2 per cent discount rate. A low path (2 to 5 per cent) gives $1.0 quadrillion and a high path (8 to 20 per cent) $4.1 quadrillion. Commonly quoted ranges of $600 trillion to $3 quadrillion correspond to losing between 2.3 and 11.5 per cent of output every year.",
+    "Prevention is cheap by comparison. In the calculator, spending 1.5 per cent of output a year to avoid 40 per cent of losses, phased in over twenty years, returns about $2 for every $1 over the century and saves about $400 trillion net — a conservative result next to the Global Commission on Adaptation's benefit-cost ratios of 2 to 10. International adaptation finance, at $26 billion in 2023, meets less than a tenth of the $310–365 billion a year that developing countries need. The figures in this report are scenarios built from published estimates; they show orders of magnitude and the accounting choices that drive them, not forecasts."
+  ],
+  "jel": "Q54, Q51, Q53, H56, I15, E01, D61 — climate and natural disasters; valuation of environmental effects; air pollution; national security and war; health and economic development; measurement of national income; cost–benefit analysis",
+  "method": "World output is the World Bank's World Development Indicators estimate for 2025 (US$118.35 trillion, current prices). Ledger entries are published estimates in their own years: Munich Re natural catastrophe losses for 2024 (US$368 billion) and 2025 (US$224 billion), averaged; Lancet Countdown 2025 heat-related labour income loss for 2024 (US$1.09 trillion); World Bank health cost of PM2.5 air pollution for 2019 (US$8.1 trillion, 6.1 per cent of world GDP, a welfare measure including the value of lives); Institute for Economics and Peace Global Peace Index 2025 economic impact of violence for 2024 (US$19.97 trillion in purchasing-power terms, 11.6 per cent of gross world product, about 45 per cent military spending) — the non-military share, 6.4 per cent, is applied to 2025 world output to put it in market terms; SIPRI world military expenditure for 2024 (US$2.718 trillion); Newman and Noy (2023) climate-attributable extreme-weather costs, 2000–2019 average (US$143 billion a year); Global Carbon Budget 2025 total CO2 emissions (42.2 Gt) valued at the US EPA's 2023 social cost of carbon of US$190 per tonne (2 per cent discount rate); and the World Bank's projection of US$2.7 trillion a year in losses by 2030 from the collapse of selected ecosystem services. Ledger totals are shares of 2025 world output; entries are not adjusted for overlap, which is flagged where known. The century calculator assumes constant real growth g from US$118.35 trillion in 2025, a loss share that rises linearly from s0 in 2025 to s1 in 2100, and discounting at rate r; periods are 2025–2049, 2050–2074 and 2075–2100. The prevention calculator assumes prevention spending of c per cent of output each year avoids a fraction a of losses, phased in linearly over 20 years. All values are in 2025 US dollars at market exchange rates unless stated. Outputs are illustrative scenarios, not forecasts.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "readingTime": 16,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Cousine:wght@400;700&display=swap",
+  "themeColor": "#1d2a24",
+  "topics": [
+    "Systemic Risk",
+    "Development Finance",
+    "Climate Adaptation"
+  ],
+  "keywords": [
+    "polycrisis",
+    "cost of polycrisis",
+    "economic losses",
+    "climate damages",
+    "social cost of carbon",
+    "air pollution cost",
+    "economic impact of violence",
+    "natural catastrophe losses",
+    "heat stress productivity",
+    "discounting",
+    "cost-benefit analysis",
+    "prevention",
+    "adaptation finance",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "ledger", "label": "1. The Annual Ledger" },
+    { "id": "accounting", "label": "2. Why the Number Moves" },
+    { "id": "trajectory", "label": "3. How Losses Grow" },
+    { "id": "century", "label": "4. The Century Bill" },
+    { "id": "prevention", "label": "5. What Prevention Buys" },
+    { "id": "method", "label": "6. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "$262 tn", "label": "Cost over 2025–2100 of losing 1 per cent of world output every year, at 2.5 per cent growth" },
+    { "value": "1.2–23.5%", "label": "Annual polycrisis cost as a share of 2025 world output, from market losses only to the full ledger" },
+    { "value": "$2.1 qn", "label": "Century bill on a central path of losses rising from 4 to 10 per cent of output (undiscounted)" },
+    { "value": "≈ 2 : 1", "label": "Return on prevention in the calculator's conservative central case" }
+  ]
+}

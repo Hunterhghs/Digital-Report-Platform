@@ -1,0 +1,301 @@
+/* ===========================================================================
+   Theme — Report 2026-26, "The Polycrisis Bill"
+
+   Aesthetic: the account ledger. The report is an accounting exercise, so the
+   page borrows the accountant's paper: the masthead is a ledger sheet — pale
+   ruled lines in ledger blue with the red double margin line down the left —
+   and every h2 is double-underlined, the bookkeeper's mark for a total.
+   Losses are written in red ink, prevention in green, liabilities in ledger
+   blue. Old Standard TT (a nineteenth-century book face) for display, Source
+   Serif 4 for prose, Cousine (a typewriter-metric mono) for figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours,
+   and charts.js reads the --c-* tokens so no hex lives in the script.
+   =========================================================================== */
+
+:root {
+  --bg: #f3f4ec;
+  --bg-card: #fcfdf8;
+  --bg-accent: #e9ece0;
+  --bg-dark: #1d2a24;
+  --bg-dark-2: #131c18;
+
+  --text: #1c2620;
+  --text-secondary: #3c4740;
+  --text-muted: #67726b;
+  --text-inverse: #f3f4ec;
+
+  --primary: #1d2a24;
+  --primary-light: #a3241b;
+  --accent: #a3241b;
+  --accent-light: #d98a83;
+
+  --border: #d9ddcd;
+  --border-light: #e6e9dc;
+  --rule: #c9cebb;
+
+  --ledger-blue: #9db7d1;
+  --margin-red: #c95a52;
+
+  --c-loss: #a3241b;
+  --c-welfare: #c8742c;
+  --c-response: #7d7f78;
+  --c-liability: #1f4e79;
+  --c-prevent: #2e7a4f;
+  --c-gdp: #9aa39b;
+
+  --chart-blue: #1f4e79;
+  --chart-blue-light: #8fb0cf;
+  --chart-gold: #c8742c;
+  --chart-red: #a3241b;
+  --chart-teal: #2e7a4f;
+  --chart-gray: #8b938c;
+  --chart-orange: #d0884a;
+  --chart-purple: #6b5591;
+
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --display: "Old Standard TT", Georgia, serif;
+  --mono: "Cousine", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1.04rem; line-height: 1.62; }
+
+::selection { background: rgba(163, 36, 27, 0.16); }
+:where(a, button, [tabindex], input, select):focus-visible { outline: 2px solid var(--c-liability); outline-offset: 2px; }
+
+a { color: var(--c-liability); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--accent); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: a ledger sheet ----------------------------------------------------- */
+
+.masthead {
+  position: relative;
+  color: var(--text);
+  border-bottom: 2px solid var(--text);
+  padding: 3rem var(--gutter) 2.6rem calc(var(--gutter) + 28px);
+  background:
+    linear-gradient(90deg, transparent 0 22px, var(--margin-red) 22px 23.5px, transparent 23.5px 27px, var(--margin-red) 27px 28.5px, transparent 28.5px),
+    repeating-linear-gradient(180deg, transparent 0 27px, var(--ledger-blue) 27px 28px),
+    #fbfcf6;
+}
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -7px;
+  height: 2px;
+  background: var(--text);
+}
+.masthead .overline {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.masthead .overline::before { content: "HYBRID DASHBOARD · ACCOUNT 2025–2100 · "; color: var(--text); }
+.masthead h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6.2vw, 4.1rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  max-width: 16ch;
+  color: var(--text);
+}
+.masthead .subtitle { font-family: var(--serif); font-style: italic; color: var(--text-secondary); font-weight: 400; font-size: 1.2rem; max-width: 60ch; }
+.masthead .strapline {
+  font-family: var(--serif);
+  font-style: normal;
+  font-size: 1.06rem;
+  color: var(--text);
+  background: rgba(252, 253, 248, 0.86);
+  border-left: 3px solid var(--accent);
+  max-width: 76ch;
+}
+.masthead .meta-row {
+  border-top: 1px solid var(--rule);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+}
+.masthead .meta-row strong {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+}
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(243, 244, 236, 0.96); border-bottom: 1px solid var(--rule); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.74rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* --- headings: the bookkeeper's double underline ------------------------------------ */
+
+section > h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.3vw, 2.05rem);
+  letter-spacing: -0.005em;
+  color: var(--text);
+  border-bottom: 0;
+  padding-bottom: 0.75rem;
+  background:
+    linear-gradient(var(--accent), var(--accent)) 0 calc(100% - 4px) / 130px 2px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 0 100% / 130px 2px no-repeat,
+    linear-gradient(var(--rule), var(--rule)) 0 calc(100% - 4px) / 100% 1px no-repeat;
+}
+section > .section-dek { font-family: var(--serif); font-style: italic; color: var(--text-muted); font-size: 1.1rem; max-width: none; }
+.abstract h2, .endmatter h2 { background: none; }
+
+.section-rule { border-top: 1px solid var(--rule); margin: 2.6rem 0 2.8rem; }
+
+/* --- generated blocks ------------------------------------------------------------ */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--accent); }
+.abstract h2 { color: var(--accent); font-family: var(--mono); letter-spacing: 0.14em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.7rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.66rem; }
+
+/* --- KPI board --------------------------------------------------------------------- */
+
+.kpi-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1.6rem 0; }
+.kpi {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1rem 1.05rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-top: 3px double var(--k, var(--text));
+  border-top-width: 5px;
+}
+.kpi--loss { --k: var(--c-loss); }
+.kpi--liab { --k: var(--c-liability); }
+.kpi--prev { --k: var(--c-prevent); }
+.kpi-value { font-family: var(--mono); font-weight: 700; font-size: clamp(1.35rem, 2.6vw, 1.85rem); letter-spacing: -0.02em; line-height: 1.1; color: var(--k, var(--text)); font-variant-numeric: tabular-nums; }
+.kpi-label { font-size: 0.9rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.45rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; }
+
+/* --- readout ------------------------------------------------------------------------- */
+
+.readout {
+  background: var(--bg-dark);
+  padding: 1.15rem 1.4rem 0.45rem;
+  margin: 1.6rem 0;
+  border-left: 4px solid var(--accent);
+}
+.readout-title { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 0.4rem !important; }
+.readout p { color: #dfe5dc; text-align: justify; hyphens: auto; -webkit-hyphens: auto; font-size: 1.06rem; }
+.readout strong { color: #fff; }
+
+/* --- panels ---------------------------------------------------------------------------- */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.dash-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.dash-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.panel { background: var(--bg-card); border: 1px solid var(--border); padding: 1rem 1.1rem 0.9rem; min-width: 0; }
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.1rem 1.2rem 1rem; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-title { font-family: var(--display); font-weight: 700; font-size: 1.05rem; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); margin: 0.2rem 0 0.4rem !important; }
+.panel-note { font-size: 0.88rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 300px; }
+.panel .chart-frame--tall { height: 380px; }
+.panel .chart-frame--short { height: 250px; }
+
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); padding: 0.85rem 1rem; border-left: 4px solid var(--k, var(--text)); }
+.stat-tile--loss { --k: var(--c-loss); }
+.stat-tile--liab { --k: var(--c-liability); }
+.stat-tile--prev { --k: var(--c-prevent); }
+.stat-tile-value { font-family: var(--mono); font-weight: 700; font-size: 1.45rem; color: var(--k, var(--text)); margin: 0 !important; font-variant-numeric: tabular-nums; }
+.stat-tile-label { font-size: 0.86rem; color: var(--text-muted); margin: 0.15rem 0 0 !important; text-align: left !important; line-height: 1.42; }
+
+/* --- the interactive ledger ------------------------------------------------------------- */
+
+.ledger-wrap { overflow-x: auto; }
+.ledger { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 0.95rem; }
+.ledger th, .ledger td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border-light); text-align: left; vertical-align: top; }
+.ledger thead th { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; border-bottom: 1px solid var(--rule); }
+.ledger td.amt { font-family: var(--mono); text-align: right; white-space: nowrap; color: var(--c-loss); }
+.ledger td.amt.is-off { color: var(--text-muted); text-decoration: line-through; }
+.ledger td.src { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); }
+.ledger .acct { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.1rem 0.4rem; border: 1px solid currentColor; white-space: nowrap; }
+.acct--output { color: var(--c-loss); }
+.acct--welfare { color: var(--c-welfare); }
+.acct--response { color: var(--c-response); }
+.acct--liability { color: var(--c-liability); }
+.ledger input[type="checkbox"] { accent-color: var(--c-loss); width: 16px; height: 16px; margin: 2px 0 0; }
+.ledger tfoot td { border-bottom: 0; padding-top: 0.7rem; font-family: var(--mono); font-weight: 700; }
+.ledger tfoot td.amt { border-top: 1.5px solid var(--text); box-shadow: 0 4px 0 -1px var(--bg-card), 0 5px 0 0 var(--text); }
+.ledger tr.is-overlap td { background: rgba(200, 116, 44, 0.06); }
+
+/* --- controls ---------------------------------------------------------------------------- */
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 22px; margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+.slider { display: grid; gap: 3px; }
+.slider-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider label { font-family: var(--display); font-weight: 700; font-size: 0.92rem; color: var(--text); }
+.slider output { font-family: var(--mono); font-size: 0.82rem; color: var(--accent); white-space: nowrap; }
+.slider .hint { font-size: 0.82rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); margin: 2px 0; }
+.seg-wrap { display: grid; gap: 5px; }
+.seg-wrap .seg-label { font-family: var(--display); font-weight: 700; font-size: 0.92rem; color: var(--text); }
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); overflow: hidden; background: var(--bg); width: fit-content; }
+.segmented button { font: inherit; font-family: var(--mono); font-size: 0.74rem; padding: 0.42rem 0.72rem; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--text); color: #fff; }
+
+/* --- period table ------------------------------------------------------------------------ */
+
+.periods { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 0.95rem; }
+.periods th, .periods td { padding: 0.55rem 0.65rem; border-bottom: 1px solid var(--border-light); text-align: right; }
+.periods th:first-child, .periods td:first-child { text-align: left; }
+.periods thead th { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; border-bottom: 1px solid var(--rule); }
+.periods td { font-family: var(--mono); }
+.periods td.loss { color: var(--c-loss); font-weight: 700; }
+.periods td.ref { color: var(--text-muted); }
+.periods tr.total td { border-top: 1.5px solid var(--text); border-bottom: 3px double var(--text); font-weight: 700; }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--accent); font-size: 0.68rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 6px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(var(--accent), var(--accent)) 0 0 / 100% 2px no-repeat, linear-gradient(var(--accent), var(--accent)) 0 4px / 100% 2px no-repeat; }
+.footer-inner h3 { color: #fff; font-family: var(--display); font-weight: 700; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board, .dash-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dash-grid--three { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .dash-grid, .dash-grid--four { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2.2rem; }
+}
+@media (max-width: 420px) {
+  .kpi-board { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .controls, .ledger input { display: none; }
+  .masthead, .readout { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* presets row in the calculators: give it room, and style its hint like the sliders' */
+.seg-wrap .hint { font-size: 0.82rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+@media (min-width: 900px) { .controls .seg-wrap { grid-column: span 2; } }
