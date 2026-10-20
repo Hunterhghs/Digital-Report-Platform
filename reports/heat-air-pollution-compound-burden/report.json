@@ -1,0 +1,62 @@
+{
+  "number": "2026-38",
+  "title": "The Compounding Burden of Heat and Air Pollution",
+  "subtitle": "Understanding overlapping exposure, physiological stress and climate-sensitive health inequalities",
+  "strapline": "Heat and polluted air are warned about, studied and managed separately, but they arrive on the same days, strain the same organs and fall on the same people. Each makes the other deadlier. This dashboard measures the overlap in 149 large cities and 125 countries, traces it through the body, and asks who carries the compound burden and with what protection.",
+  "dek": "Very hot days are deadlier when the air is dirty: across 620 cities, a very hot day raised deaths by 12.8% when particle pollution was high against 5.3% when it was low. And the two hazards travel together — in 2024 ozone was higher on hot days in 131 of 149 large cities. About 2.6 billion people live in countries that are both hot and polluted, three-quarters of the population of lower-middle-income countries against 4% in high-income ones.",
+  "abstract": [
+    "This report examines extreme heat and air pollution as a single compound hazard. It combines three kinds of evidence. First, a new analysis of 149 large cities in 126 countries pairs daily 2024 temperatures from the ERA5 reanalysis with modelled daily PM2.5 and ozone from the Copernicus Atmosphere Monitoring Service for each city's hottest three months. Second, it synthesises physiological and epidemiological evidence on how heat and pollution interact, led by a study of 22.6 million deaths in 620 cities. Third, it maps national exposure, vulnerability and health capacity using satellite-derived PM2.5, ERA5 warm-season temperatures and World Bank indicators.",
+    "Heat and pollution coincide. Ozone was higher on locally hot days than on other days of the hot season in 131 of the 149 cities, and fine particles in 113, each by a median of 13%. Weighted by population, 85% of hot days exceeded a WHO daily guideline for particles or ozone, against 75% of other hot-season days. The contrast is sharpest in high-income cities, where heat is what turns usually clean air bad; in the most polluted cities of South Asia and the Sahel almost every hot day is also a polluted one. The hazards also interact in the body: heat strains the heart, lungs and kidneys through thermoregulation and inflammation, and particles and ozone act through oxidative stress, inflammation and autonomic and clotting pathways. Moving from the 75th to the 99th percentile of city temperature raised daily mortality by 5.3% when PM10 was 10 µg/m³ and by 12.8% when it was 90; for ozone the corresponding figures were 2.9% and 12.5%.",
+    "The burden is unequal. About 2.6 billion people live in countries whose largest cities had at least 30 days at or above 35 °C in 2024 and whose population-weighted PM2.5 is at least 25 µg/m³ — 74% of the population of lower-middle-income countries, 24% in low-income, 9% in upper-middle-income and 4% in high-income countries. Averaged over their populations, the largest cities of lower-middle-income countries also had 105 nights at or above 25 °C in 2024, against 13 in high-income countries. Vulnerability takes different forms — an older population in rich countries, outdoor work and young populations in poor ones — but the capacity to respond, measured by median health spending per person, is 32 times higher in high-income than in low-income countries.",
+    "The report concludes that heat and air pollution should be managed as one risk: with combined warnings and health advice, protection for outdoor workers and older adults on days when both hazards peak, cool and filtered refuges, and cuts in ozone precursors, solid-fuel burning and smoke that lower the pollution that makes heat deadlier. An interactive city explorer, physiology map, joint-effect calculator, double-exposure scatter and atlas with a vulnerability lens accompany the analysis."
+  ],
+  "jel": "I14, I18, Q53, Q54, J81 — health and inequality; public health policy; air pollution; climate and natural disasters; working conditions",
+  "method": "Cities: the largest city of every country with at least 5 million people (GeoNames cities15000), plus up to seven further cities of over one million at least one degree apart for the most populous countries — 149 cities in 126 countries. Daily maximum and minimum temperature for 2024 come from the ERA5 reanalysis via the Open-Meteo archive API; hourly PM2.5 and ozone for each city's hottest three consecutive months come from the CAMS global model via the Open-Meteo air-quality API. Daily PM2.5 is the 24-hour mean and daily ozone the maximum 8-hour running mean. A day is locally hot if its maximum temperature is at or above the city's 2024 90th percentile, and polluted if PM2.5 exceeds 15 µg/m³ or ozone exceeds 100 µg/m³ (WHO 2021 guidelines); stricter interim targets of 37.5 and 160 µg/m³ are also reported. National PM2.5 is population-weighted SatPM (Washington University in St. Louis) via Our World in Data; warm-season temperature is the mean of each country's three hottest months in ERA5 national monthly means (area-weighted) via Our World in Data, compared with 1961–1990. Vulnerability and capacity use World Bank indicators of age structure, employment in agriculture and industry, and current health expenditure per person. Country heat values are population-weighted city averages. Double exposure is defined as at least 30 days at or above 35 °C and PM2.5 of at least 25 µg/m³ (adjustable in the dashboard). The compound burden index is the mean of percentile ranks for hot days, PM2.5, the chosen vulnerable group's population share and low health spending. Epidemiological estimates are as published. Grid-cell model data do not capture street-level, indoor or within-city differences.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,600..900&family=Gantari:wght@400;500;600&family=Oxygen+Mono&display=swap",
+  "themeColor": "#14121a",
+  "topics": [
+    "Public Health",
+    "Climate Adaptation",
+    "Inequality",
+    "Cities"
+  ],
+  "keywords": [
+    "extreme heat",
+    "air pollution",
+    "compound exposure",
+    "ozone",
+    "PM2.5",
+    "effect modification",
+    "heat-health",
+    "hot nights",
+    "outdoor workers",
+    "older adults",
+    "health inequality",
+    "ERA5",
+    "CAMS",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "days", "label": "1. The Same Days" },
+    { "id": "body", "label": "2. The Body" },
+    { "id": "map", "label": "3. Double Exposure" },
+    { "id": "burden", "label": "4. Unequal Burden" },
+    { "id": "warming", "label": "5. A Hotter Season" },
+    { "id": "protect", "label": "6. Joined-up Protection" },
+    { "id": "method", "label": "7. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "5.3% → 12.8%", "label": "Extra deaths on a very hot day at low vs high particle pollution, 620 cities" },
+    { "value": "131 / 149", "label": "Large cities where ozone was higher on hot days in 2024" },
+    { "value": "2.6 bn", "label": "People in countries that are both hot and polluted" },
+    { "value": "74% vs 4%", "label": "Doubly exposed share of the population, lower-middle- vs high-income countries" }
+  ]
+}
