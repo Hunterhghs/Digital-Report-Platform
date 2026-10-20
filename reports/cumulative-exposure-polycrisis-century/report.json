@@ -1,0 +1,62 @@
+{
+  "number": "2026-35",
+  "title": "Human Exposure Across the Polycrisis Century",
+  "subtitle": "Projecting cumulative environmental, climatic and socioeconomic risks from 2025 to 2100",
+  "strapline": "Exposure is lived in years, not snapshots. Between 2025 and 2100 humanity will live about 739 billion person-years. On current trends, 180 billion of them will be spent under two or more of three hazards at once: polluted air, a hot climate and a high-risk country. Which levers shrink that total, and how fast, is a choice made mostly in the next few decades.",
+  "dek": "Humanity will live about 739 billion person-years between 2025 and 2100. On current trends, 180 billion of them will be spent under at least two of three hazards: polluted air, a hot climate and a high-risk country. Counting exposure cumulatively shows that clean air and resilience with peace each avoid more of those years this century than the gap between warming pathways, though mitigation decides how many people end up near the edge of the human climate niche.",
+  "abstract": [
+    "This report measures human exposure to the polycrisis as cumulative person-years: the total years that people will live under a given hazard between 2025 and 2100. It combines UN World Population Prospects 2024 projections for 191 countries with three hazards. The environmental hazard is fine-particle air pollution above the WHO's third interim target of 15 µg/m³. The climatic hazard is a national mean temperature of 27°C or more, recomputed under four IPCC warming pathways, with 29°C — the upper edge of the human climate niche — reported separately. The socioeconomic hazard is living in a country that the INFORM Risk Index classes as high or very high risk. Over the century humanity will live about 739 billion person-years.",
+    "On current trends — the IPCC's middle pathway SSP2-4.5, air pollution falling by 2% a year as it has since 2016, and today's risk map — 306 billion person-years are spent in air above the interim target, 148 billion in hot climates and 259 billion in high-risk countries. 180 billion, about a quarter of all person-years, are spent under two or more hazards at once, and 47 billion under all three. Sub-Saharan Africa accounts for 56% of the overlapping exposure, South Asia for 26% and the Middle East and North Africa for 12%. Exposure is also unevenly spread in time: 54% of the century's air-pollution person-years fall before 2050, but only a quarter of its high-risk person-years, which grow as populations in high-risk countries rise.",
+    "Different levers shrink different parts of the total. Compared with current trends, cutting air pollution by 5% a year avoids 61 billion person-years of overlapping exposure, and bringing every country to its income peers' resilience by 2050 while halving conflict avoids 71 billion. Moving from SSP2-4.5 to SSP1-2.6 avoids 11 billion within this century, because most warming before 2050 is already locked in. Mitigation matters most at the extreme: person-years in countries whose mean temperature reaches 29°C rise from 12.5 billion under SSP1-2.6 to 51 billion under SSP2-4.5, 80 billion under SSP3-7.0 and 131 billion under SSP5-8.5. Drift — high emissions and stalled clean-air progress — would double the overlap to 367 billion person-years, while combining all three levers would cut it to 54 billion.",
+    "The report concludes that cumulative exposure this century is decided by near-term, local action as much as by the global emissions pathway: clean air because pollution is a large exposure now, resilience and peace because risk is concentrated where populations grow fastest, and mitigation because it caps the extreme heat that dominates the late century and beyond. An interactive scenario builder lets readers combine pathways and see the cumulative totals, the overlap and its geography. All results rest on national averages and simple, stated assumptions; they are scenarios, not forecasts."
+  ],
+  "jel": "Q53, Q54, J11, I15, O15, D63 — air pollution; climate and natural disasters; demographic trends and forecasts; health and economic development; human resources; equity and intergenerational distribution",
+  "method": "Person-years are the sum over years 2025–2100 of each country's population (UN World Population Prospects 2024, medium variant, via Our World in Data, interpolated from five-year values) in the years when it meets a hazard condition. Air pollution: population-weighted PM2.5 (SatPM, Washington University in St. Louis, via Our World in Data, latest year 2024, including natural dust) changing at a constant annual rate per scenario (stall 0%; trend −2.0%, the world's 2016–2024 rate; clean-air push −5%), compared with the WHO 2021 interim target 3 (15 µg/m³) and guideline (5 µg/m³). Heat: national 1991–2020 mean temperature (ERA5, Copernicus, area-weighted, via Our World in Data) plus local warming of 1.36 times the global warming above 1991–2020 (taken as 0.85°C above pre-industrial), where 1.36 converts the IPCC's land-to-ocean warming ratio of about 1.6 into a land-to-global ratio; global warming follows IPCC AR6 best estimates for SSP1-2.6, SSP2-4.5, SSP3-7.0 and SSP5-8.5 (1.5–1.6°C in 2021–2040, 1.7–2.4°C in 2041–2060, 1.8–4.4°C in 2081–2100), interpolated from 1.38°C in 2025 and extended to 2100 at the 2050–2090 slope. Hot means a national mean of 27°C or more; 29°C, the upper edge of the human climate niche used by Lenton et al. (2023), is reported separately. Risk: INFORM Risk Mid-2026 class of high or very high (5.4 or more), frozen, or moved linearly by 2050 to the income-peer benchmark for vulnerability and coping (with conflict hazard halved in the peace variant), recomputed with INFORM's formula as in this series' human-exposure report. National averages hide within-country variation; area-weighted temperatures understate heat where people live in cool highlands and overstate it in empty deserts; the 15 territories without temperature data are treated as not hot. All outputs are scenarios, not forecasts.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 16,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Hind:wght@400;500;600&family=B612+Mono:wght@400;700&display=swap",
+  "themeColor": "#1e2228",
+  "topics": [
+    "Systemic Risk",
+    "Climate Adaptation",
+    "Public Health",
+    "Human Capital"
+  ],
+  "keywords": [
+    "cumulative exposure",
+    "person-years",
+    "polycrisis",
+    "air pollution",
+    "extreme heat",
+    "human climate niche",
+    "SSP scenarios",
+    "INFORM Risk Index",
+    "population projections",
+    "compound risk",
+    "2100",
+    "scenario builder",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "ledger", "label": "1. The Century's Ledger" },
+    { "id": "air", "label": "2. Air" },
+    { "id": "heat", "label": "3. Heat" },
+    { "id": "risk", "label": "4. Risk" },
+    { "id": "overlap", "label": "5. Overlap" },
+    { "id": "levers", "label": "6. Levers" },
+    { "id": "builder", "label": "7. Scenario Builder" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "739 bn", "label": "Person-years humanity will live from 2025 to 2100 on the UN medium projection" },
+    { "value": "180 bn", "label": "Person-years under two or more hazards on current trends — a quarter of the century" },
+    { "value": "−71 · −61 · −11 bn", "label": "Overlap avoided by resilience with peace, faster clean air, and SSP1-2.6 instead of SSP2-4.5" },
+    { "value": "12.5 → 131 bn", "label": "Person-years in countries with a mean temperature of 29°C or more, SSP1-2.6 to SSP5-8.5" }
+  ]
+}
