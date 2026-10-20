@@ -1,0 +1,61 @@
+{
+  "number": "2026-37",
+  "title": "The Unequal Geography of Human Air Pollution Exposure",
+  "subtitle": "How industrialisation, income, urban form and energy access shape population exposure",
+  "strapline": "The average person on Earth breathes air six times dirtier than the World Health Organization's guideline, but the burden is not shared evenly. It peaks in lower-middle-income countries that are industrialising, urbanising densely and still cooking with solid fuels, and it is falling fastest where it is already lowest. This dashboard maps the gradient and asks which of its drivers policy can move.",
+  "dek": "The poorest half of humanity breathes 66% of the world's fine-particle exposure above the WHO guideline. Exposure peaks not in the poorest countries but in lower-middle-income ones, where industry, dense cities and solid-fuel cooking coincide: their population-weighted average is 42.5 µg/m³, against 12.5 in high-income countries. Since 2010 three in four high-income countries have cleaned their air, against fewer than half of lower-middle-income ones.",
+  "abstract": [
+    "This report maps the geography of human exposure to fine particulate matter (PM2.5), the air pollutant most strongly linked to premature death, and examines what explains it. It uses satellite-derived, population-weighted PM2.5 for 215 countries and territories from 2000 to 2024 (SatPM, Washington University in St. Louis, via Our World in Data) and World Bank indicators of income, industrial structure, urbanisation, population density, clean-cooking access and rainfall, with coal's share of electricity from the Energy Institute via Our World in Data. In 2024 the population-weighted world average was 30.0 µg/m³, six times the WHO guideline of 5 µg/m³. Almost nobody lives in a country that meets the guideline, and 35% of humanity lives in countries averaging more than 35 µg/m³, the WHO's least stringent interim target.",
+    "Exposure is unequal and follows an inverted U with income. Lower-middle-income countries average 42.5 µg/m³, low-income countries 30.0, upper-middle-income 26.0 and high-income 12.5. Ranking the world's population by national income per head, the poorest half bears 66% of the exposure above the guideline. Regionally, South Asia averages 46.0 µg/m³ and the Middle East and North Africa 41.4, while North America averages 7.4. Trends are diverging: since 2010 exposure has fallen by 30% in China and by 19–46% in the United States and much of Europe; in South Asia it has fallen by 9% from a far higher level, in sub-Saharan Africa and the Middle East and North Africa it has barely moved, and in Latin America it has risen by 10%.",
+    "A cross-country model explains 62% of the variation in exposure across 172 countries with 98% of the world's population. In a Shapley decomposition of that explained variation, income accounts for 0.18 of the R², industrialisation 0.13, rainfall (a proxy for natural desert dust) 0.13, urban form 0.11 and access to clean cooking 0.07. Holding other factors constant, countries at the 75th percentile of industry's share of GDP have exposure about 33% higher than those at the 25th, and those at the 75th percentile of clean-cooking access about 18% lower. Dust raises exposure across the Middle East and the Sahel independently of policy.",
+    "The report concludes that the geography of exposure is largely a geography of development stage, and so it is movable: the drivers that matter most — industrial emissions, dense urban growth and household solid fuels — are the ones that high-income countries and China have shown can be cut. An interactive atlas, scatter explorer and country profiles let readers trace each country's position and test, within the model, how changes in its drivers relate to predicted exposure. The model shows associations, not causal effects."
+  ],
+  "jel": "Q53, Q56, O13, O18, R11, I14 — air pollution; environment and development; energy; urban form; regional economics; health inequality",
+  "method": "Exposure is national population-weighted annual mean PM2.5 from the SatPM satellite-derived product (Atmospheric Composition Analysis Group, Washington University in St. Louis, 2026 release) via Our World in Data, 2000–2024, including natural sources such as desert dust. World, income-group and regional averages are weighted by World Bank population for each year, using the current World Bank classification. Drivers are the latest value from 2015–2024 of World Bank World Development Indicators: GDP per capita (PPP, constant 2021 international $), industry value added (% of GDP), urban population (%), population in urban agglomerations of more than 1 million (% of total, set to zero where no such city exists), population density, access to clean fuels and technologies for cooking (%, total, urban and rural), access to electricity and average precipitation (mm a year); coal's share of electricity is from the Energy Institute Statistical Review and Ember via Our World in Data. The model regresses log PM2.5 in 2024 on log income and its square, industry share, coal share of electricity, urban share, million-city share, log density, clean-cooking access and log precipitation (OLS, n = 172, R² = 0.62, heteroskedasticity-robust standard errors); the Shapley decomposition averages each group's marginal R² over all orderings. The exposure concentration curve ranks the population of 198 countries by GDP per capita. Results describe associations across countries, not causal effects, and national averages hide large differences within countries.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 16,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;800&family=Encode+Sans:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap",
+  "themeColor": "#b53048",
+  "topics": [
+    "Public Health",
+    "Inequality",
+    "Urbanisation",
+    "Energy Access"
+  ],
+  "keywords": [
+    "air pollution",
+    "PM2.5",
+    "exposure inequality",
+    "environmental Kuznets curve",
+    "industrialisation",
+    "urban form",
+    "clean cooking",
+    "energy access",
+    "desert dust",
+    "concentration curve",
+    "SatPM",
+    "WHO air quality guideline",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "map", "label": "1. The Map" },
+    { "id": "gradient", "label": "2. The Income Gradient" },
+    { "id": "drivers", "label": "3. Four Drivers" },
+    { "id": "explorer", "label": "4. Driver Explorer" },
+    { "id": "divergence", "label": "5. Divergence" },
+    { "id": "pathways", "label": "6. Pathways" },
+    { "id": "method", "label": "7. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "30.0 µg/m³", "label": "Population-weighted world average PM2.5 in 2024, six times the WHO guideline" },
+    { "value": "66%", "label": "Share of exposure above the guideline borne by the poorest half of humanity" },
+    { "value": "42.5 vs 12.5", "label": "µg/m³ in lower-middle-income vs high-income countries, 2024" },
+    { "value": "R² 0.62", "label": "Cross-country variation explained by income, industry, urban form, energy access and rainfall" }
+  ]
+}
