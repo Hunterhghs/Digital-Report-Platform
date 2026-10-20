@@ -138,31 +138,73 @@ function card(r) {
 </article>`;
 }
 
-function leadReport(r) {
-  const highlights = (r.highlights || [])
-    .map((h) => `<li><b>${esc(h.value)}</b><span>${esc(h.label)}</span></li>`)
-    .join('');
-
-  return `<article class="lead-report">
-  <div>
-    <p class="kicker">Latest report · № ${esc(r.number)} · ${esc(longDate(r.published))}</p>
-    <h2><a href="/reports/${escAttr(r.slug)}/">${esc(r.title)}</a></h2>
-    <p class="dek">${esc(r.dek)}</p>
-    ${highlights ? `<ul class="highlights">${highlights}</ul>` : ''}
-    <a class="readbtn" href="/reports/${escAttr(r.slug)}/">Read the report</a>
-  </div>
-</article>`;
-}
-
-function pageHead(overline, title, dek, cadence = false) {
+function pageHead(overline, title, dek) {
   return `<header class="pagehead">
   <div class="pagehead-inner">
     <p class="overline">${esc(overline)}</p>
     <h1>${esc(title)}</h1>
     <p>${esc(dek)}</p>
-    ${cadence ? '<p class="cadence"><span class="dot"></span>New report every week</p>' : ''}
   </div>
 </header>`;
+}
+
+// --- front page fragments ----------------------------------------------------
+//
+// The front page reads as an editorial index: a paper nameplate, the lead
+// report beside a "cover" set in that report's own masthead colour, recent
+// reports as cover cards, and the whole series as a numbered contents list.
+
+const COVER_FALLBACK = '#1a1f2b';
+const coverColor = (r) =>
+  /^#[0-9a-f]{3,8}$/i.test(r.themeColor || '') ? r.themeColor : COVER_FALLBACK;
+const issueNo = (r) => String(r.number).split('-').pop();
+
+function fpLead(r) {
+  const highlights = (r.highlights || [])
+    .map((h) => `<li><b>${esc(h.value)}</b><span>${esc(h.label)}</span></li>`)
+    .join('');
+  const href = `/reports/${escAttr(r.slug)}/`;
+
+  return `<section class="fp-lead" style="--rc:${escAttr(coverColor(r))}" aria-labelledby="fp-lead-title">
+  <div class="fp-lead__text">
+    <p class="fp-kicker"><span>Latest report</span> № ${esc(r.number)} · ${esc(longDate(r.published))} · ${esc(String(r.readingTime))} min read</p>
+    <h2 id="fp-lead-title"><a href="${href}">${esc(r.title)}</a></h2>
+    ${r.subtitle ? `<p class="fp-lead__sub">${esc(r.subtitle)}</p>` : ''}
+    <p class="fp-lead__dek">${esc(r.dek)}</p>
+    <div class="fp-lead__foot">
+      <a class="readbtn" href="${href}">Read the report</a>
+      <div class="fp-chips">${(r.topics || []).map(chip).join(' ')}</div>
+    </div>
+  </div>
+  <a class="fp-cover" href="${href}" aria-label="${escAttr(`${r.title}: key figures`)}">
+    <span class="fp-cover__no" aria-hidden="true">${esc(issueNo(r))}</span>
+    <span class="fp-cover__label">Key figures</span>
+    ${highlights ? `<ul>${highlights}</ul>` : ''}
+  </a>
+</section>`;
+}
+
+function fpCard(r) {
+  return `<article class="fp-card" style="--rc:${escAttr(coverColor(r))}">
+  <div class="fp-card__band" aria-hidden="true">
+    <span class="fp-card__no">${esc(issueNo(r))}</span>
+    <span class="fp-card__topic">${esc((r.topics || [])[0] || '')}</span>
+  </div>
+  <div class="fp-card__body">
+    <p class="fp-card__meta">№ ${esc(r.number)} · ${esc(monthYear(r.published))} · ${esc(String(r.readingTime))} min</p>
+    <h3><a href="/reports/${escAttr(r.slug)}/">${esc(r.title)}</a></h3>
+    <p>${esc(r.dek)}</p>
+  </div>
+</article>`;
+}
+
+function fpIndexRow(r) {
+  return `<li style="--rc:${escAttr(coverColor(r))}">
+  <span class="fp-idx__no">${esc(r.number)}</span>
+  <span class="fp-idx__title"><a href="/reports/${escAttr(r.slug)}/">${esc(r.title)}</a>${r.subtitle ? `<small>${esc(r.subtitle)}</small>` : ''}</span>
+  <span class="fp-idx__topics">${(r.topics || []).slice(0, 2).map(esc).join(' · ')}</span>
+  <span class="fp-idx__date">${esc(longDate(r.published))}</span>
+</li>`;
 }
 
 const libraryPage = ({ title, desc, pathname, current, body }) =>
@@ -221,47 +263,74 @@ function buildAssets() {
 function buildHome(reports) {
   const [lead, ...rest] = reports;
   const featured = rest.slice(0, site.homeFeatured);
-
   const topics = topicIndex(reports);
-  const rail = topics
+  const firstYear = reports.length ? reports[reports.length - 1].published.slice(0, 4) : '';
+
+  const tiles = topics
     .map(
       ([t, list]) =>
-        `<a href="${escAttr(topicHref(t))}">${esc(t)} <b>${list.length}</b></a>`,
+        `<a class="fp-topic" href="${escAttr(topicHref(t))}"><b>${list.length}</b><span>${esc(t)}</span></a>`,
     )
     .join('');
 
-  const body = `${pageHead(
-    `${site.name} · ${site.tagline}`,
-    'Digital Reports',
-    site.description,
-    true,
-  )}
-<main class="shell" id="main">
+  const body = `<header class="fp-head">
+  <div class="fp-wrap">
+    <div class="fp-topline">
+      <span>${esc(site.name)} · ${esc(site.tagline)}</span>
+      ${lead ? `<span>Latest № ${esc(lead.number)} · ${esc(longDate(lead.published))}</span>` : ''}
+    </div>
+    <h1 class="fp-title">Digital Reports</h1>
+    <div class="fp-strap">
+      <p>${esc(site.description)}</p>
+      <dl class="fp-stats">
+        <div><dt>Reports</dt><dd>${reports.length}</dd></div>
+        <div><dt>Topics</dt><dd>${topics.length}</dd></div>
+        ${firstYear ? `<div><dt>Since</dt><dd>${esc(firstYear)}</dd></div>` : ''}
+      </dl>
+    </div>
+  </div>
+</header>
+<main class="fp" id="main">
   ${
     lead
-      ? leadReport(lead)
+      ? fpLead(lead)
       : `<div class="empty">No reports published yet. Add one with <code>npm run new</code>.</div>`
   }
 
   ${
     featured.length
-      ? `<h2 class="band-title">More from the series <span class="count">${reports.length} total</span></h2>
-  <div class="card-grid">${featured.map(card).join('\n')}</div>`
+      ? `<section class="fp-band">
+    <h2 class="fp-band__title"><span>Recent reports</span><a href="/reports/">All ${reports.length} reports →</a></h2>
+    <div class="fp-grid">${featured.map(fpCard).join('\n')}</div>
+  </section>`
       : ''
   }
 
   ${
     topics.length
-      ? `<h2 class="band-title" style="margin-top:3rem">Browse by topic</h2>
-  <div class="topic-rail">${rail}</div>`
+      ? `<section class="fp-band">
+    <h2 class="fp-band__title"><span>Browse by topic</span><a href="/topics/">All topics →</a></h2>
+    <div class="fp-topics">${tiles}</div>
+  </section>`
       : ''
   }
 
-  <h2 class="band-title" style="margin-top:3rem">About the series</h2>
-  <div class="prose">
-    <p>${esc(site.name)} ${esc(site.property)} are web-native research reports: read in the browser, with live data visuals, source links on every quantitative claim, and a full citation. A new report is published each week.</p>
-    <p>Citable PDF editions of the underlying research are held in the <a href="${escAttr(site.archive.url)}" rel="noopener" target="_blank">${esc(site.archive.label)}</a>, indexed for Google Scholar. <a href="/about/">More about the series →</a></p>
-  </div>
+  ${
+    reports.length
+      ? `<section class="fp-band">
+    <h2 class="fp-band__title"><span>The full index</span><span class="fp-band__count">${reports.length} reports, newest first</span></h2>
+    <ol class="fp-idx">${reports.map(fpIndexRow).join('\n')}</ol>
+  </section>`
+      : ''
+  }
+
+  <section class="fp-band fp-about">
+    <h2 class="fp-band__title"><span>About the series</span></h2>
+    <div class="fp-about__cols">
+      <p>${esc(site.name)} ${esc(site.property)} are web-native research reports: read in the browser, with live data visuals, source links on every quantitative claim, and a full citation on every page.</p>
+      <p>Citable PDF editions of the underlying research are held in the <a href="${escAttr(site.archive.url)}" rel="noopener" target="_blank">${esc(site.archive.label)}</a>, indexed for Google Scholar. <a href="/about/">More about the series →</a></p>
+    </div>
+  </section>
 </main>`;
 
   write('index.html', libraryPage({
@@ -375,8 +444,8 @@ function buildAbout(reports) {
     <p>${esc(site.name)} ${esc(site.property)} is an independent research series on systemic risk, climate resilience, development finance and the energy transition — the interlocking pressures that decide how well societies absorb the shocks now arriving together.</p>
     <p>Each report is written for the browser rather than for paper. Charts are live data visuals rather than pictures of charts; every quantitative claim links to its primary source; and each report carries a report number, a publication date and a citation line, so it can be referenced like any other working paper.</p>
 
-    <h2>Cadence</h2>
-    <p>A new digital report is published each week. The series is cumulative: earlier reports stay online at stable addresses, and the argument develops across them rather than restarting each time.</p>
+    <h2>A cumulative series</h2>
+    <p>The series is cumulative: earlier reports stay online at stable addresses, and the argument develops across them rather than restarting each time.</p>
 
     <h2>Method</h2>
     <p>The reports are syntheses. They draw on institutional and peer-reviewed research — the IEA, IRENA, the IPCC, the World Bank, UNEP, the WHO and the WMO among others — and on primary reporting of country programmes. They are analytical rather than predictive: where a figure is a schematic or an illustrative scenario rather than a measurement, the caption says so.</p>

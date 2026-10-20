@@ -30,7 +30,7 @@ export default {
   property: 'Digital Reports',
   tagline: 'Navigating a Changing World',
   description:
-    'Web-native long-form research on systemic risk, climate resilience, development finance and the energy transition. New reports weekly.',
+    'Web-native long-form research on systemic risk, climate resilience, development finance and the energy transition.',
   author: 'Hunter Hughes',
   email: 'hunter.hughes.r@gmail.com',
   series: 'Digital Report',

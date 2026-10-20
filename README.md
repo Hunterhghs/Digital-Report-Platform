@@ -2,7 +2,7 @@
 
 Publishing platform for the **H Heuristics Digital Report** series — web-native
 long-form research read in the browser, with live data visuals, source links on
-every quantitative claim, and a citation on every page. A new report each week.
+every quantitative claim, and a citation on every page.
 
 Sibling to the [Research Archive](https://researchreports.hheuristics.com),
 which holds the citable, Google Scholar-indexed PDF editions. This platform is
