@@ -1,0 +1,61 @@
+{
+  "number": "2026-41",
+  "title": "Six of Nine Boundaries Breached — What Transgressing Planetary Limits Actually Means",
+  "subtitle": "Translating Earth system science into language that decision-makers can act on",
+  "strapline": "“Six of nine” was the 2023 headline; the 2025 and 2026 Planetary Health Checks found seven, each now at its worst recorded level. This dashboard translates all 14 control variables into the terms decisions are made in — where we are, how far beyond safety, what is at stake, who holds the levers, which agreements exist, and how reversible the damage is — and closes with the one boundary humanity has already pulled back.",
+  "dek": "The 2023 headline was six of nine planetary boundaries breached; by 2025–26 it is seven, all worsening. Measured as a multiple of the disturbance each boundary allows, humanity has used 2.1 times its CO₂ allowance, 3.1 times its climate-forcing allowance, about 2.7–2.9 times its nitrogen and phosphorus allowances and 11 to 111 times its extinction allowance. Each boundary translates into a budget, a floor, a ceiling or a ban — and the ozone layer shows a breached boundary can be brought back.",
+  "abstract": [
+    "This report translates the planetary boundaries framework into language and instruments decision-makers use. The framework defines nine Earth-system processes and sets for each a boundary on human disturbance that keeps the risk of destabilising the planet low. Richardson et al. (2023) found six of nine boundaries transgressed; the Planetary Health Check produced by the Potsdam Institute for Climate Impact Research assessed ocean acidification as transgressed in 2025, and its 2026 edition found seven of nine transgressed, each at its highest recorded level, with only stratospheric ozone and global aerosol loading improving.",
+    "Using the 2026 assessment's 14 control variables, the report places each on a common scale relative to its boundary and its high-risk line. Climate forcing (+3.10 W/m², against +1.0), the extinction rate (100–1,000 extinctions per million species-years, against 10), human appropriation of plant production (21–30%, against 10%), agricultural nitrogen fixation (165 Tg/yr, against 62) and mined phosphorus (18.2 Tg/yr, against 6.2) are in the high-risk zone; CO₂ concentration (426 ppm), forest cover (64% of potential, against 78%), blue- and green-water disturbance (about 22% of land, against about 13%) and ocean acidification are in the zone of increasing risk. Expressed as a multiple of the disturbance each boundary allows, humanity has used between 1.0 and 111 times its safe allowance, with food- and land-driven pressures overspent as badly as the climate.",
+    "Each boundary maps onto a familiar decision instrument: budgets for carbon, nitrogen and phosphorus; floors for forests and species; ceilings on water disturbance; and a ban on untested release of novel entities. Because fossil fuels, food systems and materials drive almost every transgression, the levers are concentrated in a small number of portfolios, and existing frameworks — the Paris Agreement, the Kunming-Montreal Global Biodiversity Framework, chemicals conventions — already cover parts of the task.",
+    "The ozone layer shows that a breached boundary can be restored: under the Montreal Protocol, consumption of ozone-depleting substances fell by 99% from its 1989 peak, stratospheric ozone is back within its boundary, and recovery to 1980 values is projected for around 2040–2066 depending on region. Interactive decision cards, a boundary wheel, gauges for every control variable, a disturbance-multiple chart and a decision-maker lens accompany the analysis."
+  ],
+  "jel": "Q57, Q56, Q58, Q54, H41 — ecological economics; environment and development; environmental policy; climate; public goods",
+  "method": "Control-variable values, planetary boundaries and high-risk lines are the best estimates of the Planetary Health Check 2026 (Potsdam Institute for Climate Impact Research, summary report). Pre-industrial reference values are taken from the 2026 report where stated (blue water), implied by its boundary definitions (ozone about 292 DU from a 5% decline to 277.4 DU; aragonite about 3.575 from the 80% boundary of 2.86), or otherwise from Richardson et al. (2023, Table 1). The count of transgressed boundaries follows the 2009, 2015 and 2023 framework papers and the 2025 and 2026 Planetary Health Checks. Gauge position is (current − boundary) ÷ (high-risk line − boundary); the multiple of safe disturbance is (current − pre-industrial) ÷ (boundary − pre-industrial). Both assume linear scales and depend on reference values, some revised between assessments; changes between assessments are not presented as trends except for CO₂ concentration and radiative forcing. Context series (NOAA CO₂; ozone-depleting substance consumption; ozone-hole area; Living Planet Index; nitrogen fertiliser use; forest area) are from Our World in Data and NOAA. Decision cards and the actor matrix are the author's synthesis of the assessments and policy frameworks cited.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 16,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,800;1,500&family=Mukta:wght@400;500;600&family=Nova+Mono&display=swap",
+  "themeColor": "#0d1a24",
+  "topics": [
+    "Systemic Risk",
+    "Ecosystems",
+    "Climate Change",
+    "Governance"
+  ],
+  "keywords": [
+    "planetary boundaries",
+    "safe operating space",
+    "Planetary Health Check",
+    "Earth system",
+    "biosphere integrity",
+    "nitrogen",
+    "phosphorus",
+    "ocean acidification",
+    "novel entities",
+    "Montreal Protocol",
+    "Kunming-Montreal Global Biodiversity Framework",
+    "science communication",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "count", "label": "1. From Six to Seven" },
+    { "id": "dashboard", "label": "2. The Dashboard" },
+    { "id": "distance", "label": "3. How Far Beyond" },
+    { "id": "translate", "label": "4. Translating the Science" },
+    { "id": "actors", "label": "5. Who Holds the Levers" },
+    { "id": "proof", "label": "6. Proof It Can Be Done" },
+    { "id": "method", "label": "7. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "7 of 9", "label": "Boundaries transgressed in the 2025 and 2026 Planetary Health Checks — up from six in 2023" },
+    { "value": "3.1×", "label": "Human-caused radiative forcing relative to its safe level" },
+    { "value": "11–111×", "label": "Extinction rate as a multiple of the safe disturbance" },
+    { "value": "−99%", "label": "Ozone-depleting substance consumption since 1989 — the boundary that came back" }
+  ]
+}
