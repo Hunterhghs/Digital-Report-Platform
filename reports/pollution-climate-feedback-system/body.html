@@ -1,0 +1,341 @@
+<section id="overview">
+  <h2>Overview</h2>
+  <p class="section-dek">Greenhouse gases and toxic pollution come out of the same chimneys, meet in the same air and land on the same lungs, leaves and soils. They act as one system, and the levers that work on both should go first.</p>
+
+  <div class="prose-cols">
+    <p>Climate change and air pollution are usually handled by different ministries, treaties and scientific communities. The atmosphere does not make that distinction. The burning of coal, oil, gas and biomass releases carbon dioxide alongside sulphur dioxide, nitrogen oxides, black carbon and mercury. Methane is both a greenhouse gas and a precursor of ground-level ozone, which harms lungs and crops and also traps heat. Sulphate aerosols damage health but reflect sunlight and brighten clouds, hiding part of the warming caused by greenhouse gases. Warming in turn changes the chemistry: hotter air makes more ozone, and hotter, drier landscapes burn more readily, filling the air with smoke.</p>
+    <p>This dashboard traces those interactions with the published data behind the IPCC's Sixth Assessment Report and recent health assessments. It follows three kinds of coupling: <strong>shared sources</strong>, which give almost every pollutant a climate fingerprint; <strong>feedback loops</strong>, in which warming worsens pollution and pollution weakens the ecosystems that absorb carbon; and <strong>coupled solutions</strong>, in which the order of action matters because cleaning the air can unmask warming. Its conclusion is practical: clean air is a health necessity, and it should be paired with fast cuts in methane, black carbon and ozone precursors so that the climate penalty of removing aerosols is cancelled rather than paid.</p>
+  </div>
+
+  <div class="kpi-board" role="list">
+    <div class="kpi kpi--co2" role="listitem"><div class="kpi-value">2.72 W/m²</div><div class="kpi-label">Net human-caused effective radiative forcing in 2019 relative to 1750 (5–95% range 1.96–3.48)</div><div class="kpi-source">IPCC AR6 WGI Ch. 7</div></div>
+    <div class="kpi kpi--aer" role="listitem"><div class="kpi-value">−1.06 W/m²</div><div class="kpi-label">Forcing from aerosols, offsetting 28% of the greenhouse-gas and ozone forcing — down from about two-thirds in 1980</div><div class="kpi-source">IPCC AR6 WGI Ch. 7</div></div>
+    <div class="kpi kpi--aer" role="listitem"><div class="kpi-value">−0.43°C</div><div class="kpi-label">Warming offset by sulphur dioxide emissions, 1750–2019; carbon dioxide added 0.97°C</div><div class="kpi-source">IPCC AR6 Fig. 6.12 data</div></div>
+    <div class="kpi kpi--ch4" role="listitem"><div class="kpi-value">0.61°C</div><div class="kpi-label">Warming from methane emissions, 0.14°C of it through the ground-level ozone methane creates</div><div class="kpi-source">IPCC AR6 Fig. 6.12 data</div></div>
+    <div class="kpi kpi--health" role="listitem"><div class="kpi-value">7.9 m</div><div class="kpi-label">Deaths linked to air pollution in 2023: 4.9 m from outdoor fine particles, 2.8 m household, 470,000 ozone</div><div class="kpi-source">State of Global Air 2025</div></div>
+    <div class="kpi kpi--fire" role="listitem"><div class="kpi-value">154,000</div><div class="kpi-label">Deaths from wildfire-smoke particles in 2024, a record, as hotter and drier conditions fuel fires</div><div class="kpi-source">Lancet Countdown 2025</div></div>
+    <div class="kpi kpi--ch4" role="listitem"><div class="kpi-value">1,936 ppb</div><div class="kpi-label">Atmospheric methane in 2025, 2.65 times its 1750 level; growth hit records of 12–16 ppb a year in 2020–2022</div><div class="kpi-source">NOAA GML · IPCC AR6</div></div>
+    <div class="kpi kpi--good" role="listitem"><div class="kpi-value">+0.26 → +0.02°C</div><div class="kpi-label">Short-lived-forcer warming by 2050 (vs 2020) from clean air alone, and from clean air with methane cuts, on SSP3-7.0</div><div class="kpi-source">IPCC AR6 Ch. 6 emulator data</div></div>
+  </div>
+
+  <div class="readout">
+    <p class="readout-title">The argument in brief</p>
+    <p>Pollution and climate are <strong>one feedback system</strong>. Shared sources mean that the same combustion that heats the planet also poisons the air, while the sulphate it emits has hidden part of the heating: aerosols still offset about <strong>28% of greenhouse and ozone forcing</strong>. Feedbacks run both ways: warming raises ozone and wildfire smoke, ozone damages crops and the land carbon sink, and thawing permafrost releases carbon and could mobilise the world's largest store of mercury. The fixes are coupled too. In the IPCC's own scenario data, strong air-quality controls on their own add short-lived-forcer warming by 2050, while <strong>pairing them with methane cuts removes almost all of that penalty</strong>. The priority order follows: cut methane, black carbon and ozone precursors first and fastest, clean the air everywhere for health, and keep decarbonising so that the shared source shrinks.</p>
+  </div>
+
+  <div class="prose-cols">
+    <p>The figures here come from published sources and are reported with their ranges where the sources give them. The IPCC forcing and attribution numbers are central estimates from its emulator, and the health numbers are model estimates from the Global Burden of Disease and the Lancet Countdown; neither is a direct measurement. Where studies disagree — as on the warming from the 2020 cleanup of shipping fuel — the dashboard shows the spread rather than a single number.</p>
+    <p>Section 1 sets out the shared ledger of forcing and warming. Section 2 examines the aerosol mask. Section 3 is an interactive map of the feedback loops. Sections 4 and 5 trace the damage to health and ecosystems. Section 6 shows how the IPCC scenarios combine these forces to 2100, and section 7 is a calculator and a lever matrix for coupled policy.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="ledger">
+  <h2>1. One Ledger</h2>
+  <p class="section-dek">Almost every pollutant has a climate fingerprint, and several have more than one, working in opposite directions.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>The IPCC measures the push each agent gives to the climate as effective radiative forcing. By 2019, carbon dioxide contributed 2.16 W/m² relative to 1750, methane 0.54, nitrous oxide 0.21, halogenated gases 0.41 and ozone 0.47, with a wide range of 0.24–0.71 for ozone. Against these, aerosols pulled the other way: −0.22 W/m² by scattering and absorbing sunlight and −0.84 W/m² by brightening clouds, the most uncertain term of all, with a 5–95% range of −1.45 to −0.25. The net human-caused forcing was 2.72 W/m², and most of the uncertainty in that total comes from aerosols.</p>
+    <p>Forcing by agent hides a second layer: what was actually emitted. The IPCC's attribution by emitted substance shows that methane emissions added 0.61°C of warming by 2019, 0.43°C directly, 0.14°C through the ozone they create and a little through stratospheric water vapour. Nitrogen oxides, a classic urban pollutant, warmed by making ozone but cooled more by shortening methane's lifetime, netting −0.15°C. Volatile organic compounds and carbon monoxide did the reverse, lengthening methane's life and making ozone, for +0.22°C. Sulphur dioxide offset 0.43°C; black carbon added 0.09°C, including its darkening of snow.</p>
+    <p>The heatmap below makes the interactions visible. Each row is a substance people emit; each column is a physical route by which it changes temperature. Off-diagonal cells are the couplings: methane acting through ozone, nitrogen oxides acting through methane, black carbon acting through clouds and snow. They are the reason that air-quality policy is also climate policy, whether intended or not, and the reason that some cuts — methane, black carbon, carbon monoxide and volatile organics — help both at once while others, chiefly sulphur dioxide, trade one benefit against another.</p>
+  </div>
+
+  <div class="dash-grid dash-grid--heat">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Effective radiative forcing by agent, 2019 vs 1750</p>
+        <p class="panel-meta">W/m² · bars = best estimate · whiskers = 5–95% range · blue = cooling</p>
+      </div>
+      <div class="chart-frame chart-frame--tall"><canvas id="chart-erf"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Warming by what was emitted and how it acts</p>
+        <p class="panel-meta">°C of global surface warming, 1750–2019 · rows = emitted substance · columns = forcing route · last column = row total</p>
+      </div>
+      <div class="heat-wrap" id="heat"></div>
+      <p class="panel-note">Red cells warm, blue cells cool. Hover a cell for its value. Median emulator estimates; the IPCC gives wide ranges for the aerosol routes.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="mask">
+  <h2>2. The Mask</h2>
+  <p class="section-dek">Sulphate pollution has hidden part of the warming for a century. As the air is cleaned — rightly — the mask slips.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Aerosol forcing grew with industrial coal burning and reached its strongest, about −1.4 to −1.5 W/m², between 1980 and the early 1990s. At that point it cancelled roughly two-thirds of the forcing from greenhouse gases and ozone. Since then, clean-air laws in Europe and North America, followed by China's campaign against coal smoke, have cut world sulphur dioxide emissions from a peak of 141 million tonnes in 1979 to 73 million in 2022. The European Union's emissions fell from 35.5 to 2.1 million tonnes and the United States' from 29.5 to 2.0; China's fell from 38.1 million tonnes in 2006 to 10.4. India's have risen, and since 2021 exceed China's.</p>
+    <p>The result is visible in the forcing record: aerosols offset 28% of the greenhouse and ozone forcing in 2019, down from 67% in 1980. These cuts saved very large numbers of lives, and the health case for continuing them is overwhelming. But they also removed cooling. The clearest recent example is shipping: in 2020 the International Maritime Organization cut the sulphur allowed in ship fuel from 3.5% to 0.5%. Published estimates of the resulting forcing range from about 0.07 W/m², confined to shipping lanes, to 0.2 W/m² over the global ocean, with several climate models agreeing on roughly 0.1–0.14 W/m² and a warming of about 0.04–0.05°C over the following decades.</p>
+    <p>The mask matters for the near term because aerosols last days to weeks while carbon dioxide lasts centuries. Once emissions stop, the cooling vanishes almost at once and the underlying warming shows through. The IPCC's assessment is that other human drivers, principally aerosols, cooled the planet by 0.0–0.8°C between 1850–1900 and 2010–2019. The width of that range is one of the main reasons that near-term warming is uncertain. The response is not to keep polluting but to cut, at the same time, the pollutants that warm.</p>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <p class="panel-title">Warming push and aerosol mask, 1850–2019</p>
+      <p class="panel-meta">Effective radiative forcing, W/m² · CO₂ · other greenhouse gases and ozone · aerosols (negative) · net human-caused forcing including land use, contrails and other terms</p>
+    </div>
+    <div class="chart-frame"><canvas id="chart-mask"></canvas></div>
+  </div>
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Sulphur dioxide emissions, 1970–2022</p>
+        <p class="panel-meta">Million tonnes a year · CEDS via Our World in Data · rest of world includes shipping and other unallocated sources</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-so2"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Forcing from the 2020 shipping-fuel rule</p>
+        <p class="panel-meta">W/m² · published estimates with stated uncertainty · positive = warming from lost aerosol cooling</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-ship"></canvas></div>
+      <p class="panel-note">Estimates differ in method and in whether the forcing is averaged over the global ocean or the whole globe; they are shown for spread, not ranked.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="loops">
+  <h2>3. The Loops</h2>
+  <p class="section-dek">Warming makes more ozone and more smoke; ozone weakens the plants that absorb carbon; thaw releases carbon and mercury. Select a loop or a link to trace it.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>The map below links nine parts of the system. Arrows show the direction of influence; their colour shows its character. Rust arrows add warming, blue dashed arrows are the aerosol mask, magenta arrows are damage to health, and moss and violet arrows run through ecosystems and toxic metals. Each link carries the evidence behind it. The point of the map is that the parts form loops, and loops either amplify a change or damp it.</p>
+    <p>Four reinforcing loops stand out. The <strong>ozone penalty</strong>: warming speeds the chemistry that makes ground-level ozone, which is itself a greenhouse gas; global ozone exposure has risen since 1990, attributed to emissions and rising temperatures. The <strong>fire loop</strong>: hotter, drier conditions fuel wildfires that release carbon and smoke. The <strong>ozone–sink loop</strong>: ozone damages leaves, cutting crop yields and the land's uptake of carbon dioxide, so that more stays in the air. The <strong>permafrost loop</strong>: thaw releases carbon and could mobilise the mercury stored in frozen soils.</p>
+    <p>Two further patterns matter for policy. The <strong>mask</strong> is a trade-off: cutting sulphate pollution saves lives but removes cooling. The <strong>methane–ozone win</strong> is the opposite: methane makes ozone, so cutting methane reduces warming, ozone deaths and crop losses together. Many of these loops are slow or uncertain in size — the permafrost-mercury pathway in particular rests on modelled estimates — but their direction is well established, and together they mean that pollution and climate damage compound rather than simply add.</p>
+  </div>
+
+  <div class="panel panel--hero">
+    <div class="preset-row" role="group" aria-label="Highlight a loop">
+      <button type="button" data-loop="all" class="is-on">All links</button>
+      <button type="button" data-loop="penalty">Ozone penalty</button>
+      <button type="button" data-loop="fire">Fire loop</button>
+      <button type="button" data-loop="sink">Ozone–sink loop</button>
+      <button type="button" data-loop="thaw">Permafrost loop</button>
+      <button type="button" data-loop="mask">The mask</button>
+      <button type="button" data-loop="win">Methane–ozone win</button>
+    </div>
+    <div class="sys-layout">
+      <div>
+        <div class="sys-wrap"><svg class="sys" id="sys" viewBox="0 0 800 560" role="img" aria-labelledby="sys-title sys-desc"><title id="sys-title">Pollution–climate feedback map</title><desc id="sys-desc">Nine components — combustion, greenhouse gases, aerosols, ozone, warming, wildfire, ecosystems, health and toxic metals — linked by arrows showing amplifying, masking and damaging influences.</desc></svg></div>
+        <div class="loop-legend"><span><i style="border-color:var(--k-ch4)"></i>adds warming</span><span><i class="dash" style="border-color:var(--k-aer)"></i>masks warming</span><span><i style="border-color:var(--k-health)"></i>harms health</span><span><i style="border-color:var(--k-eco)"></i>ecosystems</span><span><i style="border-color:var(--k-tox)"></i>toxic metals</span><span><i style="border-color:var(--k-muted)"></i>shared source</span></div>
+      </div>
+      <div class="evidence" id="evidence" aria-live="polite">
+        <p class="ev-kicker" id="ev-kicker">Evidence</p>
+        <h3 id="ev-title">Select a loop or a link</h3>
+        <p class="ev-sign" id="ev-sign">Each arrow carries the number and source behind it.</p>
+        <p id="ev-text">Choose a loop above to see how a change travels round the system, or hover and tap an arrow or a box.</p>
+        <p class="ev-src" id="ev-src"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="health">
+  <h2>4. Exposure &amp; Health</h2>
+  <p class="section-dek">The pollution side of the system kills on a scale comparable to the leading diseases; the climate side adds heat and smoke.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>The State of Global Air 2025 report attributes 7.9 million deaths in 2023 to air pollution, about one in eight deaths worldwide and the second-largest risk factor after high blood pressure. Outdoor fine particles accounted for 4.9 million, household air pollution from cooking and heating with solid fuels for 2.8 million, and ozone for 470,000. Ninety per cent of the deaths were in low- and middle-income countries; India and China each had more than two million. The 2025 Lancet Countdown attributes 2.5 million deaths a year to air pollution from burning fossil fuels, a subset of the total that overlaps with the outdoor estimate.</p>
+    <p>The climate side of the system adds its own burden. Heat-related deaths averaged 546,000 a year in 2012–2021, according to the Lancet Countdown, and smoke from wildfires caused a record 154,000 deaths in 2024. Exposure to ozone is rising: global population-weighted ozone reached 49.8 ppb in 2020, highest in South Asia, and 42% of the world's people live where it exceeds the World Health Organization's least stringent interim target. State of Global Air attributes the rise to emissions and to rising temperatures, the so-called ozone–climate penalty.</p>
+    <p>Wildfire smoke shows why the loops need careful reading. Global burned area recorded by the Global Wildfire Information System has not risen since 2012; savanna and grassland fires have been declining for decades as farming spreads, a trend Andela and colleagues documented in 2017. Yet smoke deaths have grown: the Finnish Meteorological Institute, which computes the Lancet indicator, finds the increase driven mainly by more people living where smoke reaches them, while fire activity has intensified in particular regions such as western Canada and the United States. Heat, smoke and ozone all land hardest on people who are already exposed and least able to protect themselves.</p>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Deaths linked to pollution and climate hazards</p>
+        <p class="panel-meta">Thousand deaths a year · different years and studies · fossil-fuel air pollution overlaps with outdoor fine particles</p>
+      </div>
+      <div class="chart-frame chart-frame--tall"><canvas id="chart-deaths"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Global burned area, 2012–2024</p>
+        <p class="panel-meta">Million hectares a year · Global Wildfire Information System via Our World in Data</p>
+      </div>
+      <div class="chart-frame chart-frame--tall"><canvas id="chart-fire"></canvas></div>
+      <p class="panel-note">Global area burned is flat to falling while smoke deaths rise: exposure, not area, drives the health burden, and the regional pattern matters more than the global total.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="eco">
+  <h2>5. Ecosystems</h2>
+  <p class="section-dek">Ecosystems sit in the middle of the loops: they absorb carbon, feed people and store toxins, and pollution and heat weaken all three.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Ground-level ozone enters leaves through their pores and damages the cells that photosynthesise. Studies summarised in the State of Global Air 2025 attribute yield losses of about 7.2% for wheat, 6.7% for soybean, 3.6% for maize and 2.6% for rice to ambient ozone, and project a loss of 16.8 million tonnes of European wheat in 2050 from rising ozone. The same damage reduces the land's uptake of carbon dioxide. Sitch and colleagues showed in 2007 that the indirect forcing from ozone's effect on plants could exceed the direct forcing of the ozone itself, closing a loop from air pollution back to greenhouse warming.</p>
+    <p>Methane links ecosystems and climate in both directions. Agriculture, waste and fossil-fuel extraction are the main human sources, but wetlands are the largest natural one, and they emit more when warm and wet. Atmospheric methane reached 1,936 ppb in 2025, 2.65 times its pre-industrial level. Its annual growth surged to records of 12.2, 16.1 and 16.1 ppb in 2020, 2021 and 2022, against an average of 0.4 ppb a year in 2000–2006, before easing to 6.6 ppb in 2025. Scientists are still debating the causes; rising wetland emissions in the tropics and a temporary fall in the atmosphere's capacity to destroy methane are leading explanations.</p>
+    <p>Frozen soils add a toxic dimension. Schuster and colleagues estimated in 2018 that soils in the northern permafrost region hold about 1,656 thousand tonnes of mercury, nearly twice as much as all other soils, the ocean and the atmosphere combined, based on cores from Alaska scaled up with soil-carbon maps. For comparison, human activity emitted about 2,220 tonnes of mercury to the air in 2015, 38% of it from artisanal and small-scale gold mining. How much permafrost mercury thaw will release, and how much will reach food webs as toxic methylmercury, remains uncertain, but the store is several hundred times annual human emissions.</p>
+  </div>
+
+  <div class="tile-row tile-row--three">
+    <div class="stat-tile stat-tile--tox"><p class="stat-tile-value">1,656 kt</p><p class="stat-tile-label">Mercury estimated in northern permafrost-region soils (Schuster et al. 2018)</p></div>
+    <div class="stat-tile stat-tile--tox"><p class="stat-tile-value">2.22 kt / yr</p><p class="stat-tile-label">Human mercury emissions to air in 2015; 38% from artisanal gold mining (UNEP)</p></div>
+    <div class="stat-tile stat-tile--bad"><p class="stat-tile-value">≈ 750 ×</p><p class="stat-tile-label">The permafrost store relative to one year of human emissions to air</p></div>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Crop yield lost to ozone</p>
+        <p class="panel-meta">% of yield attributed to ambient ozone · Tai et al. (2021) via State of Global Air 2025 · whiskers = ± stated uncertainty</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-crops"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Atmospheric methane and its growth, 1984–2025</p>
+        <p class="panel-meta">NOAA global annual mean · bars = annual increase (ppb) · line = concentration (ppb, right axis)</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-ch4"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="futures">
+  <h2>6. Futures</h2>
+  <p class="section-dek">In every IPCC scenario the short-lived forcers add warming by mid-century. How much depends on whether methane falls with the aerosols.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>The IPCC's emulator splits future warming into its drivers. In the very low emissions scenario, SSP1-1.9, the aerosol contribution shrinks from about −0.44°C in 2020 to −0.17°C in 2050 as the air is cleaned, adding about 0.27°C. Falling methane and other greenhouse gases offset part of it. In the high scenario, SSP3-7.0, aerosol cooling stays roughly constant because pollution control is weak, while methane's warming grows. The IPCC's summary judgement is that, across its scenarios, the combined changes in methane, aerosols and ozone precursors lead to net warming in the near and long term, and that strong, rapid methane cuts would limit the warming from declining aerosol pollution and improve air quality.</p>
+    <p>A pair of experimental scenarios isolates the choice. Both start from SSP3-7.0 and apply strong air-quality controls; one leaves methane unchanged, the other also cuts methane. Relative to 2020, warming from short-lived forcers by 2050 is about 0.18°C in SSP3-7.0 itself, 0.26°C with clean air alone — because the aerosol mask is removed while methane keeps rising — and 0.02°C when methane is cut too. The difference between the two clean-air variants, about 0.24°C by 2050, is the value of pairing the policies.</p>
+    <p>These are median results from a simple climate emulator and carry wide ranges, chiefly because aerosol forcing is uncertain: in SSP1-1.9 the 5–95% range of the aerosol contribution by 2050 runs from 0.08°C to 0.52°C. They also omit the health side. The clean-air-only variant still prevents a large number of deaths; the point is that it should not travel alone. In the long run, carbon dioxide dominates every scenario, which is why the shared source — fossil combustion — has to shrink regardless.</p>
+  </div>
+
+  <div class="panel panel--hero">
+    <div class="controls">
+      <div class="seg-wrap"><span class="seg-label" id="sc-label">IPCC scenario</span>
+        <div class="segmented" role="group" aria-labelledby="sc-label"><button type="button" data-sc="ssp119">SSP1-1.9</button><button type="button" data-sc="ssp126">SSP1-2.6</button><button type="button" data-sc="ssp245" class="is-on">SSP2-4.5</button><button type="button" data-sc="ssp370">SSP3-7.0</button><button type="button" data-sc="ssp585">SSP5-8.5</button></div>
+      </div>
+    </div>
+    <div class="tile-row">
+      <div class="stat-tile"><p class="stat-tile-value" id="f-tot">—</p><p class="stat-tile-label">Total human-caused warming, 2050 · 2100 (°C vs 1850–1900)</p></div>
+      <div class="stat-tile stat-tile--aer"><p class="stat-tile-value" id="f-aer">—</p><p class="stat-tile-label">Aerosol contribution, 2020 → 2050</p></div>
+      <div class="stat-tile stat-tile--ch4"><p class="stat-tile-value" id="f-ch4">—</p><p class="stat-tile-label">Methane contribution, 2020 → 2050</p></div>
+      <div class="stat-tile"><p class="stat-tile-value" id="f-co2">—</p><p class="stat-tile-label">CO₂ contribution, 2020 → 2100</p></div>
+    </div>
+    <div class="chart-frame"><canvas id="chart-spm4"></canvas></div>
+    <p class="calc-note">Median contributions to global surface warming relative to 1850–1900 from the IPCC AR6 emulator (Figure SPM.4 data). "Other" combines other greenhouse gases and other human forcings; contributions sum to the total.</p>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <p class="panel-title">Clean air alone, or clean air with methane cuts?</p>
+      <p class="panel-meta">Warming from short-lived climate forcers in 2050, °C relative to 2020 · median · by component · black tick = net</p>
+    </div>
+    <div class="chart-frame chart-frame--tall"><canvas id="chart-ntcf"></canvas></div>
+    <p class="panel-note">SSP3-7.0 low-NTCF variants: strong controls on aerosols and ozone precursors, without and with methane reductions (IPCC AR6 Chapter 6 data). Components: methane, ozone, HFCs, aerosols, black carbon on snow.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="levers">
+  <h2>7. Coupled Levers</h2>
+  <p class="section-dek">Rank actions by what they do across the whole system, not by one benefit, and sequence them so that each covers the other's side effects.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Seen as one system, the main policy levers sort into three groups. <strong>Double wins</strong> cut warming and toxic exposure together: reducing methane from oil and gas, coal mines, landfills and rice; reducing black carbon from diesel engines, brick kilns and household stoves; and reducing carbon monoxide and volatile organics. The Global Methane Assessment estimated that a 45% cut in human-caused methane this decade would avoid nearly 0.3°C of warming by the 2040s, 255,000 premature deaths, 775,000 asthma-related hospital visits and 26 million tonnes of crop losses a year. Phasing down HFCs under the Kigali Amendment is a climate-only win, estimated by UNEP to avoid up to 0.4°C by 2100.</p>
+    <p><strong>Trade-offs</strong> are concentrated in sulphur. Scrubbing sulphur from coal plants and ship fuel saves lives but removes cooling, as the shipping rule showed. The right response is to pair them with double wins, not to delay them. Cutting nitrogen oxides is mixed for climate — it reduces ozone but lets methane live longer — and clearly positive for health and crops. <strong>Root fixes</strong> shrink the shared source: replacing fossil combustion with clean electricity removes carbon dioxide, sulphur, nitrogen oxides, particles and mercury at once. Its near-term climate effect is muted by unmasking, but it is the only lever that ends the problem.</p>
+    <p>The calculator lets readers mix the IPCC's component pathways — aerosols, methane, ozone and HFCs — and see the short-lived-forcer warming to 2100. It shows the asymmetry directly: choosing strong aerosol controls alone pushes the line up; adding strong methane and ozone pathways brings it down. Because the IPCC emulated each component separately, the combinations are approximate. The matrix beneath summarises the direction of each lever across the system, drawing on the evidence in this report.</p>
+  </div>
+
+  <div class="panel panel--hero">
+    <div class="preset-row" role="group" aria-label="Calculator presets">
+      <button type="button" data-cpreset="weak">Weak control (SSP3-7.0)</button>
+      <button type="button" data-cpreset="air">Aerosols cut, methane &amp; ozone rising</button>
+      <button type="button" data-cpreset="both" class="is-on">All strong (SSP1-1.9)</button>
+      <button type="button" data-cpreset="mid">Middle road (SSP2-4.5)</button>
+    </div>
+    <div class="controls">
+      <div class="seg-wrap"><span class="seg-label" id="c-aer-l"><i style="background:var(--k-aer)"></i>Aerosols &amp; black carbon</span>
+        <div class="segmented" role="group" aria-labelledby="c-aer-l" data-comp="aer"><button type="button" data-v="ssp370">Weak</button><button type="button" data-v="ssp245">Middle</button><button type="button" data-v="ssp119">Strong</button></div></div>
+      <div class="seg-wrap"><span class="seg-label" id="c-ch4-l"><i style="background:var(--k-ch4)"></i>Methane</span>
+        <div class="segmented" role="group" aria-labelledby="c-ch4-l" data-comp="ch4"><button type="button" data-v="ssp370">Rising</button><button type="button" data-v="ssp245">Middle</button><button type="button" data-v="ssp119">Deep cut</button></div></div>
+      <div class="seg-wrap"><span class="seg-label" id="c-o3-l"><i style="background:var(--k-o3)"></i>Ozone</span>
+        <div class="segmented" role="group" aria-labelledby="c-o3-l" data-comp="o3"><button type="button" data-v="ssp370">Rising</button><button type="button" data-v="ssp245">Middle</button><button type="button" data-v="ssp119">Falling</button></div></div>
+      <div class="seg-wrap"><span class="seg-label" id="c-hfc-l"><i style="background:var(--k-tox)"></i>HFCs</span>
+        <div class="segmented" role="group" aria-labelledby="c-hfc-l" data-comp="hfc"><button type="button" data-v="ssp370">Slow</button><button type="button" data-v="ssp245">Middle</button><button type="button" data-v="ssp119">Phase-down</button></div></div>
+    </div>
+    <div class="tile-row tile-row--three" aria-live="polite">
+      <div class="stat-tile" id="t-2040-wrap"><p class="stat-tile-value" id="t-2040">—</p><p class="stat-tile-label">Net short-lived-forcer warming by 2040 (°C vs 2020)</p></div>
+      <div class="stat-tile" id="t-2050-wrap"><p class="stat-tile-value" id="t-2050">—</p><p class="stat-tile-label">… by 2050</p></div>
+      <div class="stat-tile" id="t-2100-wrap"><p class="stat-tile-value" id="t-2100">—</p><p class="stat-tile-label">… by 2100</p></div>
+    </div>
+    <div class="chart-frame"><canvas id="chart-calc"></canvas></div>
+    <p class="calc-note">Sums of median component contributions from IPCC AR6 Chapter 6 emulator runs (relative to 2020). Ozone includes ozone produced by methane, so pairing a deep methane cut with rising ozone understates the benefit. Ranges are wide and not additive; the calculator is for comparing directions, not forecasting.</p>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <p class="panel-title">Lever matrix: direction of effect across the system</p>
+      <p class="panel-meta">++ strong benefit · + benefit · ± mixed · − adverse · judged from the evidence cited in this report</p>
+    </div>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead><tr><th>Lever</th><th>Near-term climate</th><th>Long-term climate</th><th>Health</th><th>Crops &amp; ecosystems</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>Cut methane (oil, gas, coal, waste, rice, livestock)</td><td class="m pp"><b>++</b></td><td class="m p"><b>+</b></td><td class="m p"><b>+</b></td><td class="m p"><b>+</b></td><td>Lowers ozone; 45% cut ≈ 0.3°C by the 2040s<small>Global Methane Assessment 2021</small></td></tr>
+          <tr><td>Cut black carbon (diesel filters, clean cooking, kilns)</td><td class="m p"><b>+</b></td><td class="m z"><b>0</b></td><td class="m pp"><b>++</b></td><td class="m p"><b>+</b></td><td>Co-emitted organic carbon cools, so net climate effect is smaller than black carbon alone<small>IPCC AR6 Fig. 6.12</small></td></tr>
+          <tr><td>Phase down HFCs (Kigali Amendment)</td><td class="m p"><b>+</b></td><td class="m pp"><b>++</b></td><td class="m z"><b>0</b></td><td class="m z"><b>0</b></td><td>Up to 0.4°C avoided by 2100<small>UNEP</small></td></tr>
+          <tr><td>Cut sulphur dioxide (scrubbers, low-sulphur fuel)</td><td class="m n"><b>−</b></td><td class="m z"><b>0</b></td><td class="m pp"><b>++</b></td><td class="m p"><b>+</b></td><td>Removes aerosol cooling; pair with methane cuts<small>IMO 2020 estimates; AR6 SPM D.1.7</small></td></tr>
+          <tr><td>Cut nitrogen oxides (vehicles, power, industry)</td><td class="m n"><b>±</b></td><td class="m z"><b>0</b></td><td class="m pp"><b>++</b></td><td class="m pp"><b>++</b></td><td>Less ozone and particles, but methane lives longer<small>IPCC AR6 Fig. 6.12</small></td></tr>
+          <tr><td>Replace fossil combustion with clean power</td><td class="m z"><b>±</b></td><td class="m pp"><b>++</b></td><td class="m pp"><b>++</b></td><td class="m pp"><b>++</b></td><td>Shrinks the shared source of CO₂, sulphur, NOx, particles and mercury</td></tr>
+          <tr><td>Fire management and forest protection</td><td class="m p"><b>+</b></td><td class="m p"><b>+</b></td><td class="m p"><b>+</b></td><td class="m pp"><b>++</b></td><td>Cuts smoke exposure and carbon loss; regional<small>Lancet Countdown 2025</small></td></tr>
+          <tr><td>Heat and smoke adaptation (alerts, cooling, filtration)</td><td class="m z"><b>0</b></td><td class="m z"><b>0</b></td><td class="m pp"><b>++</b></td><td class="m z"><b>0</b></td><td>Protects people while the loops are being slowed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="method">
+  <h2>8. Method</h2>
+  <p class="section-dek">Data, definitions and caveats.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Forcing by agent (effective radiative forcing, 1750–2019, best estimate with 5–95% range) and the attribution of 1750–2019 warming to emitted substances and forcing routes are taken from the public data repository of IPCC AR6 Working Group I Chapter 7, which produced Figures 6.12 and 7.8 and Figure SPM.4. The attribution uses a two-layer emulator constrained to the assessed forcing and climate sensitivity; values are medians. The "VOCs + CO" row combines non-methane volatile organic compounds and carbon monoxide. Future contributions by forcer (relative to 1850–1900) are the median emulator results for SPM.4; short-lived-forcer contributions relative to 2020, including the SSP3-7.0 low near-term-climate-forcer variants, come from the Chapter 6 output.</p>
+    <p>Sulphur dioxide is from the Community Emissions Data System via Our World in Data; the European Union is the sum of its 27 members, and the rest of world includes international shipping and unallocated emissions. Methane is NOAA's global annual mean (2025 preliminary); the 1750 value of 729 ppb is from AR6 Table 7.5. Burned area is from the Global Wildfire Information System via Our World in Data, 2012–2024. Health numbers come from State of Global Air 2025 (GBD 2023), the 2025 Lancet Countdown, and the Global Methane Assessment; crop losses from Tai et al. (2021) as reported in State of Global Air; shipping forcing from four peer-reviewed studies; mercury from Schuster et al. (2018) and UNEP's Global Mercury Assessment 2018.</p>
+    <p>The feedback map is qualitative: arrows show established directions of influence, and the numbers attached are the best available estimates rather than loop gains. Death estimates come from different years and methods and should not be summed; the fossil-fuel estimate overlaps with the outdoor-particle estimate. The calculator adds median component contributions from different scenarios and is approximate. Related reports in this series: <a href="/reports/s-curves-against-the-clock/">S-curves against the clock</a>, <a href="/reports/risk-interdependencies-network/">the interdependencies of twenty-first-century risk</a> and <a href="/reports/cumulative-exposure-polycrisis-century/">human exposure across the polycrisis century</a>.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="references">
+  <h2>Sources</h2>
+  <p class="section-dek">Data and literature consulted in October 2026.</p>
+
+  <ul class="ref-list">
+    <li><span class="ref-org">IPCC</span><a href="https://github.com/IPCC-WG1/Chapter-7" rel="noopener" target="_blank">AR6 WGI Chapter 7 data repository</a> (forcing time series, Fig. 6.12 attribution, SPM.4 and short-lived-forcer projections).</li>
+    <li><span class="ref-org">IPCC</span><a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf" rel="noopener" target="_blank">AR6 WGI Summary for Policymakers</a> (A.1.3, D.1.7, D.2.2).</li>
+    <li><span class="ref-org">Health Effects Institute</span><a href="https://www.stateofglobalair.org/news-events/2025/new-state-global-air-2025-report-shows-nearly-nine-ten-global-air-pollution-deaths" rel="noopener" target="_blank">State of Global Air 2025</a>: 7.9 million deaths in 2023; ozone exposure and crop losses.</li>
+    <li><span class="ref-org">Lancet Countdown</span><a href="https://www.sydney.edu.au/news-opinion/news/2025/10/29/worlds-leading-medical-journal-details-the-climate-emergency.html" rel="noopener" target="_blank">2025 report findings</a>: heat deaths, wildfire-smoke deaths, fossil-fuel air pollution.</li>
+    <li><span class="ref-org">Finnish Meteorological Institute</span><a href="https://en.ilmatieteenlaitos.fi/news/01RTR5GBbrRKVYdSbH2GLx" rel="noopener" target="_blank">Fire-smoke mortality indicator for the Lancet Countdown</a>.</li>
+    <li><span class="ref-org">UNEP / CCAC</span><a href="https://wedocs.unep.org/handle/20.500.11822/35913" rel="noopener" target="_blank">Global Methane Assessment (2021)</a>; benefits as summarised by <a href="https://www.sei.org/features/research-global-methane-pledge/" rel="noopener" target="_blank">SEI</a>.</li>
+    <li><span class="ref-org">NOAA GML</span><a href="https://gml.noaa.gov/ccgg/trends_ch4/" rel="noopener" target="_blank">Global monthly and annual mean methane</a>.</li>
+    <li><span class="ref-org">CEDS / OWID</span><a href="https://ourworldindata.org/grapher/so-emissions-by-world-region-in-million-tonnes" rel="noopener" target="_blank">Sulphur dioxide emissions</a>.</li>
+    <li><span class="ref-org">GWIS / OWID</span><a href="https://ourworldindata.org/grapher/annual-area-burnt-by-wildfires" rel="noopener" target="_blank">Annual area burnt by wildfires</a>.</li>
+    <li><span class="ref-org">Shipping studies</span><a href="https://link.springer.com/10.1038/s43247-024-01442-3" rel="noopener" target="_blank">Commun. Earth Environ. (2024), satellite-based estimate</a>; <a href="https://doaj.org/article/69479e59acac43adbb2681c718d4bd7a" rel="noopener" target="_blank">Earth's Future (2024), UKESM1 estimate</a>; <a href="https://acp.copernicus.org/articles/24/13681/2024/" rel="noopener" target="_blank">Atmos. Chem. Phys. 24, 13681 (2024), Warming effects of reduced sulfur emissions from shipping</a>; <a href="https://repository.library.noaa.gov/view/noaa/71536" rel="noopener" target="_blank">Commun. Earth Environ. 2025 (machine-learning estimate)</a>.</li>
+    <li><span class="ref-org">Geophys. Res. Lett.</span><a href="https://www.usgs.gov/publications/permafrost-stores-a-globally-significant-amount-mercury" rel="noopener" target="_blank">Schuster et al. (2018), Permafrost stores a globally significant amount of mercury</a>.</li>
+    <li><span class="ref-org">UNEP</span><a href="https://wedocs.unep.org/bitstream/handle/20.500.11822/29830/GMAKF_EN.pdf" rel="noopener" target="_blank">Global Mercury Assessment 2018, key findings</a>.</li>
+    <li><span class="ref-org">Nature</span><a href="https://nora.nerc.ac.uk/id/eprint/831/" rel="noopener" target="_blank">Sitch et al. (2007), Indirect radiative forcing of climate change through ozone effects on the land-carbon sink</a>.</li>
+    <li><span class="ref-org">Science</span><a href="https://www.science.org/doi/10.1126/science.aal4108" rel="noopener" target="_blank">Andela et al. (2017), A human-driven decline in global burned area</a>.</li>
+    <li><span class="ref-org">UNEP OzonAction</span><a href="https://ozone.unep.org/treaties/montreal-protocol/amendments/kigali-amendment-2016-amendment-montreal-protocol-agreed" rel="noopener" target="_blank">The Kigali Amendment (2016)</a>.</li>
+  </ul>
+</section>

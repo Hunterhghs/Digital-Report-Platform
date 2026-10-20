@@ -1,0 +1,63 @@
+{
+  "number": "2026-36",
+  "title": "The Pollution–Climate Feedback System",
+  "subtitle": "Tracing interactions between greenhouse gases, toxic exposure, ecosystems and human health",
+  "strapline": "Greenhouse gases and toxic pollution come from the same chimneys, react in the same air and land on the same lungs and fields. Treating them as separate problems hides the feedbacks between them: aerosols that mask warming, heat that brews ozone and wildfire smoke, ozone that weakens the land carbon sink. The fixes are coupled too, and the order in which they are applied matters.",
+  "dek": "Air pollution currently hides a large share of greenhouse warming: sulphur dioxide alone has offset about 0.4°C. Cleaning the air without also cutting methane adds warming in the IPCC's own scenario data, while cleaning the air and cutting methane together removes almost all of that penalty by 2050. Pollution and climate are one feedback system, and the levers that work on both — methane, black carbon and ozone precursors — come first.",
+  "abstract": [
+    "This report treats greenhouse gases and toxic air pollution as one coupled system rather than two policy problems. It traces three kinds of interaction using the IPCC Sixth Assessment Report's published data and recent health assessments. First, shared sources: the combustion that emits carbon dioxide also emits sulphur dioxide, nitrogen oxides, black carbon and mercury, so almost every pollutant has a climate fingerprint. In the IPCC's attribution of warming from 1750 to 2019 by emitted substance, carbon dioxide accounts for about 0.97°C and methane for 0.61°C, while sulphur dioxide offsets 0.43°C and nitrogen oxides 0.15°C. Aerosols together exert an effective radiative forcing of about −1.06 W/m², masking roughly a quarter of the positive forcing.",
+    "Second, feedbacks. Warming raises ground-level ozone, the so-called climate penalty, and drives the hot, dry conditions behind wildfire smoke, which the 2025 Lancet Countdown links to a record 154,000 deaths in 2024. Ozone damages plants, cutting yields of wheat, soybean, maize and rice by roughly 3–7% and weakening the land carbon sink. Thawing permafrost releases carbon and could mobilise mercury from the largest known reservoir on Earth, estimated at 1,656 thousand tonnes. Air pollution as a whole was linked to 7.9 million deaths in 2023, and heat to an average of 546,000 a year in 2012–2021.",
+    "Third, coupled solutions. Because aerosols cool, cleaning the air unmasks warming: in the IPCC's emulations, strong air-pollution controls on a high-emission pathway raise warming from short-lived climate forcers by 2050 from about 0.18°C to 0.26°C relative to 2020, while adding methane cuts lowers it to about 0.02°C. Reducing methane, black carbon and ozone precursors therefore delivers health, crop and near-term climate benefits together; the Global Methane Assessment estimated that a 45% cut in human-caused methane this decade would avoid nearly 0.3°C of warming by the 2040s and 255,000 premature deaths a year.",
+    "The report concludes that pollution and climate policy should be designed together: clean air is a health necessity, not a climate threat, but it needs to be paired with fast methane and ozone-precursor reductions and sustained decarbonisation so that unmasking does not accelerate near-term warming. An interactive system map traces the feedback loops, and a calculator lets readers combine the IPCC's component pathways for aerosols, methane, ozone and HFCs."
+  ],
+  "jel": "Q53, Q54, Q57, I18, Q15 — air pollution; climate; ecological economics; public health; land and agriculture",
+  "method": "Effective radiative forcing (ERF) by component, 1750–2019, with 5–95% ranges, and the attribution of 1750–2019 global surface warming to emitted substances and forcing mechanisms come from the data repository of IPCC AR6 Working Group I Chapter 7 (Smith, Forster et al.), which supplies Figure 6.12 and Figure 7.8. Future warming contributions by forcer for the SSP scenarios (relative to 1850–1900) and future warming from short-lived climate forcers relative to 2020, including the SSP3-7.0 low near-term-climate-forcer variants with and without methane reductions, are the median emulator results from the same repository (Figure SPM.4 and Chapter 6, section 6.7). Sulphur dioxide emissions are the Community Emissions Data System (CEDS) via Our World in Data; atmospheric methane, carbon dioxide and nitrous oxide are NOAA Global Monitoring Laboratory global annual means; burned area is the Global Wildfire Information System via Our World in Data. Health burdens are from the State of Global Air 2025 (Health Effects Institute / IHME GBD 2023) and the 2025 Lancet Countdown; methane mitigation benefits from the UNEP/CCAC Global Methane Assessment (2021); ozone crop losses from Tai et al. (2021) as reported in State of Global Air 2025; permafrost mercury from Schuster et al. (2018); shipping-fuel forcing from four published estimates of the 2020 IMO sulphur cap. The calculator adds median component contributions from different scenarios; the IPCC emulated each component separately, so combinations are approximate and ranges are not additive.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;1,6..72,500&family=Commissioner:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap",
+  "themeColor": "#22313f",
+  "topics": [
+    "Climate Change",
+    "Public Health",
+    "Systemic Risk",
+    "Ecosystems"
+  ],
+  "keywords": [
+    "air pollution",
+    "aerosol masking",
+    "methane",
+    "tropospheric ozone",
+    "black carbon",
+    "short-lived climate forcers",
+    "wildfire smoke",
+    "climate penalty",
+    "mercury",
+    "permafrost",
+    "co-benefits",
+    "IPCC AR6",
+    "feedback loops",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "ledger", "label": "1. One Ledger" },
+    { "id": "mask", "label": "2. The Mask" },
+    { "id": "loops", "label": "3. The Loops" },
+    { "id": "health", "label": "4. Exposure & Health" },
+    { "id": "eco", "label": "5. Ecosystems" },
+    { "id": "futures", "label": "6. Futures" },
+    { "id": "levers", "label": "7. Coupled Levers" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "−0.43°C", "label": "Warming offset by sulphur dioxide emissions, 1750–2019, in the IPCC's attribution by emitted substance" },
+    { "value": "0.61°C", "label": "Warming from methane emissions, about a quarter of it through the ozone they create" },
+    { "value": "+0.26 vs +0.02°C", "label": "Short-lived-forcer warming by 2050 from clean air alone vs clean air with methane cuts (SSP3-7.0 variants)" },
+    { "value": "7.9 m", "label": "Deaths linked to air pollution in 2023, including 470,000 from ozone" }
+  ]
+}
