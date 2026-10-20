@@ -1,0 +1,62 @@
+{
+  "number": "2026-39",
+  "title": "The Geography of Human Survivability Under Climate Stress",
+  "subtitle": "Mapping exposure, adaptive capacity, infrastructure deficits and avoidable mortality",
+  "strapline": "Climate hazards set the stress; infrastructure decides who survives it. This dashboard maps how close populations come to the physiological limits of humid heat, how recorded deaths from floods, storms and droughts depend on coping capacity at every level of hazard, which survival infrastructure is missing, and how many deaths a year closing that gap would prevent.",
+  "dek": "Where coping capacity is strong, recorded deaths from floods, storms, droughts, landslides and wildfires stay near 0.6 per million people a year whether hazard is low or high. Where it is weak they rise to 8.7 per million in the most exposed third — a 14-fold gap. About 14,000 recorded deaths a year are avoidable at that benchmark, and the true toll is larger because heat deaths are counted almost only in rich countries.",
+  "abstract": [
+    "This report maps human survivability under climate stress along four dimensions: physiological exposure, adaptive capacity, infrastructure deficits and avoidable mortality. It combines daily 2024 wet-bulb temperatures for 149 large cities from the ERA5 reanalysis, EM-DAT records of disaster deaths since 1970 as processed by Our World in Data, the INFORM Risk Index's measures of climate-hazard exposure and coping capacity for 191 countries, and World Bank indicators of electricity, water, sanitation, connectivity and health capacity.",
+    "At the physiological edge, humid heat in 2024 reached a daily maximum wet-bulb temperature of 32.1 °C in Dubai and passed 30 °C in Kolkata, Chennai, Lahore, Jeddah, Muscat and Chongqing, close to the critical limit of about 30.5 °C measured for young, healthy adults in humid conditions. Thirty-nine of the 149 cities had at least one day at 28 °C or more. Recorded deaths from floods, storms, droughts, landslides and wildfires fell from about 66,000 a year in the 1980s to 11,000 in the 2010s, but low- and lower-middle-income countries, with 45% of the world's people, recorded 71% of them in 2000–2024. Recorded heat deaths show the opposite pattern — about 325,000 in high-income countries against 3,000 in low-income ones — because they are counted where excess-mortality studies are done.",
+    "Splitting countries by climate-hazard exposure and coping capacity shows that strong capacity largely decouples deaths from hazard: the recorded death rate is about 0.6 per million a year among strong-capacity countries at low, middle and high hazard alike, while among weak-capacity countries it rises from 1.8 to 8.7, 14 times the strong-capacity rate at high hazard. A survival-infrastructure index of seven indicators correlates more strongly with recorded death rates (Spearman −0.52) than income (−0.47) or hazard exposure (+0.23). At the strong-capacity benchmark, about 14,400 recorded deaths a year in 2000–2024 — 88% of the total, or 8,300 and 78% excluding Myanmar — were avoidable.",
+    "The report concludes that survivability under climate stress is chiefly a matter of known, buildable infrastructure: multi-hazard early warning, which UNDRR and the WMO associate with six-fold lower disaster mortality; reliable power, water, sanitation and shelters; health workers and facilities; protections against humid heat for outdoor workers; and civil registration that makes heat deaths visible. An interactive city explorer, survivability grid, infrastructure scatter, avoidable-mortality calculator and atlas accompany the analysis."
+  ],
+  "jel": "Q54, I14, H54, O18, J17 — climate and natural disasters; health and inequality; infrastructure; regional development; value of life",
+  "method": "Disaster deaths are EM-DAT (CRED, UCLouvain) deaths and missing people by country, year and hazard, as processed by Our World in Data. Climate-related deaths are floods, storms, droughts, landslides and wildfires; extreme-temperature deaths are reported separately because their recording is concentrated in high-income countries. Death rates are 2000–2024 deaths divided by the sum of annual World Bank populations. Climate-hazard exposure is the highest of each country's INFORM Risk Mid-2026 scores for river flood, coastal flood, tropical cyclone and drought; coping capacity is INFORM's lack of coping capacity; 191 countries are split into thirds on each. The avoidable-death benchmark in each hazard third is the population-weighted death rate of its strongest-coping third; avoidable deaths are deaths above that rate. The survival-infrastructure index is the mean percentile rank of electricity access, basic drinking water, basic sanitation, internet use, physicians and hospital beds per 1,000, and current health expenditure per person (World Development Indicators; at least five of seven). City humid heat uses daily maximum 2-metre wet-bulb and apparent temperature for 2024 from ERA5 via Open-Meteo for 149 large cities. Recorded deaths understate losses where recording is weakest; results are associations, not causal estimates.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,600;0,800;1,500&family=Golos+Text:wght@400;500;600&family=Lekton:wght@400;700&display=swap",
+  "themeColor": "#0f1d2b",
+  "topics": [
+    "Climate Adaptation",
+    "Systemic Risk",
+    "Public Health",
+    "Infrastructure"
+  ],
+  "keywords": [
+    "survivability",
+    "wet-bulb temperature",
+    "humid heat",
+    "climate disasters",
+    "disaster mortality",
+    "coping capacity",
+    "adaptive capacity",
+    "infrastructure deficits",
+    "early warning systems",
+    "avoidable mortality",
+    "EM-DAT",
+    "INFORM",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "edge", "label": "1. The Physiological Edge" },
+    { "id": "ledger", "label": "2. The Ledger of Loss" },
+    { "id": "gradient", "label": "3. The Survivability Gradient" },
+    { "id": "infra", "label": "4. Infrastructure Deficits" },
+    { "id": "avoidable", "label": "5. Avoidable Mortality" },
+    { "id": "map", "label": "6. The Map" },
+    { "id": "invest", "label": "7. Where to Invest" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "14×", "label": "Recorded climate-disaster death rate, weak vs strong coping capacity, in the most exposed countries" },
+    { "value": "0.6", "label": "Deaths per million a year with strong coping capacity — at low, middle and high hazard alike" },
+    { "value": "≈ 14,400", "label": "Recorded deaths a year above that benchmark, 2000–2024" },
+    { "value": "32.1 °C", "label": "Peak 2024 wet-bulb temperature in Dubai; seven large cities passed 30 °C" }
+  ]
+}
