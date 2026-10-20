@@ -1,0 +1,62 @@
+{
+  "number": "2026-33",
+  "title": "S-Curves Against the Clock",
+  "subtitle": "Diffusion dynamics under planetary boundary constraints: when exponential adoption races irreversible environmental tipping points",
+  "strapline": "Clean technologies are spreading on fast S-curves: electric cars at a pace that takes sales from 10% to 90% in about a decade, solar in under two. The energy system as a whole is still on a slow one. The carbon budget for 1.5°C runs out around 2028. Which tipping points are crossed depends on how quickly the system curve steepens towards the speed of its fastest parts.",
+  "dek": "Electric-car sales are on an S-curve that takes them from 10% to 90% in about ten years, and solar power in about seventeen, but the energy system's low-carbon share is moving at a pace that would take 170 years. A transparent race model shows that keeping peak warming below 2°C needs the whole system to move at roughly wind's pace, and below 1.7°C at solar's. The budget for 1.5°C runs out around 2028 on every path.",
+  "abstract": [
+    "New technologies spread along S-shaped curves: slowly at first, then exponentially, then levelling off as they saturate their markets. This report measures the S-curves of the clean-energy transition and races them against the clock set by the remaining carbon budget and the temperature thresholds of Earth-system tipping elements. Fitting logistic curves to global data from Ember, the Energy Institute and the IEA via Our World in Data gives very different speeds. Electric cars, at 25% of new car sales in 2025, are on a curve that goes from 10% to 90% of sales in about ten years. Solar power, at 8.8% of world electricity, is on one that takes about seventeen years, and wind, at 8.5%, about thirty-eight. Solar module prices have fallen by 89% since 2010 and lithium-ion battery packs reached $108 per kilowatt-hour in 2025.",
+    "The energy system as a whole is on a much slower curve. Low-carbon sources supplied 13.8% of the world's primary energy in 2025, and fossil fuels 86.2%. The low-carbon share's trend over 2015–2025 implies about 170 years to go from 10% to 90%, because fast curves in electricity and cars are diluted by slow turnover in industry, buildings, freight and the existing stock of power plants, and because demand keeps growing. Fossil CO2 emissions rose by about 1% a year over 2015–2024, and total CO2 emissions reached 42.2 billion tonnes in 2025.",
+    "The clock is short. Human-induced warming reached 1.36°C in 2024 and is rising by 0.27°C a decade. The remaining carbon budget from the start of 2025 is 130 billion tonnes of CO2 for a 50% chance of 1.5°C, 310 for 1.6°C, 490 for 1.7°C and 1,050 for 2°C — about 3, 7, 12 and 25 years of 2025 emissions. The central threshold estimates of Armstrong McKay and colleagues place coral reef die-off, abrupt permafrost thaw and the collapse of the Greenland and West Antarctic ice sheets at about 1.5°C, Barents Sea ice at 1.6°C, Labrador Sea convection at 1.8°C and mountain glaciers at 2°C. The 2025 Global Tipping Points Report concluded that warm-water coral reefs are already passing their tipping point.",
+    "A transparent race model links the two. A system-wide S-curve of clean energy, starting from today's 13.8% share and with demand growth tapering to zero by 2075, displaces CO2 emissions, and the cumulative emissions are converted to warming with the published budgets. On the observed system pace, warming passes 2°C in the late 2040s and reaches about 3.2°C by 2100. Keeping peak warming below 2°C requires the whole system to move from 10% to 90% clean in about 40 years, roughly wind's historical pace. Below 1.8°C needs about 27 years, the pace of solar and wind together in electricity; below 1.7°C about 20 years, solar's pace; and below 1.6°C about 12, close to electric cars. On every path the 1.5°C budget is exhausted around 2028. The model is a simple illustration, not a climate projection. It omits non-CO2 gases beyond what the budgets assume, carbon removal and feedbacks. Its finding is that the transition's outcome now depends less on whether clean technologies win than on how fast their speed spreads to the slowest sectors."
+  ],
+  "jel": "O33, Q42, Q54, Q55, O44, Q58 — technological change and diffusion; alternative energy; climate change; technological innovation in environment; environment and growth; environmental policy",
+  "method": "Adoption series are global annual values from Our World in Data: solar and wind shares of electricity generation (Ember and Energy Institute, 2000–2025), the electric share of new car sales (IEA Global EV Outlook, 2010–2025), the low-carbon and fossil shares of primary energy (Energy Institute Statistical Review, substitution method, to 2025), solar PV module prices (1975–2024) and annual fossil CO2 emissions (Global Carbon Budget, to 2024). Logistic curves s(t) = K / (1 + exp(−r (t − t₀))) are fitted by least squares to logit-transformed shares, with K = 100% (solar+wind in electricity also shown with K = 75%); the 10%-to-90% time is ln(81)/r. Battery prices are from the BloombergNEF 2025 survey as reported. Carbon budgets from the start of 2025 (50% probability) and human-induced warming are from the Indicators of Global Climate Change 2025 (130, 310, 490 and 1,050 GtCO2 for 1.5, 1.6, 1.7 and 2.0°C; 1.36°C in 2024); total 2025 CO2 emissions (42.2 GtCO2) are from the Global Carbon Budget 2025. Tipping thresholds are the central, minimum and maximum estimates of Armstrong McKay et al. (2022). The race model sets emissions E(t) = 42.2 × D(t) × (1 − S(t)) / (1 − S₀), where S(t) is a logistic clean share passing through S₀ = 13.8% in 2025 with rate r, and D(t) is energy-service demand growing at 1.3% a year in 2025 (calibrated so that the observed pace reproduces recent emission growth) and tapering linearly to zero by 2075. Warming is cumulative emissions mapped through the published budgets, interpolated linearly between them and extended above 2°C at the 1.7–2°C slope. The model treats all CO2 alike, has no negative emissions and no feedbacks; it is an illustration of rates, not a projection.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Wix+Madefor+Text:ital,wght@0,400;0,500;0,700;1,400&family=M+PLUS+1+Code:wght@400;500;700&display=swap",
+  "themeColor": "#10261c",
+  "topics": [
+    "Energy Transition",
+    "Technology",
+    "Systemic Risk",
+    "Environment & Biodiversity"
+  ],
+  "keywords": [
+    "S-curves",
+    "technology diffusion",
+    "logistic growth",
+    "solar power",
+    "electric vehicles",
+    "energy transition speed",
+    "carbon budget",
+    "tipping points",
+    "planetary boundaries",
+    "positive tipping points",
+    "Wright's law",
+    "climate overshoot",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "fast", "label": "1. Fast Curves" },
+    { "id": "slow", "label": "2. The Slow Curve" },
+    { "id": "clock", "label": "3. The Clock" },
+    { "id": "thresholds", "label": "4. Thresholds" },
+    { "id": "race", "label": "5. The Race" },
+    { "id": "enough", "label": "6. How Fast Is Fast Enough" },
+    { "id": "steepen", "label": "7. Steepening the System Curve" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "10 vs 170 yrs", "label": "Time to go from 10% to 90% on the fitted S-curves of electric-car sales and of the energy system's low-carbon share" },
+    { "value": "≈ 2028", "label": "Year the 1.5°C carbon budget runs out on every adoption path in the race model" },
+    { "value": "40 · 27 · 20 yrs", "label": "System-wide 10%-to-90% times needed to keep peak warming below 2.0°C, 1.8°C and 1.7°C" },
+    { "value": "−89%", "label": "Fall in solar module prices since 2010; battery packs reached $108 per kWh in 2025" }
+  ]
+}

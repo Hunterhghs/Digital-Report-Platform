@@ -1,0 +1,303 @@
+<section id="overview">
+  <h2>Overview</h2>
+  <p class="section-dek">The clean-energy transition is a set of S-curves racing a clock. Some curves are very fast. The one that matters most — the whole energy system — is still slow.</p>
+
+  <div class="prose-cols">
+    <p>Almost every technology that has changed the world has spread along an S-curve. Adoption starts slowly while a product is expensive and unfamiliar, accelerates exponentially as costs fall and networks form, and levels off as the market saturates. Electricity, cars, phones and the internet all followed the pattern, and so, now, do solar panels, wind turbines, batteries and electric vehicles. The steep middle of an S-curve is where change happens fast enough to surprise forecasters, and it is why some analysts argue that the energy transition will be quicker than linear projections suggest.</p>
+    <p>The climate system keeps its own time. Warming is set by cumulative emissions, so every year of emissions draws down a fixed budget, and Earth-system tipping elements — ice sheets, coral reefs, ocean currents, forests — have temperature thresholds beyond which change can become self-sustaining and, on human timescales, irreversible. This dashboard puts the two clocks on the same axis. It measures the speed of the transition's S-curves from global data, sets them against the remaining carbon budgets and the published threshold estimates, and uses a simple, transparent model to ask how fast the transition has to be to keep each threshold out of reach.</p>
+  </div>
+
+  <div class="kpi-board" role="list">
+    <div class="kpi kpi--fast" role="listitem"><div class="kpi-value">25%</div><div class="kpi-label">Electric share of new car sales in 2025, on an S-curve that goes from 10% to 90% in about 10 years</div><div class="kpi-source">IEA via OWID · author's fit</div></div>
+    <div class="kpi kpi--fast" role="listitem"><div class="kpi-value">17.3%</div><div class="kpi-label">Solar and wind share of world electricity in 2025 — 8.8% solar, 8.5% wind</div><div class="kpi-source">Ember / Energy Institute via OWID</div></div>
+    <div class="kpi kpi--fast" role="listitem"><div class="kpi-value">−89%</div><div class="kpi-label">Fall in solar module prices from 2010 to 2024; battery packs reached $108 per kWh in 2025</div><div class="kpi-source">OWID · BloombergNEF</div></div>
+    <div class="kpi kpi--slow" role="listitem"><div class="kpi-value">13.8%</div><div class="kpi-label">Low-carbon share of world primary energy in 2025 — on a curve that would take about 170 years from 10% to 90%</div><div class="kpi-source">Energy Institute via OWID · author's fit</div></div>
+    <div class="kpi kpi--clock" role="listitem"><div class="kpi-value">130 Gt</div><div class="kpi-label">Remaining CO2 budget for a 50% chance of 1.5°C from the start of 2025 — about three years of emissions</div><div class="kpi-source">Indicators of Global Climate Change 2025</div></div>
+    <div class="kpi kpi--clock" role="listitem"><div class="kpi-value">1.36°C</div><div class="kpi-label">Human-induced warming in 2024, rising by 0.27°C a decade</div><div class="kpi-source">Indicators of Global Climate Change 2025</div></div>
+    <div class="kpi kpi--tip" role="listitem"><div class="kpi-value">1.5°C</div><div class="kpi-label">Central threshold estimate for coral die-off, abrupt permafrost thaw and Greenland and West Antarctic collapse</div><div class="kpi-source">Armstrong McKay et al. 2022</div></div>
+    <div class="kpi kpi--fast" role="listitem"><div class="kpi-value">40 · 20 yrs</div><div class="kpi-label">System-wide 10%-to-90% times needed to keep peak warming below 2°C and below 1.7°C in the race model</div><div class="kpi-source">Author's model</div></div>
+  </div>
+
+  <div class="readout">
+    <p class="readout-title">The argument in brief</p>
+    <p>The transition's <strong>leading technologies are on fast S-curves</strong>: electric-car sales and solar power are moving at speeds that take a technology from niche to dominance in one to two decades. But the <strong>energy system as a whole is on a slow S-curve</strong>, because fast change in electricity and cars is diluted by slow change elsewhere and by growing demand. The <strong>clock is short</strong>: the 1.5°C budget runs out around 2028 on every path, and several tipping thresholds cluster between 1.5°C and 2°C. In a transparent race model, keeping peak warming below 2°C needs the whole system to move at about <strong>wind's pace</strong>, and below 1.7°C at about <strong>solar's</strong>. The decisive variable is no longer whether clean technologies win, but how fast their speed spreads to the slowest sectors.</p>
+  </div>
+
+  <div class="prose-cols">
+    <p>The model is deliberately simple, so that its assumptions can be seen and changed. It treats the energy system as one S-curve of clean energy displacing fossil CO2, lets energy demand grow and then level off, and converts cumulative CO2 into warming using the carbon budgets published by the Indicators of Global Climate Change. It is not a climate projection: it has no separate treatment of methane or aerosols beyond what those budgets assume, no carbon removal and no feedbacks, and the threshold estimates it is compared with are themselves uncertain. Its purpose is to compare speeds on a common footing.</p>
+    <p>Section 1 measures the fast curves and section 2 the slow one. Section 3 sets out the clock, and section 4 the tipping thresholds. Section 5 is the race model, with sliders for speed and demand, and section 6 maps how fast is fast enough for each threshold. Section 7 turns to what would steepen the system curve.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="fast">
+  <h2>1. Fast Curves</h2>
+  <p class="section-dek">Electric cars, solar and batteries are in the steep middle of their S-curves, driven by costs that fall with every doubling of deployment.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Fitting a logistic curve to the global share of electric cars in new car sales gives a growth rate of 0.42 a year and a midpoint around 2027: a pace that takes a technology from 10% to 90% of its market in about ten years. The share rose from 0.7% in 2015 to 4.4% in 2020 and 25% in 2025. Solar power's share of world electricity — 0.15% in 2010, 3.2% in 2020, 8.8% in 2025 — fits a curve with a rate of 0.25 and a 10%-to-90% time of about 17 years. Wind, at 8.5% of electricity, is older and slower, with a rate of 0.11 and a 10%-to-90% time of about 38 years.</p>
+    <p>The engine of these curves is cost. Solar module prices fell from $132 per watt in 1975 to $2.51 in 2010 and $0.27 in 2024, an 89% fall since 2010 alone; every doubling of cumulative production has cut costs by a roughly constant percentage, a regularity known as Wright's law. BloombergNEF reports that lithium-ion battery packs averaged $108 per kilowatt-hour in 2025, 8% less than in 2024, with stationary storage packs at $70. Falling costs widen the market, rising deployment drives down costs further, and the curve steepens. These are the dynamics that the 2025 Global Tipping Points Report describes as positive tipping points.</p>
+    <p>S-curves are only fitted to the data so far, so their saturation levels and later shapes are uncertain. A curve fitted while a technology is still accelerating can overstate or understate its eventual speed, and policy shocks — tariffs, subsidy changes, grid bottlenecks — can bend it. The fits here are descriptive: they summarise how fast each technology has actually been spreading, in a form that can be compared with the clock. Switch between them in the chart to see how differently the curves would unfold if they continued.</p>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel panel--wide">
+      <div class="controls" style="grid-template-columns: 1fr;">
+        <div class="seg-wrap">
+          <span class="seg-label" id="cv-label">Curve</span>
+          <div class="segmented" role="group" aria-labelledby="cv-label">
+            <button type="button" data-cv="all" class="is-on">All</button>
+            <button type="button" data-cv="ev">EV sales</button>
+            <button type="button" data-cv="solar">Solar power</button>
+            <button type="button" data-cv="wind">Wind power</button>
+            <button type="button" data-cv="lowc">Energy system</button>
+          </div>
+        </div>
+      </div>
+      <div class="panel-head">
+        <p class="panel-title">S-curves of the transition: data and fitted logistic curves, 2000–2070</p>
+        <p class="panel-meta">Per cent · dots: data (to 2025) · lines: logistic fits extended · EV share of new car sales; solar and wind shares of electricity; low-carbon share of primary energy</p>
+      </div>
+      <div class="chart-frame chart-frame--tall"><canvas id="chart-scurves"></canvas></div>
+      <p class="panel-note">Fits use K = 100%. Extensions show where each curve would go if it kept its historical rate; they are not forecasts.</p>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Solar module prices, 1975–2024</p>
+        <p class="panel-meta">US$ per watt, log scale · Our World in Data (IRENA and earlier sources)</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-pv"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">How long from 10% to 90%?</p>
+        <p class="panel-meta">Years implied by each fitted curve (ln 81 ÷ growth rate) · lower is faster</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-speeds"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="slow">
+  <h2>2. The Slow Curve</h2>
+  <p class="section-dek">Fast technologies sit inside a slow system. Its low-carbon share has risen by about a point every two and a half years.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Low-carbon sources — renewables and nuclear — supplied 13.8% of the world's primary energy in 2025, and fossil fuels 86.2%, according to the Energy Institute's figures. The low-carbon share barely moved between 2000 and 2015, as growth in renewables was offset by the decline of nuclear's share, and has since risen from about 11% to 13.8%. Fitted as an S-curve over 2015–2025, that rise implies a growth rate of 0.026 a year: a curve that would take about 170 years to go from 10% to 90%, with a midpoint near the end of the century.</p>
+    <p>The gap between the fast curves and the slow one has three sources. First, the fast technologies so far cover only parts of the system: electricity is about a fifth of final energy, and cars a fraction of transport. Industrial heat, steel, cement, shipping, aviation and heating in existing buildings have their own, mostly earlier-stage, S-curves. Second, capital stock turns over slowly: a car lasts 15 years or more, a power station or blast furnace decades. Third, demand keeps growing, so clean supply has to cover growth before it can displace fossil fuels. Fossil CO2 emissions rose by about 1% a year over 2015–2024, and total CO2 emissions reached 42.2 billion tonnes in 2025.</p>
+    <p>The slow curve is not a fixed fate. A system S-curve is the sum of many sectoral S-curves, and it steepens as more of them enter their fast phases: once clean power is cheap, every sector that can electrify — cars, buses, heating, low- and medium-temperature industrial heat — can ride the power sector's curve. The question for the climate is how quickly that steepening happens, and the clock sets the deadline.</p>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Fast parts, slow whole</p>
+        <p class="panel-meta">Per cent, 2010–2025 · EV share of car sales · solar + wind share of electricity · low-carbon share of primary energy</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-parts"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Fossil CO2 emissions, 1990–2024</p>
+        <p class="panel-meta">Billion tonnes CO2 a year · Global Carbon Budget via Our World in Data</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-co2"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="clock">
+  <h2>3. The Clock</h2>
+  <p class="section-dek">At 2025's emissions, the budget for 1.5°C lasts about three years, for 1.7°C about twelve and for 2°C about twenty-five.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Warming is set, to a good approximation, by cumulative CO2 emissions, which is why the climate clock is measured in tonnes rather than years. The 2025 update of the Indicators of Global Climate Change, an annual assessment led by Piers Forster that tracks the IPCC's methods, estimated human-induced warming of 1.36°C in 2024, rising by 0.27°C a decade, the fastest rate in the instrumental record. It put the remaining carbon budgets from the start of 2025, for a 50% chance of staying below each level, at 130 billion tonnes of CO2 for 1.5°C, 310 for 1.6°C, 490 for 1.7°C and 1,050 for 2°C.</p>
+    <p>Divided by 2025's emissions of 42.2 billion tonnes, those budgets last about 3.1, 7.3, 11.6 and 24.9 years. The Global Carbon Budget, using a slightly different method, puts the 1.5°C budget at 170 billion tonnes, about four years. Either way, the 1.5°C budget will be exhausted before the end of this decade on any realistic path, which is why the Global Carbon Project's lead author concluded that keeping warming below 1.5°C is no longer plausible. The budgets for 1.6°C to 2°C are where the race can still be won or lost.</p>
+    <p>Exhausting a budget does not mean the threshold is crossed that year in observed temperatures, which fluctuate around the human-induced trend; the long-term average crosses a few years later. And a 50% budget is a coin toss: for a 66% chance of 1.5°C, only about 80 billion tonnes remained. The clock in this dashboard uses the central estimates, which should be read as the latest plausible deadlines rather than safe ones.</p>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Remaining carbon budgets from the start of 2025</p>
+        <p class="panel-meta">Billion tonnes CO2, 50% chance · labels: years at 2025 emissions (42.2 Gt a year)</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-budgets"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">The budget converted to a warming scale</p>
+        <p class="panel-meta">Warming (°C) against cumulative CO2 from 2025 (Gt) · published budget points joined linearly, extended above 2°C at the 1.7–2°C slope</p>
+      </div>
+      <div class="chart-frame"><canvas id="chart-tcre"></canvas></div>
+    </div>
+  </div>
+
+  <div class="tile-row">
+    <div class="stat-tile stat-tile--clock"><p class="stat-tile-value">3.1 yrs</p><p class="stat-tile-label">1.5°C budget at 2025 emissions</p></div>
+    <div class="stat-tile stat-tile--clock"><p class="stat-tile-value">7.3 yrs</p><p class="stat-tile-label">1.6°C budget</p></div>
+    <div class="stat-tile stat-tile--clock"><p class="stat-tile-value">11.6 yrs</p><p class="stat-tile-label">1.7°C budget</p></div>
+    <div class="stat-tile stat-tile--clock"><p class="stat-tile-value">24.9 yrs</p><p class="stat-tile-label">2°C budget</p></div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="thresholds">
+  <h2>4. Thresholds</h2>
+  <p class="section-dek">Four tipping elements have central threshold estimates at 1.5°C. Most of the rest sit between 1.6°C and 4°C — the range the race decides.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Armstrong McKay and colleagues, writing in <em>Science</em> in 2022, reassessed the evidence on climate tipping elements and gave each a minimum, central and maximum threshold estimate. Four have central estimates at 1.5°C: the die-off of low-latitude coral reefs, abrupt thaw of boreal permafrost, and the collapse of the Greenland and West Antarctic ice sheets. Barents Sea ice follows at 1.6°C, convection in the Labrador and Irminger Seas at 1.8°C and mountain glaciers at 2°C. The Amazon rainforest, the Atlantic overturning circulation (AMOC) and boreal permafrost collapse have central estimates of 3.5–4°C, though their minimum estimates are much lower: 1.4°C for the AMOC and 2°C for the Amazon.</p>
+    <p>One threshold appears to have been crossed already. The 2025 Global Tipping Points Report, by about 160 scientists, concluded that warm-water coral reefs — on which nearly a billion people and a quarter of marine life depend — are now passing their tipping point, with widespread die-off under way at the current warming of about 1.2–1.4°C. The ice-sheet thresholds work on slower timescales: crossing them commits the world to sea-level rise over centuries to millennia rather than causing collapse at once, which is why the duration of any overshoot matters as well as its peak.</p>
+    <p>The chart sets each element's range against current warming and against the peak warming of whichever race scenario is selected in section 5. Elements whose central estimate lies below the scenario's peak are marked as crossed; those whose minimum but not central estimate lies below it are marked at risk. Because the thresholds cluster tightly between 1.5°C and 2°C, small differences in the speed of the transition decide several of them.</p>
+  </div>
+
+  <div class="panel panel--hero">
+    <div class="panel-head">
+      <p class="panel-title">Tipping-element thresholds against warming</p>
+      <p class="panel-meta">°C above pre-industrial · bars: minimum to maximum estimate · dot: central estimate (Armstrong McKay et al. 2022) · dashed lines: human-induced warming in 2024 and peak warming in the selected race scenario</p>
+    </div>
+    <div class="chart-frame chart-frame--tall"><canvas id="chart-tip"></canvas></div>
+    <ul class="tip-list" id="tip-list" aria-live="polite"></ul>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="race">
+  <h2>5. The Race</h2>
+  <p class="section-dek">Set the speed of the system S-curve and the growth of demand, and watch the clean share, emissions and warming race the thresholds.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>The race model has one S-curve for the whole energy system. It starts from today's 13.8% low-carbon share and rises at a chosen speed, expressed as the number of years the curve takes to go from 10% to 90%. Emissions start at 2025's 42.2 billion tonnes and fall as the clean share displaces fossil energy, while energy-service demand grows at 1.3% a year in 2025 — the rate that, at the observed system pace, reproduces recent emission growth — and tapers to zero by 2075. Cumulative emissions are converted to warming through the published carbon budgets.</p>
+    <p>At the observed system pace of about 170 years, emissions keep rising into mid-century and warming passes 2°C around 2048 and 3°C around 2090, reaching about 3.2°C in 2100. That is higher than UNEP's estimate of 2.8°C under current policies, because current policies already imply some steepening of the system curve: in this model, 2.8°C in 2100 corresponds to a 10%-to-90% time of about 100 years, and full implementation of national pledges (2.3–2.5°C) to about 70. The presets apply the historical speeds of the fast technologies to the whole system.</p>
+    <p>At wind's pace, peak warming stays just below 2°C; at the pace of solar and wind together in electricity, about 1.8°C; at solar's pace, about 1.7°C; at the pace of electric cars, about 1.57°C. In every case the 1.5°C budget is exhausted around 2028, because three years of emissions cannot be avoided by any plausible S-curve. Demand matters too: the demand slider shows how efficiency and slower growth in energy use widen the budget for every speed.</p>
+  </div>
+
+  <div class="panel panel--hero">
+    <div class="controls">
+      <div class="seg-wrap">
+        <span class="seg-label" id="pre-label">Preset speed</span>
+        <div class="segmented" role="group" aria-labelledby="pre-label">
+          <button type="button" data-pre="169" class="is-on">System today</button>
+          <button type="button" data-pre="100">Current policies</button>
+          <button type="button" data-pre="38">Wind</button>
+          <button type="button" data-pre="27">Solar + wind</button>
+          <button type="button" data-pre="17.5">Solar</button>
+          <button type="button" data-pre="10.4">EV sales</button>
+        </div>
+      </div>
+      <div class="slider"><div class="slider-top"><label for="r-yrs">System 10% → 90% time</label><output id="o-yrs" for="r-yrs"></output></div><input type="range" id="r-yrs" min="8" max="200" step="1" value="169"><p class="hint" id="h-yrs"></p></div>
+      <div class="slider"><div class="slider-top"><label for="r-g">Energy-demand growth in 2025</label><output id="o-g" for="r-g"></output></div><input type="range" id="r-g" min="0" max="2.5" step="0.1" value="1.3"><p class="hint">Tapers linearly to zero by 2075. Lower values mean more efficiency.</p></div>
+    </div>
+    <div class="dash-grid" style="margin-top: 0;">
+      <div>
+        <div class="panel-head"><p class="panel-title">Clean share and CO2 emissions</p><p class="panel-meta">% of energy (left) · billion tonnes CO2 a year (right)</p></div>
+        <div class="chart-frame"><canvas id="chart-race-e"></canvas></div>
+      </div>
+      <div>
+        <div class="panel-head"><p class="panel-title">Warming against tipping thresholds</p><p class="panel-meta">°C · central threshold estimates as dotted lines</p></div>
+        <div class="chart-frame"><canvas id="chart-race-t"></canvas></div>
+      </div>
+    </div>
+    <div class="tile-row" aria-live="polite">
+      <div class="stat-tile stat-tile--clock"><p class="stat-tile-value" id="t-peak">—</p><p class="stat-tile-label">Peak warming (to 2200)</p></div>
+      <div class="stat-tile stat-tile--clock"><p class="stat-tile-value" id="t-2100">—</p><p class="stat-tile-label">Warming in 2100</p></div>
+      <div class="stat-tile stat-tile--fast"><p class="stat-tile-value" id="t-90">—</p><p class="stat-tile-label">Year the system reaches 90% clean</p></div>
+      <div class="stat-tile stat-tile--tip"><p class="stat-tile-value" id="t-tips">—</p><p class="stat-tile-label">Tipping elements whose central estimate is crossed</p></div>
+    </div>
+    <p class="calc-note" id="t-cross"></p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="enough">
+  <h2>6. How Fast Is Fast Enough</h2>
+  <p class="section-dek">Each tenth of a degree has a price in years. Below 2°C needs wind's pace; below 1.7°C, solar's.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Running the model across every speed gives a single curve linking how fast the system transforms to how warm the world peaks. The relationship is steep at the slow end and flattens at the fast end. Moving the system from today's 170-year pace to 100 years — roughly what current policies imply — lowers peak warming by more than a degree. Getting from 40 years to 20 lowers it by about three-tenths of a degree, and from 20 to 12 by another tenth.</p>
+    <p>Read against the thresholds, the curve gives the speeds required. Keeping peak warming below 2°C — and so most likely below the central estimate for mountain glacier loss — requires a 10%-to-90% time of about 40 years, with the system crossing 50% clean around 2042: roughly the pace at which wind has spread in electricity. Below 1.8°C, the central estimate for Labrador Sea convection, needs about 27 years, the pace of solar and wind together. Below 1.7°C needs about 20 years, solar's pace, and below 1.6°C, the central estimate for Barents Sea ice, about 12 years, close to the pace of electric-car sales.</p>
+    <p>The required speeds are demanding but not unprecedented, which is the hopeful reading. Each has already been achieved by a major clean technology in its own market. What has not been achieved is that speed across a whole energy system. The sobering reading is that the four elements with central thresholds at 1.5°C are passed on every path, so adaptation to coral loss, permafrost thaw and long-term sea-level rise is now part of the task, not an alternative to it.</p>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Speed of the system S-curve against peak warming</p>
+        <p class="panel-meta">Peak warming (°C, to 2200) for each 10%-to-90% time · default demand path · markers: historical technology speeds</p>
+      </div>
+      <div class="chart-frame chart-frame--tall"><canvas id="chart-frontier"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <p class="panel-title">Required speeds by warming ceiling</p>
+        <p class="panel-meta">Computed with the default demand path</p>
+      </div>
+      <div class="table-scroll">
+        <table class="req">
+          <thead><tr><th scope="col">Keep peak below</th><th scope="col">10% → 90%</th><th scope="col">50% clean by</th><th scope="col">Comparable pace</th><th scope="col">Thresholds kept (central)</th></tr></thead>
+          <tbody id="req-body"></tbody>
+        </table>
+      </div>
+      <p class="panel-note">The 1.5°C ceiling cannot be met by any S-curve starting from today: the budget is about three years of current emissions.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="steepen">
+  <h2>7. Steepening the System Curve</h2>
+  <p class="section-dek">The fastest way to win the race is to let the fast curves pull the slow sectors onto them — and to buy time where the model cannot.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>The model points to a strategy aimed at the slope of the system curve rather than at any single technology. The first lever is <strong>electrification</strong>: once power is clean and cheap, the sectors that can switch to electricity can borrow the power sector's S-curve instead of waiting for their own. Electric cars are the proof that this can happen fast; heat pumps, electric buses and trucks, and electrified low- and medium-temperature industrial heat are the next candidates. The second lever is <strong>stock turnover</strong>: retiring and replacing long-lived fossil assets — coal plants, inefficient buildings, old vehicle fleets — on schedule rather than at the end of their physical lives.</p>
+    <p>The third lever is <strong>demand</strong>. In the model, lower demand growth enlarges the budget for every speed, because clean supply no longer has to cover growth before displacing fossil fuels. Efficiency standards, compact cities and material efficiency do this directly. The fourth is to <strong>seed the slow S-curves now</strong> — green steel, cement, shipping fuels, aviation — so that they reach their steep phases in the 2030s rather than the 2050s; the earliest phase of an S-curve is slow, and its timing is set years in advance by research, demonstration and early markets.</p>
+    <p>Finally, some levers lie outside the model. Cutting methane and other short-lived pollutants slows near-term warming in ways a CO2 budget does not capture, buying time for the slower curves. Carbon removal could eventually reverse some overshoot, though not quickly or cheaply. And because several thresholds are passed on every path, adaptation and protection for the systems at risk — reef refuges, coastal planning for long-term sea-level rise, permafrost regions — are part of the response. The race is not between technologies and tipping points alone, but between the slowest part of the transition and the nearest threshold.</p>
+  </div>
+
+  <div class="readout">
+    <p class="readout-title">The conclusion</p>
+    <p>The clean-energy transition has already produced S-curves fast enough to win the race. Electric-car sales have moved at a pace that would hold warming near 1.6°C if the whole system matched it, and solar at a pace that would hold it near 1.7°C. The energy system as a whole is moving at a pace that would take it past 3°C. <strong>The race is decided by the gap between the fastest curves and the system curve</strong>, and by how quickly electrification, stock turnover, lower demand and early action in hard sectors close it. The 1.5°C budget is gone. The difference between 1.7°C and 2.5°C is still being decided, year by year, along the curve.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="method">
+  <h2>8. Method</h2>
+  <p class="section-dek">Data, curve fitting, the race model and its limits.</p>
+
+  <div class="prose-cols prose-cols--3">
+    <p>Adoption data are global annual values from Our World in Data: solar and wind shares of electricity (Ember and Energy Institute, to 2025), the electric share of new car sales (IEA, to 2025), the low-carbon and fossil shares of primary energy (Energy Institute, substitution method, to 2025), solar module prices (1975–2024) and fossil CO2 emissions (Global Carbon Budget, to 2024). Logistic curves are fitted by least squares to logit-transformed shares with saturation K = 100% (solar and wind together are also fitted with K = 75%, giving a 27-year 10%-to-90% time). The 10%-to-90% time of a logistic curve is ln(81) ÷ r. Battery prices are from BloombergNEF's 2025 survey as reported.</p>
+    <p>The race model sets emissions E(t) = 42.2 × D(t) × (1 − S(t)) ÷ (1 − S₀). S(t) is a logistic clean share passing through S₀ = 13.8% in 2025 at rate r. D(t) is energy-service demand growing at the chosen rate in 2025 and tapering linearly to zero by 2075; 1.3% reproduces recent emission growth at the observed pace. Warming is cumulative CO2 from the start of 2025 mapped through the Indicators of Global Climate Change 2025 budgets (1.36°C at zero; 1.5, 1.6, 1.7 and 2.0°C at 130, 310, 490 and 1,050 GtCO2), linear between points and extended above 2°C at the 1.7–2°C slope. Peak warming is taken to 2200.</p>
+    <p>The model treats all CO2 alike, including land-use emissions, assumes no carbon removal and no climate feedbacks, and inherits the budgets' assumptions about other gases. Thresholds are the central, minimum and maximum estimates of Armstrong McKay et al. (2022); crossing a central estimate is a statement about likelihood, not certainty, and slow elements respond over centuries. All outputs are illustrations of relative speed, not projections. Related reports: <a href="/reports/pollution-climate-feedback-loops/">the pollution–climate risk nexus</a>, <a href="/reports/infrastructure-economic-convergence/">infrastructure and convergence</a> and <a href="/reports/polycrisis-cost-century/">the polycrisis bill</a>.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="references">
+  <h2>Sources</h2>
+  <p class="section-dek">Data and literature consulted in October 2026.</p>
+
+  <ul class="ref-list">
+    <li><span class="ref-org">Ember / Energy Institute / OWID</span><a href="https://ourworldindata.org/grapher/share-electricity-solar" rel="noopener" target="_blank">Share of electricity from solar</a>; <a href="https://ourworldindata.org/grapher/share-electricity-wind" rel="noopener" target="_blank">from wind</a>; <a href="https://ourworldindata.org/grapher/low-carbon-share-energy" rel="noopener" target="_blank">low-carbon share of primary energy</a>.</li>
+    <li><span class="ref-org">IEA / OWID</span><a href="https://ourworldindata.org/grapher/electric-car-sales-share" rel="noopener" target="_blank">Share of new cars that are electric</a> (Global EV Outlook).</li>
+    <li><span class="ref-org">OWID</span><a href="https://ourworldindata.org/grapher/solar-pv-prices" rel="noopener" target="_blank">Solar PV module prices</a>; <a href="https://ourworldindata.org/grapher/annual-co2-emissions-per-country" rel="noopener" target="_blank">annual CO2 emissions</a> (Global Carbon Budget).</li>
+    <li><span class="ref-org">BloombergNEF</span><a href="https://about.bnef.com/insights/clean-energy/lithium-ion-battery-pack-prices-fall-to-108-per-kilowatt-hour" rel="noopener" target="_blank">Lithium-ion battery pack prices fall to $108 per kilowatt-hour</a> (2025).</li>
+    <li><span class="ref-org">Forster et al. / IGCC</span><a href="https://www.mercator-ocean.eu/wp-content/uploads/2025/06/IGCC-English-press-release-2025.pdf" rel="noopener" target="_blank">Indicators of Global Climate Change 2025</a> (press release); <a href="https://climate.leeds.ac.uk/news/scientists-find-three-years-left-of-remaining-carbon-budget-for-1-5c/" rel="noopener" target="_blank">University of Leeds summary</a>; budgets by level as reported by <a href="https://www.downtoearth.org.in/amp/story/climate-change/world-has-little-more-than-3-years-left-to-exhaust-50-carbon-budget-for-limiting-global-warming-to-15c-analysis" rel="noopener" target="_blank">Down To Earth</a>.</li>
+    <li><span class="ref-org">Global Carbon Project</span><a href="https://globalcarbonbudget.org/fossil-fuel-co2-emissions-hit-record-high-in-2025/" rel="noopener" target="_blank">Global Carbon Budget 2025: fossil fuel CO2 emissions hit record high</a>.</li>
+    <li><span class="ref-org">Science</span><a href="https://ore.exeter.ac.uk/repository/handle/10871/131584" rel="noopener" target="_blank">Armstrong McKay et al. (2022), Exceeding 1.5°C global warming could trigger multiple climate tipping points</a>; <a href="https://climatetippingpoints.info/2022/09/09/climate-tipping-points-reassessment-explainer/" rel="noopener" target="_blank">explainer</a>.</li>
+    <li><span class="ref-org">University of Exeter et al.</span><a href="https://www.stockholmresilience.org/research/research-stories/2025-10-13-world-reaches-first-climate-tipping-point---widespread-mortality-of-coral-reefs.html" rel="noopener" target="_blank">Global Tipping Points Report 2025</a> (Stockholm Resilience Centre summary); <a href="https://global-tipping-points.org/" rel="noopener" target="_blank">report site</a>.</li>
+    <li><span class="ref-org">UNEP</span><a href="https://unep.org/resources/emissions-gap-report-2025" rel="noopener" target="_blank">Emissions Gap Report 2025: Off Target</a>.</li>
+  </ul>
+</section>
