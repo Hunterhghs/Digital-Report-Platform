@@ -1,0 +1,325 @@
+/* ===========================================================================
+   Theme — Report 2026-40, "Heat Stress, Labor Productivity, and the Hidden
+   Economic Cost of Warming"
+
+   Aesthetic: time-clock ledger. The masthead is a punch-card of real heat:
+   a grid of every hour of the day across the fortnights of 2024 for one city,
+   each cell shaded by its heat-stress index (WBGT), with the working day
+   bracketed — generated from the data (inline SVG data URI) on a charcoal
+   field. Below it the page reads like an accounts ledger: cream paper, ruled
+   lines, red ink for losses, green for what adaptation recovers. Heavy,
+   moderate and light work keep one colour each; every h2 opens with a small
+   punch-card glyph. Zilla Slab for display, Radio Canada for prose, Xanh Mono
+   for figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours,
+   and charts.js reads the --w, --l and --x tokens so no hex lives in the script.
+   =========================================================================== */
+
+:root {
+  --bg: #f7f3ea;
+  --bg-card: #fffdf8;
+  --bg-accent: #efe8d9;
+  --bg-dark: #201d1b;
+  --bg-dark-2: #151311;
+
+  --text: #221e1a;
+  --text-secondary: #463f37;
+  --text-muted: #73695e;
+  --text-inverse: #f7f3ea;
+
+  --primary: #2b2622;
+  --primary-light: #4a5a6a;
+  --accent: #b3261e;
+  --accent-light: #ec8a7c;
+
+  --border: #ddd3c1;
+  --border-light: #ece4d4;
+  --rule: #cbbfa9;
+
+  /* work intensity */
+  --w-heavy: #8a2c0f;
+  --w-mod: #d9822b;
+  --w-light: #d8b45a;
+  /* ledger */
+  --l-loss: #b3261e;
+  --l-gain: #2f7d5c;
+  --l-model: #4a5a6a;
+  --l-muted: #b9ae9c;
+  /* heat ramp (WBGT) */
+  --x0: #efe8d9;
+  --x1: #f3d58c;
+  --x2: #ec9a3a;
+  --x3: #d0502a;
+  --x4: #9b1d20;
+  --x5: #4f0f17;
+
+  /* income */
+  --g-lic: #9b1d20;
+  --g-lmc: #d9822b;
+  --g-umc: #4a7a8c;
+  --g-hic: #2b2622;
+
+  --chart-blue: #4a5a6a;
+  --chart-blue-light: #a7b4c0;
+  --chart-gold: #d8b45a;
+  --chart-red: #b3261e;
+  --chart-teal: #2f7d5c;
+  --chart-gray: #8f877c;
+  --chart-orange: #d9822b;
+  --chart-purple: #6b4a7a;
+
+  --serif: "Zilla Slab", Georgia, "Times New Roman", serif;
+  --sans: "Radio Canada", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Xanh Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --clock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='820' height='330' viewBox='0 0 820 330'%3E%3Cpath d='M60 20h12v10h-12zM60 32h12v10h-12zM60 44h12v10h-12zM60 56h12v10h-12zM60 68h12v10h-12zM60 80h12v10h-12zM60 92h12v10h-12zM60 104h12v10h-12zM60 224h12v10h-12zM60 236h12v10h-12zM60 248h12v10h-12zM60 260h12v10h-12zM60 272h12v10h-12zM60 284h12v10h-12zM60 296h12v10h-12zM74 20h12v10h-12zM74 32h12v10h-12zM74 44h12v10h-12zM74 56h12v10h-12zM74 68h12v10h-12zM74 80h12v10h-12zM74 92h12v10h-12zM74 104h12v10h-12zM74 224h12v10h-12zM74 236h12v10h-12zM74 248h12v10h-12zM74 260h12v10h-12zM74 272h12v10h-12zM74 284h12v10h-12zM74 296h12v10h-12zM88 20h12v10h-12zM88 32h12v10h-12zM88 44h12v10h-12zM88 56h12v10h-12zM88 68h12v10h-12zM88 80h12v10h-12zM88 92h12v10h-12zM88 104h12v10h-12zM88 224h12v10h-12zM88 236h12v10h-12zM88 248h12v10h-12zM88 260h12v10h-12zM88 272h12v10h-12zM88 284h12v10h-12zM88 296h12v10h-12zM102 20h12v10h-12zM102 32h12v10h-12zM102 44h12v10h-12zM102 56h12v10h-12zM102 68h12v10h-12zM102 80h12v10h-12zM102 92h12v10h-12zM102 104h12v10h-12zM102 224h12v10h-12zM102 236h12v10h-12zM102 248h12v10h-12zM102 260h12v10h-12zM102 272h12v10h-12zM102 284h12v10h-12zM102 296h12v10h-12zM116 20h12v10h-12zM116 32h12v10h-12zM116 44h12v10h-12zM116 56h12v10h-12zM116 68h12v10h-12zM116 80h12v10h-12zM116 92h12v10h-12zM116 104h12v10h-12zM116 248h12v10h-12zM116 260h12v10h-12zM116 272h12v10h-12zM116 284h12v10h-12zM116 296h12v10h-12zM130 20h12v10h-12zM130 32h12v10h-12zM130 44h12v10h-12zM130 56h12v10h-12zM130 68h12v10h-12zM130 80h12v10h-12zM130 92h12v10h-12zM130 104h12v10h-12zM130 248h12v10h-12zM130 260h12v10h-12zM130 272h12v10h-12zM130 284h12v10h-12zM130 296h12v10h-12zM144 20h12v10h-12zM144 32h12v10h-12zM144 44h12v10h-12zM144 56h12v10h-12zM144 68h12v10h-12zM144 80h12v10h-12zM144 92h12v10h-12zM144 296h12v10h-12zM172 56h12v10h-12zM172 68h12v10h-12zM172 80h12v10h-12zM186 80h12v10h-12zM704 56h12v10h-12zM704 68h12v10h-12zM704 80h12v10h-12zM718 80h12v10h-12zM732 32h12v10h-12zM732 44h12v10h-12zM732 56h12v10h-12zM732 68h12v10h-12zM732 80h12v10h-12zM732 92h12v10h-12zM732 104h12v10h-12zM732 296h12v10h-12zM746 20h12v10h-12zM746 32h12v10h-12zM746 44h12v10h-12zM746 56h12v10h-12zM746 68h12v10h-12zM746 80h12v10h-12zM746 92h12v10h-12zM746 104h12v10h-12zM746 236h12v10h-12zM746 248h12v10h-12zM746 260h12v10h-12zM746 272h12v10h-12zM746 284h12v10h-12zM746 296h12v10h-12zM760 20h12v10h-12zM760 32h12v10h-12zM760 44h12v10h-12zM760 56h12v10h-12zM760 68h12v10h-12zM760 80h12v10h-12zM760 92h12v10h-12zM760 104h12v10h-12zM760 284h12v10h-12zM760 296h12v10h-12zM774 20h12v10h-12zM774 32h12v10h-12zM774 44h12v10h-12zM774 56h12v10h-12zM774 68h12v10h-12zM774 80h12v10h-12zM774 92h12v10h-12zM774 104h12v10h-12zM774 296h12v10h-12z' fill='%233a332d' fill-opacity='0.4'/%3E%3Cpath d='M60 116h12v10h-12zM60 128h12v10h-12zM74 116h12v10h-12zM74 128h12v10h-12zM88 116h12v10h-12zM88 128h12v10h-12zM88 140h12v10h-12zM88 152h12v10h-12zM102 116h12v10h-12zM102 128h12v10h-12zM102 140h12v10h-12zM102 152h12v10h-12zM102 164h12v10h-12zM102 176h12v10h-12zM102 188h12v10h-12zM102 200h12v10h-12zM102 212h12v10h-12zM130 116h12v10h-12zM746 116h12v10h-12zM746 128h12v10h-12zM760 116h12v10h-12z' fill='%233a332d' fill-opacity='0.9'/%3E%3Cpath d='M60 140h12v10h-12zM60 152h12v10h-12zM60 164h12v10h-12zM60 176h12v10h-12zM60 188h12v10h-12zM60 200h12v10h-12zM60 212h12v10h-12zM74 140h12v10h-12zM74 152h12v10h-12zM74 164h12v10h-12zM74 176h12v10h-12zM74 188h12v10h-12zM74 200h12v10h-12zM74 212h12v10h-12zM88 164h12v10h-12zM88 176h12v10h-12zM88 188h12v10h-12zM88 200h12v10h-12zM88 212h12v10h-12zM116 116h12v10h-12zM116 128h12v10h-12zM116 140h12v10h-12zM116 152h12v10h-12zM116 164h12v10h-12zM116 176h12v10h-12zM116 188h12v10h-12zM116 200h12v10h-12zM116 212h12v10h-12zM130 128h12v10h-12zM130 140h12v10h-12zM130 152h12v10h-12zM130 164h12v10h-12zM130 176h12v10h-12zM130 188h12v10h-12zM130 200h12v10h-12zM130 212h12v10h-12zM144 116h12v10h-12zM144 128h12v10h-12zM172 116h12v10h-12zM186 116h12v10h-12zM186 128h12v10h-12zM704 116h12v10h-12zM704 128h12v10h-12zM704 140h12v10h-12zM704 200h12v10h-12zM704 212h12v10h-12zM718 116h12v10h-12zM718 128h12v10h-12zM718 140h12v10h-12zM718 152h12v10h-12zM718 164h12v10h-12zM718 176h12v10h-12zM718 188h12v10h-12zM718 200h12v10h-12zM718 212h12v10h-12zM732 116h12v10h-12zM732 128h12v10h-12zM732 140h12v10h-12zM732 152h12v10h-12zM732 164h12v10h-12zM732 176h12v10h-12zM732 188h12v10h-12zM732 200h12v10h-12zM732 212h12v10h-12zM746 140h12v10h-12zM746 152h12v10h-12zM746 164h12v10h-12zM746 176h12v10h-12zM746 188h12v10h-12zM746 200h12v10h-12zM746 212h12v10h-12zM760 128h12v10h-12zM760 140h12v10h-12zM760 152h12v10h-12zM760 164h12v10h-12zM760 176h12v10h-12zM760 188h12v10h-12zM760 200h12v10h-12zM760 212h12v10h-12zM774 116h12v10h-12zM774 128h12v10h-12zM774 140h12v10h-12zM774 152h12v10h-12zM774 164h12v10h-12zM774 176h12v10h-12zM774 188h12v10h-12zM774 200h12v10h-12zM774 212h12v10h-12z' fill='%236b4f2f' fill-opacity='0.9'/%3E%3Cpath d='M116 224h12v10h-12zM116 236h12v10h-12zM130 224h12v10h-12zM130 236h12v10h-12zM144 104h12v10h-12zM144 224h12v10h-12zM144 236h12v10h-12zM144 248h12v10h-12zM144 260h12v10h-12zM144 272h12v10h-12zM144 284h12v10h-12zM158 20h12v10h-12zM158 32h12v10h-12zM158 44h12v10h-12zM158 56h12v10h-12zM158 68h12v10h-12zM158 80h12v10h-12zM158 92h12v10h-12zM158 104h12v10h-12zM158 236h12v10h-12zM158 248h12v10h-12zM158 260h12v10h-12zM158 272h12v10h-12zM158 284h12v10h-12zM158 296h12v10h-12zM172 20h12v10h-12zM172 32h12v10h-12zM172 44h12v10h-12zM172 92h12v10h-12zM172 104h12v10h-12zM172 236h12v10h-12zM172 248h12v10h-12zM172 260h12v10h-12zM172 272h12v10h-12zM172 284h12v10h-12zM172 296h12v10h-12zM186 20h12v10h-12zM186 32h12v10h-12zM186 44h12v10h-12zM186 56h12v10h-12zM186 68h12v10h-12zM186 92h12v10h-12zM186 104h12v10h-12zM186 236h12v10h-12zM186 248h12v10h-12zM186 260h12v10h-12zM186 272h12v10h-12zM186 284h12v10h-12zM186 296h12v10h-12zM200 68h12v10h-12zM200 80h12v10h-12zM214 20h12v10h-12zM214 32h12v10h-12zM214 44h12v10h-12zM214 56h12v10h-12zM214 68h12v10h-12zM214 80h12v10h-12zM214 92h12v10h-12zM214 296h12v10h-12zM676 32h12v10h-12zM676 44h12v10h-12zM676 56h12v10h-12zM676 68h12v10h-12zM676 80h12v10h-12zM690 20h12v10h-12zM690 32h12v10h-12zM690 44h12v10h-12zM690 56h12v10h-12zM690 68h12v10h-12zM690 80h12v10h-12zM690 92h12v10h-12zM690 104h12v10h-12zM690 248h12v10h-12zM690 260h12v10h-12zM690 272h12v10h-12zM690 284h12v10h-12zM690 296h12v10h-12zM704 20h12v10h-12zM704 32h12v10h-12zM704 44h12v10h-12zM704 92h12v10h-12zM704 104h12v10h-12zM704 224h12v10h-12zM704 236h12v10h-12zM704 248h12v10h-12zM704 260h12v10h-12zM704 272h12v10h-12zM704 284h12v10h-12zM704 296h12v10h-12zM718 20h12v10h-12zM718 32h12v10h-12zM718 44h12v10h-12zM718 56h12v10h-12zM718 68h12v10h-12zM718 92h12v10h-12zM718 104h12v10h-12zM718 224h12v10h-12zM718 236h12v10h-12zM718 248h12v10h-12zM718 260h12v10h-12zM718 272h12v10h-12zM718 284h12v10h-12zM718 296h12v10h-12zM732 20h12v10h-12zM732 224h12v10h-12zM732 236h12v10h-12zM732 248h12v10h-12zM732 260h12v10h-12zM732 272h12v10h-12zM732 284h12v10h-12zM746 224h12v10h-12zM760 224h12v10h-12zM760 236h12v10h-12zM760 248h12v10h-12zM760 260h12v10h-12zM760 272h12v10h-12zM774 224h12v10h-12zM774 236h12v10h-12zM774 248h12v10h-12zM774 260h12v10h-12zM774 272h12v10h-12zM774 284h12v10h-12z' fill='%236b4f2f' fill-opacity='0.4'/%3E%3Cpath d='M144 140h12v10h-12zM144 152h12v10h-12zM144 164h12v10h-12zM144 176h12v10h-12zM144 188h12v10h-12zM144 200h12v10h-12zM144 212h12v10h-12zM158 116h12v10h-12zM158 128h12v10h-12zM158 140h12v10h-12zM158 152h12v10h-12zM158 164h12v10h-12zM158 176h12v10h-12zM158 188h12v10h-12zM158 200h12v10h-12zM158 212h12v10h-12zM172 128h12v10h-12zM172 140h12v10h-12zM172 152h12v10h-12zM172 164h12v10h-12zM172 176h12v10h-12zM172 188h12v10h-12zM172 200h12v10h-12zM172 212h12v10h-12zM186 140h12v10h-12zM186 152h12v10h-12zM186 164h12v10h-12zM186 176h12v10h-12zM186 188h12v10h-12zM186 200h12v10h-12zM186 212h12v10h-12zM200 212h12v10h-12zM214 116h12v10h-12zM214 128h12v10h-12zM214 140h12v10h-12zM214 152h12v10h-12zM214 164h12v10h-12zM214 176h12v10h-12zM214 188h12v10h-12zM214 200h12v10h-12zM214 212h12v10h-12zM676 116h12v10h-12zM690 116h12v10h-12zM690 128h12v10h-12zM690 140h12v10h-12zM690 152h12v10h-12zM690 164h12v10h-12zM690 176h12v10h-12zM690 188h12v10h-12zM690 200h12v10h-12zM690 212h12v10h-12zM704 152h12v10h-12zM704 164h12v10h-12zM704 176h12v10h-12zM704 188h12v10h-12z' fill='%23b8742c' fill-opacity='0.9'/%3E%3Cpath d='M158 224h12v10h-12zM172 224h12v10h-12zM186 224h12v10h-12zM200 20h12v10h-12zM200 32h12v10h-12zM200 44h12v10h-12zM200 56h12v10h-12zM200 92h12v10h-12zM200 104h12v10h-12zM200 224h12v10h-12zM200 236h12v10h-12zM200 248h12v10h-12zM200 260h12v10h-12zM200 272h12v10h-12zM200 284h12v10h-12zM200 296h12v10h-12zM214 104h12v10h-12zM214 224h12v10h-12zM214 236h12v10h-12zM214 248h12v10h-12zM214 260h12v10h-12zM214 272h12v10h-12zM214 284h12v10h-12zM228 20h12v10h-12zM228 32h12v10h-12zM228 44h12v10h-12zM228 56h12v10h-12zM228 68h12v10h-12zM228 80h12v10h-12zM228 296h12v10h-12zM256 20h12v10h-12zM256 32h12v10h-12zM256 44h12v10h-12zM256 56h12v10h-12zM256 68h12v10h-12zM256 80h12v10h-12zM256 92h12v10h-12zM256 236h12v10h-12zM256 248h12v10h-12zM256 260h12v10h-12zM256 272h12v10h-12zM256 284h12v10h-12zM256 296h12v10h-12zM270 80h12v10h-12zM312 260h12v10h-12zM312 272h12v10h-12zM312 284h12v10h-12zM312 296h12v10h-12zM634 20h12v10h-12zM634 32h12v10h-12zM634 44h12v10h-12zM634 56h12v10h-12zM634 68h12v10h-12zM634 80h12v10h-12zM634 284h12v10h-12zM634 296h12v10h-12zM648 20h12v10h-12zM648 32h12v10h-12zM648 44h12v10h-12zM648 56h12v10h-12zM648 68h12v10h-12zM648 80h12v10h-12zM648 92h12v10h-12zM648 104h12v10h-12zM648 236h12v10h-12zM648 248h12v10h-12zM648 260h12v10h-12zM648 272h12v10h-12zM648 284h12v10h-12zM648 296h12v10h-12zM662 20h12v10h-12zM662 32h12v10h-12zM662 44h12v10h-12zM662 56h12v10h-12zM662 68h12v10h-12zM662 80h12v10h-12zM662 92h12v10h-12zM662 248h12v10h-12zM662 260h12v10h-12zM662 272h12v10h-12zM662 284h12v10h-12zM662 296h12v10h-12zM676 20h12v10h-12zM676 92h12v10h-12zM676 104h12v10h-12zM676 224h12v10h-12zM676 236h12v10h-12zM676 248h12v10h-12zM676 260h12v10h-12zM676 272h12v10h-12zM676 284h12v10h-12zM676 296h12v10h-12zM690 224h12v10h-12zM690 236h12v10h-12z' fill='%23b8742c' fill-opacity='0.4'/%3E%3Cpath d='M200 116h12v10h-12zM200 128h12v10h-12zM200 140h12v10h-12zM200 152h12v10h-12zM200 164h12v10h-12zM200 176h12v10h-12zM200 188h12v10h-12zM200 200h12v10h-12zM228 212h12v10h-12zM256 116h12v10h-12zM256 176h12v10h-12zM256 188h12v10h-12zM256 200h12v10h-12zM256 212h12v10h-12zM312 116h12v10h-12zM312 128h12v10h-12zM312 212h12v10h-12zM494 116h12v10h-12zM522 116h12v10h-12zM522 128h12v10h-12zM522 188h12v10h-12zM522 200h12v10h-12zM522 212h12v10h-12zM620 200h12v10h-12zM620 212h12v10h-12zM634 116h12v10h-12zM634 188h12v10h-12zM634 200h12v10h-12zM634 212h12v10h-12zM648 116h12v10h-12zM648 128h12v10h-12zM648 140h12v10h-12zM648 152h12v10h-12zM648 164h12v10h-12zM648 176h12v10h-12zM648 188h12v10h-12zM648 200h12v10h-12zM648 212h12v10h-12zM662 116h12v10h-12zM662 128h12v10h-12zM662 188h12v10h-12zM662 200h12v10h-12zM662 212h12v10h-12zM676 128h12v10h-12zM676 140h12v10h-12zM676 152h12v10h-12zM676 164h12v10h-12zM676 176h12v10h-12zM676 188h12v10h-12zM676 200h12v10h-12zM676 212h12v10h-12z' fill='%23e3a03a' fill-opacity='0.9'/%3E%3Cpath d='M228 92h12v10h-12zM228 104h12v10h-12zM228 224h12v10h-12zM228 236h12v10h-12zM228 248h12v10h-12zM228 260h12v10h-12zM228 272h12v10h-12zM228 284h12v10h-12zM242 20h12v10h-12zM242 32h12v10h-12zM242 44h12v10h-12zM242 56h12v10h-12zM242 68h12v10h-12zM242 80h12v10h-12zM242 92h12v10h-12zM242 260h12v10h-12zM242 272h12v10h-12zM242 284h12v10h-12zM242 296h12v10h-12zM256 104h12v10h-12zM256 224h12v10h-12zM270 20h12v10h-12zM270 32h12v10h-12zM270 44h12v10h-12zM270 56h12v10h-12zM270 68h12v10h-12zM270 92h12v10h-12zM270 248h12v10h-12zM270 260h12v10h-12zM270 272h12v10h-12zM270 284h12v10h-12zM270 296h12v10h-12zM284 20h12v10h-12zM284 32h12v10h-12zM284 44h12v10h-12zM284 56h12v10h-12zM284 68h12v10h-12zM284 80h12v10h-12zM284 260h12v10h-12zM284 272h12v10h-12zM284 284h12v10h-12zM284 296h12v10h-12zM298 68h12v10h-12zM298 80h12v10h-12zM312 20h12v10h-12zM312 32h12v10h-12zM312 44h12v10h-12zM312 56h12v10h-12zM312 68h12v10h-12zM312 80h12v10h-12zM312 92h12v10h-12zM312 104h12v10h-12zM312 224h12v10h-12zM312 236h12v10h-12zM312 248h12v10h-12zM326 20h12v10h-12zM326 32h12v10h-12zM326 44h12v10h-12zM326 56h12v10h-12zM326 68h12v10h-12zM326 80h12v10h-12zM340 20h12v10h-12zM340 44h12v10h-12zM340 56h12v10h-12zM340 68h12v10h-12zM340 272h12v10h-12zM340 284h12v10h-12zM340 296h12v10h-12zM410 20h12v10h-12zM410 32h12v10h-12zM410 44h12v10h-12zM410 56h12v10h-12zM410 68h12v10h-12zM410 80h12v10h-12zM424 20h12v10h-12zM424 32h12v10h-12zM424 44h12v10h-12zM424 56h12v10h-12zM424 68h12v10h-12zM424 80h12v10h-12zM424 92h12v10h-12zM424 104h12v10h-12zM424 236h12v10h-12zM424 248h12v10h-12zM424 260h12v10h-12zM424 272h12v10h-12zM424 284h12v10h-12zM424 296h12v10h-12zM438 20h12v10h-12zM438 32h12v10h-12zM438 44h12v10h-12zM438 56h12v10h-12zM438 68h12v10h-12zM438 80h12v10h-12zM438 92h12v10h-12zM438 272h12v10h-12zM438 284h12v10h-12zM438 296h12v10h-12zM452 20h12v10h-12zM452 32h12v10h-12zM452 44h12v10h-12zM452 56h12v10h-12zM452 68h12v10h-12zM452 80h12v10h-12zM452 272h12v10h-12zM452 284h12v10h-12zM452 296h12v10h-12zM466 20h12v10h-12zM466 32h12v10h-12zM466 44h12v10h-12zM466 56h12v10h-12zM466 68h12v10h-12zM466 80h12v10h-12zM466 92h12v10h-12zM466 260h12v10h-12zM466 272h12v10h-12zM466 284h12v10h-12zM466 296h12v10h-12zM480 20h12v10h-12zM480 32h12v10h-12zM480 44h12v10h-12zM480 56h12v10h-12zM480 68h12v10h-12zM480 80h12v10h-12zM480 92h12v10h-12zM480 104h12v10h-12zM480 236h12v10h-12zM480 248h12v10h-12zM480 260h12v10h-12zM480 272h12v10h-12zM480 284h12v10h-12zM480 296h12v10h-12zM494 20h12v10h-12zM494 32h12v10h-12zM494 44h12v10h-12zM494 56h12v10h-12zM494 68h12v10h-12zM494 80h12v10h-12zM494 92h12v10h-12zM494 104h12v10h-12zM494 236h12v10h-12zM494 248h12v10h-12zM494 260h12v10h-12zM494 272h12v10h-12zM494 284h12v10h-12zM494 296h12v10h-12zM508 20h12v10h-12zM508 32h12v10h-12zM508 44h12v10h-12zM508 56h12v10h-12zM508 68h12v10h-12zM508 80h12v10h-12zM508 92h12v10h-12zM508 104h12v10h-12zM508 236h12v10h-12zM508 248h12v10h-12zM508 260h12v10h-12zM508 272h12v10h-12zM508 284h12v10h-12zM508 296h12v10h-12zM522 20h12v10h-12zM522 32h12v10h-12zM522 44h12v10h-12zM522 56h12v10h-12zM522 68h12v10h-12zM522 80h12v10h-12zM522 92h12v10h-12zM522 104h12v10h-12zM522 224h12v10h-12zM522 236h12v10h-12zM522 248h12v10h-12zM522 260h12v10h-12zM522 272h12v10h-12zM522 284h12v10h-12zM522 296h12v10h-12zM536 20h12v10h-12zM536 32h12v10h-12zM536 44h12v10h-12zM536 56h12v10h-12zM536 68h12v10h-12zM536 80h12v10h-12zM536 92h12v10h-12zM536 104h12v10h-12zM536 236h12v10h-12zM536 248h12v10h-12zM536 260h12v10h-12zM536 272h12v10h-12zM536 284h12v10h-12zM536 296h12v10h-12zM550 20h12v10h-12zM550 32h12v10h-12zM550 44h12v10h-12zM550 56h12v10h-12zM550 68h12v10h-12zM550 80h12v10h-12zM550 92h12v10h-12zM550 260h12v10h-12zM550 272h12v10h-12zM550 284h12v10h-12zM550 296h12v10h-12zM564 20h12v10h-12zM564 32h12v10h-12zM564 44h12v10h-12zM564 56h12v10h-12zM564 68h12v10h-12zM564 80h12v10h-12zM564 92h12v10h-12zM564 104h12v10h-12zM564 224h12v10h-12zM564 236h12v10h-12zM564 248h12v10h-12zM564 260h12v10h-12zM564 272h12v10h-12zM564 284h12v10h-12zM564 296h12v10h-12zM578 20h12v10h-12zM578 32h12v10h-12zM578 44h12v10h-12zM578 56h12v10h-12zM578 68h12v10h-12zM578 80h12v10h-12zM578 92h12v10h-12zM578 284h12v10h-12zM578 296h12v10h-12zM592 20h12v10h-12zM592 32h12v10h-12zM592 44h12v10h-12zM592 56h12v10h-12zM592 68h12v10h-12zM592 80h12v10h-12zM592 92h12v10h-12zM592 104h12v10h-12zM592 224h12v10h-12zM592 236h12v10h-12zM592 248h12v10h-12zM592 260h12v10h-12zM592 272h12v10h-12zM592 284h12v10h-12zM592 296h12v10h-12zM606 20h12v10h-12zM606 32h12v10h-12zM606 44h12v10h-12zM606 56h12v10h-12zM606 68h12v10h-12zM606 80h12v10h-12zM606 92h12v10h-12zM606 104h12v10h-12zM606 236h12v10h-12zM606 248h12v10h-12zM606 260h12v10h-12zM606 272h12v10h-12zM606 284h12v10h-12zM606 296h12v10h-12zM620 20h12v10h-12zM620 32h12v10h-12zM620 44h12v10h-12zM620 56h12v10h-12zM620 68h12v10h-12zM620 80h12v10h-12zM620 92h12v10h-12zM620 224h12v10h-12zM620 236h12v10h-12zM620 248h12v10h-12zM620 260h12v10h-12zM620 272h12v10h-12zM620 284h12v10h-12zM620 296h12v10h-12zM634 92h12v10h-12zM634 104h12v10h-12zM634 224h12v10h-12zM634 236h12v10h-12zM634 248h12v10h-12zM634 260h12v10h-12zM634 272h12v10h-12zM648 224h12v10h-12zM662 104h12v10h-12zM662 224h12v10h-12zM662 236h12v10h-12z' fill='%23e3a03a' fill-opacity='0.4'/%3E%3Cpath d='M228 116h12v10h-12zM228 128h12v10h-12zM228 140h12v10h-12zM228 176h12v10h-12zM228 188h12v10h-12zM228 200h12v10h-12zM242 116h12v10h-12zM242 200h12v10h-12zM242 212h12v10h-12zM256 128h12v10h-12zM256 140h12v10h-12zM256 152h12v10h-12zM256 164h12v10h-12zM270 116h12v10h-12zM270 164h12v10h-12zM270 176h12v10h-12zM270 188h12v10h-12zM270 200h12v10h-12zM270 212h12v10h-12zM284 176h12v10h-12zM284 188h12v10h-12zM284 200h12v10h-12zM284 212h12v10h-12zM312 140h12v10h-12zM312 152h12v10h-12zM312 164h12v10h-12zM312 176h12v10h-12zM312 188h12v10h-12zM312 200h12v10h-12zM340 116h12v10h-12zM340 164h12v10h-12zM340 176h12v10h-12zM340 188h12v10h-12zM340 200h12v10h-12zM340 212h12v10h-12zM396 116h12v10h-12zM396 212h12v10h-12zM410 116h12v10h-12zM410 128h12v10h-12zM410 164h12v10h-12zM410 176h12v10h-12zM410 188h12v10h-12zM410 200h12v10h-12zM410 212h12v10h-12zM424 116h12v10h-12zM424 128h12v10h-12zM424 140h12v10h-12zM424 152h12v10h-12zM424 164h12v10h-12zM424 176h12v10h-12zM424 188h12v10h-12zM424 200h12v10h-12zM424 212h12v10h-12zM438 116h12v10h-12zM438 128h12v10h-12zM438 140h12v10h-12zM438 152h12v10h-12zM438 164h12v10h-12zM438 176h12v10h-12zM438 188h12v10h-12zM438 200h12v10h-12zM438 212h12v10h-12zM452 116h12v10h-12zM452 128h12v10h-12zM452 140h12v10h-12zM452 152h12v10h-12zM452 164h12v10h-12zM452 188h12v10h-12zM452 200h12v10h-12zM452 212h12v10h-12zM466 116h12v10h-12zM466 128h12v10h-12zM466 140h12v10h-12zM466 152h12v10h-12zM466 164h12v10h-12zM466 176h12v10h-12zM466 188h12v10h-12zM466 200h12v10h-12zM466 212h12v10h-12zM480 116h12v10h-12zM480 128h12v10h-12zM480 140h12v10h-12zM480 152h12v10h-12zM480 164h12v10h-12zM480 176h12v10h-12zM480 188h12v10h-12zM480 200h12v10h-12zM480 212h12v10h-12zM494 128h12v10h-12zM494 140h12v10h-12zM494 152h12v10h-12zM494 164h12v10h-12zM494 176h12v10h-12zM494 188h12v10h-12zM494 200h12v10h-12zM494 212h12v10h-12zM508 116h12v10h-12zM508 128h12v10h-12zM508 140h12v10h-12zM508 152h12v10h-12zM508 164h12v10h-12zM508 176h12v10h-12zM508 188h12v10h-12zM508 200h12v10h-12zM508 212h12v10h-12zM522 140h12v10h-12zM522 152h12v10h-12zM522 164h12v10h-12zM522 176h12v10h-12zM536 116h12v10h-12zM536 128h12v10h-12zM536 140h12v10h-12zM536 152h12v10h-12zM536 164h12v10h-12zM536 176h12v10h-12zM536 188h12v10h-12zM536 200h12v10h-12zM536 212h12v10h-12zM550 116h12v10h-12zM550 128h12v10h-12zM550 140h12v10h-12zM550 152h12v10h-12zM550 164h12v10h-12zM550 176h12v10h-12zM550 188h12v10h-12zM550 200h12v10h-12zM550 212h12v10h-12zM564 116h12v10h-12zM564 128h12v10h-12zM564 140h12v10h-12zM564 152h12v10h-12zM564 164h12v10h-12zM564 176h12v10h-12zM564 188h12v10h-12zM564 200h12v10h-12zM564 212h12v10h-12zM578 116h12v10h-12zM578 128h12v10h-12zM578 140h12v10h-12zM578 152h12v10h-12zM578 164h12v10h-12zM578 176h12v10h-12zM578 188h12v10h-12zM578 200h12v10h-12zM578 212h12v10h-12zM592 116h12v10h-12zM592 128h12v10h-12zM592 140h12v10h-12zM592 152h12v10h-12zM592 164h12v10h-12zM592 176h12v10h-12zM592 188h12v10h-12zM592 200h12v10h-12zM592 212h12v10h-12zM606 116h12v10h-12zM606 128h12v10h-12zM606 140h12v10h-12zM606 152h12v10h-12zM606 164h12v10h-12zM606 176h12v10h-12zM606 188h12v10h-12zM606 200h12v10h-12zM606 212h12v10h-12zM620 116h12v10h-12zM620 128h12v10h-12zM620 140h12v10h-12zM620 152h12v10h-12zM620 164h12v10h-12zM620 176h12v10h-12zM620 188h12v10h-12zM634 128h12v10h-12zM634 140h12v10h-12zM634 152h12v10h-12zM634 164h12v10h-12zM634 176h12v10h-12zM662 140h12v10h-12zM662 152h12v10h-12zM662 164h12v10h-12zM662 176h12v10h-12z' fill='%23d0502a' fill-opacity='0.9'/%3E%3Cpath d='M228 152h12v10h-12zM228 164h12v10h-12zM242 128h12v10h-12zM242 140h12v10h-12zM242 152h12v10h-12zM242 164h12v10h-12zM242 176h12v10h-12zM242 188h12v10h-12zM270 128h12v10h-12zM270 140h12v10h-12zM270 152h12v10h-12zM284 116h12v10h-12zM284 128h12v10h-12zM284 140h12v10h-12zM284 152h12v10h-12zM284 164h12v10h-12zM298 116h12v10h-12zM298 128h12v10h-12zM298 140h12v10h-12zM298 152h12v10h-12zM298 164h12v10h-12zM298 176h12v10h-12zM298 188h12v10h-12zM298 200h12v10h-12zM298 212h12v10h-12zM326 116h12v10h-12zM326 128h12v10h-12zM326 140h12v10h-12zM326 152h12v10h-12zM326 164h12v10h-12zM326 176h12v10h-12zM326 188h12v10h-12zM326 200h12v10h-12zM326 212h12v10h-12zM340 128h12v10h-12zM340 140h12v10h-12zM340 152h12v10h-12zM354 116h12v10h-12zM354 128h12v10h-12zM354 140h12v10h-12zM354 152h12v10h-12zM354 164h12v10h-12zM354 176h12v10h-12zM354 188h12v10h-12zM354 200h12v10h-12zM354 212h12v10h-12zM368 116h12v10h-12zM368 128h12v10h-12zM368 200h12v10h-12zM368 212h12v10h-12zM382 116h12v10h-12zM382 128h12v10h-12zM382 212h12v10h-12zM396 128h12v10h-12zM396 140h12v10h-12zM396 152h12v10h-12zM396 164h12v10h-12zM396 176h12v10h-12zM396 188h12v10h-12zM396 200h12v10h-12zM410 140h12v10h-12zM410 152h12v10h-12zM452 176h12v10h-12z' fill='%239b1d20' fill-opacity='0.9'/%3E%3Cpath d='M242 104h12v10h-12zM242 224h12v10h-12zM242 236h12v10h-12zM242 248h12v10h-12zM270 104h12v10h-12zM270 224h12v10h-12zM270 236h12v10h-12zM284 92h12v10h-12zM284 104h12v10h-12zM284 224h12v10h-12zM284 236h12v10h-12zM284 248h12v10h-12zM298 20h12v10h-12zM298 32h12v10h-12zM298 44h12v10h-12zM298 56h12v10h-12zM298 92h12v10h-12zM298 236h12v10h-12zM298 248h12v10h-12zM298 260h12v10h-12zM298 272h12v10h-12zM298 284h12v10h-12zM298 296h12v10h-12zM326 92h12v10h-12zM326 104h12v10h-12zM326 224h12v10h-12zM326 236h12v10h-12zM326 248h12v10h-12zM326 260h12v10h-12zM326 272h12v10h-12zM326 284h12v10h-12zM326 296h12v10h-12zM340 32h12v10h-12zM340 80h12v10h-12zM340 92h12v10h-12zM340 104h12v10h-12zM340 224h12v10h-12zM340 236h12v10h-12zM340 248h12v10h-12zM340 260h12v10h-12zM354 20h12v10h-12zM354 32h12v10h-12zM354 44h12v10h-12zM354 56h12v10h-12zM354 68h12v10h-12zM354 80h12v10h-12zM354 92h12v10h-12zM354 104h12v10h-12zM354 236h12v10h-12zM354 248h12v10h-12zM354 260h12v10h-12zM354 272h12v10h-12zM354 284h12v10h-12zM354 296h12v10h-12zM368 20h12v10h-12zM368 32h12v10h-12zM368 44h12v10h-12zM368 56h12v10h-12zM368 68h12v10h-12zM368 80h12v10h-12zM368 92h12v10h-12zM368 236h12v10h-12zM368 248h12v10h-12zM368 260h12v10h-12zM368 272h12v10h-12zM368 284h12v10h-12zM368 296h12v10h-12zM382 20h12v10h-12zM382 32h12v10h-12zM382 44h12v10h-12zM382 56h12v10h-12zM382 68h12v10h-12zM382 80h12v10h-12zM382 92h12v10h-12zM382 248h12v10h-12zM382 260h12v10h-12zM382 272h12v10h-12zM382 284h12v10h-12zM382 296h12v10h-12zM396 20h12v10h-12zM396 32h12v10h-12zM396 44h12v10h-12zM396 56h12v10h-12zM396 68h12v10h-12zM396 80h12v10h-12zM396 92h12v10h-12zM396 104h12v10h-12zM396 224h12v10h-12zM396 236h12v10h-12zM396 248h12v10h-12zM396 260h12v10h-12zM396 272h12v10h-12zM396 284h12v10h-12zM396 296h12v10h-12zM410 92h12v10h-12zM410 104h12v10h-12zM410 224h12v10h-12zM410 236h12v10h-12zM410 248h12v10h-12zM410 260h12v10h-12zM410 272h12v10h-12zM410 284h12v10h-12zM410 296h12v10h-12zM424 224h12v10h-12zM438 104h12v10h-12zM438 224h12v10h-12zM438 236h12v10h-12zM438 248h12v10h-12zM438 260h12v10h-12zM452 92h12v10h-12zM452 104h12v10h-12zM452 224h12v10h-12zM452 236h12v10h-12zM452 248h12v10h-12zM452 260h12v10h-12zM466 104h12v10h-12zM466 224h12v10h-12zM466 236h12v10h-12zM466 248h12v10h-12zM480 224h12v10h-12zM494 224h12v10h-12zM508 224h12v10h-12zM536 224h12v10h-12zM550 104h12v10h-12zM550 224h12v10h-12zM550 236h12v10h-12zM550 248h12v10h-12zM578 104h12v10h-12zM578 224h12v10h-12zM578 236h12v10h-12zM578 248h12v10h-12zM578 260h12v10h-12zM578 272h12v10h-12zM606 224h12v10h-12zM620 104h12v10h-12z' fill='%23d0502a' fill-opacity='0.4'/%3E%3Cpath d='M298 104h12v10h-12zM298 224h12v10h-12zM354 224h12v10h-12zM368 104h12v10h-12zM368 224h12v10h-12zM382 104h12v10h-12zM382 224h12v10h-12zM382 236h12v10h-12z' fill='%239b1d20' fill-opacity='0.4'/%3E%3Cpath d='M368 140h12v10h-12zM368 152h12v10h-12zM368 164h12v10h-12zM368 176h12v10h-12zM368 188h12v10h-12zM382 140h12v10h-12zM382 152h12v10h-12zM382 164h12v10h-12zM382 176h12v10h-12zM382 188h12v10h-12zM382 200h12v10h-12z' fill='%23f3d58c' fill-opacity='0.9'/%3E%3Crect x='56' y='114' width='732' height='110' fill='none' stroke='%23f3ebdf' stroke-opacity='0.75' stroke-width='1.6' stroke-dasharray='5 4'/%3E%3Ctext x='50' y='29' fill='%23cbbfae' font-family='monospace' font-size='10' text-anchor='end'%3E00%3C/text%3E%3Ctext x='50' y='125' fill='%23cbbfae' font-family='monospace' font-size='10' text-anchor='end'%3E08%3C/text%3E%3Ctext x='50' y='233' fill='%23cbbfae' font-family='monospace' font-size='10' text-anchor='end'%3E17%3C/text%3E%3Ctext x='50' y='305' fill='%23cbbfae' font-family='monospace' font-size='10' text-anchor='end'%3E23%3C/text%3E%3C/svg%3E");
+  --ramp: linear-gradient(90deg, var(--x1), var(--x2), var(--x3), var(--x4), var(--x5));
+  --duo: linear-gradient(90deg, var(--l-loss) 0 50%, var(--l-gain) 50% 100%);
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1.01rem; line-height: 1.64; }
+
+::selection { background: rgba(179, 38, 30, 0.2); }
+:where(a, button, [tabindex], input, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a { color: var(--primary-light); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--ramp); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: the particle field ------------------------------------------------- */
+
+.masthead {
+  position: relative;
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.3rem var(--gutter) 4rem;
+  background:
+    linear-gradient(90deg, rgba(21, 19, 17, 0.97) 0 38%, rgba(21, 19, 17, 0.72) 58%, rgba(21, 19, 17, 0.15) 85%),
+    var(--clock) right center / 820px auto no-repeat,
+    linear-gradient(180deg, #2a2623, #151311);
+}
+.masthead::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: repeating-linear-gradient(90deg, var(--l-loss) 0 18px, transparent 18px 22px); }
+.masthead .overline { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.12em; color: var(--accent-light); margin-bottom: 1rem; }
+.masthead .overline::before { content: "08:00–17:00 · LABOUR LEDGER · "; color: #fff; }
+.masthead h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.4rem, 5.6vw, 4.1rem); line-height: 1.02; letter-spacing: -0.015em; max-width: 17ch; color: #fff; }
+.masthead .subtitle { font-family: var(--sans); font-weight: 500; font-size: 1.24rem; color: #eadfce; max-width: 52ch; }
+.masthead .strapline { font-family: var(--sans); font-style: normal; font-size: 1.02rem; color: #f3ebdf; border-left: 4px solid var(--accent); max-width: 64ch; background: rgba(21, 19, 17, 0.72); }
+.masthead .meta-row { border-top: 1px solid rgba(255, 255, 255, 0.16); color: #cbbfae; font-family: var(--mono); font-size: 0.8rem; position: relative; }
+.masthead .meta-row strong { color: var(--accent-light); font-family: var(--mono); font-weight: 700; font-size: 0.68rem; letter-spacing: 0.1em; }
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(245, 244, 242, 0.96); border-bottom: 1px solid var(--border); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.8rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- headings with a particle glyph --------------------------------------------------- */
+
+section > h2 {
+  position: relative;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  letter-spacing: -0.012em;
+  line-height: 1.08;
+  color: var(--primary);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 0 0.55rem 2.4rem;
+}
+section > h2::before {
+  content: "";
+  position: absolute; left: 0; top: 0.28em;
+  width: 1.5rem; height: 0.95rem;
+  border-radius: 2px;
+  background:
+    linear-gradient(90deg, transparent 0 30%, rgba(0,0,0,0) 30%),
+    repeating-linear-gradient(90deg, var(--x1) 0 3px, var(--x2) 3px 6px, var(--x3) 6px 9px, var(--x4) 9px 12px);
+  box-shadow: inset 0 0 0 1px var(--text);
+}
+.abstract h2, .endmatter h2 { padding-left: 0; border-bottom: 0; font-family: var(--mono); font-size: 0.86rem; }
+.abstract h2::before, .endmatter h2::before { content: none; }
+section > .section-dek { font-family: var(--sans); font-style: normal; font-weight: 500; color: var(--text-muted); font-size: 1.16rem; line-height: 1.45; max-width: none; }
+
+.section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
+
+/* --- abstract, endmatter ------------------------------------------------------------- */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-top: 6px solid transparent; border-image: var(--ramp) 1; border-radius: 0; }
+.abstract h2 { color: var(--primary); letter-spacing: 0.12em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.74rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.72rem; }
+
+/* --- KPI board ------------------------------------------------------------------------- */
+
+.kpi-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1.6rem 0; }
+.kpi { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 3px; padding: 1.1rem 1.05rem 0.85rem; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.kpi::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--k, var(--accent)); }
+.kpi--loss { --k: var(--l-loss); }
+.kpi--gain { --k: var(--l-gain); }
+.kpi--model { --k: var(--l-model); }
+.kpi--heavy { --k: var(--w-heavy); }
+.kpi--mod { --k: var(--w-mod); }
+.kpi-value { font-family: var(--serif); font-weight: 800; font-size: clamp(1.8rem, 3.2vw, 2.35rem); letter-spacing: -0.03em; line-height: 1; color: var(--text); font-variant-numeric: lining-nums tabular-nums; }
+.kpi-label { font-size: 0.86rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.45rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; margin-bottom: 0.3rem; }
+
+/* --- readout ----------------------------------------------------------------------------- */
+
+.readout { background: var(--bg-dark); border-radius: 3px; padding: 1.15rem 1.4rem 0.45rem; margin: 1.6rem 0; position: relative; overflow: hidden; border-bottom: 6px solid transparent; border-image: var(--ramp) 1; }
+.readout-title { font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 0.4rem !important; }
+.readout p { color: #e4e2dc; text-align: justify; hyphens: auto; -webkit-hyphens: auto; position: relative; }
+.readout strong { color: #fff; }
+
+/* --- panels ------------------------------------------------------------------------------ */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 3px; padding: 1.05rem 1.15rem 0.95rem; min-width: 0; }
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.15rem 1.25rem 1.05rem; border-top: 5px solid transparent; border-image: var(--ramp) 1; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-title { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; font-size: 1.16rem; line-height: 1.2; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); margin: 0.25rem 0 0.4rem !important; }
+.panel-note { font-size: 0.85rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 310px; }
+.panel .chart-frame--tall { height: 400px; }
+.panel .chart-frame--short { height: 230px; }
+
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: 3px; padding: 0.85rem 1rem; border-left: 6px solid var(--k, var(--accent)); }
+.stat-tile--good { --k: var(--l-gain); }
+.stat-tile--bad { --k: var(--l-loss); }
+.stat-tile--heavy { --k: var(--w-heavy); }
+.stat-tile--mod { --k: var(--w-mod); }
+.stat-tile--light { --k: var(--w-light); }
+.stat-tile--model { --k: var(--l-model); }
+.stat-tile-value { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; font-size: 1.6rem; line-height: 1.05; color: var(--text); margin: 0 !important; font-variant-numeric: lining-nums tabular-nums; }
+.stat-tile-label { font-size: 0.82rem; color: var(--text-muted); margin: 0.2rem 0 0 !important; text-align: left !important; line-height: 1.4; }
+.tile-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1rem 0; }
+
+/* --- controls ------------------------------------------------------------------------------ */
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px 22px; margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+.slider { display: grid; gap: 3px; }
+.slider-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider label, .seg-wrap .seg-label { font-family: var(--sans); font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.slider output { font-family: var(--mono); font-size: 0.86rem; color: var(--accent); white-space: nowrap; }
+.slider .hint { font-size: 0.78rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); margin: 2px 0; }
+.seg-wrap { display: grid; gap: 5px; }
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; background: var(--bg-card); width: fit-content; max-width: 100%; }
+.segmented button { font: inherit; font-family: var(--mono); font-size: 0.8rem; padding: 0.38rem 0.66rem; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--primary); color: #fff; }
+.calc-note { font-family: var(--mono); font-size: 0.74rem; color: var(--text-muted); margin: 0.6rem 0 0 !important; line-height: 1.45; }
+select.pick { font: inherit; font-family: var(--sans); font-size: 0.9rem; padding: 0.35rem 0.5rem; border: 1px solid var(--rule); border-radius: 3px; background: var(--bg-card); color: var(--text); max-width: 100%; }
+
+/* --- atlas and country card ------------------------------------------------------------------- */
+
+.atlas-layout { display: grid; grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.atlas-wrap { position: relative; border-radius: 3px; overflow: hidden; background: #eceae4; border: 1px solid var(--border); }
+.atlas { display: block; width: 100%; height: auto; }
+.atlas .atlas-sea { fill: #eceae4; }
+.atlas .atlas-land path { fill: #d8d6cf; stroke: #fff; stroke-width: 0.45; stroke-linejoin: round; transition: fill 0.25s; }
+.atlas .atlas-dots circle { fill: #d8d6cf; stroke: var(--text); stroke-width: 0.5; }
+.atlas [data-iso].is-in { cursor: pointer; }
+.atlas [data-iso].is-in:hover { stroke: var(--text); stroke-width: 1.3; }
+.atlas [data-iso].is-pick { stroke: var(--text); stroke-width: 2.2; }
+.atlas-corner { position: absolute; left: 10px; bottom: 8px; font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.85); padding: 1px 6px; border-radius: 3px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0.6rem 0 0; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.74rem; color: var(--text-secondary); }
+.legend i { width: 14px; height: 10px; border-radius: 2px; flex: none; }
+.country-card { border: 1px solid var(--border); border-radius: 3px; background: var(--bg); padding: 0.85rem 0.95rem; min-height: 280px; border-top: 6px solid var(--cc, var(--rule)); }
+.country-card .cc-kicker { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 !important; }
+.country-card h3 { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; font-size: 1.45rem; color: var(--primary); margin: 0.05rem 0 0.15rem; line-height: 1.1; }
+.country-card .cc-class { font-family: var(--mono); font-size: 0.76rem; margin: 0 0 0.55rem !important; color: var(--text-secondary); text-align: left !important; }
+.kv { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; font-size: 0.86rem; margin: 0; }
+.kv dt { color: var(--text-secondary); }
+.kv dd { margin: 0; font-family: var(--mono); font-size: 0.84rem; color: var(--text); text-align: right; }
+.cc-spark { display: block; width: 100%; height: 56px; margin-top: 0.6rem; }
+.cc-spark-lab { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); }
+
+/* --- physiology diagram ------------------------------------------------------------------------ */
+
+.phys-layout { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.phys-wrap { border: 1px solid var(--border); border-radius: 3px; background: radial-gradient(circle at 50% 40%, #ffffff, #f0eee9); }
+svg.phys { display: block; width: 100%; height: auto; font-family: var(--sans); }
+svg.phys .lnk { fill: none; stroke-width: 2.4; opacity: 0.8; transition: opacity 0.2s, stroke-width 0.2s; }
+svg.phys .lnk.is-dim { opacity: 0.08; }
+svg.phys .lnk.is-on { stroke-width: 4; opacity: 1; }
+svg.phys .nd { cursor: pointer; transition: opacity 0.2s; }
+svg.phys .nd.is-dim { opacity: 0.3; }
+svg.phys .nd rect { rx: 7; stroke-width: 2; }
+svg.phys .nd text { font-size: 13px; font-weight: 600; fill: var(--text); pointer-events: none; }
+svg.phys .nd text.sub { font-size: 10.5px; font-weight: 400; fill: var(--text-muted); }
+svg.phys .col-h { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; fill: var(--text-muted); text-transform: uppercase; }
+.evidence { border: 1px solid var(--border); border-radius: 3px; background: var(--bg); padding: 0.9rem 1rem; border-top: 6px solid var(--ev, var(--rule)); min-height: 240px; }
+.evidence .ev-kicker { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 !important; }
+.evidence h3 { font-family: var(--serif); font-weight: 800; font-size: 1.4rem; color: var(--primary); margin: 0.1rem 0 0.35rem; line-height: 1.12; }
+.evidence p { font-size: 0.9rem; line-height: 1.5; text-align: left !important; }
+.evidence .ev-src { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); }
+
+/* --- hour × fortnight heat grid -------------------------------------------------------------------- */
+
+.hg-wrap { overflow-x: auto; }
+.hgrid { display: grid; grid-template-columns: 2.4rem repeat(26, minmax(10px, 1fr)); gap: 1px; font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); min-width: 420px; }
+.hgrid i { display: block; height: 12px; border-radius: 1px; }
+.hgrid i.w { box-shadow: inset 0 0 0 1px rgba(34, 30, 26, 0.35); }
+.hgrid span { line-height: 12px; text-align: right; padding-right: 4px; }
+
+/* --- joint-effect gauge ------------------------------------------------------------------------- */
+
+.gauge { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0.8rem 0; }
+.quad-note { font-family: var(--mono); font-size: 0.74rem; color: var(--text-muted); margin: 0.4rem 0 0 !important; }
+
+.day-strip { display: flex; height: 22px; border-radius: 3px; overflow: hidden; border: 1px solid var(--border); margin: 0.3rem 0 0; }
+.day-strip span { flex: 1; min-width: 0; }
+.country-card .cc-cities { font-family: var(--mono); font-size: 0.7rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+
+table.matrix { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.matrix th, table.matrix td { padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--border-light); text-align: left; vertical-align: top; }
+table.matrix thead th { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); border-bottom: 2px solid var(--rule); }
+table.matrix td.m { text-align: center; font-family: var(--mono); font-weight: 700; white-space: nowrap; }
+table.matrix td.m b { display: inline-block; min-width: 2.4rem; padding: 2px 6px; border-radius: 3px; }
+table.matrix .pp b { background: rgba(47, 140, 106, 0.22); color: #1d6a4e; }
+table.matrix .p b { background: rgba(47, 140, 106, 0.1); color: #2e7a5e; }
+table.matrix .z b { background: var(--bg-accent); color: var(--text-muted); }
+.matrix-wrap { overflow-x: auto; }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ledger-row { border-bottom: 1px solid var(--rule); }
+.ref-list .ref-org { font-family: var(--mono); color: var(--primary-light); font-size: 0.72rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 8px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 8px; background: var(--ramp); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; font-size: 1.45rem; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board, .tile-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .atlas-layout, .phys-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .dash-grid { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2.2rem; background: linear-gradient(180deg, rgba(21, 19, 17, 0.9) 0 55%, rgba(21, 19, 17, 0.5)), var(--clock) 60% 100% / 600px auto no-repeat, linear-gradient(180deg, #2a2623, #151311); }
+  .gauge { grid-template-columns: minmax(0, 1fr); }
+  .phys-wrap { overflow-x: auto; }
+  svg.phys { min-width: 600px; }
+  .segmented button { padding: 0.34rem 0.5rem; font-size: 0.74rem; }
+}
+@media (max-width: 420px) {
+  .kpi-board, .tile-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .controls { display: none; }
+  .masthead, .readout, .report-footer::before, .atlas-wrap, .phys-wrap { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

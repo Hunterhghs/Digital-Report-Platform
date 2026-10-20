@@ -1,0 +1,62 @@
+{
+  "number": "2026-40",
+  "title": "Heat Stress, Labor Productivity, and the Hidden Economic Cost of Warming",
+  "subtitle": "Quantifying GDP losses that never appear in climate damage models",
+  "strapline": "Heat does not need to destroy anything to cost money. It slows every worker who has to keep going through the hottest hours, and the output that would have been produced simply never exists. This dashboard estimates that loss hour by hour for 149 large cities and 123 countries, sets it beside the damage functions of climate-economy models, and shows how fast it grows with warming and how much better schedules could recover.",
+  "dek": "Heat cut work capacity enough in 2024 to put about $490 billion of output at risk, a conservative estimate from hourly heat stress in 149 cities. The Lancet Countdown's broader estimate is $1.09 trillion. Either figure is of the same order as all climate damages in the DICE model at 1.5 °C. The loss is regressive (3% of hours in lower-middle-income countries against 0.2% in rich ones) and convex: one extra degree adds 73%, two nearly triple it. Moving work out of the afternoon recovers 20–30%.",
+  "abstract": [
+    "This report estimates the economic cost of heat-induced reductions in labour productivity, a channel of climate damage that rarely appears in disaster statistics and that aggregate climate-economy damage functions do not explicitly represent. For 149 large cities it computes a shade wet-bulb globe temperature (WBGT) for every hour of 2024 from the ERA5 reanalysis, converts working hours into lost work capacity with the Hothaps exposure–response functions for heavy, moderate and light work, and aggregates to 123 countries covering 98% of world GDP using each country's sectoral mix of employment and value added.",
+    "In 2024 heat removed the equivalent of 1.65% of working hours, 61 million full-time workers, and put about $492 billion of output at risk, 0.43% of GDP. This is conservative: it excludes work in direct sun and rural areas outside sampled cities. The Lancet Countdown, using a broader method, estimates 639 billion lost labour hours and $1.09 trillion in lost income, almost 1% of world GDP. The losses are concentrated and regressive: lower-middle-income countries lost 3.0% of working hours and 1.8% of GDP, high-income countries 0.19% and 0.15%. The highest shares of GDP were in the United Arab Emirates, Myanmar, Cambodia, Niger, Oman, Saudi Arabia, Pakistan, Vietnam, Bangladesh, Thailand and India. Farm workers bore 74% of the lost hours.",
+    "The DICE model's damage functions imply total climate damages of 0.53% (2016R) and 0.78% (2023) of world output at 1.5 °C of warming. Heat's labour cost alone is of the same order, although it measures the total cost of heat rather than only the warming-attributable part. Sensitivity runs show that removing 1 °C from every hour's WBGT would cut the 2024 loss by 44%, while adding 1 °C would raise it by 73% and 2 °C nearly triple it, because work capacity falls off steeply at high heat.",
+    "Adaptation through timing is cheap and effective: starting the working day at 06:00 rather than 08:00 cuts the loss by 20%, and a split shift avoiding the four hottest hours by 30%. Combined with shade, cooling, mechanisation, enforceable heat rules and social protection for informal workers, such measures can recover part of the loss, but the steepness of the capacity curves means losses rise fastest where adaptation is hardest. An interactive capacity calculator, city heat grid, country atlas, damage-function comparison and warming and schedule explorer accompany the analysis."
+  ],
+  "jel": "J24, Q54, Q51, O13, J81 — labour productivity; climate; valuation of environmental effects; agriculture and development; working conditions",
+  "method": "Hourly 2-metre air temperature and wet-bulb temperature for 2024 come from the ERA5 reanalysis via the Open-Meteo archive API in local time for 149 large cities (the largest city in every country of 5 million or more plus up to seven others in the most populous countries). Shade WBGT is approximated as 0.7 × wet-bulb + 0.3 × air temperature, which omits solar radiation and understates WBGT in the sun. Work capacity follows the Hothaps functions of Kjellstrom et al. (2018) as defined in Orlov et al. (2020): capacity = 10% + 90%/(1 + (WBGT/a)^b), with (a, b) = (30.94, 16.64) heavy, (32.93, 17.81) moderate, (34.64, 22.72) light. Losses are averaged over 08:00–17:00 on every day of 2024 (alternative schedules 06:00–15:00 and 06:00–11:00 plus 15:00–19:00). Country losses are city-population-weighted. Agriculture is treated as heavy work, industry as moderate and services as light; hours lost = Σ employment share × capacity loss; output at risk = Σ value-added share × capacity loss × GDP (current US$, World Bank). Warming sensitivities shift every hour's WBGT uniformly. DICE damages are computed from the published coefficients 0.00236 (2016R) and 0.003467 (2023) times temperature squared. The estimate excludes sun exposure, rural workers outside sampled cities, health effects and behavioural adjustment, and assumes output falls in proportion to capacity.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,500;0,700;1,500&family=Radio+Canada:wght@400;500;600&family=Xanh+Mono&display=swap",
+  "themeColor": "#201d1b",
+  "topics": [
+    "Climate Adaptation",
+    "Labour",
+    "Economic Growth",
+    "Inequality"
+  ],
+  "keywords": [
+    "heat stress",
+    "labour productivity",
+    "WBGT",
+    "work capacity",
+    "climate damages",
+    "damage function",
+    "DICE",
+    "integrated assessment models",
+    "outdoor workers",
+    "agriculture",
+    "adaptation",
+    "working hours",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "why", "label": "1. The Hidden Cost" },
+    { "id": "curves", "label": "2. From Heat to Capacity" },
+    { "id": "cities", "label": "3. Hour by Hour" },
+    { "id": "countries", "label": "4. Country by Country" },
+    { "id": "models", "label": "5. The Missing Line" },
+    { "id": "warming", "label": "6. Each Degree Costs More" },
+    { "id": "adapt", "label": "7. Recovering the Hours" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "$492 bn", "label": "Output at risk from heat-reduced work capacity in 2024 — a conservative, shade-based estimate" },
+    { "value": "3.0% vs 0.19%", "label": "Work hours lost to heat, lower-middle-income vs high-income countries" },
+    { "value": "+73%", "label": "Rise in the loss if every working hour were 1 °C hotter" },
+    { "value": "−30%", "label": "Loss avoided by a split shift that skips the hottest afternoon hours" }
+  ]
+}
