@@ -1,0 +1,63 @@
+{
+  "number": "2026-32",
+  "title": "Global Survivability Under Compounding Twenty-First-Century Risks",
+  "subtitle": "Assessing systemic threats, adaptive capacity and avoidable human losses",
+  "strapline": "The century's headline shocks — pandemics, wars and disasters — kill millions. The quieter losses kill far more: children and mothers who die where compounding risks have worn down the systems that keep people alive. Most of those deaths are avoidable at levels that countries' own income peers already achieve.",
+  "dek": "From 2000 to 2024, about 174 million children died before their fifth birthday, more than ten times the 14.9 million excess deaths of the pandemic's first two years. Today 69% of those child deaths fall in the high-risk countries that hold a quarter of humanity. Matching the best quarter of each income group would avert 2.4 million child deaths a year, nearly half the total, and 34 million more by 2050 than on current trends.",
+  "abstract": [
+    "This report assesses global survivability — the chance that a person survives the risks of this century — by putting the losses from headline shocks alongside the losses from compounding, everyday threats, and by measuring how much of each is avoidable. It combines World Bank World Development Indicators (under-five and maternal deaths and mortality rates, survival to age 65 and life expectancy, to 2024), the INFORM Risk Index Mid-2026 for 191 countries, UN World Population Prospects 2024 births to 2050, and published estimates of deaths from conflict (UCDP), disasters (EM-DAT), the COVID-19 pandemic (WHO) and other threats.",
+    "Shocks are large but chronic losses are larger. Between 2000 and 2024 the world recorded about 1.8 million deaths in state-based conflicts and 1.6 million in disasters, and the WHO estimates 14.9 million excess deaths in the first two years of the pandemic, which cut global life expectancy by 1.6 years in the World Bank series before it recovered. Over the same 25 years, 174 million children died before the age of five and, over 2000–2023, 8.4 million women died from causes related to pregnancy and childbirth. In 2024, 4.86 million children under five died.",
+    "These losses concentrate where systemic threats compound. The 44 countries INFORM classes as high or very high risk hold 24.6% of the world's population but 69% of under-five deaths and 77% of maternal deaths; the 16 very-high-risk countries, with a tenth of humanity, account for 45% of child deaths. Survivability follows adaptive capacity closely: the median probability of surviving to 65 falls from 90% in countries with the strongest coping capacity to 63% in those with the weakest (rank correlation −0.78).",
+    "Much of the loss is avoidable at levels that peers already achieve. If every country had the under-five mortality rate of the best quarter of its own income group, 2.37 million of 4.86 million child deaths a year — 49% — would be averted, 1.8 million of them in high-risk countries; matching peers on maternal mortality would avert 59% of maternal deaths. Looking forward, progress has slowed, from a median annual reduction of 3.4% in 2000–2015 to 2.6% in 2015–2024. Applied to projected births, the cumulative number of under-five deaths over 2025–2050 is about 137 million if rates stall, 103 million if recent trends continue, 69 million if every country reaches its peer benchmark by 2035, and 60 million if the SDG target is met by 2030. These are scenarios built on stated assumptions, not forecasts."
+  ],
+  "jel": "I15, J13, Q54, D74, O15, H51 — health and economic development; children; climate and natural disasters; conflict; human resources and development; government expenditure on health",
+  "method": "Under-five deaths and mortality rates (SH.DTH.MORT, SH.DYN.MORT), maternal deaths and mortality ratios (SH.MMR.DTHS, SH.STA.MMRT), survival to age 65 (average of SP.DYN.TO65.MA.ZS and SP.DYN.TO65.FE.ZS) and life expectancy (SP.DYN.LE00.IN) are from the World Bank World Development Indicators API (updated 8 October 2026), based on UN IGME, the UN Maternal Mortality Estimation Inter-agency Group and UN WPP. Country risk is from the INFORM Risk Index Mid-2026 (v0.7.3) with its class thresholds. Projected births are from UN World Population Prospects 2024 (medium variant) via Our World in Data. Conflict deaths are UCDP state-based battle deaths via Our World in Data; disaster deaths are EM-DAT totals via Our World in Data (2025 incomplete and excluded); pandemic excess deaths are the WHO estimate for 2020–2021. Avoidable deaths for a country equal its deaths × (1 − benchmark rate ÷ its rate) where its rate exceeds the benchmark; the peer benchmark is the 25th percentile of the latest rate within the country's World Bank income group (INFORM classification), and alternatives are the SDG targets (25 per 1,000 live births; 70 per 100,000) and income-group medians. Projections multiply projected births by an under-five mortality path, an approximation that reproduces 2024 deaths to within 2%; paths are the 2024 rate held constant (stall), each country's 2015–2024 annual rate of reduction continued (trend), log-linear convergence to the peer benchmark by a chosen year then trend (peer), and convergence to 25 by 2030 then trend (SDG). All are scenarios, not forecasts, and cross-country associations are not causal estimates.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;0,800;1,500&family=Lato:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;500;600&display=swap",
+  "themeColor": "#0f2f2e",
+  "topics": [
+    "Systemic Risk",
+    "Public Health",
+    "Human Capital",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "survivability",
+    "avoidable deaths",
+    "child mortality",
+    "maternal mortality",
+    "survival to 65",
+    "life expectancy",
+    "polycrisis",
+    "adaptive capacity",
+    "INFORM Risk Index",
+    "conflict deaths",
+    "disaster deaths",
+    "COVID-19 excess mortality",
+    "2050",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "map", "label": "1. The Survivability Map" },
+    { "id": "shocks", "label": "2. Shocks and Chronic Losses" },
+    { "id": "concentrate", "label": "3. Where Losses Concentrate" },
+    { "id": "capacity", "label": "4. Adaptive Capacity" },
+    { "id": "avoidable", "label": "5. Avoidable Losses" },
+    { "id": "future", "label": "6. The Next 25 Years" },
+    { "id": "priorities", "label": "7. Priorities" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "174 m vs 14.9 m", "label": "Under-five deaths in 2000–2024 against WHO's estimate of pandemic excess deaths in 2020–2021" },
+    { "value": "24.6% → 69%", "label": "High-risk countries' share of world population against their share of under-five deaths" },
+    { "value": "2.37 m a year", "label": "Child deaths averted if every country matched the best quarter of its income group — 49% of the total" },
+    { "value": "103 m → 69 m", "label": "Under-five deaths 2025–2050 on current trends against reaching peer benchmarks by 2035" }
+  ]
+}

@@ -1,0 +1,273 @@
+/* ===========================================================================
+   Theme — Report 2026-32, "Global Survivability Under Compounding
+   Twenty-First-Century Risks"
+
+   Aesthetic: the survival curve. The report is about who survives, so the
+   page borrows the life table: the masthead carries a family of step-shaped
+   survival curves on a faint grid over a deep clinical green-black field,
+   each falling to a different level (teal for the best-protected, red for
+   the least), as an inline SVG data URI. Every h2 opens with a filled
+   staircase — the area under a survival curve. Survival is teal, losses red,
+   avoidable losses amber. Bitter for display, Lato for prose, Fira Code for
+   figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours,
+   and charts.js reads the --s-* and --c* tokens so no hex lives in the
+   script.
+   =========================================================================== */
+
+:root {
+  --bg: #f4f6f4;
+  --bg-card: #ffffff;
+  --bg-accent: #e8eeeb;
+  --bg-dark: #0f2f2e;
+  --bg-dark-2: #0a2120;
+
+  --text: #142321;
+  --text-secondary: #384a47;
+  --text-muted: #63716e;
+  --text-inverse: #f4f6f4;
+
+  --primary: #0f4f4a;
+  --primary-light: #17867a;
+  --accent: #14a38b;
+  --accent-light: #7fe0c8;
+
+  --border: #d7e0dc;
+  --border-light: #e7ece9;
+  --rule: #c5d0cc;
+
+  /* series */
+  --s-survive: #14a38b;
+  --s-loss: #d6453d;
+  --s-avoid: #ec9a2e;
+  --s-shock: #5b5fa8;
+  --s-muted: #9aa8a4;
+
+  /* risk classes, very low → very high */
+  --c0: #cfe8df;
+  --c1: #9fd6a0;
+  --c2: #f0c06a;
+  --c3: #e47b4c;
+  --c4: #a8283c;
+
+  --chart-blue: #5b5fa8;
+  --chart-blue-light: #aeb1dc;
+  --chart-gold: #ec9a2e;
+  --chart-red: #d6453d;
+  --chart-teal: #14a38b;
+  --chart-gray: #8f9b98;
+  --chart-orange: #e47b4c;
+  --chart-purple: #7a52a0;
+
+  --serif: "Bitter", Georgia, serif;
+  --sans: "Lato", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Fira Code", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --curves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'%3E%3Cg stroke='%23ffffff' stroke-opacity='0.08'%3E%3Cpath d='M40 30 V330'/%3E%3Cpath d='M100 30 V330'/%3E%3Cpath d='M160 30 V330'/%3E%3Cpath d='M220 30 V330'/%3E%3Cpath d='M280 30 V330'/%3E%3Cpath d='M340 30 V330'/%3E%3Cpath d='M400 30 V330'/%3E%3Cpath d='M460 30 V330'/%3E%3Cpath d='M520 30 V330'/%3E%3Cpath d='M580 30 V330'/%3E%3Cpath d='M40 30 H620'/%3E%3Cpath d='M40 90 H620'/%3E%3Cpath d='M40 150 H620'/%3E%3Cpath d='M40 210 H620'/%3E%3Cpath d='M40 270 H620'/%3E%3Cpath d='M40 330 H620'/%3E%3C/g%3E%3Cg fill='none' stroke-width='3' stroke-linejoin='round'%3E%3Cpath d='M40 30 H66 V32 H93 V35 H119 V37 H145 V38 H172 V39 H198 V39 H225 V39 H251 V39 H277 V39 H304 V40 H330 V40 H356 V41 H383 V42 H409 V42 H435 V43 H462 V44 H488 V46 H515 V47 H541 V48 H567 V50 H594 V52 H620 V54' stroke='%235fd3b8' stroke-opacity='0.75'/%3E%3Cpath d='M40 30 H66 V35 H93 V39 H119 V44 H145 V47 H172 V47 H198 V47 H225 V48 H251 V48 H277 V49 H304 V50 H330 V51 H356 V52 H383 V53 H409 V55 H435 V57 H462 V59 H488 V61 H515 V64 H541 V67 H567 V70 H594 V74 H620 V78' stroke='%239fd6a0' stroke-opacity='0.75'/%3E%3Cpath d='M40 30 H66 V37 H93 V45 H119 V52 H145 V58 H172 V58 H198 V58 H225 V59 H251 V60 H277 V61 H304 V62 H330 V64 H356 V66 H383 V68 H409 V70 H435 V73 H462 V77 H488 V81 H515 V85 H541 V90 H567 V95 H594 V101 H620 V108' stroke='%23f0c06a' stroke-opacity='0.75'/%3E%3Cpath d='M40 30 H66 V40 H93 V50 H119 V59 H145 V66 H172 V66 H198 V67 H225 V68 H251 V69 H277 V70 H304 V72 H330 V74 H356 V76 H383 V79 H409 V83 H435 V87 H462 V91 H488 V96 H515 V102 H541 V108 H567 V116 H594 V123 H620 V132' stroke='%23f08a52' stroke-opacity='0.75'/%3E%3Cpath d='M40 30 H66 V42 H93 V54 H119 V66 H145 V75 H172 V75 H198 V76 H225 V77 H251 V78 H277 V80 H304 V82 H330 V84 H356 V87 H383 V91 H409 V95 H435 V100 H462 V106 H488 V112 H515 V119 H541 V127 H567 V136 H594 V145 H620 V156' stroke='%23e2554a' stroke-opacity='0.75'/%3E%3C/g%3E%3C/svg%3E");
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1.04rem; line-height: 1.65; }
+
+::selection { background: rgba(20, 163, 139, 0.2); }
+:where(a, button, [tabindex], input, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a { color: var(--primary-light); }
+a:hover { color: var(--s-loss); }
+
+.progress__bar { background: linear-gradient(90deg, var(--s-survive), var(--s-avoid), var(--s-loss)); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: survival curves on a life-table grid ------------------------------ */
+
+.masthead {
+  position: relative;
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.3rem var(--gutter) 3.2rem;
+  background:
+    var(--curves) right -40px center / 640px auto no-repeat,
+    radial-gradient(ellipse at 80% 40%, rgba(20, 163, 139, 0.25), transparent 60%),
+    linear-gradient(165deg, #133b39, #0a2120);
+}
+.masthead::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: linear-gradient(90deg, var(--s-survive) 0 50%, var(--s-avoid) 50% 75%, var(--s-loss) 75% 100%); }
+.masthead .overline { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; color: var(--accent-light); margin-bottom: 1rem; }
+.masthead .overline::before { content: "⌐ SURVIVAL DASHBOARD · "; color: #fff; }
+.masthead h1 { font-family: var(--serif); font-weight: 800; font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.06; letter-spacing: -0.015em; max-width: 21ch; color: #fff; }
+.masthead .subtitle { font-family: var(--serif); font-style: italic; font-weight: 500; color: #cfe5df; max-width: 60ch; }
+.masthead .strapline { font-family: var(--sans); font-style: normal; font-size: 1.04rem; color: #e3efec; border-left: 3px solid var(--s-avoid); max-width: 74ch; }
+.masthead .meta-row { border-top: 1px solid rgba(255, 255, 255, 0.16); color: #b3cbc5; font-family: var(--mono); font-size: 0.74rem; }
+.masthead .meta-row strong { color: var(--accent-light); font-family: var(--mono); font-weight: 500; font-size: 0.64rem; letter-spacing: 0.12em; }
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(244, 246, 244, 0.96); border-bottom: 1px solid var(--border); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.72rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- headings: the area under a survival curve --------------------------------------- */
+
+section > h2 {
+  position: relative;
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(1.55rem, 3.3vw, 2.1rem);
+  letter-spacing: -0.01em;
+  color: var(--primary);
+  border-bottom: 2px solid var(--text);
+  padding: 0 0 0.65rem 2.2rem;
+}
+section > h2::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.12em;
+  width: 1.5rem; height: 1.05em;
+  background: linear-gradient(90deg, var(--s-survive), var(--s-avoid) 70%, var(--s-loss));
+  clip-path: polygon(0 0, 28% 0, 28% 22%, 52% 22%, 52% 44%, 74% 44%, 74% 72%, 100% 72%, 100% 100%, 0 100%);
+}
+.abstract h2, .endmatter h2 { padding-left: 0; border-bottom: 0; }
+.abstract h2::before, .endmatter h2::before { content: none; }
+section > .section-dek { font-family: var(--serif); font-style: italic; color: var(--text-muted); font-size: 1.08rem; max-width: none; }
+
+.section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
+
+/* --- generated blocks ------------------------------------------------------------ */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 8px; }
+.abstract h2 { color: var(--primary); font-family: var(--mono); letter-spacing: 0.12em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.7rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.66rem; }
+
+/* --- KPI board ------------------------------------------------------------------------ */
+
+.kpi-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1.6rem 0; }
+.kpi { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.05rem 0.85rem; display: flex; flex-direction: column; min-width: 0; border-top: 4px solid var(--k, var(--primary)); }
+.kpi--survive { --k: var(--s-survive); }
+.kpi--loss { --k: var(--s-loss); }
+.kpi--avoid { --k: var(--s-avoid); }
+.kpi--shock { --k: var(--s-shock); }
+.kpi-value { font-family: var(--serif); font-weight: 800; font-size: clamp(1.55rem, 2.9vw, 2.1rem); letter-spacing: -0.015em; line-height: 1.05; color: var(--k, var(--primary)); font-variant-numeric: lining-nums tabular-nums; }
+.kpi-label { font-size: 0.87rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.45rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.62rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; }
+
+/* --- readout ------------------------------------------------------------------------- */
+
+.readout { background: var(--bg-dark); border-radius: 8px; padding: 1.15rem 1.4rem 0.45rem; margin: 1.6rem 0; position: relative; overflow: hidden; }
+.readout::after { content: ""; position: absolute; right: 0; bottom: 0; width: 180px; height: 90px; background: linear-gradient(90deg, rgba(20, 163, 139, 0.35), rgba(214, 69, 61, 0.35)); clip-path: polygon(0 0, 25% 0, 25% 25%, 50% 25%, 50% 50%, 75% 50%, 75% 80%, 100% 80%, 100% 100%, 0 100%); opacity: 0.6; }
+.readout-title { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 0.4rem !important; }
+.readout p { color: #d8e8e3; text-align: justify; hyphens: auto; -webkit-hyphens: auto; position: relative; }
+.readout strong { color: #fff; }
+
+/* --- panels ---------------------------------------------------------------------------- */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.05rem 1.15rem 0.95rem; min-width: 0; }
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.15rem 1.25rem 1.05rem; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-title { font-family: var(--serif); font-weight: 700; font-size: 1.06rem; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); margin: 0.2rem 0 0.4rem !important; }
+.panel-note { font-size: 0.86rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 310px; }
+.panel .chart-frame--tall { height: 380px; }
+.panel .chart-frame--short { height: 240px; }
+
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 0.85rem 1rem; border-left: 5px solid var(--k, var(--primary)); }
+.stat-tile--survive { --k: var(--s-survive); }
+.stat-tile--loss { --k: var(--s-loss); }
+.stat-tile--avoid { --k: var(--s-avoid); }
+.stat-tile--shock { --k: var(--s-shock); }
+.stat-tile-value { font-family: var(--serif); font-weight: 800; font-size: 1.5rem; color: var(--k, var(--text)); margin: 0 !important; font-variant-numeric: lining-nums tabular-nums; }
+.stat-tile-label { font-size: 0.84rem; color: var(--text-muted); margin: 0.15rem 0 0 !important; text-align: left !important; line-height: 1.42; }
+.tile-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1rem 0; }
+
+/* --- map ------------------------------------------------------------------------- */
+
+.atlas-layout { display: grid; grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.atlas-wrap { position: relative; border-radius: 8px; overflow: hidden; background: #e6ece9; border: 1px solid var(--border); }
+.atlas { display: block; width: 100%; height: auto; }
+.atlas .atlas-sea { fill: #e6ece9; }
+.atlas .atlas-land path { fill: #d6dbd9; stroke: #fff; stroke-width: 0.45; stroke-linejoin: round; transition: fill 0.25s; }
+.atlas .atlas-dots circle { fill: #d6dbd9; stroke: var(--text); stroke-width: 0.5; transition: fill 0.25s; }
+.atlas [data-iso].is-in { cursor: pointer; }
+.atlas [data-iso].is-in:hover { stroke: var(--text); stroke-width: 1.3; }
+.atlas [data-iso].is-pick { stroke: var(--s-loss); stroke-width: 2; }
+.atlas-corner { position: absolute; left: 10px; bottom: 8px; font-family: var(--mono); font-size: 0.6rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.85); padding: 1px 6px; border-radius: 4px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0.7rem 0 0; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.66rem; color: var(--text-secondary); }
+.legend i { width: 14px; height: 10px; border-radius: 2px; flex: none; border: 1px solid rgba(20, 35, 33, 0.15); }
+.atlas-side { display: grid; gap: 12px; }
+.country-card { border: 1px solid var(--border); border-radius: 8px; background: var(--bg); padding: 0.85rem 0.95rem; min-height: 250px; border-left: 6px solid var(--cc, var(--rule)); }
+.country-card .cc-kicker { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin: 0 !important; }
+.country-card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.3rem; color: var(--primary); margin: 0.1rem 0 0.1rem; line-height: 1.15; }
+.country-card .cc-class { font-family: var(--mono); font-size: 0.7rem; margin: 0 0 0.6rem !important; color: var(--text-secondary); text-align: left !important; }
+.kv { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; font-size: 0.86rem; margin: 0; }
+.kv dt { color: var(--text-secondary); }
+.kv dd { margin: 0; font-family: var(--mono); font-size: 0.76rem; color: var(--text); text-align: right; }
+.side-title { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.35rem !important; }
+.rank-list { margin: 0; padding: 0; list-style: none; counter-reset: rk; border-top: 2px solid var(--text); }
+.rank-list li { counter-increment: rk; display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) auto; gap: 6px; align-items: baseline; padding: 0.28rem 0; border-bottom: 1px solid var(--border-light); font-size: 0.87rem; }
+.rank-list li::before { content: counter(rk); font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); }
+.rank-list li b { font-family: var(--mono); font-weight: 500; font-size: 0.72rem; color: var(--s-avoid); }
+
+/* --- controls ---------------------------------------------------------------------------- */
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 22px; margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+.slider { display: grid; gap: 3px; }
+.slider-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider label, .field label, .seg-wrap .seg-label { font-family: var(--serif); font-weight: 700; font-size: 0.94rem; color: var(--text); }
+.slider output { font-family: var(--mono); font-size: 0.8rem; color: var(--s-avoid); white-space: nowrap; }
+.slider .hint { font-size: 0.8rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+.slider input[type="range"] { width: 100%; accent-color: var(--s-avoid); margin: 2px 0; }
+.field { display: grid; gap: 5px; }
+.field select { font: inherit; font-size: 0.95rem; padding: 0.42rem 0.55rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg-card); color: var(--text); }
+.seg-wrap { display: grid; gap: 5px; }
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--bg); width: fit-content; max-width: 100%; }
+.segmented button { font: inherit; font-family: var(--mono); font-size: 0.72rem; padding: 0.42rem 0.75rem; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--primary); color: #fff; }
+.calc-note { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); margin: 0.6rem 0 0 !important; }
+
+/* --- tables --------------------------------------------------------------------------------- */
+
+.table-scroll { overflow-x: auto; }
+.prio { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 0.92rem; }
+.prio th, .prio td { text-align: left; vertical-align: top; padding: 0.65rem 0.7rem; border-bottom: 1px solid var(--border-light); }
+.prio thead th { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; border-bottom: 2px solid var(--text); }
+.prio tbody th { font-family: var(--serif); font-weight: 700; color: var(--primary); }
+.prio td { color: var(--text-secondary); }
+.prio td.num { font-family: var(--mono); font-size: 0.8rem; color: var(--text); white-space: nowrap; }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--primary-light); font-size: 0.66rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 6px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(90deg, var(--s-survive) 0 50%, var(--s-avoid) 50% 75%, var(--s-loss) 75% 100%); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board, .tile-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .atlas-layout { grid-template-columns: minmax(0, 1fr); }
+  .atlas-side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .dash-grid, .atlas-side { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2.2rem; background: var(--curves) right -300px top -10px / 560px auto no-repeat, linear-gradient(165deg, #133b39, #0a2120); }
+  .segmented button { padding: 0.38rem 0.55rem; font-size: 0.68rem; }
+}
+@media (max-width: 420px) {
+  .kpi-board, .tile-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .controls { display: none; }
+  .masthead, .masthead::after, .readout, .report-footer::before, .atlas-wrap { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
