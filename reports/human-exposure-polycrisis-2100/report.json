@@ -1,0 +1,62 @@
+{
+  "number": "2026-31",
+  "title": "Human Exposure to the Global Polycrisis, 2025–2100",
+  "subtitle": "Mapping compound risks across populations, regions and generations",
+  "strapline": "Exposure to compound crises will grow this century even if no hazard gets worse, because humanity is growing fastest where risk is already highest. Half of all children born between now and 2100 will be born in countries that are high-risk today. Demography cannot be changed quickly; risk can.",
+  "dek": "Even if no hazard worsened, the share of humanity living in today's high-risk countries would rise from a quarter to 43% by 2100, because population is growing fastest where risk is highest. About half of the 9.5 billion babies due between now and 2100 will be born in those countries. Combining UN population projections with the INFORM risk map shows who is exposed, where and in which generation, and how far reducing risk could offset demography.",
+  "abstract": [
+    "This report maps human exposure to compound crises across the century by combining two public datasets: the INFORM Risk Index Mid-2026, which scores 191 countries on hazard and exposure, vulnerability and lack of coping capacity, and the UN World Population Prospects 2024 medium projection of each country's population, births and age structure to 2100. In 2025, 2.0 billion people — 24.6% of humanity — live in the 44 countries INFORM classes as high or very high risk, 0.83 billion of them in the 16 very-high-risk countries. These countries are young: their median age is 19, against 38 in low- and very-low-risk countries, and they account for 42.8% of the world's births and 36.6% of its children under 15.",
+    "The first finding is that demography alone nearly doubles exposure. Holding today's risk map fixed, the population of today's high- and very-high-risk countries grows from 2.0 billion in 2025 to 3.0 billion in 2050 and 4.4 billion in 2100, when it would be 43.3% of humanity; the very-high-risk population grows from 0.83 to 2.2 billion. The 33 countries that are in the top third on all three dimensions of risk at once, the compound core, grow from 1.5 to 3.7 billion people, 37% of the world. Sub-Saharan Africa's share of the exposed population rises from 53% to 67%. If each country's 2017–2026 trend in risk continued, the share in 2100 would reach 53%.",
+    "The second finding concerns generations. The share of each birth cohort born in today's high-risk countries rose from 19% in 1960 to 26% in 1990 and 43% in 2025, and is projected to reach 48% in 2050 and 53% in 2100. Of the 9.5 billion births projected between 2025 and 2100, 4.7 billion — 49% — will be in today's high- and very-high-risk countries. The climate literature points the same way: Grant and colleagues (2025) estimate that 52% of children born in 2020 will face unprecedented lifetime heatwave exposure if warming is held to 1.5°C, and 92% at 3.5°C, and UNICEF projects about eight times as many children exposed to extreme heatwaves in the 2050s as in the 2000s.",
+    "The third finding is that reducing risk can offset demography, but only if it is fast and includes peace. If every country reached the best quartile of its income group on vulnerability and coping capacity by 2050, recomputed with INFORM's own formula, the exposed share would fall to 16% in 2050, though population growth would push it back to 24% by 2100. Adding a halving of conflict hazard would hold it near 7% in 2050 and 11% in 2100. Projections hold each country's risk at its 2026 level unless a scenario changes it, and they assume the UN medium population path; they are scenarios, not forecasts. An interactive map, scenario tool and generation explorer let readers test them."
+  ],
+  "jel": "J11, Q54, O15, J13, F22, D63 — demographic trends and forecasts; climate and natural disasters; human resources and development; children; migration; equity and intergenerational distribution",
+  "method": "Country risk is from the INFORM Risk Index Mid-2026 (v0.7.3, European Commission Joint Research Centre) for 191 countries, with INFORM's class thresholds (very high 7.0+, high 5.4–6.9, medium 3.6–5.3, low 2.4–3.5, very low 2.3 and below). Population, births, children under 15 and median age, 1950–2100, are from the UN World Population Prospects 2024 (estimates to 2023, medium variant thereafter) as published by Our World in Data; the 191 countries cover 99.5% of world population in 2025. Exposure counts sum the population of countries in a given risk class; they measure national-level exposure, not where within a country people live. The frozen scenario holds every country's 2026 risk constant to 2100. The trend scenario extends each country's 2017–2026 slope in overall INFORM risk (trend edition), capped at 0 and 10, which becomes speculative over long horizons. The peer-benchmark scenario moves each country's vulnerability and coping components to the 25th percentile of its World Bank income group, recomputes risk with INFORM's aggregation formula (10 − (√(a′b′) − 1) × 10/9 for pairs, geometric mean for dimensions; verified to within 0.05 of published scores) and interpolates linearly from 2026 to the chosen year; the peace variant also halves human (conflict) hazard. Births by cohort are attributed to the country's 2026 risk class, so the 1960–2000 cohort shares describe where today's high-risk countries' populations were born, not risk at the time. Mean annual temperature is the 1991–2020 area-weighted mean of ERA5 monthly surface temperature (Copernicus via Our World in Data), which understates heat where people live in cooler highlands and overstates it in empty deserts. Literature figures are cited where used. All projections are scenarios, not forecasts. The map uses Natural Earth 1:50m boundaries via world-atlas; boundaries do not imply endorsement.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,500;0,7..72,700;0,7..72,800;1,7..72,500&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400&family=PT+Mono&display=swap",
+  "themeColor": "#2a1631",
+  "topics": [
+    "Systemic Risk",
+    "Human Capital",
+    "Climate Adaptation",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "polycrisis",
+    "human exposure",
+    "compound risk",
+    "population projections",
+    "World Population Prospects 2024",
+    "INFORM Risk Index",
+    "intergenerational equity",
+    "children",
+    "birth cohorts",
+    "extreme heat",
+    "sub-Saharan Africa",
+    "2100",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "today", "label": "1. Who Is Exposed Today" },
+    { "id": "momentum", "label": "2. Demographic Momentum" },
+    { "id": "regions", "label": "3. Regions" },
+    { "id": "generations", "label": "4. Generations" },
+    { "id": "heat", "label": "5. Heat and the Young" },
+    { "id": "scenarios", "label": "6. Can Risk Outrun Demography?" },
+    { "id": "priorities", "label": "7. Priorities" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "24.6% → 43.3%", "label": "Share of humanity living in today's high- or very-high-risk countries, 2025 to 2100, with today's risk map held fixed" },
+    { "value": "4.7 of 9.5 bn", "label": "Births projected for 2025–2100 in today's high- and very-high-risk countries" },
+    { "value": "19 vs 38", "label": "Median age in high-risk and in low-risk countries, 2025: exposure falls on the young" },
+    { "value": "→ 11%", "label": "Exposed share in 2100 if every country reaches its income peers' resilience by 2050 and conflict halves" }
+  ]
+}
