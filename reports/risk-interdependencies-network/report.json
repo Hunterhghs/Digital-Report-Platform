@@ -1,0 +1,62 @@
+{
+  "number": "2026-34",
+  "title": "Mapping the Interdependencies of Twenty-First-Century Risk",
+  "subtitle": "How environmental, economic, demographic and technological pressures reinforce global instability",
+  "strapline": "Risks do not arrive one at a time; they travel together. Across 191 countries, about half of the links between pressures run through poverty. The other half form a tighter web of conflict, displacement, resource dependence and rapid population growth. Breaking that web means targeting its hubs, not its individual strands.",
+  "dek": "Across 191 countries and 18 indicators, about half of what makes risks travel together is poverty: average link strength halves once income is held constant. What survives is a tighter web centred on conflict, displacement, resource dependence and rapid population growth. Countries stressed in three or more domains are almost all unstable, and the hubs point to where intervention breaks the most links at once.",
+  "abstract": [
+    "This report maps how twenty-first-century pressures depend on one another, using an empirical network rather than expert judgement. It assembles 18 country-level indicators for 191 countries across five domains. The environmental domain covers natural hazard exposure, drought, heat and air pollution. The economic domain covers inflation, external debt service, youth unemployment, resource dependence and weak growth. The demographic domain covers population growth to 2050, the child share of the population, urban growth and uprooted people. The technological domain covers the digital and electricity gaps. A fifth domain measures instability: conflict hazard, weak governance and food insecurity. The sources are the INFORM Risk Index Mid-2026, World Bank World Development Indicators, UN World Population Prospects 2024 and ERA5 and satellite air-quality data.",
+    "Pressures are densely connected. Of 153 pairs of indicators, 56 are correlated across countries with a rank correlation of 0.4 or more, and 49 of those links cross domains. But much of this web is poverty. The digital gap, the child share, the electricity gap and weak governance each correlate with low income at 0.79 to 0.88, and holding income constant halves the average strength of the links, from 0.33 to 0.16. Some pressures barely track income at all: natural hazard exposure, uprooted people, youth unemployment and weak growth. External debt service runs the other way, heaviest in middle-income economies rather than the poorest.",
+    "The links that survive with income held constant form a different, tighter structure. Its hubs are population growth, resource dependence, conflict hazard, urban growth and air pollution. Conflict hazard is linked to uprooted people (partial correlation 0.65), weak governance (0.45), resource dependence (0.43), natural hazard exposure (0.36) and drought (0.35). Resource dependence is linked to population growth (0.50), and population growth to urban growth (0.76) and the electricity gap (0.43). Thirty three-way clusters survive in which every pair is linked; the strongest join resource dependence with rapid population growth, and conflict with displacement and weak governance. These are associations; the literature supplies some of the mechanisms, from food prices to unrest and youth bulges to political violence.",
+    "Pressures also stack within countries. Scoring each country on four driver domains, 25 countries with 1.1 billion people are in the top third of three or four domains at once. Among them, 88% are also in the top third for instability, against 3% of countries with no stressed domain. The average driver score and the instability score correlate at 0.86. The report concludes that the most effective interventions target the hubs: institutions and peace, which link most strongly to conflict and displacement; economic diversification away from resource dependence; and the demographic transition and basic infrastructure, which together account for much of the poverty core. Pressures that cross-country data cannot capture, such as geoeconomic confrontation and the risks of artificial intelligence, are discussed from the World Economic Forum's Global Risks Report 2026."
+  ],
+  "jel": "F50, O15, Q54, J11, O33, D74 — international relations and political economy; human resources and development; climate and natural disasters; demographic trends; technological change; conflict",
+  "method": "Indicators, oriented so that higher values mean more pressure: INFORM Risk Mid-2026 natural hazard, drought, uprooted people, current and projected conflict (human hazard), governance and food security scores; 1991–2020 mean temperature from ERA5 monthly data via Our World in Data; population-weighted PM2.5 (SatPM, Washington University in St. Louis, via Our World in Data, which includes natural dust); World Bank WDI median inflation 2019–2024, average external debt service (% of GNI, developing countries only, 118 economies) 2019–2024, latest youth unemployment, average total natural-resource rents (% of GDP) 2019–2023, negative average growth of GDP per capita 2015–2024, average urban population growth 2019–2024, and the shares of the population offline and without electricity; and UN WPP 2024 annual population growth 2025–2050 and the under-15 share in 2025. Links are Spearman rank correlations across countries using all pairs with data. Income-controlled links are partial Spearman correlations controlling for the log of GDP per capita at PPP (latest year). Domain scores average each country's percentile ranks on the indicators in a domain; a domain is stressed if its score is in the top third (0.67 or higher). Three-way clusters are triples of indicators from at least two domains whose three pairwise partial correlations are all 0.25 or more. All results are cross-country associations; they describe co-occurrence, not causation or direction, and composite indicators overlap in construction (for example, INFORM's food security and governance measures both reflect poverty). The map uses Natural Earth 1:50m boundaries via world-atlas; boundaries do not imply endorsement.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500;600;700&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,700;1,400&family=Share+Tech+Mono&display=swap",
+  "themeColor": "#17171c",
+  "topics": [
+    "Systemic Risk",
+    "Institutions & Governance",
+    "Emerging Markets",
+    "Environment & Biodiversity"
+  ],
+  "keywords": [
+    "risk interdependencies",
+    "risk network",
+    "polycrisis",
+    "systemic risk",
+    "partial correlation",
+    "conflict",
+    "displacement",
+    "resource dependence",
+    "population growth",
+    "digital divide",
+    "debt service",
+    "global risks report",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "web", "label": "1. The Web" },
+    { "id": "poverty", "label": "2. The Poverty Core" },
+    { "id": "survive", "label": "3. Links That Survive" },
+    { "id": "loops", "label": "4. Reinforcing Clusters" },
+    { "id": "stack", "label": "5. Stacked Pressures" },
+    { "id": "global", "label": "6. What the Map Misses" },
+    { "id": "hubs", "label": "7. Breaking the Web" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "56 of 153", "label": "Pairs of pressures linked across countries at ρ ≥ 0.4 — 49 of them across domains" },
+    { "value": "0.33 → 0.16", "label": "Average link strength before and after holding income constant: half the web is poverty" },
+    { "value": "0.65", "label": "Income-controlled link between conflict hazard and uprooted people, the strongest cross-domain link" },
+    { "value": "3% → 88%", "label": "Share of countries highly unstable with no stressed domain and with three or more" }
+  ]
+}
