@@ -1,0 +1,63 @@
+{
+  "number": "2026-30",
+  "title": "The Infrastructure of Sustainable Economic Convergence",
+  "subtitle": "How electricity, logistics, cooling and connectivity enable catch-up growth",
+  "strapline": "Poorer economies do not catch up automatically: across 110 of them since 2000, starting income alone predicts nothing. Once power is taken into account, the catch-up appears, strong and consistent. Electricity is the gate the others run through, and clean power and efficient cooling are now the cheapest ways to open it.",
+  "dek": "Across 110 economies that started the century below half the OECD's income, starting poorer did not mean growing faster. Among countries with similar access to power and similar outage rates, poorer ones caught up about a percentage point a year faster for each halving of starting income. Mapping catch-up growth since 2000 against electricity, logistics, cooling and connectivity shows power as the binding gate and the others as multipliers that depend on it.",
+  "abstract": [
+    "Economic convergence — poorer economies growing faster than richer ones and closing the income gap — is the central promise of development, but it is not automatic. This report follows 110 economies that in 2000 had less than half the OECD's average GDP per capita (at purchasing power parity) and more than a million people today, together 6.6 billion people. Between 2000 and 2024 the OECD average grew by 1.22% a year. Thirty-five of the 110, with 4.1 billion people, grew more than two points a year faster, led by China, India, Viet Nam, Bangladesh and Ethiopia; 49, with 2.1 billion, grew faster but by less; and 26, with 0.5 billion, fell further behind. Across the 110, starting income alone explains none of the variation in catch-up growth.",
+    "The report tests four kinds of enabling infrastructure against that record: electricity, logistics, cooling and connectivity. Electricity separates the groups most sharply. Median access to electricity in 2000 was 94% among the fast convergers, 70% among the slow and 34% among those falling behind, and the share of firms reporting electrical outages was 40%, 65% and 74%. With electricity access and outage exposure held constant, convergence appears strongly. Each halving of starting income is associated with about one percentage point a year of faster growth, and the model explains 39% of the variation. The association keeps its sign and similar size without China and India, without the transition economies of Europe and Central Asia, within sub-Saharan Africa alone and over 2010–2024, though it is weaker in the smaller samples.",
+    "The other three gates matter, but in different ways. Connectivity and heat exposure each predict convergence on their own: internet use in 2010 was 30% in the fast group against 5% in the group falling behind, and the median fast converger has a mean temperature of 12°C against 23–24°C for the others. Both associations fade when electricity is included, which is consistent with their running through it: connectivity needs power, and cooling — of workers, factories and food — is an electricity service. Logistics performance separates mainly those falling behind from the rest. Micro-evidence fills in the mechanisms: plant output in Indian factories falls about 2% per degree of warming, each day of delay before shipping cuts trade by more than 1%, the arrival of fast internet raised employment in African towns, and infrastructure disruptions cost firms in low- and middle-income countries more than $300 billion a year.",
+    "The policy implication is a sequence: open the power gate first and make it reliable, then let logistics, cooling and connectivity multiply its effect. That sequence can now be sustainable as well as fast. In 2024, 91% of new utility-scale renewable capacity produced power more cheaply than the cheapest new fossil alternative, and the IEA estimates that efficient air conditioners could cut the world's future air-conditioning energy demand by about 45% against its baseline. A calculator applies the fitted relationship to any of the 110 economies. All results are cross-country associations over 2000–2024, not causal estimates: infrastructure, institutions, peace and income grow together, and the model cannot separate them fully."
+  ],
+  "jel": "O47, O18, Q41, F14, O33, Q54 — measurement of economic growth and convergence; infrastructure; energy demand and supply; trade and logistics; technological diffusion; climate and heat",
+  "method": "GDP per capita at purchasing power parity (constant 2021 international dollars), electricity access, electric power consumption per capita, firms experiencing electrical outages (World Bank Enterprise Surveys), the Logistics Performance Index, the Liner Shipping Connectivity Index, internet use, fixed broadband subscriptions and population are from the World Bank World Development Indicators API, downloaded in October 2026. The frontier is the World Bank's OECD-members aggregate. The sample is the 110 economies with more than one million people in 2024, GDP per capita data for 2000 and 2024, and GDP per capita below half the OECD average in 2000. The convergence gap is each economy's average annual growth of GDP per capita in 2000–2024 minus the OECD's (1.22% a year); groups are fast (more than two points above), slow (zero to two) and falling behind (zero or below). Infrastructure measures are taken at or near 2000 where available (electricity access, power consumption, internet use in 2010); outage exposure averages all Enterprise Surveys in 2006–2025 and logistics averages 2007–2012 (models) or 2016–2022 (maps), because earlier data do not exist, which makes them partly contemporaneous with growth. Heat exposure is a cooling-degree-day proxy: the sum over months of days times the amount by which the 1991–2020 monthly mean surface temperature (ERA5, Copernicus, via Our World in Data, area-weighted) exceeds 18°C. It understates true cooling degree days and over-weights empty hot land. Regressions are ordinary least squares of the convergence gap on log initial relative income and infrastructure measures, with heteroskedasticity-robust standard errors. The calculator uses the model with electricity access and outage exposure (n = 105, R² = 0.39) and applies it forward from 2024 as an illustration. All results are associations; reverse causality, conflict, institutions and geography are not separately identified.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Rethink+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Noto+Sans+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#14202b",
+  "topics": [
+    "Infrastructure",
+    "Emerging Markets",
+    "Energy Transition",
+    "Technology"
+  ],
+  "keywords": [
+    "economic convergence",
+    "catch-up growth",
+    "conditional convergence",
+    "electricity access",
+    "power outages",
+    "logistics performance",
+    "cooling",
+    "extreme heat",
+    "connectivity",
+    "broadband",
+    "infrastructure",
+    "sustainable development",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "catchup", "label": "1. Catch-Up Is Conditional" },
+    { "id": "power", "label": "2. The Power Gate" },
+    { "id": "logistics", "label": "3. The Logistics Gate" },
+    { "id": "cooling", "label": "4. The Cooling Gate" },
+    { "id": "connectivity", "label": "5. The Connectivity Gate" },
+    { "id": "gates", "label": "6. Which Gates Bind" },
+    { "id": "calculator", "label": "7. The Convergence Calculator" },
+    { "id": "sustainable", "label": "8. Opening the Gates Sustainably" },
+    { "id": "method", "label": "9. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "R² 0.00 → 0.39", "label": "Catch-up growth explained by starting income alone, and with electricity access and outages added, 110 economies, 2000–2024" },
+    { "value": "94% vs 34%", "label": "Median electricity access in 2000 among fast convergers and among economies that fell behind" },
+    { "value": "35 · 4.1 bn", "label": "Economies, and their people, that grew more than two points a year faster than the OECD since 2000" },
+    { "value": "> $300 bn", "label": "Yearly cost of infrastructure disruptions to firms in low- and middle-income countries" }
+  ]
+}
