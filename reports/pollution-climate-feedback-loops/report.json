@@ -1,0 +1,62 @@
+{
+  "number": "2026-27",
+  "title": "The Pollution–Climate Risk Nexus",
+  "subtitle": "Breaking feedback loops across health, ecosystems and development",
+  "strapline": "Warming feeds fires, methane and ozone; they feed warming and harm people, crops and forests; illness and poverty feed dirtier fuels. In a reinforcing loop the gain is the product of its links, so weakening any one link weakens the whole loop — which means loops can be broken where it is cheapest, not only where it is biggest.",
+  "dek": "Extreme wildfires have more than doubled in two decades, methane rose at record pace in 2020–21 as warming wetlands released more, and ozone already cuts global soybean yields by about an eighth. Mapping five pollution–climate feedback loops shows where each can be cut most cheaply, from leaking gas wells to cooking stoves.",
+  "abstract": [
+    "Pollution and climate change are usually treated as parallel problems that happen to share a source. This report treats them as a system of feedback loops in which each worsens the other and both spill into health, ecosystems and development. It maps five pathways — three closed reinforcing loops (fire, methane–ozone, and the poverty–cooking loop) and two amplifier chains (heat with air pollution, and ocean deoxygenation) — and measures their links with published data: extreme wildfires 2.2 times more frequent over 2003–2023, boreal North America's fire carbon in 2023 about twelve times its 1997–2022 average, a record methane growth rate in 2021 driven largely by wetlands, ozone yield losses of 12.4 per cent for soybean and 7.1 per cent for wheat, and 2.1 billion people still cooking with polluting fuels.",
+    "The links are measurable and the loops are already active. Air pollution contributed to 7.9 million deaths in 2023, and landscape fire smoke to about 1.5 million a year in 2000–2019. Population-weighted PM2.5 exposure has fallen from its 2016 peak of 35 to 30 micrograms per cubic metre, but rose over the period in low-income countries, from 23 to 30. Heat and fine particles kill more together than apart: in ten Indian cities, the mortality risk per 10 µg/m³ of PM2.5 rises from about 0.8 per cent on warm days to about 4.6 per cent on the hottest. Warming of around 3 °C is projected to raise surface ozone by about a fifth over Pakistan, northern India and Bangladesh.",
+    "The central argument is algebraic. In a reinforcing loop the loop gain is the product of the strengths of its links, so halving any single link halves the gain and, in an illustrative loop with a gain of one half, removes two-thirds of the amplification. Loops can therefore be broken at their cheapest link rather than their largest. An interactive calculator lets readers test this, and a breakers table identifies the low-cost link in each loop: about 30 per cent of fossil-fuel methane could be abated at no net cost, and a 45 per cent cut in human-caused methane would avoid nearly 0.3 °C of warming by 2045 and about 260,000 premature deaths and 25 million tonnes of crop losses a year; universal clean cooking would cost about $8 billion a year.",
+    "The loops also constrain one another. Cutting sulphur pollution cleans the air but removes some of the cooling it provided, so the health gains of clean air should be paired with fast cuts in methane and other short-lived warmers. The report concludes that the most effective entry points are those that cut several loops at once — methane, combustion, and fire and land management — and that the data to target them already exist. All figures are from published sources; loop strengths in the calculator are illustrative."
+  ],
+  "jel": "Q53, Q54, Q51, I15, Q15, Q56 — air and water pollution; climate and natural disasters; valuation of environmental effects; health and economic development; land use and agriculture; environment and development",
+  "method": "Series are from public datasets downloaded in October 2026: NOAA Global Monitoring Laboratory global annual mean atmospheric methane and its annual growth rate (1984–2025); Global Fire Emissions Database version 4.1s (GFED4s) annual fire carbon emissions by region, 1997–2023, of which 2017 onwards are flagged by GFED as beta estimates not suitable for trend analysis — used here only to show the scale of 2023 relative to the earlier record, which is corroborated by the independent top-down estimate of Byrne et al. (2024); annual burned area from the Global Wildfire Information System via Our World in Data, 2012–2024 (2025–2026 incomplete and omitted); population-weighted PM2.5 exposure from SatPM, Atmospheric Composition Analysis Group, Washington University in St. Louis, via Our World in Data, 1998–2024, which includes natural sources such as dust and wildfire smoke; and the share of the population without clean cooking fuels from the WHO/World Bank via Our World in Data, 2000–2024. Literature values are cited where used. The loop-gain calculator treats a reinforcing loop as a chain of links with strengths s₁, s₂, s₃; the loop gain is G = s₁·s₂·s₃ and the response to an external push is amplified by 1 / (1 − G) for G < 1; cutting a link by a share c multiplies its strength by (1 − c). Default strengths (0.8, 0.8, 0.78; G ≈ 0.5) are illustrative, chosen to demonstrate the algebra, not estimated.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Urbanist:wght@600;700;800&family=Onest:wght@400;500;600;700&family=Ubuntu+Sans+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#0f3b40",
+  "topics": [
+    "Public Health",
+    "Environment & Biodiversity",
+    "Climate Adaptation"
+  ],
+  "keywords": [
+    "pollution",
+    "climate change",
+    "feedback loops",
+    "air pollution",
+    "methane",
+    "ozone",
+    "wildfire smoke",
+    "PM2.5",
+    "crop yields",
+    "ocean deoxygenation",
+    "clean cooking",
+    "short-lived climate pollutants",
+    "co-benefits",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "loops", "label": "1. Five Loops" },
+    { "id": "fire", "label": "2. The Fire Loop" },
+    { "id": "methane", "label": "3. Methane and Ozone" },
+    { "id": "heat", "label": "4. Heat and Air" },
+    { "id": "oceans", "label": "5. Oceans" },
+    { "id": "cooking", "label": "6. The Cooking Loop" },
+    { "id": "breaking", "label": "7. Breaking Loops" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "2.2×", "label": "Increase in the frequency of extreme wildfires, 2003–2023" },
+    { "value": "17.7 ppb", "label": "Record methane growth in 2021, driven largely by warming-sensitive wetlands" },
+    { "value": "12.4%", "label": "Global soybean yield lost to ozone pollution" },
+    { "value": "≈ 30%", "label": "Share of fossil-fuel methane abatable at no net cost — the cheapest link in the methane–ozone loop" }
+  ]
+}

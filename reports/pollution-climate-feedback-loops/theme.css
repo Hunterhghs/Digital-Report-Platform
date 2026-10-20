@@ -1,0 +1,272 @@
+/* ===========================================================================
+   Theme — Report 2026-27, "The Pollution–Climate Risk Nexus"
+
+   Aesthetic: feedback loop. The report is about cycles that feed themselves,
+   so the masthead carries large circular arrows drawn as an inline SVG data
+   URI (the first drawn — rather than gradient — masthead motif in the series),
+   over a deep teal field; every h2 opens with a small cycle mark (↻) in the
+   accent and sits on a rule that ends in an arrowhead. Each domain keeps one
+   colour throughout: climate red, pollution ochre, health rose, ecosystems
+   green, development indigo. Urbanist for display, Onest for prose, Ubuntu
+   Sans Mono for figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours,
+   and charts.js reads the --d-* tokens so no hex lives in the script.
+   =========================================================================== */
+
+:root {
+  --bg: #f5f6f2;
+  --bg-card: #fdfdfb;
+  --bg-accent: #ebeee7;
+  --bg-dark: #0f3236;
+  --bg-dark-2: #0a2427;
+
+  --text: #142426;
+  --text-secondary: #384a4c;
+  --text-muted: #63716f;
+  --text-inverse: #f5f6f2;
+
+  --primary: #0f4c51;
+  --primary-light: #1f7a80;
+  --accent: #d0662f;
+  --accent-light: #f0a77d;
+
+  --border: #dbe0d8;
+  --border-light: #e8ebe4;
+  --rule: #cbd2c8;
+
+  --d-climate: #c2412b;
+  --d-pollution: #b8862a;
+  --d-health: #b2456e;
+  --d-eco: #3f8a52;
+  --d-dev: #4a5aa8;
+  --d-muted: #a8b0aa;
+
+  --chart-blue: #4a5aa8;
+  --chart-blue-light: #9aa5d6;
+  --chart-gold: #b8862a;
+  --chart-red: #c2412b;
+  --chart-teal: #1f7a80;
+  --chart-gray: #8f9893;
+  --chart-orange: #d0662f;
+  --chart-purple: #7a52a0;
+
+  --serif: "Urbanist", -apple-system, BlinkMacSystemFont, "system-ui", sans-serif;
+  --sans: "Onest", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Ubuntu Sans Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --loops: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360' viewBox='0 0 520 360'%3E%3Cg fill='none' stroke='%23f5f6f2' stroke-opacity='0.13' stroke-width='3'%3E%3Cpath d='M260 60 A120 120 0 1 1 152 128'/%3E%3Cpath d='M152 128 l-4 -22 M152 128 l20 -10'/%3E%3Cpath d='M390 190 A80 80 0 1 1 318 142' stroke-opacity='0.1'/%3E%3Cpath d='M318 142 l-2 -18 M318 142 l17 -6' stroke-opacity='0.1'/%3E%3Cpath d='M120 250 A60 60 0 1 1 84 206' stroke-opacity='0.08'/%3E%3Cpath d='M84 206 l-3 -15 M84 206 l14 -4' stroke-opacity='0.08'/%3E%3C/g%3E%3C/svg%3E");
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1.02rem; line-height: 1.66; }
+
+::selection { background: rgba(208, 102, 47, 0.2); }
+:where(a, button, [tabindex], input, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a { color: var(--primary-light); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--accent); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: circular arrows on deep teal ---------------------------------------- */
+
+.masthead {
+  position: relative;
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.2rem var(--gutter) 3rem;
+  background:
+    var(--loops) right -40px center / 620px auto no-repeat,
+    radial-gradient(ellipse at 85% 40%, rgba(31, 122, 128, 0.55), transparent 60%),
+    linear-gradient(160deg, #0f3b40, #0a2427);
+}
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--d-climate) 0 20%, var(--d-pollution) 20% 40%, var(--d-health) 40% 60%, var(--d-eco) 60% 80%, var(--d-dev) 80% 100%);
+}
+.masthead .overline { font-family: var(--mono); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.14em; color: var(--accent-light); margin-bottom: 1rem; }
+.masthead .overline::before { content: "↻ LOOP DASHBOARD · "; color: #fff; }
+.masthead h1 { font-family: var(--serif); font-weight: 800; font-size: clamp(2.2rem, 5.6vw, 3.7rem); line-height: 1.04; letter-spacing: -0.02em; max-width: 19ch; color: #fff; }
+.masthead .subtitle { color: #cfe0dd; font-weight: 400; max-width: 62ch; }
+.masthead .strapline { font-family: var(--sans); font-style: normal; font-size: 1.02rem; color: #e6efed; border-left: 3px solid var(--accent); max-width: 76ch; }
+.masthead .meta-row { border-top: 1px solid rgba(255, 255, 255, 0.18); color: #b9cdca; font-family: var(--mono); font-size: 0.76rem; }
+.masthead .meta-row strong { color: var(--accent-light); font-family: var(--mono); font-weight: 600; font-size: 0.66rem; letter-spacing: 0.12em; }
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(245, 246, 242, 0.96); border-bottom: 1px solid var(--border); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.74rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- headings: a cycle mark and an arrow rule ------------------------------------- */
+
+section > h2 {
+  position: relative;
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.3vw, 2.05rem);
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  border-bottom: 0;
+  padding-bottom: 0.7rem;
+  background:
+    linear-gradient(var(--accent), var(--accent)) 0 100% / 150px 3px no-repeat,
+    linear-gradient(var(--border), var(--border)) 0 calc(100% - 1px) / 100% 1px no-repeat;
+}
+section > h2::before { content: "↻ "; color: var(--accent); font-weight: 700; }
+section > h2::after { content: ""; position: absolute; left: 148px; bottom: -3.5px; border-left: 9px solid var(--accent); border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.abstract h2, .endmatter h2 { background: none; }
+.abstract h2::before, .endmatter h2::before, .abstract h2::after, .endmatter h2::after { content: none; border: 0; }
+section > .section-dek { font-style: normal; color: var(--text-muted); font-size: 1.05rem; max-width: none; }
+
+.section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
+
+/* --- generated blocks ------------------------------------------------------------ */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--primary-light); }
+.abstract h2 { color: var(--primary); font-family: var(--mono); letter-spacing: 0.14em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.7rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.66rem; }
+
+/* --- KPI board --------------------------------------------------------------------- */
+
+.kpi-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1.6rem 0; }
+.kpi { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1rem 1.05rem 0.85rem 1.05rem; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.kpi::before { content: ""; position: absolute; right: -18px; top: -18px; width: 56px; height: 56px; border-radius: 50%; border: 6px solid var(--k, var(--primary-light)); opacity: 0.22; }
+.kpi--climate { --k: var(--d-climate); }
+.kpi--pollution { --k: var(--d-pollution); }
+.kpi--health { --k: var(--d-health); }
+.kpi--eco { --k: var(--d-eco); }
+.kpi--dev { --k: var(--d-dev); }
+.kpi-value { font-family: var(--serif); font-weight: 800; font-size: clamp(1.6rem, 3vw, 2.15rem); letter-spacing: -0.025em; line-height: 1.05; color: var(--k, var(--primary)); font-variant-numeric: tabular-nums; }
+.kpi-label { font-size: 0.85rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.45rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.65rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; }
+
+/* --- readout ------------------------------------------------------------------------- */
+
+.readout { background: var(--bg-dark); border-radius: 14px; padding: 1.15rem 1.4rem 0.45rem; margin: 1.6rem 0; position: relative; overflow: hidden; }
+.readout::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 140px; height: 140px; border-radius: 50%; border: 10px solid rgba(208, 102, 47, 0.25); border-left-color: transparent; }
+.readout-title { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 0.4rem !important; }
+.readout p { color: #d8e6e3; text-align: justify; hyphens: auto; -webkit-hyphens: auto; position: relative; }
+.readout strong { color: #fff; }
+
+/* --- panels ---------------------------------------------------------------------------- */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.dash-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.dash-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1rem 1.1rem 0.9rem; min-width: 0; }
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.1rem 1.2rem 1rem; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-title { font-family: var(--serif); font-weight: 700; font-size: 1.04rem; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); margin: 0.2rem 0 0.4rem !important; }
+.panel-note { font-size: 0.84rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 300px; }
+.panel .chart-frame--tall { height: 360px; }
+.panel .chart-frame--short { height: 250px; }
+
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 0.85rem 1rem; border-top: 4px solid var(--k, var(--primary-light)); }
+.stat-tile--climate { --k: var(--d-climate); }
+.stat-tile--pollution { --k: var(--d-pollution); }
+.stat-tile--health { --k: var(--d-health); }
+.stat-tile--eco { --k: var(--d-eco); }
+.stat-tile--dev { --k: var(--d-dev); }
+.stat-tile-value { font-family: var(--serif); font-weight: 800; font-size: 1.6rem; letter-spacing: -0.02em; color: var(--k, var(--text)); margin: 0 !important; font-variant-numeric: tabular-nums; }
+.stat-tile-label { font-size: 0.83rem; color: var(--text-muted); margin: 0.15rem 0 0 !important; text-align: left !important; line-height: 1.45; }
+
+/* --- loop map ------------------------------------------------------------------------------ */
+
+.loop-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.loopmap-wrap { overflow-x: auto; }
+.loopmap { display: block; width: 100%; min-width: 600px; height: auto; }
+.loopmap .lp-edge path { fill: none; stroke: var(--d-muted); stroke-width: 2.2; transition: stroke 0.2s, opacity 0.2s, stroke-width 0.2s; }
+.loopmap .lp-head { fill: var(--d-muted); }
+.loopmap .lp-head-on { fill: var(--accent); }
+.loopmap .lp-lab { font-family: var(--mono); font-size: 11.5px; fill: var(--text-muted); transition: opacity 0.2s; }
+.loopmap .lp-node circle { fill: var(--bg-card); stroke-width: 3; }
+.loopmap .lp-node--climate circle { stroke: var(--d-climate); }
+.loopmap .lp-node--pollution circle { stroke: var(--d-pollution); }
+.loopmap .lp-node--health circle { stroke: var(--d-health); }
+.loopmap .lp-node--eco circle { stroke: var(--d-eco); }
+.loopmap .lp-node--dev circle { stroke: var(--d-dev); }
+.loopmap .lp-name { font-family: var(--serif); font-weight: 800; font-size: 13px; fill: var(--text); letter-spacing: 0.04em; }
+.loopmap .lp-sub { font-family: var(--sans); font-size: 9.5px; fill: var(--text-muted); }
+.loopmap.has-active .lp-edge { opacity: 0.18; }
+.loopmap.has-active .lp-edge.is-on { opacity: 1; }
+.loopmap .lp-edge.is-on path { stroke: var(--accent); stroke-width: 3.4; }
+.loopmap .lp-edge.is-on .lp-lab { fill: var(--text); font-weight: 600; }
+.loop-card { border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 0.9rem 1rem; background: var(--bg); }
+.loop-card[hidden] { display: none; }
+.loop-card .lc-type { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin: 0 !important; }
+.loop-card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.2rem; color: var(--primary); margin: 0.15rem 0 0.4rem; }
+.loop-card p { font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin: 0 0 0.5rem !important; text-align: left !important; }
+.loop-card ol { margin: 0.3rem 0 0.5rem; padding-left: 1.1rem; font-size: 0.88rem; max-width: none; }
+.loop-card li { margin-bottom: 0.3rem; }
+.loop-card .lc-break { font-size: 0.88rem; border-top: 1px solid var(--border-light); padding-top: 0.5rem; margin: 0.4rem 0 0 !important; }
+
+/* --- controls ---------------------------------------------------------------------------- */
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 22px; margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+.slider { display: grid; gap: 3px; }
+.slider-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider label { font-family: var(--serif); font-weight: 700; font-size: 0.9rem; color: var(--text); }
+.slider output { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); white-space: nowrap; }
+.slider .hint { font-size: 0.8rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); margin: 2px 0; }
+.seg-wrap { display: grid; gap: 5px; }
+.seg-wrap .seg-label { font-family: var(--serif); font-weight: 700; font-size: 0.9rem; color: var(--text); }
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; background: var(--bg); width: fit-content; }
+.segmented button { font: inherit; font-family: var(--mono); font-size: 0.74rem; padding: 0.42rem 0.8rem; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--primary); color: #fff; }
+@media (min-width: 900px) { .controls .seg-wrap--wide { grid-column: 1 / -1; } }
+
+.gain-readout { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 0.8rem; }
+.gain-readout .stat-tile-value { font-size: 1.45rem; }
+.calc-note { font-family: var(--mono); font-size: 0.74rem; color: var(--text-muted); margin: 0.6rem 0 0 !important; }
+
+/* --- tables --------------------------------------------------------------------------------- */
+
+.table-scroll { overflow-x: auto; }
+.breakers { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 0.9rem; }
+.breakers th, .breakers td { text-align: left; vertical-align: top; padding: 0.6rem 0.65rem; border-bottom: 1px solid var(--border-light); }
+.breakers thead th { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; border-bottom: 1px solid var(--rule); }
+.breakers tbody th { font-family: var(--serif); font-weight: 800; color: var(--primary); white-space: nowrap; }
+.breakers td { color: var(--text-secondary); }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--primary-light); font-size: 0.68rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 6px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(90deg, var(--d-climate) 0 20%, var(--d-pollution) 20% 40%, var(--d-health) 40% 60%, var(--d-eco) 60% 80%, var(--d-dev) 80% 100%); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board, .dash-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dash-grid--three, .loop-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .dash-grid, .dash-grid--four, .gain-readout { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2.2rem; background: var(--loops) right -180px top -40px / 460px auto no-repeat, linear-gradient(160deg, #0f3b40, #0a2427); }
+}
+@media (max-width: 420px) {
+  .kpi-board { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .controls { display: none; }
+  .masthead, .masthead::after, .readout, .report-footer::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
