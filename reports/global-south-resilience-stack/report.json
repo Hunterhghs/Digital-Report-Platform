@@ -1,0 +1,63 @@
+{
+  "number": "2026-29",
+  "title": "The Global South Resilience Stack",
+  "subtitle": "Sequencing energy, water, health and digital development before 2050",
+  "strapline": "Energy, water, health and digital systems are not four separate goals but a stack. Power sets a ceiling on everything built above it, health is the slowest layer to build, and digital is the fastest. The sequencing rule that follows is to lay the foundation first and to start the slowest layer earliest.",
+  "dek": "Internet use has exceeded electricity access by more than five points in only 10 of 3,072 country-years across the Global South, and health coverage has rarely passed 60 before electricity reaches 90 per cent. Yet health is the slowest layer to build. On current trends only 28 of 129 low- and middle-income countries reach universal energy, water, health and digital access by 2050. Their data shows the order in which to build.",
+  "abstract": [
+    "This report treats four development systems — electricity, drinking water, health services and the internet — as layers of a single stack and asks how they should be sequenced in the 129 low- and middle-income countries that will hold 8.2 billion people by 2050. It draws on World Bank World Development Indicators for electricity access, basic and safely managed drinking water and internet use (2000–2024), and the WHO Universal Health Coverage service coverage index (2000–2023). In 2024 these countries had 654 million people without electricity, 681 million without basic drinking water and 2.23 billion offline, and a population-weighted health service coverage index of 68 out of 100.",
+    "The layers depend on each other in measurable ways. Electricity acts as a ceiling. Across 3,072 country-years, internet use exceeded electricity access by more than five percentage points in only 10. Where fewer than a quarter of people had electricity, the median health coverage index was 30 and the median share with safely managed water was 10 per cent; where access was universal, they were 71 and 73 per cent. The order of arrival is consistent too. When countries crossed 90 per cent electricity access, basic water stood at a median of 90 per cent, health coverage at 64 and internet use at 21 per cent. Internet use passed 50 per cent at a median electricity access of 99 per cent, health coverage passed 60 at a median of 91 per cent, and safely managed water passed 50 per cent at a median of 94 per cent.",
+    "The layers also move at very different speeds. Over the latest decade, the median country added 3.3 percentage points of internet use a year, 0.5 points of electricity access, 0.3 points of basic water and 0.26 points of health coverage, and 34 countries made no measurable progress on health coverage at all. Extending each country's recent trend, 25 countries with 1.2 billion people in 2050 do not reach 95 per cent electricity access by 2050, 39 do not reach 95 per cent basic water, 26 do not reach 90 per cent internet use, and 91 countries with 3.2 billion people do not reach a health coverage index of 80. Only 28 countries reach all four by 2050.",
+    "The sequencing rule that follows is to build from the foundation and to start the slowest layer first. Energy comes first because it caps the layers above it. Basic water can be built off-grid early, but safely managed water follows power. Health must begin earliest and be powered and supplied with water at the facility, because it is the slowest to build; about a billion people are served by health facilities without reliable electricity. Digital is the accelerator, fast once power exists. Classifying countries by the first layer in this sequence that falls short gives 44 energy-first countries with 1.2 billion people, 6 water-first, 16 health-first, 12 digital-first and 51 consolidating. Projections are linear extrapolations of recent trends, not forecasts, and the cross-country patterns are associations, not causal estimates."
+  ],
+  "jel": "O18, Q42, Q25, I15, O33, H54 — infrastructure and regional development; alternative energy and access; water; health and economic development; technological change and diffusion; infrastructure and public capital",
+  "method": "Electricity access (EG.ELC.ACCS.ZS), people using at least basic drinking water services (SH.H2O.BASW.ZS), people using safely managed drinking water services (SH.H2O.SMDW.ZS), individuals using the internet (IT.NET.USER.ZS), population (SP.POP.TOTL) and GDP per capita are from the World Bank World Development Indicators API, downloaded in October 2026; projected 2030 and 2050 populations are from the World Bank Population Estimates and Projections database (source 40). The UHC service coverage index (SDG 3.8.1, 0–100) is the WHO series as published by Our World in Data, 2000–2023. The Global South is defined as the 131 economies the World Bank classes as low, lower-middle or upper-middle income in its current classification; 129 have data on all four layers (Nicaragua lacks basic water and Kosovo most series). Envelope and order-of-arrival statistics pool all country-years from 2000 onwards for which both series exist, so they reflect time and income as well as dependency; the electricity ceiling on internet use is physical, and the other patterns are associations. Crossing years are the first year a series reached a threshold after starting below it. Recent pace is the ordinary least squares slope over the latest ten years of data (at least five observations); projections extend it linearly, capped at 100, with zero pace for flat or falling series, and arrival is the first year a projection reaches the target (95% electricity, 95% basic water, a UHC index of 80, 90% internet use). The optional energy ceiling caps projected internet use at projected electricity access plus five points. The sequence profile is the first layer, in the order energy, water, health, digital, below a working threshold (80% electricity, 85% basic water, a UHC index of 65, 70% internet use); thresholds are judgements informed by the crossing statistics, not standards. The map uses Natural Earth 1:50m boundaries via world-atlas in an Equal Earth projection; boundaries do not imply endorsement.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Kode+Mono:wght@400;500;600&display=swap",
+  "themeColor": "#1b1f33",
+  "topics": [
+    "Infrastructure",
+    "Energy Transition",
+    "Public Health",
+    "Technology"
+  ],
+  "keywords": [
+    "Global South",
+    "infrastructure sequencing",
+    "electricity access",
+    "drinking water",
+    "universal health coverage",
+    "internet use",
+    "digital development",
+    "resilience",
+    "health facility electrification",
+    "SDG 7",
+    "SDG 6",
+    "SDG 3.8",
+    "2050",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "stack", "label": "1. The Stack" },
+    { "id": "ceiling", "label": "2. The Energy Ceiling" },
+    { "id": "order", "label": "3. The Order of Arrival" },
+    { "id": "speeds", "label": "4. Four Speeds to 2050" },
+    { "id": "facility", "label": "5. Where the Stack Meets" },
+    { "id": "sequencer", "label": "6. The Sequencer" },
+    { "id": "rule", "label": "7. A Sequencing Rule" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "10 of 3,072", "label": "Country-years in which internet use exceeded electricity access by more than five points: power is the stack's ceiling" },
+    { "value": "0.26 vs 3.3", "label": "Median gain a year in health coverage against internet use, in index and percentage points: health is the slowest layer" },
+    { "value": "91", "label": "Countries, with 3.2 billion people in 2050, that do not reach a health coverage index of 80 by 2050 on current trends" },
+    { "value": "28 of 129", "label": "Low- and middle-income countries that reach universal energy, water, health and digital access by 2050 on trend" }
+  ]
+}
