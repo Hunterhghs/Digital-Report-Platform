@@ -1,0 +1,108 @@
+{
+  "number": "2026-43",
+  "title": "Resource Scarcity, Environmental Stress, and the Escalation of Armed Conflict",
+  "subtitle": "How water shortages and crop failures feed violence in already fragile states",
+  "strapline": "Drought reliably destroys harvests. Whether it starts wars is a harder question. This dashboard links 35 years of rainfall, cereal yields and 418,000 geocoded violent events across 159 countries and 6,500 local grid cells to test each step of the chain. The answer is that scarcity rarely lights the fire on its own but feeds one already burning — and it shows where the chain can be cut.",
+  "dek": "Scarcity is an accelerant, not a detonator. Drought cuts cereal yields by about 6% and doubles the odds of a crop failure, but in the same country an ordinary dry year barely changes the risk of war. Severe droughts raise the chance a new conflict starts the next year by about 60%, and in fragile states local droughts shift fighting toward communal and militia violence. Violence concentrates where scarcity meets weak states: 24 such countries, 7% of humanity, suffered 37% of conflict deaths in 2016–24.",
+  "abstract": [
+    "This report tests how water shortages and crop failures feed armed violence, using a country panel of 159 countries from 1989 to 2024 and a panel of 6,500 one-degree grid cells in 107 low- and middle-income countries. Rainfall anomalies come from ERA5 (national) and CRU TS 4.09 (local, restricted to station-observed seasons), cereal yields from the FAO via the World Bank, governance from the Worldwide Governance Indicators, and violence from the UCDP/PRIO Armed Conflict Dataset and the UCDP Georeferenced Event Dataset, version 26.1, which records 65 state-based armed conflicts in 2025, the most since 1946.",
+    "The first link in the chain is strong. Within the same country, a drought year (rainfall at least one standard deviation below normal) lowers cereal yields by 5.9% and raises the probability of a crop failure by 7.9 percentage points, roughly doubling it. The structural pattern is also strong: in the 24 countries that combine high exposure to scarcity with weak government effectiveness, 18 had state-based armed conflict in 2016–24, against 12 of 73 low-scarcity, capable states; with 7% of the population, they suffered 37% of all deaths from organised violence.",
+    "The short-run link from drought to war is weaker than raw comparisons suggest. In fragile states the chance of active conflict the year after a drought is 42% against 31% after a normal year, but within the same country the difference falls to about one point and is not statistically distinguishable from zero; most of the raw gap reflects which countries suffer both. Severe droughts are the exception: they raise the chance of a new conflict starting the next year by 2.5 points on a base of 4.0%, about 60%. Locally, a failed rainy season coincides with less state-versus-rebel fighting in fragile states but is followed by roughly 15–30% more non-state and communal violence, an effect at the edge of statistical significance — consistent with expert judgements that climate is a real but secondary driver, working through livelihoods, exclusion and weak institutions.",
+    "Violence in turn deepens hunger: undernourishment averaged 16% in countries at war in 2024 against 8% in countries at peace, and every place at risk of famine in 2026 is a conflict zone. The chain can be cut at several points: protecting harvests, protecting incomes with shock-responsive social protection and anticipatory finance, governing shared land and water, and building states that include rather than exclude. A rainfall-to-harvest chart, an interactive chain, a scarcity-fragility quadrant and atlas, a raw-versus-within-country estimator, local cell estimates and a country ledger accompany the analysis."
+  ],
+  "jel": "Q54, D74, Q15, O13, Q25 — climate; conflict and conflict resolution; land and water; agriculture and development; water",
+  "method": "Country panel: 159 countries with at least 1 million people, 1989–2024. Drought = annual rainfall z-score ≤ −1 relative to 1981–2010 (ERA5 country means from the World Bank Climate Change Knowledge Portal); severe drought z ≤ −1.5. Crop failure = cereal yield (FAO via World Bank WDI) at least 15 log points below its previous five-year mean. Fragile = WGI government effectiveness ≤ −1 in the previous year (1996 onward). Conflict incidence and onset from the UCDP/PRIO Armed Conflict Dataset 26.1 (≥ 25 battle deaths); communal violence = UCDP non-state conflicts between informally organised identity groups (org = 3); deaths by country from the UCDP GED 26.1 event locations. Estimates are linear probability models with country and year fixed effects and standard errors clustered by country. Local panel: CRU TS 4.09 monthly precipitation aggregated to 1° cells; each cell's rainy season is its wettest four-month window in 1981–2010; drought = seasonal z ≤ −1; only seasons with station observations in every month; outcomes from GED events in the same cell; cell and country-year fixed effects, clustered by country. Scarcity exposure = mean percentile of water stress, crop-failure frequency and agricultural employment share. Associations are not proof of causation; rainfall data are least reliable in conflict zones, which biases local estimates toward zero.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 19,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,600;0,800;1,600&family=Cabin:wght@400;500;600&family=Intel+One+Mono:wght@400;700&display=swap",
+  "themeColor": "#2a1d14",
+  "topics": [
+    "Conflict & Fragility",
+    "Systemic Risk",
+    "Food Security",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "climate and conflict",
+    "drought",
+    "crop failure",
+    "water scarcity",
+    "fragile states",
+    "armed conflict",
+    "communal violence",
+    "UCDP",
+    "food insecurity",
+    "Sahel",
+    "Horn of Africa",
+    "state capacity",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "link",
+      "label": "1. A Contested Link"
+    },
+    {
+      "id": "harvest",
+      "label": "2. From Rain to Harvest"
+    },
+    {
+      "id": "overlap",
+      "label": "3. Where Scarcity Meets Fragility"
+    },
+    {
+      "id": "national",
+      "label": "4. Do Droughts Start Wars?"
+    },
+    {
+      "id": "local",
+      "label": "5. Closer to the Ground"
+    },
+    {
+      "id": "hunger",
+      "label": "6. The Loop Back"
+    },
+    {
+      "id": "ledger",
+      "label": "7. Country Ledger"
+    },
+    {
+      "id": "breakers",
+      "label": "8. Breaking the Chain"
+    },
+    {
+      "id": "method",
+      "label": "9. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "−5.9%",
+      "label": "Cereal yields in a drought year, within the same country — the odds of a crop failure roughly double"
+    },
+    {
+      "value": "37%",
+      "label": "Share of deaths from organised violence in 2016–24 in the 24 countries where scarcity meets weak states, home to 7% of people"
+    },
+    {
+      "value": "+60%",
+      "label": "Rise in the chance a new conflict starts the year after a severe drought (2.5 points on a 4% base)"
+    },
+    {
+      "value": "65",
+      "label": "State-based armed conflicts active in 2025, the most UCDP has recorded since 1946"
+    }
+  ]
+}
