@@ -128,25 +128,41 @@ function loadReports() {
 // --- shared fragments -------------------------------------------------------
 
 const chip = (t) => `<a class="chip" href="${escAttr(topicHref(t))}">${esc(t)}</a>`;
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
-function card(r) {
-  return `<article class="card">
-  <p class="card-meta">№ ${esc(r.number)} · ${esc(monthYear(r.published))} · ${esc(String(r.readingTime))} min</p>
-  <h3><a href="/reports/${escAttr(r.slug)}/">${esc(r.title)}</a></h3>
-  <p>${esc(r.dek)}</p>
-  <div class="card-foot">${(r.topics || []).map(chip).join(' ')}</div>
-</article>`;
-}
-
-function pageHead(overline, title, dek) {
-  return `<header class="pagehead">
-  <div class="pagehead-inner">
-    <p class="overline">${esc(overline)}</p>
-    <h1>${esc(title)}</h1>
-    <p>${esc(dek)}</p>
+/**
+ * The paper nameplate shared by every library page: a topline, a large serif
+ * title over a double rule, and a strap with optional headline stats. The
+ * front page uses the same pieces at a larger size.
+ */
+function fpNameplate({ section, title, strap, stats = [] }) {
+  const dl = stats.length
+    ? `<dl class="fp-stats">${stats
+        .map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(String(v))}</dd></div>`)
+        .join('')}</dl>`
+    : '';
+  return `<header class="fp-head">
+  <div class="fp-wrap">
+    <div class="fp-topline">
+      <span>${esc(site.name)} ${esc(site.property)}</span>
+      <span>${esc(section)}</span>
+    </div>
+    <h1 class="fp-title fp-title--page">${esc(title)}</h1>
+    <div class="fp-strap">
+      <p>${esc(strap)}</p>
+      ${dl}
+    </div>
   </div>
 </header>`;
 }
+
+const seriesStats = (reports, topics) => {
+  const first = reports.length ? reports[reports.length - 1].published.slice(0, 4) : '';
+  return [['Reports', reports.length], ['Topics', topics.length], ...(first ? [['Since', first]] : [])];
+};
+
+const topicTile = ([t, list]) =>
+  `<a class="fp-topic" href="${escAttr(topicHref(t))}"><b>${list.length}</b><span>${esc(t)}</span></a>`;
 
 // --- front page fragments ----------------------------------------------------
 //
@@ -185,7 +201,8 @@ function fpLead(r) {
 }
 
 function fpCard(r) {
-  return `<article class="fp-card" style="--rc:${escAttr(coverColor(r))}">
+  const q = [r.number, r.title, r.subtitle, r.dek, ...(r.topics || [])].join(' ').toLowerCase();
+  return `<article class="fp-card" style="--rc:${escAttr(coverColor(r))}" data-q="${escAttr(q)}">
   <div class="fp-card__band" aria-hidden="true">
     <span class="fp-card__no">${esc(issueNo(r))}</span>
     <span class="fp-card__topic">${esc((r.topics || [])[0] || '')}</span>
@@ -207,25 +224,26 @@ function fpIndexRow(r) {
 </li>`;
 }
 
-const libraryPage = ({ title, desc, pathname, current, body }) =>
-  page({
-    headHtml: head({
-      title,
-      desc,
-      path: pathname,
-      css: ['/assets/platform.css'],
-      jsonLd: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: `${site.name} ${site.property}`,
-        url: site.siteUrl,
-        description: site.description,
-        publisher: { '@type': 'Organization', name: site.publisher },
-      }),
+const libraryPageParts = ({ title, desc, pathname, current, body }) => ({
+  headHtml: head({
+    title,
+    desc,
+    path: pathname,
+    css: ['/assets/platform.css'],
+    jsonLd: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: `${site.name} ${site.property}`,
+      url: site.siteUrl,
+      description: site.description,
+      publisher: { '@type': 'Organization', name: site.publisher },
     }),
-    body: `${siteBar(current)}\n${body}\n${footer()}`,
-    scripts: [],
-  });
+  }),
+  body: `${siteBar(current)}\n${body}\n${footer()}`,
+  scripts: [],
+});
+
+const libraryPage = (opts) => page(libraryPageParts(opts));
 
 // --- assets -----------------------------------------------------------------
 
@@ -266,12 +284,7 @@ function buildHome(reports) {
   const topics = topicIndex(reports);
   const firstYear = reports.length ? reports[reports.length - 1].published.slice(0, 4) : '';
 
-  const tiles = topics
-    .map(
-      ([t, list]) =>
-        `<a class="fp-topic" href="${escAttr(topicHref(t))}"><b>${list.length}</b><span>${esc(t)}</span></a>`,
-    )
-    .join('');
+  const tiles = topics.map(topicTile).join('');
 
   const body = `<header class="fp-head">
   <div class="fp-wrap">
@@ -342,38 +355,101 @@ function buildHome(reports) {
   }));
 }
 
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+// Small progressive enhancement for /reports/: a covers/list view switch and
+// a text filter. Without JavaScript the page is the full covers grid.
+const REPORTS_SCRIPT = `<script>
+(function () {
+  var main = document.getElementById('main');
+  var input = document.getElementById('fp-filter');
+  var out = document.getElementById('fp-filter-count');
+  var none = document.getElementById('fp-none');
+  var cards = [].slice.call(main.querySelectorAll('.fp-card'));
+  var bands = [].slice.call(main.querySelectorAll('[data-band]'));
+  var view = 'covers';
+  try { view = localStorage.getItem('hh-reports-view') || 'covers'; } catch (e) {}
+  function setView(v) {
+    view = v === 'list' ? 'list' : 'covers';
+    main.classList.toggle('fp--list', view === 'list');
+    [].forEach.call(document.querySelectorAll('[data-view]'), function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-view') === view));
+    });
+    try { localStorage.setItem('hh-reports-view', view); } catch (e) {}
+  }
+  function filter() {
+    var terms = input.value.toLowerCase().trim().split(/\\s+/).filter(Boolean);
+    var shown = 0;
+    cards.forEach(function (c) {
+      var q = c.getAttribute('data-q');
+      var ok = terms.every(function (t) { return q.indexOf(t) !== -1; });
+      c.hidden = !ok; if (ok) shown++;
+    });
+    bands.forEach(function (b) {
+      var n = b.querySelectorAll('.fp-card:not([hidden])').length;
+      b.hidden = n === 0;
+      b.querySelector('.fp-band__count').textContent = n + (n === 1 ? ' report' : ' reports');
+    });
+    out.textContent = terms.length ? shown + ' of ' + cards.length + ' reports' : cards.length + ' reports';
+    none.hidden = shown !== 0;
+  }
+  document.querySelector('.fp-tools').hidden = false;
+  [].forEach.call(document.querySelectorAll('[data-view]'), function (b) {
+    b.addEventListener('click', function () { setView(b.getAttribute('data-view')); });
+  });
+  input.addEventListener('input', filter);
+  setView(view); filter();
+})();
+</script>`;
+
 function buildReportIndex(reports) {
-  const byYear = new Map();
+  const topics = topicIndex(reports);
+  const byMonth = new Map();
   for (const r of reports) {
-    const y = r.published.slice(0, 4);
-    if (!byYear.has(y)) byYear.set(y, []);
-    byYear.get(y).push(r);
+    const key = r.published.slice(0, 7);
+    if (!byMonth.has(key)) byMonth.set(key, []);
+    byMonth.get(key).push(r);
   }
 
-  const bands = [...byYear.entries()]
+  const bands = [...byMonth.entries()]
     .sort((a, b) => b[0].localeCompare(a[0]))
-    .map(
-      ([year, list]) =>
-        `<h2 class="band-title">${esc(year)} <span class="count">${list.length} report${list.length === 1 ? '' : 's'}</span></h2>
-  <div class="card-grid">${list.map(card).join('\n')}</div>`,
-    )
+    .map(([key, list]) => {
+      const [y, m] = key.split('-');
+      return `<section class="fp-band" data-band>
+    <h2 class="fp-band__title"><span>${esc(MONTHS[Number(m) - 1])} ${esc(y)}</span><span class="fp-band__count">${plural(list.length, 'report')}</span></h2>
+    <div class="fp-grid">${list.map(fpCard).join('\n')}</div>
+  </section>`;
+    })
     .join('\n\n  ');
 
-  const body = `${pageHead(
-    'The series',
-    'Reports',
-    'Every digital report published to date, newest first.',
-  )}
-<main class="shell" id="main">
+  const body = `${fpNameplate({
+    section: 'The series',
+    title: 'Reports',
+    strap: 'Every digital report published to date, newest first — each in the colour of its own masthead.',
+    stats: seriesStats(reports, topics),
+  })}
+<main class="fp" id="main">
+  <div class="fp-tools" hidden>
+    <label class="fp-filter"><span>Filter</span><input id="fp-filter" type="search" placeholder="Title, topic or number" autocomplete="off"></label>
+    <span class="fp-tools__count" id="fp-filter-count" aria-live="polite"></span>
+    <div class="fp-views" role="group" aria-label="View">
+      <button type="button" data-view="covers" aria-pressed="true">Covers</button>
+      <button type="button" data-view="list" aria-pressed="false">List</button>
+    </div>
+  </div>
   ${bands || '<div class="empty">No reports published yet.</div>'}
+  <p class="fp-none" id="fp-none" hidden>No reports match that filter.</p>
 </main>`;
 
-  write('reports/index.html', libraryPage({
-    title: 'Reports',
-    desc: 'Every H Heuristics digital report published to date.',
-    pathname: '/reports/',
-    current: '/reports/',
-    body,
+  write('reports/index.html', page({
+    ...libraryPageParts({
+      title: 'Reports',
+      desc: 'Every H Heuristics digital report published to date.',
+      pathname: '/reports/',
+      current: '/reports/',
+      body,
+    }),
+    scripts: [REPORTS_SCRIPT],
   }));
 }
 
@@ -398,76 +474,144 @@ function topicIndex(reports) {
 
 function buildTopics(reports) {
   const topics = topicIndex(reports);
+  const PREVIEW = 4;
 
-  const rail = topics
-    .map(([t, list]) => `<a href="${escAttr(topicHref(t))}">${esc(t)} <b>${list.length}</b></a>`)
-    .join('');
+  const sections = topics
+    .map(([t, list]) => {
+      const [latest, ...others] = list;
+      const more = list.length - 1 - PREVIEW;
+      return `<section class="fp-band" id="${escAttr(topicHref(t).split('/')[2])}">
+    <h2 class="fp-band__title"><span>${esc(t)}</span><a href="${escAttr(topicHref(t))}">${plural(list.length, 'report')} →</a></h2>
+    <div class="fp-split">
+      ${fpCard(latest)}
+      ${
+        others.length
+          ? `<div><ol class="fp-idx fp-idx--compact">${others.slice(0, PREVIEW).map(fpIndexRow).join('\n')}</ol>${
+              more > 0 ? `<p class="fp-more"><a href="${escAttr(topicHref(t))}">and ${plural(more, 'more report')} in ${esc(t)} →</a></p>` : ''
+            }</div>`
+          : '<p class="fp-more">The first report in this theme.</p>'
+      }
+    </div>
+  </section>`;
+    })
+    .join('\n\n  ');
 
   write('topics/index.html', libraryPage({
     title: 'Topics',
     desc: 'Browse the H Heuristics digital report series by topic.',
     pathname: '/topics/',
     current: '/topics/',
-    body: `${pageHead('The series', 'Topics', 'The research themes running through the series.')}
-<main class="shell" id="main">
-  ${topics.length ? `<div class="topic-rail">${rail}</div>` : '<div class="empty">No topics yet.</div>'}
-  ${topics
-    .map(
-      ([t, list]) => `<h2 class="band-title" id="${escAttr(topicHref(t).split('/')[2])}">${esc(t)} <span class="count">${list.length}</span></h2>
-  <div class="card-grid">${list.map(card).join('\n')}</div>`,
-    )
-    .join('\n\n  ')}
+    body: `${fpNameplate({
+      section: 'The series',
+      title: 'Topics',
+      strap: 'The research themes running through the series. Most reports sit in more than one, so the themes overlap by design.',
+      stats: [['Topics', topics.length], ['Reports', reports.length]],
+    })}
+<main class="fp" id="main">
+  ${
+    topics.length
+      ? `<section class="fp-band">
+    <h2 class="fp-band__title"><span>All topics</span><span class="fp-band__count">Reports per theme</span></h2>
+    <div class="fp-topics">${topics.map(topicTile).join('')}</div>
+  </section>
+  ${sections}`
+      : '<div class="empty">No topics yet.</div>'
+  }
 </main>`,
   }));
 
   for (const [topic, list] of topics) {
     const href = topicHref(topic);
+    const others = topics.filter(([t]) => t !== topic);
     write(`${href.slice(1)}index.html`, libraryPage({
       title: topic,
       desc: `H Heuristics digital reports on ${topic.toLowerCase()}.`,
       pathname: href,
       current: '/topics/',
-      body: `${pageHead('Topic', topic, `${list.length} report${list.length === 1 ? '' : 's'} in this theme.`)}
-<main class="shell" id="main">
-  <div class="card-grid">${list.map(card).join('\n')}</div>
-  <p style="margin-top:2.5rem"><a href="/topics/">← All topics</a></p>
+      body: `${fpNameplate({
+        section: 'Topic',
+        title: topic,
+        strap: `${plural(list.length, 'report')} in this theme, newest first.`,
+        stats: [['Reports', list.length], ['Latest', `№ ${issueNo(list[0])}`]],
+      })}
+<main class="fp" id="main">
+  <section class="fp-band">
+    <h2 class="fp-band__title"><span>${esc(topic)}</span><a href="/topics/">← All topics</a></h2>
+    <div class="fp-grid">${list.map(fpCard).join('\n')}</div>
+  </section>
+  ${
+    others.length
+      ? `<section class="fp-band">
+    <h2 class="fp-band__title"><span>Other topics</span></h2>
+    <div class="fp-topics">${others.map(topicTile).join('')}</div>
+  </section>`
+      : ''
+  }
 </main>`,
     }));
   }
 }
 
 function buildAbout(reports) {
-  const body = `${pageHead('About', 'About the series', 'What these reports are, how they are made, and how to cite them.')}
-<main class="shell" id="main">
-  <div class="prose">
-    <h2>What this is</h2>
-    <p>${esc(site.name)} ${esc(site.property)} is an independent research series on systemic risk, climate resilience, development finance and the energy transition — the interlocking pressures that decide how well societies absorb the shocks now arriving together.</p>
-    <p>Each report is written for the browser rather than for paper. Charts are live data visuals rather than pictures of charts; every quantitative claim links to its primary source; and each report carries a report number, a publication date and a citation line, so it can be referenced like any other working paper.</p>
+  const topics = topicIndex(reports);
+  const principles = [
+    ['Built for the browser', 'Charts are live data visuals rather than pictures of charts: hover for values, switch layers and scenarios, and read the numbers off the figure.'],
+    ['Sourced claim by claim', 'Every quantitative claim links to its primary source. Where a figure is a schematic or an illustrative scenario rather than a measurement, the caption says so.'],
+    ['Citable and stable', 'Each report carries a number, a publication date and a citation line, and stays online at a stable address so it can be referenced like any working paper.'],
+  ];
 
-    <h2>A cumulative series</h2>
-    <p>The series is cumulative: earlier reports stay online at stable addresses, and the argument develops across them rather than restarting each time.</p>
+  const body = `${fpNameplate({
+    section: 'About',
+    title: 'About the series',
+    strap: 'What these reports are, how they are made, and how to cite them.',
+    stats: seriesStats(reports, topics),
+  })}
+<main class="fp" id="main">
+  <section class="fp-band">
+    <h2 class="fp-band__title"><span>What this is</span></h2>
+    <div class="fp-about__cols fp-about__cols--lead">
+      <p>${esc(site.name)} ${esc(site.property)} is an independent research series on systemic risk, climate resilience, development finance and the energy transition — the interlocking pressures that decide how well societies absorb the shocks now arriving together.</p>
+      <p>The series is cumulative: earlier reports stay online at stable addresses, and the argument develops across them rather than restarting each time. Each report is a hybrid of long-form analysis and interactive dashboard, set in its own visual identity.</p>
+    </div>
+  </section>
 
-    <h2>Method</h2>
-    <p>The reports are syntheses. They draw on institutional and peer-reviewed research — the IEA, IRENA, the IPCC, the World Bank, UNEP, the WHO and the WMO among others — and on primary reporting of country programmes. They are analytical rather than predictive: where a figure is a schematic or an illustrative scenario rather than a measurement, the caption says so.</p>
+  <section class="fp-band">
+    <h2 class="fp-band__title"><span>How the reports are made</span></h2>
+    <ol class="fp-principles">${principles
+      .map(([h, p], i) => `<li><span class="fp-principles__no">${String(i + 1).padStart(2, '0')}</span><h3>${esc(h)}</h3><p>${esc(p)}</p></li>`)
+      .join('')}</ol>
+    <div class="fp-about__cols">
+      <p>The reports are syntheses and original analyses. They draw on institutional and peer-reviewed research — the IEA, IRENA, the IPCC, the World Bank, UNEP, the WHO and the WMO among others — on open datasets analysed for the report, and on primary reporting of country programmes.</p>
+      <p>They are analytical rather than predictive. Projections are labelled as scenarios, data limits are stated alongside the findings they qualify, and the method behind each figure is set out in the report's own methods section.</p>
+    </div>
+  </section>
 
-    <h2>Citation and licence</h2>
-    <p>Each report page carries a full citation line in its footer. Citable PDF editions of the underlying research are held in the <a href="${escAttr(site.archive.url)}" rel="noopener" target="_blank">${esc(site.archive.label)}</a>, where they are indexed for Google Scholar.</p>
-    <p>Published under <a href="${escAttr(site.license.url)}" rel="license noopener" target="_blank">${esc(site.license.name)}</a>. Machine-readable metadata for the whole series is available at <a href="/reports.json">/reports.json</a>, and updates at <a href="/feed.xml">/feed.xml</a>.</p>
+  <section class="fp-band">
+    <h2 class="fp-band__title"><span>Citation and licence</span></h2>
+    <div class="fp-about__cols">
+      <p>Each report page carries a full citation line in its footer. Citable PDF editions of the underlying research are held in the <a href="${escAttr(site.archive.url)}" rel="noopener" target="_blank">${esc(site.archive.label)}</a>, where they are indexed for Google Scholar.</p>
+      <p>Published under <a href="${escAttr(site.license.url)}" rel="license noopener" target="_blank">${esc(site.license.name)}</a>. Machine-readable metadata for the whole series is available at <a href="/reports.json">/reports.json</a>, and updates at <a href="/feed.xml">/feed.xml</a>.</p>
+    </div>
+  </section>
 
-    <h2>Contact</h2>
-    <p>${esc(site.author)} — <a href="mailto:${escAttr(site.email)}">${esc(site.email)}</a></p>
-  </div>
+  <section class="fp-band">
+    <h2 class="fp-band__title"><span>Contact</span></h2>
+    <p class="fp-contact">${esc(site.author)} — <a href="mailto:${escAttr(site.email)}">${esc(site.email)}</a></p>
+  </section>
+
   ${
     reports.length
-      ? `<h2 class="band-title" style="margin-top:3rem">Published so far <span class="count">${reports.length}</span></h2>
-  <div class="card-grid">${reports.map(card).join('\n')}</div>`
+      ? `<section class="fp-band">
+    <h2 class="fp-band__title"><span>Published so far</span><span class="fp-band__count">${plural(reports.length, 'report')}, newest first</span></h2>
+    <ol class="fp-idx">${reports.map(fpIndexRow).join('\n')}</ol>
+  </section>`
       : ''
   }
 </main>`;
 
   write('about/index.html', libraryPage({
     title: 'About',
-    desc: 'About the H Heuristics digital report series — method, cadence, citation and licence.',
+    desc: 'About the H Heuristics digital report series — method, citation and licence.',
     pathname: '/about/',
     current: '/about/',
     body,
@@ -480,9 +624,15 @@ function build404() {
     desc: 'That page does not exist.',
     pathname: '/404.html',
     current: '',
-    body: `${pageHead('Error 404', 'Page not found', 'That address does not match a report in this series.')}
-<main class="shell" id="main">
-  <p><a class="readbtn" href="/reports/">Browse all reports</a></p>
+    body: `${fpNameplate({
+      section: 'Error 404',
+      title: 'Page not found',
+      strap: 'That address does not match a report in this series.',
+    })}
+<main class="fp" id="main">
+  <section class="fp-band">
+    <p><a class="readbtn" href="/reports/">Browse all reports</a></p>
+  </section>
 </main>`,
   }));
 }
