@@ -1,0 +1,63 @@
+{
+  "number": "2026-46",
+  "title": "Human Survivability Under the Global Polycrisis",
+  "subtitle": "Mapping exposure, adaptive capacity, and systemic threats across the century",
+  "strapline": "Humanity's death toll from natural disasters has fallen more than tenfold per person since the 1960s, not because hazards eased but because people became better able to survive them. This dashboard measures that capacity, sets it against the exposure and hazard growth projected for the rest of the century, and shows in which worlds — and which places — capacity keeps winning the race, and where it loses.",
+  "dek": "Disasters kill far fewer people than they did — 6 per million a year in the 2010s against 99 in the 1960s — because capacity rose faster than threat. Within countries, each extra year of adult schooling has cut deaths per 1,000 people affected by about a third. Projected to 2100, that capacity keeps winning in most futures, but not in a fragmented, high-warming SSP3 world, where population and hazard outpace schooling and expected deaths rise in two-thirds of countries.",
+  "abstract": [
+    "This report asks whether humanity's capacity to survive hazards can keep pace with rising exposure and climate-driven hazard over the rest of the century. It combines EM-DAT disaster records (via Our World in Data) for 1900–2024, adult educational attainment reconstructed and projected by the Wittgenstein Centre for five Shared Socioeconomic Pathways, the IPCC Sixth Assessment Report's assessed warming trajectories and extreme-event frequency multipliers, and INFORM hazard scores for 157 countries.",
+    "The historical record shows capacity outpacing threat. Recorded disaster deaths averaged about 520,000 a year in the 1920s and 45,000 in the 2010s, while world population quadrupled; per million people, the toll fell from 99 a year in the 1960s to 6 in the 2010s, even as the number of people recorded as affected rose into the hundreds of millions. In a panel of 147 countries since the 1970s, each additional year of adult schooling within a country is associated with about 32% fewer deaths per 1,000 people affected (country and decade fixed effects), an effect that survives controlling for income.",
+    "Projected forward, expected disaster deaths depend on three forces: population exposure, hazard frequency — a former 1-in-10-year heat extreme becomes 4.1 times as frequent at 1.5 °C and 9.4 times at 4 °C — and capacity. If schooling's historical protective effect holds, expected deaths fall by two-thirds to four-fifths by 2100 in sustainability (SSP1), middle-of-the-road (SSP2) and fossil-fuelled (SSP5) worlds. In a fragmented SSP3 world they stay near today's level overall but rise in 107 of 157 countries and fourfold in sub-Saharan Africa, because population growth and hazard outrun schooling gains of only 1.7 years. Under the weakest effect consistent with the data, deaths nearly double in SSP3.",
+    "Disasters are only part of the polycrisis: air pollution, pandemics, armed conflict, famine and debt kill or impoverish far more people and are not reduced by local capacity alone. The report closes with the investments that keep capacity ahead — universal education, early warning, health and social protection, heat-health systems where schooling has saturated — and the systemic threats that require collective action. A century-long seismogram, capacity evidence, hazard curves, a scenario race with an adjustable capacity effect, a regional breakdown, an atlas and a threat register accompany the analysis."
+  ],
+  "jel": "Q54, I25, J11, Q56, O15 — climate and natural disasters; education and development; demographic projections; environment and development; human resources",
+  "method": "Disaster deaths and people affected: EM-DAT via Our World in Data, 1900–2024, by country and hazard type. Capacity: adult (25+) mean years of schooling, population-weighted across age groups from the Wittgenstein Centre Human Capital Data Explorer v3.3 (reconstruction 1950–2020, SSP projections to 2100). Elasticity: log deaths per 1,000 affected (drought excluded) on mean years of schooling, country-decade panel 1970–2024, 147 countries, country and decade fixed effects, standard errors clustered by country: −0.38 (s.e. 0.16). Projection for 157 countries with ≥ 1 million people: expected deaths(t) = 2000–24 average deaths × population ratio (Wittgenstein SSP) × hazard ratio × exp(β × change in schooling since 2020). Hazard ratio = country-specific mix of heat, flood and drought deaths × IPCC AR6 SPM.6 median frequency multipliers for 10-year events at each year's warming (AR6 SPM.8 assessed mean for SSP1-2.6, SSP2-4.5, SSP3-7.0, SSP5-8.5); earthquake, volcano and storm deaths held constant. Caveats: EM-DAT under-records heat deaths outside Europe and the baseline is dominated by a few mega-disasters; schooling stands in for the broader capacity it helps create; storm intensification, sea-level rise, compound events and non-climate threats are not modelled.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Prata&family=Mona+Sans:wght@400;500;600&family=Syne+Mono&display=swap",
+  "themeColor": "#1b1813",
+  "topics": [
+    "Systemic Risk",
+    "Climate Adaptation",
+    "Human Capital",
+    "Public Health"
+  ],
+  "keywords": [
+    "survivability",
+    "adaptive capacity",
+    "disaster mortality",
+    "education",
+    "Shared Socioeconomic Pathways",
+    "Wittgenstein Centre",
+    "EM-DAT",
+    "IPCC AR6",
+    "extreme events",
+    "polycrisis",
+    "exposure",
+    "systemic risk",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "record", "label": "1. A Century of Survival" },
+    { "id": "capacity", "label": "2. What Capacity Buys" },
+    { "id": "threat", "label": "3. The Rising Threat" },
+    { "id": "race", "label": "4. The Race to 2100" },
+    { "id": "regions", "label": "5. Where the Race Is Lost" },
+    { "id": "atlas", "label": "6. Survivability Atlas" },
+    { "id": "systemic", "label": "7. Beyond Disasters" },
+    { "id": "keep", "label": "8. Keeping Capacity Ahead" },
+    { "id": "method", "label": "9. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "99 → 6", "label": "Disaster deaths per million people a year, 1960s vs 2010s" },
+    { "value": "−32%", "label": "Deaths per 1,000 people affected for each extra year of adult schooling, within countries" },
+    { "value": "×4.1 / ×9.4", "label": "Frequency of a former 1-in-10-year heat extreme at 1.5 °C and 4 °C of warming" },
+    { "value": "107 of 157", "label": "Countries where expected disaster deaths rise by 2100 in a fragmented SSP3 world" }
+  ]
+}
