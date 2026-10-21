@@ -1,0 +1,61 @@
+{
+  "number": "2026-42",
+  "title": "Wet-Bulb Temperatures and the Emerging Geography of Unsurvivable Heat",
+  "subtitle": "Which regions will cross human physiological thresholds within current warming trajectories",
+  "strapline": "The famous 35 °C wet-bulb limit is a theoretical ceiling, not the line people die at. Laboratory work puts the real limit for healthy young adults in humid heat near 30.5 °C. This dashboard measures every hour of 2024 in 149 large cities and 12 humid-heat hotspots against both lines, then raises the heat in step with global warming to show where, and for how many people, each line is crossed — and what keeps people on the safe side of it.",
+  "dek": "No site analysed reaches the 35 °C wet-bulb ceiling before about 4.4 °C of global warming; the binding line is lower. Healthy young adults lose the ability to cool themselves in humid heat near 30.5 °C, a level 11 of 161 sites reached for at least an hour in 2024. Under current policies, about 2.8 °C, the cities touching it would hold 161 million people, up from 9 million today — around the Gulf, across South Asia and in eastern China.",
+  "abstract": [
+    "This report maps where humid heat approaches the limits of human thermoregulation now and under plausible warming. It uses the wet-bulb temperature (Tw), the lowest temperature to which air can be cooled by evaporating water and so the ceiling on how well sweating can cool the body. The widely cited limit of 35 °C (Sherwood and Huber, 2010) is a theoretical upper bound; experiments with young, healthy adults at minimal activity (Vecellio et al., 2022) found uncompensable heat stress in humid environments at a mean of 30.55 °C, and lower still in hot, dry air.",
+    "Hourly ERA5 wet-bulb temperatures for 2024, a year about 1.55 °C above pre-industrial, were analysed for 149 large cities (676 million people) and 12 humid-heat hotspot sites. In 2024 the highest hourly Tw reached 32.3 °C, at Abu Dhabi; 11 sites, including Dubai, Kolkata and Muscat, reached 30.5 °C for at least an hour; 64 cities with 412 million people had at least one hour above 27 °C, a level widely used to mark extreme humid heat. No site came closer than 2.7 °C to 35 °C.",
+    "Applying the projected rise in extreme tropical Tw of about 0.94 °C per degree of global warming (Zhang et al., 2021), the number of sampled cities whose hottest hour reaches 30.5 °C rises from 3 (9 million people) today to 7 (54 million) at 2 °C, 9 (78 million) at the 2.3–2.5 °C implied by current pledges, and 16 (161 million) at the 2.8 °C implied by current policies. Hours above the limit multiply faster than the area: person-hours above 30.5 °C rise ninefold by 2.8 °C. On reanalysis data no site reaches 35 °C below 4.4 °C of warming, but reanalysis smooths local extremes, and a few weather stations have already recorded 35 °C briefly.",
+    "The emerging geography is the Persian Gulf, the Indus valley and the Bay of Bengal coast first, then eastern China and the rest of South Asia, with tropical West Africa and Southeast Asia gaining hundreds to thousands of extreme hours a year without yet touching the line. Keeping warming below 2 °C holds the affected population to a third of the current-policies figure; cooling access, heat-health warning systems, protected work schedules and reliable power keep people below the line where heat crosses it. An interactive wet-bulb calculator, threshold ladder, warming slider, map, crossing table and city explorer accompany the analysis."
+  ],
+  "jel": "Q54, I18, Q56, R11, J81 — climate; public health; environment and development; regional economic activity; working conditions",
+  "method": "Hourly 2-metre wet-bulb and air temperature for 2024 come from the ERA5 reanalysis via the Open-Meteo archive API, in local time, for 149 large cities (the largest city in every country of 5 million or more, plus up to seven others in the most populous countries; populations from GeoNames) and 12 hotspot sites without population weights. Daily maximum wet-bulb temperatures for 2019–2023 were retrieved for the 28 hottest sites to test how representative 2024 was. Peak metrics are the highest hourly value and the highest 3- and 6-hour running means. Warming is represented by adding k × (GWL − 1.55) to every hour, with GWL the global warming level above 1850–1900, 1.55 °C the WMO estimate for 2024 and k = 0.94 °C per °C (0.89–0.99) from the projected change in extreme tropical wet-bulb temperature (Zhang, Held and Fueglistaler, 2021). Thresholds are 27 °C (extreme humid heat), 30.5 °C (mean measured limit for young adults in humid heat, Vecellio et al., 2022) and 35 °C (theoretical limit, Sherwood and Huber, 2010). Reanalysis grid cells average over tens of kilometres and understate station extremes; a uniform shift ignores changes in humidity, circulation and variability; the baseline is a single, warm year.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Sarabun:ital,wght@0,400;0,500;0,600;1,400&family=Google+Sans+Code:wght@400;700&display=swap",
+  "themeColor": "#0e2428",
+  "topics": [
+    "Climate Change",
+    "Health",
+    "Climate Adaptation",
+    "Inequality"
+  ],
+  "keywords": [
+    "wet-bulb temperature",
+    "humid heat",
+    "extreme heat",
+    "survivability",
+    "thermoregulation",
+    "uncompensable heat stress",
+    "global warming levels",
+    "ERA5",
+    "Persian Gulf",
+    "South Asia",
+    "heat-health action plans",
+    "cooling access",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "limit", "label": "1. The Line Is Lower" },
+    { "id": "now", "label": "2. The Heat Already Here" },
+    { "id": "regimes", "label": "3. Humid Heat, Dry Heat" },
+    { "id": "ladder", "label": "4. The Warming Ladder" },
+    { "id": "duration", "label": "5. Hours, Not Moments" },
+    { "id": "protect", "label": "6. Staying Below the Line" },
+    { "id": "method", "label": "7. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "30.5 °C", "label": "Wet-bulb temperature at which young, healthy adults could no longer cool themselves in humid heat — 4.5 °C below the theoretical 35 °C" },
+    { "value": "11 of 161", "label": "Sites whose hottest hour in 2024 reached 30.5 °C, led by the Gulf coast, Dubai, Muscat and Kolkata" },
+    { "value": "9 m → 161 m", "label": "People in sampled cities whose hottest hour reaches 30.5 °C, today vs. current policies (≈ 2.8 °C)" },
+    { "value": "4.4 °C", "label": "Lowest warming level at which any site's reanalysis peak reaches the 35 °C ceiling" }
+  ]
+}
