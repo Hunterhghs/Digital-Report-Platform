@@ -1,0 +1,109 @@
+{
+  "number": "2026-52",
+  "title": "Demographic Growth Inside the Global Risk Envelope",
+  "subtitle": "Population expansion, settlement decisions, and exposure to compounding hazards",
+  "strapline": "Where the next billion city dwellers settle is decided street by street — and locked in for a century. This dashboard follows 11,422 urban centres from 1975 to 2030 to ask whether growth has leaned into floodplains, coasts, cyclone tracks, fault zones and heat, and how many people now live where hazards compound.",
+  "dek": "Since 1975 the world's urban centres have added 2.1 billion people, and growth has leaned into the floodplain: the urban population in 100-year river flood zones tripled to 507 million while cities as a whole grew 2.3 times, with one new resident in six settling in a flood zone. Six in ten new city dwellers settled in cities exposed to at least one major hazard, and 746 million now live where two or more compound. Most of the growth still to come is unbuilt — the cheapest moment for safer settlement decisions.",
+  "abstract": [
+    "This report follows population growth into the hazard envelope using the GHSL Urban Centre Database R2024A, which traces 11,422 urban centres from 1975 to 2030 and counts the residents living in undefended 100-year river and coastal flood zones, the low-elevation coastal zone, 100-year cyclone-wind zones and zones of strong earthquake shaking, alongside each city's mean temperature and the organised violence recorded within it. It measures whether growth leaned towards each hazard, how hazards compound in individual cities, and how exposed the cities born this century are.",
+    "Urban-centre population grew from 1.63 billion in 1975 to 3.69 billion in 2025 (3.85 billion projected for 2030). The population in river flood zones grew faster, from 170 to 507 million: 16.4% of urban growth settled in flood zones against a starting share of 10.5%, a growth bias of 1.56 — 1.8 in East and South-East Asia and 2.0 in upper-middle-income countries, but 0.77 in high-income ones. Growth was close to neutral towards low coasts (1.08) and leaned away from cyclone (0.79) and earthquake zones (0.75). The population of cities with a mean annual temperature of 27 °C or more tripled, to 413 million.",
+    "Hazards compound: 55% of urban residents live in cities flagged for at least one of six major hazards, up from 47% in 1975, and 20% — 746 million — in cities with two or more; 61% of the 2.06 billion people added since 1975 settled in cities inside the envelope. The 3,911 urban centres born since 2000 are slightly more exposed to river flooding and heat than older ones. Because most of the urban growth still to come is unbuilt and concentrated in South Asia and sub-Saharan Africa, risk-informed land-use planning, affordable safe land, hazard-adapted construction and municipal planning finance are among the cheapest and highest-return adaptation measures.",
+    "Interactive charts of the hazard envelope over time, growth bias by hazard, region and income group, hazard flags by income group, hazard counts and co-occurrence, new versus older cities and regional growth, tables of the most flood-exposed and multi-exposed cities, and a night atlas of 2,457 urban centres accompany the analysis."
+  ],
+  "jel": "R11, R14, Q54, J11, O18 — regional growth; land use and urban patterns; natural disasters and climate; demographic trends; urban development",
+  "method": "GHSL Urban Centre Database R2024A (European Commission JRC): 11,422 urban centres within 2025 boundaries; population by five-year epoch 1975–2030 (GHS-POP R2023A); population in undefended 100-year river flood zones (JRC/CEMS), 100-year coastal flood zones (Vousdoukas et al.), the low-elevation coastal zone below 10 m (CIESIN LECZ v3), 100-year cyclone-wind zones (STORM, categories 1–2) and MMI VIII+ shaking (GEM 2023.1); mean annual temperature (reanalysis 2010; SSP2-4.5 projection 2030); organised violence (battles, explosions, violence against civilians, 2015 and 2020). Growth bias = (Δ zone population ÷ Δ total population) ÷ starting zone share. City flags: river flood ≥ 10% of residents; coast ≥ 10% in coastal flood zone or ≥ 50% below 10 m; cyclone ≥ 50%; earthquake ≥ 50%; heat ≥ 27 °C; violence ≥ 10 events and ≥ 25 per million. New cities: year of birth ≥ 2000. Flood zones ignore defences; populations are counted within 2025 boundaries; 2030 is projected; the 2030 temperature source differs from the observed baseline.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Castoro&family=Raleway:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@400;600&display=swap",
+  "themeColor": "#0b1020",
+  "topics": [
+    "Climate Adaptation",
+    "Systemic Risk",
+    "Infrastructure",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "urbanisation",
+    "population growth",
+    "settlement patterns",
+    "flood exposure",
+    "coastal flooding",
+    "low-elevation coastal zone",
+    "tropical cyclones",
+    "earthquakes",
+    "urban heat",
+    "compound hazards",
+    "land-use planning",
+    "GHSL",
+    "Urban Centre Database",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "envelope",
+      "label": "1. The Envelope Over Time"
+    },
+    {
+      "id": "floodplain",
+      "label": "2. Into the Floodplain"
+    },
+    {
+      "id": "coasts",
+      "label": "3. Coasts, Storms and Faults"
+    },
+    {
+      "id": "heat",
+      "label": "4. The Heat Line"
+    },
+    {
+      "id": "compound",
+      "label": "5. Compounding"
+    },
+    {
+      "id": "newcities",
+      "label": "6. Cities Born Since 2000"
+    },
+    {
+      "id": "atlas",
+      "label": "7. The Night Atlas"
+    },
+    {
+      "id": "response",
+      "label": "8. Settlement Decisions"
+    },
+    {
+      "id": "method",
+      "label": "9. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "×3.0",
+      "label": "Urban population in river flood zones since 1975, vs ×2.3 overall"
+    },
+    {
+      "value": "1 in 6",
+      "label": "New urban residents who settled in a flood zone"
+    },
+    {
+      "value": "61%",
+      "label": "Share of urban growth inside the hazard envelope"
+    },
+    {
+      "value": "746 m",
+      "label": "City dwellers facing two or more major hazards"
+    }
+  ]
+}
