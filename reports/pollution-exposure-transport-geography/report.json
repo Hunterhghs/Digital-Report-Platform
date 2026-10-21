@@ -1,0 +1,62 @@
+{
+  "number": "2026-47",
+  "title": "The Geography of Human Pollution Exposure",
+  "subtitle": "Population density, atmospheric transport, and unequal environmental burdens",
+  "strapline": "Fine-particle pollution is not spread evenly over the planet: it piles up where people pile up, it drifts hundreds of kilometres on the wind, and it falls hardest on lower-middle-income countries. This dashboard samples the air above 8.19 billion people and around 149 large cities to separate what a city makes from what it breathes in, and to map who carries the burden.",
+  "dek": "Pollution and people concentrate in the same places: the average person breathes air 1.53 times dirtier than the average inhabited square kilometre. But most of a city's pollution is not its own — in the median city the background 165 km away is 79% as polluted as the centre, and the wind carries city smoke downwind. Exposure is most unequal by income: 41.7 µg/m³ for lower-middle-income countries, 3.2 times the high-income level — so clean air needs regional, not just urban, action.",
+  "abstract": [
+    "This report maps where people breathe fine particulate matter (PM2.5) and why. It combines the GHSL 2025 population grid with CAMS atmospheric composition forecasts sampled at 1,693 population-weighted points — one per 3-degree cell with more than 10,000 people, covering 8.19 billion people — and at the centre of 149 large cities and four points about 165 km around each, for four fortnights of 2024, together with hourly NASA POWER winds. Levels are calibrated to the satellite-based national annual means (SatPM 2024), with which the sample correlates at 0.76 across 138 countries.",
+    "Population density concentrates exposure. 48% of humanity lives at more than 1,000 people per square kilometre on 2.0% of inhabited land, and pollution rises with density: the population-weighted level is about 13 µg/m³ where residents live at fewer than 150 per km² and 39 µg/m³ in the densest cells. Averaged over people, global exposure is 29.7 µg/m³; averaged over inhabited land it is 19.5 — a co-location factor of 1.53. 98.5% of people live above the WHO guideline of 5 µg/m³ and 32% above 35.",
+    "Atmospheric transport means that most urban pollution is regional. In the median city the regional background about 165 km away is 79% as polluted as the centre (61% weighted by population), and it supplies more than half of centre-city PM2.5 in 87% of cities. City pollution follows the upwind background more closely than the downwind one in 96 of 149 cities, and the downwind point is the dirtier of the two in 94, the signature of cities exporting smoke. Larger cities add more local pollution and windier ones less.",
+    "The burden is unequal. Population-weighted exposure is 41.7 µg/m³ in lower-middle-income countries, 30.4 in low-income, 26.0 in upper-middle-income and 12.9 in high-income countries. In low-income cities almost all PM2.5 is regional background — dust, biomass burning and rural combustion — while in upper-middle-income cities local sources add the most. Policy has to match the geography: regional airshed agreements, clean household energy and dust management where background dominates; urban transport, industry and power controls where local increments are large."
+  ],
+  "jel": "Q53, Q56, R12, I14, F64 — air pollution; environment and development; size and spatial distribution of activity; health and inequality; transboundary environment",
+  "method": "Population: GHSL GHS-POP R2023A 2025 epoch at 30 arc-seconds, read from the published overview at about 7 km (totals verified at 8.19 billion). Sample points: the population-weighted centre of every 3-degree cell with more than 10,000 people. PM2.5 and dust: CAMS global atmospheric composition forecasts via the Open-Meteo air-quality API, hourly means for 8–21 January and 8–21 July 2024 at the sample points, and for four fortnights (January, April, July, October 2024) at 149 city centres and four ring points about 165 km north, east, south and west. Calibration: each country's sample is scaled to its population-weighted SatPM 2024 annual mean (Our World in Data), preserving within-country patterns. Wind: NASA POWER (MERRA-2) hourly 10-metre wind. Regional share = ring mean ÷ centre; upwind/downwind = ring point the wind blows from/towards each hour. Resident density = population-weighted density of the ~7 km pixels in each cell. Dust is CAMS desert dust of all particle sizes. Limitations: two fortnights for the grid and four for cities rather than full years; CAMS resolution (~40 km) blurs city cores; ring points can fall over sea or other cities.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 17,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;700&family=Host+Grotesk:wght@400;500;600&family=Iosevka+Charon+Mono:wght@400;700&display=swap",
+  "themeColor": "#121823",
+  "topics": [
+    "Public Health",
+    "Environment & Biodiversity",
+    "Inequality",
+    "Urbanisation"
+  ],
+  "keywords": [
+    "air pollution",
+    "PM2.5",
+    "exposure",
+    "population density",
+    "atmospheric transport",
+    "regional background",
+    "urban increment",
+    "transboundary pollution",
+    "desert dust",
+    "environmental inequality",
+    "GHSL",
+    "CAMS",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "density", "label": "1. Where People Crowd" },
+    { "id": "colocation", "label": "2. Pollution Follows People" },
+    { "id": "transport", "label": "3. Air Has No Borders" },
+    { "id": "wind", "label": "4. Upwind, Downwind" },
+    { "id": "unequal", "label": "5. Unequal Burdens" },
+    { "id": "atlas", "label": "6. Exposure Atlas" },
+    { "id": "action", "label": "7. Matching Action to Geography" },
+    { "id": "method", "label": "8. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "×1.53", "label": "How much dirtier the air of the average person is than that of the average inhabited square kilometre" },
+    { "value": "79%", "label": "Regional background as a share of centre-city PM2.5 in the median of 149 large cities" },
+    { "value": "41.7 vs 12.9", "label": "Population-weighted PM2.5 (µg/m³), lower-middle-income vs high-income countries" },
+    { "value": "98.5%", "label": "Share of people living above the WHO annual guideline of 5 µg/m³" }
+  ]
+}
