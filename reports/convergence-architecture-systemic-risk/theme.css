@@ -1,0 +1,311 @@
+/* ===========================================================================
+   Theme — Report 2026-45, "The Architecture of Global Convergence Under
+   Systemic Risk"
+
+   Aesthetic: blueprint. The masthead is a structural drawing on cyanotype
+   blue: a truss with one bay for each of 13 development levers and one storey
+   for each of seven crisis domains, cross-braced in amber wherever the data
+   show a significant co-benefit and dashed in coral where they show a
+   trade-off; heavier columns mark levers linked to income convergence (inline
+   SVG data URI). Below it the page is drafting vellum with a faint grid.
+   Converging-and-reducing pathways are teal, growth-only amber, resilience-
+   only steel blue and neither coral; every h2 opens with a small braced-bay
+   glyph. Josefin Sans for display, Overpass for prose, Libertinus Mono for
+   figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours,
+   and charts.js reads the --p, --h and --q tokens so no hex lives in the script.
+   =========================================================================== */
+
+:root {
+  --bg: #f3f4ef;
+  --bg-card: #fbfbf8;
+  --bg-accent: #e4e8e3;
+  --bg-dark: #0f2f57;
+  --bg-dark-2: #0a2242;
+
+  --text: #12233d;
+  --text-secondary: #33445e;
+  --text-muted: #687790;
+  --text-inverse: #eef3fa;
+
+  --primary: #0f3b6e;
+  --primary-light: #2f6fa8;
+  --accent: #d98a1f;
+  --accent-light: #ffd27a;
+
+  --border: #d3d9d3;
+  --border-light: #e6eae4;
+  --rule: #b9c3bd;
+
+  /* pathways */
+  --q-both: #1f7a6d;
+  --q-grow: #d99a2b;
+  --q-res: #4a7fb5;
+  --q-none: #c8553d;
+  --q-muted: #c3cac4;
+  /* heat: trade-off to co-benefit */
+  --h-neg: #c8553d;
+  --h-0: #f3f4ef;
+  --h-pos: #1f7a6d;
+  /* crisis families */
+  --p-dep: #2f6fa8;
+  --p-sys: #8a3f7a;
+  --p-amber: #d98a1f;
+
+  --chart-blue: #2b6cb0;
+  --chart-blue-light: #9cc7e6;
+  --chart-gold: #e0a020;
+  --chart-red: #e2574c;
+  --chart-teal: #1fb58f;
+  --chart-gray: #8a91ab;
+  --chart-orange: #f0883a;
+  --chart-purple: #7b5ce0;
+
+  --serif: "Josefin Sans", "Futura", system-ui, sans-serif;
+  --sans: "Overpass", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Libertinus Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --truss: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='330' viewBox='0 0 900 330'%3E%3Cline x1='0' y1='0' x2='0' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='15' y1='0' x2='15' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='30' y1='0' x2='30' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='45' y1='0' x2='45' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='60' y1='0' x2='60' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='75' y1='0' x2='75' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='90' y1='0' x2='90' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='105' y1='0' x2='105' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='120' y1='0' x2='120' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='135' y1='0' x2='135' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='150' y1='0' x2='150' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='165' y1='0' x2='165' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='180' y1='0' x2='180' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='195' y1='0' x2='195' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='210' y1='0' x2='210' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='225' y1='0' x2='225' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='240' y1='0' x2='240' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='255' y1='0' x2='255' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='270' y1='0' x2='270' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='285' y1='0' x2='285' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='300' y1='0' x2='300' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='315' y1='0' x2='315' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='330' y1='0' x2='330' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='345' y1='0' x2='345' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='360' y1='0' x2='360' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='375' y1='0' x2='375' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='390' y1='0' x2='390' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='405' y1='0' x2='405' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='420' y1='0' x2='420' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='435' y1='0' x2='435' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='450' y1='0' x2='450' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='465' y1='0' x2='465' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='480' y1='0' x2='480' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='495' y1='0' x2='495' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='510' y1='0' x2='510' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='525' y1='0' x2='525' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='540' y1='0' x2='540' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='555' y1='0' x2='555' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='570' y1='0' x2='570' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='585' y1='0' x2='585' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='600' y1='0' x2='600' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='615' y1='0' x2='615' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='630' y1='0' x2='630' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='645' y1='0' x2='645' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='660' y1='0' x2='660' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='675' y1='0' x2='675' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='690' y1='0' x2='690' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='705' y1='0' x2='705' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='720' y1='0' x2='720' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='735' y1='0' x2='735' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='750' y1='0' x2='750' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='765' y1='0' x2='765' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='780' y1='0' x2='780' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='795' y1='0' x2='795' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='810' y1='0' x2='810' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='825' y1='0' x2='825' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='840' y1='0' x2='840' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='855' y1='0' x2='855' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='870' y1='0' x2='870' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='885' y1='0' x2='885' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='900' y1='0' x2='900' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='0' x2='900' y2='0' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='15' x2='900' y2='15' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='30' x2='900' y2='30' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='45' x2='900' y2='45' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='60' x2='900' y2='60' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='75' x2='900' y2='75' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='90' x2='900' y2='90' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='105' x2='900' y2='105' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='120' x2='900' y2='120' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='135' x2='900' y2='135' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='150' x2='900' y2='150' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='165' x2='900' y2='165' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='180' x2='900' y2='180' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='195' x2='900' y2='195' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='210' x2='900' y2='210' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='225' x2='900' y2='225' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='240' x2='900' y2='240' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='255' x2='900' y2='255' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='270' x2='900' y2='270' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='285' x2='900' y2='285' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='300' x2='900' y2='300' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='315' x2='900' y2='315' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='0' y1='330' x2='900' y2='330' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3Cline x1='300.0' y1='26.0' x2='300.0' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='302.0' y1='63.1' x2='342.6' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='302.0' y1='28.0' x2='342.6' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='302.0' y1='102.3' x2='342.6' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='302.0' y1='67.1' x2='342.6' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='302.0' y1='258.9' x2='342.6' y2='223.7' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='302.0' y1='223.7' x2='342.6' y2='258.9' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='302.0' y1='298.0' x2='342.6' y2='262.9' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='302.0' y1='262.9' x2='342.6' y2='298.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='344.6' y1='26.0' x2='344.6' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='346.6' y1='63.1' x2='387.2' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='346.6' y1='28.0' x2='387.2' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='346.6' y1='102.3' x2='387.2' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='346.6' y1='67.1' x2='387.2' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='346.6' y1='258.9' x2='387.2' y2='223.7' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='346.6' y1='223.7' x2='387.2' y2='258.9' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='389.2' y1='26.0' x2='389.2' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='391.2' y1='63.1' x2='431.8' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='391.2' y1='28.0' x2='431.8' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='391.2' y1='102.3' x2='431.8' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='391.2' y1='67.1' x2='431.8' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='391.2' y1='258.9' x2='431.8' y2='223.7' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='391.2' y1='223.7' x2='431.8' y2='258.9' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='433.8' y1='26.0' x2='433.8' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='435.8' y1='63.1' x2='476.5' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='435.8' y1='28.0' x2='476.5' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='435.8' y1='102.3' x2='476.5' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='435.8' y1='67.1' x2='476.5' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='435.8' y1='298.0' x2='476.5' y2='262.9' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='435.8' y1='262.9' x2='476.5' y2='298.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='478.5' y1='26.0' x2='478.5' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='480.5' y1='63.1' x2='521.1' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='480.5' y1='28.0' x2='521.1' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='480.5' y1='102.3' x2='521.1' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='480.5' y1='67.1' x2='521.1' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='523.1' y1='26.0' x2='523.1' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='525.1' y1='63.1' x2='565.7' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='525.1' y1='28.0' x2='565.7' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='525.1' y1='102.3' x2='565.7' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='525.1' y1='67.1' x2='565.7' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='567.7' y1='26.0' x2='567.7' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='569.7' y1='63.1' x2='610.3' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='569.7' y1='28.0' x2='610.3' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='569.7' y1='102.3' x2='610.3' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='569.7' y1='67.1' x2='610.3' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='612.3' y1='26.0' x2='612.3' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='614.3' y1='63.1' x2='654.9' y2='28.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='614.3' y1='28.0' x2='654.9' y2='63.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='614.3' y1='102.3' x2='654.9' y2='67.1' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='614.3' y1='67.1' x2='654.9' y2='102.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='656.9' y1='26.0' x2='656.9' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='658.9' y1='141.4' x2='699.5' y2='106.3' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='658.9' y1='106.3' x2='699.5' y2='141.4' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='701.5' y1='26.0' x2='701.5' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='703.5' y1='298.0' x2='744.2' y2='262.9' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='703.5' y1='262.9' x2='744.2' y2='298.0' stroke='%23ffe08a' stroke-width='1.6'/%3E%3Cline x1='746.2' y1='26.0' x2='746.2' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='748.2' y1='63.1' x2='788.8' y2='28.0' stroke='%23ff8a7a' stroke-width='1.4' stroke-dasharray='3 3'/%3E%3Cline x1='748.2' y1='102.3' x2='788.8' y2='67.1' stroke='%23ff8a7a' stroke-width='1.4' stroke-dasharray='3 3'/%3E%3Cline x1='790.8' y1='26.0' x2='790.8' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='2.2'/%3E%3Cline x1='835.4' y1='26.0' x2='835.4' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='880.0' y1='26.0' x2='880.0' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75'/%3E%3Cline x1='300.0' y1='26.0' x2='880.0' y2='26.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='300.0' y1='65.1' x2='880.0' y2='65.1' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='300.0' y1='104.3' x2='880.0' y2='104.3' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='300.0' y1='143.4' x2='880.0' y2='143.4' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='300.0' y1='182.6' x2='880.0' y2='182.6' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='300.0' y1='221.7' x2='880.0' y2='221.7' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='300.0' y1='260.9' x2='880.0' y2='260.9' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='1.0'/%3E%3Cline x1='300.0' y1='300.0' x2='880.0' y2='300.0' stroke='%23ffffff' stroke-opacity='0.75' stroke-width='3.0'/%3E%3Crect x='290.0' y='303.0' width='600.0' height='12' fill='none' stroke='%23ffffff' stroke-opacity='0.7'/%3E%3Cline x1='290.0' y1='315.0' x2='300.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='300.0' y1='315.0' x2='310.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='310.0' y1='315.0' x2='320.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='320.0' y1='315.0' x2='330.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='330.0' y1='315.0' x2='340.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='340.0' y1='315.0' x2='350.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='350.0' y1='315.0' x2='360.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='360.0' y1='315.0' x2='370.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='370.0' y1='315.0' x2='380.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='380.0' y1='315.0' x2='390.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='390.0' y1='315.0' x2='400.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='400.0' y1='315.0' x2='410.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='410.0' y1='315.0' x2='420.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='420.0' y1='315.0' x2='430.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='430.0' y1='315.0' x2='440.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='440.0' y1='315.0' x2='450.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='450.0' y1='315.0' x2='460.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='460.0' y1='315.0' x2='470.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='470.0' y1='315.0' x2='480.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='480.0' y1='315.0' x2='490.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='490.0' y1='315.0' x2='500.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='500.0' y1='315.0' x2='510.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='510.0' y1='315.0' x2='520.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='520.0' y1='315.0' x2='530.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='530.0' y1='315.0' x2='540.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='540.0' y1='315.0' x2='550.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='550.0' y1='315.0' x2='560.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='560.0' y1='315.0' x2='570.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='570.0' y1='315.0' x2='580.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='580.0' y1='315.0' x2='590.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='590.0' y1='315.0' x2='600.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='600.0' y1='315.0' x2='610.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='610.0' y1='315.0' x2='620.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='620.0' y1='315.0' x2='630.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='630.0' y1='315.0' x2='640.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='640.0' y1='315.0' x2='650.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='650.0' y1='315.0' x2='660.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='660.0' y1='315.0' x2='670.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='670.0' y1='315.0' x2='680.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='680.0' y1='315.0' x2='690.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='690.0' y1='315.0' x2='700.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='700.0' y1='315.0' x2='710.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='710.0' y1='315.0' x2='720.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='720.0' y1='315.0' x2='730.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='730.0' y1='315.0' x2='740.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='740.0' y1='315.0' x2='750.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='750.0' y1='315.0' x2='760.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='760.0' y1='315.0' x2='770.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='770.0' y1='315.0' x2='780.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='780.0' y1='315.0' x2='790.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='790.0' y1='315.0' x2='800.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='800.0' y1='315.0' x2='810.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='810.0' y1='315.0' x2='820.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='820.0' y1='315.0' x2='830.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='830.0' y1='315.0' x2='840.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='840.0' y1='315.0' x2='850.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='850.0' y1='315.0' x2='860.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='860.0' y1='315.0' x2='870.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='870.0' y1='315.0' x2='880.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3Cline x1='880.0' y1='315.0' x2='890.0' y2='303.0' stroke='%23ffffff' stroke-opacity='0.4'/%3E%3C/svg%3E");
+  --ramp: linear-gradient(90deg, var(--q-none), var(--q-grow), var(--q-res), var(--q-both));
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1rem; line-height: 1.66; background-image: linear-gradient(rgba(15, 59, 110, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 59, 110, 0.045) 1px, transparent 1px); background-size: 24px 24px; }
+
+::selection { background: rgba(217, 138, 31, 0.2); }
+:where(a, button, [tabindex], input, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a { color: var(--primary-light); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--ramp); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: the signal bars -------------------------------------------------- */
+
+.masthead {
+  position: relative;
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.3rem var(--gutter) 4.2rem;
+  background:
+    linear-gradient(90deg, rgba(10, 34, 66, 0.97) 0 40%, rgba(10, 34, 66, 0.72) 58%, rgba(10, 34, 66, 0.1) 88%),
+    var(--truss) right center / 900px auto no-repeat,
+    radial-gradient(ellipse at 70% 30%, #1d528f, transparent 65%),
+    linear-gradient(180deg, #134276, #0a2242);
+}
+.masthead::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--ramp); }
+.masthead .overline { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; color: var(--accent-light); margin-bottom: 1rem; }
+.masthead .overline::before { content: "SECTION A–A · LEVERS × CRISES · "; color: #fff; }
+.masthead h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.1rem, 4.8vw, 3.5rem); line-height: 1.06; letter-spacing: -0.005em; max-width: 22ch; color: #fff; }
+.masthead .subtitle { font-family: var(--sans); font-weight: 500; font-size: 1.2rem; color: #cfe0f2; max-width: 56ch; }
+.masthead .strapline { font-family: var(--sans); font-style: normal; font-size: 1.02rem; color: #eaf2fb; border-left: 4px solid var(--accent-light); max-width: 64ch; background: rgba(10, 34, 66, 0.74); }
+.masthead .meta-row { border-top: 1px solid rgba(255, 255, 255, 0.16); color: #b3c6dd; font-family: var(--mono); font-size: 0.78rem; position: relative; }
+.masthead .meta-row strong { color: var(--accent-light); font-family: var(--mono); font-weight: 700; font-size: 0.66rem; letter-spacing: 0.1em; }
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(243, 244, 239, 0.96); border-bottom: 1px solid var(--border); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.76rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- headings with a signal glyph ------------------------------------------------ */
+
+section > h2 {
+  position: relative;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.8vw, 2.4rem);
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+  color: var(--primary);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 0 0.55rem 1.9rem;
+}
+section > h2::before {
+  content: "";
+  position: absolute; left: 0.1rem; top: 0.28em;
+  width: 1.1rem; height: 0.95rem;
+  border: 1.5px solid var(--primary);
+  background:
+    linear-gradient(to top right, transparent calc(50% - 1px), var(--accent) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to bottom right, transparent calc(50% - 1px), var(--accent) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px));
+}
+.abstract h2, .endmatter h2 { padding-left: 0; border-bottom: 0; font-family: var(--mono); font-size: 0.86rem; }
+.abstract h2::before, .endmatter h2::before { content: none; }
+section > .section-dek { font-family: var(--sans); font-style: normal; font-weight: 500; color: var(--text-muted); font-size: 1.15rem; line-height: 1.45; max-width: none; }
+
+.section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
+
+/* --- abstract, endmatter ------------------------------------------------------------- */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-top: 6px solid transparent; border-image: var(--ramp) 1; border-radius: 0; }
+.abstract h2 { color: var(--primary); letter-spacing: 0.12em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.72rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.72rem; }
+
+/* --- KPI board ------------------------------------------------------------------------- */
+
+.kpi-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1.6rem 0; }
+.kpi { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 1.15rem 1.05rem 0.85rem; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.kpi::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--k, var(--accent)); }
+.kpi { border-style: dashed solid solid; }
+.kpi--both { --k: var(--q-both); }
+.kpi--grow { --k: var(--q-grow); }
+.kpi--res { --k: var(--q-res); }
+.kpi--none { --k: var(--q-none); }
+.kpi--sys { --k: var(--p-sys); }
+.kpi-value { font-family: var(--serif); font-weight: 800; font-size: clamp(1.8rem, 3.2vw, 2.35rem); letter-spacing: -0.02em; line-height: 1; color: var(--text); font-variant-numeric: lining-nums tabular-nums; }
+.kpi-label { font-size: 0.86rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.45rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; margin-bottom: 0.3rem; }
+
+/* --- readout ----------------------------------------------------------------------------- */
+
+.readout { background: var(--bg-dark); border-radius: 2px; padding: 1.15rem 1.4rem 0.45rem; margin: 1.6rem 0; position: relative; overflow: hidden; border-top: 6px solid transparent; border-image: var(--ramp) 1; }
+.readout-title { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 0.4rem !important; }
+.readout p { color: #d6e3f2; text-align: justify; hyphens: auto; -webkit-hyphens: auto; position: relative; }
+.readout strong { color: #fff; }
+
+/* --- panels ------------------------------------------------------------------------------ */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 1.05rem 1.15rem 0.95rem; min-width: 0; }
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.15rem 1.25rem 1.05rem; border-top: 5px solid transparent; border-image: var(--ramp) 1; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-title { font-family: var(--serif); font-weight: 800; letter-spacing: -0.01em; font-size: 1.18rem; line-height: 1.2; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin: 0.25rem 0 0.4rem !important; }
+.panel-note { font-size: 0.85rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 310px; }
+.panel .chart-frame--tall { height: 440px; }
+.panel .chart-frame--short { height: 240px; }
+
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 0.85rem 1rem; border-left: 6px solid var(--k, var(--accent)); min-width: 0; }
+.stat-tile--hf { --k: var(--q-hf); }
+.stat-tile--hc { --k: var(--q-hc); }
+.stat-tile--lf { --k: var(--q-lf); }
+.stat-tile--lc { --k: var(--q-lc); }
+.stat-tile--both { --k: var(--q-both); }
+.stat-tile--grow { --k: var(--q-grow); }
+.stat-tile--res { --k: var(--q-res); }
+.stat-tile--none { --k: var(--q-none); }
+.stat-tile-value { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; font-size: 1.6rem; line-height: 1.05; color: var(--text); margin: 0 !important; font-variant-numeric: lining-nums tabular-nums; }
+.stat-tile-label { font-size: 0.82rem; color: var(--text-muted); margin: 0.2rem 0 0 !important; text-align: left !important; line-height: 1.4; }
+.tile-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1rem 0; }
+
+/* --- controls ------------------------------------------------------------------------------ */
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px 22px; margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+.slider { display: grid; gap: 3px; }
+.slider-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider label, .seg-wrap .seg-label { font-family: var(--sans); font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.slider output { font-family: var(--mono); font-weight: 700; font-size: 0.84rem; color: var(--accent); white-space: nowrap; }
+.slider .hint { font-size: 0.78rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); margin: 2px 0; }
+.seg-wrap { display: grid; gap: 5px; }
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; background: var(--bg-card); width: fit-content; max-width: 100%; }
+.segmented button { font: inherit; font-family: var(--mono); font-size: 0.76rem; padding: 0.38rem 0.66rem; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--primary); color: #fff; }
+.calc-note { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin: 0.6rem 0 0 !important; line-height: 1.5; }
+select.pick { font: inherit; font-family: var(--sans); font-size: 0.92rem; padding: 0.35rem 0.5rem; border: 1px solid var(--rule); border-radius: 2px; background: var(--bg-card); color: var(--text); max-width: 100%; }
+
+/* --- atlas and country card ------------------------------------------------------------------- */
+
+.atlas-layout { display: grid; grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.atlas-wrap { position: relative; border-radius: 2px; overflow: hidden; background: #e9ece6; border: 1px solid var(--border); }
+.atlas { display: block; width: 100%; height: auto; }
+.atlas .atlas-sea { fill: #e9ece6; }
+.atlas .atlas-land path { fill: #d2d8d2; stroke: #fff; stroke-width: 0.45; stroke-linejoin: round; transition: fill 0.25s; }
+.atlas .atlas-dots circle { fill: #d2d8d2; stroke: var(--text); stroke-width: 0.5; }
+.atlas [data-iso].is-in { cursor: pointer; }
+.atlas [data-iso].is-in:hover { stroke: var(--text); stroke-width: 1.3; }
+.atlas [data-iso].is-pick { stroke: var(--text); stroke-width: 2.2; }
+.atlas-corner { position: absolute; left: 10px; bottom: 8px; font-family: var(--mono); font-size: 0.62rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.85); padding: 1px 6px; border-radius: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0.6rem 0 0; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.72rem; color: var(--text-secondary); }
+.legend i { width: 14px; height: 10px; border-radius: 1px; flex: none; }
+.country-card { border: 1px solid var(--border); border-radius: 2px; background: var(--bg); padding: 0.85rem 0.95rem; min-height: 300px; border-top: 6px solid var(--cc, var(--rule)); }
+.country-card .cc-kicker { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 !important; }
+.country-card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.45rem; color: var(--primary); margin: 0.05rem 0 0.15rem; line-height: 1.1; }
+.country-card .cc-class { font-family: var(--mono); font-size: 0.72rem; margin: 0 0 0.55rem !important; color: var(--text-secondary); text-align: left !important; }
+.kv { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; font-size: 0.86rem; margin: 0; }
+.kv dt { color: var(--text-secondary); }
+.kv dd { margin: 0; font-family: var(--mono); font-size: 0.8rem; color: var(--text); text-align: right; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin: 0.5rem 0 0; }
+.tag-row span { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.04em; padding: 2px 6px; border-radius: 2px; background: var(--bg-accent); color: var(--text-secondary); }
+.tag-row span.on { background: var(--q-both); color: #fff; }
+
+/* --- breaker cards -------------------------------------------------------------- */
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 1.2rem 0; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 0.95rem 1rem; border-top: 5px solid var(--k, var(--primary-light)); }
+.card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.15rem; line-height: 1.2; color: var(--primary); margin: 0 0 0.35rem; }
+.card p { font-size: 0.88rem; line-height: 1.5; color: var(--text-secondary); margin: 0 !important; text-align: left !important; }
+.card .tag { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.25rem !important; }
+.card--a { --k: var(--q-both); }
+.card--b { --k: var(--q-grow); }
+.card--c { --k: var(--q-res); }
+.card--d { --k: var(--p-sys); }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--primary-light); font-size: 0.7rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 6px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--ramp); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; font-size: 1.45rem; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board, .tile-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .atlas-layout { grid-template-columns: minmax(0, 1fr); }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .dash-grid, .cards { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2.2rem; background: linear-gradient(180deg, rgba(10, 34, 66, 0.94) 0 62%, rgba(10, 34, 66, 0.72)), var(--truss) 70% 100% / 640px auto no-repeat, linear-gradient(180deg, #134276, #0a2242); }
+  .segmented button { padding: 0.34rem 0.5rem; font-size: 0.7rem; }
+}
+@media (max-width: 420px) {
+  .kpi-board, .tile-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .controls { display: none; }
+  .masthead, .readout, .report-footer::before, .atlas-wrap, .strip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* --- quadrant tiles ---------------------------------------------------------------- */
+
+.q-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0.9rem 0; }
+.q-tile { border: 1px solid var(--border); border-left: 6px solid var(--k); background: var(--bg-card); border-radius: 2px; padding: 0.6rem 0.75rem; }
+.q-tile b { font-family: var(--serif); font-size: 1.5rem; display: block; line-height: 1.05; color: var(--text); }
+.q-tile span { font-size: 0.78rem; color: var(--text-muted); display: block; line-height: 1.35; }
+.marg { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0.6rem 0 0.9rem; }
+@media (max-width: 680px) { .q-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .marg { grid-template-columns: minmax(0, 1fr); } }
+
+/* --- lever x crisis heatmap ---------------------------------------------------------- */
+
+.hm-wrap { overflow-x: auto; }
+table.hm { border-collapse: separate; border-spacing: 2px; width: 100%; min-width: 640px; font-size: 0.82rem; }
+table.hm th { font-family: var(--mono); font-weight: 400; font-size: 0.66rem; color: var(--text-muted); text-align: center; padding: 4px 2px; line-height: 1.2; vertical-align: bottom; }
+table.hm th.fam-dep { border-bottom: 3px solid var(--p-dep); }
+table.hm th.fam-sys { border-bottom: 3px solid var(--p-sys); }
+table.hm th.fam-conv { border-bottom: 3px solid var(--accent); }
+table.hm td.lab { font-family: var(--sans); font-weight: 600; font-size: 0.82rem; color: var(--text); white-space: nowrap; padding-right: 8px; cursor: pointer; }
+table.hm td.lab:hover, table.hm tr.is-pick td.lab { color: var(--accent); }
+table.hm td.c { text-align: center; font-family: var(--mono); font-size: 0.74rem; height: 30px; border-radius: 2px; color: var(--text); min-width: 52px; }
+table.hm td.c.sig { font-weight: 700; box-shadow: inset 0 0 0 1.5px var(--text); }
+table.hm td.n { font-family: var(--mono); font-size: 0.74rem; text-align: center; color: var(--text-secondary); }
+.dom-bars { display: grid; gap: 3px; margin: 0.6rem 0 0; }
+.dom-bar { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 8px; align-items: center; font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); }
+.dom-bar b { position: relative; display: block; height: 10px; background: var(--bg-accent); border-radius: 2px; }
+.dom-bar b::after { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--text-muted); }
+.dom-bar b i { position: absolute; top: 0; bottom: 0; border-radius: 2px; }

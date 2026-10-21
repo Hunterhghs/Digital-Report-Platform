@@ -1,0 +1,104 @@
+{
+  "number": "2026-45",
+  "title": "The Architecture of Global Convergence Under Systemic Risk",
+  "subtitle": "Building development pathways that reduce multiple crises simultaneously",
+  "strapline": "Two decades of development cut hunger, child deaths, pollution and emissions intensity across most of the developing world — but debt, inflation and conflict did not follow, and convergence with rich economies has stalled. This dashboard tests 13 development levers against seven crisis domains in 102 economies to find which ones reduce several crises at once, which merely ride on growth, and which floors of the architecture are still missing.",
+  "dek": "Development has been dismantling the slow crises: since the early 2000s child deaths fell in 98% of developing economies, emissions intensity in 88% and hunger in 76%. The fast systemic crises did not follow: debt service improved in only 31%, conflict in 39% and inflation in 46%, and income growth explains none of them. Beyond growth itself, only government effectiveness and clean water predict broad crisis reduction — and with convergence now stalled at 49% of economies, the missing floors are institutional.",
+  "abstract": [
+    "This report asks which development pathways reduce several crises at once while restoring income convergence. For 102 low- and middle-income economies it measures the change between 2000–04 and 2019–23 in seven crisis domains — hunger, child mortality, air pollution and greenhouse-gas intensity (crises of deprivation) and external debt service, inflation and conflict deaths (systemic crises) — and in 13 development levers, from electricity, clean cooking, water and schooling to investment, tax revenue, women's work, cereal yields and government effectiveness, using World Bank, FAO, UCDP and EDGAR-based data.",
+    "Convergence has weakened: the share of developing economies growing faster per person than high-income economies rose from 62% in 2000–05 to 82% in 2005–10, then fell to 49% in 2019–24, and the median developing economy's income per person has been stuck at about 15–16% of the high-income average since 2010. Over the full period, 46 economies with two-thirds of the developing world's population both converged and reduced crises; 26 fell behind on both, concentrated in conflict-affected and commodity-dependent states.",
+    "Crises of deprivation receded almost everywhere and largely with income growth, which predicts improvements in hunger, child mortality, emissions intensity and air quality. Systemic crises did not: debt service fell in only 31% of economies, inflation in 46% and conflict deaths in 39%, and income growth explains none of these changes. Most levers — energy access, sanitation, internet use, investment — are associated with broad crisis reduction mainly through the growth they travel with. Beyond growth, only government effectiveness and access to drinking water predict broad multi-crisis reduction; government effectiveness has the strongest link to fewer conflict deaths (women's labour participation is the other) and is the strongest correlate of convergence, while gains in schooling and water go with lower debt service.",
+    "The architecture that follows has three floors: a foundation of state capacity, a ground floor of growth-linked services and productivity that dissolves deprivation, and an upper floor of fiscal, monetary and security buffers against systemic shocks that standard development levers do not build — and that depends on a functioning international architecture for debt, liquidity and conflict prevention. A lever-by-crisis matrix, lever profiles, a breadth ranking, a pathway scatter and atlas, and an architecture diagram accompany the analysis."
+  ],
+  "jel": "O11, O43, F63, H63, Q56 — macroeconomic analyses of development; institutions and growth; economic development; debt; environment and development",
+  "method": "Sample: 102 low- and middle-income economies (World Bank classification) with at least 1 million people. Long differences between five-year averages for 2000–04 and 2019–23. Crisis domains (sign reversed so that positive = improvement): prevalence of undernourishment (from 2001), log under-five mortality, PM2.5 exposure, external debt service as % of exports, log(1 + inflation), log greenhouse-gas emissions per dollar of PPP GDP, and log(1 + deaths from organised violence per 100,000, UCDP GED 26.1). Levers: change in electricity access, clean cooking access, renewable share of final energy, lower-secondary completion, health spending, basic drinking water, basic sanitation, internet use, investment, tax revenue, women's labour-force participation, WGI government effectiveness (from 1996–2004) and log cereal yield. Each lever–domain pair is estimated by OLS with robust standard errors, controlling for initial log GDP per person (PPP), the initial crisis level and the initial lever level; a second specification also holds annual GDP-per-person growth constant. Coefficients are standardised (SD of outcome change per SD of lever change). Convergence = annual GDP-per-person growth minus that of the high-income aggregate. The multi-crisis index is the mean of the seven standardised improvements (at least five observed). Results are cross-country associations, not causal effects; many pairs are tested, so isolated significant cells should be read cautiously.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&family=Overpass:wght@400;500;600&family=Libertinus+Mono&display=swap",
+  "themeColor": "#0f3b6e",
+  "topics": [
+    "Emerging Markets",
+    "Systemic Risk",
+    "Institutions & Governance",
+    "Development Finance"
+  ],
+  "keywords": [
+    "convergence",
+    "systemic risk",
+    "polycrisis",
+    "development pathways",
+    "co-benefits",
+    "state capacity",
+    "debt",
+    "conflict",
+    "hunger",
+    "child mortality",
+    "air pollution",
+    "emissions intensity",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "stall",
+      "label": "1. Convergence Stalls"
+    },
+    {
+      "id": "two",
+      "label": "2. Two Kinds of Crisis"
+    },
+    {
+      "id": "matrix",
+      "label": "3. The Lever Matrix"
+    },
+    {
+      "id": "breadth",
+      "label": "4. Breadth Beyond Growth"
+    },
+    {
+      "id": "pathways",
+      "label": "5. Four Pathways"
+    },
+    {
+      "id": "atlas",
+      "label": "6. Pathway Atlas"
+    },
+    {
+      "id": "architecture",
+      "label": "7. The Architecture"
+    },
+    {
+      "id": "method",
+      "label": "8. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "82% → 49%",
+      "label": "Share of developing economies outgrowing high-income economies per person, 2005–10 vs 2019–24"
+    },
+    {
+      "value": "98% vs 31%",
+      "label": "Economies where child deaths fell vs where debt service fell, early 2000s to early 2020s"
+    },
+    {
+      "value": "46",
+      "label": "Economies — two-thirds of developing-world people — that both converged and reduced crises since 2000–04"
+    },
+    {
+      "value": "2 levers",
+      "label": "Government effectiveness and drinking water: the only levers that predict broad crisis reduction beyond the growth they travel with"
+    }
+  ]
+}
