@@ -1,0 +1,114 @@
+{
+  "number": "2026-51",
+  "title": "The Global Water Polycrisis",
+  "subtitle": "Interacting risks across water, food, energy, health, and development",
+  "strapline": "Water couples the systems development runs on — farms, power grids, health and the climate — so a water shock becomes several at once. This dashboard scores 160 countries on six interacting exposures, finds that the water polycrisis is really two crises with different roots, and maps where they stack.",
+  "dek": "The water polycrisis has two faces. In 35 countries with 4.1 billion people, from Egypt to India and China, water is physically scarce: withdrawals exceed 40% of supply, agriculture takes three-quarters and aquifers are falling. In 47 countries with 1.6 billion people, mostly in Africa, water is plentiful but nearly a third of people lack basic water, unsafe water kills at six times the rate of well-served countries and grids hang on hydropower. They meet in Sudan, Afghanistan and Yemen — and each needs a different fix.",
+  "abstract": [
+    "This report maps how water couples food, energy, health, climate and development across 160 countries with at least 1 million people. It scores each country on six exposures — water stress (SDG 6.4.2), food (undernourishment and agricultural employment), energy (hydropower dependence), health (deaths from unsafe water, sanitation and hygiene and lack of basic water), projected hydroclimatic change (population-weighted CMIP6 drying and downpour intensification by 2040–2059) and capacity (income) — and asks where they stack and how they relate.",
+    "The exposures do not stack evenly. Water stress is negatively correlated with the food, health and capacity exposures and with hydropower dependence, but positively with projected drying. The water polycrisis is therefore two crises: physical scarcity in 35 countries with 4.1 billion people, where withdrawals exceed 40% of renewable supply (83% on average) and agriculture takes 77% of them, but only 4% lack basic water; and economic scarcity in 47 countries with 1.6 billion people, where stress averages 14% but 29% lack basic water, only 27% have safely managed water and unsafe-WASH deaths run at 42 per 100,000. They coincide in six fragile states — Sudan and Afghanistan rank in the top third on all six exposures.",
+    "The pressures are intensifying. Reaching universal safely managed drinking water by 2030 would take 6.3 times the 2015–2024 pace globally and 16.5 times in sub-Saharan Africa; groundwater is falling fast in 36% of monitored aquifer systems; 18 countries with 0.45 billion people are projected to live mostly in chronic drying by mid-century; and 18 of the 39 countries that generate half or more of their electricity from hydropower are projected to get drier. Responses must fit the crisis: allocation, groundwater governance and reuse where water is scarce; investment and utilities where access is missing; diversification around hydropower; and both, with stabilisation, in fragile states.",
+    "Interactive charts of the two crises, exposure correlations and profiles, stacking, projected drying, the pace of water and sanitation access, deaths from unsafe WASH, hydropower dependence and drought, a sortable stacking table and a seven-layer atlas with country cards accompany the analysis."
+  ],
+  "jel": "Q25, Q54, Q18, Q42, I15, O13 — water; climate; agricultural policy; hydropower; health and development; development and the environment",
+  "method": "160 countries with at least 1 million people. Water stress (SDG 6.4.2), withdrawals by sector, renewable resources per person and water productivity: FAO AQUASTAT via World Bank WDI (latest to 2022). Drinking water and sanitation: WHO/UNICEF JMP via WDI, 2000–2024; regional pace = 2015–2024 average annual change; required = gain to 99% by 2030. Unsafe-WASH deaths: WHO, 2019, age-standardised. Undernourishment and agricultural employment: FAO and ILO via WDI. Hydropower share and largest year-on-year fall since 2000: Ember/Energy Institute via Our World in Data. Climate: World Bank CCKP CMIP6 0.25° bias-corrected ensemble medians, 1995–2014 vs 2040–2059, SSP2-4.5 and SSP3-7.0; population-weighted change in 20-year mean SPEI-12, percentage change in annual maximum 5-day precipitation, and share of people where mean SPEI-12 ≤ −1. Exposure scores: percentile ranks (water = stress; food = mean of undernourishment and agricultural employment; energy = hydropower share; health = mean of WASH deaths and lack of basic water; climate = mean of drying and downpour change; capacity = inverse GDP per head, PPP); high = top third. Crisis type: stress ≥ 40% and/or ≥ 10% without basic water. National averages hide basin-level stress; SPEI is local and omits upstream inflows; scores are relative.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Faustina:wght@500;700&family=Inclusive+Sans:wght@400;500&family=Barlow+Semi+Condensed:wght@400;600&display=swap",
+  "themeColor": "#0d2230",
+  "topics": [
+    "Systemic Risk",
+    "Climate Adaptation",
+    "Public Health",
+    "Infrastructure"
+  ],
+  "keywords": [
+    "water crisis",
+    "water stress",
+    "SDG 6",
+    "water scarcity",
+    "drinking water",
+    "sanitation",
+    "WASH",
+    "groundwater",
+    "hydropower",
+    "drought",
+    "food security",
+    "water-energy-food nexus",
+    "polycrisis",
+    "climate change",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "coupling",
+      "label": "1. One Resource, Five Systems"
+    },
+    {
+      "id": "twocrises",
+      "label": "2. Two Water Crises"
+    },
+    {
+      "id": "stacking",
+      "label": "3. Where Exposures Stack"
+    },
+    {
+      "id": "scarcity",
+      "label": "4. Scarcity and Food"
+    },
+    {
+      "id": "access",
+      "label": "5. Access and Health"
+    },
+    {
+      "id": "energy",
+      "label": "6. Energy"
+    },
+    {
+      "id": "climate",
+      "label": "7. A Changing Water Cycle"
+    },
+    {
+      "id": "atlas",
+      "label": "8. The Atlas"
+    },
+    {
+      "id": "response",
+      "label": "9. Responses"
+    },
+    {
+      "id": "method",
+      "label": "10. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "4.1 bn",
+      "label": "People in physically water-scarce countries (stress ≥ 40%)"
+    },
+    {
+      "value": "1.6 bn",
+      "label": "People in water-rich countries with large access gaps"
+    },
+    {
+      "value": "6.3×",
+      "label": "Faster progress needed for universal safe drinking water by 2030"
+    },
+    {
+      "value": "18 of 39",
+      "label": "Hydropower-dependent countries projected to get drier"
+    }
+  ]
+}

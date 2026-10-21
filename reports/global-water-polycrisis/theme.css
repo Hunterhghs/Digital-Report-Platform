@@ -1,0 +1,336 @@
+/* ===========================================================================
+   Theme — Report 2026-51, "The Global Water Polycrisis"
+
+   Aesthetic: droplet field. The masthead is a data-generated scatter of 157
+   countries drawn as water droplets on a deep-ocean field, placed by water
+   stress (across, log scale) and the share of people without basic drinking
+   water (up), sized by population and coloured by the kind of water crisis
+   each faces: amber for physical scarcity, cyan for economic scarcity of
+   access, red where both coincide, and pale blue-grey where neither does.
+   Below it the page is salt-white; every h2 opens with a droplet glyph; the
+   six exposures keep fixed hues (water blue, food green, energy gold, health
+   coral, climate violet, capacity slate). Faustina for display, Inclusive
+   Sans for prose, Barlow Semi Condensed for figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours,
+   and charts.js reads the --y, --e and --r tokens so no hex lives in the
+   script.
+   =========================================================================== */
+
+:root {
+  --bg: #f1f4f5;
+  --bg-card: #fbfdfd;
+  --bg-accent: #e1e8eb;
+  --bg-dark: #0d2230;
+  --bg-dark-2: #08161f;
+
+  --text: #12212b;
+  --text-secondary: #34474f;
+  --text-muted: #657780;
+  --text-inverse: #eaf2f5;
+
+  --primary: #0f3346;
+  --primary-light: #1f7a9a;
+  --accent: #d0662e;
+  --accent-light: #f1a77a;
+
+  --border: #d2dde1;
+  --border-light: #e3eaed;
+  --rule: #b8c7cd;
+
+  /* crisis types */
+  --y-scarcity: #d08a2e;
+  --y-access: #1f93ae;
+  --y-double: #c8393c;
+  --y-served: #a7b8c1;
+  /* six exposures */
+  --e-water: #2a6f97;
+  --e-food: #5f9447;
+  --e-energy: #d9a72e;
+  --e-health: #c8553d;
+  --e-climate: #7a5ea8;
+  --e-capacity: #56656d;
+  /* regions */
+  --r-wld: #12212b;
+  --r-ssf: #c8393c;
+  --r-sas: #d08a2e;
+  --r-eas: #1f7a9a;
+  --r-mna: #8a6d3b;
+  --r-lcn: #5f9447;
+  --r-ecs: #7a5ea8;
+  /* map */
+  --map-sea: #e4ecef;
+  --map-none: #d9e0e3;
+
+  --chart-blue: #1f7a9a;
+  --chart-blue-light: #9fd0de;
+  --chart-gold: #d9a72e;
+  --chart-red: #c8393c;
+  --chart-teal: #1f93ae;
+  --chart-gray: #a7b8c1;
+  --chart-orange: #d0662e;
+  --chart-purple: #7a5ea8;
+
+  --serif: "Faustina", Georgia, "Times New Roman", serif;
+  --sans: "Inclusive Sans", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Barlow Semi Condensed", "Arial Narrow", ui-sans-serif, sans-serif;
+
+  --drops: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='330' viewBox='0 0 900 330'%3E%3Cline x1='487.9' x2='487.9' y1='18' y2='316' stroke='%23ffffff' stroke-opacity='0.16' stroke-dasharray='4 5'/%3E%3Cline x1='40' x2='880' y1='261.3' y2='261.3' stroke='%23ffffff' stroke-opacity='0.16' stroke-dasharray='4 5'/%3E%3Cpath d='M548.2 248.0 C551.1 259.4 567.3 270.9 567.3 288.0 A19.1 19.1 0 1 1 529.2 288.0 C529.2 270.9 545.4 259.4 548.2 248.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M492.3 250.5 C495.1 261.7 511.1 273.0 511.1 289.9 A18.8 18.8 0 1 1 473.5 289.9 C473.5 273.0 489.5 261.7 492.3 250.5 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M446.2 284.2 C447.9 291.0 457.5 297.8 457.5 307.9 A11.3 11.3 0 1 1 434.9 307.9 C434.9 297.8 444.5 291.0 446.2 284.2 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M452.5 234.3 C454.1 240.7 463.2 247.1 463.2 256.7 A10.7 10.7 0 1 1 441.9 256.7 C441.9 247.1 450.9 240.7 452.5 234.3 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M608.0 243.0 C609.5 249.1 618.3 255.3 618.3 264.6 A10.3 10.3 0 1 1 597.7 264.6 C597.7 255.3 606.4 249.1 608.0 243.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M319.3 204.0 C320.8 210.1 329.4 216.1 329.4 225.2 A10.1 10.1 0 1 1 309.3 225.2 C309.3 216.1 317.8 210.1 319.3 204.0 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M97.8 287.5 C99.3 293.4 107.5 299.2 107.5 308.0 A9.7 9.7 0 1 1 88.1 308.0 C88.1 299.2 96.3 293.4 97.8 287.5 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M257.1 283.0 C258.5 288.5 266.3 294.0 266.3 302.3 A9.2 9.2 0 1 1 247.9 302.3 C247.9 294.0 255.7 288.5 257.1 283.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M218.1 275.2 C219.4 280.5 226.9 285.7 226.9 293.5 A8.7 8.7 0 1 1 209.4 293.5 C209.4 285.7 216.8 280.5 218.1 275.2 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M462.4 82.8 C463.6 87.9 470.9 93.1 470.9 100.8 A8.6 8.6 0 1 1 453.8 100.8 C453.8 93.1 461.1 87.9 462.4 82.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M501.7 288.0 C503.0 293.1 510.3 298.2 510.3 305.9 A8.5 8.5 0 1 1 493.2 305.9 C493.2 298.2 500.5 293.1 501.7 288.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M477.5 286.6 C478.7 291.6 485.9 296.7 485.9 304.2 A8.4 8.4 0 1 1 469.1 304.2 C469.1 296.7 476.2 291.6 477.5 286.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M637.6 278.0 C638.8 283.0 645.9 287.9 645.9 295.4 A8.3 8.3 0 1 1 629.3 295.4 C629.3 287.9 636.3 283.0 637.6 278.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M444.8 271.3 C446.1 276.3 453.1 281.2 453.1 288.7 A8.3 8.3 0 1 1 436.6 288.7 C436.6 281.2 443.6 276.3 444.8 271.3 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 10.8 C51.2 15.7 58.2 20.6 58.2 28.0 A8.2 8.2 0 1 1 41.8 28.0 C41.8 20.6 48.8 15.7 50.0 10.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M394.0 285.5 C395.2 290.3 401.9 295.0 401.9 302.2 A8.0 8.0 0 1 1 386.0 302.2 C386.0 295.0 392.8 290.3 394.0 285.5 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M572.1 281.6 C573.2 286.3 579.9 291.0 579.9 298.0 A7.8 7.8 0 1 1 564.3 298.0 C564.3 291.0 570.9 286.3 572.1 281.6 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M509.3 273.2 C510.4 277.8 516.9 282.4 516.9 289.3 A7.7 7.7 0 1 1 501.6 289.3 C501.6 282.4 508.1 277.8 509.3 273.2 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M473.2 292.0 C474.4 296.6 480.8 301.2 480.8 308.0 A7.6 7.6 0 1 1 465.6 308.0 C465.6 301.2 472.1 296.6 473.2 292.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M422.3 292.6 C423.4 297.0 429.6 301.4 429.6 308.0 A7.3 7.3 0 1 1 414.9 308.0 C414.9 301.4 421.2 297.0 422.3 292.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M354.1 127.5 C355.2 131.9 361.5 136.3 361.5 142.8 A7.3 7.3 0 1 1 346.8 142.8 C346.8 136.3 353.0 131.9 354.1 127.5 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M366.2 292.7 C367.3 297.1 373.5 301.4 373.5 308.0 A7.3 7.3 0 1 1 359.0 308.0 C359.0 301.4 365.2 297.1 366.2 292.7 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M413.6 292.7 C414.7 297.1 420.8 301.5 420.8 308.0 A7.3 7.3 0 1 1 406.3 308.0 C406.3 301.5 412.5 297.1 413.6 292.7 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M550.2 247.2 C551.3 251.5 557.3 255.8 557.3 262.2 A7.2 7.2 0 1 1 543.0 262.2 C543.0 255.8 549.1 251.5 550.2 247.2 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M452.8 292.9 C453.9 297.1 459.8 301.3 459.8 307.6 A7.0 7.0 0 1 1 445.8 307.6 C445.8 301.3 451.8 297.1 452.8 292.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M465.9 132.8 C467.0 137.0 472.9 141.2 472.9 147.5 A7.0 7.0 0 1 1 458.9 147.5 C458.9 141.2 464.9 137.0 465.9 132.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M258.7 226.7 C259.7 230.8 265.6 235.0 265.6 241.2 A6.9 6.9 0 1 1 251.8 241.2 C251.8 235.0 257.7 230.8 258.7 226.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M203.1 280.0 C204.1 284.1 210.0 288.3 210.0 294.5 A6.9 6.9 0 1 1 196.2 294.5 C196.2 288.3 202.1 284.1 203.1 280.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M577.7 293.7 C578.7 297.8 584.5 301.9 584.5 308.0 A6.8 6.8 0 1 1 570.9 308.0 C570.9 301.9 576.7 297.8 577.7 293.7 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M617.0 129.8 C618.0 133.9 623.8 138.0 623.8 144.2 A6.8 6.8 0 1 1 610.1 144.2 C610.1 138.0 615.9 133.9 617.0 129.8 Z' fill='%23e0524f' fill-opacity='0.62' stroke='%23e0524f' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M259.2 121.0 C260.3 125.1 266.1 129.2 266.1 135.4 A6.8 6.8 0 1 1 252.4 135.4 C252.4 129.2 258.2 125.1 259.2 121.0 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M497.2 293.4 C498.2 297.5 503.9 301.6 503.9 307.6 A6.8 6.8 0 1 1 490.4 307.6 C490.4 301.6 496.2 297.5 497.2 293.4 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M640.6 258.5 C641.6 262.6 647.3 266.6 647.3 272.6 A6.7 6.7 0 1 1 633.9 272.6 C633.9 266.6 639.6 262.6 640.6 258.5 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M535.2 286.5 C536.2 290.5 541.9 294.5 541.9 300.6 A6.7 6.7 0 1 1 528.5 300.6 C528.5 294.5 534.2 290.5 535.2 286.5 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M328.6 289.5 C329.6 293.5 335.3 297.5 335.3 303.5 A6.7 6.7 0 1 1 322.0 303.5 C322.0 297.5 327.6 293.5 328.6 289.5 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M525.2 204.7 C526.2 208.6 531.8 212.6 531.8 218.6 A6.6 6.6 0 1 1 518.6 218.6 C518.6 212.6 524.2 208.6 525.2 204.7 Z' fill='%23e0524f' fill-opacity='0.62' stroke='%23e0524f' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M659.5 177.8 C660.5 181.7 666.0 185.6 666.0 191.5 A6.5 6.5 0 1 1 652.9 191.5 C652.9 185.6 658.5 181.7 659.5 177.8 Z' fill='%23e0524f' fill-opacity='0.62' stroke='%23e0524f' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M206.0 286.3 C207.0 290.2 212.5 294.1 212.5 300.0 A6.5 6.5 0 1 1 199.4 300.0 C199.4 294.1 205.0 290.2 206.0 286.3 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M124.4 144.9 C125.4 148.8 130.9 152.7 130.9 158.5 A6.5 6.5 0 1 1 118.0 158.5 C118.0 152.7 123.5 148.8 124.4 144.9 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M268.5 264.0 C269.4 267.9 274.9 271.8 274.9 277.6 A6.5 6.5 0 1 1 262.0 277.6 C262.0 271.8 267.5 267.9 268.5 264.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M516.2 258.1 C517.1 262.0 522.6 265.9 522.6 271.7 A6.4 6.4 0 1 1 509.7 271.7 C509.7 265.9 515.2 262.0 516.2 258.1 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M621.3 281.9 C622.2 285.8 627.7 289.6 627.7 295.4 A6.4 6.4 0 1 1 614.9 295.4 C614.9 289.6 620.3 285.8 621.3 281.9 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M866.9 290.1 C867.9 293.9 873.3 297.8 873.3 303.5 A6.4 6.4 0 1 1 860.5 303.5 C860.5 297.8 865.9 293.9 866.9 290.1 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M463.2 248.5 C464.2 252.3 469.6 256.2 469.6 261.9 A6.4 6.4 0 1 1 456.8 261.9 C456.8 256.2 462.2 252.3 463.2 248.5 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M196.6 285.0 C197.6 288.9 203.0 292.7 203.0 298.4 A6.4 6.4 0 1 1 190.3 298.4 C190.3 292.7 195.7 288.9 196.6 285.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M116.5 138.9 C117.5 142.7 122.9 146.5 122.9 152.3 A6.4 6.4 0 1 1 110.2 152.3 C110.2 146.5 115.6 142.7 116.5 138.9 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M268.8 247.7 C269.7 251.5 275.1 255.3 275.1 261.0 A6.3 6.3 0 1 1 262.4 261.0 C262.4 255.3 267.8 251.5 268.8 247.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M236.9 274.4 C237.9 278.2 243.2 282.0 243.2 287.6 A6.3 6.3 0 1 1 230.6 287.6 C230.6 282.0 236.0 278.2 236.9 274.4 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M337.4 86.4 C338.4 90.2 343.7 94.0 343.7 99.6 A6.3 6.3 0 1 1 331.2 99.6 C331.2 94.0 336.5 90.2 337.4 86.4 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M243.1 188.7 C244.1 192.4 249.4 196.2 249.4 201.8 A6.3 6.3 0 1 1 236.9 201.8 C236.9 196.2 242.2 192.4 243.1 188.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M102.8 161.7 C103.7 165.4 109.0 169.0 109.0 174.6 A6.2 6.2 0 1 1 96.7 174.6 C96.7 169.0 101.9 165.4 102.8 161.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M301.4 265.4 C302.3 269.1 307.5 272.8 307.5 278.3 A6.1 6.1 0 1 1 295.2 278.3 C295.2 272.8 300.5 269.1 301.4 265.4 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M289.8 264.1 C290.7 267.7 295.9 271.4 295.9 276.9 A6.1 6.1 0 1 1 283.7 276.9 C283.7 271.4 288.9 267.7 289.8 264.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M334.9 77.9 C335.8 81.5 341.0 85.2 341.0 90.7 A6.1 6.1 0 1 1 328.8 90.7 C328.8 85.2 334.0 81.5 334.9 77.9 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M233.0 295.1 C233.9 298.8 239.1 302.4 239.1 307.9 A6.1 6.1 0 1 1 226.9 307.9 C226.9 302.4 232.1 298.8 233.0 295.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M444.5 266.9 C445.4 270.5 450.5 274.2 450.5 279.6 A6.0 6.0 0 1 1 438.4 279.6 C438.4 274.2 443.5 270.5 444.5 266.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M622.5 268.0 C623.4 271.6 628.5 275.2 628.5 280.6 A6.0 6.0 0 1 1 616.6 280.6 C616.6 275.2 621.6 271.6 622.5 268.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M296.9 231.8 C297.8 235.4 302.9 239.0 302.9 244.4 A6.0 6.0 0 1 1 290.9 244.4 C290.9 239.0 296.0 235.4 296.9 231.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M294.1 62.2 C295.0 65.8 300.1 69.3 300.1 74.7 A5.9 5.9 0 1 1 288.2 74.7 C288.2 69.3 293.3 65.8 294.1 62.2 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M389.8 170.0 C390.7 173.5 395.7 177.0 395.7 182.3 A5.9 5.9 0 1 1 383.9 182.3 C383.9 177.0 388.9 173.5 389.8 170.0 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M173.7 171.7 C174.6 175.2 179.6 178.7 179.6 183.9 A5.8 5.8 0 1 1 167.9 183.9 C167.9 178.7 172.8 175.2 173.7 171.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M585.2 250.1 C586.1 253.6 591.0 257.1 591.0 262.3 A5.8 5.8 0 1 1 579.4 262.3 C579.4 257.1 584.3 253.6 585.2 250.1 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M223.0 72.8 C223.9 76.3 228.8 79.8 228.8 85.0 A5.8 5.8 0 1 1 217.2 85.0 C217.2 79.8 222.1 76.3 223.0 72.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M470.8 285.7 C471.6 289.2 476.6 292.7 476.6 297.9 A5.8 5.8 0 1 1 465.0 297.9 C465.0 292.7 469.9 289.2 470.8 285.7 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M310.6 291.6 C311.5 295.1 316.3 298.5 316.3 303.7 A5.8 5.8 0 1 1 304.8 303.7 C304.8 298.5 309.7 295.1 310.6 291.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M429.8 180.6 C430.7 184.1 435.6 187.5 435.6 192.7 A5.7 5.7 0 1 1 424.1 192.7 C424.1 187.5 429.0 184.1 429.8 180.6 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M291.2 296.0 C292.1 299.4 297.0 302.9 297.0 308.0 A5.7 5.7 0 1 1 285.5 308.0 C285.5 302.9 290.4 299.4 291.2 296.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M381.2 240.2 C382.0 243.6 386.9 247.1 386.9 252.2 A5.7 5.7 0 1 1 375.4 252.2 C375.4 247.1 380.3 243.6 381.2 240.2 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M257.5 264.2 C258.3 267.6 263.2 271.1 263.2 276.2 A5.7 5.7 0 1 1 251.8 276.2 C251.8 271.1 256.6 267.6 257.5 264.2 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M277.2 259.1 C278.1 262.5 282.9 265.9 282.9 271.0 A5.7 5.7 0 1 1 271.6 271.0 C271.6 265.9 276.4 262.5 277.2 259.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M383.9 296.1 C384.8 299.5 389.6 302.9 389.6 308.0 A5.7 5.7 0 1 1 378.2 308.0 C378.2 302.9 383.1 299.5 383.9 296.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M54.3 216.1 C55.1 219.5 59.9 222.9 59.9 228.0 A5.7 5.7 0 1 1 48.6 228.0 C48.6 222.9 53.4 219.5 54.3 216.1 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M504.7 143.2 C505.6 146.6 510.3 149.9 510.3 155.0 A5.6 5.6 0 1 1 499.1 155.0 C499.1 149.9 503.9 146.6 504.7 143.2 Z' fill='%23e0524f' fill-opacity='0.62' stroke='%23e0524f' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M87.3 176.0 C88.1 179.3 92.8 182.6 92.8 187.6 A5.5 5.5 0 1 1 81.8 187.6 C81.8 182.6 86.5 179.3 87.3 176.0 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 154.5 C50.8 157.8 55.5 161.1 55.5 166.1 A5.5 5.5 0 1 1 44.5 166.1 C44.5 161.1 49.2 157.8 50.0 154.5 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M406.8 116.3 C407.6 119.6 412.3 122.9 412.3 127.8 A5.5 5.5 0 1 1 401.3 127.8 C401.3 122.9 406.0 119.6 406.8 116.3 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M325.6 137.4 C326.4 140.7 331.1 144.0 331.1 149.0 A5.5 5.5 0 1 1 320.1 149.0 C320.1 144.0 324.8 140.7 325.6 137.4 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 265.8 C50.8 269.0 55.4 272.3 55.4 277.1 A5.4 5.4 0 1 1 44.6 277.1 C44.6 272.3 49.2 269.0 50.0 265.8 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M594.4 281.4 C595.2 284.7 599.8 287.9 599.8 292.8 A5.4 5.4 0 1 1 589.0 292.8 C589.0 287.9 593.6 284.7 594.4 281.4 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M221.1 16.7 C221.9 19.9 226.5 23.2 226.5 28.0 A5.4 5.4 0 1 1 215.7 28.0 C215.7 23.2 220.3 19.9 221.1 16.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M520.9 296.7 C521.7 300.0 526.3 303.2 526.3 308.0 A5.4 5.4 0 1 1 515.5 308.0 C515.5 303.2 520.1 300.0 520.9 296.7 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M357.9 172.2 C358.7 175.4 363.3 178.7 363.3 183.5 A5.4 5.4 0 1 1 352.6 183.5 C352.6 178.7 357.1 175.4 357.9 172.2 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M602.7 293.5 C603.5 296.7 608.0 299.9 608.0 304.7 A5.3 5.3 0 1 1 597.3 304.7 C597.3 299.9 601.9 296.7 602.7 293.5 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M486.6 284.9 C487.4 288.1 491.9 291.3 491.9 296.1 A5.3 5.3 0 1 1 481.2 296.1 C481.2 291.3 485.8 288.1 486.6 284.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M918.9 296.8 C919.7 300.0 924.3 303.2 924.3 308.0 A5.3 5.3 0 1 1 913.6 308.0 C913.6 303.2 918.1 300.0 918.9 296.8 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M231.7 276.9 C232.5 280.1 237.0 283.3 237.0 288.1 A5.3 5.3 0 1 1 226.4 288.1 C226.4 283.3 230.9 280.1 231.7 276.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M427.0 274.2 C427.8 277.4 432.3 280.6 432.3 285.3 A5.3 5.3 0 1 1 421.7 285.3 C421.7 280.6 426.2 277.4 427.0 274.2 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M416.8 291.0 C417.6 294.1 422.1 297.3 422.1 302.1 A5.3 5.3 0 1 1 411.5 302.1 C411.5 297.3 416.0 294.1 416.8 291.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M348.1 293.6 C348.9 296.7 353.4 299.9 353.4 304.7 A5.3 5.3 0 1 1 342.8 304.7 C342.8 299.9 347.3 296.7 348.1 293.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M554.2 246.4 C555.0 249.6 559.5 252.8 559.5 257.6 A5.3 5.3 0 1 1 548.9 257.6 C548.9 252.8 553.4 249.6 554.2 246.4 Z' fill='%23e0524f' fill-opacity='0.62' stroke='%23e0524f' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 78.9 C50.8 82.1 55.3 85.3 55.3 90.1 A5.3 5.3 0 1 1 44.7 90.1 C44.7 85.3 49.2 82.1 50.0 78.9 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M201.5 295.8 C202.3 299.0 206.8 302.1 206.8 306.9 A5.3 5.3 0 1 1 196.2 306.9 C196.2 302.1 200.7 299.0 201.5 295.8 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M407.5 296.9 C408.3 300.1 412.8 303.3 412.8 308.0 A5.3 5.3 0 1 1 402.3 308.0 C402.3 303.3 406.7 300.1 407.5 296.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M531.0 286.2 C531.8 289.3 536.3 292.5 536.3 297.2 A5.3 5.3 0 1 1 525.8 297.2 C525.8 292.5 530.2 289.3 531.0 286.2 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M629.6 297.0 C630.4 300.1 634.9 303.3 634.9 308.0 A5.3 5.3 0 1 1 624.4 308.0 C624.4 303.3 628.8 300.1 629.6 297.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M298.4 297.0 C299.2 300.2 303.7 303.3 303.7 308.0 A5.2 5.2 0 1 1 293.2 308.0 C293.2 303.3 297.7 300.2 298.4 297.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M306.5 297.1 C307.3 300.2 311.7 303.3 311.7 308.0 A5.2 5.2 0 1 1 301.3 308.0 C301.3 303.3 305.7 300.2 306.5 297.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M272.2 297.1 C273.0 300.2 277.4 303.3 277.4 308.0 A5.2 5.2 0 1 1 267.0 308.0 C267.0 303.3 271.4 300.2 272.2 297.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M232.7 296.6 C233.5 299.7 237.9 302.8 237.9 307.5 A5.2 5.2 0 1 1 227.5 307.5 C227.5 302.8 231.9 299.7 232.7 296.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 148.2 C50.8 151.3 55.2 154.4 55.2 159.0 A5.2 5.2 0 1 1 44.8 159.0 C44.8 154.4 49.2 151.3 50.0 148.2 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M195.0 132.8 C195.8 135.9 200.1 139.0 200.1 143.7 A5.2 5.2 0 1 1 189.8 143.7 C189.8 139.0 194.2 135.9 195.0 132.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M236.0 278.0 C236.8 281.0 241.1 284.1 241.1 288.7 A5.1 5.1 0 1 1 230.9 288.7 C230.9 284.1 235.2 281.0 236.0 278.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M632.5 297.0 C633.2 300.0 637.6 303.1 637.6 307.6 A5.1 5.1 0 1 1 627.4 307.6 C627.4 303.1 631.7 300.0 632.5 297.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M846.0 280.3 C846.8 283.4 851.1 286.4 851.1 291.0 A5.1 5.1 0 1 1 841.0 291.0 C841.0 286.4 845.3 283.4 846.0 280.3 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M514.5 273.8 C515.2 276.8 519.5 279.8 519.5 284.4 A5.1 5.1 0 1 1 509.4 284.4 C509.4 279.8 513.7 276.8 514.5 273.8 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M122.1 295.6 C122.8 298.6 127.1 301.6 127.1 306.2 A5.0 5.0 0 1 1 117.0 306.2 C117.0 301.6 121.3 298.6 122.1 295.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M257.4 276.0 C258.1 279.0 262.4 282.0 262.4 286.5 A5.0 5.0 0 1 1 252.4 286.5 C252.4 282.0 256.6 279.0 257.4 276.0 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 173.8 C50.8 176.8 55.0 179.8 55.0 184.3 A5.0 5.0 0 1 1 45.0 184.3 C45.0 179.8 49.2 176.8 50.0 173.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M488.6 293.7 C489.3 296.7 493.6 299.7 493.6 304.2 A5.0 5.0 0 1 1 483.6 304.2 C483.6 299.7 487.8 296.7 488.6 293.7 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M345.9 258.4 C346.6 261.4 350.9 264.4 350.9 268.9 A5.0 5.0 0 1 1 340.9 268.9 C340.9 264.4 345.1 261.4 345.9 258.4 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M466.0 297.6 C466.7 300.5 470.9 303.5 470.9 308.0 A5.0 5.0 0 1 1 461.0 308.0 C461.0 303.5 465.2 300.5 466.0 297.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M433.4 297.6 C434.1 300.6 438.3 303.5 438.3 308.0 A5.0 5.0 0 1 1 428.4 308.0 C428.4 303.5 432.6 300.6 433.4 297.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M533.6 263.1 C534.4 266.0 538.6 269.0 538.6 273.5 A5.0 5.0 0 1 1 528.7 273.5 C528.7 269.0 532.9 266.0 533.6 263.1 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 198.8 C50.7 201.8 54.9 204.7 54.9 209.2 A4.9 4.9 0 1 1 45.1 209.2 C45.1 204.7 49.3 201.8 50.0 198.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M282.9 297.6 C283.7 300.6 287.8 303.6 287.8 308.0 A4.9 4.9 0 1 1 278.0 308.0 C278.0 303.6 282.2 300.6 282.9 297.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M134.9 297.6 C135.6 300.6 139.8 303.6 139.8 308.0 A4.9 4.9 0 1 1 129.9 308.0 C129.9 303.6 134.1 300.6 134.9 297.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 17.7 C50.7 20.6 54.9 23.6 54.9 28.0 A4.9 4.9 0 1 1 45.1 28.0 C45.1 23.6 49.3 20.6 50.0 17.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M615.0 263.5 C615.8 266.4 619.9 269.4 619.9 273.8 A4.9 4.9 0 1 1 610.1 273.8 C610.1 269.4 614.3 266.4 615.0 263.5 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M297.6 284.1 C298.3 287.1 302.5 290.0 302.5 294.5 A4.9 4.9 0 1 1 292.7 294.5 C292.7 290.0 296.9 287.1 297.6 284.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M155.2 296.7 C155.9 299.6 160.1 302.6 160.1 307.0 A4.9 4.9 0 1 1 150.2 307.0 C150.2 302.6 154.4 299.6 155.2 296.7 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M508.9 291.9 C509.7 294.9 513.8 297.8 513.8 302.3 A4.9 4.9 0 1 1 504.0 302.3 C504.0 297.8 508.2 294.9 508.9 291.9 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M297.6 297.7 C298.3 300.6 302.5 303.6 302.5 308.0 A4.9 4.9 0 1 1 292.6 308.0 C292.6 303.6 296.8 300.6 297.6 297.7 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M356.7 191.7 C357.4 194.6 361.6 197.6 361.6 202.0 A4.9 4.9 0 1 1 351.8 202.0 C351.8 197.6 356.0 194.6 356.7 191.7 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M260.3 296.9 C261.1 299.8 265.2 302.7 265.2 307.1 A4.9 4.9 0 1 1 255.4 307.1 C255.4 302.7 259.6 299.8 260.3 296.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M1030.0 297.8 C1030.8 300.7 1034.9 303.6 1034.9 308.0 A4.9 4.9 0 1 1 1025.2 308.0 C1025.2 303.6 1029.3 300.7 1030.0 297.8 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 275.7 C50.7 278.6 54.8 281.5 54.8 285.9 A4.8 4.8 0 1 1 45.2 285.9 C45.2 281.5 49.3 278.6 50.0 275.7 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M220.7 285.3 C221.4 288.2 225.5 291.1 225.5 295.4 A4.8 4.8 0 1 1 215.9 295.4 C215.9 291.1 220.0 288.2 220.7 285.3 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M98.9 297.5 C99.6 300.4 103.7 303.3 103.7 307.5 A4.8 4.8 0 1 1 94.1 307.5 C94.1 303.3 98.2 300.4 98.9 297.5 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M336.5 73.3 C337.2 76.2 341.3 79.0 341.3 83.3 A4.7 4.7 0 1 1 331.8 83.3 C331.8 79.0 335.8 76.2 336.5 73.3 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M195.1 233.1 C195.8 236.0 199.8 238.8 199.8 243.1 A4.7 4.7 0 1 1 190.4 243.1 C190.4 238.8 194.4 236.0 195.1 233.1 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M345.5 296.4 C346.2 299.2 350.2 302.0 350.2 306.3 A4.7 4.7 0 1 1 340.8 306.3 C340.8 302.0 344.8 299.2 345.5 296.4 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M402.8 298.1 C403.5 300.9 407.5 303.8 407.5 308.0 A4.7 4.7 0 1 1 398.1 308.0 C398.1 303.8 402.1 300.9 402.8 298.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M136.5 279.9 C137.2 282.7 141.2 285.5 141.2 289.7 A4.7 4.7 0 1 1 131.8 289.7 C131.8 285.5 135.8 282.7 136.5 279.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 235.2 C50.7 238.0 54.7 240.8 54.7 245.0 A4.7 4.7 0 1 1 45.3 245.0 C45.3 240.8 49.3 238.0 50.0 235.2 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M539.9 297.8 C540.6 300.6 544.6 303.5 544.6 307.7 A4.7 4.7 0 1 1 535.2 307.7 C535.2 303.5 539.2 300.6 539.9 297.8 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M770.1 298.1 C770.8 300.9 774.8 303.7 774.8 307.9 A4.7 4.7 0 1 1 765.4 307.9 C765.4 303.7 769.4 300.9 770.1 298.1 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M141.7 297.8 C142.4 300.6 146.4 303.4 146.4 307.6 A4.7 4.7 0 1 1 137.1 307.6 C137.1 303.4 141.0 300.6 141.7 297.8 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M348.7 240.1 C349.4 242.9 353.4 245.7 353.4 249.9 A4.7 4.7 0 1 1 344.0 249.9 C344.0 245.7 348.0 242.9 348.7 240.1 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M144.1 238.0 C144.8 240.8 148.8 243.6 148.8 247.8 A4.7 4.7 0 1 1 139.5 247.8 C139.5 243.6 143.4 240.8 144.1 238.0 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 245.1 C50.7 247.8 54.6 250.6 54.6 254.8 A4.6 4.6 0 1 1 45.4 254.8 C45.4 250.6 49.3 247.8 50.0 245.1 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M145.2 259.9 C145.9 262.7 149.8 265.4 149.8 269.6 A4.6 4.6 0 1 1 140.6 269.6 C140.6 265.4 144.5 262.7 145.2 259.9 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M161.9 196.0 C162.5 198.8 166.5 201.6 166.5 205.7 A4.6 4.6 0 1 1 157.3 205.7 C157.3 201.6 161.2 198.8 161.9 196.0 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M350.4 264.3 C351.1 267.1 355.0 269.8 355.0 274.0 A4.6 4.6 0 1 1 345.8 274.0 C345.8 269.8 349.7 267.1 350.4 264.3 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M236.0 275.6 C236.6 278.3 240.6 281.1 240.6 285.2 A4.6 4.6 0 1 1 231.3 285.2 C231.3 281.1 235.3 278.3 236.0 275.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M97.8 120.1 C98.5 122.9 102.4 125.6 102.4 129.8 A4.6 4.6 0 1 1 93.2 129.8 C93.2 125.6 97.1 122.9 97.8 120.1 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M254.3 296.4 C255.0 299.2 258.9 301.9 258.9 306.0 A4.6 4.6 0 1 1 249.8 306.0 C249.8 301.9 253.6 299.2 254.3 296.4 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M50.0 133.6 C50.7 136.3 54.5 139.0 54.5 143.1 A4.5 4.5 0 1 1 45.5 143.1 C45.5 139.0 49.3 136.3 50.0 133.6 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M51.8 292.7 C52.5 295.5 56.4 298.2 56.4 302.3 A4.5 4.5 0 1 1 47.3 302.3 C47.3 298.2 51.1 295.5 51.8 292.7 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M520.3 290.0 C521.0 292.7 524.8 295.5 524.8 299.5 A4.5 4.5 0 1 1 515.8 299.5 C515.8 295.5 519.6 292.7 520.3 290.0 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M631.1 298.2 C631.8 300.9 635.6 303.6 635.6 307.6 A4.5 4.5 0 1 1 626.7 307.6 C626.7 303.6 630.5 300.9 631.1 298.2 Z' fill='%23e3a04a' fill-opacity='0.62' stroke='%23e3a04a' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M446.7 239.5 C447.4 242.2 451.2 244.8 451.2 248.9 A4.5 4.5 0 1 1 442.2 248.9 C442.2 244.8 446.0 242.2 446.7 239.5 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M455.6 297.3 C456.3 300.0 460.1 302.7 460.1 306.7 A4.5 4.5 0 1 1 451.2 306.7 C451.2 302.7 455.0 300.0 455.6 297.3 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M407.5 295.1 C408.2 297.8 412.0 300.5 412.0 304.5 A4.5 4.5 0 1 1 403.1 304.5 C403.1 300.5 406.9 297.8 407.5 295.1 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M354.9 298.6 C355.6 301.3 359.4 304.0 359.4 308.0 A4.5 4.5 0 1 1 350.4 308.0 C350.4 304.0 354.2 301.3 354.9 298.6 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M566.5 207.1 C567.2 209.7 570.9 212.4 570.9 216.4 A4.4 4.4 0 1 1 562.1 216.4 C562.1 212.4 565.8 209.7 566.5 207.1 Z' fill='%23e0524f' fill-opacity='0.62' stroke='%23e0524f' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M422.1 298.3 C422.7 301.0 426.5 303.7 426.5 307.7 A4.4 4.4 0 1 1 417.6 307.7 C417.6 303.7 421.4 301.0 422.1 298.3 Z' fill='%239fb6c3' fill-opacity='0.62' stroke='%239fb6c3' stroke-opacity='0.9' stroke-width='0.8'/%3E%3Cpath d='M269.1 203.8 C269.8 206.4 273.5 209.1 273.5 213.1 A4.4 4.4 0 1 1 264.7 213.1 C264.7 209.1 268.4 206.4 269.1 203.8 Z' fill='%2347b6cf' fill-opacity='0.62' stroke='%2347b6cf' stroke-opacity='0.9' stroke-width='0.8'/%3E%3C/svg%3E");
+  --ramp: linear-gradient(90deg, var(--y-access), var(--e-water), var(--y-served), var(--y-scarcity), var(--y-double));
+  --glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 24'%3E%3Cpath d='M10 1 C11 6 17 10 17 15.5 A7 7 0 1 1 3 15.5 C3 10 9 6 10 1 Z' fill='%231f7a9a'/%3E%3Cpath d='M6.5 15.5 A3.5 3.5 0 0 0 10 19' fill='none' stroke='%23ffffff' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1.02rem; line-height: 1.64; }
+
+::selection { background: rgba(31, 122, 154, 0.18); }
+:where(a, button, [tabindex], input, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a { color: var(--primary-light); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--ramp); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: droplet field ----------------------------------------------------- */
+
+.masthead {
+  position: relative;
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.3rem var(--gutter) 4.2rem;
+  background:
+    linear-gradient(90deg, rgba(8, 22, 31, 0.97) 0 34%, rgba(8, 22, 31, 0.66) 54%, rgba(8, 22, 31, 0.06) 80%),
+    var(--drops) right 3% center / 900px auto no-repeat,
+    radial-gradient(ellipse at 74% 42%, #17435a, transparent 66%),
+    linear-gradient(180deg, #102b3b, #08161f);
+}
+.masthead::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--ramp); }
+.masthead .overline { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.1em; color: var(--accent-light); margin-bottom: 1rem; }
+.masthead .overline::before { content: "STRESS → · ACCESS GAP ↑ · 157 COUNTRIES · "; color: #fff; }
+.masthead h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.1rem, 4.8vw, 3.6rem); line-height: 1.04; letter-spacing: -0.01em; max-width: 20ch; color: #fff; }
+.masthead .subtitle { font-family: var(--sans); font-weight: 500; font-size: 1.18rem; color: #d3e3ea; max-width: 56ch; }
+.masthead .strapline { font-family: var(--sans); font-style: normal; font-size: 1.02rem; color: #eef5f8; border-left: 4px solid var(--y-access); max-width: 64ch; background: rgba(8, 22, 31, 0.78); }
+.masthead .meta-row { border-top: 1px solid rgba(255, 255, 255, 0.16); color: #adc2cb; font-family: var(--mono); font-size: 0.86rem; position: relative; }
+.masthead .meta-row strong { color: var(--accent-light); font-family: var(--mono); font-weight: 600; font-size: 0.74rem; letter-spacing: 0.1em; }
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(241, 244, 245, 0.96); border-bottom: 1px solid var(--border); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.76rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- headings with a droplet glyph ------------------------------------------------ */
+
+section > h2 {
+  position: relative;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.8vw, 2.45rem);
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+  color: var(--primary);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 0 0.55rem 2.2rem;
+}
+section > h2::before {
+  content: "";
+  position: absolute; left: 0.15rem; top: 0.16em;
+  width: 1.2rem; height: 1.45rem;
+  background: var(--glyph) center / contain no-repeat;
+}
+.abstract h2, .endmatter h2 { padding-left: 0; border-bottom: 0; font-family: var(--mono); font-size: 0.86rem; }
+.abstract h2::before, .endmatter h2::before { content: none; }
+section > .section-dek { font-family: var(--sans); font-style: normal; font-weight: 500; color: var(--text-muted); font-size: 1.15rem; line-height: 1.45; max-width: none; }
+
+.section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
+
+/* --- abstract, endmatter ------------------------------------------------------------- */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-top: 6px solid transparent; border-image: var(--ramp) 1; border-radius: 0; }
+.abstract h2 { color: var(--primary); letter-spacing: 0.12em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.72rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.72rem; }
+
+/* --- KPI board ------------------------------------------------------------------------- */
+
+.kpi-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1.6rem 0; }
+.kpi { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 1.15rem 1.05rem 0.85rem; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.kpi::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--k, var(--accent)); }
+
+.kpi--scar { --k: var(--y-scarcity); }
+.kpi--acc { --k: var(--y-access); }
+.kpi--dbl { --k: var(--y-double); }
+.kpi--food { --k: var(--e-food); }
+.kpi--energy { --k: var(--e-energy); }
+.kpi--health { --k: var(--e-health); }
+.kpi--water { --k: var(--e-water); }
+.kpi-value { font-family: var(--serif); font-weight: 800; font-size: clamp(1.8rem, 3.2vw, 2.35rem); letter-spacing: -0.02em; line-height: 1; color: var(--text); font-variant-numeric: lining-nums tabular-nums; }
+.kpi-label { font-size: 0.86rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.45rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; margin-bottom: 0.3rem; }
+
+/* --- readout ----------------------------------------------------------------------------- */
+
+.readout { background: var(--bg-dark); border-radius: 2px; padding: 1.15rem 1.4rem 0.45rem; margin: 1.6rem 0; position: relative; overflow: hidden; border-top: 6px solid transparent; border-image: var(--ramp) 1; }
+.readout-title { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 0.4rem !important; }
+.readout p { color: #e4dfec; text-align: justify; hyphens: auto; -webkit-hyphens: auto; position: relative; }
+.readout strong { color: #fff; }
+
+/* --- panels ------------------------------------------------------------------------------ */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 1.05rem 1.15rem 0.95rem; min-width: 0; }
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.15rem 1.25rem 1.05rem; border-top: 5px solid transparent; border-image: var(--ramp) 1; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-title { font-family: var(--serif); font-weight: 800; letter-spacing: -0.01em; font-size: 1.18rem; line-height: 1.2; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin: 0.25rem 0 0.4rem !important; }
+.panel-note { font-size: 0.85rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 310px; }
+.panel .chart-frame--tall { height: 440px; }
+.panel .chart-frame--short { height: 240px; }
+
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 0.85rem 1rem; border-left: 6px solid var(--k, var(--accent)); min-width: 0; }
+.stat-tile--scar { --k: var(--y-scarcity); }
+.stat-tile--acc { --k: var(--y-access); }
+.stat-tile--dbl { --k: var(--y-double); }
+.stat-tile--srv { --k: var(--y-served); }
+.stat-tile-value { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; font-size: 1.6rem; line-height: 1.05; color: var(--text); margin: 0 !important; font-variant-numeric: lining-nums tabular-nums; }
+.stat-tile-label { font-size: 0.82rem; color: var(--text-muted); margin: 0.2rem 0 0 !important; text-align: left !important; line-height: 1.4; }
+.tile-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1rem 0; }
+
+/* --- controls ------------------------------------------------------------------------------ */
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px 22px; margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+.slider { display: grid; gap: 3px; }
+.slider-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider label, .seg-wrap .seg-label { font-family: var(--sans); font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.slider output { font-family: var(--mono); font-weight: 700; font-size: 0.84rem; color: var(--accent); white-space: nowrap; }
+.slider .hint { font-size: 0.78rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); margin: 2px 0; }
+.seg-wrap { display: grid; gap: 5px; }
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; background: var(--bg-card); width: fit-content; max-width: 100%; }
+.segmented button { font: inherit; font-family: var(--mono); font-size: 0.76rem; padding: 0.38rem 0.66rem; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--primary); color: #fff; }
+.calc-note { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin: 0.6rem 0 0 !important; line-height: 1.5; }
+select.pick { font: inherit; font-family: var(--sans); font-size: 0.92rem; padding: 0.35rem 0.5rem; border: 1px solid var(--rule); border-radius: 2px; background: var(--bg-card); color: var(--text); max-width: 100%; }
+
+/* --- atlas and country card ------------------------------------------------------------------- */
+
+.atlas-layout { display: grid; grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.atlas-wrap { position: relative; border-radius: 2px; overflow: hidden; background: var(--map-sea); border: 1px solid var(--border); }
+.atlas { display: block; width: 100%; height: auto; }
+
+.atlas-corner { position: absolute; left: 10px; bottom: 8px; font-family: var(--mono); font-size: 0.62rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.85); padding: 1px 6px; border-radius: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0.6rem 0 0; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.72rem; color: var(--text-secondary); }
+.legend i { width: 14px; height: 10px; border-radius: 1px; flex: none; }
+.country-card { border: 1px solid var(--border); border-radius: 2px; background: var(--bg); padding: 0.85rem 0.95rem; min-height: 300px; border-top: 6px solid var(--cc, var(--rule)); }
+.country-card .cc-kicker { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 !important; }
+.country-card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.45rem; color: var(--primary); margin: 0.05rem 0 0.15rem; line-height: 1.1; }
+.country-card .cc-class { font-family: var(--mono); font-size: 0.72rem; margin: 0 0 0.55rem !important; color: var(--text-secondary); text-align: left !important; }
+.kv { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; font-size: 0.86rem; margin: 0; }
+.kv dt { color: var(--text-secondary); }
+.kv dd { margin: 0; font-family: var(--mono); font-size: 0.8rem; color: var(--text); text-align: right; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin: 0.5rem 0 0; }
+.tag-row span { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.04em; padding: 2px 6px; border-radius: 2px; background: var(--bg-accent); color: var(--text-secondary); }
+.tag-row span.on { background: var(--accent); color: #fff; }
+
+/* --- breaker cards -------------------------------------------------------------- */
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 1.2rem 0; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 0.95rem 1rem; border-top: 5px solid var(--k, var(--primary-light)); }
+.card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.15rem; line-height: 1.2; color: var(--primary); margin: 0 0 0.35rem; }
+.card p { font-size: 0.88rem; line-height: 1.5; color: var(--text-secondary); margin: 0 !important; text-align: left !important; }
+.card .tag { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.25rem !important; }
+.card--a { --k: var(--y-scarcity); }
+.card--b { --k: var(--y-access); }
+.card--c { --k: var(--y-double); }
+.card--d { --k: var(--e-energy); }
+.card--e { --k: var(--e-food); }
+.card--f { --k: var(--e-water); }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--primary-light); font-size: 0.7rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 6px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--ramp); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; font-size: 1.45rem; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board, .tile-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .atlas-layout { grid-template-columns: minmax(0, 1fr); }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .dash-grid, .cards { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2.2rem; background: linear-gradient(180deg, rgba(8, 22, 31, 0.9) 0 62%, rgba(8, 22, 31, 0.5)), var(--drops) 60% 100% / 720px auto no-repeat, linear-gradient(180deg, #102b3b, #08161f); }
+  .segmented button { padding: 0.34rem 0.5rem; font-size: 0.7rem; }
+}
+@media (max-width: 420px) {
+  .kpi-board, .tile-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .controls { display: none; }
+  .masthead, .readout, .report-footer::before, .atlas-wrap, .strip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+
+
+
+/* --- report-specific: hub diagram, stack heatmap, atlas ------------------------------------------- */
+
+.hub { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin: 0.4rem 0 0.2rem; position: relative; }
+.hub-core { grid-column: 1 / -1; background: var(--bg-dark); color: #fff; border-radius: 3px; padding: 0.85rem 1rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1.2rem; border-top: 4px solid var(--e-water); }
+.hub-core b { font-family: var(--serif); font-size: 1.35rem; }
+.hub-core span { font-family: var(--mono); font-size: 0.9rem; color: #bcd3dc; }
+.hub-node { border: 1px solid var(--border); border-top: 5px solid var(--k); border-radius: 3px; background: var(--bg-card); padding: 0.7rem 0.8rem 0.75rem; min-width: 0; }
+.hub-node h4 { font-family: var(--serif); font-size: 1.12rem; margin: 0 0 0.3rem; color: var(--primary); }
+.hub-node p { font-size: 0.84rem; line-height: 1.45; color: var(--text-secondary); margin: 0 0 0.35rem !important; text-align: left !important; }
+.hub-node .fig { font-family: var(--mono); font-weight: 600; font-size: 0.92rem; color: var(--k); display: block; }
+.hub-node--food { --k: var(--e-food); }
+.hub-node--energy { --k: var(--e-energy); }
+.hub-node--health { --k: var(--e-health); }
+.hub-node--climate { --k: var(--e-climate); }
+.hub-node--dev { --k: var(--e-capacity); }
+@media (max-width: 980px) { .hub { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .hub { grid-template-columns: minmax(0, 1fr); } }
+
+.corr { display: grid; grid-template-columns: 88px repeat(6, minmax(0, 1fr)); gap: 3px; margin: 0.3rem 0; }
+.corr .h { font-family: var(--mono); font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: flex-end; justify-content: center; text-align: center; padding-bottom: 3px; }
+.corr .r { font-family: var(--mono); font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; }
+.corr div.c { border-radius: 2px; min-height: 40px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 600; font-size: 0.92rem; }
+
+.stack-wrap { overflow-x: auto; }
+table.stack { border-collapse: separate; border-spacing: 2px; width: 100%; font-size: 0.84rem; }
+table.stack th { font-family: var(--mono); font-weight: 600; font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; padding: 0 4px 4px; text-align: center; white-space: nowrap; }
+table.stack th:first-child { text-align: left; }
+table.stack th button { font: inherit; background: none; border: 0; color: inherit; cursor: pointer; padding: 0; text-transform: inherit; }
+table.stack th button[aria-sort]::after { content: " ↓"; color: var(--accent); }
+table.stack td { padding: 0; height: 26px; text-align: center; font-family: var(--mono); font-size: 0.8rem; border-radius: 2px; }
+table.stack td.nm { text-align: left; padding: 0 8px 0 2px; font-family: var(--sans); white-space: nowrap; color: var(--text); }
+table.stack td.ty { width: 14px; }
+table.stack tr { cursor: pointer; }
+table.stack tr:hover td.nm { color: var(--primary-light); text-decoration: underline; }
+
+.atlas .atlas-sea { fill: var(--map-sea); }
+.atlas .atlas-land path { fill: var(--map-none); stroke: #fff; stroke-width: 0.45; stroke-linejoin: round; transition: fill 0.25s; }
+.atlas [data-iso].is-in { cursor: pointer; }
+.atlas [data-iso].is-in:hover { stroke: var(--text); stroke-width: 1.3; }
+.atlas [data-iso].is-pick { stroke: var(--text); stroke-width: 2.2; }
+.ty-chip { display: inline-block; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; color: #fff; background: var(--k, var(--text-muted)); }
+.ex-bars { display: grid; gap: 4px; margin: 0.6rem 0 0.4rem; }
+.ex-bars div { display: grid; grid-template-columns: 70px minmax(0, 1fr) 34px; gap: 8px; align-items: center; font-family: var(--mono); font-size: 0.78rem; color: var(--text-secondary); }
+.ex-bars b { display: block; height: 10px; border-radius: 1px; background: var(--k); }
+.ex-bars i { display: block; height: 10px; border-radius: 1px; background: var(--bg-accent); position: relative; }
+.ex-bars i b { position: absolute; left: 0; top: 0; bottom: 0; }
+.ex-bars span:last-child { text-align: right; }
