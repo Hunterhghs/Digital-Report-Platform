@@ -1,0 +1,60 @@
+{
+  "number": "2026-48",
+  "title": "The Global Climate–Pollution Risk Atlas",
+  "subtitle": "Regional hotspots, exposure pathways, and priority mitigation opportunities",
+  "strapline": "Climate hazards and air pollution are usually mapped apart, but people live with both — and with whatever capacity their country has to cope. This atlas scores 157 countries on four exposure pathways and their coping capacity, lets you set the weights, and then asks where cutting the same sources would clean the air and slow warming at once.",
+  "dek": "Thirty-six countries with 3.0 billion people combine high climate hazard, high pollution exposure and weak coping capacity — across the Sahel, West and Central Africa and South Asia. The opportunity is concentrated too: the 60 countries breathing 25 µg/m³ or more emit 74% of the world's coal CO₂ and half its greenhouse gases, so in a handful of airsheds the same coal and methane cuts that slow warming would clean the air for billions.",
+  "abstract": [
+    "This atlas maps the joint geography of climate hazard and pollution exposure for 157 countries with at least 1 million people, covering 8.2 billion people. It scores four exposure pathways — outdoor fine particles (satellite-based PM2.5, 2024), household smoke (the share of people cooking with polluting fuels), extreme heat (days a year with a heat index of 35 °C or more, 2015–2024, from ERA5) and water-related hazards (the worst of INFORM's flood, cyclone and drought scores) — together with INFORM's lack of coping capacity, and combines them into a composite index whose weights readers can change.",
+    "Hotspots are concentrated. With equal weights, 36 countries home to 3.0 billion people score in the top third of the composite range, led by Chad, Nigeria, Niger, Afghanistan, Mali, South Sudan, Sudan, Benin, Pakistan and Mauritania; 38 countries with 1.5 billion people are above the median on all three of hazard, pollution and coping gap at once. Exposure pathways differ: in low-income countries household smoke dominates (84% cook with polluting fuels), in lower-middle-income countries outdoor PM2.5 (42.6 µg/m³ population-weighted) and heat (44 days a year above a 35 °C heat index) are highest, and heat days have risen by about eight a year since 1981–2010.",
+    "Mitigation opportunities are concentrated too. The 60 countries where population-weighted PM2.5 is at least 25 µg/m³ hold 5.0 billion people and emit 74% of the world's coal CO₂, 49% of its methane and half its greenhouse gases. In China, India, Viet Nam, Türkiye, Pakistan, Mongolia and Bangladesh, the coal and fossil-fuel cuts that climate policy requires would reduce some of the world's highest exposures; Shindell and colleagues estimated that 14 methane and black-carbon measures could avoid about 0.5 °C of warming by 2050 and 0.7–4.7 million deaths a year. Where exposure comes mainly from dust, biomass and household fuels — across much of Africa — the priorities are clean cooking for 2.0 billion people and adaptation.",
+    "Interactive weight sliders, a bivariate hazard-and-pollution chart, pathway profiles of the top hotspots, income-group shares, a coal–exposure opportunity chart, household-smoke and heat rankings and a six-layer atlas accompany the analysis."
+  ],
+  "jel": "Q54, Q53, Q56, Q48, I15 — climate; air pollution; environment and development; energy policy; health and development",
+  "method": "157 countries with at least 1 million people and complete data. Outdoor PM2.5: population-weighted SatPM 2024 (Our World in Data / WUSTL). Household smoke: 100 minus the share of people with access to clean cooking fuels and technologies (WHO via World Bank WDI, latest year). Extreme heat: mean days a year with a daily maximum heat index of at least 35 °C, 2015–2024, and change from 1981–2010 (ERA5 via the World Bank Climate Change Knowledge Portal). Water-related hazard: the highest of INFORM Risk 2026 river or coastal flood, tropical cyclone and drought scores. Coping: INFORM lack of coping capacity. Each measure is converted to a percentile rank among the 157 countries. Climate hazard = weighted mean of heat and water percentiles; pollution exposure = weighted mean of outdoor PM2.5 and household-smoke percentiles; composite risk = weighted mean of hazard, pollution and coping gap (default weights equal). Emissions: Our World in Data CO₂ and greenhouse-gas dataset, 2023 (coal, oil and gas CO₂, methane in CO₂-equivalents, total greenhouse gases). Coal share of electricity: Our World in Data energy dataset. Percentile indices are relative rankings, not absolute risk; national averages hide subnational hotspots.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 16,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Parkinsans:wght@500;700&family=Reddit+Sans:wght@400;500;600&family=Cascadia+Mono:wght@400;700&display=swap",
+  "themeColor": "#1c1a24",
+  "topics": [
+    "Systemic Risk",
+    "Public Health",
+    "Climate Adaptation",
+    "Energy Transition"
+  ],
+  "keywords": [
+    "climate risk",
+    "air pollution",
+    "PM2.5",
+    "household air pollution",
+    "extreme heat",
+    "floods",
+    "drought",
+    "co-benefits",
+    "coal",
+    "methane",
+    "clean cooking",
+    "INFORM",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "hotspots", "label": "1. Where Risks Overlap" },
+    { "id": "pathways", "label": "2. Exposure Pathways" },
+    { "id": "atlas", "label": "3. The Atlas" },
+    { "id": "unequal", "label": "4. Who Emits, Who Breathes" },
+    { "id": "opportunity", "label": "5. Priority Opportunities" },
+    { "id": "method", "label": "6. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "36", "label": "Countries, home to 3.0 billion people, in the top third of combined climate–pollution risk" },
+    { "value": "74%", "label": "Share of the world's coal CO₂ emitted by countries breathing 25 µg/m³ or more" },
+    { "value": "2.0 bn", "label": "People cooking with polluting fuels — 1.45 billion of them in high-hazard countries" },
+    { "value": "+8 days", "label": "Rise in days a year above a 35 °C heat index, population-weighted, 1981–2010 to 2015–24" }
+  ]
+}
