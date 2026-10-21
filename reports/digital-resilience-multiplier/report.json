@@ -1,0 +1,63 @@
+{
+  "number": "2026-44",
+  "title": "Digital Infrastructure as a Resilience Multiplier in Crisis-Prone Developing Economies",
+  "subtitle": "How connectivity, data systems and digital payments accelerate recovery from shocks",
+  "strapline": "When a shock hits, countries with digital payment rails and usable registries can reach people in days rather than months. But do digital countries actually recover faster? This dashboard tests the claim across 207 economic shock episodes since 1991 and the COVID-19 recession in 105 developing economies, and finds that digital infrastructure multiplies the capacity of the state — and pays off most where that capacity is thinnest.",
+  "dek": "Digital rails speed up crisis response — India, Brazil and Pakistan paid emergency cash within 7–8 days in 2020 — but they do not replace a capable state. Across 207 shocks since 1991 and the COVID recession, government effectiveness predicts recovery far better than internet use. The exception is telling: where governance is weak, every 10 extra points of account ownership before COVID went with about 7 percentage-point-years less lost output by 2023. Digital infrastructure multiplies thin state capacity most.",
+  "abstract": [
+    "This report tests whether digital infrastructure — connectivity, digital payments and data systems — helps developing economies recover from shocks. It combines World Bank data on internet use, account ownership (Global Findex 2011–2024), statistical performance and government effectiveness with GDP per person for 160 countries, and examines two kinds of evidence: 207 shock episodes in low- and middle-income countries since 1991, in which GDP per person fell by 2% or more, and the COVID-19 recession in 105 developing economies, measured against each country's pre-pandemic trend.",
+    "At the micro level, digital rails buy speed. In 2020 India credited emergency payments to 200 million women's accounts eight days after announcement, Brazil paid its emergency aid seven days after the law was passed and Pakistan's Ehsaas programme began paying eight days after launch, while beneficiaries outside existing registries in the Philippines waited more than two months. At the macro level, the picture is more conditional. Internet use before a shock does not predict how much output is lost; government effectiveness does, strongly (about 13 percentage-point-years less output lost over five years per standard deviation). Account ownership and statistical capacity are associated with smaller losses on their own, but most of that association disappears once state capacity is held constant.",
+    "The exception is where the state is weakest. In the COVID-19 recession, among countries with government effectiveness around −1, each additional 10 percentage points of adults with an account in 2017 was associated with a 1.1-point smaller fall in GDP per person in 2020, 2.4 points more recovery by 2023 and about 7 percentage-point-years less cumulative lost output; among capable states the association was zero. Digital payment rails appear to substitute for administrative capacity that weak states lack — a multiplier on thin capacity rather than on strong.",
+    "Large gaps remain: the median low-income country has 19% internet use and 39% account ownership, against 94% and 97% in high-income countries, and some 800 million people lack any proof of identity. Building digital rails together with registries, data protection, cyber resilience and the capacity to use them is the recommendation. Interactive rail trends, a speed timeline, an episode explorer, a COVID estimator with a governance slider, a readiness atlas and a readiness-capacity quadrant accompany the analysis."
+  ],
+  "jel": "O33, H53, E32, O17, G21 — technological change; social protection; business cycles; institutions and development; financial inclusion",
+  "method": "Shock episodes: years from 1991 to 2023 in which real GDP per person (World Bank WDI, constant US$) fell by 2% or more in a country of at least 1 million people, starting a new episode only after the previous one recovered; recovery is the first year GDP per person regains its pre-shock level; five-year loss is the sum over five years of the shortfall below the pre-shock level, in percentage-point-years. Digital measures are taken the year before the shock: internet use (ITU via WDI) as a within-year percentile rank, account ownership (Global Findex, interpolated between survey years) and the Statistical Performance Indicators overall score. COVID cross-section: 105 low- and middle-income countries; outcomes are GDP per person in 2020 and 2023 relative to 2019 and the cumulative 2020–23 gap from each country's 2014–19 trend. Models are OLS with heteroskedasticity-robust standard errors, controlling for log GDP per person, first-year shock depth (episodes) or tourism dependence and pre-COVID trend growth (COVID), with and without WGI government effectiveness. The marginal effect of account ownership is estimated with an accounts × government effectiveness interaction. Results are associations, not causal estimates. 2020 social-assistance timelines are from official and World Bank sources cited.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 18,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700&family=Inter:wght@400;500;600&family=Cascadia+Code:wght@400;700&display=swap",
+  "themeColor": "#12142e",
+  "topics": [
+    "Technology",
+    "Systemic Risk",
+    "Emerging Markets",
+    "Institutions & Governance"
+  ],
+  "keywords": [
+    "digital public infrastructure",
+    "digital payments",
+    "financial inclusion",
+    "connectivity",
+    "statistical capacity",
+    "shock recovery",
+    "COVID-19",
+    "social protection",
+    "government-to-person payments",
+    "state capacity",
+    "resilience",
+    "Global Findex",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "rails", "label": "1. Three Rails" },
+    { "id": "speed", "label": "2. The Speed Dividend" },
+    { "id": "episodes", "label": "3. Do Digital Economies Recover Faster?" },
+    { "id": "pandemic", "label": "4. The Pandemic Test" },
+    { "id": "weak", "label": "5. A Multiplier for Weak States" },
+    { "id": "atlas", "label": "6. Readiness Atlas" },
+    { "id": "risks", "label": "7. When the Rails Fail" },
+    { "id": "build", "label": "8. Building the Multiplier" },
+    { "id": "method", "label": "9. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "7–8 days", "label": "From announcement to first emergency payment in India, Brazil and Pakistan in 2020, using existing accounts and registries" },
+    { "value": "13 pt-yrs", "label": "Less output lost over five years per standard deviation of government effectiveness — internet use alone predicts nothing" },
+    { "value": "≈ 7 pt-yrs", "label": "Less lost output by 2023 per 10 extra points of account ownership, in weak-governance states only" },
+    { "value": "19% vs 94%", "label": "Internet use in the median low-income vs high-income country" }
+  ]
+}

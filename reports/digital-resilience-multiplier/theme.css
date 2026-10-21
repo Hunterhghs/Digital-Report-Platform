@@ -1,0 +1,311 @@
+/* ===========================================================================
+   Theme — Report 2026-44, "Digital Infrastructure as a Resilience Multiplier
+   in Crisis-Prone Developing Economies"
+
+   Aesthetic: signal bars. The masthead is a field of phone-signal icons, one
+   for each of 107 low- and middle-income countries, sorted by digital
+   readiness: three rising bars per country for connectivity (internet use),
+   payments (account ownership) and data systems (statistical performance),
+   coloured from coral to mint by government effectiveness (inline SVG data
+   URI) on a midnight-indigo field. Below it the page is cool white with a
+   faint dot-grid. Connectivity is cyan, payments mint, data violet, shocks
+   coral and state capacity amber; every h2 opens with a three-bar signal
+   glyph. Oxanium for display, Inter for prose, Cascadia Code for figures.
+
+   Loaded after report.css; report.js reads these tokens for chart colours,
+   and charts.js reads the --r and --k tokens so no hex lives in the script.
+   =========================================================================== */
+
+:root {
+  --bg: #f4f6fb;
+  --bg-card: #ffffff;
+  --bg-accent: #e6eaf5;
+  --bg-dark: #12142e;
+  --bg-dark-2: #0a0b1f;
+
+  --text: #161a33;
+  --text-secondary: #3a405e;
+  --text-muted: #6a7090;
+  --text-inverse: #eef1fb;
+
+  --primary: #1b1f4a;
+  --primary-light: #2b6cb0;
+  --accent: #e2574c;
+  --accent-light: #ff9a8f;
+
+  --border: #d6dcec;
+  --border-light: #e8ecf6;
+  --rule: #bcc5de;
+
+  /* rails */
+  --r-net: #1fa6d6;
+  --r-pay: #1fb58f;
+  --r-data: #7b5ce0;
+  --r-shock: #e2574c;
+  --r-cap: #e0a020;
+  /* state capacity, weak to strong */
+  --k-weak: #e2574c;
+  --k-mid: #e0a020;
+  --k-strong: #1fb58f;
+  --k-muted: #b7bfd6;
+  --q-hf: #1fb58f;
+  --q-hc: #7b5ce0;
+  --q-lf: #1fa6d6;
+  --q-lc: #e2574c;
+
+  --chart-blue: #2b6cb0;
+  --chart-blue-light: #9cc7e6;
+  --chart-gold: #e0a020;
+  --chart-red: #e2574c;
+  --chart-teal: #1fb58f;
+  --chart-gray: #8a91ab;
+  --chart-orange: #f0883a;
+  --chart-purple: #7b5ce0;
+
+  --serif: "Oxanium", "Arial Narrow", system-ui, sans-serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", sans-serif;
+  --mono: "Cascadia Code", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --bars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='300' viewBox='0 0 900 300'%3E%3Crect x='0.0' y='272.4' width='2.3' height='9.6' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='2.6' y='270.4' width='2.3' height='11.6' rx='0.6' fill='%23ff6b5b' fill-opacity='0.70'/%3E%3Crect x='5.3' y='212.2' width='2.3' height='69.8' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='8.4' y='257.0' width='2.3' height='25.0' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='11.0' y='258.2' width='2.3' height='23.8' rx='0.6' fill='%23ff6b5b' fill-opacity='0.70'/%3E%3Crect x='13.7' y='185.7' width='2.3' height='96.3' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='16.8' y='269.7' width='2.3' height='12.3' rx='0.6' fill='%23eb7967' fill-opacity='0.55'/%3E%3Crect x='22.1' y='165.7' width='2.3' height='116.3' rx='0.6' fill='%23eb7967' fill-opacity='0.85'/%3E%3Crect x='25.2' y='262.3' width='2.3' height='19.7' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='27.9' y='254.6' width='2.3' height='27.4' rx='0.6' fill='%23ff6b5b' fill-opacity='0.70'/%3E%3Crect x='30.5' y='161.5' width='2.3' height='120.5' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='33.6' y='264.0' width='2.3' height='18.0' rx='0.6' fill='%23db8470' fill-opacity='0.55'/%3E%3Crect x='36.3' y='240.2' width='2.3' height='41.8' rx='0.6' fill='%23db8470' fill-opacity='0.70'/%3E%3Crect x='38.9' y='144.0' width='2.3' height='138.0' rx='0.6' fill='%23db8470' fill-opacity='0.85'/%3E%3Crect x='42.1' y='259.0' width='2.3' height='23.0' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='44.7' y='262.6' width='2.3' height='19.4' rx='0.6' fill='%23ff6b5b' fill-opacity='0.70'/%3E%3Crect x='47.3' y='142.0' width='2.3' height='140.0' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='50.5' y='255.4' width='2.3' height='26.6' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='55.7' y='173.6' width='2.3' height='108.4' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='58.9' y='255.1' width='2.3' height='26.9' rx='0.6' fill='%23c09680' fill-opacity='0.55'/%3E%3Crect x='64.1' y='169.8' width='2.3' height='112.2' rx='0.6' fill='%23c09680' fill-opacity='0.85'/%3E%3Crect x='69.9' y='200.7' width='2.3' height='81.3' rx='0.6' fill='%23e37e6b' fill-opacity='0.70'/%3E%3Crect x='72.5' y='205.6' width='2.3' height='76.4' rx='0.6' fill='%23e37e6b' fill-opacity='0.85'/%3E%3Crect x='75.7' y='233.7' width='2.3' height='48.3' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='81.0' y='198.6' width='2.3' height='83.4' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='84.1' y='255.3' width='2.3' height='26.7' rx='0.6' fill='%23cd8d78' fill-opacity='0.55'/%3E%3Crect x='86.7' y='233.0' width='2.3' height='49.0' rx='0.6' fill='%23cd8d78' fill-opacity='0.70'/%3E%3Crect x='89.4' y='134.0' width='2.3' height='148.0' rx='0.6' fill='%23cd8d78' fill-opacity='0.85'/%3E%3Crect x='92.5' y='253.8' width='2.3' height='28.2' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='95.2' y='203.5' width='2.3' height='78.5' rx='0.6' fill='%23ff6b5b' fill-opacity='0.70'/%3E%3Crect x='97.8' y='162.8' width='2.3' height='119.2' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='100.9' y='239.4' width='2.3' height='42.6' rx='0.6' fill='%23fd6d5c' fill-opacity='0.55'/%3E%3Crect x='106.2' y='159.7' width='2.3' height='122.3' rx='0.6' fill='%23fd6d5c' fill-opacity='0.85'/%3E%3Crect x='109.3' y='242.1' width='2.3' height='39.9' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='114.6' y='148.9' width='2.3' height='133.1' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='117.8' y='234.4' width='2.3' height='47.6' rx='0.6' fill='%23cf8c77' fill-opacity='0.55'/%3E%3Crect x='120.4' y='209.9' width='2.3' height='72.1' rx='0.6' fill='%23cf8c77' fill-opacity='0.70'/%3E%3Crect x='123.0' y='153.6' width='2.3' height='128.4' rx='0.6' fill='%23cf8c77' fill-opacity='0.85'/%3E%3Crect x='126.2' y='213.5' width='2.3' height='68.5' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='128.8' y='216.7' width='2.3' height='65.3' rx='0.6' fill='%23ff6b5b' fill-opacity='0.70'/%3E%3Crect x='131.4' y='182.4' width='2.3' height='99.6' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='134.6' y='246.1' width='2.3' height='35.9' rx='0.6' fill='%23d18a75' fill-opacity='0.55'/%3E%3Crect x='137.2' y='204.7' width='2.3' height='77.3' rx='0.6' fill='%23d18a75' fill-opacity='0.70'/%3E%3Crect x='139.8' y='127.8' width='2.3' height='154.2' rx='0.6' fill='%23d18a75' fill-opacity='0.85'/%3E%3Crect x='143.0' y='259.7' width='2.3' height='22.3' rx='0.6' fill='%23cc8e79' fill-opacity='0.55'/%3E%3Crect x='145.6' y='252.4' width='2.3' height='29.6' rx='0.6' fill='%23cc8e79' fill-opacity='0.70'/%3E%3Crect x='148.2' y='100.5' width='2.3' height='181.5' rx='0.6' fill='%23cc8e79' fill-opacity='0.85'/%3E%3Crect x='151.4' y='216.5' width='2.3' height='65.5' rx='0.6' fill='%23c4937d' fill-opacity='0.55'/%3E%3Crect x='154.0' y='227.3' width='2.3' height='54.7' rx='0.6' fill='%23c4937d' fill-opacity='0.70'/%3E%3Crect x='156.7' y='131.7' width='2.3' height='150.3' rx='0.6' fill='%23c4937d' fill-opacity='0.85'/%3E%3Crect x='159.8' y='191.5' width='2.3' height='90.5' rx='0.6' fill='%23e97a68' fill-opacity='0.55'/%3E%3Crect x='165.1' y='199.4' width='2.3' height='82.6' rx='0.6' fill='%23e97a68' fill-opacity='0.85'/%3E%3Crect x='168.2' y='194.2' width='2.3' height='87.8' rx='0.6' fill='%23ce8c77' fill-opacity='0.55'/%3E%3Crect x='170.9' y='235.0' width='2.3' height='47.0' rx='0.6' fill='%23ce8c77' fill-opacity='0.70'/%3E%3Crect x='173.5' y='138.4' width='2.3' height='143.6' rx='0.6' fill='%23ce8c77' fill-opacity='0.85'/%3E%3Crect x='176.6' y='223.8' width='2.3' height='58.2' rx='0.6' fill='%23c09680' fill-opacity='0.55'/%3E%3Crect x='181.9' y='132.2' width='2.3' height='149.8' rx='0.6' fill='%23c09680' fill-opacity='0.85'/%3E%3Crect x='185.0' y='250.7' width='2.3' height='31.3' rx='0.6' fill='%23b99b84' fill-opacity='0.55'/%3E%3Crect x='187.7' y='184.3' width='2.3' height='97.7' rx='0.6' fill='%23b99b84' fill-opacity='0.70'/%3E%3Crect x='190.3' y='123.2' width='2.3' height='158.8' rx='0.6' fill='%23b99b84' fill-opacity='0.85'/%3E%3Crect x='193.5' y='188.6' width='2.3' height='93.4' rx='0.6' fill='%23b1a088' fill-opacity='0.55'/%3E%3Crect x='198.7' y='183.9' width='2.3' height='98.1' rx='0.6' fill='%23b1a088' fill-opacity='0.85'/%3E%3Crect x='201.9' y='231.9' width='2.3' height='50.1' rx='0.6' fill='%23b29f88' fill-opacity='0.55'/%3E%3Crect x='207.1' y='126.3' width='2.3' height='155.7' rx='0.6' fill='%23b29f88' fill-opacity='0.85'/%3E%3Crect x='210.3' y='164.7' width='2.3' height='117.3' rx='0.6' fill='%23fe6c5b' fill-opacity='0.55'/%3E%3Crect x='212.9' y='215.7' width='2.3' height='66.3' rx='0.6' fill='%23fe6c5b' fill-opacity='0.70'/%3E%3Crect x='215.5' y='192.4' width='2.3' height='89.6' rx='0.6' fill='%23fe6c5b' fill-opacity='0.85'/%3E%3Crect x='218.7' y='254.8' width='2.3' height='27.2' rx='0.6' fill='%23b79c85' fill-opacity='0.55'/%3E%3Crect x='221.3' y='181.1' width='2.3' height='100.9' rx='0.6' fill='%23b79c85' fill-opacity='0.70'/%3E%3Crect x='223.9' y='116.5' width='2.3' height='165.5' rx='0.6' fill='%23b79c85' fill-opacity='0.85'/%3E%3Crect x='227.1' y='214.4' width='2.3' height='67.6' rx='0.6' fill='%23e57d6a' fill-opacity='0.55'/%3E%3Crect x='229.7' y='170.7' width='2.3' height='111.3' rx='0.6' fill='%23e57d6a' fill-opacity='0.70'/%3E%3Crect x='232.4' y='181.9' width='2.3' height='100.1' rx='0.6' fill='%23e57d6a' fill-opacity='0.85'/%3E%3Crect x='235.5' y='236.0' width='2.3' height='46.0' rx='0.6' fill='%23e57d6a' fill-opacity='0.55'/%3E%3Crect x='238.1' y='177.5' width='2.3' height='104.5' rx='0.6' fill='%23e57d6a' fill-opacity='0.70'/%3E%3Crect x='240.8' y='129.9' width='2.3' height='152.1' rx='0.6' fill='%23e57d6a' fill-opacity='0.85'/%3E%3Crect x='243.9' y='171.3' width='2.3' height='110.7' rx='0.6' fill='%2396b298' fill-opacity='0.55'/%3E%3Crect x='246.6' y='211.3' width='2.3' height='70.7' rx='0.6' fill='%2396b298' fill-opacity='0.70'/%3E%3Crect x='249.2' y='139.9' width='2.3' height='142.1' rx='0.6' fill='%2396b298' fill-opacity='0.85'/%3E%3Crect x='252.3' y='166.7' width='2.3' height='115.3' rx='0.6' fill='%23df816e' fill-opacity='0.55'/%3E%3Crect x='255.0' y='236.0' width='2.3' height='46.0' rx='0.6' fill='%23df816e' fill-opacity='0.70'/%3E%3Crect x='257.6' y='133.2' width='2.3' height='148.8' rx='0.6' fill='%23df816e' fill-opacity='0.85'/%3E%3Crect x='260.7' y='188.2' width='2.3' height='93.8' rx='0.6' fill='%23b69d85' fill-opacity='0.55'/%3E%3Crect x='263.4' y='206.5' width='2.3' height='75.5' rx='0.6' fill='%23b69d85' fill-opacity='0.70'/%3E%3Crect x='266.0' y='125.5' width='2.3' height='156.5' rx='0.6' fill='%23b69d85' fill-opacity='0.85'/%3E%3Crect x='269.2' y='165.5' width='2.3' height='116.5' rx='0.6' fill='%23d98571' fill-opacity='0.55'/%3E%3Crect x='271.8' y='221.5' width='2.3' height='60.5' rx='0.6' fill='%23d98571' fill-opacity='0.70'/%3E%3Crect x='274.4' y='143.0' width='2.3' height='139.0' rx='0.6' fill='%23d98571' fill-opacity='0.85'/%3E%3Crect x='277.6' y='200.1' width='2.3' height='81.9' rx='0.6' fill='%23b89c84' fill-opacity='0.55'/%3E%3Crect x='280.2' y='227.3' width='2.3' height='54.7' rx='0.6' fill='%23b89c84' fill-opacity='0.70'/%3E%3Crect x='282.8' y='106.7' width='2.3' height='175.3' rx='0.6' fill='%23b89c84' fill-opacity='0.85'/%3E%3Crect x='286.0' y='252.7' width='2.3' height='29.3' rx='0.6' fill='%23c8917b' fill-opacity='0.55'/%3E%3Crect x='288.6' y='173.1' width='2.3' height='108.9' rx='0.6' fill='%23c8917b' fill-opacity='0.70'/%3E%3Crect x='291.2' y='110.3' width='2.3' height='171.7' rx='0.6' fill='%23c8917b' fill-opacity='0.85'/%3E%3Crect x='294.4' y='211.2' width='2.3' height='70.8' rx='0.6' fill='%23a9a58d' fill-opacity='0.55'/%3E%3Crect x='297.0' y='205.5' width='2.3' height='76.5' rx='0.6' fill='%23a9a58d' fill-opacity='0.70'/%3E%3Crect x='299.6' y='109.5' width='2.3' height='172.5' rx='0.6' fill='%23a9a58d' fill-opacity='0.85'/%3E%3Crect x='302.8' y='217.1' width='2.3' height='64.9' rx='0.6' fill='%23ff6b5b' fill-opacity='0.55'/%3E%3Crect x='305.4' y='186.3' width='2.3' height='95.7' rx='0.6' fill='%23ff6b5b' fill-opacity='0.70'/%3E%3Crect x='308.1' y='116.0' width='2.3' height='166.0' rx='0.6' fill='%23ff6b5b' fill-opacity='0.85'/%3E%3Crect x='311.2' y='184.0' width='2.3' height='98.0' rx='0.6' fill='%23a7a78e' fill-opacity='0.55'/%3E%3Crect x='313.8' y='203.9' width='2.3' height='78.1' rx='0.6' fill='%23a7a78e' fill-opacity='0.70'/%3E%3Crect x='316.5' y='119.8' width='2.3' height='162.2' rx='0.6' fill='%23a7a78e' fill-opacity='0.85'/%3E%3Crect x='319.6' y='198.2' width='2.3' height='83.8' rx='0.6' fill='%23b69d85' fill-opacity='0.55'/%3E%3Crect x='322.3' y='197.1' width='2.3' height='84.9' rx='0.6' fill='%23b69d85' fill-opacity='0.70'/%3E%3Crect x='324.9' y='112.9' width='2.3' height='169.1' rx='0.6' fill='%23b69d85' fill-opacity='0.85'/%3E%3Crect x='328.0' y='222.5' width='2.3' height='59.5' rx='0.6' fill='%23ce8c77' fill-opacity='0.55'/%3E%3Crect x='330.7' y='182.9' width='2.3' height='99.1' rx='0.6' fill='%23ce8c77' fill-opacity='0.70'/%3E%3Crect x='333.3' y='110.1' width='2.3' height='171.9' rx='0.6' fill='%23ce8c77' fill-opacity='0.85'/%3E%3Crect x='336.4' y='229.4' width='2.3' height='52.6' rx='0.6' fill='%23f57261' fill-opacity='0.55'/%3E%3Crect x='339.1' y='172.5' width='2.3' height='109.5' rx='0.6' fill='%23f57261' fill-opacity='0.70'/%3E%3Crect x='341.7' y='110.8' width='2.3' height='171.2' rx='0.6' fill='%23f57261' fill-opacity='0.85'/%3E%3Crect x='344.9' y='236.7' width='2.3' height='45.3' rx='0.6' fill='%236ad0b1' fill-opacity='0.55'/%3E%3Crect x='347.5' y='181.9' width='2.3' height='100.1' rx='0.6' fill='%236ad0b1' fill-opacity='0.70'/%3E%3Crect x='350.1' y='95.1' width='2.3' height='186.9' rx='0.6' fill='%236ad0b1' fill-opacity='0.85'/%3E%3Crect x='353.3' y='257.5' width='2.3' height='24.5' rx='0.6' fill='%23a6a88e' fill-opacity='0.55'/%3E%3Crect x='355.9' y='136.5' width='2.3' height='145.5' rx='0.6' fill='%23a6a88e' fill-opacity='0.70'/%3E%3Crect x='358.5' y='116.7' width='2.3' height='165.3' rx='0.6' fill='%23a6a88e' fill-opacity='0.85'/%3E%3Crect x='361.7' y='215.8' width='2.3' height='66.2' rx='0.6' fill='%23c5937d' fill-opacity='0.55'/%3E%3Crect x='364.3' y='161.9' width='2.3' height='120.1' rx='0.6' fill='%23c5937d' fill-opacity='0.70'/%3E%3Crect x='366.9' y='126.5' width='2.3' height='155.5' rx='0.6' fill='%23c5937d' fill-opacity='0.85'/%3E%3Crect x='370.1' y='233.4' width='2.3' height='48.6' rx='0.6' fill='%2395b499' fill-opacity='0.55'/%3E%3Crect x='372.7' y='178.3' width='2.3' height='103.7' rx='0.6' fill='%2395b499' fill-opacity='0.70'/%3E%3Crect x='375.4' y='99.2' width='2.3' height='182.8' rx='0.6' fill='%2395b499' fill-opacity='0.85'/%3E%3Crect x='378.5' y='202.2' width='2.3' height='79.8' rx='0.6' fill='%23be9781' fill-opacity='0.55'/%3E%3Crect x='381.1' y='172.9' width='2.3' height='109.1' rx='0.6' fill='%23be9781' fill-opacity='0.70'/%3E%3Crect x='383.8' y='117.5' width='2.3' height='164.5' rx='0.6' fill='%23be9781' fill-opacity='0.85'/%3E%3Crect x='386.9' y='225.5' width='2.3' height='56.5' rx='0.6' fill='%23ca8f7a' fill-opacity='0.55'/%3E%3Crect x='389.5' y='167.1' width='2.3' height='114.9' rx='0.6' fill='%23ca8f7a' fill-opacity='0.70'/%3E%3Crect x='392.2' y='110.6' width='2.3' height='171.4' rx='0.6' fill='%23ca8f7a' fill-opacity='0.85'/%3E%3Crect x='395.3' y='207.9' width='2.3' height='74.1' rx='0.6' fill='%23ba9a83' fill-opacity='0.55'/%3E%3Crect x='398.0' y='158.7' width='2.3' height='123.3' rx='0.6' fill='%23ba9a83' fill-opacity='0.70'/%3E%3Crect x='400.6' y='132.2' width='2.3' height='149.8' rx='0.6' fill='%23ba9a83' fill-opacity='0.85'/%3E%3Crect x='403.7' y='205.6' width='2.3' height='76.4' rx='0.6' fill='%23aaa58c' fill-opacity='0.55'/%3E%3Crect x='406.4' y='195.3' width='2.3' height='86.7' rx='0.6' fill='%23aaa58c' fill-opacity='0.70'/%3E%3Crect x='409.0' y='97.7' width='2.3' height='184.3' rx='0.6' fill='%23aaa58c' fill-opacity='0.85'/%3E%3Crect x='412.1' y='237.4' width='2.3' height='44.6' rx='0.6' fill='%239caf94' fill-opacity='0.55'/%3E%3Crect x='414.8' y='162.3' width='2.3' height='119.7' rx='0.6' fill='%239caf94' fill-opacity='0.70'/%3E%3Crect x='417.4' y='106.5' width='2.3' height='175.5' rx='0.6' fill='%239caf94' fill-opacity='0.85'/%3E%3Crect x='420.6' y='269.3' width='2.3' height='12.7' rx='0.6' fill='%23a0ac92' fill-opacity='0.55'/%3E%3Crect x='423.2' y='136.3' width='2.3' height='145.7' rx='0.6' fill='%23a0ac92' fill-opacity='0.70'/%3E%3Crect x='425.8' y='105.2' width='2.3' height='176.8' rx='0.6' fill='%23a0ac92' fill-opacity='0.85'/%3E%3Crect x='429.0' y='241.5' width='2.3' height='40.5' rx='0.6' fill='%23c6927c' fill-opacity='0.55'/%3E%3Crect x='431.6' y='179.1' width='2.3' height='102.9' rx='0.6' fill='%23c6927c' fill-opacity='0.70'/%3E%3Crect x='434.2' y='85.3' width='2.3' height='196.7' rx='0.6' fill='%23c6927c' fill-opacity='0.85'/%3E%3Crect x='437.4' y='183.8' width='2.3' height='98.2' rx='0.6' fill='%23b39f87' fill-opacity='0.55'/%3E%3Crect x='440.0' y='145.5' width='2.3' height='136.5' rx='0.6' fill='%23b39f87' fill-opacity='0.70'/%3E%3Crect x='442.6' y='164.9' width='2.3' height='117.1' rx='0.6' fill='%23b39f87' fill-opacity='0.85'/%3E%3Crect x='445.8' y='215.8' width='2.3' height='66.2' rx='0.6' fill='%23c6927c' fill-opacity='0.55'/%3E%3Crect x='448.4' y='160.1' width='2.3' height='121.9' rx='0.6' fill='%23c6927c' fill-opacity='0.70'/%3E%3Crect x='451.1' y='112.1' width='2.3' height='169.9' rx='0.6' fill='%23c6927c' fill-opacity='0.85'/%3E%3Crect x='454.2' y='222.8' width='2.3' height='59.2' rx='0.6' fill='%239baf95' fill-opacity='0.55'/%3E%3Crect x='456.8' y='166.7' width='2.3' height='115.3' rx='0.6' fill='%239baf95' fill-opacity='0.70'/%3E%3Crect x='459.5' y='101.3' width='2.3' height='180.7' rx='0.6' fill='%239baf95' fill-opacity='0.85'/%3E%3Crect x='462.6' y='199.8' width='2.3' height='82.2' rx='0.6' fill='%2365d4b4' fill-opacity='0.55'/%3E%3Crect x='465.2' y='159.1' width='2.3' height='122.9' rx='0.6' fill='%2365d4b4' fill-opacity='0.70'/%3E%3Crect x='467.9' y='116.7' width='2.3' height='165.3' rx='0.6' fill='%2365d4b4' fill-opacity='0.85'/%3E%3Crect x='471.0' y='195.9' width='2.3' height='86.1' rx='0.6' fill='%23c5927c' fill-opacity='0.55'/%3E%3Crect x='473.7' y='205.3' width='2.3' height='76.7' rx='0.6' fill='%23c5927c' fill-opacity='0.70'/%3E%3Crect x='476.3' y='77.6' width='2.3' height='204.4' rx='0.6' fill='%23c5927c' fill-opacity='0.85'/%3E%3Crect x='479.4' y='189.2' width='2.3' height='92.8' rx='0.6' fill='%237fc2a5' fill-opacity='0.55'/%3E%3Crect x='482.1' y='136.1' width='2.3' height='145.9' rx='0.6' fill='%237fc2a5' fill-opacity='0.70'/%3E%3Crect x='484.7' y='138.6' width='2.3' height='143.4' rx='0.6' fill='%237fc2a5' fill-opacity='0.85'/%3E%3Crect x='487.9' y='186.9' width='2.3' height='95.1' rx='0.6' fill='%239ab095' fill-opacity='0.55'/%3E%3Crect x='490.5' y='195.1' width='2.3' height='86.9' rx='0.6' fill='%239ab095' fill-opacity='0.70'/%3E%3Crect x='493.1' y='92.3' width='2.3' height='189.7' rx='0.6' fill='%239ab095' fill-opacity='0.85'/%3E%3Crect x='496.3' y='223.1' width='2.3' height='58.9' rx='0.6' fill='%23d08b76' fill-opacity='0.55'/%3E%3Crect x='498.9' y='155.3' width='2.3' height='126.7' rx='0.6' fill='%23d08b76' fill-opacity='0.70'/%3E%3Crect x='501.5' y='104.1' width='2.3' height='177.9' rx='0.6' fill='%23d08b76' fill-opacity='0.85'/%3E%3Crect x='504.7' y='191.3' width='2.3' height='90.7' rx='0.6' fill='%23ca8f7a' fill-opacity='0.55'/%3E%3Crect x='507.3' y='151.7' width='2.3' height='130.3' rx='0.6' fill='%23ca8f7a' fill-opacity='0.70'/%3E%3Crect x='509.9' y='125.0' width='2.3' height='157.0' rx='0.6' fill='%23ca8f7a' fill-opacity='0.85'/%3E%3Crect x='513.1' y='172.6' width='2.3' height='109.4' rx='0.6' fill='%239dae94' fill-opacity='0.55'/%3E%3Crect x='515.7' y='206.3' width='2.3' height='75.7' rx='0.6' fill='%239dae94' fill-opacity='0.70'/%3E%3Crect x='518.3' y='87.7' width='2.3' height='194.3' rx='0.6' fill='%239dae94' fill-opacity='0.85'/%3E%3Crect x='521.5' y='172.3' width='2.3' height='109.7' rx='0.6' fill='%23f67160' fill-opacity='0.55'/%3E%3Crect x='524.1' y='107.2' width='2.3' height='174.8' rx='0.6' fill='%23f67160' fill-opacity='0.70'/%3E%3Crect x='526.8' y='180.3' width='2.3' height='101.7' rx='0.6' fill='%23f67160' fill-opacity='0.85'/%3E%3Crect x='529.9' y='175.3' width='2.3' height='106.7' rx='0.6' fill='%2390b79b' fill-opacity='0.55'/%3E%3Crect x='532.5' y='195.7' width='2.3' height='86.3' rx='0.6' fill='%2390b79b' fill-opacity='0.70'/%3E%3Crect x='535.2' y='81.0' width='2.3' height='201.0' rx='0.6' fill='%2390b79b' fill-opacity='0.85'/%3E%3Crect x='538.3' y='158.2' width='2.3' height='123.8' rx='0.6' fill='%23f17563' fill-opacity='0.55'/%3E%3Crect x='540.9' y='202.7' width='2.3' height='79.3' rx='0.6' fill='%23f17563' fill-opacity='0.70'/%3E%3Crect x='543.6' y='90.5' width='2.3' height='191.5' rx='0.6' fill='%23f17563' fill-opacity='0.85'/%3E%3Crect x='546.7' y='168.0' width='2.3' height='114.0' rx='0.6' fill='%23b99b84' fill-opacity='0.55'/%3E%3Crect x='549.4' y='168.3' width='2.3' height='113.7' rx='0.6' fill='%23b99b84' fill-opacity='0.70'/%3E%3Crect x='552.0' y='101.3' width='2.3' height='180.7' rx='0.6' fill='%23b99b84' fill-opacity='0.85'/%3E%3Crect x='555.1' y='178.8' width='2.3' height='103.2' rx='0.6' fill='%237dc4a7' fill-opacity='0.55'/%3E%3Crect x='557.8' y='119.4' width='2.3' height='162.6' rx='0.6' fill='%237dc4a7' fill-opacity='0.70'/%3E%3Crect x='560.4' y='112.9' width='2.3' height='169.1' rx='0.6' fill='%237dc4a7' fill-opacity='0.85'/%3E%3Crect x='563.6' y='185.8' width='2.3' height='96.2' rx='0.6' fill='%2378c7a9' fill-opacity='0.55'/%3E%3Crect x='566.2' y='181.5' width='2.3' height='100.5' rx='0.6' fill='%2378c7a9' fill-opacity='0.70'/%3E%3Crect x='568.8' y='66.3' width='2.3' height='215.7' rx='0.6' fill='%2378c7a9' fill-opacity='0.85'/%3E%3Crect x='572.0' y='231.9' width='2.3' height='50.1' rx='0.6' fill='%238eb89c' fill-opacity='0.55'/%3E%3Crect x='574.6' y='101.6' width='2.3' height='180.4' rx='0.6' fill='%238eb89c' fill-opacity='0.70'/%3E%3Crect x='577.2' y='93.1' width='2.3' height='188.9' rx='0.6' fill='%238eb89c' fill-opacity='0.85'/%3E%3Crect x='580.4' y='151.6' width='2.3' height='130.4' rx='0.6' fill='%2379c7a9' fill-opacity='0.55'/%3E%3Crect x='583.0' y='193.1' width='2.3' height='88.9' rx='0.6' fill='%2379c7a9' fill-opacity='0.70'/%3E%3Crect x='585.6' y='93.8' width='2.3' height='188.2' rx='0.6' fill='%2379c7a9' fill-opacity='0.85'/%3E%3Crect x='588.8' y='203.9' width='2.3' height='78.1' rx='0.6' fill='%2391b69b' fill-opacity='0.55'/%3E%3Crect x='591.4' y='118.4' width='2.3' height='163.6' rx='0.6' fill='%2391b69b' fill-opacity='0.70'/%3E%3Crect x='594.0' y='90.0' width='2.3' height='192.0' rx='0.6' fill='%2391b69b' fill-opacity='0.85'/%3E%3Crect x='597.2' y='152.2' width='2.3' height='129.8' rx='0.6' fill='%237dc4a7' fill-opacity='0.55'/%3E%3Crect x='599.8' y='169.3' width='2.3' height='112.7' rx='0.6' fill='%237dc4a7' fill-opacity='0.70'/%3E%3Crect x='602.5' y='103.1' width='2.3' height='178.9' rx='0.6' fill='%237dc4a7' fill-opacity='0.85'/%3E%3Crect x='605.6' y='177.9' width='2.3' height='104.1' rx='0.6' fill='%2372cbad' fill-opacity='0.55'/%3E%3Crect x='608.2' y='169.3' width='2.3' height='112.7' rx='0.6' fill='%2372cbad' fill-opacity='0.70'/%3E%3Crect x='610.9' y='70.2' width='2.3' height='211.8' rx='0.6' fill='%2372cbad' fill-opacity='0.85'/%3E%3Crect x='614.0' y='161.6' width='2.3' height='120.4' rx='0.6' fill='%2379c7a9' fill-opacity='0.55'/%3E%3Crect x='616.6' y='140.7' width='2.3' height='141.3' rx='0.6' fill='%2379c7a9' fill-opacity='0.70'/%3E%3Crect x='619.3' y='109.0' width='2.3' height='173.0' rx='0.6' fill='%2379c7a9' fill-opacity='0.85'/%3E%3Crect x='622.4' y='165.3' width='2.3' height='116.7' rx='0.6' fill='%2399b096' fill-opacity='0.55'/%3E%3Crect x='625.1' y='160.1' width='2.3' height='121.9' rx='0.6' fill='%2399b096' fill-opacity='0.70'/%3E%3Crect x='627.7' y='91.0' width='2.3' height='191.0' rx='0.6' fill='%2399b096' fill-opacity='0.85'/%3E%3Crect x='630.8' y='159.2' width='2.3' height='122.8' rx='0.6' fill='%2361d6b6' fill-opacity='0.55'/%3E%3Crect x='633.5' y='189.7' width='2.3' height='92.3' rx='0.6' fill='%2361d6b6' fill-opacity='0.70'/%3E%3Crect x='636.1' y='66.6' width='2.3' height='215.4' rx='0.6' fill='%2361d6b6' fill-opacity='0.85'/%3E%3Crect x='639.3' y='145.3' width='2.3' height='136.7' rx='0.6' fill='%237ec3a6' fill-opacity='0.55'/%3E%3Crect x='641.9' y='188.9' width='2.3' height='93.1' rx='0.6' fill='%237ec3a6' fill-opacity='0.70'/%3E%3Crect x='644.5' y='79.2' width='2.3' height='202.8' rx='0.6' fill='%237ec3a6' fill-opacity='0.85'/%3E%3Crect x='647.7' y='196.1' width='2.3' height='85.9' rx='0.6' fill='%2373caac' fill-opacity='0.55'/%3E%3Crect x='650.3' y='128.8' width='2.3' height='153.2' rx='0.6' fill='%2373caac' fill-opacity='0.70'/%3E%3Crect x='652.9' y='72.5' width='2.3' height='209.5' rx='0.6' fill='%2373caac' fill-opacity='0.85'/%3E%3Crect x='656.1' y='171.3' width='2.3' height='110.7' rx='0.6' fill='%2376c8aa' fill-opacity='0.55'/%3E%3Crect x='658.7' y='170.9' width='2.3' height='111.1' rx='0.6' fill='%2376c8aa' fill-opacity='0.70'/%3E%3Crect x='661.3' y='61.4' width='2.3' height='220.6' rx='0.6' fill='%2376c8aa' fill-opacity='0.85'/%3E%3Crect x='664.5' y='171.6' width='2.3' height='110.4' rx='0.6' fill='%2389bb9f' fill-opacity='0.55'/%3E%3Crect x='667.1' y='152.9' width='2.3' height='129.1' rx='0.6' fill='%2389bb9f' fill-opacity='0.70'/%3E%3Crect x='669.7' y='76.3' width='2.3' height='205.7' rx='0.6' fill='%2389bb9f' fill-opacity='0.85'/%3E%3Crect x='672.9' y='168.6' width='2.3' height='113.4' rx='0.6' fill='%238eb89c' fill-opacity='0.55'/%3E%3Crect x='675.5' y='167.7' width='2.3' height='114.3' rx='0.6' fill='%238eb89c' fill-opacity='0.70'/%3E%3Crect x='678.2' y='67.3' width='2.3' height='214.7' rx='0.6' fill='%238eb89c' fill-opacity='0.85'/%3E%3Crect x='681.3' y='158.9' width='2.3' height='123.1' rx='0.6' fill='%23ada38a' fill-opacity='0.55'/%3E%3Crect x='683.9' y='126.8' width='2.3' height='155.2' rx='0.6' fill='%23ada38a' fill-opacity='0.70'/%3E%3Crect x='686.6' y='105.4' width='2.3' height='176.6' rx='0.6' fill='%23ada38a' fill-opacity='0.85'/%3E%3Crect x='689.7' y='151.0' width='2.3' height='131.0' rx='0.6' fill='%2355dfbd' fill-opacity='0.55'/%3E%3Crect x='692.3' y='103.0' width='2.3' height='179.0' rx='0.6' fill='%2355dfbd' fill-opacity='0.70'/%3E%3Crect x='695.0' y='133.0' width='2.3' height='149.0' rx='0.6' fill='%2355dfbd' fill-opacity='0.85'/%3E%3Crect x='698.1' y='164.7' width='2.3' height='117.3' rx='0.6' fill='%2392b59a' fill-opacity='0.55'/%3E%3Crect x='700.8' y='163.3' width='2.3' height='118.7' rx='0.6' fill='%2392b59a' fill-opacity='0.70'/%3E%3Crect x='703.4' y='70.9' width='2.3' height='211.1' rx='0.6' fill='%2392b59a' fill-opacity='0.85'/%3E%3Crect x='706.5' y='160.0' width='2.3' height='122.0' rx='0.6' fill='%23cc8e79' fill-opacity='0.55'/%3E%3Crect x='709.2' y='99.6' width='2.3' height='182.4' rx='0.6' fill='%23cc8e79' fill-opacity='0.70'/%3E%3Crect x='711.8' y='118.6' width='2.3' height='163.4' rx='0.6' fill='%23cc8e79' fill-opacity='0.85'/%3E%3Crect x='715.0' y='181.9' width='2.3' height='100.1' rx='0.6' fill='%235fd8b8' fill-opacity='0.55'/%3E%3Crect x='717.6' y='103.8' width='2.3' height='178.2' rx='0.6' fill='%235fd8b8' fill-opacity='0.70'/%3E%3Crect x='720.2' y='92.3' width='2.3' height='189.7' rx='0.6' fill='%235fd8b8' fill-opacity='0.85'/%3E%3Crect x='723.4' y='163.2' width='2.3' height='118.8' rx='0.6' fill='%2395b398' fill-opacity='0.55'/%3E%3Crect x='726.0' y='175.9' width='2.3' height='106.1' rx='0.6' fill='%2395b398' fill-opacity='0.70'/%3E%3Crect x='728.6' y='47.8' width='2.3' height='234.2' rx='0.6' fill='%2395b398' fill-opacity='0.85'/%3E%3Crect x='731.8' y='154.2' width='2.3' height='127.8' rx='0.6' fill='%2391b69b' fill-opacity='0.55'/%3E%3Crect x='734.4' y='153.5' width='2.3' height='128.5' rx='0.6' fill='%2391b69b' fill-opacity='0.70'/%3E%3Crect x='740.2' y='154.0' width='2.3' height='128.0' rx='0.6' fill='%2397b297' fill-opacity='0.55'/%3E%3Crect x='742.8' y='162.5' width='2.3' height='119.5' rx='0.6' fill='%2397b297' fill-opacity='0.70'/%3E%3Crect x='745.4' y='72.2' width='2.3' height='209.8' rx='0.6' fill='%2397b297' fill-opacity='0.85'/%3E%3Crect x='748.6' y='165.7' width='2.3' height='116.3' rx='0.6' fill='%239ab095' fill-opacity='0.55'/%3E%3Crect x='751.2' y='139.1' width='2.3' height='142.9' rx='0.6' fill='%239ab095' fill-opacity='0.70'/%3E%3Crect x='753.9' y='70.4' width='2.3' height='211.6' rx='0.6' fill='%239ab095' fill-opacity='0.85'/%3E%3Crect x='757.0' y='151.9' width='2.3' height='130.1' rx='0.6' fill='%2384bfa2' fill-opacity='0.55'/%3E%3Crect x='759.6' y='152.3' width='2.3' height='129.7' rx='0.6' fill='%2384bfa2' fill-opacity='0.70'/%3E%3Crect x='762.3' y='88.4' width='2.3' height='193.6' rx='0.6' fill='%2384bfa2' fill-opacity='0.85'/%3E%3Crect x='765.4' y='153.2' width='2.3' height='128.8' rx='0.6' fill='%2378c7a9' fill-opacity='0.55'/%3E%3Crect x='768.0' y='135.3' width='2.3' height='146.7' rx='0.6' fill='%2378c7a9' fill-opacity='0.70'/%3E%3Crect x='770.7' y='92.8' width='2.3' height='189.2' rx='0.6' fill='%2378c7a9' fill-opacity='0.85'/%3E%3Crect x='773.8' y='169.9' width='2.3' height='112.1' rx='0.6' fill='%2389bca0' fill-opacity='0.55'/%3E%3Crect x='776.5' y='119.6' width='2.3' height='162.4' rx='0.6' fill='%2389bca0' fill-opacity='0.70'/%3E%3Crect x='779.1' y='72.7' width='2.3' height='209.3' rx='0.6' fill='%2389bca0' fill-opacity='0.85'/%3E%3Crect x='782.2' y='177.2' width='2.3' height='104.8' rx='0.6' fill='%234fe3c1' fill-opacity='0.55'/%3E%3Crect x='784.9' y='102.6' width='2.3' height='179.4' rx='0.6' fill='%234fe3c1' fill-opacity='0.70'/%3E%3Crect x='787.5' y='75.1' width='2.3' height='206.9' rx='0.6' fill='%234fe3c1' fill-opacity='0.85'/%3E%3Crect x='790.7' y='164.0' width='2.3' height='118.0' rx='0.6' fill='%23b79c85' fill-opacity='0.55'/%3E%3Crect x='793.3' y='106.6' width='2.3' height='175.4' rx='0.6' fill='%23b79c85' fill-opacity='0.70'/%3E%3Crect x='795.9' y='86.4' width='2.3' height='195.6' rx='0.6' fill='%23b79c85' fill-opacity='0.85'/%3E%3Crect x='799.1' y='150.4' width='2.3' height='131.6' rx='0.6' fill='%23cb8e79' fill-opacity='0.55'/%3E%3Crect x='801.7' y='137.3' width='2.3' height='144.7' rx='0.6' fill='%23cb8e79' fill-opacity='0.70'/%3E%3Crect x='804.3' y='78.4' width='2.3' height='203.6' rx='0.6' fill='%23cb8e79' fill-opacity='0.85'/%3E%3Crect x='807.5' y='153.6' width='2.3' height='128.4' rx='0.6' fill='%2385bea2' fill-opacity='0.55'/%3E%3Crect x='810.1' y='118.6' width='2.3' height='163.4' rx='0.6' fill='%2385bea2' fill-opacity='0.70'/%3E%3Crect x='812.7' y='77.9' width='2.3' height='204.1' rx='0.6' fill='%2385bea2' fill-opacity='0.85'/%3E%3Crect x='815.9' y='153.7' width='2.3' height='128.3' rx='0.6' fill='%2371ccae' fill-opacity='0.55'/%3E%3Crect x='818.5' y='118.4' width='2.3' height='163.6' rx='0.6' fill='%2371ccae' fill-opacity='0.70'/%3E%3Crect x='821.1' y='75.1' width='2.3' height='206.9' rx='0.6' fill='%2371ccae' fill-opacity='0.85'/%3E%3Crect x='824.3' y='147.2' width='2.3' height='134.8' rx='0.6' fill='%23c7917b' fill-opacity='0.55'/%3E%3Crect x='826.9' y='119.4' width='2.3' height='162.6' rx='0.6' fill='%23c7917b' fill-opacity='0.70'/%3E%3Crect x='829.6' y='83.3' width='2.3' height='198.7' rx='0.6' fill='%23c7917b' fill-opacity='0.85'/%3E%3Crect x='832.7' y='156.6' width='2.3' height='125.4' rx='0.6' fill='%2385bea2' fill-opacity='0.55'/%3E%3Crect x='835.3' y='115.2' width='2.3' height='166.8' rx='0.6' fill='%2385bea2' fill-opacity='0.70'/%3E%3Crect x='838.0' y='74.8' width='2.3' height='207.2' rx='0.6' fill='%2385bea2' fill-opacity='0.85'/%3E%3Crect x='841.1' y='162.2' width='2.3' height='119.8' rx='0.6' fill='%236bd0b1' fill-opacity='0.55'/%3E%3Crect x='843.8' y='124.2' width='2.3' height='157.8' rx='0.6' fill='%236bd0b1' fill-opacity='0.70'/%3E%3Crect x='846.4' y='56.3' width='2.3' height='225.7' rx='0.6' fill='%236bd0b1' fill-opacity='0.85'/%3E%3Crect x='849.5' y='161.2' width='2.3' height='120.8' rx='0.6' fill='%238abb9f' fill-opacity='0.55'/%3E%3Crect x='852.2' y='109.0' width='2.3' height='173.0' rx='0.6' fill='%238abb9f' fill-opacity='0.70'/%3E%3Crect x='854.8' y='70.2' width='2.3' height='211.8' rx='0.6' fill='%238abb9f' fill-opacity='0.85'/%3E%3Crect x='857.9' y='160.3' width='2.3' height='121.7' rx='0.6' fill='%2398b197' fill-opacity='0.55'/%3E%3Crect x='860.6' y='85.2' width='2.3' height='196.8' rx='0.6' fill='%2398b197' fill-opacity='0.70'/%3E%3Crect x='863.2' y='66.6' width='2.3' height='215.4' rx='0.6' fill='%2398b197' fill-opacity='0.85'/%3E%3Crect x='866.4' y='148.4' width='2.3' height='133.6' rx='0.6' fill='%237fc2a5' fill-opacity='0.55'/%3E%3Crect x='869.0' y='107.8' width='2.3' height='174.2' rx='0.6' fill='%237fc2a5' fill-opacity='0.70'/%3E%3Crect x='871.6' y='63.5' width='2.3' height='218.5' rx='0.6' fill='%237fc2a5' fill-opacity='0.85'/%3E%3Crect x='874.8' y='148.9' width='2.3' height='133.1' rx='0.6' fill='%2377c8aa' fill-opacity='0.55'/%3E%3Crect x='877.4' y='113.2' width='2.3' height='168.8' rx='0.6' fill='%2377c8aa' fill-opacity='0.70'/%3E%3Crect x='880.0' y='57.5' width='2.3' height='224.5' rx='0.6' fill='%2377c8aa' fill-opacity='0.85'/%3E%3Crect x='883.2' y='152.0' width='2.3' height='130.0' rx='0.6' fill='%2372cbad' fill-opacity='0.55'/%3E%3Crect x='885.8' y='98.2' width='2.3' height='183.8' rx='0.6' fill='%2372cbad' fill-opacity='0.70'/%3E%3Crect x='888.4' y='63.2' width='2.3' height='218.8' rx='0.6' fill='%2372cbad' fill-opacity='0.85'/%3E%3Crect x='891.6' y='141.9' width='2.3' height='140.1' rx='0.6' fill='%234fe3c1' fill-opacity='0.55'/%3E%3Crect x='894.2' y='104.4' width='2.3' height='177.6' rx='0.6' fill='%234fe3c1' fill-opacity='0.70'/%3E%3Crect x='896.8' y='63.2' width='2.3' height='218.8' rx='0.6' fill='%234fe3c1' fill-opacity='0.85'/%3E%3Cline x1='0' x2='900' y1='282' y2='282' stroke='%234fe3c1' stroke-opacity='0.45'/%3E%3C/svg%3E");
+  --ramp: linear-gradient(90deg, var(--r-net), var(--r-pay), var(--r-data));
+
+  --max-width: 1200px;
+}
+
+body { font-size: 1rem; line-height: 1.66; background-image: radial-gradient(rgba(27, 31, 74, 0.07) 1px, transparent 1.2px); background-size: 18px 18px; }
+
+::selection { background: rgba(31, 166, 214, 0.2); }
+:where(a, button, [tabindex], input, select):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a { color: var(--primary-light); }
+a:hover { color: var(--accent); }
+
+.progress__bar { background: var(--ramp); }
+.skip-link { background: var(--primary); }
+
+/* --- masthead: the signal bars -------------------------------------------------- */
+
+.masthead {
+  position: relative;
+  color: var(--text-inverse);
+  border-bottom: 0;
+  padding: 3.3rem var(--gutter) 4.2rem;
+  background:
+    linear-gradient(90deg, rgba(10, 11, 31, 0.97) 0 42%, rgba(10, 11, 31, 0.78) 60%, rgba(10, 11, 31, 0.12) 90%),
+    var(--bars) right bottom / 900px auto no-repeat,
+    radial-gradient(ellipse at 80% 10%, #23285e, transparent 60%),
+    linear-gradient(180deg, #14173a, #0a0b1f);
+}
+.masthead::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--ramp); }
+.masthead .overline { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; color: var(--accent-light); margin-bottom: 1rem; }
+.masthead .overline::before { content: "CONNECT · PAY · COUNT · "; color: #fff; }
+.masthead h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.1rem, 4.8vw, 3.5rem); line-height: 1.06; letter-spacing: -0.005em; max-width: 22ch; color: #fff; }
+.masthead .subtitle { font-family: var(--sans); font-weight: 500; font-size: 1.2rem; color: #cfd6f2; max-width: 56ch; }
+.masthead .strapline { font-family: var(--sans); font-style: normal; font-size: 1.02rem; color: #e8ecfb; border-left: 4px solid var(--r-pay); max-width: 64ch; background: rgba(10, 11, 31, 0.74); }
+.masthead .meta-row { border-top: 1px solid rgba(255, 255, 255, 0.16); color: #aeb7dc; font-family: var(--mono); font-size: 0.78rem; position: relative; }
+.masthead .meta-row strong { color: var(--accent-light); font-family: var(--mono); font-weight: 700; font-size: 0.66rem; letter-spacing: 0.1em; }
+
+/* --- nav --------------------------------------------------------------------- */
+
+.sticky-nav { background: rgba(244, 246, 251, 0.96); border-bottom: 1px solid var(--border); }
+.nav-inner a { color: var(--text-muted); font-family: var(--mono); font-size: 0.76rem; }
+.nav-inner a:hover { color: var(--text); }
+.nav-inner a.is-active { color: var(--primary); border-bottom-color: var(--accent); }
+
+/* --- headings with a signal glyph ------------------------------------------------ */
+
+section > h2 {
+  position: relative;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.8vw, 2.4rem);
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+  color: var(--primary);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 0 0.55rem 1.9rem;
+}
+section > h2::before {
+  content: "";
+  position: absolute; left: 0.1rem; top: 0.3em;
+  width: 1.15rem; height: 0.95rem;
+  background:
+    linear-gradient(var(--r-net), var(--r-net)) 0 100% / 0.28rem 40% no-repeat,
+    linear-gradient(var(--r-pay), var(--r-pay)) 0.42rem 100% / 0.28rem 70% no-repeat,
+    linear-gradient(var(--r-data), var(--r-data)) 0.84rem 100% / 0.28rem 100% no-repeat;
+}
+.abstract h2, .endmatter h2 { padding-left: 0; border-bottom: 0; font-family: var(--mono); font-size: 0.86rem; }
+.abstract h2::before, .endmatter h2::before { content: none; }
+section > .section-dek { font-family: var(--sans); font-style: normal; font-weight: 500; color: var(--text-muted); font-size: 1.15rem; line-height: 1.45; max-width: none; }
+
+.section-rule { border-top: 1px solid var(--border-light); margin: 2.6rem 0 2.8rem; }
+
+/* --- abstract, endmatter ------------------------------------------------------------- */
+
+.abstract { background: var(--bg-card); border: 1px solid var(--border); border-top: 6px solid transparent; border-image: var(--ramp) 1; border-radius: 0; }
+.abstract h2 { color: var(--primary); letter-spacing: 0.12em; }
+.endmatter .kw { background: var(--bg-accent); border-color: var(--border); font-family: var(--mono); font-size: 0.72rem; }
+.endmatter dt { font-family: var(--mono); font-size: 0.72rem; }
+
+/* --- KPI board ------------------------------------------------------------------------- */
+
+.kpi-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1.6rem 0; }
+.kpi { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 1.15rem 1.05rem 0.85rem; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.kpi::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--k, var(--accent)); }
+.kpi::after { content: ""; position: absolute; right: 10px; top: 12px; width: 16px; height: 12px; background: linear-gradient(var(--k), var(--k)) 0 100% / 4px 40% no-repeat, linear-gradient(var(--k), var(--k)) 6px 100% / 4px 70% no-repeat, linear-gradient(var(--k), var(--k)) 12px 100% / 4px 100% no-repeat; opacity: 0.55; }
+.kpi--net { --k: var(--r-net); }
+.kpi--pay { --k: var(--r-pay); }
+.kpi--data { --k: var(--r-data); }
+.kpi--shock { --k: var(--r-shock); }
+.kpi--cap { --k: var(--r-cap); }
+.kpi-value { font-family: var(--serif); font-weight: 800; font-size: clamp(1.8rem, 3.2vw, 2.35rem); letter-spacing: -0.02em; line-height: 1; color: var(--text); font-variant-numeric: lining-nums tabular-nums; }
+.kpi-label { font-size: 0.86rem; line-height: 1.42; color: var(--text-secondary); margin-top: 0.45rem; flex: 1; }
+.kpi-source { font-family: var(--mono); font-size: 0.66rem; color: var(--text-muted); margin-top: 0.6rem; border-top: 1px solid var(--border-light); padding-top: 0.4rem; margin-bottom: 0.3rem; }
+
+/* --- readout ----------------------------------------------------------------------------- */
+
+.readout { background: var(--bg-dark); border-radius: 2px; padding: 1.15rem 1.4rem 0.45rem; margin: 1.6rem 0; position: relative; overflow: hidden; border-top: 6px solid transparent; border-image: var(--ramp) 1; }
+.readout-title { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); margin: 0 0 0.4rem !important; }
+.readout p { color: #d9def4; text-align: justify; hyphens: auto; -webkit-hyphens: auto; position: relative; }
+.readout strong { color: #fff; }
+
+/* --- panels ------------------------------------------------------------------------------ */
+
+.dash-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 1.2rem 0; }
+.panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 1.05rem 1.15rem 0.95rem; min-width: 0; }
+.panel--wide { grid-column: 1 / -1; }
+.panel--hero { margin: 1.2rem 0; padding: 1.15rem 1.25rem 1.05rem; border-top: 5px solid transparent; border-image: var(--ramp) 1; }
+.panel-head { border-bottom: 1px solid var(--border-light); margin-bottom: 0.75rem; padding-bottom: 0.55rem; }
+.panel-title { font-family: var(--serif); font-weight: 800; letter-spacing: -0.01em; font-size: 1.18rem; line-height: 1.2; color: var(--text); margin: 0 !important; }
+.panel-meta { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin: 0.25rem 0 0.4rem !important; }
+.panel-note { font-size: 0.85rem; line-height: 1.5; color: var(--text-muted); margin: 0.6rem 0 0 !important; text-align: left !important; }
+.panel canvas { max-width: 100%; }
+.panel .chart-frame { height: 310px; }
+.panel .chart-frame--tall { height: 440px; }
+.panel .chart-frame--short { height: 240px; }
+
+.stat-tile { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 0.85rem 1rem; border-left: 6px solid var(--k, var(--accent)); min-width: 0; }
+.stat-tile--hf { --k: var(--q-hf); }
+.stat-tile--hc { --k: var(--q-hc); }
+.stat-tile--lf { --k: var(--q-lf); }
+.stat-tile--lc { --k: var(--q-lc); }
+.stat-tile--net { --k: var(--r-net); }
+.stat-tile--pay { --k: var(--r-pay); }
+.stat-tile--data { --k: var(--r-data); }
+.stat-tile--shock { --k: var(--r-shock); }
+.stat-tile--cap { --k: var(--r-cap); }
+.stat-tile-value { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; font-size: 1.6rem; line-height: 1.05; color: var(--text); margin: 0 !important; font-variant-numeric: lining-nums tabular-nums; }
+.stat-tile-label { font-size: 0.82rem; color: var(--text-muted); margin: 0.2rem 0 0 !important; text-align: left !important; line-height: 1.4; }
+.tile-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 1rem 0; }
+
+/* --- controls ------------------------------------------------------------------------------ */
+
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px 22px; margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1px solid var(--border-light); }
+.slider { display: grid; gap: 3px; }
+.slider-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.slider label, .seg-wrap .seg-label { font-family: var(--sans); font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.slider output { font-family: var(--mono); font-weight: 700; font-size: 0.84rem; color: var(--accent); white-space: nowrap; }
+.slider .hint { font-size: 0.78rem; line-height: 1.35; color: var(--text-muted); margin: 0 !important; text-align: left !important; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); margin: 2px 0; }
+.seg-wrap { display: grid; gap: 5px; }
+.segmented { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; background: var(--bg-card); width: fit-content; max-width: 100%; }
+.segmented button { font: inherit; font-family: var(--mono); font-size: 0.76rem; padding: 0.38rem 0.66rem; border: 0; background: transparent; color: var(--text-secondary); cursor: pointer; }
+.segmented button + button { border-left: 1px solid var(--rule); }
+.segmented button.is-on { background: var(--primary); color: #fff; }
+.calc-note { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin: 0.6rem 0 0 !important; line-height: 1.5; }
+select.pick { font: inherit; font-family: var(--sans); font-size: 0.92rem; padding: 0.35rem 0.5rem; border: 1px solid var(--rule); border-radius: 2px; background: var(--bg-card); color: var(--text); max-width: 100%; }
+
+/* --- atlas and country card ------------------------------------------------------------------- */
+
+.atlas-layout { display: grid; grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.atlas-wrap { position: relative; border-radius: 2px; overflow: hidden; background: #e9edf7; border: 1px solid var(--border); }
+.atlas { display: block; width: 100%; height: auto; }
+.atlas .atlas-sea { fill: #e9edf7; }
+.atlas .atlas-land path { fill: #d3d9ea; stroke: #fff; stroke-width: 0.45; stroke-linejoin: round; transition: fill 0.25s; }
+.atlas .atlas-dots circle { fill: #d3d9ea; stroke: var(--text); stroke-width: 0.5; }
+.atlas [data-iso].is-in { cursor: pointer; }
+.atlas [data-iso].is-in:hover { stroke: var(--text); stroke-width: 1.3; }
+.atlas [data-iso].is-pick { stroke: var(--text); stroke-width: 2.2; }
+.atlas-corner { position: absolute; left: 10px; bottom: 8px; font-family: var(--mono); font-size: 0.62rem; color: var(--text-muted); background: rgba(255, 255, 255, 0.85); padding: 1px 6px; border-radius: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0.6rem 0 0; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 0.72rem; color: var(--text-secondary); }
+.legend i { width: 14px; height: 10px; border-radius: 1px; flex: none; }
+.country-card { border: 1px solid var(--border); border-radius: 2px; background: var(--bg); padding: 0.85rem 0.95rem; min-height: 300px; border-top: 6px solid var(--cc, var(--rule)); }
+.country-card .cc-kicker { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin: 0 !important; }
+.country-card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.45rem; color: var(--primary); margin: 0.05rem 0 0.15rem; line-height: 1.1; }
+.country-card .cc-class { font-family: var(--mono); font-size: 0.72rem; margin: 0 0 0.55rem !important; color: var(--text-secondary); text-align: left !important; }
+.kv { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; font-size: 0.86rem; margin: 0; }
+.kv dt { color: var(--text-secondary); }
+.kv dd { margin: 0; font-family: var(--mono); font-size: 0.8rem; color: var(--text); text-align: right; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin: 0.5rem 0 0; }
+.tag-row span { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.04em; padding: 2px 6px; border-radius: 2px; background: var(--bg-accent); color: var(--text-secondary); }
+.tag-row span.on { background: var(--r-pay); color: #fff; }
+
+/* --- G2P timeline ------------------------------------------------------------------ */
+
+.tl { display: grid; gap: 8px; margin: 0.4rem 0 0; }
+.tl-row { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 12px; align-items: center; }
+.tl-row .tl-c { font-family: var(--serif); font-weight: 700; font-size: 1rem; color: var(--primary); line-height: 1.15; }
+.tl-row .tl-c small { display: block; font-family: var(--mono); font-weight: 400; font-size: 0.64rem; color: var(--text-muted); }
+.tl-track { position: relative; height: 30px; background: repeating-linear-gradient(90deg, var(--border-light) 0 1px, transparent 1px calc(100% / 13)); border-radius: 2px; }
+.tl-bar { position: absolute; top: 6px; height: 18px; border-radius: 9px; background: var(--k, var(--r-pay)); display: flex; align-items: center; padding: 0 8px; font-family: var(--mono); font-size: 0.66rem; color: #fff; white-space: nowrap; min-width: 26px; }
+.tl-bar.slow { background: repeating-linear-gradient(135deg, var(--r-shock) 0 6px, #f08b80 6px 12px); }
+.tl-axis { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 12px; font-family: var(--mono); font-size: 0.62rem; color: var(--text-muted); }
+.tl-axis div { display: flex; justify-content: space-between; }
+
+/* --- breaker cards -------------------------------------------------------------- */
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 1.2rem 0; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; padding: 0.95rem 1rem; border-top: 5px solid var(--k, var(--primary-light)); }
+.card h3 { font-family: var(--serif); font-weight: 800; font-size: 1.15rem; line-height: 1.2; color: var(--primary); margin: 0 0 0.35rem; }
+.card p { font-size: 0.88rem; line-height: 1.5; color: var(--text-secondary); margin: 0 !important; text-align: left !important; }
+.card .tag { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 0.25rem !important; }
+.card--a { --k: var(--r-net); }
+.card--b { --k: var(--r-pay); }
+.card--c { --k: var(--r-data); }
+.card--d { --k: var(--r-cap); }
+
+/* --- references, footer --------------------------------------------------------------------- */
+
+.ref-list .ref-org { font-family: var(--mono); color: var(--primary-light); font-size: 0.7rem; }
+.report-footer { border-top: 0; position: relative; padding-top: calc(3rem + 6px); }
+.report-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--ramp); }
+.footer-inner h3 { color: #fff; font-family: var(--serif); font-weight: 800; font-size: 1.45rem; }
+.footer-inner a { color: var(--accent-light); }
+.cite-box { border-left-color: var(--accent); }
+
+/* --- responsive ------------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .kpi-board, .tile-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .atlas-layout { grid-template-columns: minmax(0, 1fr); }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .tl-row, .tl-axis { grid-template-columns: 6.5rem minmax(0, 1fr); }
+  .dash-grid, .cards { grid-template-columns: minmax(0, 1fr); }
+  .masthead { padding-top: 2.2rem; background: linear-gradient(180deg, rgba(10, 11, 31, 0.92) 0 58%, rgba(10, 11, 31, 0.45)), var(--bars) 70% 100% / 640px auto no-repeat, linear-gradient(180deg, #14173a, #0a0b1f); }
+  .segmented button { padding: 0.34rem 0.5rem; font-size: 0.7rem; }
+}
+@media (max-width: 420px) {
+  .kpi-board, .tile-row { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .controls { display: none; }
+  .masthead, .readout, .report-footer::before, .atlas-wrap, .strip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* --- rails in the country card ---------------------------------------------------- */
+
+.rails { display: grid; gap: 5px; margin: 0.7rem 0 0; }
+.rail { display: grid; grid-template-columns: 3.6rem minmax(0, 1fr) 2.2rem; gap: 8px; align-items: center; font-family: var(--mono); font-size: 0.68rem; color: var(--text-muted); }
+.rail b { display: block; height: 8px; border-radius: 4px; background: var(--bg-accent); overflow: hidden; }
+.rail b i { display: block; height: 100%; border-radius: 4px; }
+.rail em { font-style: normal; text-align: right; color: var(--text); }
+.q-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0.9rem 0; }
+.q-tile { border: 1px solid var(--border); border-left: 6px solid var(--k); background: var(--bg-card); border-radius: 2px; padding: 0.6rem 0.75rem; }
+.q-tile b { font-family: var(--serif); font-size: 1.5rem; display: block; line-height: 1.05; color: var(--text); }
+.q-tile span { font-size: 0.78rem; color: var(--text-muted); display: block; line-height: 1.35; }
+.marg { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0.6rem 0 0.9rem; }
+@media (max-width: 680px) { .q-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .marg { grid-template-columns: minmax(0, 1fr); } }
