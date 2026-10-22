@@ -1,0 +1,65 @@
+{
+  "number": "2026-59",
+  "title": "Addressing the Pollution–Poverty–Climate Feedback Loop",
+  "subtitle": "Integrated pathways for reducing environmental exposure and accelerating development",
+  "strapline": "Much of the smoke that shortens lives and the carbon that heats the planet come from the same fires, and poverty decides which fires are lit. This dashboard maps the shared roots of the loop for 156 countries, using source-attribution estimates for fine-particle pollution. It shows where cutting carbon saves the most lives, how to keep cleaner air from adding warming, and which integrated pathway fits which country.",
+  "dek": "Burning coal, oil, gas and biofuels caused 48% of the 3.8 million deaths from outdoor fine particles in 2017, the same combustion that drives climate change. Each million tonnes of fossil CO₂ carries about 105 deaths a year in lower-middle-income countries and 9 in rich ones, so poorer countries, which emit 11% of fossil CO₂, bear 34% of fossil-fuel air-pollution deaths. Cleaning the air must be paired with methane cuts: alone it adds 0.26°C by 2050, but with methane cuts only 0.02°C.",
+  "abstract": [
+    "This report maps the pollution–poverty–climate loop through its shared root, combustion. It uses McDuffie et al.'s (2021) attribution of 2017 ambient PM2.5 exposure and deaths to coal, oil and gas, biofuel, dust, fires, farming and other sources for 156 countries. These are combined with Global Carbon Budget fossil-CO₂ emissions, World Bank poverty lines, WDI exposure data and IPCC AR6 short-lived climate forcer scenarios.",
+    "Fuel combustion caused 1.8 million of the 3.8 million deaths from outdoor PM2.5 in 2017 (48%): coal about 610,000, oil and gas 530,000 and biofuels 690,000. The authors' own non-linear estimate for fossil fuels is 1.05 million. Lower-middle-income countries are the most combustion-heavy, and dust and fires dominate in low-income countries. Fossil-fuel PM2.5 deaths per million tonnes of fossil CO₂ are 105 in lower-middle-, 94 in low-, 44 in upper-middle- and 9 in high-income countries. Low- and lower-middle-income countries emit 11% of fossil CO₂ but bear 34% of the deaths. Countries fall into five loop archetypes by largest human source: biomass (45 countries, 3.3 billion people), coal (18), oil and gas (57), fires (31, median extreme poverty 43%) and farming (6). Desert dust dominates 38 countries.",
+    "Because aerosols mask about half a degree of warming, cleaning the air alone would add about 0.26°C from short-lived forcers by 2050. Pairing it with methane cuts brings this to about 0.02°C, and a 45% methane cut also avoids 260,000 deaths a year. Integrated pathways that lead with each archetype's dominant source and share a core of methane and black-carbon cuts can break the loop at its root. Financing them by deaths per tonne, as well as by tonnes, steers investment to where the combined return is highest.",
+    "Interactive charts show deaths by source, the source mix by income, coal against biofuel by archetype, deaths per tonne by income and country, exposure against poverty, and the aerosol trap. The report also includes a seven-layer atlas with source-mix cards, a sortable table and a pathway builder that combines levers for any country."
+  ],
+  "jel": "Q53, Q54, I15, O13, Q42, Q58 — air pollution; climate; health and development; energy and development; alternative energy; environmental policy",
+  "method": "156 countries with at least 1 million people. Source attribution: McDuffie et al. (2021) Supplementary Data 1–2, 2017 population-weighted PM2.5 and fractional contributions by sector and fuel (GEOS-Chem with CEDS emissions); deaths from GBD 2019 exposure–response functions with 95% intervals. Fuel groups: coal, oil and gas, biofuel; dust = AFCID + windblown; fires = agricultural waste burning + other open fires; farming = agriculture sector. Source deaths = country shares × country deaths (fossil 1.14 m; the paper's non-linear estimate is 1.05 m). Archetype = largest of biofuel, coal, oil and gas, fires, farming; dust-dominated = dust ≥ 50%. Deaths per Mt = fossil PM2.5 deaths ÷ fossil CO2 (coal + oil + gas, Global Carbon Budget via OWID, 2017). Poverty: World Bank PIP $3.00 and $8.30 (2021 PPP), 2017. Short-lived forcers: IPCC AR6 WG1 Chapter 7 data. Outdoor PM2.5 only; household air pollution and ozone excluded; first-order pathway builder; associations not causal.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600;800&family=PT+Sans:wght@400;700&family=Fira+Sans+Condensed:wght@500;600&display=swap",
+  "themeColor": "#0f1c1f",
+  "topics": [
+    "Public Health",
+    "Energy Transition",
+    "Systemic Risk",
+    "Inequality"
+  ],
+  "keywords": [
+    "air pollution",
+    "PM2.5 source attribution",
+    "fossil fuels",
+    "biomass burning",
+    "poverty",
+    "climate change",
+    "co-benefits",
+    "methane",
+    "black carbon",
+    "aerosol masking",
+    "clean cooking",
+    "integrated policy",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "loop", "label": "1. The Loop" },
+    { "id": "roots", "label": "2. Shared Roots" },
+    { "id": "archetypes", "label": "3. Where the Roots Differ" },
+    { "id": "dividend", "label": "4. The Health Dividend per Tonne" },
+    { "id": "poverty", "label": "5. Poverty and Exposure" },
+    { "id": "aerosol", "label": "6. The Aerosol Trap" },
+    { "id": "pathways", "label": "7. Integrated Pathways" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "builder", "label": "9. Pathway Builder" },
+    { "id": "response", "label": "10. Making Integration Work" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "48%", "label": "Of outdoor PM2.5 deaths come from burning fuels, the same root as climate change" },
+    { "value": "105 vs 9", "label": "Deaths per Mt fossil CO₂, lower-middle- vs high-income countries" },
+    { "value": "11% → 34%", "label": "Poorer countries' share of fossil CO₂ vs fossil air-pollution deaths" },
+    { "value": "+0.26 vs +0.02°C", "label": "Short-lived warming by 2050: clean air alone vs with methane cuts" }
+  ]
+}
