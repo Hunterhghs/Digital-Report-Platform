@@ -1,0 +1,65 @@
+{
+  "number": "2026-54",
+  "title": "The Clean Cooking Transition",
+  "subtitle": "Pathways to universal access, health, climate, and economic development",
+  "strapline": "Two-thirds of the developing world's kitchens now run on gas or electricity. The other third holds the largest avoidable health burden in energy, and in Africa it is still growing. This dashboard traces which fuels carried the transition since 1990, where it is fast or stalled, how many people could cook with the electricity they already have, and the pace that universal access would require.",
+  "dek": "In low- and middle-income countries, 69% of people now cook mainly with gas or electricity, up from 27% in 1990, but 2.03 billion still rely on wood, charcoal, coal or kerosene. In sub-Saharan Africa the number using polluting fuels has risen by about 340 million since 2000, and charcoal users have more than tripled. At least 1.37 billion people without clean cooking already have electricity, which makes efficient electric cooking a second lane alongside LPG. Even so, the 2015–2023 pace would leave about 1.6 billion people without clean cooking in 2030.",
+  "abstract": [
+    "This report follows the clean cooking transition in 106 low- and middle-income countries using WHO's estimates of the main cooking fuel (biomass, charcoal, coal, kerosene, gas and electricity) for 1990–2023, World Bank data on population and electricity access, and WHO estimates of deaths from household air pollution, read alongside the IEA, ESMAP, the Tracking SDG7 partnership and the evidence from trials and cooking-cost studies.",
+    "Since 2000 the number of people cooking mainly with gas has risen by 2.3 billion and with electricity by 450 million, while coal and kerosene have nearly disappeared from kitchens. The clean share rose from 27% in 1990 to 69% in 2023. The regions took three pathways. South Asia rode LPG, East Asia gas and electricity as coal was phased out, and sub-Saharan Africa, where the population nearly doubled, saw the number cooking with polluting fuels rise by about 340 million and charcoal users rise from 61 to 211 million. Clean access there is 43% in cities and 8% in the countryside. Household air pollution is linked to about 2.9 million deaths in these countries in 2021, and age-standardised death rates in sub-Saharan Africa are eight times Latin America's.",
+    "Eleven countries are gaining two or more percentage points of access a year, led by Cambodia, India, Viet Nam, Myanmar, Nigeria and Indonesia. Twenty-six countries with 585 million people without access have stalled. At the 2015–2023 pace about 1.57 billion people would still lack clean cooking in 2030. Universal access by then would require about 375 million people a year to gain clean cooking, two and a half times the recent rate. At least 1.37 billion people without clean cooking already have electricity, and efficient electric cookers can cost a third as much as LPG. A two-lane strategy of LPG beyond the grid and electric cooking on it, backed by finance at the scale of $4 billion a year in Africa, carbon finance that pays only for metered use, a plan for charcoal and programmes that measure exclusive clean use, could make a 25-year transition possible anywhere.",
+    "The analysis is accompanied by interactive charts: the global fuel mix, regional gains and losses by fuel, the urban–rural divide, level against pace, years to 95% access, the eCooking gap, household air pollution deaths, the costs of inaction and the finance gap. It also includes a country pathway explorer, a six-layer atlas with a sortable table, and a pathway simulator for any region or country."
+  ],
+  "jel": "Q41, Q42, Q53, I15, O13, J16 — energy demand and supply; alternative energy sources; air pollution; health and economic development; agriculture, natural resources and energy in development; economics of gender",
+  "method": "106 low- and middle-income countries (World Bank 2024 income groups) with at least 1 million people and WHO household energy estimates. Clean access: proportion of population primarily relying on clean fuels and technologies for cooking (SDG 7.1.2), total, urban and rural, 2000–2023 (WHO Global Health Observatory). Fuel mix: WHO modelled proportions of people by main cooking fuel (biomass, charcoal, coal, kerosene, gas, electricity), 2000–2023, and WHO's global number of people by fuel, 1990–2023. People counts use World Bank population (WDI). Pace: average annual change 2015–2023; classes near-universal (≥ 95%), fast (≥ 2 pp/yr), steady (1–2), slow (0.5–1), stalled (< 0.5). eCooking gap: population share with electricity (WDI 2023) minus share cooking cleanly, a lower bound. Health: WHO deaths and age-standardised death rates attributable to household air pollution, 2021. Simulator: population grows at each country's 2015–2023 rate; current pace versus a linear path to 100% by the target year. Cost of inaction (ESMAP 2020), investment needs and pledges (IEA 2024, 2026) and emissions (IEA) are quoted. The main-fuel measure ignores stacking, and modelled deaths are partly derived from fuel use.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 19,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Domine:wght@500;700&family=Nunito:wght@400;600;700&family=Saira+Condensed:wght@500;600&display=swap",
+  "themeColor": "#1f1915",
+  "topics": [
+    "Energy Transition",
+    "Public Health",
+    "Emerging Markets",
+    "Inequality"
+  ],
+  "keywords": [
+    "clean cooking",
+    "household air pollution",
+    "LPG",
+    "electric cooking",
+    "eCooking",
+    "charcoal",
+    "biomass",
+    "SDG 7",
+    "energy access",
+    "sub-Saharan Africa",
+    "cookstove carbon credits",
+    "gender and energy",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "transition", "label": "1. The Transition So Far" },
+    { "id": "pathways", "label": "2. Three Pathways" },
+    { "id": "pace", "label": "3. Pace and the 2030 Gap" },
+    { "id": "ecooking", "label": "4. The eCooking Opportunity" },
+    { "id": "health", "label": "5. The Health Burden" },
+    { "id": "benefits", "label": "6. Climate, Gender and the Economy" },
+    { "id": "country", "label": "7. Country Pathways" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "simulator", "label": "9. Pathway Simulator" },
+    { "id": "response", "label": "10. Policy Pathways" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "2.03 bn", "label": "People in low- and middle-income countries without clean cooking, 2023" },
+    { "value": "1.37 bn", "label": "Already have electricity but cook with polluting fuels" },
+    { "value": "61 → 211 m", "label": "Charcoal users in sub-Saharan Africa, 2000 to 2023" },
+    { "value": "×2.5", "label": "Pace needed for universal access by 2030" }
+  ]
+}
