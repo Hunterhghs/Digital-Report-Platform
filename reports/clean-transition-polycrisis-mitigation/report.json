@@ -1,0 +1,65 @@
+{
+  "number": "2026-60",
+  "title": "The Clean Transition as a Polycrisis Mitigation Strategy",
+  "subtitle": "Reducing interconnected environmental, health and energy-security risks",
+  "strapline": "Price shocks, toxic air and a heating climate all trace back to one root: fossil combustion. This dashboard measures the three risk registers together for 160 countries, from fuel import bills and the 2022 shock to fossil-fuel air-pollution deaths and solar and wind deployment. It shows which part of the transition protects against the next price spike, and includes a shock-absorber calculator for any importer.",
+  "dek": "In 2022 the median fuel importer's bill jumped from 4.5% to 7.4% of GDP, and the jump tracked how much each country imported, not how clean its power was (r = −0.08). Import bills are mostly oil and gas for transport, heat and industry, so the transition protects only when it reaches those uses. When it does, it also cuts the 86% of fossil air-pollution deaths borne by importers and the emissions behind climate risk.",
+  "abstract": [
+    "This report treats energy security, air-pollution health risk and climate risk as three registers of one polycrisis rooted in fossil combustion. It covers 160 countries with at least one million people. Fuel import and export bills for 2019–2024 combine WDI fuel shares of merchandise trade with trade values and GDP. Fossil-fuel PM2.5 deaths come from McDuffie et al. (2021). CO₂, the fossil share of energy and the electricity mix come from the Global Carbon Budget, Energy Institute and Ember via Our World in Data.",
+    "The 105 net fuel importers hold 71% of the people covered. Their median fuel import bill was 4.5% of GDP in 2021, 7.4% in 2022, 5.8% in 2023 and 4.8% in 2024, and $2.7 trillion in total in 2023. Lower-middle-income importers carry the heaviest median bill (7.6% of GDP). The 2022 rise averaged 0.57 times the 2021 bill (r = 0.57) and was unrelated to the low-carbon share of electricity (r = −0.08) or the fossil share of energy (r = −0.07), because import bills are dominated by oil and gas outside the power sector. Importers bear 86% of the 1.14 million fossil-fuel PM2.5 deaths summed across countries. India, South Africa, Poland, Greece and North Macedonia (1.56 billion people) are triply exposed. Solar and wind rose from a median 0.8% to 6.5% of electricity between 2015 and 2024, but to 17.8% in high-income and only 2.9% in low-income countries. Twenty-one countries with 545 million people depend on fossil rents above 10% of GDP, for whom the transition itself is the risk.",
+    "Applying the World Bank's projected 24% rise in 2026 energy prices to 2023 import values implies about $640 billion in extra import costs, a median 1.4% of GDP. The IEA projects $2.2 trillion of clean energy investment in 2026 against $1.2 trillion for fossil fuels, and IRENA finds 91% of new renewable capacity undercuts fossil alternatives. The binding constraints are electrifying oil and gas end-uses, efficiency, the cost of capital in developing economies, subsidy reform and exporter diversification.",
+    "Interactive charts show fuel bills by income, the heaviest bills, the anatomy of the 2022 shock, bills against fossil air-pollution deaths, solar and wind deployment, exporters' dependence and 2026 investment. The report also includes a seven-layer atlas with electricity-mix country cards, a sortable table and a shock-absorber calculator."
+  ],
+  "jel": "Q43, Q48, Q53, Q54, F14, O13 — energy and the macroeconomy; energy policy; air pollution; climate; trade; energy and development",
+  "method": "160 countries with at least 1 million people. Fuel import bill = WDI TM.VAL.FUEL.ZS.UN × TM.VAL.MRCH.CD.WT ÷ NY.GDP.MKTP.CD, 2019–2024; exports likewise (TX.*). Net importer = fuel imports > fuel exports in the latest year (2023, else 2024). 2022 shock = 2022 − 2021 bill (pp of GDP). Energy import dependence EG.IMP.CONS.ZS (2022); fossil rents = oil + gas + coal rents (% of GDP, 2021). Fossil-fuel PM2.5 deaths = McDuffie et al. (2021) country deaths × (coal + oil and gas share), 2017 (1.14 m summed; paper's non-linear total 1.05 m). CO₂, fossil share of primary energy, low-carbon and solar + wind electricity shares: Global Carbon Budget, Energy Institute and Ember via OWID (latest 2023–2025). 2026 scenario = 2023 bill × 24% (World Bank CMO April 2026). Investment, cost and subsidy figures quoted from IEA, IRENA and IMF. Gross trade includes re-exports; scenarios and calculator are proportional and illustrative; correlations are not causal.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600;700;900&family=Heebo:wght@400;500;700&family=Exo+2:wght@500;600;700&display=swap",
+  "themeColor": "#142027",
+  "topics": [
+    "Energy Transition",
+    "Systemic Risk",
+    "Public Health",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "polycrisis",
+    "energy security",
+    "fuel import bill",
+    "oil price shock",
+    "Strait of Hormuz",
+    "air pollution",
+    "fossil fuels",
+    "clean energy transition",
+    "electrification",
+    "solar and wind",
+    "fossil fuel subsidies",
+    "stranded assets",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "registers", "label": "1. One Root, Three Registers" },
+    { "id": "bill", "label": "2. The Fuel Bill" },
+    { "id": "shock", "label": "3. Anatomy of a Shock" },
+    { "id": "health", "label": "4. The Health Register" },
+    { "id": "climate", "label": "5. Climate and the Deployment Gap" },
+    { "id": "exporters", "label": "6. Exporters' Mirror-Image Risk" },
+    { "id": "economics", "label": "7. The Economics of the Shift" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "calculator", "label": "9. Shock-Absorber Calculator" },
+    { "id": "strategy", "label": "10. A Polycrisis Mitigation Strategy" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "4.5% → 7.4%", "label": "Median importer's fuel bill as a share of GDP, 2021 to 2022" },
+    { "value": "r = −0.08", "label": "Link between clean power and the 2022 shock: electricity alone didn't shield" },
+    { "value": "86%", "label": "Of fossil-fuel air-pollution deaths occur in net fuel importers" },
+    { "value": "18% vs 3%", "label": "Median solar + wind share of power, high- vs low-income countries" }
+  ]
+}
