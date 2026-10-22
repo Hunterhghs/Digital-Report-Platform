@@ -1,0 +1,112 @@
+{
+  "number": "2026-65",
+  "title": "The Global Polycrisis and the Architecture of Systemic Risk",
+  "subtitle": "Mapping interconnected threats across climate, economics, technology, demographics, and governance",
+  "strapline": "Most maps of the polycrisis come from expert judgement. This one comes from the record. It is a register of 4,000 country-years of shocks across five domains since 2000, showing which crises strike together, which follow one another, where the human toll lands, and which countries are most exposed to cascades in 2026.",
+  "dek": "Multi-domain shock years rose from about 6% of countries a year before 2020 to 9% since, after 33% in 2020. The observed network has a sink: economic shocks, internet shutdowns and governance shocks raise the next year's risk of displacement or mortality shocks 2.5, 2.0 and 1.6 times. Low-income countries carry eleven times the multi-domain burden of rich ones, and twenty countries with 705 million people face a 30% or higher modelled risk of multi-domain shocks in 2026.",
+  "abstract": [
+    "This report maps the architecture of systemic risk from observed shocks rather than expert perception. It builds a register for 160 countries from 2000 to 2025 across five domains. Climate covers EM-DAT disasters killing at least 10 per million (excluding extreme-temperature deaths) or affecting 5% of people. Economy covers recessions of 3% or more in GDP per head, inflation spikes and currency crashes of 30% or more. Technology covers government-ordered internet shutdowns (Access Now, 2016–2025). Demography covers falls in life expectancy of a year or more and displacement surges of 0.5% of population (UNHCR). Governance covers conflict escalation (UCDP) and autocratisation onsets (V-Dem ERT).",
+    "Shocks in two or more of the four consistently observed domains affected 5.8% of countries a year in 2000–2019, 32.7% in 2020 and 9.2% in 2021–2024. Same-year co-occurrence is strongest for governance and demography (lift 2.5) and economy and demography (2.3), and weakest for pairs involving climate. Income-stratified Mantel–Haenszel risk ratios identify three clear next-year transmission links, all ending in demography: from the economy (2.5, 95% CI 1.8–3.3), technology (2.0, 1.3–2.9) and governance (1.6, 1.1–2.4). Shocks persist within domains (from 1.7 times for governance to 8 times for demography), and half of new shutdown and displacement shocks are followed by shocks in two other domains within three years. Low-income countries average 5.8 multi-domain years against 0.5 for high-income countries. Afghanistan (15), Syria, Somalia (12) and Yemen (11) top the register.",
+    "A logistic early-warning model fitted to 2016–2024 identifies South Sudan (69%), Sudan (61%) and the DR Congo (57%) as most likely to suffer shocks in two or more domains in 2026, with 20 countries and 705 million people at 30% or above. The observed architecture points to protecting the demographic sink, cutting the economic transmission line, treating shutdowns as alarms and sustaining joined-up engagement in persistently fragile states.",
+    "Interactive elements include a network diagram of co-occurrence and transmission, multi-domain incidence over time, domain incidence, a co-occurrence matrix, persistence, a forest plot of all transmission links, cascades, the most crisis-prone countries and the 2026 watchlist. There is also a seven-layer atlas with 26-year shock strips, a sortable table and a cascade simulator."
+  ],
+  "jel": "F50, O17, D74, Q54, J11, H12 — international relations and security; institutional arrangements; conflict; disasters; demographic trends; crisis management",
+  "method": "160 countries ≥ 1 million people, 2000–2025 (technology 2016–2025). Shocks: climate = EM-DAT deaths excl. extreme temperature ≥ 10/million or affected ≥ 5%; economy = GDP pc growth ≤ −3%, inflation ≥ 20% and ≥ 2× prior 3-yr mean, or FX depreciation ≥ 30%; technology = any Access Now shutdown; demography = life expectancy −1 yr or UNHCR refugees + asylum + IDPs by origin +0.5% of population; governance = UCDP GED escalation or V-Dem ERT v16 autocratisation onset / autocratic transition. Lift = P(A∧B)/(P(A)P(B)); transmission = Mantel–Haenszel risk ratio of B(t+1) given A(t) among B(t)=0, stratified by income; cascades within three years of new shocks; logistic early-warning model per domain on shocks at t and income, 2016–2024. Thresholds are judgement calls; records incomplete; associations not causal.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Open+Sans:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap",
+  "themeColor": "#141a2e",
+  "topics": [
+    "Systemic Risk",
+    "Institutions & Governance",
+    "Technology",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "polycrisis",
+    "systemic risk",
+    "risk interconnections",
+    "shock contagion",
+    "early warning",
+    "displacement",
+    "internet shutdowns",
+    "conflict",
+    "autocratisation",
+    "economic crises",
+    "disasters",
+    "Global Risks Report",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "architecture",
+      "label": "1. The Architecture"
+    },
+    {
+      "id": "trend",
+      "label": "2. Multi-Domain Shock Years"
+    },
+    {
+      "id": "coupling",
+      "label": "3. Coupling"
+    },
+    {
+      "id": "transmission",
+      "label": "4. Transmission"
+    },
+    {
+      "id": "concentration",
+      "label": "5. Cascades & Concentration"
+    },
+    {
+      "id": "watch",
+      "label": "6. The 2026 Watchlist"
+    },
+    {
+      "id": "atlas",
+      "label": "7. The Atlas"
+    },
+    {
+      "id": "simulator",
+      "label": "8. Cascade Simulator"
+    },
+    {
+      "id": "design",
+      "label": "9. Designing for the Architecture"
+    },
+    {
+      "id": "method",
+      "label": "10. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "5.8% → 9.2%",
+      "label": "Countries a year with shocks in 2+ domains: 2000–19 vs 2021–24"
+    },
+    {
+      "value": "2.5×",
+      "label": "Next-year risk of displacement/mortality shocks after an economic shock"
+    },
+    {
+      "value": "11×",
+      "label": "Multi-domain shock years, low- vs high-income countries"
+    },
+    {
+      "value": "20",
+      "label": "Countries (705 m people) at 30%+ risk of multi-domain shocks in 2026"
+    }
+  ]
+}
