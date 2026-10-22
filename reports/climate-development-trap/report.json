@@ -1,0 +1,64 @@
+{
+  "number": "2026-56",
+  "title": "Breaking the Climate–Development Trap",
+  "subtitle": "Preventing environmental shocks from deepening economic divergence",
+  "strapline": "In poorer countries, destructive climate shocks leave incomes lower for years. In richer ones, incomes recover. This dashboard measures that scar for 155 countries since 1980, using an event study of floods, storms and other climate disasters. It shows how often shocks strike and how often their costs go unrecorded, and it simulates how early warning, fast finance and resilient infrastructure can stop shocks from widening the gap between rich and poor countries.",
+  "dek": "After a severe climate shock, GDP per person in low- and lower-middle-income countries falls by 1.7%, sinks to about 5% below its previous path within four years and is still 3.7% lower after eight. Upper-middle-income countries recover within four years, and earthquakes leave no lasting scar. Low-income countries now suffer climate shocks in a quarter of all years, only one in five of these has any recorded damage, and the income gap between the median rich and poor country has grown from 18 to 25 times since 1990.",
+  "abstract": [
+    "This report measures the climate–development trap, in which climate shocks leave lasting income losses in poorer countries, weaken the buffers that would soften the next shock, and so widen the gap with richer economies. It links EM-DAT disaster records (people affected and economic damage by hazard, 1980–2024) to World Bank GDP data for 155 countries. It estimates income paths in the eight years after a shock with local projections, using country and year fixed effects, lagged shock and growth controls and country-clustered errors, by income group.",
+    "Across 88 severe climate shocks in low- and lower-middle-income countries, GDP per person fell 1.7% in the shock year, about 5% after four years and 3.7% after eight. Upper-middle-income countries took a similar initial hit but recovered within four years. The most destructive events, with damage of 5% of GDP or more, were followed by losses of about 13% after four years and 10% after eight, with wide confidence intervals. Severe floods and storms scar, while droughts that affect many people barely register in GDP. Earthquakes and volcanic eruptions leave no lasting loss and tend to be followed by rebuilding. Estimates since 2000 are smaller and imprecise.",
+    "Climate shocks struck 17% of low-income country-years in 2000–2024, against 2% of high-income country-years, and their frequency in low-income countries rose from 14 to 26 per 100 country-years between the 2000s and the 2020s. Only 22% of low-income shocks have any recorded damage, against 73% in upper-middle-income countries, and only 56% of severe low-income shocks were followed by a return to pre-shock income within three years, against 78%. The median high-income country's income rose from 18 to 25 times the low-income median between 1990 and 2024. Most catastrophe losses in emerging economies are uninsured, little crisis finance is arranged in advance, and adaptation finance is about one-twelfth of need. Prevention, early warning, pre-arranged finance, adaptive social protection, rebuilding better and better loss data can break the trap.",
+    "The analysis is accompanied by interactive charts: divergence by income group, event-study paths with confidence bands, robustness across definitions and hazards, shock frequency and exposure, recovery and recording gaps, and the buffers. It also includes a seven-layer atlas with shock-history strips, a sortable table and a Monte Carlo trap simulator with policy levers."
+  ],
+  "jel": "O11, O44, Q54, E32, H84 — macroeconomic analyses of economic development; environment and growth; climate and natural disasters; business fluctuations; disaster aid",
+  "method": "155 countries with at least 1 million people and 25 years of GDP data, 1980–2024. Shocks: EM-DAT via Our World in Data, total people affected and economic damage as a share of GDP by hazard; climate hazards are drought, flood, landslide, storms, wildfire and extreme temperature, and geophysical hazards are earthquakes and volcanic activity. A climate shock affects at least 5% of the population or causes damage of at least 1% of GDP; a severe shock uses thresholds of 20% and 5%. Local projections for h = 0 to 8 regress ln GDP per person (constant 2015 US$) at t+h minus t−1 on the shock, with controls for shocks in t−1 to t−3 and growth in t−1 and t−2, country and year fixed effects, and country-clustered standard errors, by World Bank income group. Recovery means GDP per person three years after a severe shock exceeds its level in the year before. Divergence uses medians of PPP 2021 GDP per person. The simulator draws shocks at the 2000–2024 rate and applies the estimated paths. EM-DAT under-records damage and smaller events, especially in poorer countries; estimates are associations with wide intervals.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Piazzolla:wght@600;800&family=Ysabeau+Office:wght@400;500;600&family=Jura:wght@500;600;700&display=swap",
+  "themeColor": "#1d1720",
+  "topics": [
+    "Climate Adaptation",
+    "Systemic Risk",
+    "Emerging Markets",
+    "Inequality"
+  ],
+  "keywords": [
+    "climate–development trap",
+    "climate shocks",
+    "natural disasters",
+    "economic divergence",
+    "convergence",
+    "event study",
+    "local projections",
+    "scarring",
+    "disaster recovery",
+    "early warning",
+    "disaster risk finance",
+    "adaptation finance",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "trap", "label": "1. The Trap" },
+    { "id": "shock", "label": "2. Measuring the Scar" },
+    { "id": "what", "label": "3. What Scars and What Does Not" },
+    { "id": "exposure", "label": "4. More Shocks, Poorer Countries" },
+    { "id": "recovery", "label": "5. The Recovery and Visibility Gaps" },
+    { "id": "buffers", "label": "6. The Missing Buffers" },
+    { "id": "atlas", "label": "7. The Atlas" },
+    { "id": "simulator", "label": "8. Trap Simulator" },
+    { "id": "response", "label": "9. Breaking the Trap" },
+    { "id": "method", "label": "10. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "−3.7%", "label": "GDP per person eight years after a severe climate shock in lower-income countries" },
+    { "value": "22%", "label": "Low-income climate shocks with any recorded economic damage" },
+    { "value": "26 per 100", "label": "Climate shocks per 100 low-income country-years in the 2020s" },
+    { "value": "18× → 25×", "label": "Rich-to-poor median income gap, 1990 to 2024" }
+  ]
+}
