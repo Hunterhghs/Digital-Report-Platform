@@ -1,0 +1,65 @@
+{
+  "number": "2026-55",
+  "title": "The Green Development Dividend",
+  "subtitle": "Measuring the joint returns of climate action and poverty reduction",
+  "strapline": "Ending extreme poverty costs the climate almost nothing if the gains reach the poor and the new income is powered cleanly, and a great deal if they do not. This dashboard measures both ledgers for 157 countries: the carbon cost of ending poverty by route and line, the carbon footprint of past escapes from poverty, who has cut poverty and carbon intensity together, and the clean energy and fiscal resources that could pay for both.",
+  "dek": "Closing every extreme-poverty gap with targeted transfers would add just 0.07% to global CO₂. Reaching the same goal through broad growth at today's carbon intensity would add about 100 times as much. Most countries escaped mass poverty at under 2 tonnes of CO₂ per person, and 44 developing countries with 4.2 billion people cut poverty and carbon intensity together after 2015. Explicit fossil-fuel subsidies of $725 billion a year are more than six times the extreme-poverty gap.",
+  "abstract": [
+    "This report measures the green development dividend, the joint returns when the same policies reduce both poverty and carbon. It covers 157 countries and combines World Bank Poverty and Inequality Platform lineups at $3.00, $4.20 and $8.30 a day (2021 PPP, 1990–2026) with Global Carbon Budget emissions and low-carbon electricity data from Our World in Data, World Bank GDP, price and access data, and published estimates from the World Bank, Bruckner et al., the IMF, IRENA and the State of Global Air.",
+    "The carbon cost of ending poverty is the product of three choices: the goal, the route and the energy system. Closing every poverty gap with targeted transfers at 2024 carbon intensity would add 28 Mt of CO₂ a year at $3.00 (0.07% of global fossil CO₂), 84 Mt at $4.20 and 720 Mt at $8.30. Ending poverty through distribution-neutral growth would instead add 2.9 Gt (7.6%), 8.3 Gt (21.5%) and 42 Gt, roughly 60 to 100 times more. History shows that the link is loose. Thirty-seven countries brought extreme poverty below 10% at a median of 1.9 tonnes of CO₂ per person, and 44 of 57 countries that cut poverty at $4.20 by 20 points or more since 2000 added less than a tonne per person.",
+    "Between 2015 and 2024, 49 countries grew while cutting emissions, but only two of them were lower-middle-income and none low-income. Among developing countries, 44 with 4.2 billion people cut both poverty and carbon intensity, 22 cut poverty as intensity rose, 16 cut intensity without cutting poverty, and 19, led by Nigeria and the DR Congo, made progress on neither. Many of the poorest countries already run low-carbon grids that reach too few people. Explicit fossil-fuel subsidies of $725 billion a year, mostly captured by richer households, are more than six times the $113 billion needed to close the extreme-poverty gap. The dividend can be captured by targeting the gains, extending clean power, redirecting subsidies and protecting progress against climate shocks.",
+    "Interactive charts compare the two routes at three poverty lines and show the carbon footprint of escaping poverty, poverty reduction against carbon change, decoupling by income group, the joint-progress quadrant, clean grids against access, and subsidies against poverty gaps. The report also includes a six-layer atlas with sparkline country cards, a sortable table and a dividend calculator."
+  ],
+  "jel": "O13, Q56, I32, Q54, H23 — economic development and energy, environment and development, measurement of poverty, climate, environmental taxes and subsidies",
+  "method": "157 countries with at least 1 million people and both poverty and emissions data. Poverty: World Bank PIP lineup estimates (headcount and poverty gap) at $3.00, $4.20 and $8.30 a day in 2021 PPP, 1990–2026; values after the latest survey are projections or nowcasts. Emissions: fossil and industrial CO2 (Global Carbon Budget via Our World in Data), 1990–2024. GDP: WDI constant 2021 PPP. Low-carbon electricity share: Ember and Energy Institute via Our World in Data. Targeted route: poverty gap × line × 365 × population × 2024 CO2 per PPP dollar of GDP. Growth route: lognormal distribution (dispersion from PIP mean and median), shifted to match the actual headcount and scaled until 3% remain poor; growth factor × 2024 CO2 at constant intensity. Escape year: first year from which the $3.00 headcount stays below 10% (or 3%). Decoupling 2015–2024: absolute, relative, coupled or GDP fell. Joint progress: $4.20 poverty falling ≥ 0.25 points a year (or below 3%) and carbon intensity of GDP falling. Market-price gaps use the 2021 ratio of private-consumption PPP to the exchange rate. Literature, subsidy and cost figures are quoted. Estimates are static and not causal.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@500;700&family=Asap:wght@400;600&family=Pathway+Gothic+One&display=swap",
+  "themeColor": "#0f2c24",
+  "topics": [
+    "Energy Transition",
+    "Inequality",
+    "Development Finance",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "green development dividend",
+    "poverty reduction",
+    "climate action",
+    "carbon cost of poverty alleviation",
+    "decoupling",
+    "carbon intensity",
+    "poverty gap",
+    "fossil fuel subsidies",
+    "renewable energy",
+    "inclusive growth",
+    "social protection",
+    "co-benefits",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "ledger", "label": "1. Two Ledgers, One Dividend" },
+    { "id": "cost", "label": "2. The Carbon Price of Ending Poverty" },
+    { "id": "crossing", "label": "3. Leaving Poverty on Little Carbon" },
+    { "id": "decoupling", "label": "4. Decoupling in the SDG Era" },
+    { "id": "joint", "label": "5. Joint Progress" },
+    { "id": "energy", "label": "6. The Clean-Energy Route" },
+    { "id": "fiscal", "label": "7. The Fiscal Dividend" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "calculator", "label": "9. Dividend Calculator" },
+    { "id": "response", "label": "10. Capturing the Dividend" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "0.07%", "label": "Added to global CO₂ by closing every extreme-poverty gap with targeted transfers" },
+    { "value": "×100", "label": "More carbon if the same goal is reached by growth at today's intensity" },
+    { "value": "1.9 t", "label": "Median CO₂ per person when countries escaped mass extreme poverty" },
+    { "value": "4.2 bn", "label": "People in 44 countries that cut poverty and carbon intensity together" }
+  ]
+}
