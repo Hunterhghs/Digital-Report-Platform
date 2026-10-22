@@ -1,0 +1,117 @@
+{
+  "number": "2026-62",
+  "title": "The Architecture of Global Polycrisis Mitigation",
+  "subtitle": "A systems framework for reducing interconnected risks",
+  "strapline": "Shocks do their damage by travelling: through fragile people and firms, along trade, price and financial links, into budgets that may or may not absorb them. This dashboard organises mitigation by function rather than hazard (robustness, decoupling, buffers, steering and a global backstop), scores 160 countries, and tests the framework against the shocks of 2020–2023.",
+  "dek": "Every national architecture has a weak link: the median country's weakest function trails its average by 16 points, and decoupling, the most common gap, barely tracks income. In 2020–2023 national capacities explained almost none of the growth and inflation damage, but steering was the exception, associated with 62 fewer excess deaths per 100,000 and a 5.7-point smaller rise in hunger. Thin buffers leave 3.5 billion people relying on a global backstop that covers a fraction of need.",
+  "abstract": [
+    "This report proposes a systems framework for polycrisis mitigation and tests it with cross-country data. Shocks pass from drivers to exposed nodes, along transmission links, into buffers and outcomes. Four national functions act at different points: robustness (WHO UHC index, basic sanitation, undernourishment, extreme poverty), decoupling (net energy imports, food import bill, commodity export share), buffers (reserves in months of imports, excluded for reserve-currency and euro-area economies; interest as a share of revenue; social protection coverage) and steering (WGI government effectiveness and the Statistical Performance Index). A global backstop of shared finance, warning and response mechanisms sits beneath them. Function scores are mean percentile ranks for 160 countries; 134 have all four.",
+    "Median scores rise from 13 to 81 for robustness, 29 to 68 for buffers and 14 to 86 for steering between low- and high-income countries, but only from 42 to 56 for decoupling. Robustness and steering are highly correlated (r = 0.80) while decoupling is nearly independent of the other functions (r = 0.08–0.29), so the median country's weakest function trails its average by 16 points. Decoupling is the weakest function in 49 countries, buffers in 30, robustness in 29 (3.3 billion people) and steering in 26. Against five 2020–2023 outcomes, pre-shock functions and income explained 2–5% of the variation in the 2020 growth hit, scarring by 2023 and the 2022–23 inflation spike. One standard deviation of steering was associated with 62 fewer COVID excess deaths per 100,000 (t = −2.6, after age and income) and a 5.7-point smaller rise in food insecurity (t = −3.6). Outcomes were linked (inflation spike with scarring r = −0.35, with food insecurity r = 0.32), and 33 countries with 2.2 billion people were among the hardest hit in at least three outcomes.",
+    "43 countries with 3.5 billion people have thin buffers: reserves under three months of imports or interest above a fifth of revenue. The global layer covers a fraction of its task. Early warning systems cover 60% of countries (43% of small island states), adaptation finance under a tenth of need, and the loss-and-damage fund's first call about a tenth of requests. The design principles are to invest in steering, treat decoupling as resilience policy, rebuild buffers between shocks, and capitalise and connect the global backstop.",
+    "Interactive elements include a systems map, function scores by income, function correlations, weakest links, a stress-test matrix, steering against food insecurity, shock compounding, outcome cascades, reserves against interest burden and global-layer coverage. There is also a seven-layer atlas with country cards, a sortable table and an architecture builder."
+  ],
+  "jel": "F02, H12, O19, Q54, I18, D85 — international economic order; crisis management; international linkages to development; climate and natural disasters; public health; network formation",
+  "method": "160 countries with at least 1 million people and a World Bank income group. Indicators (latest 2014–2024; pre-shock latest ≤2019) converted to percentile ranks and averaged by function (at least half available): robustness = UHC index, SH.STA.BASS.ZS, SN.ITK.DEFC.ZS (inv.), SI.POV.DDAY (inv.); decoupling = EG.IMP.CONS.ZS, food import bill % GDP, commodity export share (all inv.); buffers = FI.RES.TOTL.MO (excl. reserve-currency and euro-area economies), GC.XPN.INTP.RV.ZS (inv.), ASPIRE coverage; steering = WGI GE, IQ.SPI.OVRL. Architecture = mean; weakest link = minimum. Stress test: Economist excess deaths per 100k to end-2021; 2020 growth minus 2015–19 mean; 2023 GDP per head vs 2015–19 trend; inflation 2022–23 minus 2017–19; FIES change 2017–19 to 2021–23; winsorised; each function separately with log GDP per head (and 65+ share for deaths), HC1 SEs. Hardest hit = worst third. Thin buffers = reserves <3 months or interest >20% of revenue. Associations from one episode, not causal; global-layer figures from UNDRR/WMO, UNEP, IMF, BU GDP Center, Pandemic Fund and press coverage.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@400;600;700&family=Saira:wght@400;500;600;700&display=swap",
+  "themeColor": "#1a2c38",
+  "topics": [
+    "Systemic Risk",
+    "Institutions & Governance",
+    "Development Finance",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "polycrisis",
+    "systems framework",
+    "resilience",
+    "decoupling",
+    "fiscal buffers",
+    "state capacity",
+    "government effectiveness",
+    "COVID-19",
+    "inflation shock",
+    "food insecurity",
+    "global financial safety net",
+    "early warning",
+    "loss and damage",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "framework",
+      "label": "1. The Framework"
+    },
+    {
+      "id": "measure",
+      "label": "2. Measuring the Architecture"
+    },
+    {
+      "id": "weak",
+      "label": "3. Every Architecture Has a Weak Link"
+    },
+    {
+      "id": "stress",
+      "label": "4. The 2020–2023 Stress Test"
+    },
+    {
+      "id": "cascades",
+      "label": "5. Cascades and Compounding"
+    },
+    {
+      "id": "thin",
+      "label": "6. Thin Buffers"
+    },
+    {
+      "id": "global",
+      "label": "7. The Global Layer"
+    },
+    {
+      "id": "atlas",
+      "label": "8. The Atlas"
+    },
+    {
+      "id": "builder",
+      "label": "9. Architecture Builder"
+    },
+    {
+      "id": "principles",
+      "label": "10. Design Principles"
+    },
+    {
+      "id": "method",
+      "label": "11. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "16 pts",
+      "label": "Median gap between a country's average function and its weakest link"
+    },
+    {
+      "value": "−62 /100k",
+      "label": "COVID excess deaths per SD of steering capacity, after age and income"
+    },
+    {
+      "value": "33",
+      "label": "Countries hit hard by three or more of five 2020–23 shocks"
+    },
+    {
+      "value": "3.5 bn",
+      "label": "People in 43 countries with thin national buffers"
+    }
+  ]
+}
