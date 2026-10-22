@@ -1,0 +1,112 @@
+{
+  "number": "2026-63",
+  "title": "Convergent Development as Polycrisis Risk Reduction",
+  "subtitle": "Accelerating human development across vulnerable economies",
+  "strapline": "Vulnerable economies are catching up in health and schooling, but their overall human-development gap to the frontier has barely narrowed since 2000 and has stalled since 2015. This dashboard traces convergence for 157 countries from 1990 to 2023. It measures how shocks that reverse progress slow catch-up, shows how higher human development lowers polycrisis risk in turn, and projects what faster, shock-protected convergence could achieve by 2050.",
+  "dek": "Countries vulnerable in 2000 have closed their human-development gap at about 0.3% a year, a half-life of two centuries. Those that avoided reversals closed it three times faster, while reversals erased 13% of their gains. Higher human development makes reversals shallower and polycrisis risk lower (r = −0.84). Faster convergence with halved reversals would bring 38 of 60 vulnerable countries past an HDI of 0.70 by 2050, against 17 at the recent pace.",
+  "abstract": [
+    "This report examines human-development convergence in vulnerable economies as a form of polycrisis risk reduction. Using UNDP's HDR 2025 time series for 157 countries (1990–2023), it measures the gap between each country's Human Development Index and a frontier, the median of today's very-high-HDI countries. It tests which components converge and quantifies reversals, years in which HDI fell, by level, depth, recovery time and cause (pandemic, conflict from UCDP GED, other). It links HDI to INFORM Risk 2026 and projects the 60 countries with an HDI below 0.70 in 2023 (3.4 billion people) to 2050 under four scenarios with UN population projections.",
+    "Countries vulnerable in 2000 closed a median 0.36% of their gap a year in 2000–2010, 0.10% in 2010–2019 and 0.32% over 2000–2023, implying a half-life of about 200 years. The low-HDI group's gap has widened since 2015. Life expectancy converged in every period, and expected schooling converged strongly in the 2000s but not since 2019. Income per head converged in the 2000s and diverged in 2019–23. Below an HDI of 0.70, 9–12% of years brought a fall in HDI, against 6% above 0.80. Falls were nearly four times deeper at the bottom and took five years or more to recover. Reversals erased 13% of vulnerable countries' gross gains since 2001, and countries with no reversal in 2001–2019 closed their gap at 0.71% a year against −0.24% for those with three or more. HDI and INFORM risk correlate at −0.84.",
+    "At the recent pace, 17 of 60 vulnerable countries reach an HDI of 0.70 by 2050. With fast-converger pace and halved reversals, 38 do, and the population in vulnerable countries whose HDI implies high risk falls from about 2.3 billion to 0.2 billion. Convergent development and risk reduction form one loop and should be planned and financed together.",
+    "Interactive elements include the gap to the frontier, gap-closure rates, component convergence tests, reversal risk by level, losses by cause, reversals against convergence, HDI against INFORM risk, fast convergers and scenario paths. There is also a six-layer atlas with country sparklines, a sortable table and a convergence simulator."
+  ],
+  "jel": "O15, O11, O47, I15, I25, Q54 — human development; macroeconomic analyses of development; convergence; health and development; education and development; disasters",
+  "method": "157 countries with at least 1 million people; UNDP HDR25 composite-indices time series 1990–2023. Frontier = median HDI of 61 very-high-HDI (2023) countries with complete data. Vulnerable = HDI < 0.70 in 2023 (60) or 2000 (87). Gap-closure rate = annual % change in log gap. Convergence tests: annual gains on initial levels (income in logs) by period. Reversal = annual HDI fall; probability, depth and recovery by HDI band, 1991–2019; causes: pandemic (2020–21), conflict (≥1,000 UCDP GED deaths in year or prior), other. Risk: INFORM 2026, linear fit on HDI (R² 0.71). Scenarios: ΔHDI = r(1−HDI) with recent, pre-2015, fast-converger (top-quartile non-reversal pace, minus expected reversal loss) and halved-reversal regimes; UN WPP 2024 populations. HDI is modelled and interpolated; associations, not causal; illustrative projections.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600&family=Asap+Condensed:wght@400;500;600;700&display=swap",
+  "themeColor": "#2a2f5c",
+  "topics": [
+    "Human Capital",
+    "Emerging Markets",
+    "Systemic Risk",
+    "Inequality"
+  ],
+  "keywords": [
+    "convergence",
+    "human development index",
+    "vulnerable economies",
+    "polycrisis",
+    "risk reduction",
+    "development reversals",
+    "fragile states",
+    "life expectancy",
+    "schooling",
+    "income convergence",
+    "INFORM risk",
+    "scenarios 2050",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "gap",
+      "label": "1. The Convergence Gap"
+    },
+    {
+      "id": "components",
+      "label": "2. What Converges"
+    },
+    {
+      "id": "reversals",
+      "label": "3. Reversals"
+    },
+    {
+      "id": "loop",
+      "label": "4. The Loop"
+    },
+    {
+      "id": "fast",
+      "label": "5. Fast Convergers"
+    },
+    {
+      "id": "outlook",
+      "label": "6. Outlook to 2050"
+    },
+    {
+      "id": "atlas",
+      "label": "7. The Atlas"
+    },
+    {
+      "id": "simulator",
+      "label": "8. Convergence Simulator"
+    },
+    {
+      "id": "agenda",
+      "label": "9. Accelerating Convergence"
+    },
+    {
+      "id": "method",
+      "label": "10. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "0.32%/yr",
+      "label": "Median gap closure for countries vulnerable in 2000: a ~200-year half-life"
+    },
+    {
+      "value": "0.71 vs −0.24",
+      "label": "Gap closure (%/yr) with no reversals vs three or more"
+    },
+    {
+      "value": "13%",
+      "label": "Of vulnerable countries' HDI gains since 2001 erased by reversals"
+    },
+    {
+      "value": "38 vs 17",
+      "label": "Countries past HDI 0.70 by 2050: accelerated + risk-reduced vs recent pace"
+    }
+  ]
+}
