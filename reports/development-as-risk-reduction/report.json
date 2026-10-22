@@ -1,0 +1,65 @@
+{
+  "number": "2026-58",
+  "title": "Sustainable Development as Global Risk Reduction",
+  "subtitle": "Accelerating human development to reduce climate, health and economic vulnerability",
+  "strapline": "Human development builds the capacities that turn hazards into inconveniences rather than catastrophes, and it has slowed to half its earlier pace. This dashboard sets UNDP's Human Development Index for 157 countries against climate, health and economic vulnerability. It measures how much each falls as development rises and where development alone is not enough, shows that progress need not raise emissions, and estimates what a return to the best pace of progress would buy by 2035.",
+  "dek": "Each 0.1 rise in the Human Development Index goes with about 63% fewer people hit by climate disasters, 62% fewer near-poor and 25% less death from communicable disease. Within countries over time, the share affected by climate disasters falls 40% per 0.1. Yet human development gains in 2019–2023 were half those of the 2000s, the gap between low- and very-high-HDI countries has stopped closing, and development has not damped growth volatility or pandemic mortality. Those tail risks need their own institutions.",
+  "abstract": [
+    "This report treats human development as risk reduction. It sets UNDP's Human Development Index (1990–2023) for 157 countries against three kinds of vulnerability. Climate covers EM-DAT people affected and deaths from floods, storms, droughts and landslides, 2000–2024. Health covers child mortality, communicable-disease deaths, out-of-pocket spending and pandemic life-expectancy loss. Economic covers the near-poor share between $3.00 and $8.30 a day, growth volatility and social protection coverage. Vulnerability gradients are estimated across countries and, for disasters, within countries over time.",
+    "The engine of risk reduction has slowed. Population-weighted HDI gains fell from 7.5 thousandths a year in 2000–2010 to 3.6 in 2019–2023, and from 7.8 to 2.1 in low-HDI countries. Twenty-two countries had a lower HDI in 2023 than in 2019, and the gap between low- and very-high-HDI countries, which narrowed from 0.453 in 2000 to 0.406 by 2016, has stalled and edged up since 2020. Each 0.1 higher HDI goes with about 63% fewer people affected by climate disasters, 38% fewer disaster deaths, 48% lower child mortality, 25% less communicable-disease mortality and 62% fewer near-poor people. Within countries, a 0.1 rise in HDI is associated with 40% fewer people affected.",
+    "Development is not sufficient on its own. Growth volatility shows no gradient with HDI, and life expectancy fell most in high-HDI countries during the pandemic, whose excess deaths were 81% in middle-income countries. Pandemic preparedness, shock-responsive social protection and pre-arranged finance are needed alongside development. Development need not raise emissions: 23 very-high-HDI countries emit less than the world average. Returning low-HDI countries to their best decade pace would leave about 176 million rather than 311 million near-poor people by 2035, and roughly halve the number affected by climate disasters each year.",
+    "Interactive charts show HDI gains by decade and the widening gap, disaster exposure, health and economic vulnerability by HDI, a gradient summary with confidence intervals, HDI against emissions, and the acceleration dividend. The report also includes an eight-layer atlas with HDI sparkline cards, a sortable table and a country risk-reduction simulator."
+  ],
+  "jel": "O15, I15, Q54, I32, H55, O44 — human development; health and economic development; climate and natural disasters; poverty and vulnerability; social security; environment and growth",
+  "method": "157 countries with at least 1 million people and an HDI for 2023. Human development: UNDP HDR 2025 composite indices time series (HDI 1990–2023, components, planetary-pressures-adjusted HDI, CO2 per person). Climate vulnerability: EM-DAT via Our World in Data, 2000–2024, people affected by and deaths from drought, flood, landslide, storm and wildfire (heat deaths excluded for under-recording). Health: under-five mortality, communicable-disease share of deaths, out-of-pocket share of health spending, life expectancy 2019 minus its 2020–21 low (WDI). Economic: near-poor share (PIP 2024, $8.30 minus $3.00 headcount, 2021 PPP), standard deviation of GDP-per-head growth 2000–2024, social protection coverage (WDI/ASPIRE). Gradients: OLS of log vulnerability on HDI, % change per 0.1 HDI with 95% intervals; within-country: five-year periods 1990–2023 with country and period fixed effects. Acceleration: HDI 2023 + 12 years at the 2015–2023 pace vs the best of 2000–10, 2010–19 and 2015–23; vulnerability scaled by the gradients, population fixed at 2023. Associations, not causal effects; child mortality overlaps the HDI.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif&family=Gothic+A1:wght@400;500;700&family=Pragati+Narrow:wght@400;700&display=swap",
+  "themeColor": "#141a2e",
+  "topics": [
+    "Human Capital",
+    "Systemic Risk",
+    "Climate Adaptation",
+    "Public Health"
+  ],
+  "keywords": [
+    "human development",
+    "Human Development Index",
+    "risk reduction",
+    "vulnerability",
+    "climate disasters",
+    "child mortality",
+    "near-poor",
+    "social protection",
+    "pandemic preparedness",
+    "sustainable development",
+    "decoupling",
+    "UNDP",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "slowdown", "label": "1. The Slowdown" },
+    { "id": "climate", "label": "2. Climate Vulnerability" },
+    { "id": "health", "label": "3. Health Vulnerability" },
+    { "id": "economy", "label": "4. Economic Vulnerability" },
+    { "id": "gradients", "label": "5. The Risk-Reduction Gradient" },
+    { "id": "carbon", "label": "6. Development Without Carbon" },
+    { "id": "dividend", "label": "7. The Acceleration Dividend" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "simulator", "label": "9. Risk-Reduction Simulator" },
+    { "id": "response", "label": "10. Accelerating Development as Risk Policy" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "3.6 vs 7.5", "label": "Annual HDI gains in 2019–23 vs the 2000s (thousandths)" },
+    { "value": "−40%", "label": "People affected by climate disasters per 0.1 HDI rise, within countries" },
+    { "value": "−62%", "label": "Near-poor share per 0.1 higher HDI" },
+    { "value": "23 of 61", "label": "Very-high-HDI countries emitting below the world average" }
+  ]
+}
