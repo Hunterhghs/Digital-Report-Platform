@@ -1,0 +1,113 @@
+{
+  "number": "2026-64",
+  "title": "The Geography of Growing Human Exposure",
+  "subtitle": "Population growth, urbanization, and environmental risk",
+  "strapline": "Exposure to environmental risk grows through three engines: more people, more of them in dense settlements, and places that are becoming hotter, wetter or drier. This dashboard maps where the three overlap to 2050. It draws on the UN's new Degree of Urbanisation projections for cities, towns and rural areas, gridded climate and population scenarios, and the flood exposure of more than 11,000 cities.",
+  "dek": "The world adds 1.43 billion people by 2050, 69% of them in cities and 57% in sub-Saharan Africa. People living with 30 or more days a year above a 35 °C heat index more than double, from 1.9 to 4.1 billion. Warming drives 1.74 billion of that rise and population growth 0.44 billion, and growth lands disproportionately in hot places. City dwellers in 100-year flood zones, 507 million today, are heading for 630–690 million.",
+  "abstract": [
+    "This report maps how population growth, urbanisation and environmental change combine to raise human exposure to environmental risk between now and 2050. It uses the UN's World Urbanization Prospects 2025, the first edition built on the Degree of Urbanisation, for cities, towns and rural areas in 161 countries from 1975 to 2050. It overlays the World Bank Climate Change Knowledge Portal's 0.25° SSP population grids with CMIP6 projections of days with a heat index above 35 °C, drying and heavy rain, and uses the GHSL Urban Centre Database R2024A for the share of city dwellers in 100-year river flood zones and low-elevation coastal zones.",
+    "World population grows from 8.23 to 9.66 billion between 2025 and 2050, with 69% of the increase in cities, 28% in towns and 3% in rural areas, whose population peaks in the mid-2040s. Sub-Saharan Africa accounts for 57% of the growth, and 83% of the people added in growing countries are in countries rated high or very high on INFORM Risk 2026. Under SSP2-4.5 and SSP2 population, people in places with 30 or more days a year above a 35 °C heat index rise from 1.93 to 4.14 billion. Decomposed, population growth adds 0.44 billion, within-country redistribution 0.02 billion and warming 1.74 billion. 49% of population growth lands in places that will be that hot, against 44% of the 2020 population, and the densest cells average 65 such days by 2050 against 27 in sparse areas. City dwellers in 100-year flood zones rose from 338 million in 2000 to 507 million in 2025 and reach 626–689 million by 2050 on WUP city growth.",
+    "Twenty-five countries growing by a quarter or more with at least half their growth in hot places hold 880 million people and add 483 million by 2050. Planning where growth goes, designing dense places and towns for heat, and limiting warming are the main levers, and SSP1-2.6 instead of SSP3-7.0 means 1.1 billion fewer people exposed to frequent heat by 2050.",
+    "Interactive elements include the settlement continuum, regional and national growth by settlement type, a heat-exposure waterfall, regional decomposition, density and heat, a growth-versus-heat quadrant, and city flood exposure over time and by country. There is also a seven-layer atlas with country cards, a sortable table and an exposure calculator with pathway, flood-trend and planning controls."
+  ],
+  "jel": "R11, R12, J11, Q54, Q56, O18 — regional growth; spatial distribution; demographic trends; climate and natural disasters; environment and development; urban and regional development",
+  "method": "161 countries with at least 1 million people. Settlements: UN WUP 2025 F01 (cities, towns, rural areas by Degree of Urbanisation, 1950–2050). Heat: World Bank CCKP 0.25° SSP population grids × CMIP6 multi-model median days with heat index > 35 °C (hi35), 1995–2014 and 2040–2059; exposed = cells with ≥ 30 days. Decomposition (SSP2-4.5, 2020→2050): growth = country population ratio × base; redistribution = 2050 population on historical mask − growth; climate = 2050 population on future vs historical mask. Drying = SPEI-12 ≤ −1; heavy rain = Rx5day ≥ +20%. Density classes by 2020 cell density. Floods: GHSL UCDB R2024A population in JRC 100-year undefended river-flood zones, 2000/2025, aggregated by country; 2050 = WUP cities × 2025 share (constant) or × trended share. SSP2 grid totals 9.2 bn in 2050 vs WUP 9.7 bn; cells miss urban heat islands; exposure is not impact.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Anton&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Archivo+Narrow:wght@400;500;600;700&display=swap",
+  "themeColor": "#172328",
+  "topics": [
+    "Urbanisation",
+    "Climate Adaptation",
+    "Systemic Risk",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "exposure",
+    "population growth",
+    "urbanization",
+    "degree of urbanisation",
+    "towns",
+    "extreme heat",
+    "heat index",
+    "floods",
+    "floodplains",
+    "World Urbanization Prospects 2025",
+    "SSP",
+    "CMIP6",
+    "GHSL",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "engines",
+      "label": "1. Three Engines"
+    },
+    {
+      "id": "growth",
+      "label": "2. Where People Are Added"
+    },
+    {
+      "id": "urban",
+      "label": "3. Cities, Towns, Countryside"
+    },
+    {
+      "id": "heat",
+      "label": "4. Heat"
+    },
+    {
+      "id": "density",
+      "label": "5. Density, Growth and Heat"
+    },
+    {
+      "id": "floods",
+      "label": "6. Cities in Floodplains"
+    },
+    {
+      "id": "atlas",
+      "label": "7. The Atlas"
+    },
+    {
+      "id": "calculator",
+      "label": "8. Exposure Calculator"
+    },
+    {
+      "id": "planning",
+      "label": "9. Planning for Growth"
+    },
+    {
+      "id": "method",
+      "label": "10. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "+1.43 bn",
+      "label": "People added by 2050: 69% cities, 28% towns, 3% rural"
+    },
+    {
+      "value": "1.9 → 4.1 bn",
+      "label": "People with 30+ days a year above a 35 °C heat index, 2020–2050"
+    },
+    {
+      "value": "0.44 vs 1.74 bn",
+      "label": "Rise in heat exposure from population growth vs warming"
+    },
+    {
+      "value": "507 → 690 m",
+      "label": "City dwellers in 100-year flood zones, 2025 to 2050 (trend)"
+    }
+  ]
+}
