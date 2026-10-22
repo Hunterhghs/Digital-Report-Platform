@@ -1,0 +1,65 @@
+{
+  "number": "2026-57",
+  "title": "Escaping the Pollution–Poverty Trap",
+  "subtitle": "Breaking reinforcing cycles of environmental degradation",
+  "strapline": "Poverty pushes people into practices that degrade their environment, and the degraded environment keeps them poor. This dashboard measures five such cycles for 160 countries: air, cooking fuel, water and sanitation, land, and the drawdown of national wealth. It shows how they cluster, who has escaped them since 2000, and how fast the rest would need to move.",
+  "dek": "Forty-eight countries, 36 of them in sub-Saharan Africa, are trapped in two or more degradation cycles, and they hold 78% of the world's extremely poor. Polluting cooking fuel, missing sanitation and forest loss move together even among countries at the same income. Fifty-two countries escaped at least one cycle after 2000, through clean-cooking drives, sanitation campaigns and forest recovery, and cut extreme poverty by a median 26 points, more than twice as much as those that stayed trapped. Air pollution is the cycle growth has not broken.",
+  "abstract": [
+    "This report measures the pollution–poverty trap as five reinforcing cycles of environmental degradation for 160 countries. They are air (PM2.5 of 35 µg/m³ or more), cooking fuel (most people relying on polluting fuels), water and sanitation (most without basic sanitation), land (20% or more of land degraded, SDG 15.3.1) and wealth drawdown (negative adjusted net savings). It combines World Development Indicators, WHO/UNICEF and WHO data, the UN SDG database and World Bank Poverty and Inequality Platform estimates at $3.00 a day, and relates the cycles to poverty, stunting and one another.",
+    "Countries trapped in no cycle or one have a population-weighted extreme poverty rate of about 3%. Those in two cycles have 34%, and the 13 trapped in four cycles have 51%. The 48 countries in two or more cycles hold 1.6 billion people but 78% of the world's 823 million extremely poor. The household cycles cluster: polluting fuel and lack of sanitation are correlated at 0.56 among developing countries at the same income, and sanitation with forest loss at 0.33. Fuel-dependent low-income countries lost a median 9.5% of their forest area since 2000. Air pollution does not cluster with poverty at the same income, and SDG land-degradation data show no pattern.",
+    "Since 2000, 22 of 68 countries escaped the cooking-fuel cycle, 19 of 51 the sanitation cycle, 15 of 42 the air cycle and 16 of 28 the wealth cycle. Open defecation fell from 73% to 7% in India, 68% to under 1% in Nepal and 88% to 5% in Cambodia, and forest area grew by more than half in Rwanda and by a quarter in China and Viet Nam. The 52 countries that escaped at least one cycle cut extreme poverty by a median 26 points, against 11 for those that escaped none. Breaking several household cycles together through clean cooking, sanitation that is used, secure land and tree tenure, and reinvested resource rents is the strategy the escapers share. Clean air needs its own combustion-focused toolkit.",
+    "Interactive features include a correlation matrix of the cycles, poverty and stunting by number of cycles, charts of fuel against forest change and of the end of open defecation, escape rates and poverty paths, PM2.5 then and now, and savings against poverty. The report also includes a seven-layer atlas with cycle chips, a sortable table and an escape clock projecting each country's pace on four cycles."
+  ],
+  "jel": "Q56, Q53, O13, I15, Q23, Q24 — environment and development; air and water pollution; natural resources and development; health and development; forestry; land",
+  "method": "160 countries with at least 1 million people. Trap thresholds: PM2.5 ≥ 35 µg/m³ (WDI, 2023); clean cooking < 50% (WHO via WDI; high-income countries treated as not trapped); basic sanitation < 50% (WHO/UNICEF JMP via WDI); degraded land ≥ 20% (SDG 15.3.1, 2019 or 2015); adjusted net savings < 0 (WDI, 2015–2021 average). 2000 baselines use the same series (land excluded). Poverty: PIP lineups at $3.00 a day (2021 PPP), 2000 and 2024. Forest change: % change in forest area since 2000. Correlations across low- and middle-income countries; partial correlations use residuals on log GDP per head (PPP). Escape: trapped in 2000 and not in the latest year. Escape clock: ten-year least-squares trend extended linearly. Thresholds are conventions; PM2.5 includes dust; SDG 15.3.1 is self-reported and heterogeneous; associations are not causal.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "readingTime": 20,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;800&family=Anek+Latin:wght@400;500;600&family=Geologica:wght@400;500;600&display=swap",
+  "themeColor": "#1b1e15",
+  "topics": [
+    "Environment & Biodiversity",
+    "Public Health",
+    "Inequality",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "pollution-poverty trap",
+    "environmental degradation",
+    "poverty trap",
+    "clean cooking",
+    "sanitation",
+    "open defecation",
+    "deforestation",
+    "land degradation",
+    "adjusted net savings",
+    "air pollution",
+    "natural capital",
+    "sub-Saharan Africa",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "cycles", "label": "1. Five Cycles" },
+    { "id": "cluster", "label": "2. Do the Cycles Reinforce Each Other?" },
+    { "id": "multi", "label": "3. The Multi-Cycle Trap" },
+    { "id": "household", "label": "4. Fuel, Forests and Sanitation" },
+    { "id": "escapes", "label": "5. Escapes Since 2000" },
+    { "id": "air", "label": "6. Air: The Cycle Growth Hasn't Broken" },
+    { "id": "wealth", "label": "7. Wealth Drawdown" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "clock", "label": "9. The Escape Clock" },
+    { "id": "response", "label": "10. Breaking the Cycles" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "78%", "label": "Of the world's extremely poor live in countries trapped in two or more degradation cycles" },
+    { "value": "r = 0.56", "label": "Polluting fuel and missing sanitation move together at the same income" },
+    { "value": "52", "label": "Countries escaped at least one cycle since 2000" },
+    { "value": "73% → 7%", "label": "Open defecation in India, 2000 to 2024" }
+  ]
+}
