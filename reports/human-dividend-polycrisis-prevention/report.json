@@ -1,0 +1,117 @@
+{
+  "number": "2026-61",
+  "title": "The Human Dividend of Polycrisis Prevention",
+  "subtitle": "Estimating lives protected through coordinated development and risk reduction",
+  "strapline": "Most of the human cost of polycrisis is paid quietly: by children and mothers, by people breathing polluted air or drinking unsafe water, and by those caught in wars and disasters. This dashboard counts those deaths without overlap for 160 countries, estimates the lives already protected since 2000, and measures how many more risk reduction, development and the two together could protect, now and to 2050.",
+  "dek": "About 11.6 million people a year die in six channels that polycrisis prevention targets. Matching the best quarter of income peers would protect 4.6 million of them and reaching the next income tier 7.0 million, but doing both would protect 8.6 million. The burdens cluster in the same 55 countries and share drivers such as health coverage and sanitation, and closing the gaps by 2040 would protect about 172 million lives by 2050.",
+  "abstract": [
+    "This report estimates the human dividend of polycrisis prevention: the lives protected when countries reduce the risks behind preventable deaths. It builds a non-overlapping ledger for 160 countries across six channels: under-five deaths (2024) and maternal deaths (2023) from UN inter-agency estimates via the World Bank; adult air-pollution deaths from heart disease, stroke, lung cancer and COPD (WHO joint effects, 2021); diarrhoeal deaths from unsafe water, sanitation and hygiene at ages five and over (WHO, 2019); conflict deaths (UCDP GED, mean of 2021–2025); and disaster deaths (EM-DAT, mean of 2015–2024). Malaria deaths (WHO, 2024) are shown separately because they overlap with child deaths.",
+    "The ledger totals 11.6 million deaths a year: 5.5 million from air pollution, 4.9 million children under five, 0.76 million from unsafe water and sanitation, 0.25 million mothers, 0.23 million in conflict and 0.04 million in disasters. Against each country's 2000 rates, falling under-five mortality protected about 105 million children between 2001 and 2024, falling maternal mortality 3.4 million mothers, and malaria control 13.9 million lives, consistent with WHO's estimate of 14 million. Benchmarking each channel against the 25th-percentile rate of income peers, risk reduction could protect 4.6 million lives a year (40%). Reaching the next income group's median rates, development could protect 7.0 million (60%), and both together 8.6 million (74%). Development alone barely reduces disaster deaths (8%), while risk reduction at today's income captures only 29% of air-pollution deaths. Five countries hold 58% of the coordinated dividend, and 55 countries that do worse than their peers in at least four channels hold 42%. Health coverage, sanitation and government effectiveness are associated with lower death rates in several channels at equal income.",
+    "Projected with UN 2024 population and birth projections, deaths at today's rates would total about 330 million over 2025–2050. Closing coordinated gaps linearly by 2040 would protect about 172 million lives, against 94 million for risk reduction alone and 139 million for development alone. Conflict deaths have doubled since the late 2010s and aid cuts threaten past gains.",
+    "Interactive charts show the ledger, income against preventable death rates, the dividend earned since 2000, disaster mortality by decade, the levers by channel and income group, the largest country dividends, the clustering of burdens, a matrix of shared drivers, conflict deaths and four paths to 2050. The report also includes a seven-layer atlas with country cards, a sortable table and a lives-protected calculator."
+  ],
+  "jel": "I15, I18, O15, Q53, Q54, D74 — health and development; public health policy; human resources and development; air pollution; climate and natural disasters; conflict",
+  "method": "160 countries with at least 1 million people and a World Bank income group. Ledger: SH.DTH.MORT 2024; SH.MMR.DTHS 2023; WHO GHO AIR_35 2021 joint ambient + household air-pollution deaths minus lower respiratory infections; WHO GHO WSH_10 2019 WASH diarrhoea deaths minus under-fives; UCDP GED 26.1 organised-violence deaths, mean 2021–2025; EM-DAT disaster deaths via OWID, mean 2015–2024; malaria (GHO MALARIA_EST_DEATHS 2024) shown but excluded. Benchmark rates: U5MR, MMR, age-standardised air-pollution death rate (SDGAIRBODA), crude rates otherwise. Risk gap = 1 − income-group 25th percentile ÷ own rate; development gap = 1 − next group median ÷ own group median; coordinated = 1 − (1 − risk)(1 − development). Earned dividend = births × (2000 rate − actual). Projections scale by UN WPP 2024 births or population, gaps closed linearly 2025–2040. Partial correlations of drivers (WDI access indicators, WHO UHC index, WGI government effectiveness, stunting) with log rates, controlling log GDP per head. Benchmarks are associations, not causal effects; estimates come from different years; heat deaths undercounted; ageing ignored.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "readingTime": 21,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans:wght@400;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap",
+  "themeColor": "#241a2e",
+  "topics": [
+    "Systemic Risk",
+    "Public Health",
+    "Human Capital",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "polycrisis",
+    "prevention",
+    "lives saved",
+    "child mortality",
+    "maternal mortality",
+    "air pollution",
+    "water and sanitation",
+    "conflict",
+    "disasters",
+    "early warning",
+    "malaria",
+    "universal health coverage",
+    "risk reduction",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "ledger",
+      "label": "1. The Ledger"
+    },
+    {
+      "id": "earned",
+      "label": "2. The Dividend Already Earned"
+    },
+    {
+      "id": "levers",
+      "label": "3. Three Levers"
+    },
+    {
+      "id": "where",
+      "label": "4. Where the Lives Are"
+    },
+    {
+      "id": "coordinate",
+      "label": "5. Why Coordinate"
+    },
+    {
+      "id": "shocks",
+      "label": "6. Conflict and Disasters"
+    },
+    {
+      "id": "ahead",
+      "label": "7. The Dividend Ahead"
+    },
+    {
+      "id": "atlas",
+      "label": "8. The Atlas"
+    },
+    {
+      "id": "calculator",
+      "label": "9. Lives-Protected Calculator"
+    },
+    {
+      "id": "agenda",
+      "label": "10. A Coordinated Agenda"
+    },
+    {
+      "id": "method",
+      "label": "11. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "11.6 m",
+      "label": "Deaths a year across six prevention channels, counted without overlap"
+    },
+    {
+      "value": "4.6 → 8.6 m",
+      "label": "Lives a year protectable: risk reduction alone vs coordinated with development"
+    },
+    {
+      "value": "105 m",
+      "label": "Children's lives protected since 2000 as under-five mortality fell"
+    },
+    {
+      "value": "172 m",
+      "label": "Lives protected 2025–2050 if gaps close by 2040"
+    }
+  ]
+}
