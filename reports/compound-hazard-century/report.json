@@ -1,0 +1,65 @@
+{
+  "number": "2026-67",
+  "title": "The Compound Hazard Century",
+  "subtitle": "Understanding how heat, drought, flooding, and pollution interact",
+  "strapline": "Heat, drought, floods and pollution are usually counted one at a time, but they arrive together and feed one another. Using 74 years of station-based climate data, satellite pollution records and CMIP6 projections, this dashboard measures how often the hazards coincide, whether they coincide more than chance would predict, and how those overlaps change from 1951 to 2100.",
+  "dek": "Droughts have barely become more frequent, but they have become hot. Half of warm-season drought months in 1995–2024 were also extremely hot, up from three in ten in 1951–80 and seven in ten in 2021–24. Dry-to-wet whiplash is up 30%, and hot-dry years produce the great smoke and dust events. By the 2090s, 0.34 billion people would live with two or more compound hazards on a low-emissions path, 5.2 billion on a high one.",
+  "abstract": [
+    "This report measures how climate hazards interact rather than counting them one at a time. It uses CRU TS 4.09 monthly station-based temperature and rainfall on a 0.5° grid for 1951–2024, weighted by 2020 population. Each place is compared with its own 1951–80 climate: months in the top 10% for heat, the bottom 10% for three-month rainfall (drought) and the top 10% for rainfall (very wet). Satellite PM2.5 for 136 countries (1998–2024) tests the link to pollution, and World Bank CCKP CMIP6 climatologies with SSP population project compound-hazard pairs to 2100.",
+    "Heat and drought are physically coupled: warm-season heat and rainfall are negatively correlated in 138 of 143 countries, and in 1951–80 hot and dry months coincided 2.8 times as often as independence would predict. Warming has turned the coupling into a merger. The share of warm-season months in drought barely changed (10.0% to 10.3%), but extremely hot months rose from 11% to 30%, and 47% in 2021–24. The share of drought months that were also extremely hot rose from 31% to 52%, and 69% in 2021–24. 95% of the rise in hot droughts comes from droughts becoming hotter. In 82 countries with 2.7 billion people, droughts are now hot more often than not. The rise is steepest in the Mediterranean, the Middle East, West Africa, Brazil and central Europe and absent in South Asia.",
+    "Very wet months are 21% more common, and dry-to-wet whiplash 30% more common, consistent with recent literature. On annual national averages, a warm season in drought raises PM2.5 by about 5%, but hot-dry years produce the largest pollution events, such as Australia in 2019 (+50%) and Europe in 2003. At daily scale, heat makes polluted air more than twice as deadly. By the 2090s, 0.34 billion people would live with two or more compound hazards under SSP1-2.6 and 5.2 billion under SSP3-7.0. Responses that act on the links, such as joint warnings, landscape water storage serving both drought and flood, fire and dust control, clean air and emissions cuts, pay off in every scenario.",
+    "Interactive features include annual eclipse diagrams of heat and drought, a gridded map with five layers, regional, income and country charts, flood-whiplash and pollution-event charts, projections by pathway, a six-layer country atlas with a sortable table, and a compound-odds simulator calibrated on each country's observed coupling."
+  ],
+  "jel": "Q54, Q53, Q25, Q15, I15 — climate and natural disasters; air pollution; water; land use and agriculture; health and environment",
+  "method": "CRU TS 4.09 monthly tmx and precipitation, 0.5°, 1951–2024; cells station-informed in at least 75% of months (6.5 of 7.6 bn people). Per cell and calendar month against 1951–80: hot = tmx ≥ 90th percentile; drought = 3-month rainfall ≤ 10th percentile (10th percentile above zero, 3-month mean ≥ 30 mm); very wet = monthly rainfall ≥ 90th percentile and ≥ 50 mm; whiplash = very wet within 3 months after a drought month. Hot-dry measured in each cell's three warmest months. Weights: SSP2 2020 population. Coupling: correlation of detrended warm-season tmx and 3-month rainfall. Pollution: SatPM PM2.5 (OWID), 136 countries 1998–2024, two-way fixed effects, country-clustered errors. Projections: CCKP CMIP6 medians, heat index > 35 °C on ≥ 30 days, SPEI-12 ≤ −0.5, Rx5day ≥ 1.2 × 1995–2014, SSP population. Simulator: bivariate normal calibrated to observed hot-month shares (r = 0.98 across 114 countries). Monthly data miss short events; percentiles measure change, not absolute danger; associations, not causation.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Martel:wght@400;700&family=Encode+Sans+Condensed:wght@400;500;600;700&display=swap",
+  "themeColor": "#1c1512",
+  "topics": [
+    "Climate Adaptation",
+    "Systemic Risk",
+    "Public Health",
+    "Water Security"
+  ],
+  "keywords": [
+    "compound hazards",
+    "compound extremes",
+    "hot droughts",
+    "heat–drought coupling",
+    "land–atmosphere feedback",
+    "hydroclimate whiplash",
+    "flooding",
+    "wildfire smoke",
+    "air pollution",
+    "CRU TS",
+    "CMIP6",
+    "SSP scenarios",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "merger", "label": "1. Droughts Have Turned Hot" },
+    { "id": "coupling", "label": "2. Why Heat and Drought Travel Together" },
+    { "id": "map", "label": "3. The Compound Map" },
+    { "id": "where", "label": "4. Where Droughts Turned Hot" },
+    { "id": "whiplash", "label": "5. Wet After Dry" },
+    { "id": "pollution", "label": "6. Smoke, Dust and Smog" },
+    { "id": "century", "label": "7. The Century Ahead" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "simulator", "label": "9. Compound Odds Simulator" },
+    { "id": "solutions", "label": "10. Managing Hazards as Systems" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "31% → 52%", "label": "Warm-season drought months that were also extremely hot, 1951–80 vs 1995–2024" },
+    { "value": "2.8×", "label": "How much more often heat and drought coincided than chance, 1951–80" },
+    { "value": "+30%", "label": "Rise in dry-to-wet whiplash months since 1951–80" },
+    { "value": "0.34 vs 5.2 bn", "label": "People with 2+ compound hazards in the 2090s, low vs high emissions" }
+  ]
+}
