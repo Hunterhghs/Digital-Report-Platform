@@ -1,0 +1,65 @@
+{
+  "number": "2026-69",
+  "title": "The Survivability Trap",
+  "subtitle": "How humanity's demographic shift into heat and polluted air is concentrating the late-century majority in survivability risk, and what it will take to protect them",
+  "strapline": "Within this century, most people will live in sub-Saharan Africa and South Asia, where heat and air pollution are worst and rising. Ranking every person on Earth by the conditions they live in, this dashboard shows what the median person, the middle half of humanity and the worst-off quarter will face to 2100, and why it is the humanitarian agenda of the century.",
+  "dek": "By 2087, most of humanity will live in sub-Saharan Africa or South Asia. By the 2090s, the median person would live at a mean annual temperature of 26–28 °C, up from 22 °C, and the worst-off quarter beyond 28.5–29.4 °C, with one to more than two months of dangerous heat a year, in air already six times dirtier than the WHO guideline. A low-emissions, high-development path keeps unprecedented heat to 0.6 billion people instead of 3.8 billion.",
+  "abstract": [
+    "This report measures a slow-moving humanitarian crisis: the meeting of humanity's demographic shift with rising heat and persistent air pollution. It ranks every person on Earth by the conditions where they live, using World Bank CCKP CMIP6 climatologies (mean annual temperature and days of dangerous heat) on a 0.25° grid with SSP-consistent gridded population for four pathways to 2080–2099, national satellite PM2.5, and UN World Population Prospects 2024. For each period it reports the conditions of the median person, the middle half of humanity and the worst-off quarter, and who they are.",
+    "Sub-Saharan Africa and South Asia hold 37% of humanity today and 52% by 2100, a majority from 2087; Africa grows from 1.5 to 3.8 billion. The mean annual temperature where the median person lives rises from 21.9 °C to 24.4 (SSP1-2.6), 26.1 (SSP2-4.5) or 27.7 °C (SSP3-7.0) by the 2090s. People in unprecedented heat (≥ 29 °C) rise from 0.11 billion (1.4%) to 0.6, 1.6, 3.0 or 3.8 billion across pathways (model range 1.0–3.1 billion for SSP2-4.5). The threshold of the worst-off quarter goes from under one day a year of dangerous heat (heat index above 41 °C) to 27–105 days; that of the worst-off tenth from 9 to 74–154 days. The hottest quarter of humanity in the 2090s is 42% sub-Saharan African and 26% South Asian under SSP2-4.5, with India and Nigeria alone 45%.",
+    "The median person breathes PM2.5 of 31 µg/m³, six times the WHO guideline; pollution is falling globally since 2015 but remains highest where population grows, and people in places both hot and heavily polluted rise from 0.6 to 3.0–4.8 billion if pollution does not fall. Because warming stops only at net zero CO2 and then holds, these conditions are a floor for the centuries that follow. The humanitarian agenda is to lower that floor through emissions cuts, to clean the air, to make cooling, health systems, water and social protection universal where heat is greatest, and to support safe mobility and finance at the scale of the crisis.",
+    "Interactive features include the regional composition of humanity to 2100, a percentile fan of the temperature where people live, the shifting human climate distribution, unprecedented and dangerous heat by pathway with model ranges, pollution by region, the composition and conditions of each quarter of humanity, a percentile explorer, and a six-layer country atlas with a sortable table."
+  ],
+  "jel": "Q54, J11, Q53, I15, O15 — climate and natural disasters; demographic trends and projections; air pollution; health and economic development; human development",
+  "method": "CCKP CMIP6 multi-model median climatologies at 0.25° for 1995–2014 and 2020–39 to 2080–99 under SSP1-2.6, SSP2-4.5, SSP3-7.0 and SSP5-8.5: mean annual temperature (tas), days with heat index above 41 °C (hi41) and 35 °C (hi35); model p10/p90 for 2080–99 (SSP2, SSP3). SSP-consistent gridded population (Jones and O'Neill). Population-weighted 5th–95th percentiles over inhabited cells; quarters of humanity ranked by mean temperature. National population-weighted PM2.5 (SatPM via OWID), latest year, held constant. UN WPP 2024 medium variant for composition. Unprecedented heat = mean annual temperature ≥ 29 °C (Xu et al. 2020; Lenton et al. 2023). SSP grids differ from the UN projection; pollution may change; exposure is not impact.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Saira+Semi+Condensed:wght@400;500;600;700&display=swap",
+  "themeColor": "#221a17",
+  "topics": [
+    "Climate Adaptation",
+    "Demography",
+    "Public Health",
+    "Inequality"
+  ],
+  "keywords": [
+    "survivability",
+    "human climate niche",
+    "extreme heat",
+    "air pollution",
+    "demographic shift",
+    "sub-Saharan Africa",
+    "South Asia",
+    "population projections",
+    "humanitarian crisis",
+    "CMIP6",
+    "shared socioeconomic pathways",
+    "polycrisis",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "shift", "label": "1. The Shift" },
+    { "id": "median", "label": "2. The Median Human Gets Hotter" },
+    { "id": "niche", "label": "3. Leaving the Human Climate Niche" },
+    { "id": "heat", "label": "4. Months of Dangerous Heat" },
+    { "id": "air", "label": "5. The Air They Breathe" },
+    { "id": "worst", "label": "6. The Worst-Off Quarter" },
+    { "id": "centuries", "label": "7. Centuries, Not Decades" },
+    { "id": "explorer", "label": "8. Where Would You Stand?" },
+    { "id": "atlas", "label": "9. The Atlas" },
+    { "id": "agenda", "label": "10. A Humanitarian Agenda" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "2087", "label": "Year from which most people live in sub-Saharan Africa or South Asia (UN medium)" },
+    { "value": "21.9 → 26.1 °C", "label": "Mean annual temperature where the median person lives, today vs 2090s (SSP2-4.5)" },
+    { "value": "1.4% → 18–32%", "label": "Share of humanity in unprecedented heat, today vs 2090s (SSP2-4.5 to SSP3-7.0)" },
+    { "value": "0.6 vs 3.8 bn", "label": "People in unprecedented heat by the 2090s, low vs high emissions" }
+  ]
+}
