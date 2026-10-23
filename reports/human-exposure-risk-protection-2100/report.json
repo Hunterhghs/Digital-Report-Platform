@@ -1,0 +1,64 @@
+{
+  "number": "2026-68",
+  "title": "Human Exposure Across the Polycrisis Century",
+  "subtitle": "Projecting changing patterns of risk, vulnerability, and protection through 2100",
+  "strapline": "Risk is hazard, exposure and vulnerability together, and all three will change this century. This dashboard overlays CMIP6 hazards on gridded population for four shared socioeconomic pathways, splits the exposed by age, and tracks the rise of protection through schooling. It shows how many people will be exposed, who they will be, and whether protection keeps pace.",
+  "dek": "By the 2090s, 4.3 to 9.3 billion people will live with frequent heat, extreme rain or long dry spells, up from 3.4 billion. The exposed population ages fast: heat exposure among people 65 and over rises nearly tenfold, to 1.3 billion. If schooling keeps rising and protecting as it has, harm falls by 70–84% in three pathways, but under SSP3 protection only holds harm level, and heat harm rises 39%.",
+  "abstract": [
+    "This report projects human exposure to climate hazards across the century and asks how vulnerability and protection change with it. It overlays World Bank CCKP CMIP6 hazard climatologies (frequent humid heat, dangerous heat, extreme five-day rain and long dry spells) on SSP-consistent gridded population at 0.25° for four pathways and four 20-year periods to 2080–2099. It splits the exposed by age with Wittgenstein Centre projections and tracks adult schooling as a measure of protection. Protection-adjusted harm uses a within-country elasticity from historical disaster mortality: each extra year of adult schooling has gone with 32% fewer deaths per thousand affected.",
+    "People living with at least one hazard rise from 3.4 billion in 2020 to 4.3 billion (SSP1-2.6), 6.2 billion (SSP2-4.5), 5.8 billion (SSP5-8.5) or 9.3 billion (SSP3-7.0) by the 2090s. Climate drives 61% of the growth under SSP2-4.5, and population size 47% under SSP3-7.0. Sub-Saharan Africa's exposed population quadruples, and 11 countries with almost no exposure today become majority-exposed. The exposed population ages: people aged 65 and over living with frequent heat rise from 0.14 to 1.34 billion (2.0 billion under SSP5-8.5), overtaking young children in the 2020s, led by India (63 to 450 million) and China (36 to 250 million). Children under 5 facing heat fall to 0.09 billion under SSP1 but rise to 0.59 billion under SSP3.",
+    "Adult schooling rises from 8.1 to 12.5 years under SSP2 but only to 10.0 under SSP3. With the historical elasticity, protection-adjusted harm falls 71% under SSP2-4.5, 84% under SSP1-2.6 and 71% under SSP5-8.5, but only 7% under SSP3-7.0, where heat-related harm rises 39%. In 63 countries with 2.7 billion people, SSP3 schooling falls short of offsetting exposure growth. With a weak elasticity, harm rises in every pathway but SSP1. Building protection means delivering the education transition, preparing health systems for an older exposed population and for children in the fastest-growing hot countries, preparing newly exposed countries, and cutting emissions.",
+    "Interactive features include exposed population pyramids, exposure and age charts by pathway, a driver decomposition with protection sensitivity, a six-pattern typology, a six-layer country atlas with a sortable table, and a protection simulator with adjustable age weights and elasticity."
+  ],
+  "jel": "Q54, J11, J14, I25, O15 — climate and natural disasters; demographic trends and projections; economics of the elderly; education and economic development; human resources and human development",
+  "method": "CCKP CMIP6 multi-model median climatologies, 0.25°, 1995–2014 and 2020–2099 by 20-year period, SSP1-2.6/2-4.5/3-7.0/5-8.5: heat index > 35 °C on ≥ 30 days (hi35), > 41 °C on ≥ 30 days (hi41), Rx5day ≥ 150 mm, ≥ 90 consecutive dry days. SSP-consistent gridded population (Jones and O'Neill) for 2020 and period midpoints; 158 countries ≥ 1 m people. Age shares and adult (25+) mean years of schooling: Wittgenstein Centre v3.3 by SSP, applied nationally. Protection factor exp(−0.38 × Δschooling), the within-country disaster-mortality elasticity from H Heuristics report 2026-46. Shapley decomposition of harm change into population size, redistribution, climate and protection. Patterns: protection wins (harm −10% or more), climate-led or growth-led rise (+10%), holding, emerging (< 5% exposed now, ≥ 15% later), low exposure. Humid-heat thresholds understate dry heat; age shares national; elasticity from disaster deaths and uncertain; exposure is not impact.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700;800;900&family=Gupter:wght@400;500;700&family=Sofia+Sans+Condensed:wght@400;500;600;700&display=swap",
+  "themeColor": "#10232a",
+  "topics": [
+    "Climate Adaptation",
+    "Demography",
+    "Human Development",
+    "Systemic Risk"
+  ],
+  "keywords": [
+    "human exposure",
+    "vulnerability",
+    "adaptive capacity",
+    "population ageing",
+    "children",
+    "education",
+    "extreme heat",
+    "shared socioeconomic pathways",
+    "CMIP6",
+    "Wittgenstein Centre",
+    "2100 projections",
+    "polycrisis",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "exposure", "label": "1. The Exposure Century" },
+    { "id": "geography", "label": "2. Where Exposure Moves" },
+    { "id": "ageing", "label": "3. Exposure Grows Old" },
+    { "id": "protection", "label": "4. Protection Rises" },
+    { "id": "race", "label": "5. The Race" },
+    { "id": "patterns", "label": "6. Six Patterns" },
+    { "id": "atlas", "label": "7. The Atlas" },
+    { "id": "simulator", "label": "8. Protection Simulator" },
+    { "id": "priorities", "label": "9. Building Protection" },
+    { "id": "method", "label": "10. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "3.4 → 6.2 bn", "label": "People living with frequent heat, extreme rain or long dry spells, 2020 to 2090s (SSP2-4.5)" },
+    { "value": "0.14 → 1.34 bn", "label": "People aged 65+ living with frequent humid heat" },
+    { "value": "−71% vs −7%", "label": "Protection-adjusted harm by the 2090s, SSP2-4.5 vs SSP3-7.0" },
+    { "value": "63", "label": "Countries where SSP3 schooling falls short of offsetting exposure growth" }
+  ]
+}
