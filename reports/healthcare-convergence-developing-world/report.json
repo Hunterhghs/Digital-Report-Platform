@@ -1,0 +1,65 @@
+{
+  "number": "2026-70",
+  "title": "Healthcare Convergence in the Developing World",
+  "subtitle": "Building affordable systems that narrow global health inequalities",
+  "strapline": "Since 1960 the developing world has closed two thirds of its life-expectancy gap with rich countries. This dashboard measures how far health and coverage have converged, why progress has slowed, which countries buy the most health per dollar, who pays for care, and what an affordable essential package would cost, country by country.",
+  "dek": "The life-expectancy gap between developing and high-income countries fell from 25 years in 1960 to 8.4 today, but it closed four times faster before 2000 than since, and coverage growth has halved since 2015. Sri Lanka, Thailand and Viet Nam show good health at low cost, yet in the median low-income country governments spend $7 a person on health, households pay nearly half of all costs, and an essential package would cost 11% of GDP.",
+  "abstract": [
+    "This report measures health convergence between developing and high-income countries and the affordability of the systems needed to complete it. It uses World Bank WDI outcome and spending series (life expectancy, child and maternal mortality, current health expenditure and its financing sources, from the WHO Global Health Expenditure Database), the WHO UHC service coverage index and catastrophic-spending estimates, and the Disease Control Priorities costing of an essential UHC package (Watkins et al. 2020).",
+    "Population-weighted life expectancy in developing countries rose from 43.5 years in 1960 to 72.0 in 2024; the gap to high-income countries fell from 24.9 to 8.4 years and the cross-country spread by 40%, with β-convergence in every decade. But the gap closed by 14.4 years in 1960–2000 and only 2.2 in 2000–2024; child mortality in low-income countries is still 13 times the high-income rate; and the global UHC index rose 0.93 points a year to 2015 and 0.38 since. Spending per person tripled but the low-to-high-income ratio stayed at about 1:33. Each doubling of spending goes with 3 years of life expectancy and 7 points of coverage; 18 developing countries, including Sri Lanka, Thailand, Viet Nam, India, Kyrgyzstan and Malawi, outperform their spending on both.",
+    "Financing is the binding constraint. In the median low-income country, households pay 46% of health costs out of pocket, the government's share fell from 34% to 20% since 2000 as aid rose to 28%, and government health spending is 0.9% of GDP. 1.04 billion people spend over 10% of their budget on health. An essential UHC package costs about $100 per person in low-income and $165 in lower-middle-income countries (2023 dollars); 53 of 66 such countries, with 3.4 billion people, spend less in total. Restarting convergence requires public, pooled financing, a costed highest-priority package built on primary care, a stronger health workforce, and aid that co-finances national systems.",
+    "Interactive features include convergence and gap charts since 1960, coverage gains, spending trends, a health-per-dollar scatter and ranking, financing mix and hardship charts, a package-cost comparison, a seven-layer country atlas with a sortable table, and a financing simulator for when each country could afford a priority or full essential package."
+  ],
+  "jel": "I15, I18, H51, O15, F35 — health and economic development; health policy; government expenditure on health; human resources and human development; foreign aid",
+  "method": "World Bank WDI: life expectancy, under-5 and maternal mortality (1960–2024), population-weighted by current income group; current health expenditure per person (PPP, US$) and shares (government, external, out of pocket) from WHO GHED, medians by group. WHO GHO: UHC service coverage index (SDG 3.8.1, 2000–2023) and catastrophic spending > 10% (SDG 3.8.2). σ- and β-convergence by decade. Health per dollar: residuals from regressions of life expectancy and the UHC index on log spending (PPP) across 160 countries ≥ 1 m people; crisis-affected spending flagged. Package costs: Watkins et al. 2020 ($79/$130, 2016 US$) × 1.27 to 2023 dollars; priority package taken as half. Associations, not causal estimates; income groups are current classifications.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Sofia+Sans+Extra+Condensed:wght@400;500;600;700&display=swap",
+  "themeColor": "#0e2433",
+  "topics": [
+    "Global Health",
+    "Human Development",
+    "Inequality",
+    "Development Finance"
+  ],
+  "keywords": [
+    "health convergence",
+    "universal health coverage",
+    "life expectancy",
+    "child mortality",
+    "health financing",
+    "out-of-pocket spending",
+    "catastrophic health expenditure",
+    "good health at low cost",
+    "essential health package",
+    "Disease Control Priorities",
+    "primary health care",
+    "development assistance for health",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "outcomes", "label": "1. The Great Convergence" },
+    { "id": "coverage", "label": "2. Coverage" },
+    { "id": "spending", "label": "3. Spending" },
+    { "id": "lowcost", "label": "4. Good Health at Low Cost" },
+    { "id": "whopays", "label": "5. Who Pays" },
+    { "id": "package", "label": "6. An Affordable Package" },
+    { "id": "outlook", "label": "7. Can Convergence Restart?" },
+    { "id": "atlas", "label": "8. The Atlas" },
+    { "id": "simulator", "label": "9. Financing Simulator" },
+    { "id": "blocks", "label": "10. Building Affordable Systems" },
+    { "id": "method", "label": "11. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "24.9 → 8.4 yrs", "label": "Life-expectancy gap, developing vs high-income countries, 1960 to 2024" },
+    { "value": "0.93 → 0.38", "label": "Annual gain in the global UHC index, before vs after 2015" },
+    { "value": "$7", "label": "Government health spending per person, median low-income country" },
+    { "value": "$100 / $165", "label": "Essential UHC package per person, low / lower-middle income (2023 $)" }
+  ]
+}
