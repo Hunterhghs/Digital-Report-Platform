@@ -1,0 +1,68 @@
+{
+  "number": "2026-71",
+  "title": "The Polycrisis Apocalypse Humanity Is Facing",
+  "subtitle": "Measuring the Survivability Risk Region, its geography and its long tail",
+  "strapline": "A pessimistic scenario in which interacting crises push a growing share of humanity into regions where survival is a daily negotiation, and the condition persists for centuries or longer. This interactive companion to HH-2026-34 measures those regions cell by cell, maps where they are and who lives in them, sets out the weapons, conflict and collapse channels, and lets readers run the long tail themselves.",
+  "dek": "On a central measure, 1.2 billion people (16% of humanity) live today where two or more survivability tiers bind on weak institutions; holding today's institutions fixed, warming lifts that to 2.8–4.5 billion by the 2090s, three in five of them in Africa. With 65 armed conflicts in 2025, the most since 1946, and an unsafe equilibrium that could outlast every past civilisation, the cheapest time to choose the buffered path is now.",
+  "abstract": [
+    "This dashboard is the interactive companion to the H Heuristics research report HH-2026-34, The Polycrisis Apocalypse Humanity Is Facing. That report builds a pessimistic scenario in which interacting crises push a majority of humanity into Survivability Risk Regions (SRRs), places where two or more tiers of stress (pollution, functional heat, missing services, dangerous heat) bind on low institutional capacity, and in which that condition stabilises at unsafe levels for centuries or millennia. Here SRRs are measured directly, combining CMIP6 heat-stress climatologies on a 0.25° grid and SSP population with satellite PM2.5, electricity and clean-cooking access, poverty and governance indicators, on strict, moderate and broad definitions.",
+    "On the moderate definition, 1.24 billion people (16% of humanity) live in a measured SRR today; strict and broad definitions give 0.74 billion (10%) and 3.54 billion (47%). Holding national conditions at today's levels, warming lifts the moderate figure to 2.79 billion (30%) by the 2090s under SSP2-4.5 and 4.45 billion (37%) under SSP3-7.0. SRRs form a belt from West and Central Africa through the Sahel and the Horn to Pakistan, Afghanistan and Bangladesh; Africa's share of SRR residents rises from 51% to 60%, and Nigeria, Pakistan, DR Congo, Bangladesh and Uganda hold the most. With Africa's share of humanity rising from 19% to 37.5% by 2100, an African living in an SRR becomes the most common human circumstance by 2500 only on the broad definition.",
+    "Discontinuities sit on top of these gradients: 65 state-based armed conflicts in 2025 (UCDP), the most since 1946; forced displacement doubling from 57 to 113 million in 2015–2024; about 12,200 nuclear warheads, whose use could starve billions; and record military spending. Haiti shows how a loop of debt, disaster, deforestation and state capture produces collapse, falling from richer per person than its neighbour in 1960 to one eighth of its income today. Reproducing HH-2026-34's long-tail model, an unsafe stabilisation accumulates 4.3 trillion person-years in SRRs by 3000 CE, more than all human life ever lived, and more than an extinction path. Capacity, clean electricity, clean air, early security support, arms control and emissions cuts are the off-ramps.",
+    "Interactive features include a gridded world map of measured SRRs by climate period and definition, a comparison of measurement with the scenario, regional and country rankings, the composition of humanity to 2500, charts of weapons, conflict, displacement and Haiti's divergence, a long-tail simulator, and a six-layer country atlas with a sortable table."
+  ],
+  "jel": "Q54, O55, J11, F51, H56, O43 — climate and natural disasters; Africa; demographic trends and projections; international conflicts; national security and war; institutions and growth",
+  "method": "Heat tiers per 0.25° cell from World Bank CCKP CMIP6 multi-model median climatologies (1995–2014; 2040–59 and 2080–99 under SSP1-2.6 to SSP5-8.5): B = 60+ days with heat index > 35 °C, D = 30+ days > 41 °C; SSP-consistent gridded population; countries from rasterised world-atlas boundaries. National tiers: A = PM2.5 (SatPM via OWID), C = electricity or clean-cooking access (WDI); capacity = poverty at $4.20, WGI government effectiveness or political stability. SRR = 2+ tiers and low capacity, on strict / moderate / broad thresholds; national conditions held at today's levels. Beyond 2100, 2090s SRR rates applied to the Africa Ascendant demography. Long tail: HH-2026-34 Appendix A anchors with monotone cubic interpolation. Conflict: UCDP 26.1; displacement: UNHCR; warheads: FAS via OWID; spending: SIPRI via WDI; Haiti: WDI and IOM. Scenario arithmetic, not forecasts; the analysis concerns exposure and capacity, not any group's character.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-28",
+  "updated": "2026-10-28",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600;700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Smooch+Sans:wght@400;500;600;700&display=swap",
+  "themeColor": "#1b1714",
+  "topics": [
+    "Polycrisis",
+    "Climate Risk",
+    "Demography",
+    "Conflict & Security"
+  ],
+  "keywords": [
+    "polycrisis",
+    "polycrisis apocalypse",
+    "survivability risk region",
+    "climate habitability",
+    "heat stress",
+    "air pollution",
+    "Africa population growth",
+    "human exposure",
+    "nuclear winter",
+    "armed conflict",
+    "forced displacement",
+    "Haiti",
+    "state collapse",
+    "long-term future",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "concept", "label": "1. A Process, Not an Event" },
+    { "id": "map", "label": "2. The Measured Map" },
+    { "id": "count", "label": "3. How Many People" },
+    { "id": "where", "label": "4. Where, and Who" },
+    { "id": "median", "label": "5. The Median Human" },
+    { "id": "weapons", "label": "6. Weapons" },
+    { "id": "turmoil", "label": "7. Turmoil" },
+    { "id": "haiti", "label": "8. Haiti" },
+    { "id": "tail", "label": "9. The Long Tail" },
+    { "id": "atlas", "label": "10. The Atlas" },
+    { "id": "offramps", "label": "11. Off-Ramps" },
+    { "id": "method", "label": "12. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "1.2 bn", "label": "People in measured Survivability Risk Regions today (moderate definition; 0.7–3.5 bn across definitions)" },
+    { "value": "2.8 → 4.5 bn", "label": "In measured SRRs by the 2090s, SSP2-4.5 and SSP3-7.0, with today's institutions" },
+    { "value": "65", "label": "State-based armed conflicts in 2025, the most since 1946" },
+    { "value": "4.3 trn", "label": "Person-years in SRRs by 3000 CE on the unsafe-stabilisation path, more than all human life to date" }
+  ]
+}
