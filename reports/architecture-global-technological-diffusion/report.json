@@ -1,0 +1,117 @@
+{
+  "number": "2026-75",
+  "title": "The Architecture of Global Technological Diffusion",
+  "subtitle": "Why transformative technologies emerge faster than they spread, and how to accelerate adoption",
+  "strapline": "Humanity already has the technologies that would end most chronic harms of the polycrisis: electricity, clean cooking, safe water, sanitation, vaccines, phones, the internet and accounts. What it lacks is the architecture that delivers them to everyone. This dashboard times diffusion country by country across nine technologies, measures the backlog in people, tests what predicts adoption speed, and links diffusion to convergence and to polycrisis exposure.",
+  "dek": "Infrastructure-embedded technologies took a median of 26.5 years to go from 10% to 50% of US households, five times as long as stand-alone products; today no low-income country has passed 50% internet use, and the poorest trail the rich by 20 to 34 years or more on the technologies that matter most. Income, schooling, institutions, finance, power and place explain 86% of cross-country diffusion, vaccination escapes them, and at equal income each 10 points of diffusion goes with 19% lower child mortality.",
+  "abstract": [
+    "This report asks why transformative technologies emerge faster than they spread, and how humanity can accelerate their adoption to reduce inequality, improve living standards and mitigate the polycrisis. It develops five arguments: that innovation and diffusion are separate processes; that diffusion determines who benefits; that infrastructure and institutional capacity determine adoption speed; that diffusion can accelerate economic convergence; and that scaling proven technologies is a major mechanism of polycrisis mitigation. It tests them on nine technologies in 177 countries (World Bank WDI: mobile phones, internet, fixed broadband, electricity, clean cooking, safely managed water and sanitation, DTP3 vaccination and financial accounts) and on a century of United States household adoption data (Comin and Hobijn).",
+    "United States households needed a median of 26.5 years to go from 10% to 50% adoption for eight infrastructure-embedded technologies (flush toilets, central heating, electric ranges, cable TV) and 5.0 years for ten stand-alone products. Across countries, the median low-income country passed 10% internet use in 2016, 17 years after the high-income median, and none of the 22 that have passed 10% has reached 50%; low-income coverage today equals the high-income level of 2004 for mobile phones, 2000 for the internet and, at least, before 1990 for electricity. 671 million people lack electricity, 2.0 billion clean cooking and 2.3 billion internet use. Seven capacity variables explain 86% of cross-country variation in a diffusion index (income alone 83%); institutions matter most for accounts, water and sanitation, income and schooling for electricity and cooking, and vaccination (R² 0.26) escapes income, with Rwanda at 98% coverage.",
+    "At the same income, ten more points of diffusion index are associated with 19% lower under-5 mortality (15% for safe water, 10% for internet use, 8% for vaccination), and a ten-point larger gain in mobile and internet use in 2005–2022 with 0.19 points a year of additional growth in income per person. These are associations, not causal effects. The report concludes that distribution is at least as important as invention for the problems studied, but that invention matters as a lever on diffusion, because cheaper and simpler technologies lower the architecture they need.",
+    "Interactive features include United States adoption-speed charts, income-group diffusion curves for nine technologies with a lag and run-length analysis, a backlog in people, a Shapley decomposition and coefficient matrix of the architecture, outcome gradients, a country simulator for rebuilding the architecture, and a ten-layer country atlas with a sortable table."
+  ],
+  "jel": "O33, O14, O57, O11, O19, I15 — technological change: choices and consequences, diffusion processes; industrialisation and manufacturing; comparative studies of countries; macroeconomic analyses of economic development; international linkages to development; health and economic development",
+  "method": "Nine adoption series from World Bank WDI (ITU, WHO/UNICEF, Tracking SDG7, JMP, Global Findex), latest year since 2016; 177 countries with at least 0.3 million people; diffusion index = mean of seven core technologies. Income-group curves population-weighted over a fixed country set. Crossing years interpolated for 10% and 50%. US adoption: Comin and Hobijn data (OWID); 18 series observed from below 10% to above 50%; infrastructure classification by H Heuristics. Models: logit of coverage on ln GDP, secondary enrolment, institutions (WGI), private credit, ln electricity use, rural share and trade; OLS R² and Shapley decomposition; sign-constrained ridge coefficients with leave-one-out penalty. Outcome gradients: ln under-5 mortality on ln GDP and coverage. Cross-sectional associations only.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-31",
+  "updated": "2026-10-31",
+  "readingTime": 26,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Michroma&family=Gowun+Batang:wght@400;700&family=Ubuntu+Condensed&display=swap",
+  "themeColor": "#0c2744",
+  "topics": [
+    "Technology Diffusion",
+    "Economic Convergence",
+    "Development",
+    "Polycrisis"
+  ],
+  "keywords": [
+    "technology diffusion",
+    "technology adoption",
+    "S-curves",
+    "infrastructure",
+    "institutional capacity",
+    "digital divide",
+    "energy access",
+    "water and sanitation",
+    "vaccination",
+    "financial inclusion",
+    "economic convergence",
+    "polycrisis",
+    "Comin and Hobijn",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "arguments",
+      "label": "1. Five Arguments"
+    },
+    {
+      "id": "separate",
+      "label": "2. Invention vs Diffusion"
+    },
+    {
+      "id": "gap",
+      "label": "3. The Global Gap"
+    },
+    {
+      "id": "backlog",
+      "label": "4. The Backlog"
+    },
+    {
+      "id": "architecture",
+      "label": "5. The Architecture"
+    },
+    {
+      "id": "convergence",
+      "label": "6. Convergence"
+    },
+    {
+      "id": "polycrisis",
+      "label": "7. Polycrisis"
+    },
+    {
+      "id": "simulator",
+      "label": "8. Simulator"
+    },
+    {
+      "id": "atlas",
+      "label": "9. The Atlas"
+    },
+    {
+      "id": "solutions",
+      "label": "10. Building It"
+    },
+    {
+      "id": "method",
+      "label": "11. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "5×",
+      "label": "Longer for infrastructure-embedded technologies to go from 10% to 50% of US households (26.5 vs 5.0 years)"
+    },
+    {
+      "value": "0 of 22",
+      "label": "Low-income countries past 50% internet use, 17 years after the rich passed 10%"
+    },
+    {
+      "value": "86%",
+      "label": "Cross-country variation in diffusion explained by income, schooling, institutions, finance, power and place"
+    },
+    {
+      "value": "−19%",
+      "label": "Under-5 mortality per 10 index points at equal income (association)"
+    }
+  ]
+}
