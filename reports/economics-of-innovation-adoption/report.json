@@ -1,0 +1,61 @@
+{
+  "number": "2026-76",
+  "title": "The Economics of Innovation Adoption",
+  "subtitle": "Why life-saving ideas spread slowly, and what a polycrisis does to the math",
+  "strapline": "The best resilience innovation in the world is worth nothing until someone adopts it — and adoption is an economic decision with costs.",
+  "dek": "We know a lot about which innovations make communities more resilient: better seeds, cheaper solar, early warning, mobile money. We know far less about why some of them sweep through a population in a few years while others sit on the shelf for decades. The answer is mostly economics — and a polycrisis raises the stakes on getting it right.",
+  "abstract": [
+    "There is a puzzle at the centre of resilience policy. The innovations that would protect people from climate shocks, health emergencies and economic disruption are mostly cheap, proven and available — and yet many of them are adopted slowly, partially, or not at all, while the people who skip them bear the full cost of the next disaster. This report explains that gap in plain economic terms, for readers who have never studied economics.",
+    "Adoption is a decision, and every decision has costs. An innovation costs money up front, time to learn, and nerve to trust before it has proven itself locally. It also costs search: before someone adopts, they have to find out the thing exists, believe it works, and watch someone like them try it first. In normal times those costs decide how fast a good idea spreads. In a polycrisis — when shocks arrive on several fronts at once — the same costs are what hold people back, even as the value of protection rises.",
+    "The evidence that adoption pays is unusually strong. Solar power fell in cost by about 90 per cent between 2010 and 2023, mostly because millions of people adopted it and every adoption taught the industry to make it cheaper. The same curve is available to any resilience technology. But the market under-provides adoption, because one person adopting protects the neighbours too — the benefit leaks, so the private decision is too timid and the public case for help is strong.",
+    "The report closes with a simple agenda: lower the upfront cost, shrink the risk, shorten the search, and pay for the spillover. The binding term is adoption, not invention. The bottleneck in resilience is no longer the idea; it is the decision to use it."
+  ],
+  "jel": "O33, O31, Q54, Q55, D83 — technological change and diffusion; innovation and invention; climate and natural disasters; environmental economics; search, learning and information",
+  "method": "This report is a consumer-facing synthesis of the economics of technology diffusion, written for a bachelor's-level reader and kept under a 15-minute read. The data points are drawn from IRENA's Renewable Power Generation Costs in 2023 (utility-scale solar's levelised cost falling from $0.460/kWh in 2010 to $0.044/kWh in 2023, about 90 per cent); NOAA NCEI's billion-dollar disaster accounting (27 events in the US in 2024, a 1980–2024 average of 9.0, and a 2020–2024 average of 23.0); and the widely circulated comparisons of how long technologies took to reach 50 million users, which vary by source because 'user' is defined differently and are used here only to show the direction of travel. The S-curve in Figure 1 is a schematic, not data. The report is analytical rather than predictive, and deliberately avoids the formal models behind the claims.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-07",
+  "updated": "2026-11-07",
+  "readingTime": 13,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+  "themeColor": "#0f5c54",
+  "topics": [
+    "Technology",
+    "Climate Adaptation",
+    "Development Finance",
+    "Emerging Markets"
+  ],
+  "keywords": [
+    "innovation adoption",
+    "technology diffusion",
+    "learning curves",
+    "polycrisis",
+    "resilience",
+    "cost curves",
+    "solar energy",
+    "mobile money",
+    "risk aversion",
+    "credit constraints",
+    "spillovers",
+    "climate adaptation",
+    "early warning",
+    "behaviour change"
+  ],
+  "sections": [
+    { "id": "executive-summary", "label": "Executive Summary" },
+    { "id": "slow-good-idea", "label": "1. The Puzzle of the Slow Good Idea" },
+    { "id": "costs-of-adopting", "label": "2. What Adoption Costs" },
+    { "id": "polycrisis-math", "label": "3. What a Polycrisis Changes" },
+    { "id": "curve-pays-back", "label": "4. The Curve That Pays You Back" },
+    { "id": "private-choice", "label": "5. When Good Ideas Stay Private" },
+    { "id": "cheap-to-adopt", "label": "6. Making Resilience Cheap to Adopt" },
+    { "id": "references", "label": "References" }
+  ],
+  "highlights": [
+    { "value": "90%", "label": "Fall in the cost of solar power between 2010 and 2023, driven by adoption itself" },
+    { "value": "75 → 4", "label": "Years the telephone needed to reach 50 million users, against four for the internet" },
+    { "value": "27", "label": "Billion-dollar weather disasters in the United States in 2024 alone" },
+    { "value": "23 vs 9", "label": "Average US billion-dollar disasters per year, 2020–2024, against the 1980–2024 average" }
+  ]
+}
