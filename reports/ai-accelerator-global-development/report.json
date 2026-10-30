@@ -1,0 +1,44 @@
+{
+  "number": "2026-78",
+  "title": "Artificial Intelligence as an Accelerator of Global Development",
+  "subtitle": "Who uses AI, what for, what it does, and where scarcity meets low readiness",
+  "strapline": "AI could be the cheapest way yet to stretch scarce teachers, doctors and analysts, but it is arriving first where they are least scarce. This dashboard measures who uses AI across 120 countries, what for, what verified evidence says it does, and where need and low readiness coincide, and lets you test what plausible effect sizes would mean for a country.",
+  "dek": "High-income countries, with 17% of the world's people, generate 57% of Claude.ai usage and the five low-income countries with published data 0.2%; income alone explains 80% of usage per capita and English adds nothing, while 1.2 billion people live where doctors are fewest and digital foundations weakest, so the accelerator is not yet pointed at the need.",
+  "abstract": [
+    "This report asks whether artificial intelligence is accelerating development where capacity is scarcest. It combines the Anthropic Economic Index (Claude.ai usage by country, May 2026, 120 countries with published data; use cases, request topics and occupations), Microsoft's AI Diffusion Report series as an independent check, the IMF AI Preparedness Index, the diffusion index from report 2026-75 and World Bank indicators of income, schooling, governance, physicians, pupils per teacher and agricultural employment. The usage data come from a single provider, and the assistant that helped build this report is that provider's.",
+    "Usage is concentrated. High-income countries account for 57% of usage and 17% of the world's people; upper-middle-income 16% (38% of people); lower-middle-income 13% (36%); the five published low-income countries 0.2% (9%). The median usage-per-capita index of the ten highest countries is 41 times that of the ten lowest. Microsoft's independent series shows the same gap, 28.8% of working-age people in the Global North against 16.2% in the South in June 2026, widening from 9.8 points in early 2025 to 12.6. Income explains 80% of the cross-country variation (elasticity 0.94); with diffusion, schooling and governance the model explains 85%, and whether English is an official language adds nothing.",
+    "What is used differs with income. Coursework is 35% of usage in low-income countries and 13% in high-income, education and learning 25% against 11% of topics, and estimated time saved per task is higher; farming, fishing and forestry occupations are 0.04% of usage although agriculture employs 59% of workers in the median low-income country. Field evidence is encouraging and narrow: about 30% productivity gains for the least experienced support workers, 0.3 standard deviations in six weeks of AI tutoring in Nigeria, 16% fewer diagnostic errors in Nairobi clinics (no demonstrated change in patient outcomes), and flood forecasts in ungauged basins; macro estimates of the ten-year gain differ by an order of magnitude (at most 0.66% of productivity against 7% of world GDP).",
+    "Need and low readiness coincide: 3.8 billion people live in countries with fewer than one physician per 1,000, 1.2 billion of them where the diffusion index is below 60. Interactive features include usage, mix, evidence and scarcity charts, a Shapley decomposition and residual chart, an accelerator calculator for health workforce, learning and output, and a seven-layer atlas with a sortable table of countries."
+  ],
+  "jel": "O33, O15, I15, I25, O11, L86 — technological change; human resources and development; health and economic development; education; economic development; information and internet services",
+  "method": "Anthropic Economic Index release of 26 June 2026 (Claude.ai, May 2026; country usage per capita index, use cases, topics and SOC groups for 120 countries above the publication floor; income-group figures weighted by usage). Microsoft AI Diffusion Report (H2 2025, Q1 and Q2 2026) as an independent check. IMF AI Preparedness Index 2023; World Bank WDI and WGI; H Heuristics diffusion index (2026-75). OLS of ln(usage index) on ln GDP per person, diffusion index, secondary enrolment, government effectiveness and English as an official language (117 countries) with Shapley decomposition of R². Scarcity thresholds (physicians under 1 per 1,000; over 35 pupils per teacher; over 40% of employment in agriculture) and low readiness (diffusion index under 60) are the report's own. The calculator is arithmetic on stated assumptions (equivalent physicians, learning years at 5 years per standard deviation, a Hulten-style productivity calculation), not a forecast. Usage data cover one provider's consumer assistant, exclude unpublished (mostly low-income) countries, and classifications and time estimates are model-assigned.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-09",
+  "updated": "2026-11-09",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Italiana&family=Lusitana:wght@400;700&family=Quantico:ital,wght@0,400;0,700;1,400&display=swap",
+  "themeColor": "#141a33",
+  "topics": ["Technology", "Development", "Digital Economy", "Human Capital"],
+  "keywords": ["artificial intelligence", "AI adoption", "development", "Anthropic Economic Index", "AI preparedness", "digital divide", "education", "health workforce", "productivity", "usage per capita", "scarcity", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "who", "label": "1. Who Is Using AI"},
+    {"id": "what", "label": "2. What For"},
+    {"id": "why", "label": "3. What Predicts Use"},
+    {"id": "evidence", "label": "4. The Evidence"},
+    {"id": "need", "label": "5. Need and Readiness"},
+    {"id": "calculator", "label": "6. Calculator"},
+    {"id": "atlas", "label": "7. The Atlas"},
+    {"id": "agenda", "label": "8. Agenda"},
+    {"id": "method", "label": "9. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "57% vs 0.2%", "label": "Share of Claude.ai usage from high-income countries against the five published low-income countries"},
+    {"value": "0.94", "label": "Income elasticity of AI usage per capita; income alone explains 80% of the variation"},
+    {"value": "35% vs 13%", "label": "Coursework share of usage in low-income against high-income countries"},
+    {"value": "1.2 bn", "label": "People where physicians are under 1 per 1,000 and the diffusion index is below 60"}
+  ]
+}
