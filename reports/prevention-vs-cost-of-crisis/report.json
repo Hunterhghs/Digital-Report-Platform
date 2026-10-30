@@ -1,0 +1,118 @@
+{
+  "number": "2026-74",
+  "title": "The Economics of Prevention Versus the Cost of Crisis",
+  "subtitle": "What humanity could save by reducing many risks at once, before their consequences materialise",
+  "strapline": "Humanity pays for crises after they happen, repeatedly and at a premium. This dashboard measures how international finance divides between response and prevention, assembles 17 published benefit-cost estimates for prevention across ten interconnected risk domains, and lets readers build a prevention portfolio that accounts for uncertainty, implementation capacity, delay, cross-sector benefits and the welfare of future generations.",
+  "dek": "In 2015–2024 official donors spent $263 billion responding to crises in developing countries and $21 billion preventing them, 8 cents for every response dollar, while recorded disaster damage averaged $194 billion a year. Seventeen published estimates put prevention's return at 2 to 87 dollars per dollar across air pollution, climate, health, food, water, infrastructure, pandemics and conflict, and a cautious portfolio still returns several times its cost.",
+  "abstract": [
+    "This report asks how much humanity could save by preventing crises before their consequences materialise rather than repeatedly paying to manage their aftermath, across the interconnected systems of the polycrisis: air pollution and preventable disease, climate and environmental degradation, poverty, food, water, energy, infrastructure, infectious disease and pandemics, ecosystems, and conflict and humanitarian emergencies. It tests five propositions: that prevention reduces crisis spending, that early action stops small problems becoming systemic, that multi-risk investments pay across sectors, that developing economies gain most, and that prevention's value grows across generations.",
+    "OECD Creditor Reporting System data show that official donors (excluding Türkiye, which reports its hosting of Syrian refugees as humanitarian aid) spent $263 billion on emergency response and reconstruction in developing countries in 2015–2024 and $21 billion on disaster prevention and preparedness: 8 cents per response dollar. The ratio narrowed from 25 : 1 in 2010 to 7 : 1 in 2024, but low-income countries received $25 of response for every $1 of prevention. EM-DAT records $3.7 trillion of disaster damage since 2000, $194 billion a year on average in 2015–2024.",
+    "An evidence base of 17 published benefit-cost estimates, from the US Clean Air Act (30 : 1) and building codes (11 : 1) to immunisation (16), tuberculosis (46), malaria (48), maternal and newborn health (87), nutrition (18), agricultural research (33), resilient infrastructure (4), climate adaptation (2–10), drought resilience (2.3–3.3), pandemic prevention and peacebuilding, has central ratios between 2 and 87. The median is 16 in low- and middle-income settings against 11 in high-income settings. Thirteen of the 17 deliver 40% or more of their benefits outside their lead domain, so siloed appraisal understates them; durable prevention is worth 2.6 times more over a century at 2% than over 30 years at 5%; and a day's warning cuts storm damage by 30%. A Monte Carlo portfolio of all 17, with 70% implementation capacity and two years' extra delay, returns a median of about 13 : 1, and about 3 : 1 even with 40% capacity, ten years' delay and siloed accounting.",
+    "Interactive features include charts of response against prevention aid and of disaster damages, a range chart and table of the evidence base, an escalation calculator, cross-domain and siloed-appraisal charts, returns by setting and income group, a horizon-multiplier chart, a prevention-portfolio simulator with 2,000 draws, and a four-layer atlas with a sortable table."
+  ],
+  "jel": "H43, Q54, O19, F35, I15, D61, Q56 — project evaluation and social discount rate; climate and natural disasters; international aid; foreign aid; health and development; cost-benefit analysis; environment and development",
+  "method": "Aid: OECD CRS (DSD_CRS@DF_CRS 1.7), all official donors minus Türkiye, ODA gross disbursements, constant 2024 US$, sectors 720 and 730 (response) and 740 (prevention), 2010–2024, aggregate and by recipient. Disasters: EM-DAT economic damages via Our World in Data. Evidence: 17 benefit-cost ratios from EPA, Global Commission on Adaptation, WMO, NIBS, World Bank Lifelines, Hutton (WHO), Ozawa et al., Copenhagen Consensus/JBCA, Hoddinott et al., Rosegrant et al., Bernstein et al., USAID and IEP, with published ranges or an assumed ×/÷2; domain weights, lags and persistence are H Heuristics classifications. Simulator: log-triangular draws; adjusted BCR = BCR × capacity × (1+r)^−delay × [(1−p) + p·A(r,H)/A(5%,30)]; lead-domain accounting uses the largest domain weight; 2,000 draws.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-30",
+  "updated": "2026-10-30",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rasa:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Kreon:wght@400;500;600;700&display=swap",
+  "themeColor": "#14202e",
+  "topics": [
+    "Polycrisis",
+    "Development Finance",
+    "Disaster Risk",
+    "Public Health"
+  ],
+  "keywords": [
+    "prevention",
+    "cost of crisis",
+    "benefit-cost analysis",
+    "disaster risk reduction",
+    "humanitarian aid",
+    "anticipatory action",
+    "early warning",
+    "pandemic prevention",
+    "conflict prevention",
+    "climate adaptation",
+    "air pollution",
+    "discount rate",
+    "intergenerational",
+    "polycrisis",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "propositions",
+      "label": "1. Five Propositions"
+    },
+    {
+      "id": "bias",
+      "label": "2. The Reactive Bias"
+    },
+    {
+      "id": "evidence",
+      "label": "3. The Evidence Base"
+    },
+    {
+      "id": "escalation",
+      "label": "4. Small to Systemic"
+    },
+    {
+      "id": "multirisk",
+      "label": "5. Many Risks at Once"
+    },
+    {
+      "id": "developing",
+      "label": "6. Where It Pays Most"
+    },
+    {
+      "id": "generations",
+      "label": "7. Across Generations"
+    },
+    {
+      "id": "portfolio",
+      "label": "8. Portfolio Simulator"
+    },
+    {
+      "id": "atlas",
+      "label": "9. The Atlas"
+    },
+    {
+      "id": "agenda",
+      "label": "10. Making It Happen"
+    },
+    {
+      "id": "method",
+      "label": "11. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "8¢",
+      "label": "Prevention aid per $1 of response aid, developing countries, 2015–2024"
+    },
+    {
+      "value": "2 – 87",
+      "label": "Central benefit-cost ratios across 17 prevention investments"
+    },
+    {
+      "value": "16 vs 11",
+      "label": "Median BCR, low- and middle-income vs high-income settings"
+    },
+    {
+      "value": "×2.6",
+      "label": "Value of durable prevention over 100 years at 2% vs 30 years at 5%"
+    }
+  ]
+}
