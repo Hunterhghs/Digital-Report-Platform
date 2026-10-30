@@ -1,0 +1,123 @@
+{
+  "number": "2026-73",
+  "title": "Financing Clean Energy Access in Emerging Economies",
+  "subtitle": "Following the money to the 671 million people without electricity and the 2 billion without clean cooking",
+  "strapline": "The technology for universal electricity and clean cooking is cheap and proven; the finance is not reaching the people who lack them. This dashboard matches the access gap in 118 low- and middle-income countries with the clean-energy finance each received, examines the cost of capital, currency risk and affordability that decide what access costs, and lets readers build a financing stack and cost universal access country by country.",
+  "dek": "Sub-Saharan Africa has 89% of the world's people without electricity but received 28% of international public clean-energy finance in 2015–2024, about $82 per person without power over a decade. Twenty-five 'forgotten frontier' countries with 486 million people without electricity received 7%. Where finance does arrive, capital costs more than twice as much as in rich economies and currencies have lost three quarters of their value, so the price of money becomes the price of power.",
+  "abstract": [
+    "This report examines how clean energy access is financed in low- and middle-income countries and why finance is not reaching the people who lack electricity and clean cooking. It matches access gaps in 118 countries (World Bank WDI, latest year) with the international public financial flows for clean energy that each received in 2015–2024 (SDG indicator 7.a.1, OECD and IRENA, constant 2023 dollars), and examines the cost of capital, currency and fiscal risk, and household affordability.",
+    "In the latest data, 671 million people in these countries lack electricity, 89% of them in sub-Saharan Africa and 80% in rural areas, and about 2 billion lack clean cooking. Sub-Saharan Africa received 28% of the $172 billion of attributable flows, about $82 per person without electricity over the decade, against $606 in East Asia and $2,405 in Latin America. The 20 largest gaps hold 78% of people without power and received 20% of the money; 25 'forgotten frontier' countries with 486 million people without electricity, including Nigeria ($19 per person) and DR Congo ($12), received 7%, while 57 near-universal countries received 53%. Flows to sub-Saharan Africa averaged about $4.1 billion a year in 2020–2024, against an IEA estimate of $25 billion a year for universal access in Africa.",
+    "Finance that does arrive is expensive. The cost of capital for clean energy in emerging and developing economies is more than twice that in advanced economies; median commercial lending rates are 14.3% in sub-Saharan Africa against 10.5% elsewhere; and currencies such as the naira (−87%), birr (−75%) and cedi (−74%) lost much of their dollar value in 2015–2024. Because access technologies are paid for up front, a project financed at 15% costs 2.4 times as much a year as one financed at 3%. Poverty is correlated with lack of access at −0.86, and only 22% of households without electricity can afford a basic solar kit. The report argues for a financing stack aimed at the frontier: grants and results-based subsidies where affordability binds, concessional loans and guarantees to lower the cost of capital, and local-currency finance to remove exchange risk.",
+    "Interactive features include charts of the access gap and of finance flows by region, a typology of countries by gap and finance, need-against-flows comparisons, a cost-of-capital calculator, currency, fiscal and affordability charts, a financing-stack simulator, a country calculator for the cost of universal access, and a seven-layer atlas with a sortable table."
+  ],
+  "jel": "Q48, Q42, O13, F35, G21, H54, O55 — energy government policy; alternative energy sources; energy and development; foreign aid; banks and lending; infrastructure; Africa",
+  "method": "World Bank WDI (latest year since 2015): access to electricity (total, urban, rural) and clean cooking, population, lending rates, official exchange rates, revenue, debt service, poverty at $3.00 (2021 PPP). Finance: SDG 7.a.1 international public flows for clean energy R&D and renewable energy production by recipient (OECD/IRENA via Our World in Data, constant 2023 US$), 2015–2024. Typology by people without electricity (≥ 1 m) and finance per person without electricity (≥ $50). Capital recovery factor r/(1−(1+r)^−n); financing-stack and country calculators use illustrative investment per person. Needs from IEA Africa Energy Outlook 2022 and A Vision for Clean Cooking Access for All (2023); affordability from ESMAP/GOGLA Off-Grid Solar Market Trends 2024. SDG 7.a.1 covers renewables in general, not access spending.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-30",
+  "updated": "2026-10-30",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Rozha+One&family=Besley:ital,wght@0,400;0,600;0,700;1,400&family=Mohave:wght@400;500;600;700&display=swap",
+  "themeColor": "#12372e",
+  "topics": [
+    "Energy Access",
+    "Development Finance",
+    "Africa",
+    "Energy Transition"
+  ],
+  "keywords": [
+    "energy access",
+    "electricity access",
+    "clean cooking",
+    "development finance",
+    "cost of capital",
+    "concessional finance",
+    "blended finance",
+    "guarantees",
+    "local currency finance",
+    "off-grid solar",
+    "mini-grids",
+    "results-based financing",
+    "SDG 7",
+    "Mission 300",
+    "sub-Saharan Africa",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "gap",
+      "label": "1. The Access Gap"
+    },
+    {
+      "id": "flows",
+      "label": "2. Where the Money Goes"
+    },
+    {
+      "id": "perperson",
+      "label": "3. Finance per Person"
+    },
+    {
+      "id": "need",
+      "label": "4. Flows Against Need"
+    },
+    {
+      "id": "capital",
+      "label": "5. The Price of Money"
+    },
+    {
+      "id": "risk",
+      "label": "6. Currency and Fiscal Risk"
+    },
+    {
+      "id": "afford",
+      "label": "7. Affordability"
+    },
+    {
+      "id": "stack",
+      "label": "8. Financing Stack"
+    },
+    {
+      "id": "calculator",
+      "label": "9. Country Calculator"
+    },
+    {
+      "id": "atlas",
+      "label": "10. The Atlas"
+    },
+    {
+      "id": "solutions",
+      "label": "11. What Works"
+    },
+    {
+      "id": "method",
+      "label": "12. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "89% vs 28%",
+      "label": "Sub-Saharan Africa's share of people without electricity vs its share of clean-energy finance, 2015–2024"
+    },
+    {
+      "value": "$82",
+      "label": "Finance per person without electricity in sub-Saharan Africa over a decade"
+    },
+    {
+      "value": "486 m",
+      "label": "People without power in 25 'forgotten frontier' countries that received 7% of finance"
+    },
+    {
+      "value": "> 2×",
+      "label": "Cost of capital for solar in developing vs advanced economies"
+    }
+  ]
+}
