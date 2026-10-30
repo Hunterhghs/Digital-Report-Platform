@@ -1,0 +1,117 @@
+{
+  "number": "2026-76",
+  "title": "Accelerating the Global Clean Energy Transition",
+  "subtitle": "Measuring the pace, locating the gap and testing what faster would take",
+  "strapline": "The clean energy transition is a race measured in percentage points a year. This dashboard compares the world's actual pace with the pace its climate goals require, locates the gap across 153 countries and the fossil fuels beyond the power sector, tests what slows countries down, and explores what happens if laggards match the pace their income peers already achieve.",
+  "dek": "World clean electricity gains about one percentage point a year, against 2.3 needed for a fully clean grid by 2050 and 3.8 by 2040, yet wind and solar additions have grown 19% a year since 2019 and coal, oil and gas use outside power is still rising. Five countries generate two thirds of fossil power, and if every country at least matched the pace of the fastest tenth of its income peers, world power would be about 95% clean by 2050 rather than 65%.",
+  "abstract": [
+    "This report measures how fast the global clean energy transition is moving and how fast it needs to move. Using Ember electricity data for the world and 153 countries, Our World in Data's primary-energy series, and benchmarks from the IPCC (AR6 WGIII SPM C.3.2), IRENA and the IEA, it compares observed pace with the pace required, locates the gap by country and fuel, tests what predicts pace, and builds scenarios of acceleration: peer-pace scenarios computed from country data and a world lever simulator.",
+    "World clean electricity rose from 36.3% in 2019 to 42.6% in 2025, a pace of 1.05 percentage points a year (wind and solar 1.57), against 2.29 needed for 100% by 2050, 3.82 by 2040 and 5.74 by 2035. But wind and solar additions grew 19% a year, from 287 TWh a year in 2018–20 to 684 TWh in 2023–25 (839 TWh in 2025), and renewable capacity grew 15.5% in 2025 to 5,149 GW (692 GW added) against about 1,205 GW a year needed to triple by 2030. Outside power, world coal, oil and gas use rose 5%, 2% and 6% in 2019–24 against linear paths to the IPCC 1.5 °C medians of −15%, −10% and −7%; the fossil share of primary energy falls only 0.49 points a year, 63 years from 50%.",
+    "Five countries generate 66% of fossil electricity (China 35%). In 2019–24, fossil generation fell in 74 countries, rose with clean additions covering at least half of demand growth in 27, and rose with clean additions covering less in 52 (28% of fossil power; India, Russia, Saudi Arabia, Iran, Indonesia, Egypt). Pace is unrelated to starting clean share or coal share, and strongly negatively related to demand growth (countries above 5% growth have a median pace of zero). If every country at least matched the median, 75th or 90th percentile pace of its income group, the world would be 73%, 81% or 95% clean by 2050 (65% at own pace), avoiding about 40, 93 or 191 billion tonnes of power-sector CO₂. A world lever simulator shows the timing depends most on whether additions keep growing and on the ceiling they hit.",
+    "Interactive features include pace-gap and engine charts, fossil use against IPCC paths, a country pace-versus-need chart, demand-growth and regression analysis, peer-pace scenarios, a world lever simulator and a six-layer atlas with a sortable table."
+  ],
+  "jel": "Q42, Q48, Q54, O13, L94, F18 — alternative energy sources; energy government policy; climate; energy and development; electric utilities; trade and environment",
+  "method": "Ember yearly electricity data (world to 2025; 153 countries with data for 2015, 2019 and 2024 and at least 1 TWh); pace = change in clean share 2019–24 per year; required pace = (100 − share) ÷ years to target. Our World in Data / Energy Institute primary energy; IPCC AR6 WGIII SPM C.3.2 medians with linear paths assumed. IRENA capacity statistics; tripling arithmetic on 5,149 and 11,174 GW. Trajectory classes by fossil generation change and clean additions relative to demand growth. OLS of pace on starting share, coal share, income, institutions and demand growth. Peer-pace scenarios: country pace floored at the median, 75th or 90th percentile of its World Bank income group, linear clean-share gain, generation weights fixed. World simulator: demand growth, wind and solar additions growing to a ceiling, fixed other clean additions; no storage, grid or cost modelled. Arithmetic, not forecasts.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-31",
+  "updated": "2026-10-31",
+  "readingTime": 26,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Yrsa:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Titillium+Web:wght@400;600;700&display=swap",
+  "themeColor": "#14171c",
+  "topics": [
+    "Energy Transition",
+    "Climate Risk",
+    "Energy Policy",
+    "Development"
+  ],
+  "keywords": [
+    "clean energy transition",
+    "energy transition pace",
+    "wind and solar",
+    "tripling renewables",
+    "fossil fuels",
+    "coal phase-out",
+    "electricity demand",
+    "grid connection queues",
+    "cost of capital",
+    "peer pace",
+    "scenarios",
+    "IPCC",
+    "IRENA",
+    "dashboard"
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "label": "Overview"
+    },
+    {
+      "id": "pace",
+      "label": "1. The Pace Gap"
+    },
+    {
+      "id": "engine",
+      "label": "2. The Engine"
+    },
+    {
+      "id": "beyond",
+      "label": "3. Beyond Power"
+    },
+    {
+      "id": "gap",
+      "label": "4. Where the Gap Sits"
+    },
+    {
+      "id": "slow",
+      "label": "5. What Slows Countries"
+    },
+    {
+      "id": "scenarios",
+      "label": "6. Peer Pace"
+    },
+    {
+      "id": "levers",
+      "label": "7. Lever Simulator"
+    },
+    {
+      "id": "bottlenecks",
+      "label": "8. Bottlenecks"
+    },
+    {
+      "id": "atlas",
+      "label": "9. The Atlas"
+    },
+    {
+      "id": "agenda",
+      "label": "10. Agenda"
+    },
+    {
+      "id": "method",
+      "label": "11. Method"
+    },
+    {
+      "id": "references",
+      "label": "Sources"
+    }
+  ],
+  "highlights": [
+    {
+      "value": "1.05 → 2.3",
+      "label": "Points a year of clean-share gain, 2019–25, against the pace needed for a fully clean grid by 2050"
+    },
+    {
+      "value": "+19%",
+      "label": "Annual growth in wind and solar additions, 2018–20 to 2023–25"
+    },
+    {
+      "value": "66%",
+      "label": "Share of the world's fossil electricity generated by five countries"
+    },
+    {
+      "value": "65% → 95%",
+      "label": "World clean power in 2050: own pace against every country matching its income peers' fastest tenth"
+    }
+  ]
+}
