@@ -1,0 +1,68 @@
+{
+  "number": "2026-72",
+  "title": "The Clean Energy Trajectory",
+  "subtitle": "How the global transition could reshape humanity's development path and cut cumulative exposure to environmental, economic and health risks, 2026–2100",
+  "strapline": "The clean energy transition is usually counted in tonnes of carbon. This dashboard counts it in people: years lived in dangerous heat, lives lost to fossil-fuel smoke, years without electricity or clean cooking, and money spent on imported fuel, across four pathways from a stalled transition to 1.5 °C, country by country and year by year to 2100.",
+  "dek": "Clean sources met all of the growth in world electricity demand in 2025 and solar modules are 95% cheaper than in 2010, yet nearly two billion people still use under a megawatt-hour a year. Against a stalled transition, a 1.5 °C pathway avoids 106 billion person-years of hazardous heat, about 54 million deaths from fossil-fuel air pollution, nearly all energy poverty and $18 trillion of fuel imports by 2050. The binding constraints are finance, grids and institutions, not technology.",
+  "abstract": [
+    "This report asks how the global clean energy transition could reshape humanity's development trajectory and reduce cumulative exposure to interconnected environmental, economic and health risks between 2026 and 2100. It treats the transition as the interaction of seven transformations (decarbonising production, cutting air pollution, expanding access, diffusing technology, electrifying end uses, escaping fossil-fuel volatility and building resilient systems) and measures their consequences in an exposure ledger. Four pathways (stalled, current trajectory, 2 °C and 1.5 °C) combine IPCC climate scenarios, the IPCC's median declines in coal, oil and gas use by 2050 and alternative paths for energy access; the ledger sums their effects for 176 countries, year by year.",
+    "Ember data show that in 2025 clean sources supplied 42.6% of the world's electricity and covered all demand growth, as fossil generation fell by 51 TWh; 72 countries now generate at least a tenth of their power from wind and solar, against 20 in 2015, and solar module prices have fallen 95% since 2010. But low-income countries use 0.23 MWh of electricity a person a year against 9.2 in high-income countries; 1.96 billion people in 58 countries use under 1 MWh, and life expectancy is correlated with the logarithm of electricity use at 0.85. Lifting all of them to 1 MWh by 2050 needs about 2,300 TWh a year, less than three years of 2025 clean additions.",
+    "Compared with a stalled transition, the 1.5 °C pathway avoids 106 billion person-years of hazardous heat (37%) and 100 billion of dangerous heat (62%) between 2026 and 2100, holding population the same; about 54 million deaths from fossil-fuel air pollution (62%, on a conservative attribution); nearly all of the 98 billion person-years without electricity and 240 billion without clean cooking; and about $18 trillion of net importers' fuel bills by 2050 at 2023 values. The gains concentrate in sub-Saharan Africa, South and East Asia and middle-income countries. The binding constraints are the cost of capital, more than twice as high for solar in developing economies, grids and institutions.",
+    "Interactive features include world and income-group electricity trends, cost curves, a development-floor calculator, the four-pathway exposure ledger, heat, air-pollution, access and fuel-bill channel charts, a pathway simulator and a seven-layer country atlas with a sortable table."
+  ],
+  "jel": "Q42, Q54, Q53, O13, O33, F18, I15 — alternative energy sources; climate; air pollution; energy and development; technological change and diffusion; trade and environment; health and economic development",
+  "method": "Ember yearly electricity data (2000–2025); IRENA costs via Our World in Data; World Bank WDI (access, fuel imports, GDP, life expectancy); UN WPP 2024 population. Pathways: SSP3-7.0 / SSP2-4.5 / SSP1-2.6 / SSP1-1.9 climate; coal, oil and gas use by 2050 from IPCC AR6 WGIII SPM C.3.2 medians (stalled = no change, current = half the 2 °C medians), linear from 2025 and held after 2050; access frozen, on 2015–latest trend, or universal by 2030/2040. Heat: World Bank CCKP CMIP6 0.25° multi-model median days with heat index > 35 °C (60+) and > 41 °C (30+), SSP2 population in every pathway. Air: McDuffie et al. 2021 PM2.5 deaths by fuel (2017) scaled by population and fuel use. Fuel bills: 2023 net importers' fuel imports scaled by oil and gas use. Channels are independent; figures are scenario arithmetic, not forecasts.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-10-30",
+  "updated": "2026-10-30",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tomorrow:wght@400;500;600;700&display=swap",
+  "themeColor": "#1c2340",
+  "topics": [
+    "Energy Transition",
+    "Development",
+    "Climate Risk",
+    "Public Health"
+  ],
+  "keywords": [
+    "clean energy transition",
+    "renewable energy",
+    "solar power",
+    "energy access",
+    "clean cooking",
+    "air pollution",
+    "fossil fuel phase-out",
+    "heat exposure",
+    "cumulative exposure",
+    "fuel import bills",
+    "cost of capital",
+    "economic convergence",
+    "polycrisis",
+    "dashboard"
+  ],
+  "sections": [
+    { "id": "overview", "label": "Overview" },
+    { "id": "transformations", "label": "1. Seven Transformations" },
+    { "id": "status", "label": "2. Where It Stands" },
+    { "id": "cost", "label": "3. The Cost Revolution" },
+    { "id": "development", "label": "4. Development Trajectory" },
+    { "id": "ledger", "label": "5. The Exposure Ledger" },
+    { "id": "heat", "label": "6. Heat" },
+    { "id": "air", "label": "7. Air" },
+    { "id": "access", "label": "8. Access" },
+    { "id": "bills", "label": "9. Fuel Bills" },
+    { "id": "simulator", "label": "10. Build a Pathway" },
+    { "id": "atlas", "label": "11. The Atlas" },
+    { "id": "solutions", "label": "12. Barriers and Solutions" },
+    { "id": "method", "label": "13. Method" },
+    { "id": "references", "label": "Sources" }
+  ],
+  "highlights": [
+    { "value": "42.6%", "label": "Clean share of world electricity, 2025; fossil generation fell as demand grew" },
+    { "value": "106 bn", "label": "Person-years of hazardous heat avoided by 2100, 1.5 °C vs stalled" },
+    { "value": "54 m", "label": "Fossil-fuel air-pollution deaths avoided by 2100, 1.5 °C vs stalled" },
+    { "value": "1.96 bn", "label": "People in countries using under 1 MWh of electricity a person a year" }
+  ]
+}
