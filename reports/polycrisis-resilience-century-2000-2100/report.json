@@ -1,0 +1,44 @@
+{
+  "number": "2026-81",
+  "title": "Polycrisis Resilience This Century, 2000–2100",
+  "subtitle": "A tail-risk ledger of disaster deaths: the record to 2025 and ten thousand simulated futures to 2100",
+  "strapline": "Resilience this century is three numbers: how fast capacity improves, how fast hazards grow and how many people are exposed. This dashboard reads 125 years of recorded disaster deaths, sets them against UN population projections, simulates ten thousand futures under four capacity and hazard paths, and lets you set the trends yourself.",
+  "dek": "The world's disaster death rate fell 97% from the 1920s to the 1990s and has been flat since, while years with 100,000 or more deaths still come about one in five; on 2000–24 death rates and UN population paths the century's deaths run from about 3 million (capacity improving 3% a year) to 9 million (hazards growing 1% a year with no capacity gain), a factor of three that dwarfs the quarter-wide luck within any one path.",
+  "abstract": [
+    "This report asks how the rest of the century looks for the death toll of disasters, one channel of polycrisis with a public record. It combines the EM-DAT world record of disaster deaths by hazard, 1900–2025, and country death rates, 2000–2024 (via Our World in Data), with the medium variant of the United Nations World Population Prospects 2024 for 169 countries. A simulator draws each country's annual death rate from its own 2000–2024 record, multiplies it by projected population, applies a compounding capacity and hazard trend and sums over countries and years, 10,000 times per scenario.",
+    "The record shows a plateau. The world death rate from disasters fell 97% between the 1920s (26.5 per 100,000) and the 1990s (0.77), then 1.2 in the 2000s, 0.6 in the 2010s and 0.7 in 2020–25; the median year rose from 0.16 to 0.72, as extreme heat rose from 3–20% to 58% of recorded deaths. Years with 100,000 or more deaths worldwide were 26% of years in the twentieth century, 22% since 1950 and 19% since 2000 (five years); their cause changed from drought and famine to earthquakes, cyclones and heat. Sub-Saharan Africa's share of the 169 countries' people rises from 16% to 34% by 2100.",
+    "Four paths: frozen rates (6.2 million deaths in 2025–2100, 5th–95th percentile 4.9–7.7), capacity improving 1% a year as since the 1990s (4.3 million), hazards growing 1% a year with no capacity gain (9.3 million) and capacity improving 3% a year against the same hazard growth (3.0 million). The trend, not the luck, decides the total: ±25% within a path, a factor of three between paths. Tails persist in every path: 15 years with 100,000+ deaths a century at frozen rates (25 under stall-and-warm, 8 under the push), a 28% chance of a 500,000-death year (96% under stall-and-warm), and a median worst year of 434,000 deaths.",
+    "Interactive features include record, population, scenario-fan and tail charts, a simulator with region, capacity, hazard and horizon controls, and a four-layer atlas with a sortable table of 169 countries."
+  ],
+  "jel": "Q54, J11, O13, C15, D81, Q56 — climate and natural disasters; demographic trends; environment and development; simulation methods; decision-making under risk; environment and sustainability",
+  "method": "EM-DAT via Our World in Data: world deaths from natural disasters by hazard 1900–2025 and death rates per 100,000 (world 1900–2025; countries 2000–2024), damage as % of GDP (countries 2000–2024); UN WPP 2024 medium variant, annual 2025–2100, 169 countries with at least 0.5 million people. Simulation: for each year 2025–2100 and country, a year is drawn at random from the country's 25 observed death rates; deaths = rate ÷ 100,000 × projected population × [(1 − capacity) × (1 + hazard)]^(years since 2024), summed over countries. Scenarios A (0%, 0%), B (capacity 1%), C (hazard 1%), D (capacity 3%, hazard 1%); 10,000 simulations each (calculator 800, seeded). Expected deaths by country and region are analytic. Caveats: EM-DAT thresholds and coverage; heat deaths recorded unevenly; short country records dominated by a few catastrophes and repeated at about 4% a year; countries drawn independently; capacity and hazard trends are assumptions applied uniformly; medium-variant population; disasters are one channel of polycrisis.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-12",
+  "updated": "2026-11-12",
+  "readingTime": 25,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Bellefair&family=Judson:ital,wght@0,400;0,700;1,400&family=Alata&display=swap",
+  "themeColor": "#231a22",
+  "topics": ["Polycrisis", "Resilience", "Scenarios", "Disasters"],
+  "keywords": ["polycrisis resilience", "twenty-first century", "2100", "disaster deaths", "tail risk", "scenario simulation", "population projections", "capacity and hazard", "extreme heat", "EM-DAT", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "past", "label": "1. The Century Behind"},
+    {"id": "clock", "label": "2. Population Clock"},
+    {"id": "futures", "label": "3. Four Futures"},
+    {"id": "tails", "label": "4. The Tails"},
+    {"id": "where", "label": "5. Cost of the Futures"},
+    {"id": "calculator", "label": "6. Simulator"},
+    {"id": "atlas", "label": "7. The Atlas"},
+    {"id": "agenda", "label": "8. Agenda"},
+    {"id": "method", "label": "9. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "26 → 0.8", "label": "World disaster deaths per 100,000, 1920s against 1990s; flat at 0.6–1.2 since"},
+    {"value": "3.0 – 9.3 m", "label": "Median disaster deaths 2025–2100 across four capacity and hazard paths"},
+    {"value": "1 in 5", "label": "Years with 100,000 or more disaster deaths worldwide, in every period of the record"},
+    {"value": "58%", "label": "Extreme heat's share of recorded disaster deaths in 2020–25"}
+  ]
+}
