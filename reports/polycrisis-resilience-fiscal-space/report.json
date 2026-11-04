@@ -1,0 +1,43 @@
+{
+  "number": "2026-79",
+  "title": "Polycrisis Resilience: Who Can Afford It?",
+  "subtitle": "The fiscal squeeze on the countries most exposed to polycrisis, and what a resilience budget would take",
+  "strapline": "Resilience is paid for out of public budgets, and for a third of the developing world's people interest on debt already exceeds what government spends on health. This dashboard measures the squeeze across 141 countries, traces its growth since 2010, tests whether it is associated with weaker crisis response, overlays risk and lets you price a resilience programme against a country's own fiscal position.",
+  "dek": "In 34 of 141 countries, home to 2.7 billion people, central-government interest exceeds government health spending, and 17 of the 36 highest-risk countries are among them; the median low-income country's interest bill tripled to 1.9% of GDP since 2010 while health spending slipped to 0.9%, and a resilience programme worth 1% of GDP would cost a quarter of the squeezed countries' interest bill.",
+  "abstract": [
+    "This report asks whether the countries most exposed to polycrisis can afford to build resilience. Using World Bank World Development Indicators (IMF government finance statistics) for 141 countries with central-government interest, revenue and government health data, the INFORM Risk Index (Mid-2026), and UNEP, UNCTAD and World Bank benchmarks, it measures the fiscal squeeze, traces it since 2010, tests whether it is associated with weaker crisis response, overlays risk and prices a resilience programme country by country.",
+    "In 34 countries with 2.7 billion people (43% of those covered) interest payments exceed government health spending; in 21 with 0.6 billion they exceed education. The 34 pay $495 billion in interest against $278 billion of health spending. The median low-income country's interest bill rose from 0.5% to 1.9% of GDP between 2010–12 and 2022–24 (3.3% to 11.2% of revenue) while health spending slipped from 1.1% to 0.9%; the share of countries squeezed rose from 16% to 23%. Of 36 high-risk countries (INFORM 5 or more), 17 are squeezed, with 2.2 billion people (0.8 billion without India).",
+    "Cross-section tests are modest and associative. Each additional 10 points of revenue spent on interest in 2019 was associated with 0.8 points of GDP less expansion in public spending in 2020 (129 countries) and 1.8% less GDP per person in 2023 relative to 2019 (135 countries), controlling for income; a rise in interest was not clearly associated with a fall in health spending (104 countries). The squeeze works more as a ceiling on crisis response than as a visible swap. A resilience programme of 1% of GDP would cost about $117 billion a year in the squeezed countries, a quarter of their interest bill, against UNEP's estimated adaptation need of $310–365 billion a year by 2035 and $26 billion of international public flows in 2023.",
+    "Interactive features include squeeze, trend, test and risk charts, a resilience-budget calculator that funds a programme from interest relief, revenue and grants for any of 141 countries, and a six-layer atlas with a sortable table."
+  ],
+  "jel": "H63, H50, E62, O11, Q54, F34 — national debt and debts; government expenditures; fiscal policy; economic development; climate; international lending and debt problems",
+  "method": "World Bank WDI series (IMF GFS): central-government interest (% of revenue), revenue excluding grants (% of GDP), domestic general-government health expenditure and government education expenditure (% of GDP), external debt service (% of exports), central-government expense, GDP and population; latest observation 2019–24 per country; interest % of GDP = interest % of revenue × revenue % of GDP; squeezed = interest above government health spending. INFORM Risk Index Mid-2026 (high = 5 or more). Trends: latest observation per country in five three-year windows, medians by World Bank income group. Tests: OLS cross-sections of the 2019–20 change in expense and the 2019–23 change in log GDP per person on 2019 interest ÷ revenue and log income, and of the 2019–23 change in health spending on the change in interest. Calculator: programme = share × GDP, funded by a share of the interest bill, added revenue and grants. Interest is central government and health general government, so the ratio understates the squeeze in federations; the tests are associations; the programme sizes are assumptions.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-10",
+  "updated": "2026-11-10",
+  "readingTime": 24,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Neuton:ital,wght@0,300;0,400;0,700;1,400&family=Chivo:wght@400;600;700&display=swap",
+  "themeColor": "#10252e",
+  "topics": ["Polycrisis", "Debt", "Fiscal Policy", "Resilience"],
+  "keywords": ["polycrisis resilience", "fiscal space", "debt service", "interest burden", "health spending", "adaptation finance", "INFORM risk", "debt relief", "revenue mobilisation", "developing countries", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "squeeze", "label": "1. The Squeeze"},
+    {"id": "trend", "label": "2. How It Got Here"},
+    {"id": "test", "label": "3. Does It Cost Resilience?"},
+    {"id": "risk", "label": "4. Squeeze Meets Risk"},
+    {"id": "calculator", "label": "5. Resilience Budget"},
+    {"id": "atlas", "label": "6. The Atlas"},
+    {"id": "agenda", "label": "7. Agenda"},
+    {"id": "method", "label": "8. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "34 · 2.7 bn", "label": "Countries, and people in them, where interest on public debt exceeds government health spending"},
+    {"value": "0.5% → 1.9%", "label": "Median low-income country's interest bill, % of GDP, 2010–12 to 2022–24, as health spending slipped to 0.9%"},
+    {"value": "17 of 36", "label": "High-risk countries (INFORM 5 or more) that spend more on interest than on health"},
+    {"value": "24%", "label": "Share of the squeezed countries' interest bill that would fund a resilience programme worth 1% of GDP"}
+  ]
+}
