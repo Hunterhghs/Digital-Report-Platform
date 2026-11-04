@@ -1,0 +1,44 @@
+{
+  "number": "2026-80",
+  "title": "The Economics of Polycrisis Prevention: Quantifying the Human and Economic Returns of Resilience",
+  "subtitle": "Expected, realised and aimed returns in dollars and lives, measured on 25 years of disaster losses in 170 countries",
+  "strapline": "Prevention pays on average, but the average hides three facts a budget office has to live with: returns concentrate in a few places, arrive in lumps, and point to different countries in assets and in lives. This dashboard measures each on 25 years of recorded disaster loss, sets published returns for other channels beside them and lets you test any country.",
+  "dek": "Recorded disaster loss is so lumpy that the worst 1% of country-years hold 58% of damage and 76% of deaths, so an early-warning investment worth four dollars per dollar on average recovers its cost in only 69% of decades; it would return $51 per dollar in rich countries but $0.5 in the poorest on assets alone, and aiming it at the riskiest tenth by past deaths halves the cost per life but still misses two thirds of later deaths.",
+  "abstract": [
+    "This report asks what the human and economic returns of resilience look like at the scale of a country and a decade. It takes the one channel of polycrisis with a public, comparable, country-by-year record, disasters (EM-DAT via Our World in Data, 170 countries, 2000–2024), and a reference investment: early warning at the United Nations' unit cost of $0.50 per person per year, assumed to avoid 30% of recorded damage and of deaths. Published returns for immunisation, health, heat action, cash transfers and infrastructure are set beside it.",
+    "Recorded loss is extremely concentrated: 72% of country-years show no damage, and the worst 1% hold 58% of damage and 76% of deaths. On the 2000–2024 record the reference investment would cost $4.0 billion a year, avoid $62 billion of damage and 21,200 deaths, an expected $189,000 per life. Its asset return is 51 to 1 in high-income countries and 0.5 to 1 in low-income countries, so in the poorest the case rests on lives and on losses the record misses.",
+    "Returns are lumpy. An investment with an expected ratio of 4 to 1 recovers its cost in avoided damage in 51% of five-year windows, 69% of ten-year windows and 90% of twenty-year windows; 41% of decades realise less than half the average annual loss. History is a moderate guide to aim: countries ranked by 2000–11 death rates predict 2012–24 deaths with a rank correlation of 0.51, and the worst 10% (17 countries) capture 31% of later deaths at $178,000 per life against $404,000 uniformly. The reference bill for the 2.7 billion people in the 34 countries whose interest exceeds health spending is $1.4 billion, 0.28% of their interest bill.",
+    "Interactive features include loss-record, expected-return, lumpiness and targeting charts, a table of published returns outside disasters, a bootstrap calculator reporting expected returns, the chance of payback and the break-even value of a life for any of 169 countries, and a five-layer atlas with a sortable table."
+  ],
+  "jel": "D61, Q54, H43, I15, O13, G22 — cost-benefit analysis; climate and natural disasters; project evaluation; health and economic development; environment and development; insurance and risk pooling",
+  "method": "EM-DAT via Our World in Data: economic damages as % of GDP and death rates per 100,000, all disasters, country-years 2000–2024 (no record = 0), for the 170 World Bank countries with at least 0.5 million people; WDI GDP (current US$), GDP per person (mean 2015–24) and population. Reference investment: $0.50 per person per year (UN Early Warnings for All), 30% of damage avoided (Global Commission on Adaptation) and, by assumption, 30% of deaths. Expected asset return = 0.3 × mean damage × GDP per person ÷ 0.50; lives per $1 million from the mean death rate. Lumpiness: rolling windows of 5, 10 and 20 years; an investment with expected ratio B pays back in a window if its mean loss is at least 1/B of the country's 25-year mean. Targeting: ranking by 2000–11 mean death rate, outcomes summed over 2012–24, Spearman correlations. Calculator: 2,000 seeded bootstrap draws of years with replacement. EM-DAT leaves many damages blank, especially in poor countries, so recorded asset returns are understated and lumpiness overstated; the record is short and dominated by a few events; effect sizes are assumptions; disasters are one channel of polycrisis; published returns for other channels use different methods and are not comparable.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-11",
+  "updated": "2026-11-11",
+  "readingTime": 26,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400&family=Gudea:ital,wght@0,400;0,700;1,400&family=Krub:wght@400;600;700&display=swap",
+  "themeColor": "#17212b",
+  "topics": ["Polycrisis", "Resilience", "Disasters", "Cost-Benefit"],
+  "keywords": ["polycrisis prevention", "returns to resilience", "benefit-cost ratio", "early warning", "disaster losses", "EM-DAT", "cost per life saved", "lumpy returns", "targeting", "value of a statistical life", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "record", "label": "1. The Loss Record"},
+    {"id": "expected", "label": "2. Expected Returns"},
+    {"id": "lumpy", "label": "3. Lumpy Returns"},
+    {"id": "aim", "label": "4. Aim"},
+    {"id": "beyond", "label": "5. Beyond Disasters"},
+    {"id": "calculator", "label": "6. Calculator"},
+    {"id": "atlas", "label": "7. The Atlas"},
+    {"id": "agenda", "label": "8. Agenda"},
+    {"id": "method", "label": "9. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "58% · 76%", "label": "Share of recorded disaster damage and deaths in the worst 1% of country-years"},
+    {"value": "51 → 0.5", "label": "Asset return per $1 of early warning, high-income against low-income countries"},
+    {"value": "69%", "label": "Ten-year windows in which a 4:1 investment actually recovers its cost"},
+    {"value": "$404k → $178k", "label": "Cost per life saved, uniform against aimed at the riskiest tenth by past deaths"}
+  ]
+}
