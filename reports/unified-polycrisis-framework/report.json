@@ -1,0 +1,45 @@
+{
+  "number": "2026-82",
+  "title": "A Unified Framework for Understanding and Mitigating the Global Polycrisis",
+  "subtitle": "Integrating environmental, economic, technological and geopolitical risk assessment: domains, robustness, validation and levers",
+  "strapline": "A unified framework has to describe each country's exposure in four domains, say how far they are one thing, and match them to levers. Built on 146 countries, this dashboard shows that the domains are nearly independent, that a unified ranking depends heavily on its weights and aggregator, and that a single score does not predict realised harm better than its parts, and it gives you an explorer to set the weights yourself.",
+  "dek": "Environmental exposure is uncorrelated with economic, technological and geopolitical exposure across 146 countries (|r| at most 0.05) and a single score keeps only 39% of the information; under 10,000 random weightings just three countries are reliably in the worst twenty and the median country's rank spans 62 places, so the framework should unify the language, the diagnosis and the response while keeping four scores and a capacity score visible.",
+  "abstract": [
+    "This report builds and tests a unified framework for the global polycrisis. Four domains of exposure, environmental, economic, technological and geopolitical, are each scored 0–100 from named indicators (INFORM Risk Index Mid-2026, EM-DAT disaster records, World Bank and IMF fiscal series, the diffusion index of report 2026-75, the IMF AI Preparedness Index and the import-dependence indicators of report 2026-62); a fifth dimension, capacity, scores governance, statistical and institutional strength. The sample is 146 countries with at least one million people and all four scores.",
+    "The domains are close to four dimensions. Environmental exposure correlates with the other three at −0.02, 0.02 and 0.05; economic and technological risk correlate at 0.44 and technological and geopolitical at 0.39. The principal components carry 39%, 27%, 24% and 10% of the variance. Poorer countries are exposed in three domains at once: the mean technological score is 18 in high-income and 89 in low-income countries, the economic 40 and 57, the geopolitical 46 and 64. 48 countries with 1.4 billion people are in the high band (score 67 or more) in two or more domains and 14 in three.",
+    "A unified ranking is fragile. Under 10,000 random weightings only Haiti, Mozambique and Yemen are in the worst twenty in at least 90% of arithmetic and geometric weightings; 44 more are in it sometimes; the median country's 5th–95th percentile rank interval is 62 places wide; and the worst-twenty lists share only 10 to 16 countries across aggregators at equal weights. Against realised 2020–23 harm the environmental domain has the strongest rank correlation (0.31) and the equal-weight unified score 0.09; interaction terms are jointly significant (p = 0.017) but mixed in sign, so the data show no general compounding.",
+    "The framework therefore reports a profile and a process: four scores and a capacity score, the range of ranks, robust hotspots, and a match of each dominant domain to a lever quantified elsewhere in the series. Interactive features include domain, correlation, profile, robustness and validation charts, a framework explorer with adjustable weights and aggregator, and a seven-layer atlas with a sortable table."
+  ],
+  "jel": "Q54, E60, O33, F52, D81, C38 — climate and disasters; macroeconomic policy; technological change; national security and conflict; decision-making under risk; classification methods",
+  "method": "146 countries with at least one million people and four domain scores. Environmental: INFORM natural hazard and exposure, mean recorded disaster damage % of GDP and death rate 2000–24 (EM-DAT). Economic: interest % of revenue, external debt service % of exports, reserves in months of imports (inverted), commodity share of exports. Technological: diffusion index and IMF AI Preparedness Index (inverted). Geopolitical: INFORM human hazard, net energy imports, food import bill. Capacity: government effectiveness, Statistical Performance Index, INFORM institutional coping gap. Each indicator is a percentile rank; a domain is the mean of its indicators (at least half required). Robustness: 10,000 flat-Dirichlet weight vectors; weighted arithmetic mean, weighted geometric mean and worst domain; worst-twenty frequencies and 5th–95th percentile rank intervals. Validation: Spearman correlations and OLS with the 2020–23 harm index (mean percentile of five outcomes of report 2026-62) and an F test of six pairwise interactions. Caveats: percentile scores are relative; indicators have different dates; the technological domain measures the capacity gap only; one global episode; cross-sectional associations.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-13",
+  "updated": "2026-11-13",
+  "readingTime": 27,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Overlock:wght@400;700&display=swap",
+  "themeColor": "#1c2230",
+  "topics": ["Polycrisis", "Risk Assessment", "Framework", "Resilience"],
+  "keywords": ["unified framework", "global polycrisis", "risk assessment", "environmental risk", "economic risk", "technological risk", "geopolitical risk", "composite index robustness", "INFORM", "mitigation levers", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "domains", "label": "1. Four Domains"},
+    {"id": "unity", "label": "2. How Unified?"},
+    {"id": "profiles", "label": "3. Profiles"},
+    {"id": "robust", "label": "4. Robustness"},
+    {"id": "validate", "label": "5. Validation"},
+    {"id": "levers", "label": "6. Levers"},
+    {"id": "explorer", "label": "7. Explorer"},
+    {"id": "atlas", "label": "8. The Atlas"},
+    {"id": "agenda", "label": "9. Using It"},
+    {"id": "method", "label": "10. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "|r| ≤ 0.05", "label": "Correlation of environmental exposure with each other domain across 146 countries"},
+    {"value": "3 of 146", "label": "Countries in the worst twenty in 90%+ of random weightings (Haiti, Mozambique, Yemen)"},
+    {"value": "62 places", "label": "Median width of a country's rank interval across weightings"},
+    {"value": "0.31 vs 0.09", "label": "Rank correlation with realised 2020–23 harm: environmental domain vs unified score"}
+  ]
+}
