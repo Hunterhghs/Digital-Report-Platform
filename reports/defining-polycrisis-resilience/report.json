@@ -1,0 +1,45 @@
+{
+  "number": "2026-83",
+  "title": "Defining and Understanding Polycrisis Resilience",
+  "subtitle": "Five measures, two global shocks and 160 countries: resilience is relational, not a national trait",
+  "strapline": "Resilience is used as if it named one property a country has or lacks. This dashboard turns the UN definition into five measurable dimensions, measures them for 160 countries in the 2009 financial crisis and the 2020 pandemic, and tests whether they agree and whether a country's resilience in one shock predicts the next. It does not, and the report states a relational working definition instead.",
+  "dek": "A country's composite resilience in the 2009 financial crisis correlates just 0.09 with its resilience in the 2020 pandemic, only 4 of 153 countries are in the top third in both (chance gives 4.5), and the five things the word covers agree only partly, so resilience should be defined as that of a system, to a class of shock, in a function, over a horizon, relative to a stated reference path.",
+  "abstract": [
+    "This report defines and tests polycrisis resilience. Following the UN Office for Disaster Risk Reduction's 2017 definition (the ability to resist, absorb, accommodate, adapt to, transform and recover from hazard effects while preserving essential functions), it builds five measures from World Bank data: resistance (the growth shortfall in the shock year), recovery (the gap of GDP per person to its pre-shock trend three or four years on), price stability (the rise in inflation), continuity (life expectancy against its trend) and adaptation (post-shock growth against pre-shock growth). They are measured for 160 countries in the 2009 financial crisis and the 2020 pandemic.",
+    "The dimensions only partly agree. Resistance and recovery correlate 0.80 in 2009 and 0.35 in 2020; price stability and continuity correlate no more than 0.25 with any other dimension in either episode. Countries in the top third on four or five of five dimensions are 7% (2020) and 10% (2009) of the sample, against 4.5% under independence.",
+    "Resilience is not a stable national trait. The composite correlates 0.09 across the two episodes, no single dimension exceeds 0.20 (−0.14 to 0.20), only four of 153 countries (Togo, Gabon, Congo and Turkmenistan) are in the top third in both against 4.5 expected by chance, and a quarter of countries move 25 percentile points or more. Income, openness, reserves, interest burden and governance explain 20% of the 2009 composite and 7% of the 2020 composite, with signs that differ by episode. Own-trend measures also carry artefacts: Zimbabwe tops the 2009 composite and Equatorial Guinea shares the top of the 2020 one.",
+    "The report therefore states a relational definition, resilience of a system, to a class of shock, in a function, over a horizon, relative to a reference path, and recommends reporting five-dimension profiles with levels, testing across episodes and naming the reference path. Interactive features include correlation, persistence and predictor charts, a definition explorer with adjustable episode and weights, and an eight-layer atlas with a sortable table."
+  ],
+  "jel": "Q54, E32, O11, D81, C38, I15 — climate and disasters; business cycles; economic development; decision-making under risk; classification methods; health and economic development",
+  "method": "World Bank WDI: GDP per person (constant 2015 US$) and growth, inflation, life expectancy, population (at least 1 million in 2023), trade openness, reserves, interest burden; government effectiveness from report 2026-62; 160 countries. Episodes: 2009 (pre-period 2004–08, post 2010–12) and 2020 (pre 2015–19, post 2021–24). Measures (higher = more resilient): resistance = shock-year growth minus pre-shock mean growth; recovery = log GDP per person three or four years on minus the pre-shock trend; price stability = minus the rise in inflation (pre-shock inflation under 50%); adaptation = post-shock minus pre-shock mean growth; continuity = life expectancy against its pre-shock trend. Percentile ranks; composite = mean of at least four. Spearman correlations; predictor R² from OLS on five standardised features (104 countries). Caveats: two episodes of different kinds; own-trend measures reward weak pre-shock growth and collapsing prices; proxies are crude; recovery and adaptation overlap; combination shocks untested; definitions paraphrased from UNDRR (2017), Holling (1973, 1996) and secondary reports of the WEF Global Risks Report 2023.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-14",
+  "updated": "2026-11-14",
+  "readingTime": 26,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400&family=Arimo:wght@400;700&display=swap",
+  "themeColor": "#14233a",
+  "topics": ["Polycrisis", "Resilience", "Definitions", "Measurement"],
+  "keywords": ["polycrisis resilience", "definition of resilience", "resistance and recovery", "financial crisis 2009", "pandemic 2020", "resilience measurement", "persistence", "reference path", "UNDRR", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "meaning", "label": "1. What It Means"},
+    {"id": "measures", "label": "2. Five Dimensions"},
+    {"id": "agree", "label": "3. Do They Agree?"},
+    {"id": "trait", "label": "4. A Trait?"},
+    {"id": "predict", "label": "5. What Predicts It"},
+    {"id": "working", "label": "6. Working Definition"},
+    {"id": "explorer", "label": "7. Explorer"},
+    {"id": "atlas", "label": "8. The Atlas"},
+    {"id": "agenda", "label": "9. Using It"},
+    {"id": "method", "label": "10. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "0.09", "label": "Rank correlation of composite resilience between the 2009 crisis and the 2020 pandemic"},
+    {"value": "4 of 153", "label": "Countries in the top third in both episodes (chance: 4.5)"},
+    {"value": "0.80 → 0.35", "label": "Correlation of resistance and recovery, 2009 against 2020"},
+    {"value": "0.20 vs 0.07", "label": "Variance in composite resilience explained by structure, 2009 against 2020"}
+  ]
+}
