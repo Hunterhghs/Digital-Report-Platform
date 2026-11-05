@@ -1,0 +1,45 @@
+{
+  "number": "2026-86",
+  "title": "Polycrisis Resilience: The H Heuristics Concept",
+  "subtitle": "A conceptual framework for reducing global vulnerability and strengthening human survivability",
+  "strapline": "Polycrisis Resilience is the systematic development of human, institutional, technological, economic and environmental capacities to prevent, absorb, adapt to and recover from interconnected global crises, while reducing their cascading effects and long-term consequences. This page states the H Heuristics definition and central proposition, places the term among related ideas, gathers the evidence from the series and measures the five capacities for 145 countries.",
+  "dek": "Polycrisis Resilience, the H Heuristics concept, is the systematic development of five capacities to prevent, absorb, adapt to and recover from interconnected crises while reducing their cascading effects; across 145 countries the five capacities rise together (one component carries 81% of their variance; income explains 86% of the composite, 22nd percentile in low-income against 76th in high-income countries), they go with lower structural vulnerability but do not forecast any single shock's outcome, so the concept's claim is about cascades and long-term consequences.",
+  "abstract": [
+    "This page states and publishes the H Heuristics concept of Polycrisis Resilience: the systematic development of human, institutional, technological, economic and environmental capacities to prevent, absorb, adapt to and recover from interconnected global crises, while reducing their cascading effects and long-term consequences. It is an integrated development approach that seeks to reduce systemic vulnerabilities and strengthen human survivability through convergence, innovation diffusion, sustainable development, adaptive capacity and preventative intervention. Its central proposition is that humanity can reduce the severity of the polycrisis by accelerating convergence, innovation diffusion, sustainable development and adaptive capacity.",
+    "The page sets out the anatomy of the definition (five capacities, four functions, one objective), distinguishes the concept from disaster, climate and economic resilience, crisis management, sustainable development and systemic risk reduction, and gathers the evidence from the H Heuristics series for each element of the proposition. It records the provenance of the words: polycrisis is an established term; a search found no authoritative definition of polycrisis resilience, and the H Heuristics series has used the phrase since 11 October 2026 (report 2026-21).",
+    "It also measures the five capacities for 145 countries from public data. The capacities rise together (correlations 0.59 to 0.92; one component carries 81% of their variance; income explains 86% of the composite). The mean composite is the 22nd percentile in low-income and the 76th in high-income countries; the weakest capacity is economic in 39 countries, human in 38, environmental in 36, institutional in 21 and technological in 11. Composite capacity correlates −0.82 to −0.92 with structural vulnerability measures (partly built from overlapping indicators), −0.14 and −0.15 with growth shortfalls and volatility and −0.04 with resilience in the 2020 episode.",
+    "Interactive features include a capacity-by-function matrix, an evidence ledger, a capacity explorer with adjustable weights, an eight-layer atlas with a sortable table, a glossary, a short form and citation, and a research agenda."
+  ],
+  "jel": "O11, Q54, D81, I31, O33, H12 — economic development; climate and disasters; decision-making under risk; welfare and well-being; technological change; crisis management",
+  "method": "Capacity scores for 145 countries with at least one million people and all five capacities, 2020 or latest: human (life expectancy; secondary enrolment), institutional (government effectiveness; Statistical Performance Index), technological (diffusion index; IMF AI Preparedness Index; internet use), economic (log GDP per person; reserves; interest burden inverted), environmental (clean cooking; water and sanitation; PM2.5 inverted; renewable share of final energy). Each indicator is a percentile rank; a capacity is the mean of its available indicators; the composite is the mean of the five. Spearman correlations; principal components of the correlation matrix; income prediction by linear regression on log GDP per person. Caveats: first operationalisation of the definition; national and relative; environmental capacity includes outcomes; overlapping indicators with INFORM and the unified exposure score; outcome correlations are single-episode or single-period; the matrix, glossary and relations are conceptual statements.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-17",
+  "updated": "2026-11-17",
+  "readingTime": 22,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Gilda+Display&family=Trirong:ital,wght@0,400;0,600;0,700;1,400&family=Sulphur+Point:wght@400;700&display=swap",
+  "themeColor": "#13202b",
+  "topics": ["Polycrisis", "Resilience", "Concept", "Definition"],
+  "keywords": ["polycrisis resilience", "H Heuristics", "definition", "concept", "human survivability", "cascading effects", "convergence", "innovation diffusion", "sustainable development", "adaptive capacity", "preventative intervention", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "definition", "label": "1. The Definition"},
+    {"id": "relations", "label": "2. Where It Sits"},
+    {"id": "proposition", "label": "3. The Proposition"},
+    {"id": "matrix", "label": "4. Capacities × Functions"},
+    {"id": "capacities", "label": "5. Measuring Capacity"},
+    {"id": "evidence", "label": "6. The Evidence"},
+    {"id": "explorer", "label": "7. Explorer"},
+    {"id": "atlas", "label": "8. The Atlas"},
+    {"id": "using", "label": "9. Using the Term"},
+    {"id": "agenda", "label": "10. Agenda"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "5 · 4 · 1", "label": "Five capacities, four functions, one objective: reduce cascading effects and long-term consequences"},
+    {"value": "81%", "label": "Variance in the five capacities carried by one component: they accumulate together"},
+    {"value": "76 → 22", "label": "Mean composite capacity percentile, high-income against low-income countries"},
+    {"value": "−0.04", "label": "Capacity's rank correlation with resilience in the 2020 episode: the concept is about cascades, not one shock"}
+  ]
+}
