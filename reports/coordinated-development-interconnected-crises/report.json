@@ -1,0 +1,44 @@
+{
+  "number": "2026-85",
+  "title": "Addressing Interconnected Global Crises Through Coordinated Economic Development",
+  "subtitle": "A framework for reducing vulnerabilities across interconnected socioeconomic systems: spillovers, balance and bottlenecks",
+  "strapline": "Development is planned system by system, but the systems move together. This dashboard measures seven of them (health, education, power, clean cooking, water and sanitation, digital use and income) for 160 countries over two decades, maps the spillovers between them, tests whether balance matters for survival and finds each country's highest-leverage bottleneck.",
+  "dek": "Earlier progress in one system predicts faster later progress in others (9 of 42 pairs significant against 2 by chance, mean standardised coefficient +0.095, stable across four time windows), with water and sanitation, power and income the strongest leading systems and health almost isolated; lopsided development is associated with worse survival in the pandemic (−0.33 standard deviations of life expectancy against trend per standard deviation of imbalance) but not with growth risk or disaster mortality, and water and sanitation is the highest-leverage bottleneck in 47 of 124 countries.",
+  "abstract": [
+    "This report builds and tests a framework for coordinated economic development. It measures seven socioeconomic systems, health (life expectancy), education (secondary enrolment), power (electricity access), clean cooking, water and sanitation, digital use (internet users) and income (GDP per person), in 2000, 2010 and 2020 for 160 countries from World Bank data, and asks whether earlier progress in one system predicts later progress in another, whether balance across systems matters for vulnerability outcomes, and where each country's highest-leverage bottleneck lies.",
+    "Systems move together. In 42 ordered-pair regressions of 2010–2020 progress on earlier progress in another system, controlling for the target's own momentum, starting level and income, nine pairs are significant at the 5% level (two expected by chance; 95th percentile 5, maximum 7 in 300 permutations) and the mean standardised coefficient is +0.095 against a null standard deviation of 0.013. The strongest are water and sanitation to education and to power (0.46 each), digital use to income (0.35) and education to power (0.33). Mean outgoing spillover is 0.24 for water and sanitation, 0.11 for power, 0.10 for income and 0.01 for health. Four alternative windows reproduce the map (correlations 0.57 to 0.77).",
+    "Balance matters for survival. Across 124 countries, one standard deviation more imbalance across six social systems lowers life expectancy against its pre-pandemic trend by 0.33 standard deviations (standard error 0.09) and composite resilience by 0.16, holding the average level and income; it does not predict growth lost to shortfalls, growth volatility or disaster death rates (coefficients within 0.10 of zero). Weighting each country's lagging systems by their spillover, water and sanitation is the highest-leverage bottleneck in 47 countries (29% of people), power in 27 (21%), clean cooking in 22, education in 18 and digital use in 8 countries with 28% of people.",
+    "The associations are observational and do not show that coordination causes the co-movement. Interactive features include a spillover heat map, permutation and stability charts, balance and bottleneck charts, a coordination calculator that applies the matrix to a chosen push in any of 124 countries, and a ten-layer atlas with a sortable table."
+  ],
+  "jel": "O11, O15, I15, Q40, L95, C23 — economic development; human resources and development; health and economic development; energy; utilities; panel data",
+  "method": "World Bank WDI, 2000, 2010 and 2020 (nearest observation within ±2 years): life expectancy, gross secondary enrolment (capped at 100), electricity access, clean-cooking access, mean of basic water and basic sanitation access, internet users, log GDP per person (PPP); 160 countries with at least one million people, 124 with all six social systems in 2020. Spillover: for each ordered pair, standardised 2010–2020 progress of the target on standardised 2000–2010 progress of the source, the target's own earlier progress, its 2010 level and log income; targets above 92% excluded. Permutation test with 300 shuffles; four alternative windows. Balance: percentile levels of six systems in 2020; level = mean, imbalance = SD; OLS of standardised outcomes on level, imbalance and log income. Bottleneck: shortfall below the country's average times mean outgoing spillover. Calculator: standardised matrix applied to a push over 1–3 rounds, converted to natural units, levels capped, percentiles recomputed; survival effect from the balance regression. Caveats: observational; confounding by state capacity and overall growth; 46–152 countries per cell; ceilings; indicator quality; one episode for balance and survival; calculator illustrative.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-16",
+  "updated": "2026-11-16",
+  "readingTime": 26,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400&family=Podkova:wght@400;600;700&display=swap",
+  "themeColor": "#241b3a",
+  "topics": ["Development", "Polycrisis", "Systems", "Coordination"],
+  "keywords": ["coordinated development", "interconnected systems", "spillovers", "bottlenecks", "balanced development", "water and sanitation", "electricity access", "digital", "vulnerability", "polycrisis", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "systems", "label": "1. Seven Systems"},
+    {"id": "spill", "label": "2. Spillover Map"},
+    {"id": "real", "label": "3. Is It Real?"},
+    {"id": "balance", "label": "4. Balance"},
+    {"id": "bottleneck", "label": "5. Bottlenecks"},
+    {"id": "calculator", "label": "6. Calculator"},
+    {"id": "atlas", "label": "7. The Atlas"},
+    {"id": "agenda", "label": "8. Framework"},
+    {"id": "method", "label": "9. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "9 of 42", "label": "Cross-system spillovers significant (chance: 2); mean coefficient +0.095"},
+    {"value": "0.46", "label": "Spillover of water and sanitation progress to later education and power progress"},
+    {"value": "−0.33", "label": "Survival effect (SD) of one SD more imbalance across six social systems"},
+    {"value": "47 · 29%", "label": "Countries and share of people where water and sanitation is the highest-leverage bottleneck"}
+  ]
+}
