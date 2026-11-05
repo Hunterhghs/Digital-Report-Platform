@@ -1,0 +1,45 @@
+{
+  "number": "2026-84",
+  "title": "The Economics of Resilience in an Age of Global Polycrisis",
+  "subtitle": "Development, adaptation, productivity and systemic risk reduction in one growth identity: the resilience wedge and its dividend",
+  "strapline": "The case for resilience is usually made through volatility. Across 153 countries the volatility effect is almost nothing, and the economics lies in the tail: shortfalls that are largely permanent, mostly idiosyncratic and mostly not disasters. This dashboard builds a growth identity, measures each term, and prices a resilience programme's dividend country by country.",
+  "dek": "Volatility costs 0.04 points of growth a year while shortfalls of three points or more cost 0.9, shortfalls are largely permanent (permanent share 0.72–1.06, labour productivity 1.05), recorded disasters are only 4% of the loss while 65% is idiosyncratic and not disaster-linked (81% in low-income countries), and the global cycle explains just 6% of low-income growth variance, so a world risk pool removes over 90% of national risk and halving every shortfall would have left the average country about 8% richer after twenty years (the median country 5%).",
+  "abstract": [
+    "This report asks what resilience is worth in the terms of development economics. It builds an accounting identity: growth lost to shortfalls (years three or more points below a country's own average) equals their frequency times severity times the share never recovered, and four channels, development, adaptation, productivity and systemic risk reduction, act on its terms. Data are World Bank growth, productivity and investment series for 153 countries over 2000–2019 and the EM-DAT disaster record.",
+    "Volatility as such costs about 0.04 points of growth a year (σ²/2, median country) and does not predict slower growth across countries (coefficient 0.03, standard error 0.05, 116 countries). Shortfalls cost 0.9 points a year on average (0.7 in high-income and 1.1–1.2 in upper-middle and low-income countries), occur in 14% of years and are largely permanent: five years on, a shortfall of three points or more shows a permanent share of 1.06 (standard error 0.19), and of six points or more 0.72; for labour productivity 1.05.",
+    "Of the loss from 429 shortfall events, 65% is other idiosyncratic, 32% global-year shocks (mostly 2009) and 4% recorded disasters; in low-income countries 81% is idiosyncratic. A point of recorded disaster damage costs 0.11 points of growth in low and lower-middle-income countries with no rebound (cumulative −0.08), against +0.10 in richer countries. The global cycle explains 6% of low-income and 38% of high-income growth variance; a world pool cuts variance to 7.6% of the national average and a sub-Saharan pool to 4%, a European pool only to 37%.",
+    "Halving every shortfall (85% permanent) would have left the average country about 8% richer after twenty years (the median country 5%). A calculator prices adaptation, pooling, a global backstop, convergence and a productivity lever against a stated cost for each country; interactive features also include income, scarring, cause and pooling charts and a five-layer atlas with a sortable table."
+  ],
+  "jel": "O47, E32, Q54, G22, O11, F43 — measurement of economic growth; business cycles; climate and disasters; insurance and risk pooling; economic development; economic growth of open economies",
+  "method": "World Bank WDI: growth of GDP per person (constant 2015 US$), GDP per person employed, investment, secondary enrolment, trade and population; EM-DAT damage as % of GDP (Our World in Data); 153 countries with complete 2000–2019 growth. Shortfall: growth at least 3 points below the country's mean; p, s, p × s; volatility drag σ²/2; Ramey regressions on 116 countries. Permanence: slope of cumulative later growth deviation (3, 5, 8 years, relative to the country's mean outside the window) on the shortfall, permanent share = 1 + slope. Disaster effect: two-way fixed effects, clustered errors. Cause rule: disaster-linked, global-year, other. Global factor and pooling: R² on the cross-country mean and the variance of equal-weighted pools. Calculator: loss slices reduced by levers, convergence to the high-income median, permanence and a productivity lever; income compounding, payback and a 5% discounted benefit-cost ratio. Caveats: window ends before the pandemic; own-mean shortfalls; imprecise permanence; cause rule cannot separate financial, political and conflict shocks; recorded damage incomplete; gross of adjustment costs; stylised pooling.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-15",
+  "updated": "2026-11-15",
+  "readingTime": 27,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,500;0,600;0,700;1,500&family=Quattrocento:wght@400;700&family=Catamaran:wght@400;600;700&display=swap",
+  "themeColor": "#16302b",
+  "topics": ["Resilience", "Economics", "Growth", "Systemic Risk"],
+  "keywords": ["economics of resilience", "growth shortfalls", "volatility", "scarring", "risk pooling", "adaptation", "productivity", "polycrisis", "resilience dividend", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "identity", "label": "1. The Identity"},
+    {"id": "development", "label": "2. Development"},
+    {"id": "volatility", "label": "3. Volatility"},
+    {"id": "scarring", "label": "4. Productivity"},
+    {"id": "causes", "label": "5. Adaptation"},
+    {"id": "systemic", "label": "6. Systemic Risk"},
+    {"id": "calculator", "label": "7. Dividend"},
+    {"id": "atlas", "label": "8. The Atlas"},
+    {"id": "agenda", "label": "9. Implications"},
+    {"id": "method", "label": "10. Method"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "0.04 vs 0.9 pp", "label": "Growth cost of volatility as such against growth lost to shortfalls, per year"},
+    {"value": "0.72 – 1.06", "label": "Permanent share of a growth shortfall five years on"},
+    {"value": "65 · 32 · 4%", "label": "Shortfall loss: other idiosyncratic, global-year, disaster-linked"},
+    {"value": "+8% · +5%", "label": "Income gain after twenty years if every shortfall had been halved: average and median country"}
+  ]
+}
