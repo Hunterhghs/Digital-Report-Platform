@@ -489,3 +489,4 @@ body { font-size: 1.08rem; line-height: 1.66; background-image: linear-gradient(
 .defbox h3 { font-family: var(--serif); font-weight: 400; font-size: 1.9rem; margin: 0 0 0.4rem; color: var(--primary); }
 .defbox .def-text { font-size: 1.2rem; line-height: 1.55; font-style: italic; margin: 0.3rem 0 0.7rem !important; text-align: left !important; }
 .defbox .def-prop { margin: 0.3rem 0 0 !important; text-align: left !important; }
+.country-card .chbar { height: 54px; background: none; display: block; overflow: visible; border-radius: 0; }

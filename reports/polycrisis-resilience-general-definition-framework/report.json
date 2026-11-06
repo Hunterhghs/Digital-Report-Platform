@@ -1,0 +1,48 @@
+{
+  "number": "2026-87",
+  "title": "Polycrisis Resilience: A General Definition and the H Heuristics Framework",
+  "subtitle": "A concept developed by Hunter Hughes, Founder of H Heuristics: the capacity to anticipate, withstand, adapt to, recover from and reduce vulnerability to multiple interacting crises",
+  "strapline": "The web edition of the H Heuristics flagship report (HH-2026-55). It states the general definition of Polycrisis Resilience and its six capacities, and presents the H Heuristics framework that applies the concept through development: four drivers, five interconnected systems and a five-stage cycle. Interactive pieces include a recovery-window model, a 166-country capacity atlas with a test of whether weaknesses cluster beyond income, a disaster-mortality explorer and a multi-dividend screen.",
+  "dek": "Polycrisis Resilience, a concept developed by Hunter Hughes, is the capacity of individuals, communities, institutions, economies, societies and interconnected systems to anticipate, withstand, adapt to, recover from and reduce vulnerability to multiple interacting crises; the H Heuristics framework builds it through development (the world death rate from natural disasters fell 98% between the 1920s and 2010s; composite capacity averages 22 in low-income and 70 in high-income countries, income explaining 81% of the variation), and a permutation test shows the clustering of weaknesses across 166 countries is almost entirely income.",
+  "abstract": [
+    "This is the web edition of the H Heuristics flagship report on Polycrisis Resilience (HH-2026-55), a concept and framework developed by Hunter Hughes, Founder of H Heuristics. The defining risks of this century do not arrive one at a time: climate change, environmental degradation, economic instability, geopolitical conflict, demographic change, public health threats, technological disruption and fragile infrastructure act on one another, so that the harm entangled crises cause together exceeds the sum of their separate effects. The report defines Polycrisis Resilience as the capacity of individuals, communities, institutions, economies, societies and interconnected systems to anticipate, withstand, adapt to, recover from and reduce their vulnerability to multiple interacting crises.",
+    "Part I sets out the general definition: what makes a polycrisis distinct, the anatomy of the definition, six capacities (risk reduction, preventive, absorptive, recovery, adaptive and transformative), the scales at which resilience is held and for whom, the concept's relation to neighbouring ideas and principles for assessment, illustrated with a 166-country capacity scorecard. Part II presents the framework, which applies four development drivers (convergence, technology diffusion, sustainable development, coordinated improvement) to five interconnected systems through a five-stage cycle, with the evidence that development reduces vulnerability and a multi-dividend screen for interventions.",
+    "The evidence includes public disaster-mortality data (the world death rate from natural disasters fell from 26.5 to 0.64 per 100,000 between the 1920s and the 2010s, and Bangladesh's extreme-weather death rate fell 99% between 1970 and 2007, while the high-income rate has risen to 2.1 in the 2020s because of extreme heat), the scorecard (composite capacity 22 in low-income and 70 in high-income countries; R² 0.81 with income) and a new permutation test: 50 countries with 1.7 billion people are in the bottom third on three or more of five capacities, against about 30 expected if weaknesses were independent but about 48 if they are independent within income groups, so the clustering is almost entirely income. The report is explicit about limits: development is slow and reversible, can create new risks, falling mortality is not falling losses, and capacity is not performance under stress.",
+    "Interactive features: a recovery-window model, a capacity and system explorer, a development-cycle stepper, a disaster-mortality explorer by income group and country, an eight-layer atlas with a sortable scorecard, and a multi-dividend screen that re-ranks eleven interventions by the vulnerabilities selected."
+  ],
+  "jel": "O11, Q54, D81, O33, H12, I31 — economic development; climate and disasters; decision-making under risk; technological change; crisis management; welfare",
+  "method": "Disaster mortality: Our World in Data from EM-DAT (CRED/UCLouvain), decadal and annual deaths per 100,000 for the world, the four World Bank income groups and each scorecard country, plus annual event counts. Scorecard: H Heuristics Polycrisis Resilience 2026 panel of 166 countries (World Development Indicators and Worldwide Governance Indicators; sixteen indicators; five capacities as the mean percentile of their indicators; composite = mean of the capacities); R² of composite on log GDP per person; residual as 'vs income'. Clustering test: bottom-third flags shuffled across countries (5,000 draws) and within income groups (2,000 draws), counting countries with three or more. The recovery-window model, the capacity matrix and the multi-dividend screen are conceptual illustrations and qualitative judgements, not estimates. Caveats: EM-DAT covers recorded disasters and event counts reflect reporting; the scorecard is a partial first measure (absorptive, recovery and adaptive capacities better than prevention and transformation); capacity is not performance.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-18",
+  "updated": "2026-11-18",
+  "readingTime": 38,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Ibarra+Real+Nova:ital,wght@0,400;0,600;0,700;1,400&family=Mada:wght@400;500;600;700&display=swap",
+  "themeColor": "#0f2742",
+  "topics": ["Polycrisis", "Resilience", "Framework", "Development"],
+  "keywords": ["polycrisis resilience", "H Heuristics framework", "Hunter Hughes", "definition", "six capacities", "five systems", "development cycle", "multi-dividend interventions", "disaster mortality", "vulnerability reduction", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "condition", "label": "1. Polycrisis"},
+    {"id": "definition", "label": "2. Definition"},
+    {"id": "capacities", "label": "3. Six Capacities"},
+    {"id": "scales", "label": "4. Scales & Neighbours"},
+    {"id": "assessing", "label": "5. Assessment"},
+    {"id": "scorecard", "label": "6. Scorecard"},
+    {"id": "framework", "label": "7. Framework"},
+    {"id": "evidence", "label": "8. Evidence"},
+    {"id": "systems", "label": "9. Five Systems"},
+    {"id": "cycle", "label": "10. Cycle"},
+    {"id": "screen", "label": "11. Screen"},
+    {"id": "practice", "label": "12. Practice"},
+    {"id": "conclusion", "label": "13. Propositions"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "6 · 5 · 5", "label": "Six capacities, five interconnected systems, five stages of the development cycle"},
+    {"value": "−98%", "label": "Fall in the world death rate from natural disasters between the 1920s and the 2010s"},
+    {"value": "70 → 22", "label": "Mean composite capacity, high-income against low-income countries (R² 0.81 with income)"},
+    {"value": "≈ income", "label": "Almost all the clustering of weaknesses across 166 countries is explained by income: 50 observed, about 48 expected within income groups"}
+  ]
+}
