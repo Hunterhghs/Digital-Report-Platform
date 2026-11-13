@@ -1,0 +1,43 @@
+{
+  "number": "2026-88",
+  "title": "Sustainable Convergence: The H Heuristics Concept",
+  "subtitle": "Narrowing disparities in income, productivity, technology and living standards on environmentally sustainable, resource-efficient pathways: a concept developed by Hunter Hughes, Founder of H Heuristics",
+  "strapline": "Sustainable Convergence is the process through which economies narrow disparities in income, productivity, technological capabilities and living standards while transitioning toward environmentally sustainable and resource-efficient development pathways. This page states the definition and its six dimensions, tests whether convergence has happened and whether it has been clean, scores 151 economies on six dimensions, values the proven pace of access gains in people, and lets you set the assumptions that decide whether catch-up fits inside the carbon budget.",
+  "dek": "Sustainable Convergence, a concept developed by Hunter Hughes, treats economic catch-up and environmental sustainability as one task; since 2000 average Global South income rose from 13% to 23% of the high-income level (18% to 20% without China and India), access has converged fastest (1.05 billion fewer people without clean cooking), 78% of people in developing economies converged on carbon-intensive paths, and if laggards matched the proven pace of the 75th-percentile peer, 624 million more people would be online and 185 million more on power by 2035; with the same income gains, a clean path puts world CO2 to 2100 at about 819 Gt against 3,084 Gt on a fossil path, inside the roughly 1,050 Gt 2°C budget.",
+  "abstract": [
+    "Sustainable Convergence is a concept developed by Hunter Hughes, Founder of H Heuristics: the process through which economies narrow disparities in income, productivity, technological capabilities, and living standards while transitioning toward environmentally sustainable and resource-efficient development pathways. Its central proposition is that economic development and environmental sustainability should not be treated as competing objectives: developing economies can accelerate economic advancement while adopting cleaner technologies, improving resource efficiency and strengthening long-term resilience. Its six core dimensions are economic, technological, environmental, institutional, human-development and resilience convergence.",
+    "The page tests the concept on public data. Catch-up is real but concentrated: average Global South income rose from 13% to 23% of the high-income level between 2000 and 2024 (18% to 20% without China and India), the dollar gap widened from about $35,800 to $44,700, and the share of developing economies growing faster than the rich fell from 75% in 2000–2010 to 49% in 2019–2024. Access has converged fastest: 1.05 billion fewer people lack clean cooking, 628 million fewer lack electricity and 2.2 billion fewer are offline since 2000. If every economy below 95% access moved at the 75th-percentile pace already achieved by peers, 624 million more people would be online, 185 million more would have electricity and 260 million more would cook cleanly by 2035 than on current trends.",
+    "Catch-up has so far been carbon-intensive: 48 of 100 developing economies with 78% of the population analysed converged on a carbon-intensive path (2000–2022), while only 17 with 6% converged with slow or falling emissions; 34 of 45 high-income and 12 of 91 developing economies cut territorial CO2 in 2010–2022. Latecomers do better (4.4 against 2.9 tonnes per person when crossing $10,000), though weakly (R² 0.13). A six-dimension scorecard covers 151 economies (income explains 81% of variation among developing economies; 36 of 103 are sustainable convergers, 35 trapped, 16 capability-without-sustainability and 16 sustainable-not-yet-converging). Gains in different dimensions travel together only weakly (average partial correlation +0.06): the flywheel is a hypothesis that depends on design.",
+    "An interactive accounting model reproduces the H Heuristics November 2026 scenarios: with the same income gains (Global South at 74% of high-income income by 2100), world CO2 to 2100 is about 3,084 Gt on a fossil path and 819 Gt on a clean path, inside the roughly 1,050 Gt budget for 2°C and far above the nearly exhausted 1.5°C budget. Scenarios are accounting exercises, not forecasts. The concept is presented as a proposed framework open to testing."
+  ],
+  "jel": "O11, O44, Q01, Q56, O33, O47 — economic development; environment and growth; sustainable development; technological change; measurement of economic growth",
+  "method": "Records: World Bank WDI and WGI (2000–2024), Our World in Data (CO2, solar and electricity costs), UN WPP 2024, INFORM Risk 2026; results of the H Heuristics Sustainable Convergence report (November 2026). Six-dimension score: 17 indicators scored 0–100 against the high-income median (environment: sustainability thresholds; resilience: INFORM) and combined by geometric mean after merging infrastructure into human development; 151 economies with more than one million people. Pathway typology and decoupling: income convergence and CO2 growth, 2000–2022 and 2009–11 to 2020–22. Pace scenario: for each of five services, economies below 85% access in 2010 set the median, 75th-percentile (proven) and 90th-percentile pace over 2010–2022; each economy is projected to 2030 and 2035 at its own pace (trend) or, if below 95%, at the larger of its own and the proven pace, multiplied by UN medium-variant population. Pathways model: the report's accounting (income gap closure, carbon-intensity decline, linear high-income decarbonisation to 2050) reproduced in the browser. Caveats: scores are first-version and indicator-limited; resilience is measured once; scenarios are mechanical; 1.5°C budget exhausted in all paths; flywheel evidence is correlational.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-19",
+  "updated": "2026-11-19",
+  "readingTime": 36,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&family=Signika:wght@400;500;600;700&display=swap",
+  "themeColor": "#0b3a33",
+  "topics": ["Sustainable Convergence", "Development", "Climate", "Convergence"],
+  "keywords": ["sustainable convergence", "H Heuristics", "Hunter Hughes", "economic convergence", "sustainable development", "clean energy transition", "decoupling", "access", "proven pace", "Global South", "dashboard"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "concept", "label": "1. Concept"},
+    {"id": "record", "label": "2. The Record"},
+    {"id": "access", "label": "3. Access"},
+    {"id": "clean", "label": "4. Clean?"},
+    {"id": "scorecard", "label": "5. Scorecard"},
+    {"id": "flywheel", "label": "6. Intersections"},
+    {"id": "pathways", "label": "7. Pathways"},
+    {"id": "action", "label": "8. Action"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "13% → 23%", "label": "Global South income as a share of the high-income level, 2000 to 2024 (18% to 20% without China and India)"},
+    {"value": "+624 m", "label": "More people online by 2035 if laggards matched the proven pace instead of their own trend"},
+    {"value": "78%", "label": "Share of people in developing economies who converged on a carbon-intensive path, 2000–2022"},
+    {"value": "819 vs 3,084 Gt", "label": "World CO2 to 2100 on a clean versus a fossil catch-up path with identical income gains (2°C budget about 1,050 Gt)"}
+  ]
+}
