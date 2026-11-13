@@ -1,0 +1,40 @@
+{
+  "number": "2026-89",
+  "title": "Polycrisis Adaptation: The H Heuristics Concept",
+  "subtitle": "Adjusting economic, social, institutional, technological and infrastructural systems to interconnected and evolving global risks: a concept developed by Hunter Hughes, Founder of H Heuristics",
+  "strapline": "Polycrisis Adaptation is the process through which economic, social, institutional, technological, and infrastructural systems adjust to interconnected and evolving global risks, strengthening their capacity to manage disruptions and changing conditions. A short concept page (about fifteen minutes) with the definition and thesis, the five dimensions, the compounding argument, the four research propositions set against what the H Heuristics series has found, and the three institutional shifts that put it into practice.",
+  "dek": "Polycrisis Adaptation, a concept developed by Hunter Hughes, is the process through which economic, social, institutional, technological and infrastructural systems adjust to interconnected and evolving global risks, and its thesis is that adaptation must be an integrated development process rather than isolated responses to individual crises; in the data, severe climate shocks leave GDP per person 3.7% lower after eight years in low- and lower-middle-income countries (88 shocks) but not in upper-middle-income ones, prevention and adaptation investments return 2 to 87 dollars per dollar, and the evidence supports three of the four research propositions only partly because cross-domain compounding is real but weak.",
+  "abstract": [
+    "This is a short concept page on Polycrisis Adaptation, a concept developed by Hunter Hughes, Founder of H Heuristics, following the framework article published on 13 November 2026. Polycrisis Adaptation is the process through which economic, social, institutional, technological and infrastructural systems adjust to interconnected and evolving global risks, strengthening their capacity to manage disruptions and changing conditions. Its central thesis is that adaptation should not be treated as a collection of isolated responses to individual crises but must become an integrated development process accounting for interactions across environmental, economic, technological, demographic and geopolitical risks.",
+    "The page sets out the shift from isolated to integrated adaptation, the five dimensions (economic, institutional, infrastructure, social, technological), the argument that cross-domain investments compound while siloed responses accumulate hidden vulnerability, the four research propositions, the concept's place beside Polycrisis Resilience, Polycrisis-Adjusted Development, Adaptive Development, Century Pathways and Sustainable Convergence, and the three institutional shifts (cross-ministry risk coordination, multi-hazard stress testing and blended finance) with a continuous learning loop.",
+    "Evidence is limited to what the series has measured. After severe climate shocks, GDP per person in low- and lower-middle-income countries was 5.1% lower after four years and 3.7% lower after eight (88 shocks), while upper-middle-income countries recovered; official donors spent 8 cents on prevention for each dollar spent on response; and 17 published prevention estimates return 2 to 87 dollars per dollar. Set against the four propositions, the evidence supports the dual-purpose proposition, and partly supports the other three: adaptation capacity and persistent losses are associated but imprecisely, technology diffusion is constrained by adoption, and cross-domain gains travel together only weakly (average partial correlation +0.06). The compounding chart is the framework's illustrative model, not data."
+  ],
+  "jel": "Q54, O19, H12, O33, D81 — climate and disasters; development policy; crisis management; technological change; decision-making under risk",
+  "method": "Concept text: Hughes (2026), Polycrisis Adaptation: An Integrated Framework for Development in an Era of Interconnected Global Risks (Substack, 13 November 2026). Observed chart: event-study (local-projection) estimates from report 2026-56 of the change in log GDP per person from the year before a severe climate shock (at least 20% of the population affected or recorded damage of at least 5% of GDP; EM-DAT via Our World in Data) to each of eight following years, with country and year fixed effects, by income group (World Bank WDI); bands are ±1 standard error. Compounding chart: the framework's illustrative trajectories (Figure 2) with a linear blend; the masthead is 92 seeded random paths around them. Proposition evidence: published H Heuristics reports 2026-56, 62, 74, 75, 79, 82, 84, 85, 87 and 88 and the cited literature; verdicts are the author's reading of associations, not causal tests. Provenance: a November 2026 OpenAlex title-and-abstract search found one earlier mention of the compound phrase.",
+  "author": "Hunter Hughes",
+  "institution": "H Heuristics",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "readingTime": 15,
+  "charts": true,
+  "fontsUrl": "https://fonts.googleapis.com/css2?family=Yeseva+One&family=Taviraj:ital,wght@0,400;0,600;0,700;1,400&family=Maven+Pro:wght@400;500;600;700&display=swap",
+  "themeColor": "#2b2235",
+  "topics": ["Polycrisis", "Adaptation", "Concept", "Resilience"],
+  "keywords": ["polycrisis adaptation", "H Heuristics", "Hunter Hughes", "integrated adaptation", "five dimensions", "multi-risk payoff", "compounding resilience", "concept"],
+  "sections": [
+    {"id": "overview", "label": "Overview"},
+    {"id": "shift", "label": "1. Integrated"},
+    {"id": "dimensions", "label": "2. Five Dimensions"},
+    {"id": "compounding", "label": "3. Compounding"},
+    {"id": "propositions", "label": "4. Propositions"},
+    {"id": "architecture", "label": "5. Where It Sits"},
+    {"id": "practice", "label": "6. Practice"},
+    {"id": "references", "label": "Sources"}
+  ],
+  "highlights": [
+    {"value": "5 → 1", "label": "Five dimensions of adjustment working as one integrated process"},
+    {"value": "−3.7%", "label": "GDP per person eight years after a severe climate shock in low- and lower-middle-income countries"},
+    {"value": "2–87 : 1", "label": "Range of benefit–cost ratios across 17 published prevention and adaptation investments"},
+    {"value": "3 of 4", "label": "Research propositions only partly supported: cross-domain compounding is real but weak"}
+  ]
+}
